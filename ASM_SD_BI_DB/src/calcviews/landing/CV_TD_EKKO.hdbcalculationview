@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_EKKO" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="true" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_EKKO"/>
+  <metadata changedAt="2021-12-06 18:11:50.998"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_EKKO">
+      <resourceUri>syn_tbl_EKKO</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_EKKO">
+    <descriptions defaultDescription="CV_TD_EKKO"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="MANDT"/>
+      </attribute>
+      <attribute id="EBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELN"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EBELN"/>
+      </attribute>
+      <attribute id="BUKRS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="BSTYP" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTYP"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="BSTYP"/>
+      </attribute>
+      <attribute id="BSART" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSART"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="BSART"/>
+      </attribute>
+      <attribute id="BSAKZ" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSAKZ"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="BSAKZ"/>
+      </attribute>
+      <attribute id="LOEKZ" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOEKZ"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LOEKZ"/>
+      </attribute>
+      <attribute id="STATU" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATU"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="STATU"/>
+      </attribute>
+      <attribute id="AEDAT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AEDAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="ERNAM" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="PINCR" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PINCR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="PINCR"/>
+      </attribute>
+      <attribute id="LPONR" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LPONR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LPONR"/>
+      </attribute>
+      <attribute id="LIFNR" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="SPRAS" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPRAS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="ZTERM" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="ZBD1T" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZBD1T"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZBD1T"/>
+      </attribute>
+      <attribute id="ZBD2T" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZBD2T"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZBD2T"/>
+      </attribute>
+      <attribute id="ZBD3T" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZBD3T"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZBD3T"/>
+      </attribute>
+      <attribute id="ZBD1P" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZBD1P"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZBD1P"/>
+      </attribute>
+      <attribute id="ZBD2P" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZBD2P"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZBD2P"/>
+      </attribute>
+      <attribute id="EKORG" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EKORG"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EKORG"/>
+      </attribute>
+      <attribute id="EKGRP" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EKGRP"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EKGRP"/>
+      </attribute>
+      <attribute id="WAERS" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="WAERS"/>
+      </attribute>
+      <attribute id="WKURS" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WKURS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="WKURS"/>
+      </attribute>
+      <attribute id="KUFIX" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUFIX"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KUFIX"/>
+      </attribute>
+      <attribute id="BEDAT" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEDAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="BEDAT"/>
+      </attribute>
+      <attribute id="KDATB" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDATB"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KDATB"/>
+      </attribute>
+      <attribute id="KDATE" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDATE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KDATE"/>
+      </attribute>
+      <attribute id="BWBDT" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWBDT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="BWBDT"/>
+      </attribute>
+      <attribute id="ANGDT" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANGDT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ANGDT"/>
+      </attribute>
+      <attribute id="BNDDT" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BNDDT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="BNDDT"/>
+      </attribute>
+      <attribute id="GWLDT" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GWLDT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="GWLDT"/>
+      </attribute>
+      <attribute id="AUSNR" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUSNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="AUSNR"/>
+      </attribute>
+      <attribute id="ANGNR" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANGNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ANGNR"/>
+      </attribute>
+      <attribute id="IHRAN" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IHRAN"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="IHRAN"/>
+      </attribute>
+      <attribute id="IHREZ" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IHREZ"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="IHREZ"/>
+      </attribute>
+      <attribute id="VERKF" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERKF"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="VERKF"/>
+      </attribute>
+      <attribute id="TELF1" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELF1"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="TELF1"/>
+      </attribute>
+      <attribute id="LLIEF" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LLIEF"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LLIEF"/>
+      </attribute>
+      <attribute id="KUNNR" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="KONNR" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KONNR"/>
+      </attribute>
+      <attribute id="ABGRU" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABGRU"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ABGRU"/>
+      </attribute>
+      <attribute id="AUTLF" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUTLF"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="AUTLF"/>
+      </attribute>
+      <attribute id="WEAKT" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEAKT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="WEAKT"/>
+      </attribute>
+      <attribute id="RESWK" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RESWK"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="RESWK"/>
+      </attribute>
+      <attribute id="LBLIF" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LBLIF"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LBLIF"/>
+      </attribute>
+      <attribute id="INCO1" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO1"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="INCO1"/>
+      </attribute>
+      <attribute id="INCO2" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="INCO2"/>
+      </attribute>
+      <attribute id="KTWRT" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTWRT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KTWRT"/>
+      </attribute>
+      <attribute id="SUBMI" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SUBMI"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="SUBMI"/>
+      </attribute>
+      <attribute id="KNUMV" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMV"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KNUMV"/>
+      </attribute>
+      <attribute id="KALSM" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALSM"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KALSM"/>
+      </attribute>
+      <attribute id="STAFO" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STAFO"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="STAFO"/>
+      </attribute>
+      <attribute id="LIFRE" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFRE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LIFRE"/>
+      </attribute>
+      <attribute id="EXNUM" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXNUM"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EXNUM"/>
+      </attribute>
+      <attribute id="UNSEZ" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UNSEZ"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="UNSEZ"/>
+      </attribute>
+      <attribute id="LOGSY" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGSY"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LOGSY"/>
+      </attribute>
+      <attribute id="UPINC" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPINC"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="UPINC"/>
+      </attribute>
+      <attribute id="STAKO" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STAKO"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="STAKO"/>
+      </attribute>
+      <attribute id="FRGGR" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRGGR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FRGGR"/>
+      </attribute>
+      <attribute id="FRGSX" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRGSX"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FRGSX"/>
+      </attribute>
+      <attribute id="FRGKE" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRGKE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FRGKE"/>
+      </attribute>
+      <attribute id="FRGZU" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRGZU"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FRGZU"/>
+      </attribute>
+      <attribute id="FRGRL" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRGRL"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FRGRL"/>
+      </attribute>
+      <attribute id="LANDS" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LANDS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LANDS"/>
+      </attribute>
+      <attribute id="LPHIS" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LPHIS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LPHIS"/>
+      </attribute>
+      <attribute id="ADRNR" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ADRNR"/>
+      </attribute>
+      <attribute id="STCEG_L" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG_L"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="STCEG_L"/>
+      </attribute>
+      <attribute id="STCEG" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="STCEG"/>
+      </attribute>
+      <attribute id="ABSGR" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABSGR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ABSGR"/>
+      </attribute>
+      <attribute id="ADDNR" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ADDNR"/>
+      </attribute>
+      <attribute id="KORNR" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KORNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KORNR"/>
+      </attribute>
+      <attribute id="MEMORY" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEMORY"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="MEMORY"/>
+      </attribute>
+      <attribute id="PROCSTAT" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCSTAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="PROCSTAT"/>
+      </attribute>
+      <attribute id="RLWRT" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RLWRT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="RLWRT"/>
+      </attribute>
+      <attribute id="REVNO" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REVNO"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="REVNO"/>
+      </attribute>
+      <attribute id="SCMPROC" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCMPROC"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="SCMPROC"/>
+      </attribute>
+      <attribute id="REASON_CODE" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REASON_CODE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="REASON_CODE"/>
+      </attribute>
+      <attribute id="MEMORYTYPE" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEMORYTYPE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="MEMORYTYPE"/>
+      </attribute>
+      <attribute id="RETTP" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RETTP"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="RETTP"/>
+      </attribute>
+      <attribute id="RETPC" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RETPC"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="RETPC"/>
+      </attribute>
+      <attribute id="DPTYP" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DPTYP"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="DPTYP"/>
+      </attribute>
+      <attribute id="DPPCT" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DPPCT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="DPPCT"/>
+      </attribute>
+      <attribute id="DPAMT" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DPAMT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="DPAMT"/>
+      </attribute>
+      <attribute id="DPDAT" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DPDAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="DPDAT"/>
+      </attribute>
+      <attribute id="MSR_ID" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSR_ID"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="MSR_ID"/>
+      </attribute>
+      <attribute id="HIERARCHY_EXISTS" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HIERARCHY_EXISTS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="HIERARCHY_EXISTS"/>
+      </attribute>
+      <attribute id="THRESHOLD_EXISTS" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="THRESHOLD_EXISTS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="THRESHOLD_EXISTS"/>
+      </attribute>
+      <attribute id="LEGAL_CONTRACT" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEGAL_CONTRACT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LEGAL_CONTRACT"/>
+      </attribute>
+      <attribute id="DESCRIPTION" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DESCRIPTION"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="DESCRIPTION"/>
+      </attribute>
+      <attribute id="RELEASE_DATE" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RELEASE_DATE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="RELEASE_DATE"/>
+      </attribute>
+      <attribute id="VSART" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSART"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="VSART"/>
+      </attribute>
+      <attribute id="HANDOVERLOC" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HANDOVERLOC"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="HANDOVERLOC"/>
+      </attribute>
+      <attribute id="SHIPCOND" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHIPCOND"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="SHIPCOND"/>
+      </attribute>
+      <attribute id="INCOV" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCOV"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="INCOV"/>
+      </attribute>
+      <attribute id="INCO2_L" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2_L"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="INCO2_L"/>
+      </attribute>
+      <attribute id="INCO3_L" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO3_L"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="INCO3_L"/>
+      </attribute>
+      <attribute id="GRWCU" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRWCU"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="GRWCU"/>
+      </attribute>
+      <attribute id="INTRA_REL" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTRA_REL"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="INTRA_REL"/>
+      </attribute>
+      <attribute id="INTRA_EXCL" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTRA_EXCL"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="INTRA_EXCL"/>
+      </attribute>
+      <attribute id="QTN_ERLST_SUBMSN_DATE" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QTN_ERLST_SUBMSN_DATE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="QTN_ERLST_SUBMSN_DATE"/>
+      </attribute>
+      <attribute id="FOLLOWON_DOC_CAT" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FOLLOWON_DOC_CAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FOLLOWON_DOC_CAT"/>
+      </attribute>
+      <attribute id="FOLLOWON_DOC_TYPE" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FOLLOWON_DOC_TYPE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FOLLOWON_DOC_TYPE"/>
+      </attribute>
+      <attribute id="DUMMY_EKKO_INCL_EEW_PS" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_EKKO_INCL_EEW_PS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="DUMMY_EKKO_INCL_EEW_PS"/>
+      </attribute>
+      <attribute id="ISAGED" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ISAGED"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ISAGED"/>
+      </attribute>
+      <attribute id="FORCE_ID" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FORCE_ID"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FORCE_ID"/>
+      </attribute>
+      <attribute id="FORCE_CNT" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FORCE_CNT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FORCE_CNT"/>
+      </attribute>
+      <attribute id="RELOC_ID" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RELOC_ID"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="RELOC_ID"/>
+      </attribute>
+      <attribute id="RELOC_SEQ_ID" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RELOC_SEQ_ID"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="RELOC_SEQ_ID"/>
+      </attribute>
+      <attribute id="SOURCE_LOGSYS" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOURCE_LOGSYS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="SOURCE_LOGSYS"/>
+      </attribute>
+      <attribute id="FSH_TRANSACTION" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_TRANSACTION"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FSH_TRANSACTION"/>
+      </attribute>
+      <attribute id="FSH_ITEM_GROUP" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_ITEM_GROUP"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FSH_ITEM_GROUP"/>
+      </attribute>
+      <attribute id="FSH_VAS_LAST_ITEM" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_VAS_LAST_ITEM"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FSH_VAS_LAST_ITEM"/>
+      </attribute>
+      <attribute id="FSH_OS_STG_CHANGE" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_OS_STG_CHANGE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FSH_OS_STG_CHANGE"/>
+      </attribute>
+      <attribute id="ZAPCGK" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAPCGK"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZAPCGK"/>
+      </attribute>
+      <attribute id="APCGK_EXTEND" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APCGK_EXTEND"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="APCGK_EXTEND"/>
+      </attribute>
+      <attribute id="ZBAS_DATE" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZBAS_DATE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZBAS_DATE"/>
+      </attribute>
+      <attribute id="ZADATTYP" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZADATTYP"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZADATTYP"/>
+      </attribute>
+      <attribute id="ZSTART_DAT" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZSTART_DAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZSTART_DAT"/>
+      </attribute>
+      <attribute id="Z_DEV" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Z_DEV"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="Z_DEV"/>
+      </attribute>
+      <attribute id="ZINDANX" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZINDANX"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZINDANX"/>
+      </attribute>
+      <attribute id="ZLIMIT_DAT" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZLIMIT_DAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ZLIMIT_DAT"/>
+      </attribute>
+      <attribute id="NUMERATOR" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NUMERATOR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="NUMERATOR"/>
+      </attribute>
+      <attribute id="HASHCAL_BDAT" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HASHCAL_BDAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="HASHCAL_BDAT"/>
+      </attribute>
+      <attribute id="HASHCAL" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HASHCAL"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="HASHCAL"/>
+      </attribute>
+      <attribute id="NEGATIVE" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NEGATIVE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="NEGATIVE"/>
+      </attribute>
+      <attribute id="HASHCAL_EXISTS" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HASHCAL_EXISTS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="HASHCAL_EXISTS"/>
+      </attribute>
+      <attribute id="KNOWN_INDEX" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNOWN_INDEX"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KNOWN_INDEX"/>
+      </attribute>
+      <attribute id="POSTAT" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSTAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="POSTAT"/>
+      </attribute>
+      <attribute id="VZSKZ" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VZSKZ"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="VZSKZ"/>
+      </attribute>
+      <attribute id="FSH_SNST_STATUS" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SNST_STATUS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FSH_SNST_STATUS"/>
+      </attribute>
+      <attribute id="POHF_TYPE" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POHF_TYPE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="POHF_TYPE"/>
+      </attribute>
+      <attribute id="EQ_EINDT" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EQ_EINDT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EQ_EINDT"/>
+      </attribute>
+      <attribute id="EQ_WERKS" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EQ_WERKS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EQ_WERKS"/>
+      </attribute>
+      <attribute id="FIXPO" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIXPO"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FIXPO"/>
+      </attribute>
+      <attribute id="EKGRP_ALLOW" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EKGRP_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EKGRP_ALLOW"/>
+      </attribute>
+      <attribute id="WERKS_ALLOW" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="WERKS_ALLOW"/>
+      </attribute>
+      <attribute id="CONTRACT_ALLOW" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONTRACT_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="CONTRACT_ALLOW"/>
+      </attribute>
+      <attribute id="PSTYP_ALLOW" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTYP_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="PSTYP_ALLOW"/>
+      </attribute>
+      <attribute id="FIXPO_ALLOW" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIXPO_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="FIXPO_ALLOW"/>
+      </attribute>
+      <attribute id="KEY_ID_ALLOW" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KEY_ID_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KEY_ID_ALLOW"/>
+      </attribute>
+      <attribute id="AUREL_ALLOW" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUREL_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="AUREL_ALLOW"/>
+      </attribute>
+      <attribute id="DELPER_ALLOW" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DELPER_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="DELPER_ALLOW"/>
+      </attribute>
+      <attribute id="EINDT_ALLOW" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EINDT_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EINDT_ALLOW"/>
+      </attribute>
+      <attribute id="LTSNR_ALLOW" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LTSNR_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LTSNR_ALLOW"/>
+      </attribute>
+      <attribute id="OTB_LEVEL" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OTB_LEVEL"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="OTB_LEVEL"/>
+      </attribute>
+      <attribute id="OTB_COND_TYPE" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OTB_COND_TYPE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="OTB_COND_TYPE"/>
+      </attribute>
+      <attribute id="KEY_ID" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KEY_ID"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="KEY_ID"/>
+      </attribute>
+      <attribute id="OTB_VALUE" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OTB_VALUE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="OTB_VALUE"/>
+      </attribute>
+      <attribute id="OTB_CURR" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OTB_CURR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="OTB_CURR"/>
+      </attribute>
+      <attribute id="OTB_RES_VALUE" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OTB_RES_VALUE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="OTB_RES_VALUE"/>
+      </attribute>
+      <attribute id="OTB_SPEC_VALUE" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OTB_SPEC_VALUE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="OTB_SPEC_VALUE"/>
+      </attribute>
+      <attribute id="SPR_RSN_PROFILE" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPR_RSN_PROFILE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="SPR_RSN_PROFILE"/>
+      </attribute>
+      <attribute id="BUDG_TYPE" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDG_TYPE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="BUDG_TYPE"/>
+      </attribute>
+      <attribute id="OTB_STATUS" order="155" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OTB_STATUS"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="OTB_STATUS"/>
+      </attribute>
+      <attribute id="OTB_REASON" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OTB_REASON"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="OTB_REASON"/>
+      </attribute>
+      <attribute id="CHECK_TYPE" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHECK_TYPE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="CHECK_TYPE"/>
+      </attribute>
+      <attribute id="CON_OTB_REQ" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CON_OTB_REQ"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="CON_OTB_REQ"/>
+      </attribute>
+      <attribute id="CON_PREBOOK_LEV" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CON_PREBOOK_LEV"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="CON_PREBOOK_LEV"/>
+      </attribute>
+      <attribute id="CON_DISTR_LEV" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CON_DISTR_LEV"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="CON_DISTR_LEV"/>
+      </attribute>
+      <attribute id="LASTCHANGEDATETIME" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LASTCHANGEDATETIME"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="LASTCHANGEDATETIME"/>
+      </attribute>
+      <attribute id="EXTERNALSYSTEM" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXTERNALSYSTEM"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EXTERNALSYSTEM"/>
+      </attribute>
+      <attribute id="EXTERNALREFERENCEID" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXTERNALREFERENCEID"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EXTERNALREFERENCEID"/>
+      </attribute>
+      <attribute id="ISEOPBLOCKED" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ISEOPBLOCKED"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="ISEOPBLOCKED"/>
+      </attribute>
+      <attribute id="TMS_REF_UUID" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TMS_REF_UUID"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="TMS_REF_UUID"/>
+      </attribute>
+      <attribute id="PROCE" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="PROCE"/>
+      </attribute>
+      <attribute id="CONC" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONC"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="CONC"/>
+      </attribute>
+      <attribute id="CONT" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="CONT"/>
+      </attribute>
+      <attribute id="COMP" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COMP"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="COMP"/>
+      </attribute>
+      <attribute id="OUTR" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OUTR"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="OUTR"/>
+      </attribute>
+      <attribute id="DESP" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DESP"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="DESP"/>
+      </attribute>
+      <attribute id="DESP_DAT" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DESP_DAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="DESP_DAT"/>
+      </attribute>
+      <attribute id="DESP_CARGO" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DESP_CARGO"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="DESP_CARGO"/>
+      </attribute>
+      <attribute id="PARE" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARE"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="PARE"/>
+      </attribute>
+      <attribute id="PARE_DAT" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARE_DAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="PARE_DAT"/>
+      </attribute>
+      <attribute id="PARE_CARGO" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARE_CARGO"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="PARE_CARGO"/>
+      </attribute>
+      <attribute id="EXT_REV_TMSTMP" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXT_REV_TMSTMP"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="EXT_REV_TMSTMP"/>
+      </attribute>
+      <attribute id="PFM_CONTRACT" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PFM_CONTRACT"/>
+        <keyMapping columnObjectName="syn_tbl_EKKO" columnName="PFM_CONTRACT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

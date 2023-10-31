@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_T005U" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_TAXESREGIONKEYTEXTS"/>
+  <metadata changedAt="2021-12-06 18:08:19.744" createdAt="2020-06-18 18:44:48.078"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_T005U">
+      <resourceUri>syn_tbl_T005U</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_T005U">
+    <descriptions defaultDescription="VDIM_TAXESREGIONKEYTEXTS"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="syn_tbl_T005U" columnName="MANDT"/>
+      </attribute>
+      <attribute id="SPRAS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Language Key"/>
+        <keyMapping columnObjectName="syn_tbl_T005U" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="LAND1" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Key"/>
+        <keyMapping columnObjectName="syn_tbl_T005U" columnName="LAND1"/>
+      </attribute>
+      <attribute id="BLAND" order="4" attributeHierarchyActive="false" descriptionColumnName="BEZEI" displayAttribute="false">
+        <descriptions defaultDescription="Region (State, Province, County)"/>
+        <keyMapping columnObjectName="syn_tbl_T005U" columnName="BLAND"/>
+      </attribute>
+      <attribute id="BEZEI" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="syn_tbl_T005U" columnName="BEZEI"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

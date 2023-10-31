@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_TVAKT" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_MD_TVAKT"/>
+  <metadata changedAt="2021-12-06 18:09:42.34" createdAt="2020-04-28 17:08:57.216"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_TVAKT">
+      <resourceUri>syn_tbl_TVAKT</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_TVAKT">
+    <descriptions defaultDescription="CV_MD_TVAKT"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_TVAKT" columnName="MANDT"/>
+      </attribute>
+      <attribute id="SPRAS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPRAS"/>
+        <keyMapping columnObjectName="syn_tbl_TVAKT" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="AUART" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUART"/>
+        <keyMapping columnObjectName="syn_tbl_TVAKT" columnName="AUART"/>
+      </attribute>
+      <attribute id="BEZEI" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEZEI"/>
+        <keyMapping columnObjectName="syn_tbl_TVAKT" columnName="BEZEI"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/></shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

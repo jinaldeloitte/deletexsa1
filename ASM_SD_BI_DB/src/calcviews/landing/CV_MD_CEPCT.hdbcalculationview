@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_CEPCT" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_MD_CEPCT"/>
+  <metadata changedAt="2021-12-06 18:05:51.325" createdAt="2020-04-28 17:59:48.436"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_CEPCT">
+      <resourceUri>syn_tbl_CEPCT</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_CEPCT">
+    <descriptions defaultDescription="CV_MD_CEPCT"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_CEPCT" columnName="MANDT"/>
+      </attribute>
+      <attribute id="SPRAS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPRAS"/>
+        <keyMapping columnObjectName="syn_tbl_CEPCT" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="PRCTR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR"/>
+        <keyMapping columnObjectName="syn_tbl_CEPCT" columnName="PRCTR"/>
+      </attribute>
+      <attribute id="DATBI" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATBI"/>
+        <keyMapping columnObjectName="syn_tbl_CEPCT" columnName="DATBI"/>
+      </attribute>
+      <attribute id="KOKRS" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOKRS"/>
+        <keyMapping columnObjectName="syn_tbl_CEPCT" columnName="KOKRS"/>
+      </attribute>
+      <attribute id="KTEXT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTEXT"/>
+        <keyMapping columnObjectName="syn_tbl_CEPCT" columnName="KTEXT"/>
+      </attribute>
+      <attribute id="LTEXT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LTEXT"/>
+        <keyMapping columnObjectName="syn_tbl_CEPCT" columnName="LTEXT"/>
+      </attribute>
+      <attribute id="MCTXT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCTXT"/>
+        <keyMapping columnObjectName="syn_tbl_CEPCT" columnName="MCTXT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/></shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

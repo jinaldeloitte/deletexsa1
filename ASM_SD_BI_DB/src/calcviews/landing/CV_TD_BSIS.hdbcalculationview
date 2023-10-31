@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_BSIS" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_BSIS"/>
+  <metadata changedAt="2021-12-06 18:11:24.844"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_BSIS">
+      <resourceUri>syn_tbl_BSIS</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_BSIS">
+    <descriptions defaultDescription="CV_TD_BSIS"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="MANDT"/>
+      </attribute>
+      <attribute id="BUKRS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="HKONT" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HKONT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="HKONT"/>
+      </attribute>
+      <attribute id="AUGDT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGDT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="AUGDT"/>
+      </attribute>
+      <attribute id="AUGBL" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGBL"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="AUGBL"/>
+      </attribute>
+      <attribute id="ZUONR" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUONR"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="ZUONR"/>
+      </attribute>
+      <attribute id="GJAHR" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="BELNR" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BELNR"/>
+      </attribute>
+      <attribute id="BUZEI" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZEI"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BUZEI"/>
+      </attribute>
+      <attribute id="BUDAT" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BUDAT"/>
+      </attribute>
+      <attribute id="BLDAT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLDAT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BLDAT"/>
+      </attribute>
+      <attribute id="WAERS" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERS"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="WAERS"/>
+      </attribute>
+      <attribute id="XBLNR" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBLNR"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="XBLNR"/>
+      </attribute>
+      <attribute id="BLART" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLART"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BLART"/>
+      </attribute>
+      <attribute id="MONAT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MONAT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="MONAT"/>
+      </attribute>
+      <attribute id="BSCHL" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSCHL"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BSCHL"/>
+      </attribute>
+      <attribute id="SHKZG" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHKZG"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="SHKZG"/>
+      </attribute>
+      <attribute id="GSBER" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GSBER"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="GSBER"/>
+      </attribute>
+      <attribute id="MWSKZ" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSKZ"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="MWSKZ"/>
+      </attribute>
+      <attribute id="TXDAT_FROM" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXDAT_FROM"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="TXDAT_FROM"/>
+      </attribute>
+      <attribute id="FKONT" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKONT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="FKONT"/>
+      </attribute>
+      <attribute id="SGTXT" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGTXT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="SGTXT"/>
+      </attribute>
+      <attribute id="PROJN" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROJN"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PROJN"/>
+      </attribute>
+      <attribute id="AUFNR" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFNR"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="AUFNR"/>
+      </attribute>
+      <attribute id="WERKS" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="WERKS"/>
+      </attribute>
+      <attribute id="KOSTL" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOSTL"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="KOSTL"/>
+      </attribute>
+      <attribute id="ZFBDT" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZFBDT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="ZFBDT"/>
+      </attribute>
+      <attribute id="XOPVW" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XOPVW"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="XOPVW"/>
+      </attribute>
+      <attribute id="VALUT" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALUT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="VALUT"/>
+      </attribute>
+      <attribute id="BSTAT" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTAT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BSTAT"/>
+      </attribute>
+      <attribute id="VBUND" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBUND"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="VBUND"/>
+      </attribute>
+      <attribute id="PSWSL" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSWSL"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PSWSL"/>
+      </attribute>
+      <attribute id="WVERW" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WVERW"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="WVERW"/>
+      </attribute>
+      <attribute id="XRAGL" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XRAGL"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="XRAGL"/>
+      </attribute>
+      <attribute id="PROJK" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROJK"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PROJK"/>
+      </attribute>
+      <attribute id="PRCTR" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PRCTR"/>
+      </attribute>
+      <attribute id="XSTOV" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSTOV"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="XSTOV"/>
+      </attribute>
+      <attribute id="XARCH" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XARCH"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="XARCH"/>
+      </attribute>
+      <attribute id="XNEGP" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XNEGP"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="XNEGP"/>
+      </attribute>
+      <attribute id="RFZEI" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFZEI"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="RFZEI"/>
+      </attribute>
+      <attribute id="CCBTC" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CCBTC"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="CCBTC"/>
+      </attribute>
+      <attribute id="XREF3" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XREF3"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="XREF3"/>
+      </attribute>
+      <attribute id="BUPLA" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUPLA"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BUPLA"/>
+      </attribute>
+      <attribute id="BEWAR" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEWAR"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BEWAR"/>
+      </attribute>
+      <attribute id="IMKEY" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IMKEY"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="IMKEY"/>
+      </attribute>
+      <attribute id="DABRZ" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DABRZ"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="DABRZ"/>
+      </attribute>
+      <attribute id="INTRENO" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTRENO"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="INTRENO"/>
+      </attribute>
+      <attribute id="GRANT_NBR" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRANT_NBR"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="GRANT_NBR"/>
+      </attribute>
+      <attribute id="FKBER" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKBER"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="FKBER"/>
+      </attribute>
+      <attribute id="FIPOS" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIPOS"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="FIPOS"/>
+      </attribute>
+      <attribute id="FISTL" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISTL"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="FISTL"/>
+      </attribute>
+      <attribute id="GEBER" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEBER"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="GEBER"/>
+      </attribute>
+      <attribute id="PPRCT" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPRCT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PPRCT"/>
+      </attribute>
+      <attribute id="BUZID" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZID"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BUZID"/>
+      </attribute>
+      <attribute id="AUGGJ" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGGJ"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="AUGGJ"/>
+      </attribute>
+      <attribute id="UZAWE" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UZAWE"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="UZAWE"/>
+      </attribute>
+      <attribute id="SEGMENT" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SEGMENT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="SEGMENT"/>
+      </attribute>
+      <attribute id="PSEGMENT" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSEGMENT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PSEGMENT"/>
+      </attribute>
+      <attribute id="PGEBER" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PGEBER"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PGEBER"/>
+      </attribute>
+      <attribute id="PGRANT_NBR" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PGRANT_NBR"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PGRANT_NBR"/>
+      </attribute>
+      <attribute id="MEASURE" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEASURE"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="MEASURE"/>
+      </attribute>
+      <attribute id="BUDGET_PD" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDGET_PD"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BUDGET_PD"/>
+      </attribute>
+      <attribute id="PBUDGET_PD" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PBUDGET_PD"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PBUDGET_PD"/>
+      </attribute>
+      <attribute id="FIPEX" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIPEX"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="FIPEX"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="KIDNO" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KIDNO"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="KIDNO"/>
+      </attribute>
+      <attribute id="PRODPER" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRODPER"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PRODPER"/>
+      </attribute>
+      <attribute id="QSSKZ" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QSSKZ"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="QSSKZ"/>
+      </attribute>
+      <attribute id="PROPMANO" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROPMANO"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="PROPMANO"/>
+      </attribute>
+      <attribute id="GKONT" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GKONT"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="GKONT"/>
+      </attribute>
+      <attribute id="GKART" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GKART"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="GKART"/>
+      </attribute>
+      <attribute id="GHKON" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GHKON"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="GHKON"/>
+      </attribute>
+      <attribute id="LOGSYSTEM_SENDER" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGSYSTEM_SENDER"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="LOGSYSTEM_SENDER"/>
+      </attribute>
+      <attribute id="BUKRS_SENDER" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS_SENDER"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BUKRS_SENDER"/>
+      </attribute>
+      <attribute id="BELNR_SENDER" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR_SENDER"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BELNR_SENDER"/>
+      </attribute>
+      <attribute id="GJAHR_SENDER" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR_SENDER"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="GJAHR_SENDER"/>
+      </attribute>
+      <attribute id="BUZEI_SENDER" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZEI_SENDER"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="BUZEI_SENDER"/>
+      </attribute>
+      <attribute id="HBKID" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HBKID"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="HBKID"/>
+      </attribute>
+      <attribute id="HKTID" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HKTID"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="HKTID"/>
+      </attribute>
+      <attribute id="EBELN" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELN"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="EBELN"/>
+      </attribute>
+      <attribute id="EBELP" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELP"/>
+        <keyMapping columnObjectName="syn_tbl_BSIS" columnName="EBELP"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="DMBTR" order="22" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBTR"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="DMBTR"/>
+      </measure>
+      <measure id="WRBTR" order="23" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WRBTR"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="WRBTR"/>
+      </measure>
+      <measure id="MWSTS" order="24" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWSTS"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="MWSTS"/>
+      </measure>
+      <measure id="WMWST" order="25" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WMWST"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="WMWST"/>
+      </measure>
+      <measure id="BDIFF" order="35" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BDIFF"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="BDIFF"/>
+      </measure>
+      <measure id="BDIF2" order="36" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BDIF2"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="BDIF2"/>
+      </measure>
+      <measure id="DMBE2" order="40" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBE2"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="DMBE2"/>
+      </measure>
+      <measure id="DMBE3" order="41" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBE3"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="DMBE3"/>
+      </measure>
+      <measure id="MWST2" order="42" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWST2"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="MWST2"/>
+      </measure>
+      <measure id="MWST3" order="43" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWST3"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="MWST3"/>
+      </measure>
+      <measure id="BDIF3" order="44" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BDIF3"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="BDIF3"/>
+      </measure>
+      <measure id="RDIF3" order="45" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RDIF3"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="RDIF3"/>
+      </measure>
+      <measure id="PSWBT" order="51" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PSWBT"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="PSWBT"/>
+      </measure>
+      <measure id="PPDIFF" order="57" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PPDIFF"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="PPDIFF"/>
+      </measure>
+      <measure id="PPDIF2" order="58" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PPDIF2"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="PPDIF2"/>
+      </measure>
+      <measure id="PPDIF3" order="59" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PPDIF3"/>
+        <measureMapping columnObjectName="syn_tbl_BSIS" columnName="PPDIF3"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/></shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

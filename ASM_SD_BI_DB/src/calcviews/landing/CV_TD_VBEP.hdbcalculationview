@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_VBEP" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DEFAULT" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_VBEP"/>
+  <metadata changedAt="2021-12-06 18:13:59.868"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_VBEP">
+      <resourceUri>syn_tbl_VBEP</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_VBEP">
+    <descriptions defaultDescription="CV_TD_VBEP"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="VBELN"/>
+      </attribute>
+      <attribute id="POSNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="POSNR"/>
+      </attribute>
+      <attribute id="ETENR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETENR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ETENR"/>
+      </attribute>
+      <attribute id="ETTYP" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETTYP"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ETTYP"/>
+      </attribute>
+      <attribute id="LFREL" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFREL"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="LFREL"/>
+      </attribute>
+      <attribute id="EDATU" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EDATU"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="EDATU"/>
+      </attribute>
+      <attribute id="EZEIT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EZEIT"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="EZEIT"/>
+      </attribute>
+      <attribute id="WMENG" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WMENG"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="WMENG"/>
+      </attribute>
+      <attribute id="BMENG" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BMENG"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="BMENG"/>
+      </attribute>
+      <attribute id="VRKME" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="VRKME"/>
+      </attribute>
+      <attribute id="LMENG" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LMENG"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="LMENG"/>
+      </attribute>
+      <attribute id="MEINS" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="MEINS"/>
+      </attribute>
+      <attribute id="BDDAT" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BDDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="BDDAT"/>
+      </attribute>
+      <attribute id="BDART" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BDART"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="BDART"/>
+      </attribute>
+      <attribute id="PLART" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLART"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="PLART"/>
+      </attribute>
+      <attribute id="VBELE" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELE"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="VBELE"/>
+      </attribute>
+      <attribute id="POSNE" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNE"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="POSNE"/>
+      </attribute>
+      <attribute id="ETENE" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETENE"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ETENE"/>
+      </attribute>
+      <attribute id="RSDAT" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RSDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="RSDAT"/>
+      </attribute>
+      <attribute id="IDNNR" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IDNNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="IDNNR"/>
+      </attribute>
+      <attribute id="BANFN" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BANFN"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="BANFN"/>
+      </attribute>
+      <attribute id="BSART" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSART"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="BSART"/>
+      </attribute>
+      <attribute id="BSTYP" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTYP"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="BSTYP"/>
+      </attribute>
+      <attribute id="WEPOS" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEPOS"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="WEPOS"/>
+      </attribute>
+      <attribute id="REPOS" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REPOS"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="REPOS"/>
+      </attribute>
+      <attribute id="LRGDT" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LRGDT"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="LRGDT"/>
+      </attribute>
+      <attribute id="PRGRS" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRGRS"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="PRGRS"/>
+      </attribute>
+      <attribute id="TDDAT" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TDDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="TDDAT"/>
+      </attribute>
+      <attribute id="MBDAT" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MBDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="MBDAT"/>
+      </attribute>
+      <attribute id="LDDAT" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LDDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="LDDAT"/>
+      </attribute>
+      <attribute id="WADAT" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WADAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="WADAT"/>
+      </attribute>
+      <attribute id="CMENG" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMENG"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="CMENG"/>
+      </attribute>
+      <attribute id="LIFSP" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFSP"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="LIFSP"/>
+      </attribute>
+      <attribute id="GRSTR" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRSTR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="GRSTR"/>
+      </attribute>
+      <attribute id="ABART" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABART"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ABART"/>
+      </attribute>
+      <attribute id="ABRUF" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABRUF"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ABRUF"/>
+      </attribute>
+      <attribute id="ROMS1" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROMS1"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ROMS1"/>
+      </attribute>
+      <attribute id="ROMS2" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROMS2"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ROMS2"/>
+      </attribute>
+      <attribute id="ROMS3" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROMS3"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ROMS3"/>
+      </attribute>
+      <attribute id="ROMEI" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROMEI"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ROMEI"/>
+      </attribute>
+      <attribute id="RFORM" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFORM"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="RFORM"/>
+      </attribute>
+      <attribute id="UMVKZ" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMVKZ"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="UMVKZ"/>
+      </attribute>
+      <attribute id="UMVKN" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMVKN"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="UMVKN"/>
+      </attribute>
+      <attribute id="VERFP" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERFP"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="VERFP"/>
+      </attribute>
+      <attribute id="BWART" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWART"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="BWART"/>
+      </attribute>
+      <attribute id="BNFPO" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BNFPO"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="BNFPO"/>
+      </attribute>
+      <attribute id="ETART" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETART"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ETART"/>
+      </attribute>
+      <attribute id="AUFNR" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="AUFNR"/>
+      </attribute>
+      <attribute id="PLNUM" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLNUM"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="PLNUM"/>
+      </attribute>
+      <attribute id="SERNR" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SERNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="SERNR"/>
+      </attribute>
+      <attribute id="AESKD" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AESKD"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="AESKD"/>
+      </attribute>
+      <attribute id="ABGES" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABGES"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ABGES"/>
+      </attribute>
+      <attribute id="MBUHR" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MBUHR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="MBUHR"/>
+      </attribute>
+      <attribute id="TDUHR" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TDUHR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="TDUHR"/>
+      </attribute>
+      <attribute id="LDUHR" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LDUHR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="LDUHR"/>
+      </attribute>
+      <attribute id="WAUHR" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAUHR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="WAUHR"/>
+      </attribute>
+      <attribute id="AULWE" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AULWE"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="AULWE"/>
+      </attribute>
+      <attribute id="HANDOVERDATE" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HANDOVERDATE"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="HANDOVERDATE"/>
+      </attribute>
+      <attribute id="HANDOVERTIME" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HANDOVERTIME"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="HANDOVERTIME"/>
+      </attribute>
+      <attribute id="DLVQTY_BU" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DLVQTY_BU"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="DLVQTY_BU"/>
+      </attribute>
+      <attribute id="DLVQTY_SU" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DLVQTY_SU"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="DLVQTY_SU"/>
+      </attribute>
+      <attribute id="OCDQTY_BU" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OCDQTY_BU"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="OCDQTY_BU"/>
+      </attribute>
+      <attribute id="OCDQTY_SU" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OCDQTY_SU"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="OCDQTY_SU"/>
+      </attribute>
+      <attribute id="ORDQTY_BU" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ORDQTY_BU"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ORDQTY_BU"/>
+      </attribute>
+      <attribute id="ORDQTY_SU" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ORDQTY_SU"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ORDQTY_SU"/>
+      </attribute>
+      <attribute id="CREA_DLVDATE" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREA_DLVDATE"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="CREA_DLVDATE"/>
+      </attribute>
+      <attribute id="REQ_DLVDATE" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REQ_DLVDATE"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="REQ_DLVDATE"/>
+      </attribute>
+      <attribute id="BEDAR" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEDAR"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="BEDAR"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="WAERK" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="WAERK"/>
+      </attribute>
+      <attribute id="ODN_AMOUNT" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ODN_AMOUNT"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="ODN_AMOUNT"/>
+      </attribute>
+      <attribute id="DUMMY_SLSDOCSCHEDL_INCL_EEW_PS" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_SLSDOCSCHEDL_INCL_EEW_PS"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="DUMMY_SLSDOCSCHEDL_INCL_EEW_PS"/>
+      </attribute>
+      <attribute id="FSH_RALLOC_QTY" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_RALLOC_QTY"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="FSH_RALLOC_QTY"/>
+      </attribute>
+      <attribute id="FSH_OS_ID" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_OS_ID"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="FSH_OS_ID"/>
+      </attribute>
+      <attribute id="FSH_PQR_RC" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_PQR_RC"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="FSH_PQR_RC"/>
+      </attribute>
+      <attribute id="MBDAT_DRS" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MBDAT_DRS"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="MBDAT_DRS"/>
+      </attribute>
+      <attribute id="HANDLE" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HANDLE"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="HANDLE"/>
+      </attribute>
+      <attribute id="LCCST" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LCCST"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="LCCST"/>
+      </attribute>
+      <attribute id="RRQQTY_BU" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RRQQTY_BU"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="RRQQTY_BU"/>
+      </attribute>
+      <attribute id="CRQQTY_BU" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CRQQTY_BU"/>
+        <keyMapping columnObjectName="syn_tbl_VBEP" columnName="CRQQTY_BU"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/></shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

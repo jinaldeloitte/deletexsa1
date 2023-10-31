@@ -1,0 +1,1983 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_BSEG1" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_BSEG"/>
+  <metadata changedAt="2019-04-26 23:31:13.202"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_BSEG">
+      <resourceUri>syn_tbl_BSEG</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_BSEG">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BUZEI"/>
+        <viewAttribute id="BUZID"/>
+        <viewAttribute id="AUGDT"/>
+        <viewAttribute id="AUGCP"/>
+        <viewAttribute id="AUGBL"/>
+        <viewAttribute id="BSCHL"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="UMSKS"/>
+        <viewAttribute id="ZUMSK"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="GSBER"/>
+        <viewAttribute id="PARGB"/>
+        <viewAttribute id="MWSKZ"/>
+        <viewAttribute id="QSSKZ"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="WRBTR"/>
+        <viewAttribute id="KZBTR"/>
+        <viewAttribute id="PSWBT"/>
+        <viewAttribute id="PSWSL"/>
+        <viewAttribute id="TXBHW"/>
+        <viewAttribute id="TXBFW"/>
+        <viewAttribute id="MWSTS"/>
+        <viewAttribute id="WMWST"/>
+        <viewAttribute id="HWBAS"/>
+        <viewAttribute id="FWBAS"/>
+        <viewAttribute id="HWZUZ"/>
+        <viewAttribute id="FWZUZ"/>
+        <viewAttribute id="SHZUZ"/>
+        <viewAttribute id="STEKZ"/>
+        <viewAttribute id="MWART"/>
+        <viewAttribute id="TXGRP"/>
+        <viewAttribute id="KTOSL"/>
+        <viewAttribute id="QSSHB"/>
+        <viewAttribute id="KURSR"/>
+        <viewAttribute id="GBETR"/>
+        <viewAttribute id="BDIFF"/>
+        <viewAttribute id="BDIF2"/>
+        <viewAttribute id="VALUT"/>
+        <viewAttribute id="ZUONR"/>
+        <viewAttribute id="SGTXT"/>
+        <viewAttribute id="ZINKZ"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="BEWAR"/>
+        <viewAttribute id="ALTKT"/>
+        <viewAttribute id="VORGN"/>
+        <viewAttribute id="FDLEV"/>
+        <viewAttribute id="FDGRP"/>
+        <viewAttribute id="FDWBT"/>
+        <viewAttribute id="FDTAG"/>
+        <viewAttribute id="FKONT"/>
+        <viewAttribute id="KOKRS"/>
+        <viewAttribute id="KOSTL"/>
+        <viewAttribute id="PROJN"/>
+        <viewAttribute id="AUFNR"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEL2"/>
+        <viewAttribute id="POSN2"/>
+        <viewAttribute id="ETEN2"/>
+        <viewAttribute id="ANLN1"/>
+        <viewAttribute id="ANLN2"/>
+        <viewAttribute id="ANBWA"/>
+        <viewAttribute id="BZDAT"/>
+        <viewAttribute id="PERNR"/>
+        <viewAttribute id="XUMSW"/>
+        <viewAttribute id="XHRES"/>
+        <viewAttribute id="XKRES"/>
+        <viewAttribute id="XOPVW"/>
+        <viewAttribute id="XCPDD"/>
+        <viewAttribute id="XSKST"/>
+        <viewAttribute id="XSAUF"/>
+        <viewAttribute id="XSPRO"/>
+        <viewAttribute id="XSERG"/>
+        <viewAttribute id="XFAKT"/>
+        <viewAttribute id="XUMAN"/>
+        <viewAttribute id="XANET"/>
+        <viewAttribute id="XSKRL"/>
+        <viewAttribute id="XINVE"/>
+        <viewAttribute id="XPANZ"/>
+        <viewAttribute id="XAUTO"/>
+        <viewAttribute id="XNCOP"/>
+        <viewAttribute id="XZAHL"/>
+        <viewAttribute id="SAKNR"/>
+        <viewAttribute id="HKONT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="FILKD"/>
+        <viewAttribute id="XBILK"/>
+        <viewAttribute id="GVTYP"/>
+        <viewAttribute id="HZUON"/>
+        <viewAttribute id="ZFBDT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="ZBD1T"/>
+        <viewAttribute id="ZBD2T"/>
+        <viewAttribute id="ZBD3T"/>
+        <viewAttribute id="ZBD1P"/>
+        <viewAttribute id="ZBD2P"/>
+        <viewAttribute id="SKFBT"/>
+        <viewAttribute id="SKNTO"/>
+        <viewAttribute id="WSKTO"/>
+        <viewAttribute id="ZLSCH"/>
+        <viewAttribute id="ZLSPR"/>
+        <viewAttribute id="ZBFIX"/>
+        <viewAttribute id="HBKID"/>
+        <viewAttribute id="BVTYP"/>
+        <viewAttribute id="NEBTR"/>
+        <viewAttribute id="MWSK1"/>
+        <viewAttribute id="DMBT1"/>
+        <viewAttribute id="WRBT1"/>
+        <viewAttribute id="MWSK2"/>
+        <viewAttribute id="DMBT2"/>
+        <viewAttribute id="WRBT2"/>
+        <viewAttribute id="MWSK3"/>
+        <viewAttribute id="DMBT3"/>
+        <viewAttribute id="WRBT3"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZJ"/>
+        <viewAttribute id="REBZZ"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZOLLT"/>
+        <viewAttribute id="ZOLLD"/>
+        <viewAttribute id="LZBKZ"/>
+        <viewAttribute id="LANDL"/>
+        <viewAttribute id="DIEKZ"/>
+        <viewAttribute id="SAMNR"/>
+        <viewAttribute id="ABPER"/>
+        <viewAttribute id="VRSKZ"/>
+        <viewAttribute id="VRSDT"/>
+        <viewAttribute id="DISBN"/>
+        <viewAttribute id="DISBJ"/>
+        <viewAttribute id="DISBZ"/>
+        <viewAttribute id="WVERW"/>
+        <viewAttribute id="ANFBN"/>
+        <viewAttribute id="ANFBJ"/>
+        <viewAttribute id="ANFBU"/>
+        <viewAttribute id="ANFAE"/>
+        <viewAttribute id="BLNBT"/>
+        <viewAttribute id="BLNKZ"/>
+        <viewAttribute id="BLNPZ"/>
+        <viewAttribute id="MSCHL"/>
+        <viewAttribute id="MANSP"/>
+        <viewAttribute id="MADAT"/>
+        <viewAttribute id="MANST"/>
+        <viewAttribute id="MABER"/>
+        <viewAttribute id="ESRNR"/>
+        <viewAttribute id="ESRRE"/>
+        <viewAttribute id="ESRPZ"/>
+        <viewAttribute id="KLIBT"/>
+        <viewAttribute id="QSZNR"/>
+        <viewAttribute id="QBSHB"/>
+        <viewAttribute id="QSFBT"/>
+        <viewAttribute id="NAVHW"/>
+        <viewAttribute id="NAVFW"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="MENGE"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="ERFMG"/>
+        <viewAttribute id="ERFME"/>
+        <viewAttribute id="BPMNG"/>
+        <viewAttribute id="BPRME"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="ZEKKN"/>
+        <viewAttribute id="ELIKZ"/>
+        <viewAttribute id="VPRSV"/>
+        <viewAttribute id="PEINH"/>
+        <viewAttribute id="BWKEY"/>
+        <viewAttribute id="BWTAR"/>
+        <viewAttribute id="BUSTW"/>
+        <viewAttribute id="REWRT"/>
+        <viewAttribute id="REWWR"/>
+        <viewAttribute id="BONFB"/>
+        <viewAttribute id="BUALT"/>
+        <viewAttribute id="PSALT"/>
+        <viewAttribute id="NPREI"/>
+        <viewAttribute id="TBTKZ"/>
+        <viewAttribute id="SPGRP"/>
+        <viewAttribute id="SPGRM"/>
+        <viewAttribute id="SPGRT"/>
+        <viewAttribute id="SPGRG"/>
+        <viewAttribute id="SPGRV"/>
+        <viewAttribute id="SPGRQ"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="EGBLD"/>
+        <viewAttribute id="EGLLD"/>
+        <viewAttribute id="RSTGR"/>
+        <viewAttribute id="RYACQ"/>
+        <viewAttribute id="RPACQ"/>
+        <viewAttribute id="RDIFF"/>
+        <viewAttribute id="RDIF2"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="XHKOM"/>
+        <viewAttribute id="VNAME"/>
+        <viewAttribute id="RECID"/>
+        <viewAttribute id="EGRUP"/>
+        <viewAttribute id="VPTNR"/>
+        <viewAttribute id="VERTT"/>
+        <viewAttribute id="VERTN"/>
+        <viewAttribute id="VBEWA"/>
+        <viewAttribute id="DEPOT"/>
+        <viewAttribute id="TXJCD"/>
+        <viewAttribute id="IMKEY"/>
+        <viewAttribute id="DABRZ"/>
+        <viewAttribute id="POPTS"/>
+        <viewAttribute id="FIPOS"/>
+        <viewAttribute id="KSTRG"/>
+        <viewAttribute id="NPLNR"/>
+        <viewAttribute id="AUFPL"/>
+        <viewAttribute id="APLZL"/>
+        <viewAttribute id="PROJK"/>
+        <viewAttribute id="PAOBJNR"/>
+        <viewAttribute id="PASUBNR"/>
+        <viewAttribute id="SPGRS"/>
+        <viewAttribute id="SPGRC"/>
+        <viewAttribute id="BTYPE"/>
+        <viewAttribute id="ETYPE"/>
+        <viewAttribute id="XEGDR"/>
+        <viewAttribute id="LNRAN"/>
+        <viewAttribute id="HRKFT"/>
+        <viewAttribute id="DMBE2"/>
+        <viewAttribute id="DMBE3"/>
+        <viewAttribute id="DMB21"/>
+        <viewAttribute id="DMB22"/>
+        <viewAttribute id="DMB23"/>
+        <viewAttribute id="DMB31"/>
+        <viewAttribute id="DMB32"/>
+        <viewAttribute id="DMB33"/>
+        <viewAttribute id="MWST2"/>
+        <viewAttribute id="MWST3"/>
+        <viewAttribute id="NAVH2"/>
+        <viewAttribute id="NAVH3"/>
+        <viewAttribute id="SKNT2"/>
+        <viewAttribute id="SKNT3"/>
+        <viewAttribute id="BDIF3"/>
+        <viewAttribute id="RDIF3"/>
+        <viewAttribute id="HWMET"/>
+        <viewAttribute id="GLUPM"/>
+        <viewAttribute id="XRAGL"/>
+        <viewAttribute id="UZAWE"/>
+        <viewAttribute id="LOKKT"/>
+        <viewAttribute id="FISTL"/>
+        <viewAttribute id="GEBER"/>
+        <viewAttribute id="STBUK"/>
+        <viewAttribute id="TXBH2"/>
+        <viewAttribute id="TXBH3"/>
+        <viewAttribute id="PPRCT"/>
+        <viewAttribute id="XREF1"/>
+        <viewAttribute id="XREF2"/>
+        <viewAttribute id="KBLNR"/>
+        <viewAttribute id="KBLPOS"/>
+        <viewAttribute id="STTAX"/>
+        <viewAttribute id="FKBER"/>
+        <viewAttribute id="OBZEI"/>
+        <viewAttribute id="XNEGP"/>
+        <viewAttribute id="RFZEI"/>
+        <viewAttribute id="CCBTC"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="EMPFB"/>
+        <viewAttribute id="XREF3"/>
+        <viewAttribute id="DTWS1"/>
+        <viewAttribute id="DTWS2"/>
+        <viewAttribute id="DTWS3"/>
+        <viewAttribute id="DTWS4"/>
+        <viewAttribute id="GRICD"/>
+        <viewAttribute id="GRIRG"/>
+        <viewAttribute id="GITYP"/>
+        <viewAttribute id="XPYPR"/>
+        <viewAttribute id="KIDNO"/>
+        <viewAttribute id="ABSBT"/>
+        <viewAttribute id="IDXSP"/>
+        <viewAttribute id="LINFV"/>
+        <viewAttribute id="KONTT"/>
+        <viewAttribute id="KONTL"/>
+        <viewAttribute id="UEBGDAT"/>
+        <viewAttribute id="TXDAT"/>
+        <viewAttribute id="AGZEI"/>
+        <viewAttribute id="PYCUR"/>
+        <viewAttribute id="PYAMT"/>
+        <viewAttribute id="BUPLA"/>
+        <viewAttribute id="SECCO"/>
+        <viewAttribute id="LSTAR"/>
+        <viewAttribute id="CESSION_KZ"/>
+        <viewAttribute id="PRZNR"/>
+        <viewAttribute id="PPDIFF"/>
+        <viewAttribute id="PPDIF2"/>
+        <viewAttribute id="PPDIF3"/>
+        <viewAttribute id="PENLC1"/>
+        <viewAttribute id="PENLC2"/>
+        <viewAttribute id="PENLC3"/>
+        <viewAttribute id="PENFC"/>
+        <viewAttribute id="PENDAYS"/>
+        <viewAttribute id="PENRC"/>
+        <viewAttribute id="GRANT_NBR"/>
+        <viewAttribute id="SCTAX"/>
+        <viewAttribute id="FKBER_LONG"/>
+        <viewAttribute id="GMVKZ"/>
+        <viewAttribute id="SRTYPE"/>
+        <viewAttribute id="INTRENO"/>
+        <viewAttribute id="MEASURE"/>
+        <viewAttribute id="AUGGJ"/>
+        <viewAttribute id="PPA_EX_IND"/>
+        <viewAttribute id="DOCLN"/>
+        <viewAttribute id="SEGMENT"/>
+        <viewAttribute id="PSEGMENT"/>
+        <viewAttribute id="PFKBER"/>
+        <viewAttribute id="HKTID"/>
+        <viewAttribute id="KSTAR"/>
+        <viewAttribute id="XLGCLR"/>
+        <viewAttribute id="TAXPS"/>
+        <viewAttribute id="PAYS_PROV"/>
+        <viewAttribute id="PAYS_TRAN"/>
+        <viewAttribute id="MNDID"/>
+        <viewAttribute id="XFRGE_BSEG"/>
+        <viewAttribute id="AWTYP"/>
+        <viewAttribute id="AWKEY"/>
+        <viewAttribute id="AWSYS"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="BUZEI_SENDER"/>
+        <viewAttribute id="H_MONAT"/>
+        <viewAttribute id="H_BSTAT"/>
+        <viewAttribute id="H_BUDAT"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="H_BLART"/>
+        <viewAttribute id="H_HWAER"/>
+        <viewAttribute id="H_HWAE2"/>
+        <viewAttribute id="H_HWAE3"/>
+        <viewAttribute id="NETDT"/>
+        <viewAttribute id="SK1DT"/>
+        <viewAttribute id="SK2DT"/>
+        <viewAttribute id="_DATAAGING"/>
+        <viewAttribute id="FQFTYPE"/>
+        <viewAttribute id="LQITEM"/>
+        <viewAttribute id="GKONT"/>
+        <viewAttribute id="GKART"/>
+        <viewAttribute id="GHKON"/>
+        <viewAttribute id="SQUAN"/>
+        <viewAttribute id="ANLN2_PN"/>
+        <viewAttribute id="BWASL_PN"/>
+        <viewAttribute id="BZDAT_PN"/>
+        <viewAttribute id="XVABG_PN"/>
+        <viewAttribute id="ANBTR_PN"/>
+        <viewAttribute id="PROZS_PN"/>
+        <viewAttribute id="DUMMY_INCL_EEW_COBL"/>
+        <viewAttribute id="RE_BUKRS"/>
+        <viewAttribute id="RE_ACCOUNT"/>
+        <viewAttribute id="PGEBER"/>
+        <viewAttribute id="PGRANT_NBR"/>
+        <viewAttribute id="BUDGET_PD"/>
+        <viewAttribute id="PBUDGET_PD"/>
+        <viewAttribute id="J_1TPBUPL"/>
+        <viewAttribute id="PEROP_BEG"/>
+        <viewAttribute id="PEROP_END"/>
+        <viewAttribute id="FASTPAY"/>
+        <viewAttribute id="IGNR_IVREF"/>
+        <viewAttribute id="FMFGUS_KEY"/>
+        <viewAttribute id="FMXDOCNR"/>
+        <viewAttribute id="FMXYEAR"/>
+        <viewAttribute id="FMXDOCLN"/>
+        <viewAttribute id="FMXZEKKN"/>
+        <viewAttribute id="PRODPER"/>
+        <viewAttribute id="RECRF"/>
+        <viewAttribute id="INWARD_NO"/>
+        <viewAttribute id="INWARD_DT"/>
+        <viewAttribute id="PYMTKEY"/>
+        <viewAttribute id="GST_PART"/>
+        <viewAttribute id="PLC_SUP"/>
+        <viewAttribute id="HSN_SAC"/>
+        <viewAttribute id="GROUND_NO"/>
+        <viewAttribute id="GROUND_DT"/>
+        <viewAttribute id="GROUND_TYP"/>
+        <viewAttribute id="ZZ1_TITLE1_COB"/>
+        <viewAttribute id="ZZMATNR"/>
+        <viewAttribute id="ACROBJTYPE"/>
+        <viewAttribute id="ACROBJ_ID"/>
+        <viewAttribute id="ACRSOBJ_ID"/>
+        <viewAttribute id="ACRITMTYPE"/>
+        <viewAttribute id="VALOBJTYPE"/>
+        <viewAttribute id="VALOBJ_ID"/>
+        <viewAttribute id="VALSOBJ_ID"/>
+        <viewAttribute id="RISK_CLASS"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_BSEG"/>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="P_BSEG">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MANDT"/>
+      </attribute>
+      <attribute id="BUKRS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="BELNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BELNR"/>
+      </attribute>
+      <attribute id="GJAHR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="BUZEI" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZEI"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BUZEI"/>
+      </attribute>
+      <attribute id="BUZID" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZID"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BUZID"/>
+      </attribute>
+      <attribute id="AUGDT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGDT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="AUGDT"/>
+      </attribute>
+      <attribute id="AUGCP" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGCP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="AUGCP"/>
+      </attribute>
+      <attribute id="AUGBL" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGBL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="AUGBL"/>
+      </attribute>
+      <attribute id="BSCHL" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSCHL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BSCHL"/>
+      </attribute>
+      <attribute id="KOART" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOART"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KOART"/>
+      </attribute>
+      <attribute id="UMSKZ" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMSKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="UMSKZ"/>
+      </attribute>
+      <attribute id="UMSKS" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMSKS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="UMSKS"/>
+      </attribute>
+      <attribute id="ZUMSK" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUMSK"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZUMSK"/>
+      </attribute>
+      <attribute id="SHKZG" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHKZG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SHKZG"/>
+      </attribute>
+      <attribute id="GSBER" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GSBER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GSBER"/>
+      </attribute>
+      <attribute id="PARGB" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARGB"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PARGB"/>
+      </attribute>
+      <attribute id="MWSKZ" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MWSKZ"/>
+      </attribute>
+      <attribute id="QSSKZ" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QSSKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="QSSKZ"/>
+      </attribute>
+      <attribute id="PSWSL" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSWSL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PSWSL"/>
+      </attribute>
+      <attribute id="SHZUZ" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHZUZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SHZUZ"/>
+      </attribute>
+      <attribute id="STEKZ" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STEKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="STEKZ"/>
+      </attribute>
+      <attribute id="MWART" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWART"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MWART"/>
+      </attribute>
+      <attribute id="TXGRP" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXGRP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="TXGRP"/>
+      </attribute>
+      <attribute id="KTOSL" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOSL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KTOSL"/>
+      </attribute>
+      <attribute id="VALUT" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALUT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VALUT"/>
+      </attribute>
+      <attribute id="ZUONR" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUONR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZUONR"/>
+      </attribute>
+      <attribute id="SGTXT" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGTXT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SGTXT"/>
+      </attribute>
+      <attribute id="ZINKZ" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZINKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZINKZ"/>
+      </attribute>
+      <attribute id="VBUND" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBUND"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VBUND"/>
+      </attribute>
+      <attribute id="BEWAR" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEWAR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BEWAR"/>
+      </attribute>
+      <attribute id="ALTKT" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALTKT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ALTKT"/>
+      </attribute>
+      <attribute id="VORGN" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VORGN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VORGN"/>
+      </attribute>
+      <attribute id="FDLEV" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FDLEV"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FDLEV"/>
+      </attribute>
+      <attribute id="FDGRP" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FDGRP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FDGRP"/>
+      </attribute>
+      <attribute id="FDTAG" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FDTAG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FDTAG"/>
+      </attribute>
+      <attribute id="FKONT" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKONT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FKONT"/>
+      </attribute>
+      <attribute id="KOKRS" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOKRS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KOKRS"/>
+      </attribute>
+      <attribute id="KOSTL" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOSTL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KOSTL"/>
+      </attribute>
+      <attribute id="PROJN" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROJN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PROJN"/>
+      </attribute>
+      <attribute id="AUFNR" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="AUFNR"/>
+      </attribute>
+      <attribute id="VBELN" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VBELN"/>
+      </attribute>
+      <attribute id="VBEL2" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBEL2"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VBEL2"/>
+      </attribute>
+      <attribute id="POSN2" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSN2"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="POSN2"/>
+      </attribute>
+      <attribute id="ETEN2" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETEN2"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ETEN2"/>
+      </attribute>
+      <attribute id="ANLN1" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLN1"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ANLN1"/>
+      </attribute>
+      <attribute id="ANLN2" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLN2"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ANLN2"/>
+      </attribute>
+      <attribute id="ANBWA" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANBWA"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ANBWA"/>
+      </attribute>
+      <attribute id="BZDAT" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BZDAT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BZDAT"/>
+      </attribute>
+      <attribute id="PERNR" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PERNR"/>
+      </attribute>
+      <attribute id="XUMSW" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XUMSW"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XUMSW"/>
+      </attribute>
+      <attribute id="XHRES" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XHRES"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XHRES"/>
+      </attribute>
+      <attribute id="XKRES" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XKRES"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XKRES"/>
+      </attribute>
+      <attribute id="XOPVW" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XOPVW"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XOPVW"/>
+      </attribute>
+      <attribute id="XCPDD" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCPDD"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XCPDD"/>
+      </attribute>
+      <attribute id="XSKST" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSKST"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XSKST"/>
+      </attribute>
+      <attribute id="XSAUF" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSAUF"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XSAUF"/>
+      </attribute>
+      <attribute id="XSPRO" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSPRO"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XSPRO"/>
+      </attribute>
+      <attribute id="XSERG" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSERG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XSERG"/>
+      </attribute>
+      <attribute id="XFAKT" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XFAKT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XFAKT"/>
+      </attribute>
+      <attribute id="XUMAN" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XUMAN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XUMAN"/>
+      </attribute>
+      <attribute id="XANET" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XANET"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XANET"/>
+      </attribute>
+      <attribute id="XSKRL" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSKRL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XSKRL"/>
+      </attribute>
+      <attribute id="XINVE" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XINVE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XINVE"/>
+      </attribute>
+      <attribute id="XPANZ" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XPANZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XPANZ"/>
+      </attribute>
+      <attribute id="XAUTO" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XAUTO"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XAUTO"/>
+      </attribute>
+      <attribute id="XNCOP" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XNCOP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XNCOP"/>
+      </attribute>
+      <attribute id="XZAHL" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XZAHL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XZAHL"/>
+      </attribute>
+      <attribute id="SAKNR" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAKNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SAKNR"/>
+      </attribute>
+      <attribute id="HKONT" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HKONT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="HKONT"/>
+      </attribute>
+      <attribute id="KUNNR" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="LIFNR" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="FILKD" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FILKD"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FILKD"/>
+      </attribute>
+      <attribute id="XBILK" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBILK"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XBILK"/>
+      </attribute>
+      <attribute id="GVTYP" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GVTYP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GVTYP"/>
+      </attribute>
+      <attribute id="HZUON" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HZUON"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="HZUON"/>
+      </attribute>
+      <attribute id="ZFBDT" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZFBDT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZFBDT"/>
+      </attribute>
+      <attribute id="ZTERM" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="ZLSCH" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZLSCH"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZLSCH"/>
+      </attribute>
+      <attribute id="ZLSPR" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZLSPR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZLSPR"/>
+      </attribute>
+      <attribute id="ZBFIX" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZBFIX"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZBFIX"/>
+      </attribute>
+      <attribute id="HBKID" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HBKID"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="HBKID"/>
+      </attribute>
+      <attribute id="BVTYP" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BVTYP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BVTYP"/>
+      </attribute>
+      <attribute id="MWSK1" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSK1"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MWSK1"/>
+      </attribute>
+      <attribute id="MWSK2" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSK2"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MWSK2"/>
+      </attribute>
+      <attribute id="MWSK3" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSK3"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MWSK3"/>
+      </attribute>
+      <attribute id="REBZG" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REBZG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="REBZG"/>
+      </attribute>
+      <attribute id="REBZJ" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REBZJ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="REBZJ"/>
+      </attribute>
+      <attribute id="REBZZ" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REBZZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="REBZZ"/>
+      </attribute>
+      <attribute id="REBZT" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REBZT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="REBZT"/>
+      </attribute>
+      <attribute id="ZOLLT" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZOLLT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZOLLT"/>
+      </attribute>
+      <attribute id="ZOLLD" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZOLLD"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZOLLD"/>
+      </attribute>
+      <attribute id="LZBKZ" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZBKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="LZBKZ"/>
+      </attribute>
+      <attribute id="LANDL" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LANDL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="LANDL"/>
+      </attribute>
+      <attribute id="DIEKZ" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DIEKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DIEKZ"/>
+      </attribute>
+      <attribute id="SAMNR" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAMNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SAMNR"/>
+      </attribute>
+      <attribute id="ABPER" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABPER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ABPER"/>
+      </attribute>
+      <attribute id="VRSKZ" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRSKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VRSKZ"/>
+      </attribute>
+      <attribute id="VRSDT" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRSDT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VRSDT"/>
+      </attribute>
+      <attribute id="DISBN" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISBN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DISBN"/>
+      </attribute>
+      <attribute id="DISBJ" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISBJ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DISBJ"/>
+      </attribute>
+      <attribute id="DISBZ" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISBZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DISBZ"/>
+      </attribute>
+      <attribute id="WVERW" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WVERW"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="WVERW"/>
+      </attribute>
+      <attribute id="ANFBN" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANFBN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ANFBN"/>
+      </attribute>
+      <attribute id="ANFBJ" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANFBJ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ANFBJ"/>
+      </attribute>
+      <attribute id="ANFBU" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANFBU"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ANFBU"/>
+      </attribute>
+      <attribute id="ANFAE" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANFAE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ANFAE"/>
+      </attribute>
+      <attribute id="BLNKZ" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLNKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BLNKZ"/>
+      </attribute>
+      <attribute id="MSCHL" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSCHL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MSCHL"/>
+      </attribute>
+      <attribute id="MANSP" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANSP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MANSP"/>
+      </attribute>
+      <attribute id="MADAT" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MADAT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MADAT"/>
+      </attribute>
+      <attribute id="MANST" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANST"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MANST"/>
+      </attribute>
+      <attribute id="MABER" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MABER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MABER"/>
+      </attribute>
+      <attribute id="ESRNR" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ESRNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ESRNR"/>
+      </attribute>
+      <attribute id="ESRRE" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ESRRE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ESRRE"/>
+      </attribute>
+      <attribute id="ESRPZ" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ESRPZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ESRPZ"/>
+      </attribute>
+      <attribute id="QSZNR" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QSZNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="QSZNR"/>
+      </attribute>
+      <attribute id="MATNR" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MATNR"/>
+      </attribute>
+      <attribute id="WERKS" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="WERKS"/>
+      </attribute>
+      <attribute id="MEINS" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MEINS"/>
+      </attribute>
+      <attribute id="ERFME" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERFME"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ERFME"/>
+      </attribute>
+      <attribute id="BPRME" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BPRME"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BPRME"/>
+      </attribute>
+      <attribute id="EBELN" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="EBELN"/>
+      </attribute>
+      <attribute id="EBELP" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="EBELP"/>
+      </attribute>
+      <attribute id="ZEKKN" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEKKN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZEKKN"/>
+      </attribute>
+      <attribute id="ELIKZ" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ELIKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ELIKZ"/>
+      </attribute>
+      <attribute id="VPRSV" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPRSV"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VPRSV"/>
+      </attribute>
+      <attribute id="BWKEY" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWKEY"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BWKEY"/>
+      </attribute>
+      <attribute id="BWTAR" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWTAR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BWTAR"/>
+      </attribute>
+      <attribute id="BUSTW" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUSTW"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BUSTW"/>
+      </attribute>
+      <attribute id="PSALT" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSALT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PSALT"/>
+      </attribute>
+      <attribute id="TBTKZ" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TBTKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="TBTKZ"/>
+      </attribute>
+      <attribute id="SPGRP" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPGRP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SPGRP"/>
+      </attribute>
+      <attribute id="SPGRM" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPGRM"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SPGRM"/>
+      </attribute>
+      <attribute id="SPGRT" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPGRT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SPGRT"/>
+      </attribute>
+      <attribute id="SPGRG" order="185" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPGRG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SPGRG"/>
+      </attribute>
+      <attribute id="SPGRV" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPGRV"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SPGRV"/>
+      </attribute>
+      <attribute id="SPGRQ" order="187" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPGRQ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SPGRQ"/>
+      </attribute>
+      <attribute id="STCEG" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="STCEG"/>
+      </attribute>
+      <attribute id="EGBLD" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EGBLD"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="EGBLD"/>
+      </attribute>
+      <attribute id="EGLLD" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EGLLD"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="EGLLD"/>
+      </attribute>
+      <attribute id="RSTGR" order="191" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RSTGR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="RSTGR"/>
+      </attribute>
+      <attribute id="RYACQ" order="192" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RYACQ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="RYACQ"/>
+      </attribute>
+      <attribute id="RPACQ" order="193" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RPACQ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="RPACQ"/>
+      </attribute>
+      <attribute id="PRCTR" order="196" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PRCTR"/>
+      </attribute>
+      <attribute id="XHKOM" order="197" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XHKOM"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XHKOM"/>
+      </attribute>
+      <attribute id="VNAME" order="198" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VNAME"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VNAME"/>
+      </attribute>
+      <attribute id="RECID" order="199" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RECID"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="RECID"/>
+      </attribute>
+      <attribute id="EGRUP" order="200" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EGRUP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="EGRUP"/>
+      </attribute>
+      <attribute id="VPTNR" order="201" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPTNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VPTNR"/>
+      </attribute>
+      <attribute id="VERTT" order="202" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERTT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VERTT"/>
+      </attribute>
+      <attribute id="VERTN" order="203" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERTN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VERTN"/>
+      </attribute>
+      <attribute id="VBEWA" order="204" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBEWA"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VBEWA"/>
+      </attribute>
+      <attribute id="DEPOT" order="205" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEPOT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DEPOT"/>
+      </attribute>
+      <attribute id="TXJCD" order="206" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXJCD"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="TXJCD"/>
+      </attribute>
+      <attribute id="IMKEY" order="207" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IMKEY"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="IMKEY"/>
+      </attribute>
+      <attribute id="DABRZ" order="208" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DABRZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DABRZ"/>
+      </attribute>
+      <attribute id="FIPOS" order="210" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIPOS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FIPOS"/>
+      </attribute>
+      <attribute id="KSTRG" order="211" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KSTRG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KSTRG"/>
+      </attribute>
+      <attribute id="NPLNR" order="212" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NPLNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="NPLNR"/>
+      </attribute>
+      <attribute id="AUFPL" order="213" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFPL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="AUFPL"/>
+      </attribute>
+      <attribute id="APLZL" order="214" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APLZL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="APLZL"/>
+      </attribute>
+      <attribute id="PROJK" order="215" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROJK"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PROJK"/>
+      </attribute>
+      <attribute id="PAOBJNR" order="216" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAOBJNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PAOBJNR"/>
+      </attribute>
+      <attribute id="PASUBNR" order="217" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PASUBNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PASUBNR"/>
+      </attribute>
+      <attribute id="SPGRS" order="218" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPGRS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SPGRS"/>
+      </attribute>
+      <attribute id="SPGRC" order="219" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPGRC"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SPGRC"/>
+      </attribute>
+      <attribute id="BTYPE" order="220" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BTYPE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BTYPE"/>
+      </attribute>
+      <attribute id="ETYPE" order="221" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETYPE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ETYPE"/>
+      </attribute>
+      <attribute id="XEGDR" order="222" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XEGDR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XEGDR"/>
+      </attribute>
+      <attribute id="LNRAN" order="223" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LNRAN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="LNRAN"/>
+      </attribute>
+      <attribute id="HRKFT" order="224" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HRKFT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="HRKFT"/>
+      </attribute>
+      <attribute id="HWMET" order="241" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HWMET"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="HWMET"/>
+      </attribute>
+      <attribute id="GLUPM" order="242" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GLUPM"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GLUPM"/>
+      </attribute>
+      <attribute id="XRAGL" order="243" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XRAGL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XRAGL"/>
+      </attribute>
+      <attribute id="UZAWE" order="244" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UZAWE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="UZAWE"/>
+      </attribute>
+      <attribute id="LOKKT" order="245" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOKKT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="LOKKT"/>
+      </attribute>
+      <attribute id="FISTL" order="246" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISTL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FISTL"/>
+      </attribute>
+      <attribute id="GEBER" order="247" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEBER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GEBER"/>
+      </attribute>
+      <attribute id="STBUK" order="248" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STBUK"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="STBUK"/>
+      </attribute>
+      <attribute id="PPRCT" order="251" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPRCT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PPRCT"/>
+      </attribute>
+      <attribute id="XREF1" order="252" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XREF1"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XREF1"/>
+      </attribute>
+      <attribute id="XREF2" order="253" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XREF2"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XREF2"/>
+      </attribute>
+      <attribute id="KBLNR" order="254" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KBLNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KBLNR"/>
+      </attribute>
+      <attribute id="KBLPOS" order="255" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KBLPOS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KBLPOS"/>
+      </attribute>
+      <attribute id="FKBER" order="257" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKBER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FKBER"/>
+      </attribute>
+      <attribute id="OBZEI" order="258" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBZEI"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="OBZEI"/>
+      </attribute>
+      <attribute id="XNEGP" order="259" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XNEGP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XNEGP"/>
+      </attribute>
+      <attribute id="RFZEI" order="260" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFZEI"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="RFZEI"/>
+      </attribute>
+      <attribute id="CCBTC" order="261" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CCBTC"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="CCBTC"/>
+      </attribute>
+      <attribute id="KKBER" order="262" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KKBER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KKBER"/>
+      </attribute>
+      <attribute id="EMPFB" order="263" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMPFB"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="EMPFB"/>
+      </attribute>
+      <attribute id="XREF3" order="264" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XREF3"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XREF3"/>
+      </attribute>
+      <attribute id="DTWS1" order="265" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTWS1"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DTWS1"/>
+      </attribute>
+      <attribute id="DTWS2" order="266" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTWS2"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DTWS2"/>
+      </attribute>
+      <attribute id="DTWS3" order="267" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTWS3"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DTWS3"/>
+      </attribute>
+      <attribute id="DTWS4" order="268" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTWS4"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DTWS4"/>
+      </attribute>
+      <attribute id="GRICD" order="269" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRICD"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GRICD"/>
+      </attribute>
+      <attribute id="GRIRG" order="270" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRIRG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GRIRG"/>
+      </attribute>
+      <attribute id="GITYP" order="271" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GITYP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GITYP"/>
+      </attribute>
+      <attribute id="XPYPR" order="272" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XPYPR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XPYPR"/>
+      </attribute>
+      <attribute id="KIDNO" order="273" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KIDNO"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KIDNO"/>
+      </attribute>
+      <attribute id="IDXSP" order="275" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IDXSP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="IDXSP"/>
+      </attribute>
+      <attribute id="LINFV" order="276" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LINFV"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="LINFV"/>
+      </attribute>
+      <attribute id="KONTT" order="277" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONTT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KONTT"/>
+      </attribute>
+      <attribute id="KONTL" order="278" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONTL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KONTL"/>
+      </attribute>
+      <attribute id="UEBGDAT" order="279" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UEBGDAT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="UEBGDAT"/>
+      </attribute>
+      <attribute id="TXDAT" order="280" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXDAT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="TXDAT"/>
+      </attribute>
+      <attribute id="PYCUR" order="282" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYCUR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PYCUR"/>
+      </attribute>
+      <attribute id="BUPLA" order="284" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUPLA"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BUPLA"/>
+      </attribute>
+      <attribute id="SECCO" order="285" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SECCO"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SECCO"/>
+      </attribute>
+      <attribute id="LSTAR" order="286" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LSTAR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="LSTAR"/>
+      </attribute>
+      <attribute id="CESSION_KZ" order="287" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CESSION_KZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="CESSION_KZ"/>
+      </attribute>
+      <attribute id="PRZNR" order="288" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRZNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PRZNR"/>
+      </attribute>
+      <attribute id="PENRC" order="297" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PENRC"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PENRC"/>
+      </attribute>
+      <attribute id="GRANT_NBR" order="298" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRANT_NBR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GRANT_NBR"/>
+      </attribute>
+      <attribute id="FKBER_LONG" order="300" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKBER_LONG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FKBER_LONG"/>
+      </attribute>
+      <attribute id="GMVKZ" order="301" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GMVKZ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GMVKZ"/>
+      </attribute>
+      <attribute id="SRTYPE" order="302" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SRTYPE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SRTYPE"/>
+      </attribute>
+      <attribute id="INTRENO" order="303" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTRENO"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="INTRENO"/>
+      </attribute>
+      <attribute id="MEASURE" order="304" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEASURE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MEASURE"/>
+      </attribute>
+      <attribute id="AUGGJ" order="305" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGGJ"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="AUGGJ"/>
+      </attribute>
+      <attribute id="PPA_EX_IND" order="306" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPA_EX_IND"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PPA_EX_IND"/>
+      </attribute>
+      <attribute id="DOCLN" order="307" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DOCLN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DOCLN"/>
+      </attribute>
+      <attribute id="SEGMENT" order="308" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SEGMENT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SEGMENT"/>
+      </attribute>
+      <attribute id="PSEGMENT" order="309" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSEGMENT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PSEGMENT"/>
+      </attribute>
+      <attribute id="PFKBER" order="310" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PFKBER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PFKBER"/>
+      </attribute>
+      <attribute id="HKTID" order="311" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HKTID"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="HKTID"/>
+      </attribute>
+      <attribute id="KSTAR" order="312" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KSTAR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="KSTAR"/>
+      </attribute>
+      <attribute id="XLGCLR" order="313" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XLGCLR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XLGCLR"/>
+      </attribute>
+      <attribute id="TAXPS" order="314" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXPS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="TAXPS"/>
+      </attribute>
+      <attribute id="PAYS_PROV" order="315" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAYS_PROV"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PAYS_PROV"/>
+      </attribute>
+      <attribute id="PAYS_TRAN" order="316" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAYS_TRAN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PAYS_TRAN"/>
+      </attribute>
+      <attribute id="MNDID" order="317" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MNDID"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="MNDID"/>
+      </attribute>
+      <attribute id="XFRGE_BSEG" order="318" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XFRGE_BSEG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XFRGE_BSEG"/>
+      </attribute>
+      <attribute id="AWTYP" order="319" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWTYP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="AWTYP"/>
+      </attribute>
+      <attribute id="AWKEY" order="320" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWKEY"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="AWKEY"/>
+      </attribute>
+      <attribute id="AWSYS" order="321" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWSYS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="AWSYS"/>
+      </attribute>
+      <attribute id="POSNR" order="322" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="POSNR"/>
+      </attribute>
+      <attribute id="BUZEI_SENDER" order="323" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZEI_SENDER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BUZEI_SENDER"/>
+      </attribute>
+      <attribute id="H_MONAT" order="324" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_MONAT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="H_MONAT"/>
+      </attribute>
+      <attribute id="H_BSTAT" order="325" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_BSTAT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="H_BSTAT"/>
+      </attribute>
+      <attribute id="H_BUDAT" order="326" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_BUDAT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="H_BUDAT"/>
+      </attribute>
+      <attribute id="H_BLDAT" order="327" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_BLDAT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="H_BLDAT"/>
+      </attribute>
+      <attribute id="H_WAERS" order="328" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_WAERS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="H_WAERS"/>
+      </attribute>
+      <attribute id="H_BLART" order="329" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_BLART"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="H_BLART"/>
+      </attribute>
+      <attribute id="H_HWAER" order="330" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_HWAER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="H_HWAER"/>
+      </attribute>
+      <attribute id="H_HWAE2" order="331" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_HWAE2"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="H_HWAE2"/>
+      </attribute>
+      <attribute id="H_HWAE3" order="332" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_HWAE3"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="H_HWAE3"/>
+      </attribute>
+      <attribute id="NETDT" order="333" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NETDT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="NETDT"/>
+      </attribute>
+      <attribute id="SK1DT" order="334" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SK1DT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SK1DT"/>
+      </attribute>
+      <attribute id="SK2DT" order="335" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SK2DT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SK2DT"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="336" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="FQFTYPE" order="337" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FQFTYPE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FQFTYPE"/>
+      </attribute>
+      <attribute id="LQITEM" order="338" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LQITEM"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="LQITEM"/>
+      </attribute>
+      <attribute id="GKONT" order="339" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GKONT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GKONT"/>
+      </attribute>
+      <attribute id="GKART" order="340" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GKART"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GKART"/>
+      </attribute>
+      <attribute id="GHKON" order="341" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GHKON"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GHKON"/>
+      </attribute>
+      <attribute id="SQUAN" order="342" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SQUAN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="SQUAN"/>
+      </attribute>
+      <attribute id="ANLN2_PN" order="343" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLN2_PN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ANLN2_PN"/>
+      </attribute>
+      <attribute id="BWASL_PN" order="344" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWASL_PN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BWASL_PN"/>
+      </attribute>
+      <attribute id="BZDAT_PN" order="345" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BZDAT_PN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BZDAT_PN"/>
+      </attribute>
+      <attribute id="XVABG_PN" order="346" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XVABG_PN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="XVABG_PN"/>
+      </attribute>
+      <attribute id="DUMMY_INCL_EEW_COBL" order="349" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_INCL_EEW_COBL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="DUMMY_INCL_EEW_COBL"/>
+      </attribute>
+      <attribute id="RE_BUKRS" order="350" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RE_BUKRS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="RE_BUKRS"/>
+      </attribute>
+      <attribute id="RE_ACCOUNT" order="351" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RE_ACCOUNT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="RE_ACCOUNT"/>
+      </attribute>
+      <attribute id="PGEBER" order="352" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PGEBER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PGEBER"/>
+      </attribute>
+      <attribute id="PGRANT_NBR" order="353" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PGRANT_NBR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PGRANT_NBR"/>
+      </attribute>
+      <attribute id="BUDGET_PD" order="354" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDGET_PD"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="BUDGET_PD"/>
+      </attribute>
+      <attribute id="PBUDGET_PD" order="355" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PBUDGET_PD"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PBUDGET_PD"/>
+      </attribute>
+      <attribute id="J_1TPBUPL" order="356" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1TPBUPL"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="J_1TPBUPL"/>
+      </attribute>
+      <attribute id="PEROP_BEG" order="357" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PEROP_BEG"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PEROP_BEG"/>
+      </attribute>
+      <attribute id="PEROP_END" order="358" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PEROP_END"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PEROP_END"/>
+      </attribute>
+      <attribute id="FASTPAY" order="359" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FASTPAY"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FASTPAY"/>
+      </attribute>
+      <attribute id="IGNR_IVREF" order="360" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IGNR_IVREF"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="IGNR_IVREF"/>
+      </attribute>
+      <attribute id="FMFGUS_KEY" order="361" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FMFGUS_KEY"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FMFGUS_KEY"/>
+      </attribute>
+      <attribute id="FMXDOCNR" order="362" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FMXDOCNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FMXDOCNR"/>
+      </attribute>
+      <attribute id="FMXYEAR" order="363" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FMXYEAR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FMXYEAR"/>
+      </attribute>
+      <attribute id="FMXDOCLN" order="364" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FMXDOCLN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FMXDOCLN"/>
+      </attribute>
+      <attribute id="FMXZEKKN" order="365" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FMXZEKKN"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="FMXZEKKN"/>
+      </attribute>
+      <attribute id="PRODPER" order="366" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRODPER"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PRODPER"/>
+      </attribute>
+      <attribute id="RECRF" order="367" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RECRF"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="RECRF"/>
+      </attribute>
+      <attribute id="INWARD_NO" order="368" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INWARD_NO"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="INWARD_NO"/>
+      </attribute>
+      <attribute id="INWARD_DT" order="369" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INWARD_DT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="INWARD_DT"/>
+      </attribute>
+      <attribute id="PYMTKEY" order="370" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMTKEY"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PYMTKEY"/>
+      </attribute>
+      <attribute id="GST_PART" order="371" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GST_PART"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GST_PART"/>
+      </attribute>
+      <attribute id="PLC_SUP" order="372" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLC_SUP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="PLC_SUP"/>
+      </attribute>
+      <attribute id="HSN_SAC" order="373" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HSN_SAC"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="HSN_SAC"/>
+      </attribute>
+      <attribute id="GROUND_NO" order="374" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GROUND_NO"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GROUND_NO"/>
+      </attribute>
+      <attribute id="GROUND_DT" order="375" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GROUND_DT"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GROUND_DT"/>
+      </attribute>
+      <attribute id="GROUND_TYP" order="376" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GROUND_TYP"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="GROUND_TYP"/>
+      </attribute>
+      <attribute id="ZZ1_TITLE1_COB" order="377" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZZ1_TITLE1_COB"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZZ1_TITLE1_COB"/>
+      </attribute>
+      <attribute id="ZZMATNR" order="378" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZZMATNR"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ZZMATNR"/>
+      </attribute>
+      <attribute id="ACROBJTYPE" order="379" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACROBJTYPE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ACROBJTYPE"/>
+      </attribute>
+      <attribute id="ACROBJ_ID" order="380" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACROBJ_ID"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ACROBJ_ID"/>
+      </attribute>
+      <attribute id="ACRSOBJ_ID" order="381" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACRSOBJ_ID"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ACRSOBJ_ID"/>
+      </attribute>
+      <attribute id="ACRITMTYPE" order="382" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACRITMTYPE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="ACRITMTYPE"/>
+      </attribute>
+      <attribute id="VALOBJTYPE" order="383" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALOBJTYPE"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VALOBJTYPE"/>
+      </attribute>
+      <attribute id="VALOBJ_ID" order="384" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALOBJ_ID"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VALOBJ_ID"/>
+      </attribute>
+      <attribute id="VALSOBJ_ID" order="385" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALSOBJ_ID"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="VALSOBJ_ID"/>
+      </attribute>
+      <attribute id="RISK_CLASS" order="386" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RISK_CLASS"/>
+        <keyMapping columnObjectName="P_BSEG" columnName="RISK_CLASS"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="DMBTR" order="20" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBTR"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMBTR"/>
+      </measure>
+      <measure id="WRBTR" order="21" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WRBTR"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="WRBTR"/>
+      </measure>
+      <measure id="KZBTR" order="22" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KZBTR"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="KZBTR"/>
+      </measure>
+      <measure id="PSWBT" order="23" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PSWBT"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PSWBT"/>
+      </measure>
+      <measure id="TXBHW" order="25" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="TXBHW"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="TXBHW"/>
+      </measure>
+      <measure id="TXBFW" order="26" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="TXBFW"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="TXBFW"/>
+      </measure>
+      <measure id="MWSTS" order="27" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWSTS"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="MWSTS"/>
+      </measure>
+      <measure id="WMWST" order="28" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WMWST"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="WMWST"/>
+      </measure>
+      <measure id="HWBAS" order="29" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HWBAS"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="HWBAS"/>
+      </measure>
+      <measure id="FWBAS" order="30" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FWBAS"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="FWBAS"/>
+      </measure>
+      <measure id="HWZUZ" order="31" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HWZUZ"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="HWZUZ"/>
+      </measure>
+      <measure id="FWZUZ" order="32" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FWZUZ"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="FWZUZ"/>
+      </measure>
+      <measure id="QSSHB" order="38" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="QSSHB"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="QSSHB"/>
+      </measure>
+      <measure id="KURSR" order="39" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KURSR"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="KURSR"/>
+      </measure>
+      <measure id="GBETR" order="40" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="GBETR"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="GBETR"/>
+      </measure>
+      <measure id="BDIFF" order="41" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BDIFF"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="BDIFF"/>
+      </measure>
+      <measure id="BDIF2" order="42" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BDIF2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="BDIF2"/>
+      </measure>
+      <measure id="FDWBT" order="53" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FDWBT"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="FDWBT"/>
+      </measure>
+      <measure id="ZBD1T" order="97" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZBD1T"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="ZBD1T"/>
+      </measure>
+      <measure id="ZBD2T" order="98" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZBD2T"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="ZBD2T"/>
+      </measure>
+      <measure id="ZBD3T" order="99" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZBD3T"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="ZBD3T"/>
+      </measure>
+      <measure id="ZBD1P" order="100" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZBD1P"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="ZBD1P"/>
+      </measure>
+      <measure id="ZBD2P" order="101" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZBD2P"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="ZBD2P"/>
+      </measure>
+      <measure id="SKFBT" order="102" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SKFBT"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="SKFBT"/>
+      </measure>
+      <measure id="SKNTO" order="103" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SKNTO"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="SKNTO"/>
+      </measure>
+      <measure id="WSKTO" order="104" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WSKTO"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="WSKTO"/>
+      </measure>
+      <measure id="NEBTR" order="110" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NEBTR"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="NEBTR"/>
+      </measure>
+      <measure id="DMBT1" order="112" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBT1"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMBT1"/>
+      </measure>
+      <measure id="WRBT1" order="113" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WRBT1"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="WRBT1"/>
+      </measure>
+      <measure id="DMBT2" order="115" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBT2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMBT2"/>
+      </measure>
+      <measure id="WRBT2" order="116" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WRBT2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="WRBT2"/>
+      </measure>
+      <measure id="DMBT3" order="118" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBT3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMBT3"/>
+      </measure>
+      <measure id="WRBT3" order="119" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WRBT3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="WRBT3"/>
+      </measure>
+      <measure id="BLNBT" order="141" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BLNBT"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="BLNBT"/>
+      </measure>
+      <measure id="BLNPZ" order="143" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BLNPZ"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="BLNPZ"/>
+      </measure>
+      <measure id="KLIBT" order="152" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KLIBT"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="KLIBT"/>
+      </measure>
+      <measure id="QBSHB" order="154" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="QBSHB"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="QBSHB"/>
+      </measure>
+      <measure id="QSFBT" order="155" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="QSFBT"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="QSFBT"/>
+      </measure>
+      <measure id="NAVHW" order="156" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NAVHW"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="NAVHW"/>
+      </measure>
+      <measure id="NAVFW" order="157" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NAVFW"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="NAVFW"/>
+      </measure>
+      <measure id="MENGE" order="160" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MENGE"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="MENGE"/>
+      </measure>
+      <measure id="ERFMG" order="162" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ERFMG"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="ERFMG"/>
+      </measure>
+      <measure id="BPMNG" order="164" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BPMNG"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="BPMNG"/>
+      </measure>
+      <measure id="PEINH" order="171" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PEINH"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PEINH"/>
+      </measure>
+      <measure id="REWRT" order="175" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="REWRT"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="REWRT"/>
+      </measure>
+      <measure id="REWWR" order="176" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="REWWR"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="REWWR"/>
+      </measure>
+      <measure id="BONFB" order="177" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BONFB"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="BONFB"/>
+      </measure>
+      <measure id="BUALT" order="178" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BUALT"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="BUALT"/>
+      </measure>
+      <measure id="NPREI" order="180" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NPREI"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="NPREI"/>
+      </measure>
+      <measure id="RDIFF" order="194" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RDIFF"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="RDIFF"/>
+      </measure>
+      <measure id="RDIF2" order="195" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RDIF2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="RDIF2"/>
+      </measure>
+      <measure id="POPTS" order="209" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="POPTS"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="POPTS"/>
+      </measure>
+      <measure id="DMBE2" order="225" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBE2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMBE2"/>
+      </measure>
+      <measure id="DMBE3" order="226" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBE3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMBE3"/>
+      </measure>
+      <measure id="DMB21" order="227" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMB21"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMB21"/>
+      </measure>
+      <measure id="DMB22" order="228" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMB22"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMB22"/>
+      </measure>
+      <measure id="DMB23" order="229" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMB23"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMB23"/>
+      </measure>
+      <measure id="DMB31" order="230" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMB31"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMB31"/>
+      </measure>
+      <measure id="DMB32" order="231" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMB32"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMB32"/>
+      </measure>
+      <measure id="DMB33" order="232" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMB33"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="DMB33"/>
+      </measure>
+      <measure id="MWST2" order="233" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWST2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="MWST2"/>
+      </measure>
+      <measure id="MWST3" order="234" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWST3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="MWST3"/>
+      </measure>
+      <measure id="NAVH2" order="235" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NAVH2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="NAVH2"/>
+      </measure>
+      <measure id="NAVH3" order="236" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NAVH3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="NAVH3"/>
+      </measure>
+      <measure id="SKNT2" order="237" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SKNT2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="SKNT2"/>
+      </measure>
+      <measure id="SKNT3" order="238" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SKNT3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="SKNT3"/>
+      </measure>
+      <measure id="BDIF3" order="239" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BDIF3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="BDIF3"/>
+      </measure>
+      <measure id="RDIF3" order="240" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RDIF3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="RDIF3"/>
+      </measure>
+      <measure id="TXBH2" order="249" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="TXBH2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="TXBH2"/>
+      </measure>
+      <measure id="TXBH3" order="250" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="TXBH3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="TXBH3"/>
+      </measure>
+      <measure id="STTAX" order="256" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="STTAX"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="STTAX"/>
+      </measure>
+      <measure id="ABSBT" order="274" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ABSBT"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="ABSBT"/>
+      </measure>
+      <measure id="AGZEI" order="281" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="AGZEI"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="AGZEI"/>
+      </measure>
+      <measure id="PYAMT" order="283" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PYAMT"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PYAMT"/>
+      </measure>
+      <measure id="PPDIFF" order="289" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PPDIFF"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PPDIFF"/>
+      </measure>
+      <measure id="PPDIF2" order="290" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PPDIF2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PPDIF2"/>
+      </measure>
+      <measure id="PPDIF3" order="291" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PPDIF3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PPDIF3"/>
+      </measure>
+      <measure id="PENLC1" order="292" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PENLC1"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PENLC1"/>
+      </measure>
+      <measure id="PENLC2" order="293" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PENLC2"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PENLC2"/>
+      </measure>
+      <measure id="PENLC3" order="294" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PENLC3"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PENLC3"/>
+      </measure>
+      <measure id="PENFC" order="295" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PENFC"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PENFC"/>
+      </measure>
+      <measure id="PENDAYS" order="296" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PENDAYS"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PENDAYS"/>
+      </measure>
+      <measure id="SCTAX" order="299" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SCTAX"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="SCTAX"/>
+      </measure>
+      <measure id="ANBTR_PN" order="347" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ANBTR_PN"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="ANBTR_PN"/>
+      </measure>
+      <measure id="PROZS_PN" order="348" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PROZS_PN"/>
+        <measureMapping columnObjectName="P_BSEG" columnName="PROZS_PN"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_BSEG" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="50" y="220"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Variable="http://www.sap.com/ndb/BiModelVariable.ecore" schemaVersion="3.0" id="HANA_CONTENT.REPORTING_MODELS.CROSS_FUNCTIONAL.SD::CV_RPT_R2081_CUSTOMER_SURCHARGES" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Customer Surcharges "/>
+  <metadata changedAt="2021-12-06 19:30:37.399"/>
+  <localVariables>
+    <variable id="IP_SURCHARGES" parameter="true">
+      <descriptions defaultDescription="Surcharges"/>
+      <variableProperties datatype="NVARCHAR" length="5" mandatory="false" defaultValue="undefined">
+        <valueDomain type="StaticList">
+          <listEntry id="ZDSP">
+            <descriptions defaultDescription="Disposal surcharge"/>
+          </listEntry>
+          <listEntry id="ZDIS">
+            <descriptions defaultDescription="Distance Surcharge"/>
+          </listEntry>
+          <listEntry id="ZENV">
+            <descriptions defaultDescription="Environment surcharge"/>
+          </listEntry>
+          <listEntry id="ZFUL">
+            <descriptions defaultDescription="Fuel Surcharge"/>
+          </listEntry>
+          <listEntry id="ZFUF">
+            <descriptions defaultDescription="Fuel Surcharge STOP"/>
+          </listEntry>
+          <listEntry id="ZFLM">
+            <descriptions defaultDescription="Max Fuel Surcharge"/>
+          </listEntry>
+          <listEntry id="ZENG">
+            <descriptions defaultDescription="Energy fee"/>
+          </listEntry>
+          <listEntry id="ZENF">
+            <descriptions defaultDescription="Energy SurchargeFlat"/>
+          </listEntry>
+          <listEntry id="ZSRV">
+            <descriptions defaultDescription="Service charges"/>
+          </listEntry>
+          <listEntry id="ZRRF">
+            <descriptions defaultDescription="Manifest fee"/>
+          </listEntry>
+          <listEntry id="ZWSM">
+            <descriptions defaultDescription="No Waste fee"/>
+          </listEntry>
+          <listEntry id="ZCOL">
+            <descriptions defaultDescription="Collection surcharge"/>
+          </listEntry>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_SALES_ORG" parameter="true">
+      <descriptions defaultDescription="Sales Organization"/>
+      <variableProperties datatype="NVARCHAR" length="4" mandatory="true" scale="NaN" defaultValue="undefined">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_DIM_MD_SALESORGANIZATIONS</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>VKORG</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_CUSTOMER" parameter="true">
+      <descriptions defaultDescription="Customer"/>
+      <variableProperties datatype="NVARCHAR" length="10" mandatory="false" scale="NaN" defaultValue="undefined">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_MD_KNVP</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>KUNNR</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_MATERIAL" parameter="true">
+      <descriptions defaultDescription="Material"/>
+      <variableProperties datatype="NVARCHAR" length="40" mandatory="false" scale="NaN" defaultValue="undefined">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_DIM_MD_MATERIAL_DESC</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>MATNR</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_CONTRACT" parameter="true">
+      <descriptions defaultDescription="Contract"/>
+      <variableProperties datatype="NVARCHAR" length="10" mandatory="false" scale="NaN" defaultValue="undefined">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_FCT_SALESORDER</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>VBELN</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings>
+    <mapping xsi:type="Variable:VariableMapping" dataSource="CV_FCT_CUSTOMER_SURCHARGES" targetType="CALCULATION_VIEW">
+      <targetVariable name="IP_SURCHARGES" resourceUri="CV_FCT_CUSTOMER_SURCHARGES"/>
+      <localVariable>IP_SURCHARGES</localVariable>
+    </mapping>
+    <mapping xsi:type="Variable:VariableMapping" dataSource="CV_FCT_CUSTOMER_SURCHARGES" targetType="CALCULATION_VIEW">
+      <targetVariable name="IP_SOLD_TO" resourceUri="CV_FCT_CUSTOMER_SURCHARGES"/>
+      <localVariable>IP_CUSTOMER</localVariable>
+    </mapping>
+    <mapping xsi:type="Variable:VariableMapping" dataSource="CV_FCT_CUSTOMER_SURCHARGES" targetType="CALCULATION_VIEW">
+      <targetVariable name="IP_SHIP_TO" resourceUri="CV_FCT_CUSTOMER_SURCHARGES"/>
+      <localVariable>IP_CUSTOMER</localVariable>
+    </mapping>
+    <mapping xsi:type="Variable:VariableMapping" dataSource="CV_FCT_CUSTOMER_SURCHARGES" targetType="CALCULATION_VIEW">
+      <targetVariable name="IP_MATERIAL" resourceUri="CV_FCT_CUSTOMER_SURCHARGES"/>
+      <localVariable>IP_MATERIAL</localVariable>
+    </mapping>
+    <mapping xsi:type="Variable:VariableMapping" dataSource="CV_FCT_CUSTOMER_SURCHARGES" targetType="CALCULATION_VIEW">
+      <targetVariable name="IP_CONTRACT" resourceUri="CV_FCT_CUSTOMER_SURCHARGES"/>
+      <localVariable>IP_CONTRACT</localVariable>
+    </mapping>
+    <mapping xsi:type="Variable:VariableMapping" dataSource="CV_FCT_CUSTOMER_SURCHARGES" targetType="CALCULATION_VIEW">
+      <targetVariable name="IP_SALES_ORG" resourceUri="CV_FCT_CUSTOMER_SURCHARGES"/>
+      <localVariable>IP_SALES_ORG</localVariable>
+    </mapping>
+  </variableMappings>
+  <informationModelLayout relativeWidthScenario="32"/>
+  <dataSources>
+    <DataSource id="CV_FCT_CUSTOMER_SURCHARGES">
+      <resourceUri>CV_FCT_CUSTOMER_SURCHARGES</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KBETR"/>
+        <viewAttribute id="KMEIN"/>
+        <viewAttribute id="KPEIN"/>
+        <viewAttribute id="KSTBM"/>
+        <viewAttribute id="KONM_KSTBM"/>
+        <viewAttribute id="KONM_KBETR"/>
+        <viewAttribute id="KONWA"/>
+        <viewAttribute id="KONM_KOPOS"/>
+        <viewAttribute id="KONM_KLFN1"/>
+        <viewAttribute id="Amount_KBETR_CAL"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DECIMAL" id="KONM_KSTBM_CONV" length="34" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>&quot;KONM_KSTBM&quot;</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="CV_FCT_CUSTOMER_SURCHARGES"/>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions defaultDescription="Customer Surcharges "/>
+    <attributes>
+      <attribute id="KMEIN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unit"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KMEIN"/>
+      </attribute>
+      <attribute id="KONWA" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition unit (currency or percentage)"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KONWA"/>
+      </attribute>
+      <attribute id="KONM_KOPOS" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sequential number of the condition"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KONM_KOPOS"/>
+      </attribute>
+      <attribute id="KONM_KLFN1" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Current number of the line scale"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KONM_KLFN1"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="KBETR" order="1" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Amount"/>
+        <measureMapping columnObjectName="Projection_1" columnName="KBETR"/>
+      </measure>
+      <measure id="KPEIN" order="3" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Per Qty"/>
+        <measureMapping columnObjectName="Projection_1" columnName="KPEIN"/>
+      </measure>
+      <measure id="KSTBM" order="4" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Scales Quantity"/>
+        <measureMapping columnObjectName="Projection_1" columnName="KSTBM"/>
+      </measure>
+      <measure id="KONM_KBETR" order="5" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Condition Amount or Percentage"/>
+        <measureMapping columnObjectName="Projection_1" columnName="KONM_KBETR"/>
+      </measure>
+      <measure id="KONM_KSTBM_CONV" order="9" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Condition Amount"/>
+        <measureMapping columnObjectName="Projection_1" columnName="KONM_KSTBM_CONV"/>
+      </measure>
+      <measure id="Amount_KBETR_CAL" order="10" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Amount"/>
+        <measureMapping columnObjectName="Projection_1" columnName="Amount_KBETR_CAL"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="22" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

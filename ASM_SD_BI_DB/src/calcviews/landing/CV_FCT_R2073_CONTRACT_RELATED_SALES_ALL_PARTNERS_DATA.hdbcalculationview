@@ -1,0 +1,1563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_FCT_R2073_CONTRACT_RELATED_SALES_ALL_PARTNERS_DATA" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VFCT_CONTRACT_RELATED_SALES_INVOICE_DATA"/>
+  <metadata changedAt="2021-12-06 18:56:12.142"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="43"/>
+  <dataSources>
+    <DataSource id="CV_TD_VBKD">
+      <resourceUri>CV_TD_VBKD</resourceUri>
+    </DataSource>
+    <DataSource id="CV_FCT_R2073_CONTRACT_RELATED_SALES_DATA">
+      <resourceUri>CV_FCT_R2073_CONTRACT_RELATED_SALES_DATA</resourceUri>
+    </DataSource>
+    <DataSource id="BUSINESS_DATA_ITEM$$$$CV_TD_VBKD$$">
+      <resourceUri>CV_TD_VBKD</resourceUri>
+    </DataSource>
+    <DataSource id="CV_DIM_MD_SALESDOCUMENT_ALL_PARTNERS">
+      <resourceUri>CV_DIM_MD_SALESDOCUMENT_ALL_PARTNERS</resourceUri>
+    </DataSource>
+    <DataSource id="PARTNER_ITEM$$$$CV_DIM_MD_SALESDOCUMENT_ALL_PARTNERS$$">
+      <resourceUri>CV_DIM_MD_SALESDOCUMENT_ALL_PARTNERS</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="BUSINESS_DATA_HEADER" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="INCO1_HDR_CONTRACT"/>
+        <viewAttribute id="INCO2_HDR_CONTRACT"/>
+        <viewAttribute id="ZTERM_HDR_CONTRACT"/>
+        <viewAttribute id="FKDAT_HDR_CONTRACT"/>
+        <viewAttribute id="GJAHR_HDR_CONTRACT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_TD_VBKD">
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1_HDR_CONTRACT" source="INCO1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2_HDR_CONTRACT" source="INCO2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_HDR_CONTRACT" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_HDR_CONTRACT" source="FKDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_HDR_CONTRACT" source="GJAHR"/>
+      </input>
+      <filter>&quot;POSNR&quot;='000000'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute id="BRGEW_CONTRACT"/>
+        <viewAttribute id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="NETWR_CONTRACT"/>
+        <viewAttribute id="VKUESCH"/>
+        <viewAttribute id="VKUESCH_1"/>
+        <viewAttribute id="GJAHR_HDR"/>
+        <viewAttribute id="FKDAT_HDR"/>
+        <viewAttribute id="ZTERM_HDR"/>
+        <viewAttribute id="INCO2_HDR"/>
+        <viewAttribute id="INCO1_HDR"/>
+        <viewAttribute id="INCO1_ITM"/>
+        <viewAttribute id="INCO2_ITM"/>
+        <viewAttribute id="ZTERM_ITM"/>
+        <viewAttribute id="FKDAT_ITM"/>
+        <viewAttribute id="GJAHRC_ITM"/>
+        <viewAttribute id="BUKRS_VF"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="AUDAT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="ZMENG"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute id="NETPR_CONTRACT"/>
+        <viewAttribute id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_FCT_R2073_CONTRACT_RELATED_SALES_DATA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBEGDAT" source="VBEGDAT_CONTRACT_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VENDDAT" source="VENDDAT_CONTRACT_HDR"/></input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute id="BRGEW_CONTRACT"/>
+        <viewAttribute id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="FKDAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="NETWR_CONTRACT"/>
+        <viewAttribute id="VKUESCH"/>
+        <viewAttribute id="VKUESCH_1"/>
+        <viewAttribute id="GJAHRC_ITM"/>
+        <viewAttribute id="GJAHR_HDR"/>
+        <viewAttribute id="FKDAT_HDR"/>
+        <viewAttribute id="ZTERM_HDR"/>
+        <viewAttribute id="INCO2_HDR"/>
+        <viewAttribute id="INCO1_HDR"/>
+        <viewAttribute id="INCO1_ITM"/>
+        <viewAttribute id="INCO2_ITM"/>
+        <viewAttribute id="ZTERM_ITM"/>
+        <viewAttribute id="FKDAT_ITM"/>
+        <viewAttribute id="BUKRS_VF"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="AUDAT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="ZMENG"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute id="NETPR_CONTRACT"/>
+        <viewAttribute id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_CONTRACT" source="VBELN_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/></input>
+      <input node="BUSINESS_DATA_HEADER">
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1" source="INCO1_HDR_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2" source="INCO2_HDR_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM_HDR_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT" source="FKDAT_HDR_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR_HDR_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_CONTRACT" source="VBELN"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN_CONTRACT"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="BUSINESS_DATA_ITEM" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="INCO1_ITM_CONTRACT"/>
+        <viewAttribute id="INCO2_ITM_CONTRACT"/>
+        <viewAttribute id="ZTERM_ITM_CONTRACT"/>
+        <viewAttribute id="FKDAT_ITM_CONTRACT"/>
+        <viewAttribute id="GJAHR_ITM_CONTRACT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="BUSINESS_DATA_ITEM$$$$CV_TD_VBKD$$">
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1_ITM_CONTRACT" source="INCO1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2_ITM_CONTRACT" source="INCO2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_ITM_CONTRACT" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_ITM_CONTRACT" source="FKDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_ITM_CONTRACT" source="GJAHR"/>
+      </input>
+      <filter>&quot;POSNR&quot;!='000000'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_6" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute id="BRGEW_CONTRACT"/>
+        <viewAttribute id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="INCO1_HDR"/>
+        <viewAttribute id="INCO2_HDR"/>
+        <viewAttribute id="ZTERM_HDR"/>
+        <viewAttribute id="FKDAT_HDR"/>
+        <viewAttribute id="GJAHR_HDR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="INCO1_ITM"/>
+        <viewAttribute id="INCO2_ITM"/>
+        <viewAttribute id="ZTERM_ITM"/>
+        <viewAttribute id="FKDAT_ITM"/>
+        <viewAttribute id="GJAHR_ITM"/>
+        <viewAttribute id="NETWR_CONTRACT"/>
+        <viewAttribute id="VKUESCH"/>
+        <viewAttribute id="VKUESCH_1"/>
+        <viewAttribute id="GJAHRC_ITM"/>
+        <viewAttribute id="GJAHR_HDR_1"/>
+        <viewAttribute id="FKDAT_HDR_1"/>
+        <viewAttribute id="ZTERM_HDR_1"/>
+        <viewAttribute id="INCO2_HDR_1"/>
+        <viewAttribute id="INCO1_HDR_1"/>
+        <viewAttribute id="INCO1_ITM_1"/>
+        <viewAttribute id="INCO2_ITM_1"/>
+        <viewAttribute id="ZTERM_ITM_1"/>
+        <viewAttribute id="FKDAT_ITM_1"/>
+        <viewAttribute id="BUKRS_VF"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="AUDAT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="ZMENG"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute id="NETPR_CONTRACT"/>
+        <viewAttribute id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="POSNR_1"/>
+        <viewAttribute id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="VBELN_1"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_CONTRACT" source="POSNR_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_CONTRACT" source="VBELN_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1_HDR" source="INCO1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2_HDR" source="INCO2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_HDR" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_HDR" source="FKDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_HDR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_HDR_1" source="GJAHR_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_HDR_1" source="FKDAT_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_HDR_1" source="ZTERM_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2_HDR_1" source="INCO2_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1_HDR_1" source="INCO1_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1_ITM_1" source="INCO1_ITM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2_ITM_1" source="INCO2_ITM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_ITM_1" source="ZTERM_ITM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_ITM_1" source="FKDAT_ITM"/></input>
+      <input node="BUSINESS_DATA_ITEM">
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1_ITM" source="INCO1_ITM_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2_ITM" source="INCO2_ITM_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_ITM" source="ZTERM_ITM_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_ITM" source="FKDAT_ITM_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_ITM" source="GJAHR_ITM_CONTRACT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_1" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_1" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_CONTRACT" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_CONTRACT" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN_CONTRACT"/>
+      <joinAttribute name="POSNR_CONTRACT"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY_HEADER"/>
+        <viewAttribute id="KUNNR_PAYER_HEADER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY_HEADER"/>
+        <viewAttribute id="KUNNR_CONTACT_PERSON_HEADER"/>
+        <viewAttribute id="KUNNR_FORWARDING_AGENT_HEADER"/>
+        <viewAttribute id="KUNNR_SALES_EMPLOYEE_HEADER"/>
+        <viewAttribute id="KUNNR_EMPLOYEE_RESPONSE_HEADER"/>
+        <viewAttribute id="KUNNR_VENDOR_HEADER"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY_HEADER"/>
+        <viewAttribute id="LZONE_PAYER_HEADER"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY_HEADER"/>
+        <viewAttribute id="LZONE_CONTACT_PERSON_HEADER"/>
+        <viewAttribute id="LZONE_FORWARDING_AGENT_HEADER"/>
+        <viewAttribute id="LZONE_SALES_EMPLOYEE_HEADER"/>
+        <viewAttribute id="LZONE_EMPLOYEE_RESPONSE_HEADER"/>
+        <viewAttribute id="LZONE_VENDOR_HEADER"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_DIM_MD_SALESDOCUMENT_ALL_PARTNERS">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_BILL_TO_PARTY_HEADER" source="KUNNR_BILL_TO_PARTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_PAYER_HEADER" source="KUNNR_PAYER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_SHIP_TO_PARTY_HEADER" source="KUNNR_SHIP_TO_PARTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_CONTACT_PERSON_HEADER" source="KUNNR_CONTACT_PERSON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_FORWARDING_AGENT_HEADER" source="KUNNR_FORWARDING_AGENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_SALES_EMPLOYEE_HEADER" source="KUNNR_SALES_EMPLOYEE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_EMPLOYEE_RESPONSE_HEADER" source="KUNNR_EMPLOYEE_RESPONSE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_VENDOR_HEADER" source="KUNNR_VENDOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_BILL_TO_PARTY_HEADER" source="LZONE_BILL_TO_PARTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_PAYER_HEADER" source="LZONE_PAYER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_SHIP_TO_PARTY_HEADER" source="LZONE_SHIP_TO_PARTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_CONTACT_PERSON_HEADER" source="LZONE_CONTACT_PERSON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_FORWARDING_AGENT_HEADER" source="LZONE_FORWARDING_AGENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_SALES_EMPLOYEE_HEADER" source="LZONE_SALES_EMPLOYEE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_EMPLOYEE_RESPONSE_HEADER" source="LZONE_EMPLOYEE_RESPONSE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_VENDOR_HEADER" source="LZONE_VENDOR"/></input>
+      <filter>&quot;POSNR&quot;='000000'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_3" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute id="BRGEW_CONTRACT"/>
+        <viewAttribute id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="FKDAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY_HEADER"/>
+        <viewAttribute id="KUNNR_PAYER_HEADER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY_HEADER"/>
+        <viewAttribute id="KUNNR_CONTACT_PERSON_HEADER"/>
+        <viewAttribute id="KUNNR_FORWARDING_AGENT_HEADER"/>
+        <viewAttribute id="KUNNR_SALES_EMPLOYEE_HEADER"/>
+        <viewAttribute id="KUNNR_EMPLOYEE_RESPONSE_HEADER"/>
+        <viewAttribute id="KUNNR_VENDOR_HEADER"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY_HEADER"/>
+        <viewAttribute id="LZONE_PAYER_HEADER"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY_HEADER"/>
+        <viewAttribute id="LZONE_CONTACT_PERSON_HEADER"/>
+        <viewAttribute id="LZONE_FORWARDING_AGENT_HEADER"/>
+        <viewAttribute id="LZONE_SALES_EMPLOYEE_HEADER"/>
+        <viewAttribute id="LZONE_EMPLOYEE_RESPONSE_HEADER"/>
+        <viewAttribute id="LZONE_VENDOR_HEADER"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="NETWR_CONTRACT"/>
+        <viewAttribute id="VKUESCH"/>
+        <viewAttribute id="VKUESCH_1"/>
+        <viewAttribute id="INCO1_ITM"/>
+        <viewAttribute id="INCO2_ITM"/>
+        <viewAttribute id="ZTERM_ITM"/>
+        <viewAttribute id="FKDAT_ITM"/>
+        <viewAttribute id="GJAHR_ITM"/>
+        <viewAttribute id="GJAHRC_ITM"/>
+        <viewAttribute id="GJAHR_HDR_1"/>
+        <viewAttribute id="FKDAT_HDR_1"/>
+        <viewAttribute id="ZTERM_HDR_1"/>
+        <viewAttribute id="INCO2_HDR_1"/>
+        <viewAttribute id="INCO1_HDR_1"/>
+        <viewAttribute id="INCO1_ITM_1"/>
+        <viewAttribute id="INCO2_ITM_1"/>
+        <viewAttribute id="ZTERM_ITM_1"/>
+        <viewAttribute id="FKDAT_ITM_1"/>
+        <viewAttribute id="BUKRS_VF"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="AUDAT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="ZMENG"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute id="NETPR_CONTRACT"/>
+        <viewAttribute id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="POSNR_VBKD_ITEM"/>
+        <viewAttribute id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="VBELN_VBKD"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="POSNR_HEADER"/>
+        <viewAttribute id="PARVW_HEADER"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_6">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1" source="INCO1_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2" source="INCO2_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT" source="FKDAT_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR_HDR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_VBKD_ITEM" source="POSNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_VBKD" source="VBELN_1"/></input>
+      <input node="Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_HEADER" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_HEADER" source="PARVW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="PARTNER_ITEM" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="KUNNR_CONTACT_PERSON"/>
+        <viewAttribute id="KUNNR_FORWARDING_AGENT"/>
+        <viewAttribute id="KUNNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="KUNNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="KUNNR_VENDOR"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_PAYER"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY"/>
+        <viewAttribute id="LZONE_CONTACT_PERSON"/>
+        <viewAttribute id="LZONE_FORWARDING_AGENT"/>
+        <viewAttribute id="LZONE_SALES_EMPLOYEE"/>
+        <viewAttribute id="LZONE_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="LZONE_VENDOR"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="PARTNER_ITEM$$$$CV_DIM_MD_SALESDOCUMENT_ALL_PARTNERS$$"/>
+      <filter>&quot;POSNR&quot;!='000000'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_5" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="KUNNR_CONTACT_PERSON"/>
+        <viewAttribute id="KUNNR_FORWARDING_AGENT"/>
+        <viewAttribute id="KUNNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="KUNNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="KUNNR_VENDOR"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_PAYER"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY"/>
+        <viewAttribute id="LZONE_CONTACT_PERSON"/>
+        <viewAttribute id="LZONE_FORWARDING_AGENT"/>
+        <viewAttribute id="LZONE_SALES_EMPLOYEE"/>
+        <viewAttribute id="LZONE_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="LZONE_VENDOR"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute id="BRGEW_CONTRACT"/>
+        <viewAttribute id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="FKDAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY_HEADER"/>
+        <viewAttribute id="KUNNR_PAYER_HEADER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY_HEADER"/>
+        <viewAttribute id="KUNNR_CONTACT_PERSON_HEADER"/>
+        <viewAttribute id="KUNNR_FORWARDING_AGENT_HEADER"/>
+        <viewAttribute id="KUNNR_SALES_EMPLOYEE_HEADER"/>
+        <viewAttribute id="KUNNR_EMPLOYEE_RESPONSE_HEADER"/>
+        <viewAttribute id="KUNNR_VENDOR_HEADER"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY_HEADER"/>
+        <viewAttribute id="LZONE_PAYER_HEADER"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY_HEADER"/>
+        <viewAttribute id="LZONE_CONTACT_PERSON_HEADER"/>
+        <viewAttribute id="LZONE_FORWARDING_AGENT_HEADER"/>
+        <viewAttribute id="LZONE_SALES_EMPLOYEE_HEADER"/>
+        <viewAttribute id="LZONE_EMPLOYEE_RESPONSE_HEADER"/>
+        <viewAttribute id="LZONE_VENDOR_HEADER"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="NETWR_CONTRACT"/>
+        <viewAttribute id="VKUESCH"/>
+        <viewAttribute id="VKUESCH_1"/>
+        <viewAttribute id="INCO1_ITM"/>
+        <viewAttribute id="INCO2_ITM"/>
+        <viewAttribute id="ZTERM_ITM"/>
+        <viewAttribute id="FKDAT_ITM"/>
+        <viewAttribute id="GJAHR_ITM"/>
+        <viewAttribute id="GJAHRC_ITM"/>
+        <viewAttribute id="GJAHR_HDR_1"/>
+        <viewAttribute id="FKDAT_HDR_1"/>
+        <viewAttribute id="ZTERM_HDR_1"/>
+        <viewAttribute id="INCO2_HDR_1"/>
+        <viewAttribute id="INCO1_HDR_1"/>
+        <viewAttribute id="INCO1_ITM_1"/>
+        <viewAttribute id="INCO2_ITM_1"/>
+        <viewAttribute id="ZTERM_ITM_1"/>
+        <viewAttribute id="FKDAT_ITM_1"/>
+        <viewAttribute id="BUKRS_VF"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="AUDAT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="ZMENG"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute id="NETPR_CONTRACT"/>
+        <viewAttribute id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="POSNR_VBKD_ITEM"/>
+        <viewAttribute id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="POSNR_1"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="VBELN_1"/>
+        <viewAttribute id="VBELN_VBKD"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="POSNR_HEADER"/>
+        <viewAttribute id="PARVW_HEADER"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_CONTACT_PERSON" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;KUNNR_CONTACT_PERSON&quot;),&quot;KUNNR_CONTACT_PERSON_HEADER&quot;,&quot;KUNNR_CONTACT_PERSON&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_BILL_TO_PARTY" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;KUNNR_BILL_TO_PARTY&quot;),&quot;KUNNR_BILL_TO_PARTY_HEADER&quot;,&quot;KUNNR_BILL_TO_PARTY&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_PAYER" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;KUNNR_PAYER&quot;),&quot;KUNNR_PAYER_HEADER&quot;,&quot;KUNNR_PAYER&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_SHIP_TO_PARTY" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;KUNNR_SHIP_TO_PARTY&quot;),&quot;KUNNR_SHIP_TO_PARTY_HEADER&quot;,&quot;KUNNR_SHIP_TO_PARTY&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_FORWARDING_AGENT" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;KUNNR_FORWARDING_AGENT&quot;),&quot;KUNNR_FORWARDING_AGENT_HEADER&quot;,&quot;KUNNR_FORWARDING_AGENT&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_SALES_EMPLOYEE" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;KUNNR_SALES_EMPLOYEE&quot;),&quot;KUNNR_SALES_EMPLOYEE_HEADER&quot;,&quot;KUNNR_SALES_EMPLOYEE&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_EMPLOYEE_RESPONSE" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;KUNNR_EMPLOYEE_RESPONSE&quot;),&quot;KUNNR_EMPLOYEE_RESPONSE_HEADER&quot;,&quot;KUNNR_EMPLOYEE_RESPONSE&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_VENDOR" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;KUNNR_VENDOR&quot;),&quot;KUNNR_VENDOR_HEADER&quot;,&quot;KUNNR_VENDOR&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_TRANSPORTATION_CONTACT_PERSON" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;LZONE_CONTACT_PERSON&quot;),&quot;LZONE_CONTACT_PERSON_HEADER&quot;,&quot;LZONE_CONTACT_PERSON&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_TRANSPORTATION_BILL_TO_PARTY" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;LZONE_BILL_TO_PARTY&quot;),&quot;LZONE_BILL_TO_PARTY_HEADER&quot;,&quot;LZONE_BILL_TO_PARTY&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_TRANSPORTATION_PAYER" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;LZONE_PAYER&quot;),&quot;LZONE_PAYER_HEADER&quot;,&quot;LZONE_PAYER&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_TRANSPORTATION_SHIP_TO_PARTY" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;LZONE_SHIP_TO_PARTY&quot;),&quot;LZONE_SHIP_TO_PARTY_HEADER&quot;,&quot;LZONE_SHIP_TO_PARTY&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_TRANSPORTATION_FORWARDING_AGENT" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;LZONE_FORWARDING_AGENT&quot;),&quot;LZONE_FORWARDING_AGENT_HEADER&quot;,&quot;LZONE_FORWARDING_AGENT&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_TRANSPORTATION_SALES_EMPLOYEE" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;LZONE_SALES_EMPLOYEE&quot;),&quot;LZONE_SALES_EMPLOYEE_HEADER&quot;,&quot;LZONE_SALES_EMPLOYEE&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_TRANSPORTATION_EMPLOYEE_RESPONSE" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;LZONE_EMPLOYEE_RESPONSE&quot;),&quot;LZONE_EMPLOYEE_RESPONSE_HEADER&quot;,&quot;LZONE_EMPLOYEE_RESPONSE&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_TRANSPORTATION_VENDOR" length="20" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;LZONE_VENDOR&quot;),&quot;LZONE_VENDOR_HEADER&quot;,&quot;LZONE_VENDOR&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_POSNR_VBPA" length="30" expressionLanguage="COLUMN_ENGINE">
+          <formula>if
+( isnull(&quot;POSNR&quot;),
+&quot;POSNR_HEADER&quot;,
+&quot;POSNR&quot;
+)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_PARVW_VBPA" length="10" expressionLanguage="COLUMN_ENGINE">
+          <formula>if
+( isnull(&quot;PARVW&quot;),
+&quot;PARVW_HEADER&quot;,
+&quot;PARVW&quot;
+)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="Join_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/></input>
+      <input node="PARTNER_ITEM">
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_1" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_1" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_5">
+    <descriptions defaultDescription="VFCT_CONTRACT_RELATED_SALES_INVOICE_DATA"/>
+    <attributes>
+      <attribute id="VBELN" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Join_5" columnName="VBELN"/>
+      </attribute>
+      <attribute id="VBEGDAT" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBEGDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="VBEGDAT"/>
+      </attribute>
+      <attribute id="VENDDAT" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VENDDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="VENDDAT"/>
+      </attribute>
+      <attribute id="POSNR_CONTRACT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="POSNR_CONTRACT"/>
+      </attribute>
+      <attribute id="MATNR_CONTRACT" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="MATNR_CONTRACT"/>
+      </attribute>
+      <attribute id="MATKL_CONTRACT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATKL_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="MATKL_CONTRACT"/>
+      </attribute>
+      <attribute id="ARKTX_CONTRACT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARKTX_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="ARKTX_CONTRACT"/>
+      </attribute>
+      <attribute id="ZIEME_CONTRACT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZIEME_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="ZIEME_CONTRACT"/>
+      </attribute>
+      <attribute id="GEWEI_CONTRACT" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEWEI_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="GEWEI_CONTRACT"/>
+      </attribute>
+      <attribute id="VOLEH_CONTRACT" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VOLEH_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="VOLEH_CONTRACT"/>
+      </attribute>
+      <attribute id="WERKS_CONTRACT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="WERKS_CONTRACT"/>
+      </attribute>
+      <attribute id="LGORT_CONTRACT" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGORT_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="LGORT_CONTRACT"/>
+      </attribute>
+      <attribute id="VSTEL_CONTRACT" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSTEL_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="VSTEL_CONTRACT"/>
+      </attribute>
+      <attribute id="AUART" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUART"/>
+        <keyMapping columnObjectName="Join_5" columnName="AUART"/>
+      </attribute>
+      <attribute id="AUART_CONTRACT" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUART"/>
+        <keyMapping columnObjectName="Join_5" columnName="AUART_CONTRACT"/>
+      </attribute>
+      <attribute id="KUNNR_CONTRACT" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_CONTRACT"/>
+      </attribute>
+      <attribute id="AUDAT_CONTRACT" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="AUDAT_CONTRACT"/>
+      </attribute>
+      <attribute id="BSTNK_CONTRACT" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTNK"/>
+        <keyMapping columnObjectName="Join_5" columnName="BSTNK_CONTRACT"/>
+      </attribute>
+      <attribute id="ERDAT_CONTRACT" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="ERDAT_CONTRACT"/>
+      </attribute>
+      <attribute id="ERNAM_CONTRACT" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="Join_5" columnName="ERNAM_CONTRACT"/>
+      </attribute>
+      <attribute id="VKORG_CONTRACT" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG"/>
+        <keyMapping columnObjectName="Join_5" columnName="VKORG_CONTRACT"/>
+      </attribute>
+      <attribute id="VTWEG_CONTRACT" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG"/>
+        <keyMapping columnObjectName="Join_5" columnName="VTWEG_CONTRACT"/>
+      </attribute>
+      <attribute id="SPART_CONTRACT" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="Join_5" columnName="SPART_CONTRACT"/>
+      </attribute>
+      <attribute id="WAERK_CONTRACT" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK"/>
+        <keyMapping columnObjectName="Join_5" columnName="WAERK_CONTRACT"/>
+      </attribute>
+      <attribute id="BUKRS_VF_CONTRACT" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS_VF"/>
+        <keyMapping columnObjectName="Join_5" columnName="BUKRS_VF_CONTRACT"/>
+      </attribute>
+      <attribute id="VBELN_CONTRACT" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="VBELN_CONTRACT"/>
+      </attribute>
+      <attribute id="BSTNK" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTNK"/>
+        <keyMapping columnObjectName="Join_5" columnName="BSTNK"/>
+      </attribute>
+      <attribute id="ERDAT" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERNAM" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="Join_5" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="LIFSK" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFSK"/>
+        <keyMapping columnObjectName="Join_5" columnName="LIFSK"/>
+      </attribute>
+      <attribute id="FAKSK" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAKSK"/>
+        <keyMapping columnObjectName="Join_5" columnName="FAKSK"/>
+      </attribute>
+      <attribute id="WAERK" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK"/>
+        <keyMapping columnObjectName="Join_5" columnName="WAERK"/>
+      </attribute>
+      <attribute id="POSNR" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Join_5" columnName="POSNR"/>
+      </attribute>
+      <attribute id="MATNR" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Join_5" columnName="MATNR"/>
+      </attribute>
+      <attribute id="ARKTX" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Short Text for Sales Order Item"/>
+        <keyMapping columnObjectName="Join_5" columnName="ARKTX"/>
+      </attribute>
+      <attribute id="MATKL" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Group"/>
+        <keyMapping columnObjectName="Join_5" columnName="MATKL"/>
+      </attribute>
+      <attribute id="ZIEME" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Target Quantity UoM"/>
+        <keyMapping columnObjectName="Join_5" columnName="ZIEME"/>
+      </attribute>
+      <attribute id="GEWEI" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Weight Unit"/>
+        <keyMapping columnObjectName="Join_5" columnName="GEWEI"/>
+      </attribute>
+      <attribute id="VOLEH" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Volume unit"/>
+        <keyMapping columnObjectName="Join_5" columnName="VOLEH"/>
+      </attribute>
+      <attribute id="WERKS" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant (Own or External)"/>
+        <keyMapping columnObjectName="Join_5" columnName="WERKS"/>
+      </attribute>
+      <attribute id="LGORT" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Storage location"/>
+        <keyMapping columnObjectName="Join_5" columnName="LGORT"/>
+      </attribute>
+      <attribute id="VSTEL" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Shipping Point/Receiving Point"/>
+        <keyMapping columnObjectName="Join_5" columnName="VSTEL"/>
+      </attribute>
+      <attribute id="ABGRU" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reason for Rejection of Quotations and Sales Orders"/>
+        <keyMapping columnObjectName="Join_5" columnName="ABGRU"/>
+      </attribute>
+      <attribute id="INCO1_HDR_CONTRACT" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO1_HDR_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="INCO1"/>
+      </attribute>
+      <attribute id="INCO2_HDR_CONTRACT" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2_HDR_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="INCO2"/>
+      </attribute>
+      <attribute id="ZTERM_HDR_CONTRACT" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM_HDR_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="FKDAT_HDR_CONTRACT" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_HDR_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="FKDAT"/>
+      </attribute>
+      <attribute id="GJAHR_HDR_CONTRACT" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR_HDR_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="MANDT" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="Join_5" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KUNNR_SOLD_TO_PARTY" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_SOLD_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="LZONE_SOLD_TO_PARTY" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_SOLD_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="KUNNR_BILL_TO_PARTY" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_BILL_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="KUNNR_PAYER" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_PAYER"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_PAYER"/>
+      </attribute>
+      <attribute id="KUNNR_SHIP_TO_PARTY" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_SHIP_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="KUNNR_CONTACT_PERSON" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_CONTACT_PERSON"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="KUNNR_FORWARDING_AGENT" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_FORWARDING_AGENT"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="KUNNR_SALES_EMPLOYEE" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_SALES_EMPLOYEE"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="KUNNR_EMPLOYEE_RESPONSE" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_EMPLOYEE_RESPONSE"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="KUNNR_VENDOR" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_VENDOR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_VENDOR"/>
+      </attribute>
+      <attribute id="LZONE_BILL_TO_PARTY" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_BILL_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="LZONE_PAYER" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_PAYER"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_PAYER"/>
+      </attribute>
+      <attribute id="LZONE_SHIP_TO_PARTY" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_SHIP_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="LZONE_CONTACT_PERSON" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_CONTACT_PERSON"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="LZONE_FORWARDING_AGENT" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_FORWARDING_AGENT"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="LZONE_SALES_EMPLOYEE" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_SALES_EMPLOYEE"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="LZONE_EMPLOYEE_RESPONSE" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_EMPLOYEE_RESPONSE"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="LZONE_VENDOR" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_VENDOR"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_VENDOR"/>
+      </attribute>
+      <attribute id="VCAL_CONTACT_PERSON" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_CONTACT_PERSON"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="VCAL_BILL_TO_PARTY" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_BILL_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="VCAL_PAYER" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_PAYER"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_PAYER"/>
+      </attribute>
+      <attribute id="VCAL_SHIP_TO_PARTY" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_SHIP_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="VCAL_FORWARDING_AGENT" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_FORWARDING_AGENT"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="VCAL_SALES_EMPLOYEE" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_SALES_EMPLOYEE"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="VCAL_EMPLOYEE_RESPONSE" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_EMPLOYEE_RESPONSE"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="VCAL_VENDOR" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_VENDOR"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_VENDOR"/>
+      </attribute>
+      <attribute id="VCAL_TRN_CONTACT_PERSON" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_TRN_CONTACT_PERSON"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_TRANSPORTATION_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="VCAL_TRN_BILL_TO_PARTY" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_TRN_BILL_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_TRANSPORTATION_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="VCAL_TRN_PAYER" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_TRN_PAYER"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_TRANSPORTATION_PAYER"/>
+      </attribute>
+      <attribute id="VCAL_TRN_SHIP_TO_PARTY" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_TRN_SHIP_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_TRANSPORTATION_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="VCAL_TRN_FORWARDING_AGENT" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_TRN_FORWARDING_AGENT"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_TRANSPORTATION_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="VCAL_TRN_SALES_EMPLOYEE" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_TRN_SALES_EMPLOYEE"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_TRANSPORTATION_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="VCAL_TRN_EMPLOYEE_RESPONSE" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_TRN_EMPLOYEE_RESPONSE"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_TRANSPORTATION_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="VCAL_TRN_VENDOR" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_TRN_VENDOR"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_TRANSPORTATION_VENDOR"/>
+      </attribute>
+      <attribute id="VRKME" order="88" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME"/>
+        <keyMapping columnObjectName="Join_5" columnName="VRKME"/>
+      </attribute>
+      <attribute id="VBEGDAT_CONTRACT_ITM" order="89" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBEGDAT_CONTRACT_ITM"/>
+        <keyMapping columnObjectName="Join_5" columnName="VBEGDAT_CONTRACT_ITM"/>
+      </attribute>
+      <attribute id="VENDDAT_CONTRACT_ITM" order="90" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VENDDAT_CONTRACT_ITM"/>
+        <keyMapping columnObjectName="Join_5" columnName="VENDDAT_CONTRACT_ITM"/>
+      </attribute>
+      <attribute id="VKUESCH" order="97" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKUESCH"/>
+        <keyMapping columnObjectName="Join_5" columnName="VKUESCH"/>
+      </attribute>
+      <attribute id="VKUESCH_1" order="98" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKUESCH"/>
+        <keyMapping columnObjectName="Join_5" columnName="VKUESCH_1"/>
+      </attribute>
+      <attribute id="INCO1_ITM_CONTRACT" order="99" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_5" columnName="INCO1_ITM"/>
+      </attribute>
+      <attribute id="INCO2_ITM_CONTRACT" order="100" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_5" columnName="INCO2_ITM"/>
+      </attribute>
+      <attribute id="ZTERM_ITM_CONTRACT" order="101" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_5" columnName="ZTERM_ITM"/>
+      </attribute>
+      <attribute id="FKDAT_ITM_CONTRACT" order="102" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_5" columnName="FKDAT_ITM"/>
+      </attribute>
+      <attribute id="GJAHR_ITM_CONTRACT" order="103" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_5" columnName="GJAHR_ITM"/>
+      </attribute>
+      <attribute id="GJAHRC_ITM" order="104" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHRC_ITM"/>
+        <keyMapping columnObjectName="Join_5" columnName="GJAHRC_ITM"/>
+      </attribute>
+      <attribute id="GJAHR_HDR" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="GJAHR_HDR_1"/>
+      </attribute>
+      <attribute id="FKDAT_HDR" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="FKDAT_HDR_1"/>
+      </attribute>
+      <attribute id="ZTERM_HDR" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="ZTERM_HDR_1"/>
+      </attribute>
+      <attribute id="INCO2_HDR" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="INCO2_HDR_1"/>
+      </attribute>
+      <attribute id="INCO1_HDR" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO1_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="INCO1_HDR_1"/>
+      </attribute>
+      <attribute id="INCO1_ITM" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO1_ITM"/>
+        <keyMapping columnObjectName="Join_5" columnName="INCO1_ITM_1"/>
+      </attribute>
+      <attribute id="INCO2_ITM" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2_ITM"/>
+        <keyMapping columnObjectName="Join_5" columnName="INCO2_ITM_1"/>
+      </attribute>
+      <attribute id="ZTERM_ITM" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM_ITM"/>
+        <keyMapping columnObjectName="Join_5" columnName="ZTERM_ITM_1"/>
+      </attribute>
+      <attribute id="FKDAT_ITM" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_ITM"/>
+        <keyMapping columnObjectName="Join_5" columnName="FKDAT_ITM_1"/>
+      </attribute>
+      <attribute id="BUKRS_VF" order="114" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS_VF"/>
+        <keyMapping columnObjectName="Join_5" columnName="BUKRS_VF"/>
+      </attribute>
+      <attribute id="SPART" order="115" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="Join_5" columnName="SPART"/>
+      </attribute>
+      <attribute id="VTWEG" order="116" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG"/>
+        <keyMapping columnObjectName="Join_5" columnName="VTWEG"/>
+      </attribute>
+      <attribute id="VKORG" order="117" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG"/>
+        <keyMapping columnObjectName="Join_5" columnName="VKORG"/>
+      </attribute>
+      <attribute id="AUDAT" order="118" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="AUDAT"/>
+      </attribute>
+      <attribute id="KUNNR" order="119" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="VBELN_CONTRACT_HDR" order="121" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Join_5" columnName="VBELN_CONTRACT_HDR"/>
+      </attribute>
+      <attribute id="WAERK_CONTRACT_HDR" order="124" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK_CONTRACT_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="WAERK_CONTRACT_HDR"/>
+      </attribute>
+      <attribute id="POSNR_VBKD_ITEM" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Join_5" columnName="POSNR_VBKD_ITEM"/>
+      </attribute>
+      <attribute id="POSNR_VBPA_ITEM" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Join_5" columnName="POSNR_1"/>
+      </attribute>
+      <attribute id="PARVW_VBPA_ITEM" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW_VBPA_ITEM"/>
+        <keyMapping columnObjectName="Join_5" columnName="PARVW"/>
+      </attribute>
+      <attribute id="VBELN_VBPA" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Join_5" columnName="VBELN_1"/>
+      </attribute>
+      <attribute id="VBELN_VBKD" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Join_5" columnName="VBELN_VBKD"/>
+      </attribute>
+      <attribute id="ERDAT_VBAK_CONTRACT" order="131" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT_VBAK_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="ERDAT_VBAK_CONTRACT"/>
+      </attribute>
+      <attribute id="ERNAM_VBAK_CONTRACT" order="132" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM_VBAK_CONTRACT"/>
+        <keyMapping columnObjectName="Join_5" columnName="ERNAM_VBAK_CONTRACT"/>
+      </attribute>
+      <attribute id="VCAL_POSNR_VBPA" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_POSNR_VBPA"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_POSNR_VBPA"/>
+      </attribute>
+      <attribute id="VCAL_PARVW_VBPA" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_PARVW_VBPA"/>
+        <keyMapping columnObjectName="Join_5" columnName="VCAL_PARVW_VBPA"/>
+      </attribute>
+      <attribute id="ERDAT_VBAK_ORDER" order="135" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT_VBAK_ORDER"/>
+        <keyMapping columnObjectName="Join_5" columnName="ERDAT_VBAK_ORDER"/>
+      </attribute>
+      <attribute id="ERNAM_VBAK_ORDER" order="136" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM_VBAK_ORDER"/>
+        <keyMapping columnObjectName="Join_5" columnName="ERNAM_VBAK_ORDER"/>
+      </attribute>
+      <attribute id="KUNNR_BILL_TO_PARTY_HDR" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_BILL_TO_PARTY_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_BILL_TO_PARTY_HEADER"/>
+      </attribute>
+      <attribute id="LZONE_BILL_TO_PARTY_HDR" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_BILL_TO_PARTY_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_BILL_TO_PARTY_HEADER"/>
+      </attribute>
+      <attribute id="KUNNR_PAYER_HDR" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_PAYER_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_PAYER_HEADER"/>
+      </attribute>
+      <attribute id="KUNNR_SHIP_TO_PARTY_HDR" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_SHIP_TO_PARTY_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_SHIP_TO_PARTY_HEADER"/>
+      </attribute>
+      <attribute id="KUNNR_CNT_PER_HDR" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_CNT_PER_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_CONTACT_PERSON_HEADER"/>
+      </attribute>
+      <attribute id="KUNNR_FWD_AGENT_HDR" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_FWD_AGENT_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_FORWARDING_AGENT_HEADER"/>
+      </attribute>
+      <attribute id="KUNNR_SALES_EMP_HDR" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_SALES_EMP_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_SALES_EMPLOYEE_HEADER"/>
+      </attribute>
+      <attribute id="KUNNR_EMP_RESP_HDR" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_EMP_RESP_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_EMPLOYEE_RESPONSE_HEADER"/>
+      </attribute>
+      <attribute id="KUNNR_VDR_HDR" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_VDR_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="KUNNR_VENDOR_HEADER"/>
+      </attribute>
+      <attribute id="LZONE_PAYER_HDR" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_PAYER_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_PAYER_HEADER"/>
+      </attribute>
+      <attribute id="LZONE_SHIP_TO_PARTY_HDR" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_SHIP_TO_PARTY_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_SHIP_TO_PARTY_HEADER"/>
+      </attribute>
+      <attribute id="LZONE_CNT_PER_HDR" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_CNT_PER_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_CONTACT_PERSON_HEADER"/>
+      </attribute>
+      <attribute id="LZONE_FWD_AGENT_HDR" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_FWD_AGENT_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_FORWARDING_AGENT_HEADER"/>
+      </attribute>
+      <attribute id="LZONE_SALES_EMP_HDR" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_SALES_EMP_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_SALES_EMPLOYEE_HEADER"/>
+      </attribute>
+      <attribute id="LZONE_EMP_RESP_HDR" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_EMP_RESP_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_EMPLOYEE_RESPONSE_HEADER"/>
+      </attribute>
+      <attribute id="LZONE_VDR_HDR" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_VDR_HDR"/>
+        <keyMapping columnObjectName="Join_5" columnName="LZONE_VENDOR_HEADER"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="ZMENG_CONTRACT" order="7" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZMENG_CONTRACT"/>
+        <measureMapping columnObjectName="Join_5" columnName="ZMENG_CONTRACT"/>
+      </measure>
+      <measure id="BRGEW_CONTRACT" order="10" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BRGEW_CONTRACT"/>
+        <measureMapping columnObjectName="Join_5" columnName="BRGEW_CONTRACT"/>
+      </measure>
+      <measure id="NTGEW_CONTRACT" order="11" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NTGEW_CONTRACT"/>
+        <measureMapping columnObjectName="Join_5" columnName="NTGEW_CONTRACT"/>
+      </measure>
+      <measure id="VOLUM_CONTRACT" order="13" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VOLUM_CONTRACT"/>
+        <measureMapping columnObjectName="Join_5" columnName="VOLUM_CONTRACT"/>
+      </measure>
+      <measure id="KWMENG" order="91" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Cumulative order quantity in sales units"/>
+        <measureMapping columnObjectName="Join_5" columnName="KWMENG"/>
+      </measure>
+      <measure id="NETWR" order="92" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Net Value of the Order Item in Document Currency"/>
+        <measureMapping columnObjectName="Join_5" columnName="NETWR"/>
+      </measure>
+      <measure id="BRGEW" order="93" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Gross Weight of the Item"/>
+        <measureMapping columnObjectName="Join_5" columnName="BRGEW"/>
+      </measure>
+      <measure id="NTGEW" order="94" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Net Weight of the Item"/>
+        <measureMapping columnObjectName="Join_5" columnName="NTGEW"/>
+      </measure>
+      <measure id="VOLUM" order="95" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Volume of the item"/>
+        <measureMapping columnObjectName="Join_5" columnName="VOLUM"/>
+      </measure>
+      <measure id="NETWR_CONTRACT" order="96" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR_CONTRACT"/>
+        <measureMapping columnObjectName="Join_5" columnName="NETWR_CONTRACT"/>
+      </measure>
+      <measure id="ZMENG" order="120" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Target Quantity in Sales Units"/>
+        <measureMapping columnObjectName="Join_5" columnName="ZMENG"/>
+      </measure>
+      <measure id="NETPR_CONTRACT" order="122" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETPR_CONTRACT"/>
+        <measureMapping columnObjectName="Join_5" columnName="NETPR_CONTRACT"/>
+      </measure>
+      <measure id="NETWR_CONTRACT_HDR" order="123" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR_CONTRACT_HDR"/>
+        <measureMapping columnObjectName="Join_5" columnName="NETWR_CONTRACT_HDR"/>
+      </measure>
+      <measure id="MWSBP_VBAP_ORDER" order="126" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWSBP_VBAP_ORDER"/>
+        <measureMapping columnObjectName="Join_5" columnName="MWSBP_VBAP_ORDER"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="174" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="BUSINESS_DATA_HEADER" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="549"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="549"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="453"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="BUSINESS_DATA_HEADER" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="BUSINESS_DATA_ITEM" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="453"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_6" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="174" y="370"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_1" modelObjectNameSpace="Join_6" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="BUSINESS_DATA_ITEM" modelObjectNameSpace="Join_6" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="329" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="251" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Join_6" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="PARTNER_ITEM" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="97" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="174" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+      <shape modelObjectName="Join_3" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="PARTNER_ITEM" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

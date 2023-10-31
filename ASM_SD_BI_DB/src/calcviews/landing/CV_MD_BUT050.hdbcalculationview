@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_BUT050" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+  <descriptions defaultDescription="CV_MD_BUT050"/>
+  <metadata changedAt="2021-12-06 18:05:45.367"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_BUT050">
+      <resourceUri>syn_tbl_BUT050</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_BUT050">
+    <descriptions defaultDescription="CV_MD_BUT050"/>
+    <attributes>
+      <attribute id="CLIENT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLIENT"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="CLIENT"/>
+      </attribute>
+      <attribute id="RELNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RELNR"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="RELNR"/>
+      </attribute>
+      <attribute id="PARTNER1" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER1"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="PARTNER1"/>
+      </attribute>
+      <attribute id="PARTNER2" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER2"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="PARTNER2"/>
+      </attribute>
+      <attribute id="DATE_TO" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE_TO"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="DATE_TO"/>
+      </attribute>
+      <attribute id="DATE_FROM" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE_FROM"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="DATE_FROM"/>
+      </attribute>
+      <attribute id="RELTYP" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RELTYP"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="RELTYP"/>
+      </attribute>
+      <attribute id="XRF" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XRF"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="XRF"/>
+      </attribute>
+      <attribute id="DFTVAL" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DFTVAL"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="DFTVAL"/>
+      </attribute>
+      <attribute id="RLTYP" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RLTYP"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="RLTYP"/>
+      </attribute>
+      <attribute id="RELKIND" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RELKIND"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="RELKIND"/>
+      </attribute>
+      <attribute id="CRUSR" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CRUSR"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="CRUSR"/>
+      </attribute>
+      <attribute id="CRDAT" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CRDAT"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="CRDAT"/>
+      </attribute>
+      <attribute id="CRTIM" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CRTIM"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="CRTIM"/>
+      </attribute>
+      <attribute id="CHUSR" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHUSR"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="CHUSR"/>
+      </attribute>
+      <attribute id="CHDAT" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHDAT"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="CHDAT"/>
+      </attribute>
+      <attribute id="CHTIM" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHTIM"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="CHTIM"/>
+      </attribute>
+      <attribute id="XDFREL" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XDFREL"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="XDFREL"/>
+      </attribute>
+      <attribute id="XDFREL2" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XDFREL2"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="XDFREL2"/>
+      </attribute>
+      <attribute id="DB_KEY" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DB_KEY"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="DB_KEY"/>
+      </attribute>
+      <attribute id="DB_KEY_TD" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DB_KEY_TD"/>
+        <keyMapping columnObjectName="syn_tbl_BUT050" columnName="DB_KEY_TD"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario> 

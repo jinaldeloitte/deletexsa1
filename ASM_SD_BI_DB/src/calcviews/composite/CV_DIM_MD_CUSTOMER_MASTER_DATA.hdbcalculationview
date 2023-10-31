@@ -1,0 +1,1408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_DIM_MD_CUSTOMER_MASTER_DATA" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_CUSTOMER_MASTER_DATA"/>
+  <metadata changedAt="2021-12-06 18:55:10.131"/>
+  <localVariables>
+    <variable id="GPO_Customers" parameter="true">
+      <descriptions defaultDescription="GPO_Customers"/>
+      <variableProperties datatype="NVARCHAR" length="2" mandatory="false" scale="0" defaultValue="undefined">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK1T</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>KATR1</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="49"/>
+  <dataSources>
+    <DataSource id="CV_DIM_MD_CUSTOMER_SALES_AREA">
+      <resourceUri>CV_DIM_MD_CUSTOMER_SALES_AREA</resourceUri>
+    </DataSource>
+    <DataSource id="CV_DIM_MD_CUSTOMER_DATA">
+      <resourceUri>HANA_CONTENT.STAGING_MODELS.CROSSFUNCTION::CV_DIM_MD_CUSTOMER_DATA</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_KNKK">
+      <resourceUri>CV_MD_KNKK</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_ADRC">
+      <resourceUri>CV_MD_ADRC</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="CustSales">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VWERK"/>
+        <viewAttribute id="VKGRP"/>
+        <viewAttribute id="VKBUR"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="RDOFF"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="KVGR5"/>
+        <viewAttribute id="KVGR1"/>
+        <viewAttribute id="KVGR2"/>
+        <viewAttribute id="KVGR3"/>
+        <viewAttribute id="KVGR4"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="BZIRK"/>
+        <viewAttribute id="FSH_KVGR10"/>
+        <viewAttribute id="FSH_KVGR9"/>
+        <viewAttribute id="FSH_KVGR8"/>
+        <viewAttribute id="FSH_KVGR7"/>
+        <viewAttribute id="FSH_KVGR6"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="KLABC"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="PRAT1"/>
+        <viewAttribute id="PRAT2"/>
+        <viewAttribute id="PRAT3"/>
+        <viewAttribute id="PRAT5"/>
+        <viewAttribute id="PRAT4"/>
+        <viewAttribute id="PRAT6"/>
+        <viewAttribute id="PRAT7"/>
+        <viewAttribute id="PRAT8"/>
+        <viewAttribute id="PRAT9"/>
+        <viewAttribute id="PRATA"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="KUNNR_KNVP"/>
+        <viewAttribute id="WAERS_KNVV"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="CASSD"/>
+        <viewAttribute id="FAKSD"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_DIM_MD_CUSTOMER_SALES_AREA"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="CustomerData">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="NAME2_KNA1"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="VTEXT_KATR9"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="VTEXT8"/>
+        <viewAttribute id="VTEXT7"/>
+        <viewAttribute id="VTEXT5"/>
+        <viewAttribute id="VTEXT4"/>
+        <viewAttribute id="VTEXT2"/>
+        <viewAttribute id="VTEXT3"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_DIM_MD_CUSTOMER_DATA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2_KNA1" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR9" source="VTEXT_9"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VWERK"/>
+        <viewAttribute id="VKGRP"/>
+        <viewAttribute id="VKBUR"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="RDOFF"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="KVGR1"/>
+        <viewAttribute id="KVGR2"/>
+        <viewAttribute id="KVGR3"/>
+        <viewAttribute id="KVGR4"/>
+        <viewAttribute id="KVGR5"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="BZIRK"/>
+        <viewAttribute id="FSH_KVGR10"/>
+        <viewAttribute id="FSH_KVGR9"/>
+        <viewAttribute id="FSH_KVGR8"/>
+        <viewAttribute id="FSH_KVGR7"/>
+        <viewAttribute id="FSH_KVGR6"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="KLABC"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="PRAT1"/>
+        <viewAttribute id="PRAT2"/>
+        <viewAttribute id="PRAT3"/>
+        <viewAttribute id="PRAT5"/>
+        <viewAttribute id="PRAT4"/>
+        <viewAttribute id="PRAT6"/>
+        <viewAttribute id="PRAT7"/>
+        <viewAttribute id="PRAT8"/>
+        <viewAttribute id="PRAT9"/>
+        <viewAttribute id="PRATA"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="KUNNR_KNA1"/>
+        <viewAttribute id="NAME2_KNA1"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="ZTERM_KNB1"/>
+        <viewAttribute id="KUNNR_KNVP"/>
+        <viewAttribute id="WAERS_KNVV"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="VTEXT_KATR9"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="CASSD"/>
+        <viewAttribute id="FAKSD"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="VTEXT8"/>
+        <viewAttribute id="VTEXT7"/>
+        <viewAttribute id="VTEXT5"/>
+        <viewAttribute id="VTEXT4"/>
+        <viewAttribute id="VTEXT2"/>
+        <viewAttribute id="VTEXT3"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CustSales">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VWERK" source="VWERK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKGRP" source="VKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKBUR" source="VKBUR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RDOFF" source="RDOFF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG" source="VKORG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG" source="VTWEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART" source="SPART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1" source="INCO1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2" source="INCO2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR1" source="KVGR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR2" source="KVGR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR3" source="KVGR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR4" source="KVGR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR5" source="KVGR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BZIRK" source="BZIRK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR10" source="FSH_KVGR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR9" source="FSH_KVGR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR8" source="FSH_KVGR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR7" source="FSH_KVGR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR6" source="FSH_KVGR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDGRP" source="KDGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KLABC" source="KLABC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTGRD" source="KTGRD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT1" source="PRAT1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT2" source="PRAT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT3" source="PRAT3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT5" source="PRAT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT4" source="PRAT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT6" source="PRAT6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT7" source="PRAT7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT8" source="PRAT8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT9" source="PRAT9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRATA" source="PRATA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNVP" source="KUNNR_KNVP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS_KNVV" source="WAERS_KNVV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CASSD" source="CASSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSD" source="FAKSD"/>
+      </input>
+      <input node="CustomerData">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNA1" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2_KNA1" source="NAME2_KNA1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_KNB1" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR6" source="VTEXT_KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR9" source="VTEXT_KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT8" source="VTEXT8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT7" source="VTEXT7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT5" source="VTEXT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT4" source="VTEXT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT2" source="VTEXT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT3" source="VTEXT3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KUNNR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="CreditManagement">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KLIMK"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_KNKK"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VWERK"/>
+        <viewAttribute id="VKGRP"/>
+        <viewAttribute id="VKBUR"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="RDOFF"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="KVGR1"/>
+        <viewAttribute id="KVGR2"/>
+        <viewAttribute id="KVGR3"/>
+        <viewAttribute id="KVGR4"/>
+        <viewAttribute id="KVGR5"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="BZIRK"/>
+        <viewAttribute id="FSH_KVGR10"/>
+        <viewAttribute id="FSH_KVGR9"/>
+        <viewAttribute id="FSH_KVGR8"/>
+        <viewAttribute id="FSH_KVGR7"/>
+        <viewAttribute id="FSH_KVGR6"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="KLABC"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="PRAT1"/>
+        <viewAttribute id="PRAT2"/>
+        <viewAttribute id="PRAT3"/>
+        <viewAttribute id="PRAT5"/>
+        <viewAttribute id="PRAT4"/>
+        <viewAttribute id="PRAT6"/>
+        <viewAttribute id="PRAT7"/>
+        <viewAttribute id="PRAT8"/>
+        <viewAttribute id="PRAT9"/>
+        <viewAttribute id="PRATA"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="KLIMK"/>
+        <viewAttribute id="KUNNR_KNA1"/>
+        <viewAttribute id="NAME2_KNA1"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="ZTERM_KNB1"/>
+        <viewAttribute id="KUNNR_KNKK"/>
+        <viewAttribute id="KUNNR_KNVP"/>
+        <viewAttribute id="WAERS_KNVV"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="VTEXT_KATR9"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="CASSD"/>
+        <viewAttribute id="FAKSD"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="VTEXT2"/>
+        <viewAttribute id="VTEXT3"/>
+        <viewAttribute id="VTEXT4"/>
+        <viewAttribute id="VTEXT5"/>
+        <viewAttribute id="VTEXT7"/>
+        <viewAttribute id="VTEXT8"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VWERK" source="VWERK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKGRP" source="VKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKBUR" source="VKBUR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RDOFF" source="RDOFF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG" source="VKORG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG" source="VTWEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART" source="SPART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1" source="INCO1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2" source="INCO2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR1" source="KVGR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR2" source="KVGR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR3" source="KVGR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR4" source="KVGR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR5" source="KVGR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BZIRK" source="BZIRK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR10" source="FSH_KVGR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR9" source="FSH_KVGR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR8" source="FSH_KVGR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR7" source="FSH_KVGR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR6" source="FSH_KVGR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDGRP" source="KDGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KLABC" source="KLABC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTGRD" source="KTGRD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT1" source="PRAT1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT2" source="PRAT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT3" source="PRAT3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT5" source="PRAT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT4" source="PRAT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT6" source="PRAT6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT7" source="PRAT7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT8" source="PRAT8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT9" source="PRAT9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRATA" source="PRATA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNA1" source="KUNNR_KNA1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2_KNA1" source="NAME2_KNA1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_KNB1" source="ZTERM_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNVP" source="KUNNR_KNVP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS_KNVV" source="WAERS_KNVV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR6" source="VTEXT_KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR9" source="VTEXT_KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CASSD" source="CASSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSD" source="FAKSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT2" source="VTEXT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT3" source="VTEXT3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT4" source="VTEXT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT5" source="VTEXT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT7" source="VTEXT7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT8" source="VTEXT8"/>
+      </input>
+      <input node="CreditManagement">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KLIMK" source="KLIMK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNKK" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KUNNR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="CLIENT"/>
+        <viewAttribute id="ADDRNUMBER"/>
+        <viewAttribute id="CITY1"/>
+        <viewAttribute id="CITY2"/>
+        <viewAttribute id="COUNTY"/>
+        <viewAttribute id="COUNTY_CODE"/>
+        <viewAttribute id="DUNS"/>
+        <viewAttribute id="DUNSP4"/>
+        <viewAttribute id="HOME_CITY"/>
+        <viewAttribute id="HOUSE_NUM1"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="NAME3"/>
+        <viewAttribute id="POST_CODE1"/>
+        <viewAttribute id="REGION"/>
+        <viewAttribute id="STREET"/>
+        <viewAttribute id="DATE_FROM"/>
+        <viewAttribute id="DATE_TO"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_ADRC"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_3" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VWERK"/>
+        <viewAttribute id="VKGRP"/>
+        <viewAttribute id="VKBUR"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="RDOFF"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="CLIENT"/>
+        <viewAttribute id="ADDRNUMBER"/>
+        <viewAttribute id="CITY1"/>
+        <viewAttribute id="CITY2"/>
+        <viewAttribute id="COUNTY"/>
+        <viewAttribute id="COUNTY_CODE"/>
+        <viewAttribute id="DUNS"/>
+        <viewAttribute id="DUNSP4"/>
+        <viewAttribute id="HOME_CITY"/>
+        <viewAttribute id="HOUSE_NUM1"/>
+        <viewAttribute id="NAME1_1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="NAME3"/>
+        <viewAttribute id="POST_CODE1"/>
+        <viewAttribute id="REGION"/>
+        <viewAttribute id="STREET"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="KVGR1"/>
+        <viewAttribute id="KVGR2"/>
+        <viewAttribute id="KVGR3"/>
+        <viewAttribute id="KVGR4"/>
+        <viewAttribute id="KVGR5"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="BZIRK"/>
+        <viewAttribute id="FSH_KVGR10"/>
+        <viewAttribute id="FSH_KVGR9"/>
+        <viewAttribute id="FSH_KVGR8"/>
+        <viewAttribute id="FSH_KVGR7"/>
+        <viewAttribute id="FSH_KVGR6"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="KLABC"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="PRAT1"/>
+        <viewAttribute id="PRAT2"/>
+        <viewAttribute id="PRAT3"/>
+        <viewAttribute id="PRAT5"/>
+        <viewAttribute id="PRAT4"/>
+        <viewAttribute id="PRAT6"/>
+        <viewAttribute id="PRAT7"/>
+        <viewAttribute id="PRAT8"/>
+        <viewAttribute id="PRAT9"/>
+        <viewAttribute id="PRATA"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="KLIMK"/>
+        <viewAttribute id="KUNNR_KNA1"/>
+        <viewAttribute id="NAME2_KNA1"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="ZTERM_KNB1"/>
+        <viewAttribute id="KUNNR_KNKK"/>
+        <viewAttribute id="KUNNR_KNVP"/>
+        <viewAttribute id="WAERS_KNVV"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="VTEXT_KATR9"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="CASSD"/>
+        <viewAttribute id="FAKSD"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="VTEXT3"/>
+        <viewAttribute id="VTEXT2"/>
+        <viewAttribute id="VTEXT4"/>
+        <viewAttribute id="VTEXT5"/>
+        <viewAttribute id="VTEXT7"/>
+        <viewAttribute id="VTEXT8"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VWERK" source="VWERK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKGRP" source="VKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKBUR" source="VKBUR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RDOFF" source="RDOFF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG" source="VKORG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG" source="VTWEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART" source="SPART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1" source="INCO1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2" source="INCO2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR1" source="KVGR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR2" source="KVGR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR3" source="KVGR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR4" source="KVGR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR5" source="KVGR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BZIRK" source="BZIRK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR10" source="FSH_KVGR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR9" source="FSH_KVGR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR8" source="FSH_KVGR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR7" source="FSH_KVGR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR6" source="FSH_KVGR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDGRP" source="KDGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KLABC" source="KLABC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTGRD" source="KTGRD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT1" source="PRAT1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT2" source="PRAT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT3" source="PRAT3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT5" source="PRAT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT4" source="PRAT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT6" source="PRAT6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT7" source="PRAT7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT8" source="PRAT8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT9" source="PRAT9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRATA" source="PRATA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KLIMK" source="KLIMK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNA1" source="KUNNR_KNA1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2_KNA1" source="NAME2_KNA1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_KNB1" source="ZTERM_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNKK" source="KUNNR_KNKK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNVP" source="KUNNR_KNVP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS_KNVV" source="WAERS_KNVV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR6" source="VTEXT_KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR9" source="VTEXT_KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CASSD" source="CASSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSD" source="FAKSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT3" source="VTEXT3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT2" source="VTEXT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT4" source="VTEXT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT5" source="VTEXT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT7" source="VTEXT7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT8" source="VTEXT8"/>
+      </input>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CLIENT" source="CLIENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRNUMBER" source="ADDRNUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CITY1" source="CITY1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CITY2" source="CITY2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTY" source="COUNTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTY_CODE" source="COUNTY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUNS" source="DUNS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUNSP4" source="DUNSP4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HOME_CITY" source="HOME_CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HOUSE_NUM1" source="HOUSE_NUM1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1_1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME3" source="NAME3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POST_CODE1" source="POST_CODE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGION" source="REGION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STREET" source="STREET"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADDRNUMBER"/>
+      </input>
+    <joinAttribute name="ADRNR"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_3">
+    <descriptions defaultDescription="VDIM_CUSTOMER_MASTER_DATA"/>
+    <attributes>
+      <attribute id="VWERK" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivering Plant"/>
+        <keyMapping columnObjectName="Join_3" columnName="VWERK"/>
+      </attribute>
+      <attribute id="VKGRP" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales group"/>
+        <keyMapping columnObjectName="Join_3" columnName="VKGRP"/>
+      </attribute>
+      <attribute id="VKBUR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Office"/>
+        <keyMapping columnObjectName="Join_3" columnName="VKBUR"/>
+      </attribute>
+      <attribute id="PRFRE" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Price Determination"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRFRE"/>
+      </attribute>
+      <attribute id="RDOFF" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SwtichOff Rounding"/>
+        <keyMapping columnObjectName="Join_3" columnName="RDOFF"/>
+      </attribute>
+      <attribute id="MANDT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="Join_3" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KUNNR" order="7" attributeHierarchyActive="false" descriptionColumnName="NAME1" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_3" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="VKORG" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Org"/>
+        <keyMapping columnObjectName="Join_3" columnName="VKORG"/>
+      </attribute>
+      <attribute id="VTWEG" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Distribution Channel"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTWEG"/>
+      </attribute>
+      <attribute id="SPART" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Division"/>
+        <keyMapping columnObjectName="Join_3" columnName="SPART"/>
+      </attribute>
+      <attribute id="KATR1" order="11" attributeHierarchyActive="false" descriptionColumnName="VTEXT_1" displayAttribute="false">
+        <descriptions defaultDescription="Atrribute 1"/>
+        <keyMapping columnObjectName="Join_3" columnName="KATR1"/>
+      </attribute>
+      <attribute id="KATR2" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Atrribute 2"/>
+        <keyMapping columnObjectName="Join_3" columnName="KATR2"/>
+      </attribute>
+      <attribute id="KATR3" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Atrribute 3"/>
+        <keyMapping columnObjectName="Join_3" columnName="KATR3"/>
+      </attribute>
+      <attribute id="KATR4" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Atrribute 4"/>
+        <keyMapping columnObjectName="Join_3" columnName="KATR4"/>
+      </attribute>
+      <attribute id="KATR5" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Atrribute 5"/>
+        <keyMapping columnObjectName="Join_3" columnName="KATR5"/>
+      </attribute>
+      <attribute id="KATR6" order="16" attributeHierarchyActive="false" descriptionColumnName="VTEXT_KATR6" displayAttribute="false">
+        <descriptions defaultDescription="Atrribute 6"/>
+        <keyMapping columnObjectName="Join_3" columnName="KATR6"/>
+      </attribute>
+      <attribute id="KATR7" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Atrribute 7"/>
+        <keyMapping columnObjectName="Join_3" columnName="KATR7"/>
+      </attribute>
+      <attribute id="KATR8" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Atrribute 8"/>
+        <keyMapping columnObjectName="Join_3" columnName="KATR8"/>
+      </attribute>
+      <attribute id="KATR9" order="19" attributeHierarchyActive="false" descriptionColumnName="VTEXT_KATR9" displayAttribute="false">
+        <descriptions defaultDescription="Atrribute 9"/>
+        <keyMapping columnObjectName="Join_3" columnName="KATR9"/>
+      </attribute>
+      <attribute id="VTEXT_KATR9" order="20" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KATR9_Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTEXT_KATR9"/>
+      </attribute>
+      <attribute id="KATR10" order="21" attributeHierarchyActive="false" descriptionColumnName="VTEXT_10" displayAttribute="false">
+        <descriptions defaultDescription="Atrribute 10"/>
+        <keyMapping columnObjectName="Join_3" columnName="KATR10"/>
+      </attribute>
+      <attribute id="ADRNR" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Addresss"/>
+        <keyMapping columnObjectName="Join_3" columnName="ADRNR"/>
+      </attribute>
+      <attribute id="ORT01" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="City"/>
+        <keyMapping columnObjectName="Join_3" columnName="ORT01"/>
+      </attribute>
+      <attribute id="NAME1" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1"/>
+        <keyMapping columnObjectName="Join_3" columnName="NAME1"/>
+      </attribute>
+      <attribute id="BUKRS" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code"/>
+        <keyMapping columnObjectName="Join_3" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="CLIENT" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLIENT"/>
+        <keyMapping columnObjectName="Join_3" columnName="CLIENT"/>
+      </attribute>
+      <attribute id="ADDRNUMBER" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRNUMBER"/>
+        <keyMapping columnObjectName="Join_3" columnName="ADDRNUMBER"/>
+      </attribute>
+      <attribute id="CITY1" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY1"/>
+        <keyMapping columnObjectName="Join_3" columnName="CITY1"/>
+      </attribute>
+      <attribute id="CITY2" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY2"/>
+        <keyMapping columnObjectName="Join_3" columnName="CITY2"/>
+      </attribute>
+      <attribute id="COUNTY" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTY"/>
+        <keyMapping columnObjectName="Join_3" columnName="COUNTY"/>
+      </attribute>
+      <attribute id="COUNTY_CODE" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="County code for county"/>
+        <keyMapping columnObjectName="Join_3" columnName="COUNTY_CODE"/>
+      </attribute>
+      <attribute id="DUNS" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Dun &amp; Bradstreet number (DUNS)"/>
+        <keyMapping columnObjectName="Join_3" columnName="DUNS"/>
+      </attribute>
+      <attribute id="DUNSP4" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUNS+4 number (the last four digit)"/>
+        <keyMapping columnObjectName="Join_3" columnName="DUNSP4"/>
+      </attribute>
+      <attribute id="HOME_CITY" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="City (different from postal city)"/>
+        <keyMapping columnObjectName="Join_3" columnName="HOME_CITY"/>
+      </attribute>
+      <attribute id="HOUSE_NUM1" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="House Number"/>
+        <keyMapping columnObjectName="Join_3" columnName="HOUSE_NUM1"/>
+      </attribute>
+      <attribute id="NAME1_1" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Name"/>
+        <keyMapping columnObjectName="Join_3" columnName="NAME1_1"/>
+      </attribute>
+      <attribute id="NAME2" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 2"/>
+        <keyMapping columnObjectName="Join_3" columnName="NAME2"/>
+      </attribute>
+      <attribute id="NAME3" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 3"/>
+        <keyMapping columnObjectName="Join_3" columnName="NAME3"/>
+      </attribute>
+      <attribute id="POST_CODE1" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="City postal code"/>
+        <keyMapping columnObjectName="Join_3" columnName="POST_CODE1"/>
+      </attribute>
+      <attribute id="REGION" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Region (State, Province, County)"/>
+        <keyMapping columnObjectName="Join_3" columnName="REGION"/>
+      </attribute>
+      <attribute id="STREET" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Street"/>
+        <keyMapping columnObjectName="Join_3" columnName="STREET"/>
+      </attribute>
+      <attribute id="LAND1" order="42" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Key"/>
+        <keyMapping columnObjectName="Join_3" columnName="LAND1"/>
+      </attribute>
+      <attribute id="PSTLZ" order="43" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Postal Code"/>
+        <keyMapping columnObjectName="Join_3" columnName="PSTLZ"/>
+      </attribute>
+      <attribute id="REGIO" order="44" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Region (State, Province, County)"/>
+        <keyMapping columnObjectName="Join_3" columnName="REGIO"/>
+      </attribute>
+      <attribute id="INCO1" order="45" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Incoterms (Part 1)"/>
+        <keyMapping columnObjectName="Join_3" columnName="INCO1"/>
+      </attribute>
+      <attribute id="INCO2" order="46" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Incoterms (Part 2)"/>
+        <keyMapping columnObjectName="Join_3" columnName="INCO2"/>
+      </attribute>
+      <attribute id="KKBER" order="47" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Credit control area"/>
+        <keyMapping columnObjectName="Join_3" columnName="KKBER"/>
+      </attribute>
+      <attribute id="KTOKD" order="48" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Account Group"/>
+        <keyMapping columnObjectName="Join_3" columnName="KTOKD"/>
+      </attribute>
+      <attribute id="KVGR1" order="49" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer group 1"/>
+        <keyMapping columnObjectName="Join_3" columnName="KVGR1"/>
+      </attribute>
+      <attribute id="KVGR2" order="50" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer group 2"/>
+        <keyMapping columnObjectName="Join_3" columnName="KVGR2"/>
+      </attribute>
+      <attribute id="KVGR3" order="51" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer group 3"/>
+        <keyMapping columnObjectName="Join_3" columnName="KVGR3"/>
+      </attribute>
+      <attribute id="KVGR4" order="52" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer group 4"/>
+        <keyMapping columnObjectName="Join_3" columnName="KVGR4"/>
+      </attribute>
+      <attribute id="KVGR5" order="53" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer group 5"/>
+        <keyMapping columnObjectName="Join_3" columnName="KVGR5"/>
+      </attribute>
+      <attribute id="BOKRE" order="54" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Customer Is Rebate-Relevant"/>
+        <keyMapping columnObjectName="Join_3" columnName="BOKRE"/>
+      </attribute>
+      <attribute id="BZIRK" order="55" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales District"/>
+        <keyMapping columnObjectName="Join_3" columnName="BZIRK"/>
+      </attribute>
+      <attribute id="FSH_KVGR10" order="56" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group 10"/>
+        <keyMapping columnObjectName="Join_3" columnName="FSH_KVGR10"/>
+      </attribute>
+      <attribute id="FSH_KVGR9" order="57" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group 9"/>
+        <keyMapping columnObjectName="Join_3" columnName="FSH_KVGR9"/>
+      </attribute>
+      <attribute id="FSH_KVGR8" order="58" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group 8"/>
+        <keyMapping columnObjectName="Join_3" columnName="FSH_KVGR8"/>
+      </attribute>
+      <attribute id="FSH_KVGR7" order="59" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group 7"/>
+        <keyMapping columnObjectName="Join_3" columnName="FSH_KVGR7"/>
+      </attribute>
+      <attribute id="FSH_KVGR6" order="60" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group 6"/>
+        <keyMapping columnObjectName="Join_3" columnName="FSH_KVGR6"/>
+      </attribute>
+      <attribute id="KDGRP" order="61" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group"/>
+        <keyMapping columnObjectName="Join_3" columnName="KDGRP"/>
+      </attribute>
+      <attribute id="KLABC" order="62" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer classification (ABC analysis)"/>
+        <keyMapping columnObjectName="Join_3" columnName="KLABC"/>
+      </attribute>
+      <attribute id="KTGRD" order="63" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Assignment Group for this customer"/>
+        <keyMapping columnObjectName="Join_3" columnName="KTGRD"/>
+      </attribute>
+      <attribute id="PRAT1" order="64" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 1"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRAT1"/>
+      </attribute>
+      <attribute id="PRAT2" order="65" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 2"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRAT2"/>
+      </attribute>
+      <attribute id="PRAT3" order="66" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 3"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRAT3"/>
+      </attribute>
+      <attribute id="PRAT5" order="67" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 5"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRAT5"/>
+      </attribute>
+      <attribute id="PRAT4" order="68" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 4"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRAT4"/>
+      </attribute>
+      <attribute id="PRAT6" order="69" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 6"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRAT6"/>
+      </attribute>
+      <attribute id="PRAT7" order="70" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 7"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRAT7"/>
+      </attribute>
+      <attribute id="PRAT8" order="71" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 8"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRAT8"/>
+      </attribute>
+      <attribute id="PRAT9" order="72" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 9"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRAT9"/>
+      </attribute>
+      <attribute id="PRATA" order="73" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 10"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRATA"/>
+      </attribute>
+      <attribute id="ZTERM" order="74" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Terms of Payment Key"/>
+        <keyMapping columnObjectName="Join_3" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="PARNR" order="75" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of contact person"/>
+        <keyMapping columnObjectName="Join_3" columnName="PARNR"/>
+      </attribute>
+      <attribute id="BRAN1" order="76" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Industry code 1"/>
+        <keyMapping columnObjectName="Join_3" columnName="BRAN1"/>
+      </attribute>
+      <attribute id="BRAN2" order="77" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Industry code 2"/>
+        <keyMapping columnObjectName="Join_3" columnName="BRAN2"/>
+      </attribute>
+      <attribute id="BRAN3" order="78" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Industry code 3"/>
+        <keyMapping columnObjectName="Join_3" columnName="BRAN3"/>
+      </attribute>
+      <attribute id="BRAN4" order="79" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Industry code 4"/>
+        <keyMapping columnObjectName="Join_3" columnName="BRAN4"/>
+      </attribute>
+      <attribute id="BRAN5" order="80" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Industry code 5"/>
+        <keyMapping columnObjectName="Join_3" columnName="BRAN5"/>
+      </attribute>
+      <attribute id="KDKG5" order="81" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer condition group 5"/>
+        <keyMapping columnObjectName="Join_3" columnName="KDKG5"/>
+      </attribute>
+      <attribute id="KDKG1" order="82" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer condition group 1"/>
+        <keyMapping columnObjectName="Join_3" columnName="KDKG1"/>
+      </attribute>
+      <attribute id="KDKG2" order="83" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer condition group 2"/>
+        <keyMapping columnObjectName="Join_3" columnName="KDKG2"/>
+      </attribute>
+      <attribute id="KDKG3" order="84" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer condition group 3"/>
+        <keyMapping columnObjectName="Join_3" columnName="KDKG3"/>
+      </attribute>
+      <attribute id="KDKG4" order="85" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer condition group 4"/>
+        <keyMapping columnObjectName="Join_3" columnName="KDKG4"/>
+      </attribute>
+      <attribute id="STCD1" order="86" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_3" columnName="STCD1"/>
+      </attribute>
+      <attribute id="STCD2" order="87" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_3" columnName="STCD2"/>
+      </attribute>
+      <attribute id="STCEG" order="88" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_3" columnName="STCEG"/>
+      </attribute>
+      <attribute id="STCD3" order="89" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax Number 3"/>
+        <keyMapping columnObjectName="Join_3" columnName="STCD3"/>
+      </attribute>
+      <attribute id="STCD4" order="90" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax Number 4"/>
+        <keyMapping columnObjectName="Join_3" columnName="STCD4"/>
+      </attribute>
+      <attribute id="STCD5" order="91" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax Number 5"/>
+        <keyMapping columnObjectName="Join_3" columnName="STCD5"/>
+      </attribute>
+      <attribute id="STCDT" order="92" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax Number Type"/>
+        <keyMapping columnObjectName="Join_3" columnName="STCDT"/>
+      </attribute>
+      <attribute id="VBUND" order="93" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company ID of trading partner"/>
+        <keyMapping columnObjectName="Join_3" columnName="VBUND"/>
+      </attribute>
+      <attribute id="AKONT" order="94" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reconciliation Account in General Ledger"/>
+        <keyMapping columnObjectName="Join_3" columnName="AKONT"/>
+      </attribute>
+      <attribute id="KLIMK" order="95" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer&apos;s credit limit"/>
+        <keyMapping columnObjectName="Join_3" columnName="KLIMK"/>
+      </attribute>
+      <attribute id="KUNNR_KNA1" order="96" semanticType="empty" attributeHierarchyActive="false" descriptionColumnName="NAME1" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_3" columnName="KUNNR_KNA1"/>
+      </attribute>
+      <attribute id="NAME2_KNA1" order="97" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 2"/>
+        <keyMapping columnObjectName="Join_3" columnName="NAME2_KNA1"/>
+      </attribute>
+      <attribute id="WERKS_KNA1" order="98" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="Join_3" columnName="WERKS"/>
+      </attribute>
+      <attribute id="KUNNR_KNB1" order="99" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_3" columnName="KUNNR_KNB1"/>
+      </attribute>
+      <attribute id="ZTERM_KNB1" order="100" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Terms of Payment Key"/>
+        <keyMapping columnObjectName="Join_3" columnName="ZTERM_KNB1"/>
+      </attribute>
+      <attribute id="KUNNR_KNKK" order="101" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_3" columnName="KUNNR_KNKK"/>
+      </attribute>
+      <attribute id="KUNNR_KNVP" order="102" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="Join_3" columnName="KUNNR_KNVP"/>
+      </attribute>
+      <attribute id="WAERS_KNVV" order="103" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency"/>
+        <keyMapping columnObjectName="Join_3" columnName="WAERS_KNVV"/>
+      </attribute>
+      <attribute id="VTEXT_KATR6" order="104" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTEXT_KATR6"/>
+      </attribute>
+      <attribute id="ERDAT_KNA1" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date on which the Record Was Created"/>
+        <keyMapping columnObjectName="Join_3" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERNAM_KNA1" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="Join_3" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="AUFSD" order="107" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer order block (sales area)"/>
+        <keyMapping columnObjectName="Join_3" columnName="AUFSD"/>
+      </attribute>
+      <attribute id="CASSD" order="108" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Block for Customer (Sales Area)"/>
+        <keyMapping columnObjectName="Join_3" columnName="CASSD"/>
+      </attribute>
+      <attribute id="FAKSD" order="109" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing block for customer (sales and distribution)"/>
+        <keyMapping columnObjectName="Join_3" columnName="FAKSD"/>
+      </attribute>
+      <attribute id="VTEXT_10" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTEXT_10"/>
+      </attribute>
+      <attribute id="VTEXT_1" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTEXT_1"/>
+      </attribute>
+      <attribute id="VTEXT2" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTEXT2"/>
+      </attribute>
+      <attribute id="VTEXT3" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTEXT3"/>
+      </attribute>
+      <attribute id="VTEXT4" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTEXT4"/>
+      </attribute>
+      <attribute id="VTEXT5" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTEXT5"/>
+      </attribute>
+      <attribute id="VTEXT7" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTEXT7"/>
+      </attribute>
+      <attribute id="VTEXT8" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="VTEXT8"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="CustSales" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="453"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="CustomerData" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="453"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="CustSales" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="CustomerData" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="CreditManagement" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="CreditManagement" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+    <shape modelObjectName="Join_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

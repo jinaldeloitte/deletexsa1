@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_MATDOC" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="true" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_MATDOC"/>
+  <metadata changedAt="2021-12-06 18:12:41.996"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_MATDOC">
+      <resourceUri>syn_tbl_MATDOC</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_MATDOC">
+    <descriptions defaultDescription="CV_TD_MATDOC"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KEY1" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KEY1"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KEY1"/>
+      </attribute>
+      <attribute id="KEY2" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KEY2"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KEY2"/>
+      </attribute>
+      <attribute id="KEY3" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KEY3"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KEY3"/>
+      </attribute>
+      <attribute id="KEY4" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KEY4"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KEY4"/>
+      </attribute>
+      <attribute id="KEY5" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KEY5"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KEY5"/>
+      </attribute>
+      <attribute id="KEY6" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KEY6"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KEY6"/>
+      </attribute>
+      <attribute id="RECORD_TYPE" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RECORD_TYPE"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="RECORD_TYPE"/>
+      </attribute>
+      <attribute id="MATBF" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATBF"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MATBF"/>
+      </attribute>
+      <attribute id="WERKS" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WERKS"/>
+      </attribute>
+      <attribute id="LGORT_SID" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGORT_SID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LGORT_SID"/>
+      </attribute>
+      <attribute id="CHARG_SID" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHARG_SID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CHARG_SID"/>
+      </attribute>
+      <attribute id="LIFNR_SID" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR_SID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LIFNR_SID"/>
+      </attribute>
+      <attribute id="MAT_KDAUF" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_KDAUF"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MAT_KDAUF"/>
+      </attribute>
+      <attribute id="MAT_KDPOS" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_KDPOS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MAT_KDPOS"/>
+      </attribute>
+      <attribute id="MAT_PSPNR" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_PSPNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MAT_PSPNR"/>
+      </attribute>
+      <attribute id="KUNNR_SID" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_SID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KUNNR_SID"/>
+      </attribute>
+      <attribute id="SOBKZ" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOBKZ"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SOBKZ"/>
+      </attribute>
+      <attribute id="LBBSA_SID" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LBBSA_SID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LBBSA_SID"/>
+      </attribute>
+      <attribute id="DISUB_OWNER_SID" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISUB_OWNER_SID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="DISUB_OWNER_SID"/>
+      </attribute>
+      <attribute id="BUKRS" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="CHARG_WHS_SG" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHARG_WHS_SG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CHARG_WHS_SG"/>
+      </attribute>
+      <attribute id="MENGU" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MENGU"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MENGU"/>
+      </attribute>
+      <attribute id="WERTU" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERTU"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WERTU"/>
+      </attribute>
+      <attribute id="VBOBJ_SG" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBOBJ_SG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="VBOBJ_SG"/>
+      </attribute>
+      <attribute id="KZBWS" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZBWS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KZBWS"/>
+      </attribute>
+      <attribute id="BSTAUS_SG" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTAUS_SG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BSTAUS_SG"/>
+      </attribute>
+      <attribute id="BSTTYP_SG" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTTYP_SG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BSTTYP_SG"/>
+      </attribute>
+      <attribute id="KALNR" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KALNR"/>
+      </attribute>
+      <attribute id="BERID" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BERID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BERID"/>
+      </attribute>
+      <attribute id="WAERS" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WAERS"/>
+      </attribute>
+      <attribute id="MEINS" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MEINS"/>
+      </attribute>
+      <attribute id="ERFME" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERFME"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ERFME"/>
+      </attribute>
+      <attribute id="BPRME" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BPRME"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BPRME"/>
+      </attribute>
+      <attribute id="BSTME" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTME"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BSTME"/>
+      </attribute>
+      <attribute id="LSMEH" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LSMEH"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LSMEH"/>
+      </attribute>
+      <attribute id="CURRENCY_A1" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENCY_A1"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CURRENCY_A1"/>
+      </attribute>
+      <attribute id="PRICE_SOURCE_A1" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRICE_SOURCE_A1"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PRICE_SOURCE_A1"/>
+      </attribute>
+      <attribute id="_CWM_MEINS" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_MEINS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MEINS"/>
+      </attribute>
+      <attribute id="_CWM_ERFME" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_ERFME"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ERFME"/>
+      </attribute>
+      <attribute id="UMMAB_CID" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMMAB_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMMAB_CID"/>
+      </attribute>
+      <attribute id="UMWRK_CID" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMWRK_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMWRK_CID"/>
+      </attribute>
+      <attribute id="LGORT_CID" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGORT_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LGORT_CID"/>
+      </attribute>
+      <attribute id="CHARG_CID" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHARG_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CHARG_CID"/>
+      </attribute>
+      <attribute id="LIFNR_CID" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LIFNR_CID"/>
+      </attribute>
+      <attribute id="MAT_KDAUF_CID" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_KDAUF_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MAT_KDAUF_CID"/>
+      </attribute>
+      <attribute id="MAT_KDPOS_CID" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_KDPOS_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MAT_KDPOS_CID"/>
+      </attribute>
+      <attribute id="MAT_PSPNR_CID" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_PSPNR_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MAT_PSPNR_CID"/>
+      </attribute>
+      <attribute id="KUNNR_CID" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KUNNR_CID"/>
+      </attribute>
+      <attribute id="UMSOK_CID" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMSOK_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMSOK_CID"/>
+      </attribute>
+      <attribute id="LBBSA_CID" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LBBSA_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LBBSA_CID"/>
+      </attribute>
+      <attribute id="DISUB_OWNER_CID" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISUB_OWNER_CID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="DISUB_OWNER_CID"/>
+      </attribute>
+      <attribute id="UMBUK_CG" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMBUK_CG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMBUK_CG"/>
+      </attribute>
+      <attribute id="CHARG_WHS_CG" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHARG_WHS_CG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CHARG_WHS_CG"/>
+      </attribute>
+      <attribute id="UMMEN_CG" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMMEN_CG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMMEN_CG"/>
+      </attribute>
+      <attribute id="UMWER_CG" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMWER_CG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMWER_CG"/>
+      </attribute>
+      <attribute id="VBOBJ_CG" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBOBJ_CG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="VBOBJ_CG"/>
+      </attribute>
+      <attribute id="UMKZBWS_CG" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMKZBWS_CG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMKZBWS_CG"/>
+      </attribute>
+      <attribute id="BSTAUS_CG" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTAUS_CG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BSTAUS_CG"/>
+      </attribute>
+      <attribute id="BSTTYP_CG" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTTYP_CG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BSTTYP_CG"/>
+      </attribute>
+      <attribute id="KALNR_CG" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALNR_CG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KALNR_CG"/>
+      </attribute>
+      <attribute id="BUDAT" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BUDAT"/>
+      </attribute>
+      <attribute id="CPUDT" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPUDT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CPUDT"/>
+      </attribute>
+      <attribute id="CPUTM" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPUTM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CPUTM"/>
+      </attribute>
+      <attribute id="YEARDAY_BUDAT" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="YEARDAY_BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="YEARDAY_BUDAT"/>
+      </attribute>
+      <attribute id="YEARWEEK_BUDAT" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="YEARWEEK_BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="YEARWEEK_BUDAT"/>
+      </attribute>
+      <attribute id="YEARMONTH_BUDAT" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="YEARMONTH_BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="YEARMONTH_BUDAT"/>
+      </attribute>
+      <attribute id="YEARQUARTER_BUDAT" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="YEARQUARTER_BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="YEARQUARTER_BUDAT"/>
+      </attribute>
+      <attribute id="YEAR_BUDAT" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="YEAR_BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="YEAR_BUDAT"/>
+      </attribute>
+      <attribute id="QUARTER_BUDAT" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QUARTER_BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="QUARTER_BUDAT"/>
+      </attribute>
+      <attribute id="MONTH_BUDAT" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MONTH_BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MONTH_BUDAT"/>
+      </attribute>
+      <attribute id="WEEK_BUDAT" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEEK_BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WEEK_BUDAT"/>
+      </attribute>
+      <attribute id="DAY_BUDAT" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DAY_BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="DAY_BUDAT"/>
+      </attribute>
+      <attribute id="WEEKDAY_BUDAT" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEEKDAY_BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WEEKDAY_BUDAT"/>
+      </attribute>
+      <attribute id="BLDAT" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BLDAT"/>
+      </attribute>
+      <attribute id="AEDAT" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AEDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="SPE_BUDAT_UHR" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_BUDAT_UHR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SPE_BUDAT_UHR"/>
+      </attribute>
+      <attribute id="SPE_BUDAT_ZONE" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_BUDAT_ZONE"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SPE_BUDAT_ZONE"/>
+      </attribute>
+      <attribute id="PERIV" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERIV"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PERIV"/>
+      </attribute>
+      <attribute id="GJAHR" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="GJPER" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJPER"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="GJPER"/>
+      </attribute>
+      <attribute id="GJPER_CURR_PER" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJPER_CURR_PER"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="GJPER_CURR_PER"/>
+      </attribute>
+      <attribute id="VFDAT" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VFDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="VFDAT"/>
+      </attribute>
+      <attribute id="DABRBZ" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DABRBZ"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="DABRBZ"/>
+      </attribute>
+      <attribute id="DABRZ" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DABRZ"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="DABRZ"/>
+      </attribute>
+      <attribute id="HSDAT" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HSDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="HSDAT"/>
+      </attribute>
+      <attribute id="MBLNR" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MBLNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MBLNR"/>
+      </attribute>
+      <attribute id="MJAHR" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MJAHR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MJAHR"/>
+      </attribute>
+      <attribute id="ZEILE" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEILE"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ZEILE"/>
+      </attribute>
+      <attribute id="LINE_ID" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LINE_ID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LINE_ID"/>
+      </attribute>
+      <attribute id="PARENT_ID" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARENT_ID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PARENT_ID"/>
+      </attribute>
+      <attribute id="LINE_DEPTH" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LINE_DEPTH"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LINE_DEPTH"/>
+      </attribute>
+      <attribute id="MAA_URZEI" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAA_URZEI"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MAA_URZEI"/>
+      </attribute>
+      <attribute id="KDAUF" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDAUF"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KDAUF"/>
+      </attribute>
+      <attribute id="KDPOS" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDPOS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KDPOS"/>
+      </attribute>
+      <attribute id="KDEIN" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDEIN"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KDEIN"/>
+      </attribute>
+      <attribute id="EBELN" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELN"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="EBELN"/>
+      </attribute>
+      <attribute id="EBELP" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELP"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="EBELP"/>
+      </attribute>
+      <attribute id="LFBJA" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFBJA"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LFBJA"/>
+      </attribute>
+      <attribute id="LFBNR" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFBNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LFBNR"/>
+      </attribute>
+      <attribute id="LFPOS" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFPOS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LFPOS"/>
+      </attribute>
+      <attribute id="SJAHR" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SJAHR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SJAHR"/>
+      </attribute>
+      <attribute id="SMBLN" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SMBLN"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SMBLN"/>
+      </attribute>
+      <attribute id="SMBLP" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SMBLP"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SMBLP"/>
+      </attribute>
+      <attribute id="AUFNR" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="AUFNR"/>
+      </attribute>
+      <attribute id="ANLN1" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLN1"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ANLN1"/>
+      </attribute>
+      <attribute id="ANLN2" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLN2"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ANLN2"/>
+      </attribute>
+      <attribute id="BELNR" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BELNR"/>
+      </attribute>
+      <attribute id="BUZEI" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZEI"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BUZEI"/>
+      </attribute>
+      <attribute id="BELUM" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELUM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BELUM"/>
+      </attribute>
+      <attribute id="BUZUM" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZUM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BUZUM"/>
+      </attribute>
+      <attribute id="RSNUM" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RSNUM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="RSNUM"/>
+      </attribute>
+      <attribute id="RSPOS" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RSPOS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="RSPOS"/>
+      </attribute>
+      <attribute id="TBNUM" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TBNUM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="TBNUM"/>
+      </attribute>
+      <attribute id="TBPOS" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TBPOS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="TBPOS"/>
+      </attribute>
+      <attribute id="UBNUM" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UBNUM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UBNUM"/>
+      </attribute>
+      <attribute id="TANUM" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TANUM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="TANUM"/>
+      </attribute>
+      <attribute id="URZEI" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="URZEI"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="URZEI"/>
+      </attribute>
+      <attribute id="XBLNR" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBLNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XBLNR"/>
+      </attribute>
+      <attribute id="VBELN_IM" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_IM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="VBELN_IM"/>
+      </attribute>
+      <attribute id="VBELP_IM" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELP_IM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="VBELP_IM"/>
+      </attribute>
+      <attribute id="LE_VBELN" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LE_VBELN"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LE_VBELN"/>
+      </attribute>
+      <attribute id="SPE_LOGSYS" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_LOGSYS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SPE_LOGSYS"/>
+      </attribute>
+      <attribute id="SPE_MDNUM_EWM" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_MDNUM_EWM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SPE_MDNUM_EWM"/>
+      </attribute>
+      <attribute id="CANCELLED" order="155" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CANCELLED"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CANCELLED"/>
+      </attribute>
+      <attribute id="CANCELLATION_TYPE" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CANCELLATION_TYPE"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CANCELLATION_TYPE"/>
+      </attribute>
+      <attribute id="REVERSAL_MOVEMENT" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REVERSAL_MOVEMENT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="REVERSAL_MOVEMENT"/>
+      </attribute>
+      <attribute id="BWART" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWART"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BWART"/>
+      </attribute>
+      <attribute id="XAUTO" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XAUTO"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XAUTO"/>
+      </attribute>
+      <attribute id="MATNR" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MATNR"/>
+      </attribute>
+      <attribute id="LGORT" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGORT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LGORT"/>
+      </attribute>
+      <attribute id="CHARG" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHARG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CHARG"/>
+      </attribute>
+      <attribute id="BWTAR" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWTAR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BWTAR"/>
+      </attribute>
+      <attribute id="INSMK" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INSMK"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="INSMK"/>
+      </attribute>
+      <attribute id="ZUSCH" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUSCH"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ZUSCH"/>
+      </attribute>
+      <attribute id="ZUSTD" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUSTD"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ZUSTD"/>
+      </attribute>
+      <attribute id="LIFNR" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="KUNNR" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="PLPLA" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLPLA"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PLPLA"/>
+      </attribute>
+      <attribute id="SHKZG" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHKZG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SHKZG"/>
+      </attribute>
+      <attribute id="SHKUM" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHKUM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SHKUM"/>
+      </attribute>
+      <attribute id="ELIKZ" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ELIKZ"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ELIKZ"/>
+      </attribute>
+      <attribute id="SGTXT" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGTXT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SGTXT"/>
+      </attribute>
+      <attribute id="EQUNR" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EQUNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="EQUNR"/>
+      </attribute>
+      <attribute id="WEMPF" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEMPF"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WEMPF"/>
+      </attribute>
+      <attribute id="ABLAD" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABLAD"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ABLAD"/>
+      </attribute>
+      <attribute id="GSBER" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GSBER"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="GSBER"/>
+      </attribute>
+      <attribute id="KOKRS" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOKRS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KOKRS"/>
+      </attribute>
+      <attribute id="PARGB" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARGB"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PARGB"/>
+      </attribute>
+      <attribute id="PARBU" order="180" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARBU"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PARBU"/>
+      </attribute>
+      <attribute id="KOSTL" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOSTL"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KOSTL"/>
+      </attribute>
+      <attribute id="PROJN" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROJN"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PROJN"/>
+      </attribute>
+      <attribute id="XSKST" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSKST"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XSKST"/>
+      </attribute>
+      <attribute id="XSAUF" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSAUF"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XSAUF"/>
+      </attribute>
+      <attribute id="XSPRO" order="185" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSPRO"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XSPRO"/>
+      </attribute>
+      <attribute id="XSERG" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSERG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XSERG"/>
+      </attribute>
+      <attribute id="XRUEM" order="187" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XRUEM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XRUEM"/>
+      </attribute>
+      <attribute id="XRUEJ" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XRUEJ"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XRUEJ"/>
+      </attribute>
+      <attribute id="KZEAR" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZEAR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KZEAR"/>
+      </attribute>
+      <attribute id="KZSTR" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZSTR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KZSTR"/>
+      </attribute>
+      <attribute id="UMMAT" order="191" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMMAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMMAT"/>
+      </attribute>
+      <attribute id="UMCHA" order="192" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMCHA"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMCHA"/>
+      </attribute>
+      <attribute id="UMLGO" order="193" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMLGO"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMLGO"/>
+      </attribute>
+      <attribute id="UMZST" order="194" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMZST"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMZST"/>
+      </attribute>
+      <attribute id="UMZUS" order="195" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMZUS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMZUS"/>
+      </attribute>
+      <attribute id="KZBEW" order="196" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZBEW"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KZBEW"/>
+      </attribute>
+      <attribute id="KZVBR" order="197" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZVBR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KZVBR"/>
+      </attribute>
+      <attribute id="KZZUG" order="198" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZZUG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KZZUG"/>
+      </attribute>
+      <attribute id="WEUNB" order="199" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEUNB"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WEUNB"/>
+      </attribute>
+      <attribute id="LGNUM" order="201" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGNUM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LGNUM"/>
+      </attribute>
+      <attribute id="LGTYP" order="202" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGTYP"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LGTYP"/>
+      </attribute>
+      <attribute id="LGPLA" order="203" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGPLA"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LGPLA"/>
+      </attribute>
+      <attribute id="BESTQ" order="204" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BESTQ"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BESTQ"/>
+      </attribute>
+      <attribute id="BWLVS" order="205" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWLVS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BWLVS"/>
+      </attribute>
+      <attribute id="XBLVS" order="206" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBLVS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XBLVS"/>
+      </attribute>
+      <attribute id="VSCHN" order="207" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSCHN"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="VSCHN"/>
+      </attribute>
+      <attribute id="NSCHN" order="208" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NSCHN"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="NSCHN"/>
+      </attribute>
+      <attribute id="DYPLA" order="209" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DYPLA"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="DYPLA"/>
+      </attribute>
+      <attribute id="TBPRI" order="210" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TBPRI"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="TBPRI"/>
+      </attribute>
+      <attribute id="WEANZ" order="211" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEANZ"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WEANZ"/>
+      </attribute>
+      <attribute id="GRUND" order="212" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRUND"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="GRUND"/>
+      </attribute>
+      <attribute id="EVERS" order="213" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EVERS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="EVERS"/>
+      </attribute>
+      <attribute id="EVERE" order="214" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EVERE"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="EVERE"/>
+      </attribute>
+      <attribute id="IMKEY" order="215" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IMKEY"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="IMKEY"/>
+      </attribute>
+      <attribute id="KSTRG" order="216" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KSTRG"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KSTRG"/>
+      </attribute>
+      <attribute id="PAOBJNR" order="217" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAOBJNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PAOBJNR"/>
+      </attribute>
+      <attribute id="PRCTR" order="218" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PRCTR"/>
+      </attribute>
+      <attribute id="PS_PSP_PNR" order="219" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PS_PSP_PNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PS_PSP_PNR"/>
+      </attribute>
+      <attribute id="NPLNR" order="220" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NPLNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="NPLNR"/>
+      </attribute>
+      <attribute id="AUFPL" order="221" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFPL"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="AUFPL"/>
+      </attribute>
+      <attribute id="APLZL" order="222" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APLZL"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="APLZL"/>
+      </attribute>
+      <attribute id="AUFPS" order="223" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFPS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="AUFPS"/>
+      </attribute>
+      <attribute id="VPTNR" order="224" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPTNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="VPTNR"/>
+      </attribute>
+      <attribute id="FIPOS" order="225" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIPOS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FIPOS"/>
+      </attribute>
+      <attribute id="SAKTO" order="226" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAKTO"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SAKTO"/>
+      </attribute>
+      <attribute id="XWSBR" order="227" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XWSBR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XWSBR"/>
+      </attribute>
+      <attribute id="EMLIF" order="228" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMLIF"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="EMLIF"/>
+      </attribute>
+      <attribute id="AKTNR" order="229" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AKTNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="AKTNR"/>
+      </attribute>
+      <attribute id="ZEKKN" order="230" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEKKN"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ZEKKN"/>
+      </attribute>
+      <attribute id="CUOBJ_CH" order="231" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUOBJ_CH"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CUOBJ_CH"/>
+      </attribute>
+      <attribute id="PPRCTR" order="232" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPRCTR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PPRCTR"/>
+      </attribute>
+      <attribute id="RSART" order="233" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RSART"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="RSART"/>
+      </attribute>
+      <attribute id="GEBER" order="234" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEBER"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="GEBER"/>
+      </attribute>
+      <attribute id="FISTL" order="235" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISTL"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FISTL"/>
+      </attribute>
+      <attribute id="BUSTM" order="236" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUSTM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BUSTM"/>
+      </attribute>
+      <attribute id="BUSTW" order="237" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUSTW"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BUSTW"/>
+      </attribute>
+      <attribute id="VPRSV" order="238" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPRSV"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="VPRSV"/>
+      </attribute>
+      <attribute id="FKBER" order="239" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKBER"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FKBER"/>
+      </attribute>
+      <attribute id="XBEAU" order="240" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBEAU"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XBEAU"/>
+      </attribute>
+      <attribute id="QINSPST" order="241" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QINSPST"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="QINSPST"/>
+      </attribute>
+      <attribute id="MWSKZ" order="242" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSKZ"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MWSKZ"/>
+      </attribute>
+      <attribute id="TXJCD" order="243" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXJCD"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="TXJCD"/>
+      </attribute>
+      <attribute id="EMATN" order="244" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMATN"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="EMATN"/>
+      </attribute>
+      <attribute id="J_1AGIRUPD" order="245" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1AGIRUPD"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="J_1AGIRUPD"/>
+      </attribute>
+      <attribute id="VKMWS" order="246" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKMWS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="VKMWS"/>
+      </attribute>
+      <attribute id="BERKZ" order="247" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BERKZ"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BERKZ"/>
+      </attribute>
+      <attribute id="XWOFF" order="248" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XWOFF"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XWOFF"/>
+      </attribute>
+      <attribute id="BEMOT" order="249" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEMOT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BEMOT"/>
+      </attribute>
+      <attribute id="PRZNR" order="250" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRZNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PRZNR"/>
+      </attribute>
+      <attribute id="LLIEF" order="251" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LLIEF"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LLIEF"/>
+      </attribute>
+      <attribute id="LSTAR" order="252" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LSTAR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LSTAR"/>
+      </attribute>
+      <attribute id="XOBEW" order="253" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XOBEW"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XOBEW"/>
+      </attribute>
+      <attribute id="GRANT_NBR" order="254" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRANT_NBR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="GRANT_NBR"/>
+      </attribute>
+      <attribute id="ZUSTD_T156M" order="255" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUSTD_T156M"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ZUSTD_T156M"/>
+      </attribute>
+      <attribute id="SPE_GTS_STOCK_TY" order="256" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_GTS_STOCK_TY"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SPE_GTS_STOCK_TY"/>
+      </attribute>
+      <attribute id="KBLNR" order="257" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KBLNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KBLNR"/>
+      </attribute>
+      <attribute id="KBLPOS" order="258" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KBLPOS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KBLPOS"/>
+      </attribute>
+      <attribute id="XMACC" order="259" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XMACC"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XMACC"/>
+      </attribute>
+      <attribute id="UMMAB" order="260" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMMAB"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMMAB"/>
+      </attribute>
+      <attribute id="UMBAR" order="261" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMBAR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMBAR"/>
+      </attribute>
+      <attribute id="UMWRK" order="262" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMWRK"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMWRK"/>
+      </attribute>
+      <attribute id="UMSOK" order="263" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMSOK"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="UMSOK"/>
+      </attribute>
+      <attribute id="SGT_SCAT" order="264" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_SCAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SGT_SCAT"/>
+      </attribute>
+      <attribute id="SGT_UMSCAT" order="265" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_UMSCAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SGT_UMSCAT"/>
+      </attribute>
+      <attribute id="SGT_RCAT" order="266" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_RCAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SGT_RCAT"/>
+      </attribute>
+      <attribute id="DISUB_OWNER" order="267" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISUB_OWNER"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="DISUB_OWNER"/>
+      </attribute>
+      <attribute id="COMPL_MARK" order="268" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COMPL_MARK"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="COMPL_MARK"/>
+      </attribute>
+      <attribute id="FZGLS_MARK" order="269" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FZGLS_MARK"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FZGLS_MARK"/>
+      </attribute>
+      <attribute id="ETANP_MARK" order="270" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETANP_MARK"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="ETANP_MARK"/>
+      </attribute>
+      <attribute id="POPUP_MARK" order="271" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POPUP_MARK"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="POPUP_MARK"/>
+      </attribute>
+      <attribute id="SERVICEPERFORMER" order="272" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SERVICEPERFORMER"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="SERVICEPERFORMER"/>
+      </attribute>
+      <attribute id="PERNR" order="273" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="PERNR"/>
+      </attribute>
+      <attribute id="KNTTP_GR" order="274" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNTTP_GR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KNTTP_GR"/>
+      </attribute>
+      <attribute id="WORK_ITEM_ID" order="275" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WORK_ITEM_ID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WORK_ITEM_ID"/>
+      </attribute>
+      <attribute id="FBUDA" order="276" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FBUDA"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FBUDA"/>
+      </attribute>
+      <attribute id="FSH_SEASON_YEAR" order="277" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON_YEAR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FSH_SEASON_YEAR"/>
+      </attribute>
+      <attribute id="FSH_SEASON" order="278" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FSH_SEASON"/>
+      </attribute>
+      <attribute id="FSH_COLLECTION" order="279" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_COLLECTION"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FSH_COLLECTION"/>
+      </attribute>
+      <attribute id="FSH_THEME" order="280" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_THEME"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FSH_THEME"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC1" order="281" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC1"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WRF_CHARSTC1"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC2" order="282" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC2"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WRF_CHARSTC2"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC3" order="283" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC3"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WRF_CHARSTC3"/>
+      </attribute>
+      <attribute id="OICONDCOD" order="285" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OICONDCOD"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="OICONDCOD"/>
+      </attribute>
+      <attribute id="CONDI" order="286" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONDI"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="CONDI"/>
+      </attribute>
+      <attribute id="BLART" order="287" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLART"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BLART"/>
+      </attribute>
+      <attribute id="BLAUM" order="288" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLAUM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BLAUM"/>
+      </attribute>
+      <attribute id="TCODE" order="289" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TCODE"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="TCODE"/>
+      </attribute>
+      <attribute id="BKTXT" order="290" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BKTXT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BKTXT"/>
+      </attribute>
+      <attribute id="FRBNR" order="292" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRBNR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FRBNR"/>
+      </attribute>
+      <attribute id="WEVER" order="293" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEVER"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="WEVER"/>
+      </attribute>
+      <attribute id="XABLN" order="294" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XABLN"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XABLN"/>
+      </attribute>
+      <attribute id="AWSYS" order="295" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWSYS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="AWSYS"/>
+      </attribute>
+      <attribute id="BLA2D" order="296" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLA2D"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BLA2D"/>
+      </attribute>
+      <attribute id="BFWMS" order="297" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BFWMS"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="BFWMS"/>
+      </attribute>
+      <attribute id="VGART" order="298" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGART"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="VGART"/>
+      </attribute>
+      <attribute id="USNAM" order="299" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USNAM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="USNAM"/>
+      </attribute>
+      <attribute id="TCODE2" order="300" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TCODE2"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="TCODE2"/>
+      </attribute>
+      <attribute id="EXNUM" order="301" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXNUM"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="EXNUM"/>
+      </attribute>
+      <attribute id="GTS_CUSREF_NO" order="302" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GTS_CUSREF_NO"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="GTS_CUSREF_NO"/>
+      </attribute>
+      <attribute id="FLS_RSTO" order="303" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLS_RSTO"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="FLS_RSTO"/>
+      </attribute>
+      <attribute id="MSR_ACTIVE" order="304" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSR_ACTIVE"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="MSR_ACTIVE"/>
+      </attribute>
+      <attribute id="XCOMPL" order="305" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCOMPL"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XCOMPL"/>
+      </attribute>
+      <attribute id="KNUMV" order="306" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMV"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KNUMV"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="307" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="XPRINT" order="308" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XPRINT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XPRINT"/>
+      </attribute>
+      <attribute id="LMBMV" order="309" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LMBMV"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="LMBMV"/>
+      </attribute>
+      <attribute id="XFMAT" order="311" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XFMAT"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="XFMAT"/>
+      </attribute>
+      <attribute id="KNBDR" order="312" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNBDR"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="KNBDR"/>
+      </attribute>
+      <attribute id="DUMMY_INCL_EEW_COBL" order="313" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_INCL_EEW_COBL"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="DUMMY_INCL_EEW_COBL"/>
+      </attribute>
+      <attribute id="_CWM_MEINS_SID" order="314" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_MEINS_SID"/>
+        <keyMapping columnObjectName="syn_tbl_MATDOC" columnName="/CWM/MEINS_SID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="HEADER_COUNTER" order="9" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HEADER_COUNTER"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="HEADER_COUNTER"/>
+      </measure>
+      <measure id="DMBTR" order="33" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBTR"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="DMBTR"/>
+      </measure>
+      <measure id="BNBTR" order="34" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BNBTR"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="BNBTR"/>
+      </measure>
+      <measure id="BUALT" order="35" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BUALT"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="BUALT"/>
+      </measure>
+      <measure id="DMBUM" order="36" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBUM"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="DMBUM"/>
+      </measure>
+      <measure id="EXBWR" order="37" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="EXBWR"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="EXBWR"/>
+      </measure>
+      <measure id="VKWRT" order="38" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VKWRT"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="VKWRT"/>
+      </measure>
+      <measure id="EXVKW" order="39" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="EXVKW"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="EXVKW"/>
+      </measure>
+      <measure id="SALK3" order="40" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SALK3"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="SALK3"/>
+      </measure>
+      <measure id="VKWRA" order="41" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VKWRA"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="VKWRA"/>
+      </measure>
+      <measure id="J_1BEXBASE" order="42" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="J_1BEXBASE"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="J_1BEXBASE"/>
+      </measure>
+      <measure id="STOCK_VKWRT" order="43" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="STOCK_VKWRT"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="STOCK_VKWRT"/>
+      </measure>
+      <measure id="DMBTR_STOCK" order="44" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBTR_STOCK"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="DMBTR_STOCK"/>
+      </measure>
+      <measure id="DMBTR_CONS" order="45" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBTR_CONS"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="DMBTR_CONS"/>
+      </measure>
+      <measure id="MENGE" order="47" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MENGE"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="MENGE"/>
+      </measure>
+      <measure id="LBKUM" order="48" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="LBKUM"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="LBKUM"/>
+      </measure>
+      <measure id="STOCK_QTY" order="49" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="STOCK_QTY"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="STOCK_QTY"/>
+      </measure>
+      <measure id="CONSUMPTION_QTY" order="50" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CONSUMPTION_QTY"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="CONSUMPTION_QTY"/>
+      </measure>
+      <measure id="ERFMG" order="52" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ERFMG"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="ERFMG"/>
+      </measure>
+      <measure id="BPMNG" order="54" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BPMNG"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="BPMNG"/>
+      </measure>
+      <measure id="BSTMG" order="56" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BSTMG"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="BSTMG"/>
+      </measure>
+      <measure id="LSMNG" order="58" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="LSMNG"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="LSMNG"/>
+      </measure>
+      <measure id="PBAMG" order="59" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PBAMG"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="PBAMG"/>
+      </measure>
+      <measure id="PRICE_A1" order="61" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PRICE_A1"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="PRICE_A1"/>
+      </measure>
+      <measure id="STOCK_VALUE_A1" order="63" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="STOCK_VALUE_A1"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="STOCK_VALUE_A1"/>
+      </measure>
+      <measure id="CONS_VALUE_A1" order="64" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CONS_VALUE_A1"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="CONS_VALUE_A1"/>
+      </measure>
+      <measure id="_CWM_MENGE" order="65" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_MENGE"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="MENGE"/>
+      </measure>
+      <measure id="_CWM_ERFMG" order="67" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_ERFMG"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="ERFMG"/>
+      </measure>
+      <measure id="_CWM_STOCK_QTY" order="69" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_STOCK_QTY"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="STOCK_QTY"/>
+      </measure>
+      <measure id="_CWM_CONSUMPTION_QTY" order="70" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CONSUMPTION_QTY"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="CONSUMPTION_QTY"/>
+      </measure>
+      <measure id="PALAN" order="200" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PALAN"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="PALAN"/>
+      </measure>
+      <measure id="OINAVNW" order="284" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OINAVNW"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="OINAVNW"/>
+      </measure>
+      <measure id="FRATH" order="291" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FRATH"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="FRATH"/>
+      </measure>
+      <measure id="PABPM" order="310" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PABPM"/>
+        <measureMapping columnObjectName="syn_tbl_MATDOC" columnName="PABPM"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

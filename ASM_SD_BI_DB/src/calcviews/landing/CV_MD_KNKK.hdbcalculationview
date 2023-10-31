@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_KNKK" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_MD_KNKK"/>
+  <metadata changedAt="2021-12-06 18:06:43.76"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_KNKK">
+      <resourceUri>syn_tbl_KNKK</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_KNKK">
+    <descriptions defaultDescription="CV_MD_KNKK"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_KNKK" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KUNNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="syn_tbl_KNKK" columnName="KUNNR"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="KLIMK" order="3" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KLIMK"/>
+        <measureMapping columnObjectName="syn_tbl_KNKK" columnName="KLIMK"/>
+      </measure>
+      <measure id="SAUFT" order="4" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SAUFT"/>
+        <measureMapping columnObjectName="syn_tbl_KNKK" columnName="SAUFT"/>
+      </measure>
+      <measure id="SKFOR" order="5" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SKFOR"/>
+        <measureMapping columnObjectName="syn_tbl_KNKK" columnName="SKFOR"/>
+      </measure>
+      <measure id="SSOBL" order="6" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SSOBL"/>
+        <measureMapping columnObjectName="syn_tbl_KNKK" columnName="SSOBL"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/></shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

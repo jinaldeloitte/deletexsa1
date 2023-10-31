@@ -1,0 +1,2014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_FCT_OTC_STP_UNION" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VFCT_OTC_STP_UNION"/>
+  <metadata changedAt="2021-12-06 18:55:47.473"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="43"/>
+  <dataSources>
+    <DataSource id="CV_FCT_OTC_STP_THIRDPARTYSCENARIO">
+      <resourceUri>CV_FCT_OTC_STP_THIRDPARTYSCENARIO</resourceUri>
+    </DataSource>
+    <DataSource id="CV_FCT_OTC_STP__NONPOBACKSCENARIO">
+      <resourceUri>CV_FCT_OTC_STP__NONPOBACKSCENARIO</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="ThirdParty">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="NETPR_POItem_3PS"/>
+        <viewAttribute id="MENGE_POItem_3PS"/>
+        <viewAttribute id="NETWR_SOH_3PS"/>
+        <viewAttribute id="ZMENG_SOI_3PS"/>
+        <viewAttribute id="NETWR_SOI_3PS"/>
+        <viewAttribute id="KWMENG_SOI_3PS"/>
+        <viewAttribute id="BRGEW_SOI_3PS"/>
+        <viewAttribute id="NTGEW_SOI_3PS"/>
+        <viewAttribute id="VOLUM_SOI_3PS"/>
+        <viewAttribute id="NETPR_SOI_3PS"/>
+        <viewAttribute id="KPEIN_SOI_3PS"/>
+        <viewAttribute id="SPART_1"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="KMKDGR_PA_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="WWCST_PA_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH3_PA_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH2_PA_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH1_PA_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="PAOBJNR_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="LIFNR_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="BSCHL_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="BLART_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="AWREF_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="RMWWR_DocItemIncomRec_3PS"/>
+        <viewAttribute id="WAERS_DocItemIncomRec_3PS"/>
+        <viewAttribute id="LIFNR_DocItemIncomRec_3PS"/>
+        <viewAttribute id="BUKRS_DocItemIncomRec_3PS"/>
+        <viewAttribute id="XBLNR_DocItemIncomRec_3PS"/>
+        <viewAttribute id="BUDAT_DocItemIncomRec_3PS"/>
+        <viewAttribute id="BLDAT_DocItemIncomRec_3PS"/>
+        <viewAttribute id="GJAHR_DocItemIncomRec_3PS"/>
+        <viewAttribute id="BELNR_DocItemIncomRec_3PS"/>
+        <viewAttribute id="BSTME_DocItemIncomInv_3PS"/>
+        <viewAttribute id="MENGE_DocItemIncomInv_3PS"/>
+        <viewAttribute id="WRBTR_DocItemIncomInv_3PS"/>
+        <viewAttribute id="WERKS_DocItemIncomInv_3PS"/>
+        <viewAttribute id="BUKRS_DocItemIncomInv_3PS"/>
+        <viewAttribute id="MATNR_DocItemIncomInv_3PS"/>
+        <viewAttribute id="EBELN_DocItemIncomInv_3PS"/>
+        <viewAttribute id="BUZEI_DocItemIncomInv_3PS"/>
+        <viewAttribute id="GJAHR_DocItemIncomInv_3PS"/>
+        <viewAttribute id="BELNR_DocItemIncomInv_3PS"/>
+        <viewAttribute id="LBLIF_POHeader_3PS"/>
+        <viewAttribute id="RESWK_POHeader_3PS"/>
+        <viewAttribute id="AUTLF_POHeader_3PS"/>
+        <viewAttribute id="KONNR_POHeader_3PS"/>
+        <viewAttribute id="KUNNR_POHeader_3PS"/>
+        <viewAttribute id="LLIEF_POHeader_3PS"/>
+        <viewAttribute id="KDATE_POHeader_3PS"/>
+        <viewAttribute id="KDATB_POHeader_3PS"/>
+        <viewAttribute id="BEDAT_POHeader_3PS"/>
+        <viewAttribute id="EKGRP_POHeader_3PS"/>
+        <viewAttribute id="LIFNR_POHeader_3PS"/>
+        <viewAttribute id="BUKRS_POHeader_3PS"/>
+        <viewAttribute id="EBELN_POHeader_3PS"/>
+        <viewAttribute id="ANGNR_POItem_3PS"/>
+        <viewAttribute id="EMLIF_POItem_3PS"/>
+        <viewAttribute id="VOLEH_POItem_3PS"/>
+        <viewAttribute id="VOLUM_POItem_3PS"/>
+        <viewAttribute id="BRGEW_POItem_3PS"/>
+        <viewAttribute id="GEWEI_POItem_3PS"/>
+        <viewAttribute id="NTGEW_POItem_3PS"/>
+        <viewAttribute id="PLIFZ_POItem_3PS"/>
+        <viewAttribute id="LMEIN_POItem_3PS"/>
+        <viewAttribute id="PSTYP_POItem_3PS"/>
+        <viewAttribute id="ELIKZ_POItem_3PS"/>
+        <viewAttribute id="ABSKZ_POItem_3PS"/>
+        <viewAttribute id="BRTWR_POItem_3PS"/>
+        <viewAttribute id="NETWR_POItem_3PS"/>
+        <viewAttribute id="PEINH_POItem_3PS"/>
+        <viewAttribute id="BPRME_POItem_3PS"/>
+        <viewAttribute id="MEINS_POItem_3PS"/>
+        <viewAttribute id="KTMNG_POItem_3PS"/>
+        <viewAttribute id="INFNR_POItem_3PS"/>
+        <viewAttribute id="WERKS_POItem_3PS"/>
+        <viewAttribute id="MATNR_POItem_3PS"/>
+        <viewAttribute id="AEDAT_POItem_3PS"/>
+        <viewAttribute id="LOEKZ_POItem_3PS"/>
+        <viewAttribute id="UNIQUEID_POItem_3PS"/>
+        <viewAttribute id="EBELP_POItem_3PS"/>
+        <viewAttribute id="EBELN_POItem_3PS"/>
+        <viewAttribute id="ELDAT_PR_3PS"/>
+        <viewAttribute id="BSMNG_PR_3PS"/>
+        <viewAttribute id="BEDAT_PR_3PS"/>
+        <viewAttribute id="EBELP_PR_3PS"/>
+        <viewAttribute id="EBELN_PR_3PS"/>
+        <viewAttribute id="LFDAT_PR_3PS"/>
+        <viewAttribute id="BADAT_PR_3PS"/>
+        <viewAttribute id="WERKS_PR_3PS"/>
+        <viewAttribute id="MATNR_PR_3PS"/>
+        <viewAttribute id="ERDAT_PR_3PS"/>
+        <viewAttribute id="ERNAM_PR_3PS"/>
+        <viewAttribute id="STATU_PR_3PS"/>
+        <viewAttribute id="LOEKZ_PR_3PS"/>
+        <viewAttribute id="BSTYP_PR_3PS"/>
+        <viewAttribute id="BSART_PR_3PS"/>
+        <viewAttribute id="BNFPO_PR_3PS"/>
+        <viewAttribute id="BANFN_PR_3PS"/>
+        <viewAttribute id="GJAHR_SalDocBusData_3PS"/>
+        <viewAttribute id="FKDAT_SalDocBusData_3PS"/>
+        <viewAttribute id="ZTERM_SalDocBusData_3PS"/>
+        <viewAttribute id="INCO2_SalDocBusData_3PS"/>
+        <viewAttribute id="INCO1_SalDocBusData_3PS"/>
+        <viewAttribute id="POSNR_SalDocBusData_3PS"/>
+        <viewAttribute id="VBELN_SalDocBusData_3PS"/>
+        <viewAttribute id="POSNN_VBFA_3PS"/>
+        <viewAttribute id="VBELN_VBFA_3PS"/>
+        <viewAttribute id="VBELN_Contract_3PS"/>
+        <viewAttribute id="POSNR_Contract_3PS"/>
+        <viewAttribute id="MANDT_Contract_3PS"/>
+        <viewAttribute id="VBELN_SOH_3PS"/>
+        <viewAttribute id="ERDAT_SOH_3PS"/>
+        <viewAttribute id="AUDAT_SOH_3PS"/>
+        <viewAttribute id="VBTYP_SOH_3PS"/>
+        <viewAttribute id="VKORG_SOH_3PS"/>
+        <viewAttribute id="GUEBG_SOH_3PS"/>
+        <viewAttribute id="GUEEN_SOH_3PS"/>
+        <viewAttribute id="VDATU_SOH_3PS"/>
+        <viewAttribute id="BSTNK_SOH_3PS"/>
+        <viewAttribute id="KUNNR_SOH_3PS"/>
+        <viewAttribute id="VBELN_SOI_3PS"/>
+        <viewAttribute id="POSNR_SOI_3PS"/>
+        <viewAttribute id="MATNR_SOI_3PS"/>
+        <viewAttribute id="ARKTX_SOI_3PS"/>
+        <viewAttribute id="PSTYV_SOI_3PS"/>
+        <viewAttribute id="ABGRU_SOI_3PS"/>
+        <viewAttribute id="ZIEME_SOI_3PS"/>
+        <viewAttribute id="MEINS_SOI_3PS"/>
+        <viewAttribute id="POSEX_SOI_3PS"/>
+        <viewAttribute id="FAKSP_SOI_3PS"/>
+        <viewAttribute id="VRKME_SOI_3PS"/>
+        <viewAttribute id="GEWEI_SOI_3PS"/>
+        <viewAttribute id="WERKS_SOI_3PS"/>
+        <viewAttribute id="VSTEL_SOI_3PS"/>
+        <viewAttribute id="ERDAT_SOI_3PS"/>
+        <viewAttribute id="KMEIN_SOI_3PS"/>
+        <viewAttribute id="MSR_RET_REASON_SOI_3PS"/>
+        <viewAttribute id="VBELN_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="POSNR_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="ETENR_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="ETTYP_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="LFREL_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="EDATU_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="WMENG_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="BMENG_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="VRKME_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="LMENG_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="MEINS_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="ETENE_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="MBDAT_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="LDDAT_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="WADAT_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="VBELN_BillingItem_3PS"/>
+        <viewAttribute id="POSNR_BillingItem_3PS"/>
+        <viewAttribute id="FKIMG_BillingItem_3PS"/>
+        <viewAttribute id="VRKME_BillingItem_3PS"/>
+        <viewAttribute id="MEINS_BillingItem_3PS"/>
+        <viewAttribute id="NTGEW_BillingItem_3PS"/>
+        <viewAttribute id="GEWEI_BillingItem_3PS"/>
+        <viewAttribute id="PRSDT_BillingItem_3PS"/>
+        <viewAttribute id="NETWR_BillingItem_3PS"/>
+        <viewAttribute id="AUBEL_BillingItem_3PS"/>
+        <viewAttribute id="AUPOS_BillingItem_3PS"/>
+        <viewAttribute id="ARKTX_BillingItem_3PS"/>
+        <viewAttribute id="WERKS_BillingItem_3PS"/>
+        <viewAttribute id="ALAND_BillingItem_3PS"/>
+        <viewAttribute id="ERDAT_BillingItem_3PS"/>
+        <viewAttribute id="ERZET_BillingItem_3PS"/>
+        <viewAttribute id="VBELN_BillingHeader_3PS"/>
+        <viewAttribute id="FKART_BillingHeader_3PS"/>
+        <viewAttribute id="FKTYP_BillingHeader_3PS"/>
+        <viewAttribute id="VBTYP_BillingHeader_3PS"/>
+        <viewAttribute id="WAERK_BillingHeader_3PS"/>
+        <viewAttribute id="VKORG_BillingHeader_3PS"/>
+        <viewAttribute id="FKDAT_BillingHeader_3PS"/>
+        <viewAttribute id="ZTERM_BillingHeader_3PS"/>
+        <viewAttribute id="FKDAT_RL_BillingHeader_3PS"/>
+        <viewAttribute id="KUNRG_BillingHeader_3PS"/>
+        <viewAttribute id="KUNAG_BillingHeader_3PS"/>
+        <viewAttribute id="KUNWE_BillingHeader_3PS"/>
+        <viewAttribute id="FKART_RL_BillingHeader_3PS"/>
+        <viewAttribute id="FKSTO_BillingHeader_3PS"/>
+        <viewAttribute id="AWREF_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="BLART_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="BSCHL_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="LIFNR_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="PAOBJNR_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH1_PA_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH2_PA_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH3_PA_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="WWCST_PA_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="KMKDGR_PA_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="LZONE_SalDocPartnerSoldTo_3PS"/>
+        <viewAttribute id="KUNNR_SalDocPartnerSoldTo_3PS"/>
+        <viewAttribute id="PARVW_SalDocPartnerSoldTo_3PS"/>
+        <viewAttribute id="POSNR_SalDocPartnerSoldTo_3PS"/>
+        <viewAttribute id="EKORG_POHeader_3PS"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_SCENARIO" length="50" expressionLanguage="COLUMN_ENGINE">
+          <formula>If(isnull(&quot;VBELN_SOH_3PS&quot;),'Third Party Scenario','Third Party Scenario')</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="CV_FCT_OTC_STP_THIRDPARTYSCENARIO"/>
+    <filter>(&quot;VTWEG&quot; ='ZC')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="NonPOBack">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KUNWE_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="PRCTR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="SPART_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VTWEG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VKORG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="WERKS_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="KUNNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWITEM_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWREF_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="BELNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VBELN_SOH_NPOS"/>
+        <viewAttribute id="LIFSK_SOH_NPOS"/>
+        <viewAttribute id="AUGRU_SOH_NPOS"/>
+        <viewAttribute id="VBELN_SOI_NPOS"/>
+        <viewAttribute id="POSNR_SOI_NPOS"/>
+        <viewAttribute id="MATNR_SOI_NPOS"/>
+        <viewAttribute id="ARKTX_SOI_NPOS"/>
+        <viewAttribute id="PSTYV_SOI_NPOS"/>
+        <viewAttribute id="ZMENG_SOI_NPOS"/>
+        <viewAttribute id="ZIEME_SOI_NPOS"/>
+        <viewAttribute id="MEINS_SOI_NPOS"/>
+        <viewAttribute id="POSEX_SOI_NPOS"/>
+        <viewAttribute id="FAKSP_SOI_NPOS"/>
+        <viewAttribute id="NETWR_SOI_NPOS"/>
+        <viewAttribute id="WERKS_SOI_NPOS"/>
+        <viewAttribute id="VSTEL_SOI_NPOS"/>
+        <viewAttribute id="ERDAT_SOI_NPOS"/>
+        <viewAttribute id="NETPR_SOI_NPOS"/>
+        <viewAttribute id="KPEIN_SOI_NPOS"/>
+        <viewAttribute id="KMEIN_SOI_NPOS"/>
+        <viewAttribute id="VBELN_BillingItem_NPOS"/>
+        <viewAttribute id="POSNR_BillingItem_NPOS"/>
+        <viewAttribute id="FKIMG_BillingItem_NPOS"/>
+        <viewAttribute id="VRKME_BillingItem_NPOS"/>
+        <viewAttribute id="MEINS_BillingItem_NPOS"/>
+        <viewAttribute id="PRSDT_BillingItem_NPOS"/>
+        <viewAttribute id="AUBEL_BillingItem_NPOS"/>
+        <viewAttribute id="AUPOS_BillingItem_NPOS"/>
+        <viewAttribute id="ARKTX_BillingItem_NPOS"/>
+        <viewAttribute id="WERKS_BillingItem_NPOS"/>
+        <viewAttribute id="ALAND_BillingItem_NPOS"/>
+        <viewAttribute id="ERZET_BillingItem_NPOS"/>
+        <viewAttribute id="ERDAT_BillingItem_NPOS"/>
+        <viewAttribute id="NETWR_BillingItem_NPOS"/>
+        <viewAttribute id="VBELN_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_BillingHeader_NPOS"/>
+        <viewAttribute id="FKTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="VBTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="WAERK_BillingHeader_NPOS"/>
+        <viewAttribute id="VKORG_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_BillingHeader_NPOS"/>
+        <viewAttribute id="ZTERM_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNRG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNAG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNWE_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="FKSTO_BillingHeader_NPOS"/>
+        <viewAttribute id="AWREF_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BLART_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BSCHL_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="LIFNR_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAOBJNR_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH1_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH2_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH3_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="WWCST_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="KMKDGR_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="RCLNT"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_SCENARIO" length="50" expressionLanguage="COLUMN_ENGINE">
+          <formula>If(isnull(&quot;VBELN_SOH_NPOS&quot;),'Non PO Back Scenario','Non PO Back Scenario')</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="CV_FCT_OTC_STP__NONPOBACKSCENARIO"/>
+    <filter>(&quot;BELNR_VendorInvAccDoc_NPOS&quot; ='TA00000060')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="NETPR_POItem_3PS"/>
+        <viewAttribute id="MENGE_POItem_3PS"/>
+        <viewAttribute id="NETWR_SOH_3PS"/>
+        <viewAttribute id="ZMENG_SOI_3PS"/>
+        <viewAttribute id="NETWR_SOI_3PS"/>
+        <viewAttribute id="KWMENG_SOI_3PS"/>
+        <viewAttribute id="BRGEW_SOI_3PS"/>
+        <viewAttribute id="NTGEW_SOI_3PS"/>
+        <viewAttribute id="VOLUM_SOI_3PS"/>
+        <viewAttribute id="NETPR_SOI_3PS"/>
+        <viewAttribute id="KPEIN_SOI_3PS"/>
+        <viewAttribute id="SPART_1"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="KMKDGR_PA_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="WWCST_PA_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH3_PA_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH2_PA_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH1_PA_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="PAOBJNR_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="LIFNR_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="BSCHL_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="BLART_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="AWREF_VendorInvAccDoc_3PS"/>
+        <viewAttribute id="RMWWR_DocItemIncomRec_3PS"/>
+        <viewAttribute id="WAERS_DocItemIncomRec_3PS"/>
+        <viewAttribute id="LIFNR_DocItemIncomRec_3PS"/>
+        <viewAttribute id="BUKRS_DocItemIncomRec_3PS"/>
+        <viewAttribute id="XBLNR_DocItemIncomRec_3PS"/>
+        <viewAttribute id="BUDAT_DocItemIncomRec_3PS"/>
+        <viewAttribute id="BLDAT_DocItemIncomRec_3PS"/>
+        <viewAttribute id="GJAHR_DocItemIncomRec_3PS"/>
+        <viewAttribute id="BELNR_DocItemIncomRec_3PS"/>
+        <viewAttribute id="BSTME_DocItemIncomInv_3PS"/>
+        <viewAttribute id="MENGE_DocItemIncomInv_3PS"/>
+        <viewAttribute id="WRBTR_DocItemIncomInv_3PS"/>
+        <viewAttribute id="WERKS_DocItemIncomInv_3PS"/>
+        <viewAttribute id="BUKRS_DocItemIncomInv_3PS"/>
+        <viewAttribute id="MATNR_DocItemIncomInv_3PS"/>
+        <viewAttribute id="EBELN_DocItemIncomInv_3PS"/>
+        <viewAttribute id="BUZEI_DocItemIncomInv_3PS"/>
+        <viewAttribute id="GJAHR_DocItemIncomInv_3PS"/>
+        <viewAttribute id="BELNR_DocItemIncomInv_3PS"/>
+        <viewAttribute id="LBLIF_POHeader_3PS"/>
+        <viewAttribute id="RESWK_POHeader_3PS"/>
+        <viewAttribute id="AUTLF_POHeader_3PS"/>
+        <viewAttribute id="KONNR_POHeader_3PS"/>
+        <viewAttribute id="KUNNR_POHeader_3PS"/>
+        <viewAttribute id="LLIEF_POHeader_3PS"/>
+        <viewAttribute id="KDATE_POHeader_3PS"/>
+        <viewAttribute id="KDATB_POHeader_3PS"/>
+        <viewAttribute id="BEDAT_POHeader_3PS"/>
+        <viewAttribute id="EKGRP_POHeader_3PS"/>
+        <viewAttribute id="LIFNR_POHeader_3PS"/>
+        <viewAttribute id="BUKRS_POHeader_3PS"/>
+        <viewAttribute id="EBELN_POHeader_3PS"/>
+        <viewAttribute id="ANGNR_POItem_3PS"/>
+        <viewAttribute id="EMLIF_POItem_3PS"/>
+        <viewAttribute id="VOLEH_POItem_3PS"/>
+        <viewAttribute id="VOLUM_POItem_3PS"/>
+        <viewAttribute id="BRGEW_POItem_3PS"/>
+        <viewAttribute id="GEWEI_POItem_3PS"/>
+        <viewAttribute id="NTGEW_POItem_3PS"/>
+        <viewAttribute id="PLIFZ_POItem_3PS"/>
+        <viewAttribute id="LMEIN_POItem_3PS"/>
+        <viewAttribute id="PSTYP_POItem_3PS"/>
+        <viewAttribute id="ELIKZ_POItem_3PS"/>
+        <viewAttribute id="ABSKZ_POItem_3PS"/>
+        <viewAttribute id="BRTWR_POItem_3PS"/>
+        <viewAttribute id="NETWR_POItem_3PS"/>
+        <viewAttribute id="PEINH_POItem_3PS"/>
+        <viewAttribute id="BPRME_POItem_3PS"/>
+        <viewAttribute id="MEINS_POItem_3PS"/>
+        <viewAttribute id="KTMNG_POItem_3PS"/>
+        <viewAttribute id="INFNR_POItem_3PS"/>
+        <viewAttribute id="WERKS_POItem_3PS"/>
+        <viewAttribute id="MATNR_POItem_3PS"/>
+        <viewAttribute id="AEDAT_POItem_3PS"/>
+        <viewAttribute id="LOEKZ_POItem_3PS"/>
+        <viewAttribute id="UNIQUEID_POItem_3PS"/>
+        <viewAttribute id="EBELP_POItem_3PS"/>
+        <viewAttribute id="EBELN_POItem_3PS"/>
+        <viewAttribute id="ELDAT_PR_3PS"/>
+        <viewAttribute id="BSMNG_PR_3PS"/>
+        <viewAttribute id="BEDAT_PR_3PS"/>
+        <viewAttribute id="EBELP_PR_3PS"/>
+        <viewAttribute id="EBELN_PR_3PS"/>
+        <viewAttribute id="LFDAT_PR_3PS"/>
+        <viewAttribute id="BADAT_PR_3PS"/>
+        <viewAttribute id="WERKS_PR_3PS"/>
+        <viewAttribute id="MATNR_PR_3PS"/>
+        <viewAttribute id="ERDAT_PR_3PS"/>
+        <viewAttribute id="ERNAM_PR_3PS"/>
+        <viewAttribute id="STATU_PR_3PS"/>
+        <viewAttribute id="LOEKZ_PR_3PS"/>
+        <viewAttribute id="BSTYP_PR_3PS"/>
+        <viewAttribute id="BSART_PR_3PS"/>
+        <viewAttribute id="BNFPO_PR_3PS"/>
+        <viewAttribute id="BANFN_PR_3PS"/>
+        <viewAttribute id="GJAHR_SalDocBusData_3PS"/>
+        <viewAttribute id="FKDAT_SalDocBusData_3PS"/>
+        <viewAttribute id="ZTERM_SalDocBusData_3PS"/>
+        <viewAttribute id="INCO2_SalDocBusData_3PS"/>
+        <viewAttribute id="INCO1_SalDocBusData_3PS"/>
+        <viewAttribute id="POSNR_SalDocBusData_3PS"/>
+        <viewAttribute id="VBELN_SalDocBusData_3PS"/>
+        <viewAttribute id="POSNN_VBFA_3PS"/>
+        <viewAttribute id="VBELN_VBFA_3PS"/>
+        <viewAttribute id="VBELN_Contract_3PS"/>
+        <viewAttribute id="POSNR_Contract_3PS"/>
+        <viewAttribute id="MANDT_Contract_3PS"/>
+        <viewAttribute id="VBELN_SOH_3PS"/>
+        <viewAttribute id="ERDAT_SOH_3PS"/>
+        <viewAttribute id="AUDAT_SOH_3PS"/>
+        <viewAttribute id="VBTYP_SOH_3PS"/>
+        <viewAttribute id="VKORG_SOH_3PS"/>
+        <viewAttribute id="GUEBG_SOH_3PS"/>
+        <viewAttribute id="GUEEN_SOH_3PS"/>
+        <viewAttribute id="VDATU_SOH_3PS"/>
+        <viewAttribute id="BSTNK_SOH_3PS"/>
+        <viewAttribute id="KUNNR_SOH_3PS"/>
+        <viewAttribute id="VBELN_SOI_3PS"/>
+        <viewAttribute id="POSNR_SOI_3PS"/>
+        <viewAttribute id="MATNR_SOI_3PS"/>
+        <viewAttribute id="ARKTX_SOI_3PS"/>
+        <viewAttribute id="PSTYV_SOI_3PS"/>
+        <viewAttribute id="ABGRU_SOI_3PS"/>
+        <viewAttribute id="ZIEME_SOI_3PS"/>
+        <viewAttribute id="MEINS_SOI_3PS"/>
+        <viewAttribute id="POSEX_SOI_3PS"/>
+        <viewAttribute id="FAKSP_SOI_3PS"/>
+        <viewAttribute id="VRKME_SOI_3PS"/>
+        <viewAttribute id="GEWEI_SOI_3PS"/>
+        <viewAttribute id="WERKS_SOI_3PS"/>
+        <viewAttribute id="VSTEL_SOI_3PS"/>
+        <viewAttribute id="ERDAT_SOI_3PS"/>
+        <viewAttribute id="KMEIN_SOI_3PS"/>
+        <viewAttribute id="MSR_RET_REASON_SOI_3PS"/>
+        <viewAttribute id="VBELN_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="POSNR_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="ETENR_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="ETTYP_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="LFREL_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="EDATU_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="WMENG_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="BMENG_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="VRKME_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="LMENG_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="MEINS_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="ETENE_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="MBDAT_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="LDDAT_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="WADAT_SalDocSchedLineData_3PS"/>
+        <viewAttribute id="VBELN_BillingItem_3PS"/>
+        <viewAttribute id="POSNR_BillingItem_3PS"/>
+        <viewAttribute id="FKIMG_BillingItem_3PS"/>
+        <viewAttribute id="VRKME_BillingItem_3PS"/>
+        <viewAttribute id="MEINS_BillingItem_3PS"/>
+        <viewAttribute id="NTGEW_BillingItem_3PS"/>
+        <viewAttribute id="GEWEI_BillingItem_3PS"/>
+        <viewAttribute id="PRSDT_BillingItem_3PS"/>
+        <viewAttribute id="NETWR_BillingItem_3PS"/>
+        <viewAttribute id="AUBEL_BillingItem_3PS"/>
+        <viewAttribute id="AUPOS_BillingItem_3PS"/>
+        <viewAttribute id="ARKTX_BillingItem_3PS"/>
+        <viewAttribute id="WERKS_BillingItem_3PS"/>
+        <viewAttribute id="ALAND_BillingItem_3PS"/>
+        <viewAttribute id="ERDAT_BillingItem_3PS"/>
+        <viewAttribute id="ERZET_BillingItem_3PS"/>
+        <viewAttribute id="VBELN_BillingHeader_3PS"/>
+        <viewAttribute id="FKART_BillingHeader_3PS"/>
+        <viewAttribute id="FKTYP_BillingHeader_3PS"/>
+        <viewAttribute id="VBTYP_BillingHeader_3PS"/>
+        <viewAttribute id="WAERK_BillingHeader_3PS"/>
+        <viewAttribute id="VKORG_BillingHeader_3PS"/>
+        <viewAttribute id="FKDAT_BillingHeader_3PS"/>
+        <viewAttribute id="ZTERM_BillingHeader_3PS"/>
+        <viewAttribute id="FKDAT_RL_BillingHeader_3PS"/>
+        <viewAttribute id="KUNRG_BillingHeader_3PS"/>
+        <viewAttribute id="KUNAG_BillingHeader_3PS"/>
+        <viewAttribute id="KUNWE_BillingHeader_3PS"/>
+        <viewAttribute id="FKART_RL_BillingHeader_3PS"/>
+        <viewAttribute id="FKSTO_BillingHeader_3PS"/>
+        <viewAttribute id="AWREF_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="BLART_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="BSCHL_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="LIFNR_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="PAOBJNR_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH1_PA_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH2_PA_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="PAPH3_PA_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="WWCST_PA_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="KMKDGR_PA_CustomerInvAccDoc_3PS"/>
+        <viewAttribute id="LZONE_SalDocPartnerSoldTo_3PS"/>
+        <viewAttribute id="KUNNR_SalDocPartnerSoldTo_3PS"/>
+        <viewAttribute id="PARVW_SalDocPartnerSoldTo_3PS"/>
+        <viewAttribute id="POSNR_SalDocPartnerSoldTo_3PS"/>
+        <viewAttribute id="KUNWE_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="PRCTR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="SPART_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VTWEG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VKORG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="WERKS_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="KUNNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWITEM_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="BELNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="LIFSK_SOH_NPOS"/>
+        <viewAttribute id="AUGRU_SOH_NPOS"/>
+        <viewAttribute id="VCAL_SCENARIO"/>
+        <viewAttribute id="EKORG_POHeader_3PS"/>
+        <viewAttribute id="AWREF_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VBELN_SOH_NPOS"/>
+        <viewAttribute id="VBELN_SOI_NPOS"/>
+        <viewAttribute id="POSNR_SOI_NPOS"/>
+        <viewAttribute id="MATNR_SOI_NPOS"/>
+        <viewAttribute id="ARKTX_SOI_NPOS"/>
+        <viewAttribute id="PSTYV_SOI_NPOS"/>
+        <viewAttribute id="ZMENG_SOI_NPOS"/>
+        <viewAttribute id="ZIEME_SOI_NPOS"/>
+        <viewAttribute id="MEINS_SOI_NPOS"/>
+        <viewAttribute id="POSEX_SOI_NPOS"/>
+        <viewAttribute id="FAKSP_SOI_NPOS"/>
+        <viewAttribute id="NETWR_SOI_NPOS"/>
+        <viewAttribute id="WERKS_SOI_NPOS"/>
+        <viewAttribute id="VSTEL_SOI_NPOS"/>
+        <viewAttribute id="ERDAT_SOI_NPOS"/>
+        <viewAttribute id="NETPR_SOI_NPOS"/>
+        <viewAttribute id="KPEIN_SOI_NPOS"/>
+        <viewAttribute id="KMEIN_SOI_NPOS"/>
+        <viewAttribute id="VBELN_BillingItem_NPOS"/>
+        <viewAttribute id="POSNR_BillingItem_NPOS"/>
+        <viewAttribute id="FKIMG_BillingItem_NPOS"/>
+        <viewAttribute id="VRKME_BillingItem_NPOS"/>
+        <viewAttribute id="MEINS_BillingItem_NPOS"/>
+        <viewAttribute id="PRSDT_BillingItem_NPOS"/>
+        <viewAttribute id="AUBEL_BillingItem_NPOS"/>
+        <viewAttribute id="AUPOS_BillingItem_NPOS"/>
+        <viewAttribute id="ARKTX_BillingItem_NPOS"/>
+        <viewAttribute id="WERKS_BillingItem_NPOS"/>
+        <viewAttribute id="ALAND_BillingItem_NPOS"/>
+        <viewAttribute id="ERZET_BillingItem_NPOS"/>
+        <viewAttribute id="ERDAT_BillingItem_NPOS"/>
+        <viewAttribute id="NETWR_BillingItem_NPOS"/>
+        <viewAttribute id="VBELN_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_BillingHeader_NPOS"/>
+        <viewAttribute id="FKTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="VBTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="WAERK_BillingHeader_NPOS"/>
+        <viewAttribute id="VKORG_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_BillingHeader_NPOS"/>
+        <viewAttribute id="ZTERM_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNRG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNAG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNWE_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="FKSTO_BillingHeader_NPOS"/>
+        <viewAttribute id="AWREF_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BLART_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BSCHL_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="LIFNR_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAOBJNR_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH1_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH2_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH3_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="WWCST_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="KMKDGR_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="RCLNT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input emptyUnionBehavior="NO_ROW" node="ThirdParty">
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETPR_POItem_3PS" source="NETPR_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MENGE_POItem_3PS" source="MENGE_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_SOH_3PS" source="NETWR_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZMENG_SOI_3PS" source="ZMENG_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_SOI_3PS" source="NETWR_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KWMENG_SOI_3PS" source="KWMENG_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRGEW_SOI_3PS" source="BRGEW_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NTGEW_SOI_3PS" source="NTGEW_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VOLUM_SOI_3PS" source="VOLUM_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETPR_SOI_3PS" source="NETPR_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KPEIN_SOI_3PS" source="KPEIN_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART_1" source="SPART_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG" source="VTWEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMKDGR_PA_VendorInvAccDoc_3PS" source="KMKDGR_PA_VendorInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WWCST_PA_VendorInvAccDoc_3PS" source="WWCST_PA_VendorInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH3_PA_VendorInvAccDoc_3PS" source="PAPH3_PA_VendorInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH2_PA_VendorInvAccDoc_3PS" source="PAPH2_PA_VendorInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH1_PA_VendorInvAccDoc_3PS" source="PAPH1_PA_VendorInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAOBJNR_VendorInvAccDoc_3PS" source="PAOBJNR_VendorInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_VendorInvAccDoc_3PS" source="LIFNR_VendorInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSCHL_VendorInvAccDoc_3PS" source="BSCHL_VendorInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART_VendorInvAccDoc_3PS" source="BLART_VendorInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_VendorInvAccDoc_3PS" source="AWREF_VendorInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RMWWR_DocItemIncomRec_3PS" source="RMWWR_DocItemIncomRec_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS_DocItemIncomRec_3PS" source="WAERS_DocItemIncomRec_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_DocItemIncomRec_3PS" source="LIFNR_DocItemIncomRec_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS_DocItemIncomRec_3PS" source="BUKRS_DocItemIncomRec_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR_DocItemIncomRec_3PS" source="XBLNR_DocItemIncomRec_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT_DocItemIncomRec_3PS" source="BUDAT_DocItemIncomRec_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT_DocItemIncomRec_3PS" source="BLDAT_DocItemIncomRec_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_DocItemIncomRec_3PS" source="GJAHR_DocItemIncomRec_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_DocItemIncomRec_3PS" source="BELNR_DocItemIncomRec_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSTME_DocItemIncomInv_3PS" source="BSTME_DocItemIncomInv_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MENGE_DocItemIncomInv_3PS" source="MENGE_DocItemIncomInv_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRBTR_DocItemIncomInv_3PS" source="WRBTR_DocItemIncomInv_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_DocItemIncomInv_3PS" source="WERKS_DocItemIncomInv_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS_DocItemIncomInv_3PS" source="BUKRS_DocItemIncomInv_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_DocItemIncomInv_3PS" source="MATNR_DocItemIncomInv_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN_DocItemIncomInv_3PS" source="EBELN_DocItemIncomInv_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI_DocItemIncomInv_3PS" source="BUZEI_DocItemIncomInv_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_DocItemIncomInv_3PS" source="GJAHR_DocItemIncomInv_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_DocItemIncomInv_3PS" source="BELNR_DocItemIncomInv_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LBLIF_POHeader_3PS" source="LBLIF_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RESWK_POHeader_3PS" source="RESWK_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUTLF_POHeader_3PS" source="AUTLF_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONNR_POHeader_3PS" source="KONNR_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_POHeader_3PS" source="KUNNR_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LLIEF_POHeader_3PS" source="LLIEF_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDATE_POHeader_3PS" source="KDATE_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDATB_POHeader_3PS" source="KDATB_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEDAT_POHeader_3PS" source="BEDAT_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKGRP_POHeader_3PS" source="EKGRP_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_POHeader_3PS" source="LIFNR_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS_POHeader_3PS" source="BUKRS_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN_POHeader_3PS" source="EBELN_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ANGNR_POItem_3PS" source="ANGNR_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMLIF_POItem_3PS" source="EMLIF_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VOLEH_POItem_3PS" source="VOLEH_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VOLUM_POItem_3PS" source="VOLUM_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRGEW_POItem_3PS" source="BRGEW_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GEWEI_POItem_3PS" source="GEWEI_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NTGEW_POItem_3PS" source="NTGEW_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PLIFZ_POItem_3PS" source="PLIFZ_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LMEIN_POItem_3PS" source="LMEIN_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTYP_POItem_3PS" source="PSTYP_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIKZ_POItem_3PS" source="ELIKZ_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABSKZ_POItem_3PS" source="ABSKZ_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRTWR_POItem_3PS" source="BRTWR_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_POItem_3PS" source="NETWR_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PEINH_POItem_3PS" source="PEINH_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BPRME_POItem_3PS" source="BPRME_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_POItem_3PS" source="MEINS_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTMNG_POItem_3PS" source="KTMNG_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INFNR_POItem_3PS" source="INFNR_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_POItem_3PS" source="WERKS_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_POItem_3PS" source="MATNR_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AEDAT_POItem_3PS" source="AEDAT_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOEKZ_POItem_3PS" source="LOEKZ_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UNIQUEID_POItem_3PS" source="UNIQUEID_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP_POItem_3PS" source="EBELP_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN_POItem_3PS" source="EBELN_POItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELDAT_PR_3PS" source="ELDAT_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSMNG_PR_3PS" source="BSMNG_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEDAT_PR_3PS" source="BEDAT_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP_PR_3PS" source="EBELP_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN_PR_3PS" source="EBELN_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFDAT_PR_3PS" source="LFDAT_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BADAT_PR_3PS" source="BADAT_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_PR_3PS" source="WERKS_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_PR_3PS" source="MATNR_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_PR_3PS" source="ERDAT_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM_PR_3PS" source="ERNAM_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATU_PR_3PS" source="STATU_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOEKZ_PR_3PS" source="LOEKZ_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSTYP_PR_3PS" source="BSTYP_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSART_PR_3PS" source="BSART_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BNFPO_PR_3PS" source="BNFPO_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BANFN_PR_3PS" source="BANFN_PR_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_SalDocBusData_3PS" source="GJAHR_SalDocBusData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_SalDocBusData_3PS" source="FKDAT_SalDocBusData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_SalDocBusData_3PS" source="ZTERM_SalDocBusData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2_SalDocBusData_3PS" source="INCO2_SalDocBusData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1_SalDocBusData_3PS" source="INCO1_SalDocBusData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SalDocBusData_3PS" source="POSNR_SalDocBusData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SalDocBusData_3PS" source="VBELN_SalDocBusData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNN_VBFA_3PS" source="POSNN_VBFA_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_VBFA_3PS" source="VBELN_VBFA_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_Contract_3PS" source="VBELN_Contract_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_Contract_3PS" source="POSNR_Contract_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_Contract_3PS" source="MANDT_Contract_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOH_3PS" source="VBELN_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_SOH_3PS" source="ERDAT_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUDAT_SOH_3PS" source="AUDAT_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBTYP_SOH_3PS" source="VBTYP_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_SOH_3PS" source="VKORG_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GUEBG_SOH_3PS" source="GUEBG_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GUEEN_SOH_3PS" source="GUEEN_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VDATU_SOH_3PS" source="VDATU_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSTNK_SOH_3PS" source="BSTNK_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_SOH_3PS" source="KUNNR_SOH_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOI_3PS" source="VBELN_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SOI_3PS" source="POSNR_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_SOI_3PS" source="MATNR_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_SOI_3PS" source="ARKTX_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTYV_SOI_3PS" source="PSTYV_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABGRU_SOI_3PS" source="ABGRU_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZIEME_SOI_3PS" source="ZIEME_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_SOI_3PS" source="MEINS_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSEX_SOI_3PS" source="POSEX_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSP_SOI_3PS" source="FAKSP_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_SOI_3PS" source="VRKME_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GEWEI_SOI_3PS" source="GEWEI_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_SOI_3PS" source="WERKS_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL_SOI_3PS" source="VSTEL_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_SOI_3PS" source="ERDAT_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMEIN_SOI_3PS" source="KMEIN_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSR_RET_REASON_SOI_3PS" source="MSR_RET_REASON_SOI_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SalDocSchedLineData_3PS" source="VBELN_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SalDocSchedLineData_3PS" source="POSNR_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ETENR_SalDocSchedLineData_3PS" source="ETENR_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ETTYP_SalDocSchedLineData_3PS" source="ETTYP_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFREL_SalDocSchedLineData_3PS" source="LFREL_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EDATU_SalDocSchedLineData_3PS" source="EDATU_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WMENG_SalDocSchedLineData_3PS" source="WMENG_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BMENG_SalDocSchedLineData_3PS" source="BMENG_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_SalDocSchedLineData_3PS" source="VRKME_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LMENG_SalDocSchedLineData_3PS" source="LMENG_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_SalDocSchedLineData_3PS" source="MEINS_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ETENE_SalDocSchedLineData_3PS" source="ETENE_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBDAT_SalDocSchedLineData_3PS" source="MBDAT_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LDDAT_SalDocSchedLineData_3PS" source="LDDAT_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WADAT_SalDocSchedLineData_3PS" source="WADAT_SalDocSchedLineData_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingItem_3PS" source="VBELN_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_BillingItem_3PS" source="POSNR_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKIMG_BillingItem_3PS" source="FKIMG_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_BillingItem_3PS" source="VRKME_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_BillingItem_3PS" source="MEINS_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NTGEW_BillingItem_3PS" source="NTGEW_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GEWEI_BillingItem_3PS" source="GEWEI_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRSDT_BillingItem_3PS" source="PRSDT_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_BillingItem_3PS" source="NETWR_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUBEL_BillingItem_3PS" source="AUBEL_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUPOS_BillingItem_3PS" source="AUPOS_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_BillingItem_3PS" source="ARKTX_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_BillingItem_3PS" source="WERKS_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALAND_BillingItem_3PS" source="ALAND_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_BillingItem_3PS" source="ERDAT_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERZET_BillingItem_3PS" source="ERZET_BillingItem_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingHeader_3PS" source="VBELN_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_BillingHeader_3PS" source="FKART_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKTYP_BillingHeader_3PS" source="FKTYP_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBTYP_BillingHeader_3PS" source="VBTYP_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERK_BillingHeader_3PS" source="WAERK_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_BillingHeader_3PS" source="VKORG_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_BillingHeader_3PS" source="FKDAT_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_BillingHeader_3PS" source="ZTERM_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_RL_BillingHeader_3PS" source="FKDAT_RL_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNRG_BillingHeader_3PS" source="KUNRG_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG_BillingHeader_3PS" source="KUNAG_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_BillingHeader_3PS" source="KUNWE_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_RL_BillingHeader_3PS" source="FKART_RL_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKSTO_BillingHeader_3PS" source="FKSTO_BillingHeader_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_CustomerInvAccDoc_3PS" source="AWREF_CustomerInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART_CustomerInvAccDoc_3PS" source="BLART_CustomerInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSCHL_CustomerInvAccDoc_3PS" source="BSCHL_CustomerInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_CustomerInvAccDoc_3PS" source="LIFNR_CustomerInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAOBJNR_CustomerInvAccDoc_3PS" source="PAOBJNR_CustomerInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH1_PA_CustomerInvAccDoc_3PS" source="PAPH1_PA_CustomerInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH2_PA_CustomerInvAccDoc_3PS" source="PAPH2_PA_CustomerInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH3_PA_CustomerInvAccDoc_3PS" source="PAPH3_PA_CustomerInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WWCST_PA_CustomerInvAccDoc_3PS" source="WWCST_PA_CustomerInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMKDGR_PA_CustomerInvAccDoc_3PS" source="KMKDGR_PA_CustomerInvAccDoc_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_SalDocPartnerSoldTo_3PS" source="LZONE_SalDocPartnerSoldTo_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_SalDocPartnerSoldTo_3PS" source="KUNNR_SalDocPartnerSoldTo_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_SalDocPartnerSoldTo_3PS" source="PARVW_SalDocPartnerSoldTo_3PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SalDocPartnerSoldTo_3PS" source="POSNR_SalDocPartnerSoldTo_3PS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KUNWE_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRCTR_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MATNR_COPA_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPART_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VTWEG_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKORG_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WERKS_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KUNNR_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AWITEM_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BELNR_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LIFSK_SOH_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AUGRU_SOH_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VCAL_SCENARIO" source="VCAL_SCENARIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKORG_POHeader_3PS" source="EKORG_POHeader_3PS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AWREF_VendorInvAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN_SOH_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSNR_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MATNR_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ARKTX_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PSTYV_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ZMENG_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ZIEME_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MEINS_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSEX_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="FAKSP_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NETWR_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WERKS_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VSTEL_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERDAT_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NETPR_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KPEIN_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KMEIN_SOI_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSNR_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="FKIMG_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VRKME_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MEINS_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PRSDT_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AUBEL_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AUPOS_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ARKTX_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WERKS_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ALAND_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERZET_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERDAT_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NETWR_BillingItem_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="FKART_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="FKTYP_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBTYP_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WAERK_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKORG_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="FKDAT_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ZTERM_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="FKDAT_RL_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KUNRG_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KUNAG_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KUNWE_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="FKART_RL_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="FKSTO_BillingHeader_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AWREF_DebMemAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BLART_DebMemAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSCHL_DebMemAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LIFNR_DebMemAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PAOBJNR_DebMemAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PAPH1_PA_DebMemAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PAPH2_PA_DebMemAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PAPH3_PA_DebMemAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WWCST_PA_DebMemAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KMKDGR_PA_DebMemAccDoc_NPOS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BUKRS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="RCLNT" null="true" value=""/>
+      </input>
+      <input emptyUnionBehavior="NO_ROW" node="NonPOBack">
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NETPR_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MENGE_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NETWR_SOH_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZMENG_SOI_3PS" source="ZMENG_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_SOI_3PS" source="NETWR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KWMENG_SOI_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BRGEW_SOI_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NTGEW_SOI_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VOLUM_SOI_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETPR_SOI_3PS" source="NETPR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KPEIN_SOI_3PS" source="KPEIN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SPART_1" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VTWEG" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KMKDGR_PA_VendorInvAccDoc_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WWCST_PA_VendorInvAccDoc_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PAPH3_PA_VendorInvAccDoc_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PAPH2_PA_VendorInvAccDoc_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PAPH1_PA_VendorInvAccDoc_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PAOBJNR_VendorInvAccDoc_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LIFNR_VendorInvAccDoc_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSCHL_VendorInvAccDoc_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BLART_VendorInvAccDoc_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_VendorInvAccDoc_3PS" source="AWREF_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="RMWWR_DocItemIncomRec_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WAERS_DocItemIncomRec_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LIFNR_DocItemIncomRec_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BUKRS_DocItemIncomRec_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="XBLNR_DocItemIncomRec_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BUDAT_DocItemIncomRec_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BLDAT_DocItemIncomRec_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="GJAHR_DocItemIncomRec_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BELNR_DocItemIncomRec_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSTME_DocItemIncomInv_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MENGE_DocItemIncomInv_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WRBTR_DocItemIncomInv_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WERKS_DocItemIncomInv_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BUKRS_DocItemIncomInv_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MATNR_DocItemIncomInv_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EBELN_DocItemIncomInv_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BUZEI_DocItemIncomInv_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="GJAHR_DocItemIncomInv_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BELNR_DocItemIncomInv_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LBLIF_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="RESWK_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AUTLF_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KONNR_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KUNNR_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LLIEF_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KDATE_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KDATB_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BEDAT_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EKGRP_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LIFNR_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BUKRS_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EBELN_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ANGNR_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EMLIF_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VOLEH_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VOLUM_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BRGEW_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="GEWEI_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NTGEW_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PLIFZ_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LMEIN_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PSTYP_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ELIKZ_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ABSKZ_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BRTWR_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NETWR_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PEINH_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BPRME_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MEINS_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KTMNG_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="INFNR_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WERKS_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MATNR_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AEDAT_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LOEKZ_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="UNIQUEID_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EBELP_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EBELN_POItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ELDAT_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSMNG_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BEDAT_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EBELP_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EBELN_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LFDAT_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BADAT_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WERKS_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MATNR_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERDAT_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERNAM_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="STATU_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LOEKZ_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSTYP_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSART_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BNFPO_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BANFN_PR_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="GJAHR_SalDocBusData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="FKDAT_SalDocBusData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ZTERM_SalDocBusData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="INCO2_SalDocBusData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="INCO1_SalDocBusData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSNR_SalDocBusData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN_SalDocBusData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSNN_VBFA_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN_VBFA_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN_Contract_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSNR_Contract_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MANDT_Contract_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOH_3PS" source="VBELN_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ERDAT_SOH_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="AUDAT_SOH_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBTYP_SOH_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VKORG_SOH_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="GUEBG_SOH_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="GUEEN_SOH_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VDATU_SOH_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BSTNK_SOH_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KUNNR_SOH_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOI_3PS" source="VBELN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SOI_3PS" source="POSNR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_SOI_3PS" source="MATNR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_SOI_3PS" source="ARKTX_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTYV_SOI_3PS" source="PSTYV_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ABGRU_SOI_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZIEME_SOI_3PS" source="ZIEME_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_SOI_3PS" source="MEINS_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSEX_SOI_3PS" source="POSEX_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSP_SOI_3PS" source="FAKSP_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VRKME_SOI_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="GEWEI_SOI_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_SOI_3PS" source="WERKS_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL_SOI_3PS" source="VSTEL_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_SOI_3PS" source="ERDAT_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMEIN_SOI_3PS" source="KMEIN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MSR_RET_REASON_SOI_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VBELN_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSNR_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ETENR_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ETTYP_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LFREL_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EDATU_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WMENG_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="BMENG_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="VRKME_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LMENG_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MEINS_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ETENE_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="MBDAT_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LDDAT_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="WADAT_SalDocSchedLineData_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingItem_3PS" source="VBELN_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_BillingItem_3PS" source="POSNR_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKIMG_BillingItem_3PS" source="FKIMG_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_BillingItem_3PS" source="VRKME_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_BillingItem_3PS" source="MEINS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NTGEW_BillingItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="GEWEI_BillingItem_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRSDT_BillingItem_3PS" source="PRSDT_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_BillingItem_3PS" source="NETWR_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUBEL_BillingItem_3PS" source="AUBEL_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUPOS_BillingItem_3PS" source="AUPOS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_BillingItem_3PS" source="ARKTX_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_BillingItem_3PS" source="WERKS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALAND_BillingItem_3PS" source="ALAND_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_BillingItem_3PS" source="ERDAT_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERZET_BillingItem_3PS" source="ERZET_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingHeader_3PS" source="VBELN_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_BillingHeader_3PS" source="FKART_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKTYP_BillingHeader_3PS" source="FKTYP_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBTYP_BillingHeader_3PS" source="VBTYP_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERK_BillingHeader_3PS" source="WAERK_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_BillingHeader_3PS" source="VKORG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_BillingHeader_3PS" source="FKDAT_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_BillingHeader_3PS" source="ZTERM_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_RL_BillingHeader_3PS" source="FKDAT_RL_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNRG_BillingHeader_3PS" source="KUNRG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG_BillingHeader_3PS" source="KUNAG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_BillingHeader_3PS" source="KUNWE_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_RL_BillingHeader_3PS" source="FKART_RL_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKSTO_BillingHeader_3PS" source="FKSTO_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_CustomerInvAccDoc_3PS" source="AWREF_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART_CustomerInvAccDoc_3PS" source="BLART_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSCHL_CustomerInvAccDoc_3PS" source="BSCHL_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_CustomerInvAccDoc_3PS" source="LIFNR_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAOBJNR_CustomerInvAccDoc_3PS" source="PAOBJNR_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH1_PA_CustomerInvAccDoc_3PS" source="PAPH1_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH2_PA_CustomerInvAccDoc_3PS" source="PAPH2_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH3_PA_CustomerInvAccDoc_3PS" source="PAPH3_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WWCST_PA_CustomerInvAccDoc_3PS" source="WWCST_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMKDGR_PA_CustomerInvAccDoc_3PS" source="KMKDGR_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LZONE_SalDocPartnerSoldTo_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="KUNNR_SalDocPartnerSoldTo_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PARVW_SalDocPartnerSoldTo_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="POSNR_SalDocPartnerSoldTo_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_VendorInvAccDoc_NPOS" source="KUNWE_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR_VendorInvAccDoc_NPOS" source="PRCTR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_COPA_VendorInvAccDoc_NPOS" source="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART_VendorInvAccDoc_NPOS" source="SPART_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG_VendorInvAccDoc_NPOS" source="VTWEG_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_VendorInvAccDoc_NPOS" source="VKORG_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_VendorInvAccDoc_NPOS" source="WERKS_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_VendorInvAccDoc_NPOS" source="KUNNR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWITEM_VendorInvAccDoc_NPOS" source="AWITEM_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_VendorInvAccDoc_NPOS" source="BELNR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFSK_SOH_NPOS" source="LIFSK_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGRU_SOH_NPOS" source="AUGRU_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VCAL_SCENARIO" source="VCAL_SCENARIO"/>
+        <mapping xsi:type="Calculation:ConstantAttributeMapping" target="EKORG_POHeader_3PS" null="true" value=""/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_VendorInvAccDoc_NPOS" source="AWREF_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOH_NPOS" source="VBELN_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOI_NPOS" source="VBELN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SOI_NPOS" source="POSNR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_SOI_NPOS" source="MATNR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_SOI_NPOS" source="ARKTX_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTYV_SOI_NPOS" source="PSTYV_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZMENG_SOI_NPOS" source="ZMENG_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZIEME_SOI_NPOS" source="ZIEME_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_SOI_NPOS" source="MEINS_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSEX_SOI_NPOS" source="POSEX_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSP_SOI_NPOS" source="FAKSP_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_SOI_NPOS" source="NETWR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_SOI_NPOS" source="WERKS_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL_SOI_NPOS" source="VSTEL_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_SOI_NPOS" source="ERDAT_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETPR_SOI_NPOS" source="NETPR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KPEIN_SOI_NPOS" source="KPEIN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMEIN_SOI_NPOS" source="KMEIN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingItem_NPOS" source="VBELN_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_BillingItem_NPOS" source="POSNR_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKIMG_BillingItem_NPOS" source="FKIMG_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_BillingItem_NPOS" source="VRKME_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_BillingItem_NPOS" source="MEINS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRSDT_BillingItem_NPOS" source="PRSDT_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUBEL_BillingItem_NPOS" source="AUBEL_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUPOS_BillingItem_NPOS" source="AUPOS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_BillingItem_NPOS" source="ARKTX_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_BillingItem_NPOS" source="WERKS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALAND_BillingItem_NPOS" source="ALAND_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERZET_BillingItem_NPOS" source="ERZET_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_BillingItem_NPOS" source="ERDAT_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_BillingItem_NPOS" source="NETWR_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingHeader_NPOS" source="VBELN_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_BillingHeader_NPOS" source="FKART_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKTYP_BillingHeader_NPOS" source="FKTYP_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBTYP_BillingHeader_NPOS" source="VBTYP_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERK_BillingHeader_NPOS" source="WAERK_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_BillingHeader_NPOS" source="VKORG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_BillingHeader_NPOS" source="FKDAT_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_BillingHeader_NPOS" source="ZTERM_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_RL_BillingHeader_NPOS" source="FKDAT_RL_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNRG_BillingHeader_NPOS" source="KUNRG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG_BillingHeader_NPOS" source="KUNAG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_BillingHeader_NPOS" source="KUNWE_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_RL_BillingHeader_NPOS" source="FKART_RL_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKSTO_BillingHeader_NPOS" source="FKSTO_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_DebMemAccDoc_NPOS" source="AWREF_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART_DebMemAccDoc_NPOS" source="BLART_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSCHL_DebMemAccDoc_NPOS" source="BSCHL_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_DebMemAccDoc_NPOS" source="LIFNR_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAOBJNR_DebMemAccDoc_NPOS" source="PAOBJNR_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH1_PA_DebMemAccDoc_NPOS" source="PAPH1_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH2_PA_DebMemAccDoc_NPOS" source="PAPH2_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH3_PA_DebMemAccDoc_NPOS" source="PAPH3_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WWCST_PA_DebMemAccDoc_NPOS" source="WWCST_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMKDGR_PA_DebMemAccDoc_NPOS" source="KMKDGR_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RCLNT" source="RCLNT"/>
+      </input>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="Union_1">
+    <descriptions defaultDescription="VFCT_OTC_STP_UNION"/>
+    <attributes>
+      <attribute id="SPART_1" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART_1"/>
+        <keyMapping columnObjectName="Union_1" columnName="SPART_1"/>
+      </attribute>
+      <attribute id="VTWEG" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG"/>
+        <keyMapping columnObjectName="Union_1" columnName="VTWEG"/>
+      </attribute>
+      <attribute id="KMKDGR_PA_VendorInvAccDoc_3PS" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group"/>
+        <keyMapping columnObjectName="Union_1" columnName="KMKDGR_PA_VendorInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="WWCST_PA_VendorInvAccDoc_3PS" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Ship-to"/>
+        <keyMapping columnObjectName="Union_1" columnName="WWCST_PA_VendorInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="PAPH3_PA_VendorInvAccDoc_3PS" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Prod.hierarchy01-3"/>
+        <keyMapping columnObjectName="Union_1" columnName="PAPH3_PA_VendorInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="PAPH2_PA_VendorInvAccDoc_3PS" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Prod.hierarchy01-2"/>
+        <keyMapping columnObjectName="Union_1" columnName="PAPH2_PA_VendorInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="PAPH1_PA_VendorInvAccDoc_3PS" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Prod.hierarchy01-1"/>
+        <keyMapping columnObjectName="Union_1" columnName="PAPH1_PA_VendorInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="PAOBJNR_VendorInvAccDoc_3PS" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Profitability Segment Number (CO-PA)"/>
+        <keyMapping columnObjectName="Union_1" columnName="PAOBJNR_VendorInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="LIFNR_VendorInvAccDoc_3PS" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="Union_1" columnName="LIFNR_VendorInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="BSCHL_VendorInvAccDoc_3PS" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Posting Key"/>
+        <keyMapping columnObjectName="Union_1" columnName="BSCHL_VendorInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="BLART_VendorInvAccDoc_3PS" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document type"/>
+        <keyMapping columnObjectName="Union_1" columnName="BLART_VendorInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="AWREF_VendorInvAccDoc_3PS" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reference document number"/>
+        <keyMapping columnObjectName="Union_1" columnName="AWREF_VendorInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="RMWWR_DocItemIncomRec_3PS" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Gross Invoice Amount in Document Currency"/>
+        <keyMapping columnObjectName="Union_1" columnName="RMWWR_DocItemIncomRec_3PS"/>
+      </attribute>
+      <attribute id="WAERS_DocItemIncomRec_3PS" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency Key"/>
+        <keyMapping columnObjectName="Union_1" columnName="WAERS_DocItemIncomRec_3PS"/>
+      </attribute>
+      <attribute id="LIFNR_DocItemIncomRec_3PS" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Different Invoicing Party"/>
+        <keyMapping columnObjectName="Union_1" columnName="LIFNR_DocItemIncomRec_3PS"/>
+      </attribute>
+      <attribute id="BUKRS_DocItemIncomRec_3PS" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code"/>
+        <keyMapping columnObjectName="Union_1" columnName="BUKRS_DocItemIncomRec_3PS"/>
+      </attribute>
+      <attribute id="XBLNR_DocItemIncomRec_3PS" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reference Document Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="XBLNR_DocItemIncomRec_3PS"/>
+      </attribute>
+      <attribute id="BUDAT_DocItemIncomRec_3PS" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Posting Date in the Document"/>
+        <keyMapping columnObjectName="Union_1" columnName="BUDAT_DocItemIncomRec_3PS"/>
+      </attribute>
+      <attribute id="BLDAT_DocItemIncomRec_3PS" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Date in Document"/>
+        <keyMapping columnObjectName="Union_1" columnName="BLDAT_DocItemIncomRec_3PS"/>
+      </attribute>
+      <attribute id="GJAHR_DocItemIncomRec_3PS" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fiscal Year"/>
+        <keyMapping columnObjectName="Union_1" columnName="GJAHR_DocItemIncomRec_3PS"/>
+      </attribute>
+      <attribute id="BELNR_DocItemIncomRec_3PS" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Number of an Invoice Document"/>
+        <keyMapping columnObjectName="Union_1" columnName="BELNR_DocItemIncomRec_3PS"/>
+      </attribute>
+      <attribute id="BSTME_DocItemIncomInv_3PS" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Order Unit of Measure"/>
+        <keyMapping columnObjectName="Union_1" columnName="BSTME_DocItemIncomInv_3PS"/>
+      </attribute>
+      <attribute id="MENGE_DocItemIncomInv_3PS" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quantity"/>
+        <keyMapping columnObjectName="Union_1" columnName="MENGE_DocItemIncomInv_3PS"/>
+      </attribute>
+      <attribute id="WRBTR_DocItemIncomInv_3PS" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Amount in Document Currency"/>
+        <keyMapping columnObjectName="Union_1" columnName="WRBTR_DocItemIncomInv_3PS"/>
+      </attribute>
+      <attribute id="WERKS_DocItemIncomInv_3PS" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="Union_1" columnName="WERKS_DocItemIncomInv_3PS"/>
+      </attribute>
+      <attribute id="BUKRS_DocItemIncomInv_3PS" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code"/>
+        <keyMapping columnObjectName="Union_1" columnName="BUKRS_DocItemIncomInv_3PS"/>
+      </attribute>
+      <attribute id="MATNR_DocItemIncomInv_3PS" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="MATNR_DocItemIncomInv_3PS"/>
+      </attribute>
+      <attribute id="EBELN_DocItemIncomInv_3PS" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="EBELN_DocItemIncomInv_3PS"/>
+      </attribute>
+      <attribute id="BUZEI_DocItemIncomInv_3PS" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Item in Invoice Document"/>
+        <keyMapping columnObjectName="Union_1" columnName="BUZEI_DocItemIncomInv_3PS"/>
+      </attribute>
+      <attribute id="GJAHR_DocItemIncomInv_3PS" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fiscal Year"/>
+        <keyMapping columnObjectName="Union_1" columnName="GJAHR_DocItemIncomInv_3PS"/>
+      </attribute>
+      <attribute id="BELNR_DocItemIncomInv_3PS" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Accounting Document Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="BELNR_DocItemIncomInv_3PS"/>
+      </attribute>
+      <attribute id="LBLIF_POHeader_3PS" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Field not used"/>
+        <keyMapping columnObjectName="Union_1" columnName="LBLIF_POHeader_3PS"/>
+      </attribute>
+      <attribute id="RESWK_POHeader_3PS" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Supplying (issuing) plant in case of stock transport order"/>
+        <keyMapping columnObjectName="Union_1" columnName="RESWK_POHeader_3PS"/>
+      </attribute>
+      <attribute id="AUTLF_POHeader_3PS" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Complete Delivery Stipulated for Each Purchase Order"/>
+        <keyMapping columnObjectName="Union_1" columnName="AUTLF_POHeader_3PS"/>
+      </attribute>
+      <attribute id="KONNR_POHeader_3PS" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of principal purchase agreement"/>
+        <keyMapping columnObjectName="Union_1" columnName="KONNR_POHeader_3PS"/>
+      </attribute>
+      <attribute id="KUNNR_POHeader_3PS" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="KUNNR_POHeader_3PS"/>
+      </attribute>
+      <attribute id="LLIEF_POHeader_3PS" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Goods Supplier"/>
+        <keyMapping columnObjectName="Union_1" columnName="LLIEF_POHeader_3PS"/>
+      </attribute>
+      <attribute id="KDATE_POHeader_3PS" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="End of Validity Period"/>
+        <keyMapping columnObjectName="Union_1" columnName="KDATE_POHeader_3PS"/>
+      </attribute>
+      <attribute id="KDATB_POHeader_3PS" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Start of Validity Period"/>
+        <keyMapping columnObjectName="Union_1" columnName="KDATB_POHeader_3PS"/>
+      </attribute>
+      <attribute id="BEDAT_POHeader_3PS" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Date"/>
+        <keyMapping columnObjectName="Union_1" columnName="BEDAT_POHeader_3PS"/>
+      </attribute>
+      <attribute id="EKGRP_POHeader_3PS" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Group"/>
+        <keyMapping columnObjectName="Union_1" columnName="EKGRP_POHeader_3PS"/>
+      </attribute>
+      <attribute id="LIFNR_POHeader_3PS" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Vendor&apos;s account number"/>
+        <keyMapping columnObjectName="Union_1" columnName="LIFNR_POHeader_3PS"/>
+      </attribute>
+      <attribute id="BUKRS_POHeader_3PS" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code"/>
+        <keyMapping columnObjectName="Union_1" columnName="BUKRS_POHeader_3PS"/>
+      </attribute>
+      <attribute id="EBELN_POHeader_3PS" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="EBELN_POHeader_3PS"/>
+      </attribute>
+      <attribute id="ANGNR_POItem_3PS" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quotation number"/>
+        <keyMapping columnObjectName="Union_1" columnName="ANGNR_POItem_3PS"/>
+      </attribute>
+      <attribute id="EMLIF_POItem_3PS" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Supplier to be Supplied/Who is to Receive Delivery"/>
+        <keyMapping columnObjectName="Union_1" columnName="EMLIF_POItem_3PS"/>
+      </attribute>
+      <attribute id="VOLEH_POItem_3PS" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Volume unit"/>
+        <keyMapping columnObjectName="Union_1" columnName="VOLEH_POItem_3PS"/>
+      </attribute>
+      <attribute id="VOLUM_POItem_3PS" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Volume"/>
+        <keyMapping columnObjectName="Union_1" columnName="VOLUM_POItem_3PS"/>
+      </attribute>
+      <attribute id="BRGEW_POItem_3PS" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Gross weight"/>
+        <keyMapping columnObjectName="Union_1" columnName="BRGEW_POItem_3PS"/>
+      </attribute>
+      <attribute id="GEWEI_POItem_3PS" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unit of Weight"/>
+        <keyMapping columnObjectName="Union_1" columnName="GEWEI_POItem_3PS"/>
+      </attribute>
+      <attribute id="NTGEW_POItem_3PS" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Net Weight"/>
+        <keyMapping columnObjectName="Union_1" columnName="NTGEW_POItem_3PS"/>
+      </attribute>
+      <attribute id="PLIFZ_POItem_3PS" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Planned Delivery Time in Days"/>
+        <keyMapping columnObjectName="Union_1" columnName="PLIFZ_POItem_3PS"/>
+      </attribute>
+      <attribute id="LMEIN_POItem_3PS" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Base Unit of Measure"/>
+        <keyMapping columnObjectName="Union_1" columnName="LMEIN_POItem_3PS"/>
+      </attribute>
+      <attribute id="PSTYP_POItem_3PS" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item category in purchasing document"/>
+        <keyMapping columnObjectName="Union_1" columnName="PSTYP_POItem_3PS"/>
+      </attribute>
+      <attribute id="ELIKZ_POItem_3PS" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="&quot;Delivery Completed&quot; Indicator"/>
+        <keyMapping columnObjectName="Union_1" columnName="ELIKZ_POItem_3PS"/>
+      </attribute>
+      <attribute id="ABSKZ_POItem_3PS" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Rejection Indicator"/>
+        <keyMapping columnObjectName="Union_1" columnName="ABSKZ_POItem_3PS"/>
+      </attribute>
+      <attribute id="BRTWR_POItem_3PS" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Gross order value in PO currency"/>
+        <keyMapping columnObjectName="Union_1" columnName="BRTWR_POItem_3PS"/>
+      </attribute>
+      <attribute id="PEINH_POItem_3PS" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Price unit"/>
+        <keyMapping columnObjectName="Union_1" columnName="PEINH_POItem_3PS"/>
+      </attribute>
+      <attribute id="BPRME_POItem_3PS" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Order Price Unit (Purchasing)"/>
+        <keyMapping columnObjectName="Union_1" columnName="BPRME_POItem_3PS"/>
+      </attribute>
+      <attribute id="MEINS_POItem_3PS" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Order Unit of Measure"/>
+        <keyMapping columnObjectName="Union_1" columnName="MEINS_POItem_3PS"/>
+      </attribute>
+      <attribute id="KTMNG_POItem_3PS" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Target Quantity"/>
+        <keyMapping columnObjectName="Union_1" columnName="KTMNG_POItem_3PS"/>
+      </attribute>
+      <attribute id="INFNR_POItem_3PS" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of purchasing info record"/>
+        <keyMapping columnObjectName="Union_1" columnName="INFNR_POItem_3PS"/>
+      </attribute>
+      <attribute id="WERKS_POItem_3PS" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="Union_1" columnName="WERKS_POItem_3PS"/>
+      </attribute>
+      <attribute id="MATNR_POItem_3PS" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="MATNR_POItem_3PS"/>
+      </attribute>
+      <attribute id="AEDAT_POItem_3PS" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Item Change Date"/>
+        <keyMapping columnObjectName="Union_1" columnName="AEDAT_POItem_3PS"/>
+      </attribute>
+      <attribute id="LOEKZ_POItem_3PS" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Deletion indicator in purchasing document"/>
+        <keyMapping columnObjectName="Union_1" columnName="LOEKZ_POItem_3PS"/>
+      </attribute>
+      <attribute id="UNIQUEID_POItem_3PS" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Concatenation of EBELN and EBELP"/>
+        <keyMapping columnObjectName="Union_1" columnName="UNIQUEID_POItem_3PS"/>
+      </attribute>
+      <attribute id="EBELP_POItem_3PS" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item Number of Purchasing Document"/>
+        <keyMapping columnObjectName="Union_1" columnName="EBELP_POItem_3PS"/>
+      </attribute>
+      <attribute id="EBELN_POItem_3PS" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="EBELN_POItem_3PS"/>
+      </attribute>
+      <attribute id="ELDAT_PR_3PS" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Receipt/Requirements date"/>
+        <keyMapping columnObjectName="Union_1" columnName="ELDAT_PR_3PS"/>
+      </attribute>
+      <attribute id="BSMNG_PR_3PS" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quantity ordered against this purchase requisition"/>
+        <keyMapping columnObjectName="Union_1" columnName="BSMNG_PR_3PS"/>
+      </attribute>
+      <attribute id="BEDAT_PR_3PS" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Order Date"/>
+        <keyMapping columnObjectName="Union_1" columnName="BEDAT_PR_3PS"/>
+      </attribute>
+      <attribute id="EBELP_PR_3PS" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase order item number"/>
+        <keyMapping columnObjectName="Union_1" columnName="EBELP_PR_3PS"/>
+      </attribute>
+      <attribute id="EBELN_PR_3PS" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase order number"/>
+        <keyMapping columnObjectName="Union_1" columnName="EBELN_PR_3PS"/>
+      </attribute>
+      <attribute id="LFDAT_PR_3PS" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item delivery date"/>
+        <keyMapping columnObjectName="Union_1" columnName="LFDAT_PR_3PS"/>
+      </attribute>
+      <attribute id="BADAT_PR_3PS" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Requisition (request) date"/>
+        <keyMapping columnObjectName="Union_1" columnName="BADAT_PR_3PS"/>
+      </attribute>
+      <attribute id="WERKS_PR_3PS" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="Union_1" columnName="WERKS_PR_3PS"/>
+      </attribute>
+      <attribute id="MATNR_PR_3PS" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="MATNR_PR_3PS"/>
+      </attribute>
+      <attribute id="ERDAT_PR_3PS" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of Last Change"/>
+        <keyMapping columnObjectName="Union_1" columnName="ERDAT_PR_3PS"/>
+      </attribute>
+      <attribute id="ERNAM_PR_3PS" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="Union_1" columnName="ERNAM_PR_3PS"/>
+      </attribute>
+      <attribute id="STATU_PR_3PS" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Processing status of purchase requisition"/>
+        <keyMapping columnObjectName="Union_1" columnName="STATU_PR_3PS"/>
+      </attribute>
+      <attribute id="LOEKZ_PR_3PS" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Deletion indicator in purchasing document"/>
+        <keyMapping columnObjectName="Union_1" columnName="LOEKZ_PR_3PS"/>
+      </attribute>
+      <attribute id="BSTYP_PR_3PS" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Category"/>
+        <keyMapping columnObjectName="Union_1" columnName="BSTYP_PR_3PS"/>
+      </attribute>
+      <attribute id="BSART_PR_3PS" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Requisition Document Type"/>
+        <keyMapping columnObjectName="Union_1" columnName="BSART_PR_3PS"/>
+      </attribute>
+      <attribute id="BNFPO_PR_3PS" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item number of purchase requisition"/>
+        <keyMapping columnObjectName="Union_1" columnName="BNFPO_PR_3PS"/>
+      </attribute>
+      <attribute id="BANFN_PR_3PS" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Requisition Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="BANFN_PR_3PS"/>
+      </attribute>
+      <attribute id="GJAHR_SalDocBusData_3PS" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR_SalDocBusData_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="GJAHR_SalDocBusData_3PS"/>
+      </attribute>
+      <attribute id="FKDAT_SalDocBusData_3PS" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_SalDocBusData_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="FKDAT_SalDocBusData_3PS"/>
+      </attribute>
+      <attribute id="ZTERM_SalDocBusData_3PS" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM_SalDocBusData_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="ZTERM_SalDocBusData_3PS"/>
+      </attribute>
+      <attribute id="INCO2_SalDocBusData_3PS" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2_SalDocBusData_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="INCO2_SalDocBusData_3PS"/>
+      </attribute>
+      <attribute id="INCO1_SalDocBusData_3PS" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO1_SalDocBusData_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="INCO1_SalDocBusData_3PS"/>
+      </attribute>
+      <attribute id="POSNR_SalDocBusData_3PS" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR_SalDocBusData_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="POSNR_SalDocBusData_3PS"/>
+      </attribute>
+      <attribute id="VBELN_SalDocBusData_3PS" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_SalDocBusData_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VBELN_SalDocBusData_3PS"/>
+      </attribute>
+      <attribute id="POSNN_VBFA_3PS" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Subsequent Item of an SD Document"/>
+        <keyMapping columnObjectName="Union_1" columnName="POSNN_VBFA_3PS"/>
+      </attribute>
+      <attribute id="VBELN_VBFA_3PS" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Subsequent Sales and Distribution Document"/>
+        <keyMapping columnObjectName="Union_1" columnName="VBELN_VBFA_3PS"/>
+      </attribute>
+      <attribute id="VBELN_Contract_3PS" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_Contract_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VBELN_Contract_3PS"/>
+      </attribute>
+      <attribute id="POSNR_Contract_3PS" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR_Contract_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="POSNR_Contract_3PS"/>
+      </attribute>
+      <attribute id="MANDT_Contract_3PS" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT_Contract_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="MANDT_Contract_3PS"/>
+      </attribute>
+      <attribute id="VBELN_SOH_3PS" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Union_1" columnName="VBELN_SOH_3PS"/>
+      </attribute>
+      <attribute id="ERDAT_SOH_3PS" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT_SOH_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="ERDAT_SOH_3PS"/>
+      </attribute>
+      <attribute id="AUDAT_SOH_3PS" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUDAT_SOH_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="AUDAT_SOH_3PS"/>
+      </attribute>
+      <attribute id="VBTYP_SOH_3PS" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBTYP_SOH_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VBTYP_SOH_3PS"/>
+      </attribute>
+      <attribute id="VKORG_SOH_3PS" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG_SOH_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VKORG_SOH_3PS"/>
+      </attribute>
+      <attribute id="GUEBG_SOH_3PS" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GUEBG_SOH_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="GUEBG_SOH_3PS"/>
+      </attribute>
+      <attribute id="GUEEN_SOH_3PS" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GUEEN_SOH_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="GUEEN_SOH_3PS"/>
+      </attribute>
+      <attribute id="VDATU_SOH_3PS" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VDATU_SOH_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VDATU_SOH_3PS"/>
+      </attribute>
+      <attribute id="BSTNK_SOH_3PS" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTNK_SOH_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="BSTNK_SOH_3PS"/>
+      </attribute>
+      <attribute id="KUNNR_SOH_3PS" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_SOH_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="KUNNR_SOH_3PS"/>
+      </attribute>
+      <attribute id="VBELN_SOI_3PS" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VBELN_SOI_3PS"/>
+      </attribute>
+      <attribute id="POSNR_SOI_3PS" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="POSNR_SOI_3PS"/>
+      </attribute>
+      <attribute id="MATNR_SOI_3PS" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="MATNR_SOI_3PS"/>
+      </attribute>
+      <attribute id="ARKTX_SOI_3PS" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARKTX_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="ARKTX_SOI_3PS"/>
+      </attribute>
+      <attribute id="PSTYV_SOI_3PS" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTYV_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="PSTYV_SOI_3PS"/>
+      </attribute>
+      <attribute id="ABGRU_SOI_3PS" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABGRU_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="ABGRU_SOI_3PS"/>
+      </attribute>
+      <attribute id="ZIEME_SOI_3PS" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZIEME_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="ZIEME_SOI_3PS"/>
+      </attribute>
+      <attribute id="MEINS_SOI_3PS" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="MEINS_SOI_3PS"/>
+      </attribute>
+      <attribute id="POSEX_SOI_3PS" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSEX_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="POSEX_SOI_3PS"/>
+      </attribute>
+      <attribute id="FAKSP_SOI_3PS" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAKSP_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="FAKSP_SOI_3PS"/>
+      </attribute>
+      <attribute id="VRKME_SOI_3PS" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VRKME_SOI_3PS"/>
+      </attribute>
+      <attribute id="GEWEI_SOI_3PS" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEWEI_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="GEWEI_SOI_3PS"/>
+      </attribute>
+      <attribute id="WERKS_SOI_3PS" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="WERKS_SOI_3PS"/>
+      </attribute>
+      <attribute id="VSTEL_SOI_3PS" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSTEL_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VSTEL_SOI_3PS"/>
+      </attribute>
+      <attribute id="ERDAT_SOI_3PS" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="ERDAT_SOI_3PS"/>
+      </attribute>
+      <attribute id="KMEIN_SOI_3PS" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMEIN_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="KMEIN_SOI_3PS"/>
+      </attribute>
+      <attribute id="MSR_RET_REASON_SOI_3PS" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSR_RET_REASON_SOI_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="MSR_RET_REASON_SOI_3PS"/>
+      </attribute>
+      <attribute id="VBELN_SalDocSchedLineData_3PS" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document"/>
+        <keyMapping columnObjectName="Union_1" columnName="VBELN_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="POSNR_SalDocSchedLineData_3PS" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Union_1" columnName="POSNR_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="ETENR_SalDocSchedLineData_3PS" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Schedule Line Number"/>
+        <keyMapping columnObjectName="Union_1" columnName="ETENR_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="ETTYP_SalDocSchedLineData_3PS" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Schedule line category"/>
+        <keyMapping columnObjectName="Union_1" columnName="ETTYP_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="LFREL_SalDocSchedLineData_3PS" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item is relevant for delivery"/>
+        <keyMapping columnObjectName="Union_1" columnName="LFREL_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="EDATU_SalDocSchedLineData_3PS" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Schedule line date"/>
+        <keyMapping columnObjectName="Union_1" columnName="EDATU_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="WMENG_SalDocSchedLineData_3PS" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Order Quantity in Sales Units"/>
+        <keyMapping columnObjectName="Union_1" columnName="WMENG_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="BMENG_SalDocSchedLineData_3PS" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Confirmed Quantity"/>
+        <keyMapping columnObjectName="Union_1" columnName="BMENG_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="VRKME_SalDocSchedLineData_3PS" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales unit"/>
+        <keyMapping columnObjectName="Union_1" columnName="VRKME_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="LMENG_SalDocSchedLineData_3PS" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Required quantity for mat.management in stockkeeping units"/>
+        <keyMapping columnObjectName="Union_1" columnName="LMENG_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="MEINS_SalDocSchedLineData_3PS" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Base Unit of Measure"/>
+        <keyMapping columnObjectName="Union_1" columnName="MEINS_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="ETENE_SalDocSchedLineData_3PS" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Schedule line"/>
+        <keyMapping columnObjectName="Union_1" columnName="ETENE_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="MBDAT_SalDocSchedLineData_3PS" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Staging/Availability Date"/>
+        <keyMapping columnObjectName="Union_1" columnName="MBDAT_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="LDDAT_SalDocSchedLineData_3PS" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Loading Date"/>
+        <keyMapping columnObjectName="Union_1" columnName="LDDAT_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="WADAT_SalDocSchedLineData_3PS" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Goods Issue Date"/>
+        <keyMapping columnObjectName="Union_1" columnName="WADAT_SalDocSchedLineData_3PS"/>
+      </attribute>
+      <attribute id="VBELN_BillingItem_3PS" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VBELN_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="POSNR_BillingItem_3PS" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="POSNR_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="VRKME_BillingItem_3PS" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VRKME_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="MEINS_BillingItem_3PS" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="MEINS_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="GEWEI_BillingItem_3PS" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEWEI_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="GEWEI_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="PRSDT_BillingItem_3PS" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRSDT_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="PRSDT_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="AUBEL_BillingItem_3PS" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUBEL_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="AUBEL_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="AUPOS_BillingItem_3PS" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUPOS_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="AUPOS_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="ARKTX_BillingItem_3PS" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARKTX_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="ARKTX_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="WERKS_BillingItem_3PS" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="WERKS_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="ALAND_BillingItem_3PS" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALAND_BillingItem_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="ALAND_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="ERDAT_BillingItem_3PS" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="Union_1" columnName="ERDAT_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="ERZET_BillingItem_3PS" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERZET"/>
+        <keyMapping columnObjectName="Union_1" columnName="ERZET_BillingItem_3PS"/>
+      </attribute>
+      <attribute id="VBELN_BillingHeader_3PS" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Union_1" columnName="VBELN_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="FKART_BillingHeader_3PS" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="FKART_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="FKTYP_BillingHeader_3PS" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKTYP_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="FKTYP_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="VBTYP_BillingHeader_3PS" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBTYP_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VBTYP_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="WAERK_BillingHeader_3PS" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="WAERK_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="VKORG_BillingHeader_3PS" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VKORG_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="FKDAT_BillingHeader_3PS" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="FKDAT_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="ZTERM_BillingHeader_3PS" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="ZTERM_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="FKDAT_RL_BillingHeader_3PS" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_RL_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="FKDAT_RL_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="KUNRG_BillingHeader_3PS" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNRG_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="KUNRG_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="KUNAG_BillingHeader_3PS" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNAG_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="KUNAG_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="KUNWE_BillingHeader_3PS" order="180" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNWE_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="KUNWE_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="FKART_RL_BillingHeader_3PS" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART_RL_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="FKART_RL_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="FKSTO_BillingHeader_3PS" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKSTO_BillingHeader_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="FKSTO_BillingHeader_3PS"/>
+      </attribute>
+      <attribute id="AWREF_CustomerInvAccDoc_3PS" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reference document number"/>
+        <keyMapping columnObjectName="Union_1" columnName="AWREF_CustomerInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="BLART_CustomerInvAccDoc_3PS" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document type"/>
+        <keyMapping columnObjectName="Union_1" columnName="BLART_CustomerInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="BSCHL_CustomerInvAccDoc_3PS" order="185" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Posting Key"/>
+        <keyMapping columnObjectName="Union_1" columnName="BSCHL_CustomerInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="LIFNR_CustomerInvAccDoc_3PS" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="Union_1" columnName="LIFNR_CustomerInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="PAOBJNR_CustomerInvAccDoc_3PS" order="187" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Profitability Segment Number (CO-PA)"/>
+        <keyMapping columnObjectName="Union_1" columnName="PAOBJNR_CustomerInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="PAPH1_PA_CustomerInvAccDoc_3PS" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Prod.hierarchy01-1"/>
+        <keyMapping columnObjectName="Union_1" columnName="PAPH1_PA_CustomerInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="PAPH2_PA_CustomerInvAccDoc_3PS" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Prod.hierarchy01-2"/>
+        <keyMapping columnObjectName="Union_1" columnName="PAPH2_PA_CustomerInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="PAPH3_PA_CustomerInvAccDoc_3PS" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Prod.hierarchy01-3"/>
+        <keyMapping columnObjectName="Union_1" columnName="PAPH3_PA_CustomerInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="WWCST_PA_CustomerInvAccDoc_3PS" order="191" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Ship-to"/>
+        <keyMapping columnObjectName="Union_1" columnName="WWCST_PA_CustomerInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="KMKDGR_PA_CustomerInvAccDoc_3PS" order="192" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group"/>
+        <keyMapping columnObjectName="Union_1" columnName="KMKDGR_PA_CustomerInvAccDoc_3PS"/>
+      </attribute>
+      <attribute id="LZONE_SalDocPartnerSoldTo_3PS" order="193" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE_SalDocPartnerSoldTo_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="LZONE_SalDocPartnerSoldTo_3PS"/>
+      </attribute>
+      <attribute id="KUNNR_SalDocPartnerSoldTo_3PS" order="194" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_SalDocPartnerSoldTo_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="KUNNR_SalDocPartnerSoldTo_3PS"/>
+      </attribute>
+      <attribute id="PARVW_SalDocPartnerSoldTo_3PS" order="195" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW_SalDocPartnerSoldTo_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="PARVW_SalDocPartnerSoldTo_3PS"/>
+      </attribute>
+      <attribute id="POSNR_SalDocPartnerSoldTo_3PS" order="196" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR_SalDocPartnerSoldTo_3PS"/>
+        <keyMapping columnObjectName="Union_1" columnName="POSNR_SalDocPartnerSoldTo_3PS"/>
+      </attribute>
+      <attribute id="KUNWE_VendorInvAccDoc_NPOS" order="197" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNWE_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="KUNWE_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="PRCTR_VendorInvAccDoc_NPOS" order="198" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="PRCTR_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="MATNR_COPA_VendorInvAccDoc_NPOS" order="199" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="SPART_VendorInvAccDoc_NPOS" order="200" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="SPART_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="VTWEG_VendorInvAccDoc_NPOS" order="201" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VTWEG_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="VKORG_VendorInvAccDoc_NPOS" order="202" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="VKORG_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="WERKS_VendorInvAccDoc_NPOS" order="203" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="WERKS_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="KUNNR_VendorInvAccDoc_NPOS" order="204" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="KUNNR_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="AWITEM_VendorInvAccDoc_NPOS" order="205" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWITEM_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="AWITEM_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="BELNR_VendorInvAccDoc_NPOS" order="206" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="BELNR_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="LIFSK_SOH_NPOS" order="207" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFSK_SOH_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="LIFSK_SOH_NPOS"/>
+      </attribute>
+      <attribute id="AUGRU_SOH_NPOS" order="208" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGRU_SOH_NPOS"/>
+        <keyMapping columnObjectName="Union_1" columnName="AUGRU_SOH_NPOS"/>
+      </attribute>
+      <attribute id="SCENARIO" order="209" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCENARIO"/>
+        <keyMapping columnObjectName="Union_1" columnName="VCAL_SCENARIO"/>
+      </attribute>
+      <attribute id="EKORG_POHeader_3PS" order="210" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing organization"/>
+        <keyMapping columnObjectName="Union_1" columnName="EKORG_POHeader_3PS"/>
+      </attribute>
+      <attribute id="BUKRS" order="211" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Union_1" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="RCLNT" order="212" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Union_1" columnName="RCLNT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="NETPR_POItem_3PS" order="1" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Net Price in Purchasing Document (in Document Currency)"/>
+        <measureMapping columnObjectName="Union_1" columnName="NETPR_POItem_3PS"/>
+      </measure>
+      <measure id="MENGE_POItem_3PS" order="2" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Purchase Order Quantity"/>
+        <measureMapping columnObjectName="Union_1" columnName="MENGE_POItem_3PS"/>
+      </measure>
+      <measure id="NETWR_SOH_3PS" order="3" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR_SOH_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="NETWR_SOH_3PS"/>
+      </measure>
+      <measure id="ZMENG_SOI_3PS" order="4" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZMENG_SOI_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="ZMENG_SOI_3PS"/>
+      </measure>
+      <measure id="NETWR_SOI_3PS" order="5" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR_SOI_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="NETWR_SOI_3PS"/>
+      </measure>
+      <measure id="KWMENG_SOI_3PS" order="6" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KWMENG_SOI_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="KWMENG_SOI_3PS"/>
+      </measure>
+      <measure id="BRGEW_SOI_3PS" order="7" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BRGEW_SOI_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="BRGEW_SOI_3PS"/>
+      </measure>
+      <measure id="NTGEW_SOI_3PS" order="8" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NTGEW_SOI_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="NTGEW_SOI_3PS"/>
+      </measure>
+      <measure id="VOLUM_SOI_3PS" order="9" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VOLUM_SOI_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="VOLUM_SOI_3PS"/>
+      </measure>
+      <measure id="NETPR_SOI_3PS" order="10" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETPR_SOI_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="NETPR_SOI_3PS"/>
+      </measure>
+      <measure id="KPEIN_SOI_3PS" order="11" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KPEIN_SOI_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="KPEIN_SOI_3PS"/>
+      </measure>
+      <measure id="NETWR_POItem_3PS" order="69" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Net Order Value in PO Currency"/>
+        <measureMapping columnObjectName="Union_1" columnName="NETWR_POItem_3PS"/>
+      </measure>
+      <measure id="FKIMG_BillingItem_3PS" order="155" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FKIMG_BillingItem_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="FKIMG_BillingItem_3PS"/>
+      </measure>
+      <measure id="NTGEW_BillingItem_3PS" order="158" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NTGEW_BillingItem_3PS"/>
+        <measureMapping columnObjectName="Union_1" columnName="NTGEW_BillingItem_3PS"/>
+      </measure>
+      <measure id="NETWR_BillingItem_3PS" order="161" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR"/>
+        <measureMapping columnObjectName="Union_1" columnName="NETWR_BillingItem_3PS"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="ThirdParty" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="281"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="NonPOBack" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="281"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

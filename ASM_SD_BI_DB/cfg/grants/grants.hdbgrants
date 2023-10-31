@@ -1,0 +1,15 @@
+{
+	"ups_external_schema-grantor": {
+		"object_owner": { 
+			"global_roles": [
+				"Z_BR_XSA_SELECT_ON_SAPABAP1"
+			]
+		},
+		"application_user": { 
+			"global_roles": [
+				"Z_BR_XSA_SELECT_ON_SAPABAP1"
+			]
+		}
+	}
+}
+ 

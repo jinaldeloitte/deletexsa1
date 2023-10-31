@@ -1,0 +1,41 @@
+ID: ASM_SD_BI_REPORTS
+_schema-version: '2.1'
+description: XSA - Solution Mart CO Controlling Reports
+version: 0.0.1
+
+modules:
+ - name: ASM_SD_BI_REPORTS
+   type: hdb
+   path: ASM_SD_BI_DB
+   requires:
+    - name: hdi_ASM_SD_BI_REPORTS
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+
+
+
+    - name: cross-container-service-1
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_1
+        service: ~{the-service-name}
+                          
+
+
+resources:
+ - name: hdi_ASM_SD_BI_REPORTS
+   parameters:
+      config:
+         schema: ASM_SD_BI_REPORTS
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: cross-container-service-1
+   parameters:
+      service-name: ups_external_schema-grantor
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+

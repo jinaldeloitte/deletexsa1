@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_INOB" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DEFAULT" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_INOB"/>
+  <metadata changedAt="2021-12-06 18:12:17.218"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_INOB">
+      <resourceUri>syn_tbl_INOB</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_INOB">
+    <descriptions defaultDescription="CV_TD_INOB"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="MANDT"/>
+      </attribute>
+      <attribute id="CUOBJ" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUOBJ"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="CUOBJ"/>
+      </attribute>
+      <attribute id="KLART" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KLART"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="KLART"/>
+      </attribute>
+      <attribute id="OBTAB" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBTAB"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="OBTAB"/>
+      </attribute>
+      <attribute id="OBJEK" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBJEK"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="OBJEK"/>
+      </attribute>
+      <attribute id="ROBTAB" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROBTAB"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="ROBTAB"/>
+      </attribute>
+      <attribute id="ROBJEK" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROBJEK"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="ROBJEK"/>
+      </attribute>
+      <attribute id="CLINT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLINT"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="CLINT"/>
+      </attribute>
+      <attribute id="STATU" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATU"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="STATU"/>
+      </attribute>
+      <attribute id="CUCOZHL" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUCOZHL"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="CUCOZHL"/>
+      </attribute>
+      <attribute id="PARENT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARENT"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="PARENT"/>
+      </attribute>
+      <attribute id="ROOT" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROOT"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="ROOT"/>
+      </attribute>
+      <attribute id="EXPERTE" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXPERTE"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="EXPERTE"/>
+      </attribute>
+      <attribute id="MATNR" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="MATNR"/>
+      </attribute>
+      <attribute id="DATUV" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATUV"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="DATUV"/>
+      </attribute>
+      <attribute id="TECHS" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TECHS"/>
+        <keyMapping columnObjectName="syn_tbl_INOB" columnName="TECHS"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/></shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

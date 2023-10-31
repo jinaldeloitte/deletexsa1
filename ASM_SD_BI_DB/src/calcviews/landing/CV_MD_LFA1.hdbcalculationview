@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_LFA1" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Vendor/Supplier Name"/>
+  <metadata changedAt="2022-01-11 18:11:55.152"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_LFA1">
+      <resourceUri>syn_tbl_LFA1</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_LFA1">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="LIFNR" order="2" attributeHierarchyActive="false" descriptionColumnName="NAME1" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="LAND1" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAND1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LAND1"/>
+      </attribute>
+      <attribute id="NAME1" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="NAME1"/>
+      </attribute>
+      <attribute id="NAME2" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME2"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="NAME2"/>
+      </attribute>
+      <attribute id="NAME3" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME3"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="NAME3"/>
+      </attribute>
+      <attribute id="NAME4" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME4"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="NAME4"/>
+      </attribute>
+      <attribute id="ORT01" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ORT01"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ORT01"/>
+      </attribute>
+      <attribute id="PSTLZ" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTLZ"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSTLZ"/>
+      </attribute>
+      <attribute id="ANRED" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANRED"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ANRED"/>
+      </attribute>
+      <attribute id="LIFNR_1" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR_1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="LAND1_1" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAND1_1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LAND1"/>
+      </attribute>
+      <attribute id="NAME1_1" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1_1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="NAME1"/>
+      </attribute>
+      <attribute id="NAME2_1" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME2_1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="NAME2"/>
+      </attribute>
+      <attribute id="NAME3_1" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME3_1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="NAME3"/>
+      </attribute>
+      <attribute id="NAME4_1" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME4_1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="NAME4"/>
+      </attribute>
+      <attribute id="ORT01_1" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ORT01_1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ORT01"/>
+      </attribute>
+      <attribute id="ORT02" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ORT02"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ORT02"/>
+      </attribute>
+      <attribute id="PFACH" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PFACH"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PFACH"/>
+      </attribute>
+      <attribute id="PSTL2" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTL2"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSTL2"/>
+      </attribute>
+      <attribute id="PSTLZ_1" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTLZ_1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSTLZ"/>
+      </attribute>
+      <attribute id="REGIO" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REGIO"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="REGIO"/>
+      </attribute>
+      <attribute id="SORTL" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SORTL"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SORTL"/>
+      </attribute>
+      <attribute id="STRAS" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STRAS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STRAS"/>
+      </attribute>
+      <attribute id="ADRNR" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRNR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ADRNR"/>
+      </attribute>
+      <attribute id="MCOD1" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCOD1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="MCOD1"/>
+      </attribute>
+      <attribute id="MCOD2" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCOD2"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="MCOD2"/>
+      </attribute>
+      <attribute id="MCOD3" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCOD3"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="MCOD3"/>
+      </attribute>
+      <attribute id="ANRED_1" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANRED_1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ANRED"/>
+      </attribute>
+      <attribute id="BAHNS" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BAHNS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="BAHNS"/>
+      </attribute>
+      <attribute id="BBBNR" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BBBNR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="BBBNR"/>
+      </attribute>
+      <attribute id="BBSNR" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BBSNR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="BBSNR"/>
+      </attribute>
+      <attribute id="BEGRU" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEGRU"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="BEGRU"/>
+      </attribute>
+      <attribute id="BRSCH" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BRSCH"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="BRSCH"/>
+      </attribute>
+      <attribute id="BUBKZ" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUBKZ"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="BUBKZ"/>
+      </attribute>
+      <attribute id="DATLT" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATLT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="DATLT"/>
+      </attribute>
+      <attribute id="DTAMS" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTAMS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="DTAMS"/>
+      </attribute>
+      <attribute id="DTAWS" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTAWS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="DTAWS"/>
+      </attribute>
+      <attribute id="ERDAT" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERNAM" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="ESRNR" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ESRNR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ESRNR"/>
+      </attribute>
+      <attribute id="KONZS" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONZS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="KONZS"/>
+      </attribute>
+      <attribute id="KTOKK" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOKK"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="KTOKK"/>
+      </attribute>
+      <attribute id="KUNNR" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="LNRZA" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LNRZA"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LNRZA"/>
+      </attribute>
+      <attribute id="LOEVM" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOEVM"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LOEVM"/>
+      </attribute>
+      <attribute id="SPERR" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SPERR"/>
+      </attribute>
+      <attribute id="SPERM" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERM"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SPERM"/>
+      </attribute>
+      <attribute id="SPRAS" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPRAS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="STCD1" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCD1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STCD1"/>
+      </attribute>
+      <attribute id="STCD2" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCD2"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STCD2"/>
+      </attribute>
+      <attribute id="STKZA" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STKZA"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STKZA"/>
+      </attribute>
+      <attribute id="STKZU" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STKZU"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STKZU"/>
+      </attribute>
+      <attribute id="TELBX" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELBX"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TELBX"/>
+      </attribute>
+      <attribute id="TELF1" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELF1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TELF1"/>
+      </attribute>
+      <attribute id="TELF2" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELF2"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TELF2"/>
+      </attribute>
+      <attribute id="TELFX" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELFX"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TELFX"/>
+      </attribute>
+      <attribute id="TELTX" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELTX"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TELTX"/>
+      </attribute>
+      <attribute id="TELX1" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELX1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TELX1"/>
+      </attribute>
+      <attribute id="XCPDK" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCPDK"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="XCPDK"/>
+      </attribute>
+      <attribute id="XZEMP" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XZEMP"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="XZEMP"/>
+      </attribute>
+      <attribute id="VBUND" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBUND"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="VBUND"/>
+      </attribute>
+      <attribute id="FISKN" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISKN"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="FISKN"/>
+      </attribute>
+      <attribute id="STCEG" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STCEG"/>
+      </attribute>
+      <attribute id="STKZN" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STKZN"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STKZN"/>
+      </attribute>
+      <attribute id="SPERQ" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERQ"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SPERQ"/>
+      </attribute>
+      <attribute id="GBORT" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GBORT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="GBORT"/>
+      </attribute>
+      <attribute id="GBDAT" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GBDAT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="GBDAT"/>
+      </attribute>
+      <attribute id="SEXKZ" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SEXKZ"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SEXKZ"/>
+      </attribute>
+      <attribute id="KRAUS" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KRAUS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="KRAUS"/>
+      </attribute>
+      <attribute id="REVDB" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REVDB"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="REVDB"/>
+      </attribute>
+      <attribute id="QSSYS" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QSSYS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="QSSYS"/>
+      </attribute>
+      <attribute id="KTOCK" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOCK"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="KTOCK"/>
+      </attribute>
+      <attribute id="PFORT" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PFORT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PFORT"/>
+      </attribute>
+      <attribute id="WERKS" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="WERKS"/>
+      </attribute>
+      <attribute id="LTSNA" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LTSNA"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LTSNA"/>
+      </attribute>
+      <attribute id="WERKR" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="WERKR"/>
+      </attribute>
+      <attribute id="PLKAL" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLKAL"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PLKAL"/>
+      </attribute>
+      <attribute id="DUEFL" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUEFL"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="DUEFL"/>
+      </attribute>
+      <attribute id="TXJCD" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXJCD"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TXJCD"/>
+      </attribute>
+      <attribute id="SPERZ" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERZ"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SPERZ"/>
+      </attribute>
+      <attribute id="SCACD" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCACD"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SCACD"/>
+      </attribute>
+      <attribute id="SFRGR" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SFRGR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SFRGR"/>
+      </attribute>
+      <attribute id="LZONE" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LZONE"/>
+      </attribute>
+      <attribute id="XLFZA" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XLFZA"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="XLFZA"/>
+      </attribute>
+      <attribute id="DLGRP" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DLGRP"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="DLGRP"/>
+      </attribute>
+      <attribute id="FITYP" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FITYP"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="FITYP"/>
+      </attribute>
+      <attribute id="STCDT" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCDT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STCDT"/>
+      </attribute>
+      <attribute id="REGSS" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REGSS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="REGSS"/>
+      </attribute>
+      <attribute id="ACTSS" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACTSS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ACTSS"/>
+      </attribute>
+      <attribute id="STCD3" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCD3"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STCD3"/>
+      </attribute>
+      <attribute id="STCD4" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCD4"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STCD4"/>
+      </attribute>
+      <attribute id="STCD5" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCD5"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STCD5"/>
+      </attribute>
+      <attribute id="IPISP" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IPISP"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="IPISP"/>
+      </attribute>
+      <attribute id="TAXBS" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXBS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TAXBS"/>
+      </attribute>
+      <attribute id="PROFS" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROFS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PROFS"/>
+      </attribute>
+      <attribute id="STGDL" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STGDL"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STGDL"/>
+      </attribute>
+      <attribute id="EMNFR" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMNFR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="EMNFR"/>
+      </attribute>
+      <attribute id="LFURL" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFURL"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LFURL"/>
+      </attribute>
+      <attribute id="J_1KFREPRE" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1KFREPRE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1KFREPRE"/>
+      </attribute>
+      <attribute id="J_1KFTBUS" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1KFTBUS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1KFTBUS"/>
+      </attribute>
+      <attribute id="J_1KFTIND" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1KFTIND"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1KFTIND"/>
+      </attribute>
+      <attribute id="CONFS" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONFS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="CONFS"/>
+      </attribute>
+      <attribute id="UPDAT" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPDAT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="UPDAT"/>
+      </attribute>
+      <attribute id="UPTIM" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPTIM"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="UPTIM"/>
+      </attribute>
+      <attribute id="NODEL" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NODEL"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="NODEL"/>
+      </attribute>
+      <attribute id="QSSYSDAT" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QSSYSDAT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="QSSYSDAT"/>
+      </attribute>
+      <attribute id="PODKZB" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PODKZB"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PODKZB"/>
+      </attribute>
+      <attribute id="FISKU" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISKU"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="FISKU"/>
+      </attribute>
+      <attribute id="STENR" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STENR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STENR"/>
+      </attribute>
+      <attribute id="CARRIER_CONF" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CARRIER_CONF"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="CARRIER_CONF"/>
+      </attribute>
+      <attribute id="MIN_COMP" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MIN_COMP"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="MIN_COMP"/>
+      </attribute>
+      <attribute id="TERM_LI" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TERM_LI"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TERM_LI"/>
+      </attribute>
+      <attribute id="CRC_NUM" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CRC_NUM"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="CRC_NUM"/>
+      </attribute>
+      <attribute id="CVP_XBLCK" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CVP_XBLCK"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="CVP_XBLCK"/>
+      </attribute>
+      <attribute id="RG" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RG"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="RG"/>
+      </attribute>
+      <attribute id="EXP" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXP"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="EXP"/>
+      </attribute>
+      <attribute id="UF" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UF"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="UF"/>
+      </attribute>
+      <attribute id="RGDATE" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RGDATE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="RGDATE"/>
+      </attribute>
+      <attribute id="RIC" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RIC"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="RIC"/>
+      </attribute>
+      <attribute id="RNE" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RNE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="RNE"/>
+      </attribute>
+      <attribute id="RNEDATE" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RNEDATE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="RNEDATE"/>
+      </attribute>
+      <attribute id="CNAE" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CNAE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="CNAE"/>
+      </attribute>
+      <attribute id="LEGALNAT" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEGALNAT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LEGALNAT"/>
+      </attribute>
+      <attribute id="CRTN" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CRTN"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="CRTN"/>
+      </attribute>
+      <attribute id="ICMSTAXPAY" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ICMSTAXPAY"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ICMSTAXPAY"/>
+      </attribute>
+      <attribute id="INDTYP" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INDTYP"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="INDTYP"/>
+      </attribute>
+      <attribute id="TDT" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TDT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TDT"/>
+      </attribute>
+      <attribute id="COMSIZE" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COMSIZE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="COMSIZE"/>
+      </attribute>
+      <attribute id="DECREGPC" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DECREGPC"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="DECREGPC"/>
+      </attribute>
+      <attribute id="LFA1_EEW_SUPP" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFA1_EEW_SUPP"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="LFA1_EEW_SUPP"/>
+      </attribute>
+      <attribute id="J_SC_CAPITAL" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_SC_CAPITAL"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_SC_CAPITAL"/>
+      </attribute>
+      <attribute id="J_SC_CURRENCY" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_SC_CURRENCY"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_SC_CURRENCY"/>
+      </attribute>
+      <attribute id="ALC" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALC"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ALC"/>
+      </attribute>
+      <attribute id="PMT_OFFICE" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PMT_OFFICE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PMT_OFFICE"/>
+      </attribute>
+      <attribute id="PPA_RELEVANT" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPA_RELEVANT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PPA_RELEVANT"/>
+      </attribute>
+      <attribute id="PSOFG" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSOFG"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSOFG"/>
+      </attribute>
+      <attribute id="PSOIS" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSOIS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSOIS"/>
+      </attribute>
+      <attribute id="PSON1" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSON1"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSON1"/>
+      </attribute>
+      <attribute id="PSON2" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSON2"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSON2"/>
+      </attribute>
+      <attribute id="PSON3" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSON3"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSON3"/>
+      </attribute>
+      <attribute id="PSOVN" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSOVN"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSOVN"/>
+      </attribute>
+      <attribute id="PSOTL" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSOTL"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSOTL"/>
+      </attribute>
+      <attribute id="PSOHS" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSOHS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSOHS"/>
+      </attribute>
+      <attribute id="PSOST" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSOST"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PSOST"/>
+      </attribute>
+      <attribute id="BORGR_DATUN" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BORGR_DATUN"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="BORGR_DATUN"/>
+      </attribute>
+      <attribute id="BORGR_YEAUN" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BORGR_YEAUN"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="BORGR_YEAUN"/>
+      </attribute>
+      <attribute id="ADDR2_STREET" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDR2_STREET"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ADDR2_STREET"/>
+      </attribute>
+      <attribute id="ADDR2_HOUSE_NUM" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDR2_HOUSE_NUM"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ADDR2_HOUSE_NUM"/>
+      </attribute>
+      <attribute id="ADDR2_POST" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDR2_POST"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ADDR2_POST"/>
+      </attribute>
+      <attribute id="ADDR2_CITY" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDR2_CITY"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ADDR2_CITY"/>
+      </attribute>
+      <attribute id="ADDR2_COUNTRY" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDR2_COUNTRY"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ADDR2_COUNTRY"/>
+      </attribute>
+      <attribute id="CATEG" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CATEG"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="CATEG"/>
+      </attribute>
+      <attribute id="PARTNER_NAME" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER_NAME"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PARTNER_NAME"/>
+      </attribute>
+      <attribute id="PARTNER_UTR" order="155" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER_UTR"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="PARTNER_UTR"/>
+      </attribute>
+      <attribute id="STATUS" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATUS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STATUS"/>
+      </attribute>
+      <attribute id="VFNUM" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VFNUM"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="VFNUM"/>
+      </attribute>
+      <attribute id="VFNID" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VFNID"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="VFNID"/>
+      </attribute>
+      <attribute id="CRN" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CRN"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="CRN"/>
+      </attribute>
+      <attribute id="J_1IEXCD" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IEXCD"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IEXCD"/>
+      </attribute>
+      <attribute id="J_1IEXRN" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IEXRN"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IEXRN"/>
+      </attribute>
+      <attribute id="J_1IEXRG" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IEXRG"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IEXRG"/>
+      </attribute>
+      <attribute id="J_1IEXDI" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IEXDI"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IEXDI"/>
+      </attribute>
+      <attribute id="J_1IEXCO" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IEXCO"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IEXCO"/>
+      </attribute>
+      <attribute id="J_1ICSTNO" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1ICSTNO"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1ICSTNO"/>
+      </attribute>
+      <attribute id="J_1ILSTNO" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1ILSTNO"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1ILSTNO"/>
+      </attribute>
+      <attribute id="J_1IPANNO" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IPANNO"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IPANNO"/>
+      </attribute>
+      <attribute id="J_1IEXCIVE" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IEXCIVE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IEXCIVE"/>
+      </attribute>
+      <attribute id="J_1ISSIST" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1ISSIST"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1ISSIST"/>
+      </attribute>
+      <attribute id="J_1IVTYP" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IVTYP"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IVTYP"/>
+      </attribute>
+      <attribute id="J_1IVENCRE" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IVENCRE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IVENCRE"/>
+      </attribute>
+      <attribute id="AEDAT" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AEDAT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="USNAM" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USNAM"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="USNAM"/>
+      </attribute>
+      <attribute id="J_1ISERN" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1ISERN"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1ISERN"/>
+      </attribute>
+      <attribute id="J_1IPANREF" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IPANREF"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IPANREF"/>
+      </attribute>
+      <attribute id="J_1IPANVALDT" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IPANVALDT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IPANVALDT"/>
+      </attribute>
+      <attribute id="J_1I_CUSTOMS" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1I_CUSTOMS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1I_CUSTOMS"/>
+      </attribute>
+      <attribute id="J_1IDEDREF" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1IDEDREF"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="J_1IDEDREF"/>
+      </attribute>
+      <attribute id="TRANSPORT_CHAIN" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRANSPORT_CHAIN"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="TRANSPORT_CHAIN"/>
+      </attribute>
+      <attribute id="STAGING_TIME" order="180" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STAGING_TIME"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="STAGING_TIME"/>
+      </attribute>
+      <attribute id="SCHEDULING_TYPE" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCHEDULING_TYPE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SCHEDULING_TYPE"/>
+      </attribute>
+      <attribute id="SUBMI_RELEVANT" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SUBMI_RELEVANT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="SUBMI_RELEVANT"/>
+      </attribute>
+      <attribute id="VEN_CLASS" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VEN_CLASS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="VEN_CLASS"/>
+      </attribute>
+      <attribute id="ENTPUB" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ENTPUB"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ENTPUB"/>
+      </attribute>
+      <attribute id="ESCRIT" order="185" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ESCRIT"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="ESCRIT"/>
+      </attribute>
+      <attribute id="DVALSS" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DVALSS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="DVALSS"/>
+      </attribute>
+      <attribute id="FRMCSS" order="187" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRMCSS"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="FRMCSS"/>
+      </attribute>
+      <attribute id="CODCAE" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CODCAE"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="CODCAE"/>
+      </attribute>
+      <attribute id="AUSDIV" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUSDIV"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="AUSDIV"/>
+      </attribute>
+      <attribute id="WEORA" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEORA"/>
+        <keyMapping columnObjectName="syn_tbl_LFA1" columnName="WEORA"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_VEDA" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_VEDA"/>
+  <metadata changedAt="2021-12-06 18:14:10.398" createdAt="2020-05-05 21:36:31.126"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_VEDA">
+      <resourceUri>syn_tbl_VEDA</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="P_VEDA">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VPOSN"/>
+        <viewAttribute id="VLAUFZ"/>
+        <viewAttribute id="VLAUEZ"/>
+        <viewAttribute id="VLAUFK"/>
+        <viewAttribute id="VINSDAT"/>
+        <viewAttribute id="VABNDAT"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VUNTDAT"/>
+        <viewAttribute id="VKUESCH"/>
+        <viewAttribute id="VAKTSCH"/>
+        <viewAttribute id="VEINDAT"/>
+        <viewAttribute id="VWUNDAT"/>
+        <viewAttribute id="VKUEPAR"/>
+        <viewAttribute id="VKUEGRU"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="VBELKUE"/>
+        <viewAttribute id="VBEDKUE"/>
+        <viewAttribute id="VBEGREG"/>
+        <viewAttribute id="VVORZEIT"/>
+        <viewAttribute id="VVOREIN"/>
+        <viewAttribute id="VDEMDAT"/>
+        <viewAttribute id="VASDA"/>
+        <viewAttribute id="WIMID"/>
+        <viewAttribute id="VASDR"/>
+        <viewAttribute id="VENDREG"/>
+        <viewAttribute id="_DATAAGING"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="syn_tbl_VEDA"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="P_VEDA">
+    <descriptions defaultDescription="CV_TD_VEDA"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VBELN"/>
+      </attribute>
+      <attribute id="VPOSN" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPOSN"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VPOSN"/>
+      </attribute>
+      <attribute id="VLAUFZ" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VLAUFZ"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VLAUFZ"/>
+      </attribute>
+      <attribute id="VLAUEZ" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VLAUEZ"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VLAUEZ"/>
+      </attribute>
+      <attribute id="VLAUFK" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VLAUFK"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VLAUFK"/>
+      </attribute>
+      <attribute id="VINSDAT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VINSDAT"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VINSDAT"/>
+      </attribute>
+      <attribute id="VABNDAT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VABNDAT"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VABNDAT"/>
+      </attribute>
+      <attribute id="VBEGDAT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBEGDAT"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VBEGDAT"/>
+      </attribute>
+      <attribute id="VUNTDAT" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VUNTDAT"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VUNTDAT"/>
+      </attribute>
+      <attribute id="VKUESCH" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKUESCH"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VKUESCH"/>
+      </attribute>
+      <attribute id="VAKTSCH" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VAKTSCH"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VAKTSCH"/>
+      </attribute>
+      <attribute id="VEINDAT" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VEINDAT"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VEINDAT"/>
+      </attribute>
+      <attribute id="VWUNDAT" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VWUNDAT"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VWUNDAT"/>
+      </attribute>
+      <attribute id="VKUEPAR" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKUEPAR"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VKUEPAR"/>
+      </attribute>
+      <attribute id="VKUEGRU" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKUEGRU"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VKUEGRU"/>
+      </attribute>
+      <attribute id="VENDDAT" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VENDDAT"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VENDDAT"/>
+      </attribute>
+      <attribute id="VBELKUE" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELKUE"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VBELKUE"/>
+      </attribute>
+      <attribute id="VBEDKUE" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBEDKUE"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VBEDKUE"/>
+      </attribute>
+      <attribute id="VBEGREG" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBEGREG"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VBEGREG"/>
+      </attribute>
+      <attribute id="VVORZEIT" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VVORZEIT"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VVORZEIT"/>
+      </attribute>
+      <attribute id="VVOREIN" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VVOREIN"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VVOREIN"/>
+      </attribute>
+      <attribute id="VDEMDAT" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VDEMDAT"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VDEMDAT"/>
+      </attribute>
+      <attribute id="VASDA" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VASDA"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VASDA"/>
+      </attribute>
+      <attribute id="WIMID" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WIMID"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="WIMID"/>
+      </attribute>
+      <attribute id="VASDR" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VASDR"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VASDR"/>
+      </attribute>
+      <attribute id="VENDREG" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VENDREG"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="VENDREG"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="P_VEDA" columnName="_DATAAGING"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="22" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_VEDA" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

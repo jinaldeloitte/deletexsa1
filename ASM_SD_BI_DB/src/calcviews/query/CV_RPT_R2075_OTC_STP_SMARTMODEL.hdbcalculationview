@@ -1,0 +1,1270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" defaultLanguage="$$language$$" defaultClient="$$client$$" hierarchiesSQLEnabled="false" executionSemantic="UNDEFINED" dataCategory="CUBE" id="HANA_CONTENT.REPORTING_MODELS.CROSS_FUNCTIONAL.SD::CV_RPT_R2075_OTC_STP_SMARTMODEL" xscCompatibilityMode="true" applyPrivilegeType="NONE" enforceSqlExecution="false">
+<origin></origin>
+  <descriptions defaultDescription="Third Party with PO Back Smart Data Model"></descriptions>
+  <metadata changedAt="2021-12-06 19:30:35.974"></metadata>
+  <localVariables>
+    <variable id="Created_Date_Range">
+      <descriptions defaultDescription="Created_Date_Range"></descriptions>
+      <variableProperties datatype="VARCHAR" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_DIM_FISCALCALENDAR</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>DATE_SQL</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="Interval"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Sales_Organization_data">
+      <descriptions defaultDescription="Sales_Organization_data"></descriptions>
+      <variableProperties datatype="NVARCHAR" length="4" scale="null" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_MD_TVKO</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>VKORG</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="Range"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Sales_Document">
+      <descriptions defaultDescription="Sales_Document"></descriptions>
+      <variableProperties datatype="NVARCHAR" length="10" scale="null" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_TD_VBAK</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>VBELN</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="Range"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Sold_To_Party">
+      <descriptions defaultDescription="Sold_To_Party"></descriptions>
+      <variableProperties datatype="NVARCHAR" length="10" scale="null" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_MD_KNA1</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>KUNNR</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="Range"></selection>
+      </variableProperties>
+    </variable>
+    <variable parameter="true" id="SCENARIO_SELECTION_TYPE">
+      <descriptions defaultDescription="Scenario"></descriptions>
+      <variableProperties datatype="NVARCHAR" defaultValue="All" length="20" mandatory="false">
+        <valueDomain type="StaticList">
+          <listEntry id="Third Party Scenario">
+            <descriptions defaultDescription="Scenario 1"></descriptions>
+          </listEntry>
+          <listEntry id="Non PO Back Scenario">
+            <descriptions defaultDescription="Scenario 2"></descriptions>
+          </listEntry>
+          <listEntry id="All">
+            <descriptions defaultDescription="All Scenarios"></descriptions>
+          </listEntry>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"></selection>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings></variableMappings>
+  <informationModelLayout relativeWidthScenario="20"></informationModelLayout>
+  <dataSources>
+    <DataSource id="CV_FCT_OTC_STP_UNION">
+      <resourceUri>CV_FCT_OTC_STP_UNION</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <descriptions></descriptions>
+    <viewAttributes>
+        <viewAttribute id="WADAT_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="LDDAT_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="MBDAT_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="ETENE_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="MEINS_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="LMENG_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="VRKME_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="BMENG_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="WMENG_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="EDATU_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="LFREL_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="ETTYP_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="ETENR_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="POSNR_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="VBELN_SalDocSchedLineData_3PS"></viewAttribute>
+        <viewAttribute id="MSR_RET_REASON_SOI_3PS"></viewAttribute>
+        <viewAttribute id="KMEIN_SOI_3PS"></viewAttribute>
+        <viewAttribute id="ERDAT_SOI_3PS"></viewAttribute>
+        <viewAttribute id="VSTEL_SOI_3PS"></viewAttribute>
+        <viewAttribute id="WERKS_SOI_3PS"></viewAttribute>
+        <viewAttribute id="GEWEI_SOI_3PS"></viewAttribute>
+        <viewAttribute id="VRKME_SOI_3PS"></viewAttribute>
+        <viewAttribute id="FAKSP_SOI_3PS"></viewAttribute>
+        <viewAttribute id="POSEX_SOI_3PS"></viewAttribute>
+        <viewAttribute id="MEINS_SOI_3PS"></viewAttribute>
+        <viewAttribute id="ZIEME_SOI_3PS"></viewAttribute>
+        <viewAttribute id="ABGRU_SOI_3PS"></viewAttribute>
+        <viewAttribute id="PSTYV_SOI_3PS"></viewAttribute>
+        <viewAttribute id="ARKTX_SOI_3PS"></viewAttribute>
+        <viewAttribute id="MATNR_SOI_3PS"></viewAttribute>
+        <viewAttribute id="POSNR_SOI_3PS"></viewAttribute>
+        <viewAttribute id="VBELN_SOI_3PS"></viewAttribute>
+        <viewAttribute id="KUNNR_SOH_3PS"></viewAttribute>
+        <viewAttribute id="BSTNK_SOH_3PS"></viewAttribute>
+        <viewAttribute id="VDATU_SOH_3PS"></viewAttribute>
+        <viewAttribute id="GUEEN_SOH_3PS"></viewAttribute>
+        <viewAttribute id="GUEBG_SOH_3PS"></viewAttribute>
+        <viewAttribute id="VKORG_SOH_3PS"></viewAttribute>
+        <viewAttribute id="VBTYP_SOH_3PS"></viewAttribute>
+        <viewAttribute id="AUDAT_SOH_3PS"></viewAttribute>
+        <viewAttribute id="ERDAT_SOH_3PS"></viewAttribute>
+        <viewAttribute id="VBELN_SOH_3PS"></viewAttribute>
+        <viewAttribute id="POSNR_Contract_3PS"></viewAttribute>
+        <viewAttribute id="VBELN_Contract_3PS"></viewAttribute>
+        <viewAttribute id="VBELN_VBFA_3PS"></viewAttribute>
+        <viewAttribute id="POSNN_VBFA_3PS"></viewAttribute>
+        <viewAttribute id="VBELN_SalDocBusData_3PS"></viewAttribute>
+        <viewAttribute id="POSNR_SalDocBusData_3PS"></viewAttribute>
+        <viewAttribute id="INCO1_SalDocBusData_3PS"></viewAttribute>
+        <viewAttribute id="INCO2_SalDocBusData_3PS"></viewAttribute>
+        <viewAttribute id="ZTERM_SalDocBusData_3PS"></viewAttribute>
+        <viewAttribute id="FKDAT_SalDocBusData_3PS"></viewAttribute>
+        <viewAttribute id="GJAHR_SalDocBusData_3PS"></viewAttribute>
+        <viewAttribute id="BANFN_PR_3PS"></viewAttribute>
+        <viewAttribute id="BNFPO_PR_3PS"></viewAttribute>
+        <viewAttribute id="BSART_PR_3PS"></viewAttribute>
+        <viewAttribute id="BSTYP_PR_3PS"></viewAttribute>
+        <viewAttribute id="LOEKZ_PR_3PS"></viewAttribute>
+        <viewAttribute id="STATU_PR_3PS"></viewAttribute>
+        <viewAttribute id="ERNAM_PR_3PS"></viewAttribute>
+        <viewAttribute id="ERDAT_PR_3PS"></viewAttribute>
+        <viewAttribute id="MATNR_PR_3PS"></viewAttribute>
+        <viewAttribute id="WERKS_PR_3PS"></viewAttribute>
+        <viewAttribute id="BADAT_PR_3PS"></viewAttribute>
+        <viewAttribute id="LFDAT_PR_3PS"></viewAttribute>
+        <viewAttribute id="EBELN_PR_3PS"></viewAttribute>
+        <viewAttribute id="EBELP_PR_3PS"></viewAttribute>
+        <viewAttribute id="BEDAT_PR_3PS"></viewAttribute>
+        <viewAttribute id="BSMNG_PR_3PS"></viewAttribute>
+        <viewAttribute id="ELDAT_PR_3PS"></viewAttribute>
+        <viewAttribute id="EBELN_POItem_3PS"></viewAttribute>
+        <viewAttribute id="EBELP_POItem_3PS"></viewAttribute>
+        <viewAttribute id="UNIQUEID_POItem_3PS"></viewAttribute>
+        <viewAttribute id="LOEKZ_POItem_3PS"></viewAttribute>
+        <viewAttribute id="AEDAT_POItem_3PS"></viewAttribute>
+        <viewAttribute id="MATNR_POItem_3PS"></viewAttribute>
+        <viewAttribute id="WERKS_POItem_3PS"></viewAttribute>
+        <viewAttribute id="INFNR_POItem_3PS"></viewAttribute>
+        <viewAttribute id="KTMNG_POItem_3PS"></viewAttribute>
+        <viewAttribute id="MEINS_POItem_3PS"></viewAttribute>
+        <viewAttribute id="BPRME_POItem_3PS"></viewAttribute>
+        <viewAttribute id="PEINH_POItem_3PS"></viewAttribute>
+        <viewAttribute id="NETWR_POItem_3PS"></viewAttribute>
+        <viewAttribute id="BRTWR_POItem_3PS"></viewAttribute>
+        <viewAttribute id="ABSKZ_POItem_3PS"></viewAttribute>
+        <viewAttribute id="ELIKZ_POItem_3PS"></viewAttribute>
+        <viewAttribute id="PSTYP_POItem_3PS"></viewAttribute>
+        <viewAttribute id="LMEIN_POItem_3PS"></viewAttribute>
+        <viewAttribute id="PLIFZ_POItem_3PS"></viewAttribute>
+        <viewAttribute id="NTGEW_POItem_3PS"></viewAttribute>
+        <viewAttribute id="GEWEI_POItem_3PS"></viewAttribute>
+        <viewAttribute id="BRGEW_POItem_3PS"></viewAttribute>
+        <viewAttribute id="VOLUM_POItem_3PS"></viewAttribute>
+        <viewAttribute id="VOLEH_POItem_3PS"></viewAttribute>
+        <viewAttribute id="EMLIF_POItem_3PS"></viewAttribute>
+        <viewAttribute id="ANGNR_POItem_3PS"></viewAttribute>
+        <viewAttribute id="EBELN_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="BUKRS_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="LIFNR_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="EKGRP_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="BEDAT_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="KDATB_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="KDATE_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="LLIEF_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="KUNNR_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="KONNR_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="AUTLF_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="RESWK_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="LBLIF_POHeader_3PS"></viewAttribute>
+        <viewAttribute id="BELNR_DocItemIncomInv_3PS"></viewAttribute>
+        <viewAttribute id="GJAHR_DocItemIncomInv_3PS"></viewAttribute>
+        <viewAttribute id="BUZEI_DocItemIncomInv_3PS"></viewAttribute>
+        <viewAttribute id="EBELN_DocItemIncomInv_3PS"></viewAttribute>
+        <viewAttribute id="MATNR_DocItemIncomInv_3PS"></viewAttribute>
+        <viewAttribute id="BUKRS_DocItemIncomInv_3PS"></viewAttribute>
+        <viewAttribute id="WERKS_DocItemIncomInv_3PS"></viewAttribute>
+        <viewAttribute id="WRBTR_DocItemIncomInv_3PS"></viewAttribute>
+        <viewAttribute id="MENGE_DocItemIncomInv_3PS"></viewAttribute>
+        <viewAttribute id="BSTME_DocItemIncomInv_3PS"></viewAttribute>
+        <viewAttribute id="BELNR_DocItemIncomRec_3PS"></viewAttribute>
+        <viewAttribute id="GJAHR_DocItemIncomRec_3PS"></viewAttribute>
+        <viewAttribute id="BLDAT_DocItemIncomRec_3PS"></viewAttribute>
+        <viewAttribute id="BUDAT_DocItemIncomRec_3PS"></viewAttribute>
+        <viewAttribute id="XBLNR_DocItemIncomRec_3PS"></viewAttribute>
+        <viewAttribute id="BUKRS_DocItemIncomRec_3PS"></viewAttribute>
+        <viewAttribute id="LIFNR_DocItemIncomRec_3PS"></viewAttribute>
+        <viewAttribute id="WAERS_DocItemIncomRec_3PS"></viewAttribute>
+        <viewAttribute id="RMWWR_DocItemIncomRec_3PS"></viewAttribute>
+        <viewAttribute id="KPEIN_SOI_3PS"></viewAttribute>
+        <viewAttribute id="NETPR_SOI_3PS"></viewAttribute>
+        <viewAttribute id="VOLUM_SOI_3PS"></viewAttribute>
+        <viewAttribute id="NTGEW_SOI_3PS"></viewAttribute>
+        <viewAttribute id="BRGEW_SOI_3PS"></viewAttribute>
+        <viewAttribute id="KWMENG_SOI_3PS"></viewAttribute>
+        <viewAttribute id="NETWR_SOI_3PS"></viewAttribute>
+        <viewAttribute id="ZMENG_SOI_3PS"></viewAttribute>
+        <viewAttribute id="NETWR_SOH_3PS"></viewAttribute>
+        <viewAttribute id="MENGE_POItem_3PS"></viewAttribute>
+        <viewAttribute id="NETPR_POItem_3PS"></viewAttribute>
+        <viewAttribute id="AWREF_VendorInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="BLART_VendorInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="BSCHL_VendorInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="LIFNR_VendorInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="PAOBJNR_VendorInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="PAPH1_PA_VendorInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="PAPH2_PA_VendorInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="PAPH3_PA_VendorInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="WWCST_PA_VendorInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="KMKDGR_PA_VendorInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="VTWEG"></viewAttribute>
+        <viewAttribute id="SPART_1"></viewAttribute>
+        <viewAttribute id="MANDT_Contract_3PS"></viewAttribute>
+        <viewAttribute id="VBELN_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="POSNR_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="FKIMG_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="VRKME_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="MEINS_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="NTGEW_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="GEWEI_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="PRSDT_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="NETWR_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="AUBEL_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="AUPOS_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="ARKTX_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="WERKS_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="ALAND_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="ERDAT_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="ERZET_BillingItem_3PS"></viewAttribute>
+        <viewAttribute id="VBELN_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="FKART_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="FKTYP_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="VBTYP_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="WAERK_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="VKORG_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="FKDAT_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="ZTERM_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="FKDAT_RL_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="KUNRG_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="KUNAG_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="KUNWE_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="FKART_RL_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="FKSTO_BillingHeader_3PS"></viewAttribute>
+        <viewAttribute id="AWREF_CustomerInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="BLART_CustomerInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="BSCHL_CustomerInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="LIFNR_CustomerInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="PAOBJNR_CustomerInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="PAPH1_PA_CustomerInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="PAPH2_PA_CustomerInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="PAPH3_PA_CustomerInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="WWCST_PA_CustomerInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="KMKDGR_PA_CustomerInvAccDoc_3PS"></viewAttribute>
+        <viewAttribute id="LZONE_SalDocPartnerSoldTo_3PS"></viewAttribute>
+        <viewAttribute id="KUNNR_SalDocPartnerSoldTo_3PS"></viewAttribute>
+        <viewAttribute id="PARVW_SalDocPartnerSoldTo_3PS"></viewAttribute>
+        <viewAttribute id="POSNR_SalDocPartnerSoldTo_3PS"></viewAttribute>
+        <viewAttribute id="AUGRU_SOH_NPOS"></viewAttribute>
+        <viewAttribute id="LIFSK_SOH_NPOS"></viewAttribute>
+        <viewAttribute id="BELNR_VendorInvAccDoc_NPOS"></viewAttribute>
+        <viewAttribute id="AWITEM_VendorInvAccDoc_NPOS"></viewAttribute>
+        <viewAttribute id="KUNNR_VendorInvAccDoc_NPOS"></viewAttribute>
+        <viewAttribute id="WERKS_VendorInvAccDoc_NPOS"></viewAttribute>
+        <viewAttribute id="VKORG_VendorInvAccDoc_NPOS"></viewAttribute>
+        <viewAttribute id="VTWEG_VendorInvAccDoc_NPOS"></viewAttribute>
+        <viewAttribute id="SPART_VendorInvAccDoc_NPOS"></viewAttribute>
+        <viewAttribute id="MATNR_COPA_VendorInvAccDoc_NPOS"></viewAttribute>
+        <viewAttribute id="PRCTR_VendorInvAccDoc_NPOS"></viewAttribute>
+        <viewAttribute id="KUNWE_VendorInvAccDoc_NPOS"></viewAttribute>
+        <viewAttribute id="SCENARIO"></viewAttribute>
+        <viewAttribute id="EKORG_POHeader_3PS"></viewAttribute>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" length="10" expressionLanguage="COLUMN_ENGINE" id="SCENARIO_SELECTION_TYPE">
+          <formula>If(in($$SCENARIO_SELECTION_TYPE$$,'All',''), 'ALL', 'NOT_ALL')</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DATE" expressionLanguage="COLUMN_ENGINE" id="SD_Created_On_Date">
+          <formula>Date("ERDAT_SOI_3PS")</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="CV_FCT_OTC_STP_UNION"></input>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions defaultDescription="Third Party with PO Back Smart Data Model"></descriptions>
+    <attributes>
+      <attribute id="WADAT_VBEP" displayAttribute="false" order="1" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Goods Issue Date_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WADAT_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LDDAT_VBEP" displayAttribute="false" order="2" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Loading Date_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LDDAT_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="MBDAT_VBEP" displayAttribute="false" order="3" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material Staging/Availability Date_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MBDAT_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ETENE_VBEP" displayAttribute="false" order="4" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Schedule line_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ETENE_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="MEINS_VBEP" displayAttribute="false" order="5" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Base Unit of Measure_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MEINS_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VRKME_VBEP" displayAttribute="false" order="7" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales unit_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VRKME_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="EDATU_VBEP" displayAttribute="false" order="10" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Schedule line date_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EDATU_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LFREL_VBEP" displayAttribute="false" order="11" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item is relevant for delivery_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LFREL_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ETTYP_VBEP" displayAttribute="false" order="12" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Schedule line category_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ETTYP_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ETENR_VBEP" displayAttribute="false" order="13" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Schedule Line Number_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ETENR_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="POSNR_VBEP" displayAttribute="false" order="14" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document Item_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VBEP" displayAttribute="false" order="15" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document_Schedule Line"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_SalDocSchedLineData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="MSR_RET_REASON_VBAP_ORDERS" displayAttribute="false" order="16" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Return Reason_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MSR_RET_REASON_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="KMEIN_VBAP_ORDERS" displayAttribute="false" order="17" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Unit of Measure_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KMEIN_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ERDAT_VBAP_ORDERS" displayAttribute="false" order="18" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created on_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VSTEL_VBAP_ORDERS" displayAttribute="false" order="19" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Shipping Point/Receiving Pt_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VSTEL_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="WERKS_VBAP_ORDERS" displayAttribute="false" order="20" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Plant_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="GEWEI_VBAP_ORDERS" displayAttribute="false" order="21" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Weight unit_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GEWEI_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VRKME_VBAP_ORDERS" displayAttribute="false" order="22" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales unit_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VRKME_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="FAKSP_VBAP_ORDERS" displayAttribute="false" order="23" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Block_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FAKSP_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="POSEX_VBAP_ORDERS" displayAttribute="false" order="24" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchase order item_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSEX_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="MEINS_VBAP_ORDERS" displayAttribute="false" order="25" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Base Unit of Measure_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MEINS_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ZIEME_VBAP_ORDERS" displayAttribute="false" order="26" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Target Quantity UoM_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ZIEME_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ABGRU_VBAP_ORDERS" displayAttribute="false" order="27" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Reason for Rejection_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ABGRU_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="PSTYV_VBAP_ORDERS" displayAttribute="false" order="28" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item category_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PSTYV_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ARKTX_VBAP_ORDERS" displayAttribute="false" order="29" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item Description_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ARKTX_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="MATNR_VBAP_ORDERS" displayAttribute="false" order="30" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATNR_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="POSNR_VBAP_ORDERS" displayAttribute="false" order="31" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document Item_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VBAP_ORDERS" displayAttribute="false" order="32" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales document_Sales Doc Item_Orders"></descriptions>
+        <localVariable>Sales_Document</localVariable>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_SOI_3PS"></keyMapping>
+      </attribute>
+      <attribute id="KUNNR_VBAK_ORDERS" displayAttribute="false" order="33" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sold-To Party_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BSTNK_VBAK_ORDERS" displayAttribute="false" order="34" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer Reference_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BSTNK_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VDATU_VBAK_ORDERS" displayAttribute="false" order="35" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Req Delivery Date_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VDATU_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="GUEEN_VBAK_ORDERS" displayAttribute="false" order="36" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Valid-To Date_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GUEEN_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="GUEBG_VBAK_ORDERS" displayAttribute="false" order="37" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Valid-From Date_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GUEBG_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VKORG_VBAK_ORDERS" displayAttribute="false" order="38" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Organization_Sales Doc Header_Orders"></descriptions>
+        <localVariable>Sales_Organization_data</localVariable>
+        <keyMapping columnObjectName="Projection_1" columnName="VKORG_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VBTYP_VBAK_ORDERS" displayAttribute="false" order="39" attributeHierarchyActive="false">
+        <descriptions defaultDescription="SD Document Category_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBTYP_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="AUDAT_VBAK_ORDERS" displayAttribute="false" order="40" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Date_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AUDAT_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ERDAT_VBAK_ORDERS" displayAttribute="false" order="41" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created on_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VBAK_ORDERS" displayAttribute="false" order="42" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales document_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="POSNR_VBAP_CONTRACT" displayAttribute="false" order="43" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Item_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_Contract_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VBAP_CONTRACT" displayAttribute="false" order="44" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_Contract_3PS"></keyMapping>
+      </attribute>
+      <attribute hidden="true" id="VBELN_VBFA_3PS" displayAttribute="false" order="45" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Subsequent Sales and Distribution Document"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_VBFA_3PS"></keyMapping>
+      </attribute>
+      <attribute hidden="true" id="POSNN_VBFA_3PS" displayAttribute="false" order="46" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Subsequent Item of an SD Document"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNN_VBFA_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VBKD" displayAttribute="false" order="47" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document_Business Data"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_SalDocBusData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="POSNR_VBKD" displayAttribute="false" order="48" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item Number_Business Data"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_SalDocBusData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="INCO1_VBKD" displayAttribute="false" order="49" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Incoterms_Business Data"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="INCO1_SalDocBusData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="INCO2_VBKD" displayAttribute="false" order="50" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Incoterms 2_Business Data"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="INCO2_SalDocBusData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ZTERM_VBKD" displayAttribute="false" order="51" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Payment terms_Business Data"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ZTERM_SalDocBusData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="FKDAT_VBKD" displayAttribute="false" order="52" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Date_Business Data"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKDAT_SalDocBusData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="GJAHR_VBKD" displayAttribute="false" order="53" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Fiscal Year_Business Data"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GJAHR_SalDocBusData_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BANFN_EBAN" displayAttribute="false" order="54" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchase Requisition Number_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BANFN_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BNFPO_EBAN" displayAttribute="false" order="55" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item number of purchase requisition_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BNFPO_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BSART_EBAN" displayAttribute="false" order="56" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchase Requisition Document Type_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BSART_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BSTYP_EBAN" displayAttribute="false" order="57" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchasing Document Category_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BSTYP_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LOEKZ_EBAN" displayAttribute="false" order="58" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Deletion indicator in purchasing document_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LOEKZ_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="STATU_EBAN" displayAttribute="false" order="59" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Processing status of purchase requisition_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="STATU_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ERNAM_EBAN" displayAttribute="false" order="60" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Name of Person who Created the Object_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERNAM_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ERDAT_EBAN" displayAttribute="false" order="61" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Date of Last Change_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="MATNR_EBAN" displayAttribute="false" order="62" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material Number_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATNR_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="WERKS_EBAN" displayAttribute="false" order="63" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Plant_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BADAT_EBAN" displayAttribute="false" order="64" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Requisition (request) date_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BADAT_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LFDAT_EBAN" displayAttribute="false" order="65" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item delivery date_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LFDAT_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="EBELN_EBAN" displayAttribute="false" order="66" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchase order number_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EBELN_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="EBELP_EBAN" displayAttribute="false" order="67" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchase order item number_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EBELP_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BEDAT_EBAN" displayAttribute="false" order="68" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchase Order Date_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BEDAT_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ELDAT_EBAN" displayAttribute="false" order="70" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Receipt/Requirements date_Purchase Requisition"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ELDAT_PR_3PS"></keyMapping>
+      </attribute>
+      <attribute id="EBELN_EKPO" displayAttribute="false" order="71" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchasing Document Number_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EBELN_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="EBELP_EKPO" displayAttribute="false" order="72" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item Number of Purchasing Document_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EBELP_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="UNIQUEID_EKPO" displayAttribute="false" order="73" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Concatenation of EBELN and EBELP_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="UNIQUEID_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LOEKZ_EKPO" displayAttribute="false" order="74" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Deletion indicator in purchasing document_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LOEKZ_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="AEDAT_EKPO" displayAttribute="false" order="75" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchasing Document Item Change Date_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AEDAT_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="MATNR_EKPO" displayAttribute="false" order="76" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material Number_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATNR_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="WERKS_EKPO" displayAttribute="false" order="77" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Plant_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="INFNR_EKPO" displayAttribute="false" order="78" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Number of purchasing info record_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="INFNR_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="MEINS_EKPO" displayAttribute="false" order="80" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchase Order Unit of Measure_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MEINS_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BPRME_EKPO" displayAttribute="false" order="81" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Order Price Unit (Purchasing)_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BPRME_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="PEINH_EKPO" displayAttribute="false" order="82" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Price unit_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PEINH_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ABSKZ_EKPO" displayAttribute="false" order="85" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Rejection Indicator_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ABSKZ_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ELIKZ_EKPO" displayAttribute="false" order="86" attributeHierarchyActive="false">
+        <descriptions defaultDescription="&quot;Delivery Completed&quot; Indicator_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ELIKZ_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="PSTYP_EKPO" displayAttribute="false" order="87" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item category in purchasing document_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PSTYP_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LMEIN_EKPO" displayAttribute="false" order="88" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Base Unit of Measure_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LMEIN_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="PLIFZ_EKPO" displayAttribute="false" order="89" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Planned Delivery Time in Days_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PLIFZ_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="GEWEI_EKPO" displayAttribute="false" order="91" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Unit of Weight_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GEWEI_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="EMLIF_EKPO" displayAttribute="false" order="94" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Supplier to be Supplied/Who is to Receive Delivery_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EMLIF_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VOLEH_EKPO" displayAttribute="false" order="95" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Volume unit_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VOLEH_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="ANGNR_EKPO" displayAttribute="false" order="96" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Quotation number_Purchase Order Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ANGNR_POItem_3PS"></keyMapping>
+      </attribute>
+      <attribute id="EBELN_EKKO" displayAttribute="false" order="97" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchasing Document Number_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EBELN_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BUKRS_EKKO" displayAttribute="false" order="98" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Company Code_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BUKRS_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LIFNR_EKKO" displayAttribute="false" order="99" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Vendor's account number_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LIFNR_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="EKGRP_EKKO" displayAttribute="false" order="100" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchasing Group_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EKGRP_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BEDAT_EKKO" displayAttribute="false" order="101" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchasing Document Date_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BEDAT_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="KDATB_EKKO" displayAttribute="false" order="102" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Start of Validity Period_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KDATB_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="KDATE_EKKO" displayAttribute="false" order="103" attributeHierarchyActive="false">
+        <descriptions defaultDescription="End of Validity Period_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KDATE_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LLIEF_EKKO" displayAttribute="false" order="104" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Goods Supplier_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LLIEF_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="KUNNR_EKKO" displayAttribute="false" order="105" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer Number_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="KONNR_EKKO" displayAttribute="false" order="106" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Number of principal purchase agreement_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KONNR_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="AUTLF_EKKO" displayAttribute="false" order="107" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Complete Delivery Stipulated for Each Purchase Order_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AUTLF_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="RESWK_EKKO" displayAttribute="false" order="108" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Supplying (issuing) plant in case of stock transport order_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="RESWK_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LBLIF_EKKO" displayAttribute="false" order="109" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Field not used_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LBLIF_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BELNR_RSEG" displayAttribute="false" order="110" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Accounting Document Number_Doc Item Incoming Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BELNR_DocItemIncomInv_3PS"></keyMapping>
+      </attribute>
+      <attribute id="GJAHR_RSEG" displayAttribute="false" order="111" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Fiscal Year_Doc Item Incoming Invoice_Doc Item Incoming Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GJAHR_DocItemIncomInv_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BUZEI_RSEG" displayAttribute="false" order="112" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Item in Invoice Document_Doc Item Incoming Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BUZEI_DocItemIncomInv_3PS"></keyMapping>
+      </attribute>
+      <attribute id="EBELN_RSEG" displayAttribute="false" order="113" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchasing Document Number_Doc Item Incoming Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EBELN_DocItemIncomInv_3PS"></keyMapping>
+      </attribute>
+      <attribute id="MATNR_RSEG" displayAttribute="false" order="114" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material Number_Doc Item Incoming Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATNR_DocItemIncomInv_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BUKRS_RSEG" displayAttribute="false" order="115" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Company Code_Doc Item Incoming Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BUKRS_DocItemIncomInv_3PS"></keyMapping>
+      </attribute>
+      <attribute id="WERKS_RSEG" displayAttribute="false" order="116" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Plant_Doc Item Incoming Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS_DocItemIncomInv_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BSTME_RSEG" displayAttribute="false" order="119" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchase Order Unit of Measure_Doc Item Incoming Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BSTME_DocItemIncomInv_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BELNR_RBKP" displayAttribute="false" order="120" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Number of an Invoice Document_Doc Header Invoice Receipt"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BELNR_DocItemIncomRec_3PS"></keyMapping>
+      </attribute>
+      <attribute id="GJAHR_RBKP" displayAttribute="false" order="121" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Fiscal Year_Doc Header Invoice Receipt"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GJAHR_DocItemIncomRec_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BLDAT_RBKP" displayAttribute="false" order="122" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Date in Document_Doc Header Invoice Receipt"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BLDAT_DocItemIncomRec_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BUDAT_RBKP" displayAttribute="false" order="123" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Posting Date in the Document_Doc Header Invoice Receipt"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BUDAT_DocItemIncomRec_3PS"></keyMapping>
+      </attribute>
+      <attribute id="XBLNR_RBKP" displayAttribute="false" order="124" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Reference Document Number_Doc Header Invoice Receipt"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="XBLNR_DocItemIncomRec_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BUKRS_RBKP" displayAttribute="false" order="125" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Company Code_Doc Header Invoice Receipt"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BUKRS_DocItemIncomRec_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LIFNR_RBKP" displayAttribute="false" order="126" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Different Invoicing Party_Doc Header Invoice Receipt"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LIFNR_DocItemIncomRec_3PS"></keyMapping>
+      </attribute>
+      <attribute id="WAERS_RBKP" displayAttribute="false" order="127" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Currency Key_Doc Header Invoice Receipt"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERS_DocItemIncomRec_3PS"></keyMapping>
+      </attribute>
+      <attribute id="AWREF_ACDOCA_VENDOR_INV" displayAttribute="false" order="140" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Reference document number_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AWREF_VendorInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BLART_ACDOCA_VENDOR_INV" displayAttribute="false" order="141" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document type_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BLART_VendorInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute id="BSCHL_ACDOCA_VENDOR_INV" displayAttribute="false" order="142" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Posting Key_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BSCHL_VendorInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute id="LIFNR_ACDOCA_VENDOR_INV" displayAttribute="false" order="143" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LIFNR_VendorInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute id="PAOBJNR_ACDOCA_VENDOR_INV" displayAttribute="false" order="144" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Profitability Segment Number (CO-PA)_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PAOBJNR_VendorInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute id="PAPH1_PA_ACDOCA_VENDOR_INV" displayAttribute="false" order="145" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Prod.hierarchy01-1_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PAPH1_PA_VendorInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute id="PAPH2_PA_ACDOCA_VENDOR_INV" displayAttribute="false" order="146" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Prod.hierarchy01-2_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PAPH2_PA_VendorInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute id="PAPH3_PA_ACDOCA_VENDOR_INV" displayAttribute="false" order="147" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Prod.hierarchy01-3_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PAPH3_PA_VendorInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute id="WWCST_PA_ACDOCA_VENDOR_INV" displayAttribute="false" order="148" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Country Ship-to_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WWCST_PA_VendorInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute id="KMKDGR_PA_ACDOCA_VENDOR_INV" displayAttribute="false" order="149" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer Group_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KMKDGR_PA_VendorInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VBELN_VBRP" displayAttribute="false" order="150" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Document_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="POSNR_VBRP" displayAttribute="false" order="151" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VRKME_VBRP" displayAttribute="false" order="153" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales unit_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VRKME_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="MEINS_VBRP" displayAttribute="false" order="154" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Base Unit of Measure_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MEINS_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="GEWEI_VBRP" displayAttribute="false" order="156" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Weight unit_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GEWEI_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="PRSDT_VBRP" displayAttribute="false" order="157" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Pricing Date_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PRSDT_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="AUBEL_VBRP" displayAttribute="false" order="159" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales document_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AUBEL_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="AUPOS_VBRP" displayAttribute="false" order="160" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AUPOS_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="ARKTX_VBRP" displayAttribute="false" order="161" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item Description_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ARKTX_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="WERKS_VBRP" displayAttribute="false" order="162" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Plant_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="ALAND_VBRP" displayAttribute="false" order="163" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Country_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ALAND_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="ERDAT_VBRP" displayAttribute="false" order="164" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created on_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="ERZET_VBRP" displayAttribute="false" order="165" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Time_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERZET_BillingItem_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VBELN_VBRK" displayAttribute="false" order="166" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Document_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="FKART_VBRK" displayAttribute="false" order="167" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Type_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKART_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="FKTYP_VBRK" displayAttribute="false" order="168" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Category_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKTYP_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VBTYP_VBRK" displayAttribute="false" order="169" attributeHierarchyActive="false">
+        <descriptions defaultDescription="SD Document Category_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBTYP_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="WAERK_VBRK" displayAttribute="false" order="170" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Currency_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERK_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VKORG_VBRK" displayAttribute="false" order="171" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Organization_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VKORG_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="ZTERM_VBRK" displayAttribute="false" order="172" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Payment terms_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ZTERM_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="FKDAT_VBRK" displayAttribute="false" order="173" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Date_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKDAT_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="FKDAT_RL_VBRK" displayAttribute="false" order="174" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Date_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKDAT_RL_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNRG_VBRK" displayAttribute="false" order="175" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Payer_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNRG_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNAG_VBRK" displayAttribute="false" order="176" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sold-To Party_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNAG_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNWE_VBRK" displayAttribute="false" order="177" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Ship-to party_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNWE_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="FKART_RL_VBRK" displayAttribute="false" order="178" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Invoice List Type_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKART_RL_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="FKSTO_VBRK" displayAttribute="false" order="179" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Canceled_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKSTO_BillingHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="AWREF_ACDOCA_CUSTOMER_INV" displayAttribute="false" order="180" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Reference document number_Accounting Doc_Customer Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AWREF_CustomerInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="BLART_ACDOCA_CUSTOMER_INV" displayAttribute="false" order="181" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document type_Accounting Doc_Customer Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BLART_CustomerInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="BSCHL_ACDOCA_CUSTOMER_INV" displayAttribute="false" order="182" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Posting Key_Accounting Doc_Customer Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BSCHL_CustomerInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LIFNR_ACDOCA_CUSTOMER_INV" displayAttribute="false" order="183" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor_Accounting Doc_Customer Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LIFNR_CustomerInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="PAOBJNR_ACDOCA_CUSTOMER_INV" displayAttribute="false" order="184" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Profitability Segment Number (CO-PA)_Accounting Doc_Customer Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PAOBJNR_CustomerInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="PAPH1_PA_ACDOCA_CUSTOMER_INV" displayAttribute="false" order="185" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Prod.hierarchy01-1_Accounting Doc_Customer Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PAPH1_PA_CustomerInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="PAPH2_PA_ACDOCA_CUSTOMER_INV" displayAttribute="false" order="186" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Prod.hierarchy01-2_Accounting Doc_Customer Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PAPH2_PA_CustomerInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="PAPH3_PA_ACDOCA_CUSTOMER_INV" displayAttribute="false" order="187" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Prod.hierarchy01-3_Accounting Doc_Customer Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PAPH3_PA_CustomerInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="WWCST_PA_ACDOCA_CUSTOMER_INV" displayAttribute="false" order="188" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Country Ship-to_Accounting Doc_Customer Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WWCST_PA_CustomerInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KMKDGR_PA_ACDOCA_CUSTOMER_INV" displayAttribute="false" order="189" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer Group_Accounting Doc_Customer Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KMKDGR_PA_CustomerInvAccDoc_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LZONE_VBPA_SOLD_TO_PARTY" displayAttribute="false" order="190" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Transportation Zone_Partner_Sold To"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LZONE_SalDocPartnerSoldTo_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_VBPA_SOLD_TO_PARTY" displayAttribute="false" order="191" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer_Partner_Sold To"></descriptions>
+        <localVariable>Sold_To_Party</localVariable>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR_SalDocPartnerSoldTo_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="PARVW_VBPA_SOLD_TO_PARTY" displayAttribute="false" order="192" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Partner Function_Partner_Sold To"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PARVW_SalDocPartnerSoldTo_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="POSNR_VBPA_SOLD_TO_PARTY" displayAttribute="false" order="193" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Item Number_Partner_Sold To"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_SalDocPartnerSoldTo_3PS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="AUGRU_VBAK_ORDERS" displayAttribute="false" order="194" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Order reason_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AUGRU_SOH_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LIFSK_VBAK_ORDERS" displayAttribute="false" order="195" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Delivery Block_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LIFSK_SOH_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="BELNR_ACDOCA_VENDOR_INV" displayAttribute="false" order="196" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Number_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BELNR_VendorInvAccDoc_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="AWITEM_ACDOCA_VENDOR_INV" displayAttribute="false" order="197" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Ref. Doc. Item_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AWITEM_VendorInvAccDoc_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_ACDOCA_VENDOR_INV" displayAttribute="false" order="198" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR_VendorInvAccDoc_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="WERKS_ACDOCA_VENDOR_INV" displayAttribute="false" order="199" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Plant_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS_VendorInvAccDoc_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VKORG_ACDOCA_VENDOR_INV" displayAttribute="false" order="200" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Org_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VKORG_VendorInvAccDoc_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VTWEG_ACDOCA_VENDOR_INV" displayAttribute="false" order="201" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Distr. Channel_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VTWEG_VendorInvAccDoc_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="SPART_ACDOCA_VENDOR_INV" displayAttribute="false" order="202" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Division_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="SPART_VendorInvAccDoc_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="MATNR_COPA_ACDOCA_VENDOR_INV" displayAttribute="false" order="203" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Product_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATNR_COPA_VendorInvAccDoc_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="PRCTR_ACDOCA_VENDOR_INV" displayAttribute="false" order="204" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Profit Center_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PRCTR_VendorInvAccDoc_NPOS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNWE_ACDOCA_VENDOR_INV" displayAttribute="false" order="205" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Ship-to Party_Accounting Doc_Vendor Invoice"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNWE_VendorInvAccDoc_NPOS"></keyMapping>
+      </attribute>
+      <attribute hidden="true" semanticType="empty" id="SCENARIO" displayAttribute="false" order="206" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Scenario"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="SCENARIO"></keyMapping>
+      </attribute>
+      <attribute id="SD_Created_On_Date" displayAttribute="false" order="207" attributeHierarchyActive="false">
+        <descriptions defaultDescription="SD_Created_On_Date"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="SD_Created_On_Date"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="EKORG_EKKO" displayAttribute="false" order="217" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Purchasing organization_Purchase Order Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EKORG_POHeader_3PS"></keyMapping>
+      </attribute>
+      <attribute id="KUNNR_SOH_3PS$local">
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VKORG_SOH_3PS$local">
+        <keyMapping columnObjectName="Projection_1" columnName="VKORG_SOH_3PS"></keyMapping>
+      </attribute>
+      <attribute id="VTWEG$local">
+        <keyMapping columnObjectName="Projection_1" columnName="VTWEG"></keyMapping>
+      </attribute>
+      <attribute id="SPART_1$local">
+        <keyMapping columnObjectName="Projection_1" columnName="SPART_1"></keyMapping>
+      </attribute>
+      <attribute id="MANDT_Contract_3PS$local">
+        <keyMapping columnObjectName="Projection_1" columnName="MANDT_Contract_3PS"></keyMapping>
+      </attribute>
+    </attributes>
+    <calculatedAttributes>
+      <calculatedAttribute hidden="false" semanticType="empty" id="VKORG_KNVV" displayAttribute="false" order="208" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Org_CustomerSalesMasterData"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="4">
+          <formula>"VKORG"</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="VTWEG_KNVV" displayAttribute="false" order="209" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Distribution Channel_CustomerSalesMasterData"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"VTWEG"</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="SPART_KNVV" displayAttribute="false" order="210" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Division_CustomerSalesMasterData"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"SPART"</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KUNNR_KNA1_CUSTOMERDATA" displayAttribute="false" order="211" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer Number_CustomerMasterData"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="10">
+          <formula>"KUNNR_KNA1"</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="LAND1_KNA1_CUSTOMERDATA" displayAttribute="false" order="212" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Country Key_CustomerMasterData"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="3">
+          <formula>"LAND1"</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="NAME1_KNA1_CUSTOMERDATA" displayAttribute="false" order="213" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Name 1_CustomerMasterData"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="35">
+          <formula>"NAME1"</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="ORT01_KNA1_CUSTOMERDATA" displayAttribute="false" order="214" attributeHierarchyActive="false">
+        <descriptions defaultDescription="City_CustomerMasterData"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="35">
+          <formula>"ORT01"</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="PSTLZ_KNA1_CUSTOMERDATA" displayAttribute="false" order="215" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Postal Code_CustomerMasterData"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="10">
+          <formula>"PSTLZ"</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="REGIO_KNA1_CUSTOMERDATA" displayAttribute="false" order="216" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Region (State, Province, Country)_CustomerMasterData"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="3">
+          <formula>"REGIO"</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="VCAL_SD_CREATED_DATE" displayAttribute="false" order="218" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created on_Sales Doc Item_Orders"></descriptions>
+        <localVariable>Created_Date_Range</localVariable>
+        <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+          <formula>date("SD_Created_On_Date")</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+    </calculatedAttributes>
+    <privateDataFoundation>
+      <tableProxies></tableProxies>
+      <joins></joins>
+      <layout>
+        <shapes></shapes>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure aggregationType="sum" id="LMENG_VBEP" order="6" measureType="simple">
+        <descriptions defaultDescription="Required quantity for mat.management in stockkeeping units_Schedule Line"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="LMENG_SalDocSchedLineData_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="BMENG_VBEP" order="8" measureType="simple">
+        <descriptions defaultDescription="Confirmed Quantity_Schedule Line"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="BMENG_SalDocSchedLineData_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="WMENG_VBEP" order="9" measureType="simple">
+        <descriptions defaultDescription="Order Quantity in Sales Units_Schedule Line"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="WMENG_SalDocSchedLineData_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="BSMNG_EBAN" order="69" measureType="simple">
+        <descriptions defaultDescription="Quantity ordered against this purchase requisition_Purchase Requisition"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="BSMNG_PR_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="KTMNG_EKPO" order="79" measureType="simple">
+        <descriptions defaultDescription="Target Quantity_Purchase Order Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="KTMNG_POItem_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="NETWR_EKPO" order="83" measureType="simple">
+        <descriptions defaultDescription="Net Order Value in PO Currency_Purchase Order Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="NETWR_POItem_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="BRTWR_EKPO" order="84" measureType="simple">
+        <descriptions defaultDescription="Gross order value in PO currency_Purchase Order Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="BRTWR_POItem_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="NTGEW_EKPO" order="90" measureType="simple">
+        <descriptions defaultDescription="Net Weight_Purchase Order Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="NTGEW_POItem_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="BRGEW_EKPO" order="92" measureType="simple">
+        <descriptions defaultDescription="Gross weight_Purchase Order Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="BRGEW_POItem_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="VOLUM_EKPO" order="93" measureType="simple">
+        <descriptions defaultDescription="Volume_Purchase Order Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="VOLUM_POItem_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="WRBTR_RSEG" order="117" measureType="simple">
+        <descriptions defaultDescription="Amount in Document Currency_Doc Item Incoming Invoice"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="WRBTR_DocItemIncomInv_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="MENGE_RSEG" order="118" measureType="simple">
+        <descriptions defaultDescription="Quantity_Doc Item Incoming Invoice"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="MENGE_DocItemIncomInv_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="RMWWR_RBKP" order="128" measureType="simple">
+        <descriptions defaultDescription="Gross Invoice Amount in Document Currency_Doc Header Invoice Receipt"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="RMWWR_DocItemIncomRec_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="KPEIN_VBAP_ORDERS" order="129" measureType="simple">
+        <descriptions defaultDescription="Pricing Unit_Sales Doc Item_Orders"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="KPEIN_SOI_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="NETPR_VBAP_ORDERS" order="130" measureType="simple">
+        <descriptions defaultDescription="Net Price_Sales Doc Item_Orders"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="NETPR_SOI_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="NTGEW_VBAP_ORDERS" order="131" measureType="simple">
+        <descriptions defaultDescription="Net Weight_Sales Doc Item_Orders"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="NTGEW_SOI_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="VOLUM_VBAP_ORDERS" order="132" measureType="simple">
+        <descriptions defaultDescription="Volume_Sales Doc Item_Orders"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="VOLUM_SOI_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="BRGEW_VBAP_ORDERS" order="133" measureType="simple">
+        <descriptions defaultDescription="Gross Weight_Sales Doc Item_Orders"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="BRGEW_SOI_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="KWMENG_VBAP_ORDERS" order="134" measureType="simple">
+        <descriptions defaultDescription="Order Quantity_Sales Doc Item_Orders"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="KWMENG_SOI_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="NETWR_VBAP_ORDERS" order="135" measureType="simple">
+        <descriptions defaultDescription="Net Value_Sales Doc Item_Orders"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="NETWR_SOI_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="ZMENG_VBAP_ORDERS" order="136" measureType="simple">
+        <descriptions defaultDescription="Target Quantity_Sales Doc Item_Orders"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="ZMENG_SOI_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="NETWR_VBAK_ORDERS" order="137" measureType="simple">
+        <descriptions defaultDescription="Net Value_Sales Doc Header_Orders"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="NETWR_SOH_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="MENGE_EKPO" order="138" measureType="simple">
+        <descriptions defaultDescription="Purchase Order Quantity_Purchase Order Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="MENGE_POItem_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="NETPR_EKPO" order="139" measureType="simple">
+        <descriptions defaultDescription="Net Price in Purchasing Document (in Document Currency)_Purchase Order Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="NETPR_POItem_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="FKIMG_VBRP" order="152" measureType="simple">
+        <descriptions defaultDescription="Billed Quantity_Billing Doc Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="FKIMG_BillingItem_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="NTGEW_VBRP" order="155" measureType="simple">
+        <descriptions defaultDescription="Net weight_Billing Doc Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="NTGEW_BillingItem_3PS"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="NETWR_VBRP" order="158" measureType="simple">
+        <descriptions defaultDescription="Net Value_Billing Doc Item"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="NETWR_BillingItem_3PS"></measureMapping>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures></calculatedMeasures>
+    <restrictedMeasures></restrictedMeasures>
+    <localDimensions></localDimensions>
+    <sharedDimensions>
+      <logicalJoin associatedObjectUri="CV_DIM_MD_CUSTOMER_MASTER_DATA">
+        <attributes>
+          <attributeRef>KUNNR_SOH_3PS$local</attributeRef>
+          <attributeRef>VKORG_SOH_3PS$local</attributeRef>
+          <attributeRef>VTWEG$local</attributeRef>
+          <attributeRef>SPART_1$local</attributeRef>
+          <attributeRef>MANDT_Contract_3PS$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>KUNNR_KNA1</attributeName>
+          <attributeName>VKORG</attributeName>
+          <attributeName>VTWEG</attributeName>
+          <attributeName>SPART</attributeName>
+          <attributeName>MANDT</attributeName>
+        </associatedAttributeNames>
+        <properties joinType="leftOuter" joinOperator="Equal"></properties>
+        <associatedAttributeFeatures></associatedAttributeFeatures>
+      </logicalJoin>
+    </sharedDimensions>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectNameSpace="MeasureGroup" modelObjectName="Output">
+        <upperLeftCorner x="22" y="87"></upperLeftCorner>
+        <rectangleSize width="0" height="0"></rectangleSize>
+      </shape>
+      <shape expanded="true" modelObjectNameSpace="CalculationView" modelObjectName="Projection_1">
+        <upperLeftCorner x="22" y="203"></upperLeftCorner>
+        <rectangleSize width="-1" height="-1"></rectangleSize>
+      </shape>
+      <shape modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository" modelObjectName="Projection_1">
+        <upperLeftCorner x="250" y="250"></upperLeftCorner>
+      </shape>
+      <shape modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository" modelObjectName="CV_DIM_MD_CUSTOMER_MASTER_DATA">
+        <upperLeftCorner x="844" y="30"></upperLeftCorner>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

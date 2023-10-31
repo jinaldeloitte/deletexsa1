@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_TVAK" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Sales Document Type"/>
+  <metadata changedAt="2021-12-06 18:09:41.414"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_TVAK">
+      <resourceUri>syn_tbl_TVAK</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_TVAK">
+    <descriptions defaultDescription="Sales Document Type"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="MANDT"/>
+      </attribute>
+      <attribute id="AUART" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="AUART"/>
+      </attribute>
+      <attribute id="KOPGR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Screen sequence group for document header &amp; item"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KOPGR"/>
+      </attribute>
+      <attribute id="LFARV" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Default delivery type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="LFARV"/>
+      </attribute>
+      <attribute id="FKARV" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Proposed billing type for a delivery-related billing doc."/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FKARV"/>
+      </attribute>
+      <attribute id="FKARA" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Proposed billing type for an order-related billing document"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FKARA"/>
+      </attribute>
+      <attribute id="NUMKI" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number range in the case of internal number assignment"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="NUMKI"/>
+      </attribute>
+      <attribute id="NUMKE" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number range in the case of external number assignment"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="NUMKE"/>
+      </attribute>
+      <attribute id="INCPO" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Increment of item number in the SD document"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="INCPO"/>
+      </attribute>
+      <attribute id="UEVOR" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="F-code default for overview screen"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="UEVOR"/>
+      </attribute>
+      <attribute id="AUGRP" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Version Number Component"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="AUGRP"/>
+      </attribute>
+      <attribute id="UMFNG" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Display Range"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="UMFNG"/>
+      </attribute>
+      <attribute id="DABAR" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Default release type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="DABAR"/>
+      </attribute>
+      <attribute id="PARGR" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner Determination Procedure"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="PARGR"/>
+      </attribute>
+      <attribute id="FAKSK" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Block"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FAKSK"/>
+      </attribute>
+      <attribute id="LIFSK" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Block (Document Header)"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="LIFSK"/>
+      </attribute>
+      <attribute id="TRVOG" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Transaction group"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="TRVOG"/>
+      </attribute>
+      <attribute id="SPAPO" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Division in sales order item comes from the material"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="SPAPO"/>
+      </attribute>
+      <attribute id="SPAPR" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Check division"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="SPAPR"/>
+      </attribute>
+      <attribute id="VSTRM" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Activate delivery scheduling"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="VSTRM"/>
+      </attribute>
+      <attribute id="TRTRM" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Activate transportation scheduling"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="TRTRM"/>
+      </attribute>
+      <attribute id="TXN08" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of the Standard Text"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="TXN08"/>
+      </attribute>
+      <attribute id="DIAFE" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Dialog message for incompletion"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="DIAFE"/>
+      </attribute>
+      <attribute id="FELDK" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Field selection group for document header"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FELDK"/>
+      </attribute>
+      <attribute id="DATVO" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Propose current date as requested delivery date"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="DATVO"/>
+      </attribute>
+      <attribute id="AWAHR" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales probability"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="AWAHR"/>
+      </attribute>
+      <attribute id="VBTYP" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SD Document Category (Long)"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="VBTYP"/>
+      </attribute>
+      <attribute id="VSBED" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Shipping conditions"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="VSBED"/>
+      </attribute>
+      <attribute id="BEZOB" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reference mandatory"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="BEZOB"/>
+      </attribute>
+      <attribute id="TXTGR" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Text determination procedure"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="TXTGR"/>
+      </attribute>
+      <attribute id="KALVG" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document classification for pricing procedure determination"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KALVG"/>
+      </attribute>
+      <attribute id="ERNAM" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="FEHGR" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Incompletion procedure for sales document"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FEHGR"/>
+      </attribute>
+      <attribute id="INFLS" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Read customer-material info record ?"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="INFLS"/>
+      </attribute>
+      <attribute id="KUNN0" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer number ZERO (0) allowed"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KUNN0"/>
+      </attribute>
+      <attribute id="KLIMP" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Check credit limit"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KLIMP"/>
+      </attribute>
+      <attribute id="KALSM" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Output determination procedure"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KALSM"/>
+      </attribute>
+      <attribute id="KAPPL" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Application for output conditions"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KAPPL"/>
+      </attribute>
+      <attribute id="KSCHL" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Output Type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KSCHL"/>
+      </attribute>
+      <attribute id="SPERR" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales document block"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="SPERR"/>
+      </attribute>
+      <attribute id="STGAK" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Statistics group for sales document type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="STGAK"/>
+      </attribute>
+      <attribute id="KALSU" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Procedure for material determination"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KALSU"/>
+      </attribute>
+      <attribute id="KALLI" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Procedure for material listing"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KALLI"/>
+      </attribute>
+      <attribute id="KALAU" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Procedure for material exclusion"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KALAU"/>
+      </attribute>
+      <attribute id="FKAIV" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing type for intercompany billing"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FKAIV"/>
+      </attribute>
+      <attribute id="CMGRA" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Credit group sales order"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="CMGRA"/>
+      </attribute>
+      <attribute id="OBJART_HIN" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Archiving document type when you create a document"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OBJART_HIN"/>
+      </attribute>
+      <attribute id="OBJART_VER" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Archiving document type used when you change a document"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OBJART_VER"/>
+      </attribute>
+      <attribute id="HITYP_PR" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Hierarchy type for pricing"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="HITYP_PR"/>
+      </attribute>
+      <attribute id="ABRVW" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Usage Indicator"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="ABRVW"/>
+      </attribute>
+      <attribute id="ABDIS" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MRP for delivery schedule types"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="ABDIS"/>
+      </attribute>
+      <attribute id="KPRGBZ" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date type (day, week, month, interval)"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KPRGBZ"/>
+      </attribute>
+      <attribute id="PRDATV" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Proposed pricing date based on the requested dlv.date"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="PRDATV"/>
+      </attribute>
+      <attribute id="VLAUF" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Lead Time in Days"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="VLAUF"/>
+      </attribute>
+      <attribute id="GUEBGV" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Proposed valid-from date"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="GUEBGV"/>
+      </attribute>
+      <attribute id="VTERL" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Contract data allowed for sales order type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="VTERL"/>
+      </attribute>
+      <attribute id="HNWAG" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="On/off switch for messages about quotations"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="HNWAG"/>
+      </attribute>
+      <attribute id="HNWKM" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="On/off switch for messages about outline agreements"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="HNWKM"/>
+      </attribute>
+      <attribute id="STSMA" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Status Profile"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="STSMA"/>
+      </attribute>
+      <attribute id="LISOF" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Create delivery immediately"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="LISOF"/>
+      </attribute>
+      <attribute id="AUARA" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Proposal for order type for the subsequent function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="AUARA"/>
+      </attribute>
+      <attribute id="KORLI" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery type for correction deliveries"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KORLI"/>
+      </attribute>
+      <attribute id="VPROF" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Profile with default values for contract data"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="VPROF"/>
+      </attribute>
+      <attribute id="AUFAK" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Order type for request for billing"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="AUFAK"/>
+      </attribute>
+      <attribute id="DIAPA" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Dialog message for product attribute"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="DIAPA"/>
+      </attribute>
+      <attribute id="FPART" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing/Invoicing Plan Type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FPART"/>
+      </attribute>
+      <attribute id="KSCHL_KO" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition type for copying costs from line items"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KSCHL_KO"/>
+      </attribute>
+      <attribute id="EXCOK" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Carry out legal control for sales document type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="EXCOK"/>
+      </attribute>
+      <attribute id="EXMOD" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Time interval for legal control"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="EXMOD"/>
+      </attribute>
+      <attribute id="KSKPF" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Pricing procedure for contract conditions at header level"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KSKPF"/>
+      </attribute>
+      <attribute id="KSPOS" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Pricing procedure for contract conditions at item level"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KSPOS"/>
+      </attribute>
+      <attribute id="LIFSM" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery block"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="LIFSM"/>
+      </attribute>
+      <attribute id="FKTKT" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Activity type for the actions procedure"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FKTKT"/>
+      </attribute>
+      <attribute id="EXDIA" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Automatic dialog in document for legal control"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="EXDIA"/>
+      </attribute>
+      <attribute id="ABGRU_IN" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reason for rejection, internally assigned by system"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="ABGRU_IN"/>
+      </attribute>
+      <attribute id="PRBST" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Check purchase order number"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="PRBST"/>
+      </attribute>
+      <attribute id="SCHEME_GRP" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Referencing requirement: Procedure"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="SCHEME_GRP"/>
+      </attribute>
+      <attribute id="HNWGK" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="On/off switch for master contract messages"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="HNWGK"/>
+      </attribute>
+      <attribute id="PUSH_GRP" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Update lower level contract - on/off"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="PUSH_GRP"/>
+      </attribute>
+      <attribute id="ABRUF_PART" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Check partner authorizations"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="ABRUF_PART"/>
+      </attribute>
+      <attribute id="RPART" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Payment card plan type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="RPART"/>
+      </attribute>
+      <attribute id="AKTFI" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Promo determination"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="AKTFI"/>
+      </attribute>
+      <attribute id="VBKLT" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales document indicator (for display in TVAK only)"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="VBKLT"/>
+      </attribute>
+      <attribute id="J_1BNFTYPE" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Nota Fiscal Type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="J_1BNFTYPE"/>
+      </attribute>
+      <attribute id="INCUP" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Increment of sub-item number in sales document"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="INCUP"/>
+      </attribute>
+      <attribute id="BABSS" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document payment guarantee procedure"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="BABSS"/>
+      </attribute>
+      <attribute id="EMPFI" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Receiving point determination"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="EMPFI"/>
+      </attribute>
+      <attribute id="DELCF" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Commitment dates switch for calculation rule"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="DELCF"/>
+      </attribute>
+      <attribute id="CCPGR" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Payment cards: Checking group - Sales document"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="CCPGR"/>
+      </attribute>
+      <attribute id="EXCBC" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Boycott list check of standard partners f.Foreign Trade - On"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="EXCBC"/>
+      </attribute>
+      <attribute id="EXCEM" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Embargo check of standard partners for Foreign Trade - On"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="EXCEM"/>
+      </attribute>
+      <attribute id="EXCLG" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Save legal control log"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="EXCLG"/>
+      </attribute>
+      <attribute id="HNWK2" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Add ref. to all contracts partner is authorized to release"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="HNWK2"/>
+      </attribute>
+      <attribute id="EXTNR_RMA" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Use document number to enter external PO number"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="EXTNR_RMA"/>
+      </attribute>
+      <attribute id="TDID" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Text ID"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="TDID"/>
+      </attribute>
+      <attribute id="AAUART1" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Alternative sales document type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="AAUART1"/>
+      </attribute>
+      <attribute id="AAUART2" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Alternative sales document type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="AAUART2"/>
+      </attribute>
+      <attribute id="RFPA_SW" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Route schedule switch for order types"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="RFPA_SW"/>
+      </attribute>
+      <attribute id="VARIANT" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Transaction variant"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="VARIANT"/>
+      </attribute>
+      <attribute id="ATPGM" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Type of group calls for the availability check"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="ATPGM"/>
+      </attribute>
+      <attribute id="VERLI" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Procedure for material listing"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="VERLI"/>
+      </attribute>
+      <attribute id="TENUR" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Carry out backwards delivery scheduling only"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="TENUR"/>
+      </attribute>
+      <attribute id="J_1AFCTYPE" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Category of Credit Memo Billing Document"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="J_1AFCTYPE"/>
+      </attribute>
+      <attribute id="FAUPR" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Shipment Cost Information Profile"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FAUPR"/>
+      </attribute>
+      <attribute id="PVBSM" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document procedure for determining product proposal proced."/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="PVBSM"/>
+      </attribute>
+      <attribute id="BPROC" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATP: Business Transaction for ATP"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="BPROC"/>
+      </attribute>
+      <attribute id="ERMAT" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material entry control"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="ERMAT"/>
+      </attribute>
+      <attribute id="BSTVO" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Propose current date as purchase order date"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="BSTVO"/>
+      </attribute>
+      <attribute id="MSR_ACTIVE" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Advanced Returns Management Active"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="MSR_ACTIVE"/>
+      </attribute>
+      <attribute id="MSR_NEXT_NUMBER" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Determination of Returns Order Number"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="MSR_NEXT_NUMBER"/>
+      </attribute>
+      <attribute id="MSR_AUARA" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Default Credit Memo Request Order Type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="MSR_AUARA"/>
+      </attribute>
+      <attribute id="MSR_BILLING_BLK" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Block"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="MSR_BILLING_BLK"/>
+      </attribute>
+      <attribute id="MSR_CM_IMMEDIATE" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Create Credit Memo Automatically"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="MSR_CM_IMMEDIATE"/>
+      </attribute>
+      <attribute id="MSR_LFART" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Default Delivery Type for Send Back to Customer"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="MSR_LFART"/>
+      </attribute>
+      <attribute id="FCS_ACTIVE" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Full Text Search for Sold-To Party Active"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FCS_ACTIVE"/>
+      </attribute>
+      <attribute id="MSR_DELIVERY_BLK" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Block"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="MSR_DELIVERY_BLK"/>
+      </attribute>
+      <attribute id="MSR_SDF_AUART" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Type for Subsequent Delivery Free of Charge"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="MSR_SDF_AUART"/>
+      </attribute>
+      <attribute id="RDP_PROFILE" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Risk Distribution Plan Profile"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="RDP_PROFILE"/>
+      </attribute>
+      <attribute id="FKART_MEV_POST" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Type for Period-End Posting"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FKART_MEV_POST"/>
+      </attribute>
+      <attribute id="FKART_MEV_POST_IB" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Type for Period-End Posting (ICB)"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FKART_MEV_POST_IB"/>
+      </attribute>
+      <attribute id="FSH_VASS_ACT" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VAS Active Flag in SD"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_VASS_ACT"/>
+      </attribute>
+      <attribute id="FSH_VASS_KALSM" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Determination Procedure in SD"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_VASS_KALSM"/>
+      </attribute>
+      <attribute id="FSH_VASS_DEL" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Criteria for VAS Deletion during Determination in SD"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_VASS_DEL"/>
+      </attribute>
+      <attribute id="FSH_VASS_DETDT" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date for VAS Determination in SD"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_VASS_DETDT"/>
+      </attribute>
+      <attribute id="FSH_CQ_CHECK" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Requirement Relevance for Contract"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_CQ_CHECK"/>
+      </attribute>
+      <attribute id="_SAPMP_PDACT" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Activate Inheritance"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="/SAPMP/PDACT"/>
+      </attribute>
+      <attribute id="_SAPMP_PPROT" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Log of Characteristic Value Inheritance"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="/SAPMP/PPROT"/>
+      </attribute>
+      <attribute id="_SAPMP_PUSER" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Inheritance: Overwrite User Values"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="/SAPMP/PUSER"/>
+      </attribute>
+      <attribute id="_SAPMP_PAUSW" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Inheritance of Characteristics Selection List"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="/SAPMP/PAUSW"/>
+      </attribute>
+      <attribute id="_SAPMP_GAUF" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Global/Local Group May Be Undone"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="/SAPMP/GAUF"/>
+      </attribute>
+      <attribute id="_SAPMP_CEACT" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Activate Configuration"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="/SAPMP/CEACT"/>
+      </attribute>
+      <attribute id="AD01AURET" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Order type billing request for retroactive billing"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="AD01AURET"/>
+      </attribute>
+      <attribute id="AD04NUMFLG" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document type relevant for numbering"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="AD04NUMFLG"/>
+      </attribute>
+      <attribute id="FSH_VAR_KALSM" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Determination Procedure"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_VAR_KALSM"/>
+      </attribute>
+      <attribute id="FSH_SO_IDOC" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Generic Article in SO Using IDoc"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_SO_IDOC"/>
+      </attribute>
+      <attribute id="FSH_DPR_DETPRO" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Determination Procedure for Distribution Curve"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_DPR_DETPRO"/>
+      </attribute>
+      <attribute id="FSH_MSOIND" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Multi Ship-to Order Type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_MSOIND"/>
+      </attribute>
+      <attribute id="FSH_MSOAUART" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_MSOAUART"/>
+      </attribute>
+      <attribute id="FSH_VAS_CORR" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Correlate VAS confirmed quantity"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_VAS_CORR"/>
+      </attribute>
+      <attribute id="FSH_AUTO_DC" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Automatic distribution indicator"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="FSH_AUTO_DC"/>
+      </attribute>
+      <attribute id="KALGT" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Procedure for GTIN Mapping"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="KALGT"/>
+      </attribute>
+      <attribute id="J_3GKBAUL" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETM-Relevant Indicator"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="J_3GKBAUL"/>
+      </attribute>
+      <attribute id="MILL_SE_ATNAM" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Characteristic name"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="MILL_SE_ATNAM"/>
+      </attribute>
+      <attribute id="OIPIPEVAL" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Validation indicator for pipeline fields (X=ON, blank=OFF)"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPIPEVAL"/>
+      </attribute>
+      <attribute id="OIISOILPD" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IS-Oil plant determination indicator:  x=yes   blank=no"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIISOILPD"/>
+      </attribute>
+      <attribute id="OICSEGI" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quantity schedule creation permitted"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OICSEGI"/>
+      </attribute>
+      <attribute id="OIMSG_PRD" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Message type for product with contract restrictions"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIMSG_PRD"/>
+      </attribute>
+      <attribute id="OIMSG_SHP" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Message type for contract restrictions ship-to party"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIMSG_SHP"/>
+      </attribute>
+      <attribute id="OIMSG_QTY" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Message type for contract restrictions quantity"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIMSG_QTY"/>
+      </attribute>
+      <attribute id="OIMSG_TRM" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Message type for contract restrictions payment terms"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIMSG_TRM"/>
+      </attribute>
+      <attribute id="OIMSG_DAT" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Message type for contract restrictions validity period"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIMSG_DAT"/>
+      </attribute>
+      <attribute id="OIMSG_UOM" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Message type for contract restrictions unit of measure"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIMSG_UOM"/>
+      </attribute>
+      <attribute id="OIPRTFNC" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPRTFNC"/>
+      </attribute>
+      <attribute id="OIFCONTI" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IS-Oil MRN indicator for additional contract data"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIFCONTI"/>
+      </attribute>
+      <attribute id="OICFKARTDI" order="155" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Differential invoice billing type proposal"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OICFKARTDI"/>
+      </attribute>
+      <attribute id="OIPARVW1" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner Function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPARVW1"/>
+      </attribute>
+      <attribute id="OIPARVW2" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner Function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPARVW2"/>
+      </attribute>
+      <attribute id="OIPARVW3" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner Function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPARVW3"/>
+      </attribute>
+      <attribute id="OIPARVW4" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner Function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPARVW4"/>
+      </attribute>
+      <attribute id="OIPARVW5" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner Function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPARVW5"/>
+      </attribute>
+      <attribute id="OIPARVW6" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner Function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPARVW6"/>
+      </attribute>
+      <attribute id="OIPARVW7" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner Function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPARVW7"/>
+      </attribute>
+      <attribute id="OIPARVW8" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner Function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPARVW8"/>
+      </attribute>
+      <attribute id="OIPARVW9" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner Function"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIPARVW9"/>
+      </attribute>
+      <attribute id="OISUBHEAD" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Subscreen number (header)"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OISUBHEAD"/>
+      </attribute>
+      <attribute id="OISUBITEM" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Subscreen number (item level)"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OISUBITEM"/>
+      </attribute>
+      <attribute id="OIUSEREXIT" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of the routine used for copying"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIUSEREXIT"/>
+      </attribute>
+      <attribute id="OIU_FKARA_1" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRA Order related billing type"/>
+        <keyMapping columnObjectName="syn_tbl_TVAK" columnName="OIU_FKARA"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

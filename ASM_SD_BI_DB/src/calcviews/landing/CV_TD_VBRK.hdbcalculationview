@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_VBRK" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_VBRK"/>
+  <metadata changedAt="2019-12-19 21:40:58.135"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_VBRK">
+      <resourceUri>syn_tbl_VBRK</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="P_VBRK">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="FKART"/>
+        <viewAttribute id="FKTYP"/>
+        <viewAttribute id="VBTYP"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="KALSM"/>
+        <viewAttribute id="KNUMV"/>
+        <viewAttribute id="VSBED"/>
+        <viewAttribute id="FKDAT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="POPER"/>
+        <viewAttribute id="KONDA"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="BZIRK"/>
+        <viewAttribute id="PLTYP"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="RFBSK"/>
+        <viewAttribute id="MRNKZ"/>
+        <viewAttribute id="KURRF"/>
+        <viewAttribute id="CPKUR"/>
+        <viewAttribute id="VALTG"/>
+        <viewAttribute id="VALDT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="ZLSCH"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="COUNC"/>
+        <viewAttribute id="CITYC"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="TAXK1"/>
+        <viewAttribute id="TAXK2"/>
+        <viewAttribute id="TAXK3"/>
+        <viewAttribute id="TAXK4"/>
+        <viewAttribute id="TAXK5"/>
+        <viewAttribute id="TAXK6"/>
+        <viewAttribute id="TAXK7"/>
+        <viewAttribute id="TAXK8"/>
+        <viewAttribute id="TAXK9"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="ZUKRI"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="ERZET"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="STAFO"/>
+        <viewAttribute id="KUNRG"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="MABER"/>
+        <viewAttribute id="STWAE"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="AEDAT"/>
+        <viewAttribute id="SFAKN"/>
+        <viewAttribute id="KNUMA"/>
+        <viewAttribute id="FKART_RL"/>
+        <viewAttribute id="FKDAT_RL"/>
+        <viewAttribute id="KURST"/>
+        <viewAttribute id="MSCHL"/>
+        <viewAttribute id="MANSP"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="KNKLI"/>
+        <viewAttribute id="CMWAE"/>
+        <viewAttribute id="CMKUF"/>
+        <viewAttribute id="HITYP_PR"/>
+        <viewAttribute id="BSTNK_VF"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="FKART_AB"/>
+        <viewAttribute id="KAPPL"/>
+        <viewAttribute id="LANDTX"/>
+        <viewAttribute id="STCEG_H"/>
+        <viewAttribute id="STCEG_L"/>
+        <viewAttribute id="XBLNR"/>
+        <viewAttribute id="ZUONR"/>
+        <viewAttribute id="MWSBK"/>
+        <viewAttribute id="LOGSYS"/>
+        <viewAttribute id="FKSTO"/>
+        <viewAttribute id="XEGDR"/>
+        <viewAttribute id="RPLNR"/>
+        <viewAttribute id="J_1AFITP"/>
+        <viewAttribute id="KURRF_DAT"/>
+        <viewAttribute id="KIDNO"/>
+        <viewAttribute id="BVTYP"/>
+        <viewAttribute id="NUMPG"/>
+        <viewAttribute id="BUPLA"/>
+        <viewAttribute id="VKONT"/>
+        <viewAttribute id="FKK_DOCSTAT"/>
+        <viewAttribute id="NRZAS"/>
+        <viewAttribute id="SPE_BILLING_IND"/>
+        <viewAttribute id="VTREF"/>
+        <viewAttribute id="FK_SOURCE_SYS"/>
+        <viewAttribute id="FKTYP_CRM"/>
+        <viewAttribute id="STGRD"/>
+        <viewAttribute id="CHANGED_ON"/>
+        <viewAttribute id="EXPKZ"/>
+        <viewAttribute id="EXNUM"/>
+        <viewAttribute id="AKWAE"/>
+        <viewAttribute id="AKKUR"/>
+        <viewAttribute id="LCNUM"/>
+        <viewAttribute id="_DATAAGING"/>
+        <viewAttribute id="BUCHK"/>
+        <viewAttribute id="GBSTK"/>
+        <viewAttribute id="RELIK"/>
+        <viewAttribute id="UVALS"/>
+        <viewAttribute id="UVPRS"/>
+        <viewAttribute id="FKSAK"/>
+        <viewAttribute id="FKARA"/>
+        <viewAttribute id="VF_STATUS"/>
+        <viewAttribute id="VF_TODO"/>
+        <viewAttribute id="DRAFT"/>
+        <viewAttribute id="ACTIVEDOCUMENT"/>
+        <viewAttribute id="GRWCU"/>
+        <viewAttribute id="INTRA_REL"/>
+        <viewAttribute id="INTRA_EXCL"/>
+        <viewAttribute id="ACCRREL"/>
+        <viewAttribute id="J_1TPBUPL"/>
+        <viewAttribute id="INCOV"/>
+        <viewAttribute id="INCO2_L"/>
+        <viewAttribute id="INCO3_L"/>
+        <viewAttribute id="DUMMY_BILLINGDOC_INCL_EEW_PS"/>
+        <viewAttribute id="ZAPCGKH"/>
+        <viewAttribute id="APCGK_EXTENDH"/>
+        <viewAttribute id="ZABDATH"/>
+        <viewAttribute id="DPC_REL"/>
+        <viewAttribute id="AD01BASDOC"/>
+        <viewAttribute id="AD01FAREG"/>
+        <viewAttribute id="VCHRNMBR"/>
+        <viewAttribute id="J_3GKBAUL"/>
+        <viewAttribute id="J_3GKENIE"/>
+        <viewAttribute id="KUNWE"/>
+        <viewAttribute id="MNDID"/>
+        <viewAttribute id="PAY_TYPE"/>
+        <viewAttribute id="SEPON"/>
+        <viewAttribute id="MNDVG"/>
+        <viewAttribute id="SPPAYM"/>
+        <viewAttribute id="SPPORD"/>
+        <viewAttribute id="BDR_STATUS"/>
+        <viewAttribute id="BDR_REF"/>
+        <viewAttribute id="BDR_REF_LOGSYS"/>
+        <viewAttribute id="ABSTK"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="BDR_REF_VBTYP"/>
+        <viewAttribute id="PBD_STATUS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="syn_tbl_VBRK"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="P_VBRK">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VBELN"/>
+      </attribute>
+      <attribute id="FKART" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKART"/>
+      </attribute>
+      <attribute id="FKTYP" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKTYP"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKTYP"/>
+      </attribute>
+      <attribute id="VBTYP" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBTYP"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VBTYP"/>
+      </attribute>
+      <attribute id="WAERK" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="WAERK"/>
+      </attribute>
+      <attribute id="VKORG" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VKORG"/>
+      </attribute>
+      <attribute id="VTWEG" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VTWEG"/>
+      </attribute>
+      <attribute id="KALSM" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALSM"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KALSM"/>
+      </attribute>
+      <attribute id="KNUMV" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMV"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KNUMV"/>
+      </attribute>
+      <attribute id="VSBED" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSBED"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VSBED"/>
+      </attribute>
+      <attribute id="FKDAT" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKDAT"/>
+      </attribute>
+      <attribute id="BELNR" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BELNR"/>
+      </attribute>
+      <attribute id="GJAHR" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="POPER" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POPER"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="POPER"/>
+      </attribute>
+      <attribute id="KONDA" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONDA"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KONDA"/>
+      </attribute>
+      <attribute id="KDGRP" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDGRP"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KDGRP"/>
+      </attribute>
+      <attribute id="BZIRK" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BZIRK"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BZIRK"/>
+      </attribute>
+      <attribute id="PLTYP" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLTYP"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="PLTYP"/>
+      </attribute>
+      <attribute id="INCO1" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO1"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="INCO1"/>
+      </attribute>
+      <attribute id="INCO2" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="INCO2"/>
+      </attribute>
+      <attribute id="RFBSK" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFBSK"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="RFBSK"/>
+      </attribute>
+      <attribute id="MRNKZ" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MRNKZ"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="MRNKZ"/>
+      </attribute>
+      <attribute id="CPKUR" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPKUR"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="CPKUR"/>
+      </attribute>
+      <attribute id="VALTG" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALTG"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VALTG"/>
+      </attribute>
+      <attribute id="VALDT" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALDT"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VALDT"/>
+      </attribute>
+      <attribute id="ZTERM" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="ZLSCH" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZLSCH"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ZLSCH"/>
+      </attribute>
+      <attribute id="KTGRD" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTGRD"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KTGRD"/>
+      </attribute>
+      <attribute id="LAND1" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAND1"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="LAND1"/>
+      </attribute>
+      <attribute id="REGIO" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REGIO"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="REGIO"/>
+      </attribute>
+      <attribute id="COUNC" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNC"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="COUNC"/>
+      </attribute>
+      <attribute id="CITYC" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITYC"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="CITYC"/>
+      </attribute>
+      <attribute id="BUKRS" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="TAXK1" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXK1"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="TAXK1"/>
+      </attribute>
+      <attribute id="TAXK2" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXK2"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="TAXK2"/>
+      </attribute>
+      <attribute id="TAXK3" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXK3"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="TAXK3"/>
+      </attribute>
+      <attribute id="TAXK4" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXK4"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="TAXK4"/>
+      </attribute>
+      <attribute id="TAXK5" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXK5"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="TAXK5"/>
+      </attribute>
+      <attribute id="TAXK6" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXK6"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="TAXK6"/>
+      </attribute>
+      <attribute id="TAXK7" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXK7"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="TAXK7"/>
+      </attribute>
+      <attribute id="TAXK8" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXK8"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="TAXK8"/>
+      </attribute>
+      <attribute id="TAXK9" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXK9"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="TAXK9"/>
+      </attribute>
+      <attribute id="ZUKRI" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUKRI"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ZUKRI"/>
+      </attribute>
+      <attribute id="ERNAM" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="ERZET" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERZET"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ERZET"/>
+      </attribute>
+      <attribute id="ERDAT" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="STAFO" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STAFO"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="STAFO"/>
+      </attribute>
+      <attribute id="KUNRG" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNRG"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KUNRG"/>
+      </attribute>
+      <attribute id="KUNAG" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNAG"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KUNAG"/>
+      </attribute>
+      <attribute id="MABER" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MABER"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="MABER"/>
+      </attribute>
+      <attribute id="STWAE" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STWAE"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="STWAE"/>
+      </attribute>
+      <attribute id="STCEG" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="STCEG"/>
+      </attribute>
+      <attribute id="AEDAT" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AEDAT"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="SFAKN" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SFAKN"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="SFAKN"/>
+      </attribute>
+      <attribute id="KNUMA" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMA"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KNUMA"/>
+      </attribute>
+      <attribute id="FKART_RL" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART_RL"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKART_RL"/>
+      </attribute>
+      <attribute id="FKDAT_RL" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_RL"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKDAT_RL"/>
+      </attribute>
+      <attribute id="KURST" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KURST"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KURST"/>
+      </attribute>
+      <attribute id="MSCHL" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSCHL"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="MSCHL"/>
+      </attribute>
+      <attribute id="MANSP" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANSP"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="MANSP"/>
+      </attribute>
+      <attribute id="SPART" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="SPART"/>
+      </attribute>
+      <attribute id="KKBER" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KKBER"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KKBER"/>
+      </attribute>
+      <attribute id="KNKLI" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNKLI"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KNKLI"/>
+      </attribute>
+      <attribute id="CMWAE" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMWAE"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="CMWAE"/>
+      </attribute>
+      <attribute id="HITYP_PR" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HITYP_PR"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="HITYP_PR"/>
+      </attribute>
+      <attribute id="BSTNK_VF" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTNK_VF"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BSTNK_VF"/>
+      </attribute>
+      <attribute id="VBUND" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBUND"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VBUND"/>
+      </attribute>
+      <attribute id="FKART_AB" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART_AB"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKART_AB"/>
+      </attribute>
+      <attribute id="KAPPL" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KAPPL"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KAPPL"/>
+      </attribute>
+      <attribute id="LANDTX" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LANDTX"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="LANDTX"/>
+      </attribute>
+      <attribute id="STCEG_H" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG_H"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="STCEG_H"/>
+      </attribute>
+      <attribute id="STCEG_L" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG_L"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="STCEG_L"/>
+      </attribute>
+      <attribute id="XBLNR" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBLNR"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="XBLNR"/>
+      </attribute>
+      <attribute id="ZUONR" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUONR"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ZUONR"/>
+      </attribute>
+      <attribute id="LOGSYS" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGSYS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="LOGSYS"/>
+      </attribute>
+      <attribute id="FKSTO" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKSTO"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKSTO"/>
+      </attribute>
+      <attribute id="XEGDR" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XEGDR"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="XEGDR"/>
+      </attribute>
+      <attribute id="RPLNR" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RPLNR"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="RPLNR"/>
+      </attribute>
+      <attribute id="J_1AFITP" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1AFITP"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="J_1AFITP"/>
+      </attribute>
+      <attribute id="KURRF_DAT" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KURRF_DAT"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KURRF_DAT"/>
+      </attribute>
+      <attribute id="KIDNO" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KIDNO"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KIDNO"/>
+      </attribute>
+      <attribute id="BVTYP" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BVTYP"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BVTYP"/>
+      </attribute>
+      <attribute id="NUMPG" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NUMPG"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="NUMPG"/>
+      </attribute>
+      <attribute id="BUPLA" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUPLA"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BUPLA"/>
+      </attribute>
+      <attribute id="VKONT" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKONT"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VKONT"/>
+      </attribute>
+      <attribute id="FKK_DOCSTAT" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKK_DOCSTAT"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKK_DOCSTAT"/>
+      </attribute>
+      <attribute id="NRZAS" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NRZAS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="NRZAS"/>
+      </attribute>
+      <attribute id="SPE_BILLING_IND" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_BILLING_IND"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="SPE_BILLING_IND"/>
+      </attribute>
+      <attribute id="VTREF" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTREF"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VTREF"/>
+      </attribute>
+      <attribute id="FK_SOURCE_SYS" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FK_SOURCE_SYS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FK_SOURCE_SYS"/>
+      </attribute>
+      <attribute id="FKTYP_CRM" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKTYP_CRM"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKTYP_CRM"/>
+      </attribute>
+      <attribute id="STGRD" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STGRD"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="STGRD"/>
+      </attribute>
+      <attribute id="EXPKZ" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXPKZ"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="EXPKZ"/>
+      </attribute>
+      <attribute id="EXNUM" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXNUM"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="EXNUM"/>
+      </attribute>
+      <attribute id="AKWAE" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AKWAE"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="AKWAE"/>
+      </attribute>
+      <attribute id="LCNUM" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LCNUM"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="LCNUM"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="BUCHK" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUCHK"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BUCHK"/>
+      </attribute>
+      <attribute id="GBSTK" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GBSTK"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="GBSTK"/>
+      </attribute>
+      <attribute id="RELIK" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RELIK"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="RELIK"/>
+      </attribute>
+      <attribute id="UVALS" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVALS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="UVALS"/>
+      </attribute>
+      <attribute id="UVPRS" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVPRS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="UVPRS"/>
+      </attribute>
+      <attribute id="FKSAK" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKSAK"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKSAK"/>
+      </attribute>
+      <attribute id="FKARA" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKARA"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="FKARA"/>
+      </attribute>
+      <attribute id="VF_STATUS" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VF_STATUS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VF_STATUS"/>
+      </attribute>
+      <attribute id="VF_TODO" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VF_TODO"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VF_TODO"/>
+      </attribute>
+      <attribute id="DRAFT" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DRAFT"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="DRAFT"/>
+      </attribute>
+      <attribute id="ACTIVEDOCUMENT" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACTIVEDOCUMENT"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ACTIVEDOCUMENT"/>
+      </attribute>
+      <attribute id="GRWCU" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRWCU"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="GRWCU"/>
+      </attribute>
+      <attribute id="INTRA_REL" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTRA_REL"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="INTRA_REL"/>
+      </attribute>
+      <attribute id="INTRA_EXCL" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTRA_EXCL"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="INTRA_EXCL"/>
+      </attribute>
+      <attribute id="ACCRREL" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACCRREL"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ACCRREL"/>
+      </attribute>
+      <attribute id="J_1TPBUPL" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1TPBUPL"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="J_1TPBUPL"/>
+      </attribute>
+      <attribute id="INCOV" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCOV"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="INCOV"/>
+      </attribute>
+      <attribute id="INCO2_L" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2_L"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="INCO2_L"/>
+      </attribute>
+      <attribute id="INCO3_L" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO3_L"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="INCO3_L"/>
+      </attribute>
+      <attribute id="DUMMY_BILLINGDOC_INCL_EEW_PS" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_BILLINGDOC_INCL_EEW_PS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="DUMMY_BILLINGDOC_INCL_EEW_PS"/>
+      </attribute>
+      <attribute id="ZAPCGKH" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAPCGKH"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ZAPCGKH"/>
+      </attribute>
+      <attribute id="APCGK_EXTENDH" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APCGK_EXTENDH"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="APCGK_EXTENDH"/>
+      </attribute>
+      <attribute id="ZABDATH" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZABDATH"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ZABDATH"/>
+      </attribute>
+      <attribute id="DPC_REL" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DPC_REL"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="DPC_REL"/>
+      </attribute>
+      <attribute id="AD01BASDOC" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AD01BASDOC"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="AD01BASDOC"/>
+      </attribute>
+      <attribute id="AD01FAREG" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AD01FAREG"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="AD01FAREG"/>
+      </attribute>
+      <attribute id="VCHRNMBR" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCHRNMBR"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="VCHRNMBR"/>
+      </attribute>
+      <attribute id="J_3GKBAUL" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GKBAUL"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="J_3GKBAUL"/>
+      </attribute>
+      <attribute id="J_3GKENIE" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GKENIE"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="J_3GKENIE"/>
+      </attribute>
+      <attribute id="KUNWE" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNWE"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="KUNWE"/>
+      </attribute>
+      <attribute id="MNDID" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MNDID"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="MNDID"/>
+      </attribute>
+      <attribute id="PAY_TYPE" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAY_TYPE"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="PAY_TYPE"/>
+      </attribute>
+      <attribute id="SEPON" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SEPON"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="SEPON"/>
+      </attribute>
+      <attribute id="MNDVG" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MNDVG"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="MNDVG"/>
+      </attribute>
+      <attribute id="SPPAYM" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPPAYM"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="SPPAYM"/>
+      </attribute>
+      <attribute id="SPPORD" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPPORD"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="SPPORD"/>
+      </attribute>
+      <attribute id="BDR_STATUS" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BDR_STATUS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BDR_STATUS"/>
+      </attribute>
+      <attribute id="BDR_REF" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BDR_REF"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BDR_REF"/>
+      </attribute>
+      <attribute id="BDR_REF_LOGSYS" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BDR_REF_LOGSYS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BDR_REF_LOGSYS"/>
+      </attribute>
+      <attribute id="ABSTK" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABSTK"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="ABSTK"/>
+      </attribute>
+      <attribute id="BLART" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLART"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BLART"/>
+      </attribute>
+      <attribute id="BDR_REF_VBTYP" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BDR_REF_VBTYP"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="BDR_REF_VBTYP"/>
+      </attribute>
+      <attribute id="PBD_STATUS" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PBD_STATUS"/>
+        <keyMapping columnObjectName="P_VBRK" columnName="PBD_STATUS"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="KURRF" order="24" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KURRF"/>
+        <measureMapping columnObjectName="P_VBRK" columnName="KURRF"/>
+      </measure>
+      <measure id="NETWR" order="45" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR"/>
+        <measureMapping columnObjectName="P_VBRK" columnName="NETWR"/>
+      </measure>
+      <measure id="CMKUF" order="68" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CMKUF"/>
+        <measureMapping columnObjectName="P_VBRK" columnName="CMKUF"/>
+      </measure>
+      <measure id="MWSBK" order="79" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWSBK"/>
+        <measureMapping columnObjectName="P_VBRK" columnName="MWSBK"/>
+      </measure>
+      <measure id="CHANGED_ON" order="98" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CHANGED_ON"/>
+        <measureMapping columnObjectName="P_VBRK" columnName="CHANGED_ON"/>
+      </measure>
+      <measure id="AKKUR" order="102" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="AKKUR"/>
+        <measureMapping columnObjectName="P_VBRK" columnName="AKKUR"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="22" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_VBRK" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

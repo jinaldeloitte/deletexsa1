@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_DIM_MD_CUSTOMER_SALES_AREA" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_CUSTOMER_SALES_AREA"/>
+  <metadata changedAt="2021-12-06 18:55:11.81"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="36"/>
+  <dataSources>
+    <DataSource id="syn_tbl_KNVV">
+      <resourceUri>syn_tbl_KNVV</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_KNVK">
+      <resourceUri>syn_tbl_KNVK</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="SalesData">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="RDOFF"/>
+        <viewAttribute id="VKBUR"/>
+        <viewAttribute id="VKGRP"/>
+        <viewAttribute id="VWERK"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="KVGR1"/>
+        <viewAttribute id="KVGR2"/>
+        <viewAttribute id="KVGR3"/>
+        <viewAttribute id="KVGR4"/>
+        <viewAttribute id="KVGR5"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="BZIRK"/>
+        <viewAttribute id="FSH_KVGR10"/>
+        <viewAttribute id="FSH_KVGR9"/>
+        <viewAttribute id="FSH_KVGR8"/>
+        <viewAttribute id="FSH_KVGR7"/>
+        <viewAttribute id="FSH_KVGR6"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="KLABC"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="PRAT1"/>
+        <viewAttribute id="PRAT2"/>
+        <viewAttribute id="PRAT3"/>
+        <viewAttribute id="PRAT5"/>
+        <viewAttribute id="PRAT4"/>
+        <viewAttribute id="PRAT6"/>
+        <viewAttribute id="PRAT7"/>
+        <viewAttribute id="PRAT8"/>
+        <viewAttribute id="PRAT9"/>
+        <viewAttribute id="PRATA"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="CASSD"/>
+        <viewAttribute id="FAKSD"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_KNVV"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="PARNR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+      <input node="syn_tbl_KNVK"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="RDOFF"/>
+        <viewAttribute id="VKBUR"/>
+        <viewAttribute id="VKGRP"/>
+        <viewAttribute id="VWERK"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="KVGR1"/>
+        <viewAttribute id="KVGR2"/>
+        <viewAttribute id="KVGR3"/>
+        <viewAttribute id="KVGR4"/>
+        <viewAttribute id="KVGR5"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="BZIRK"/>
+        <viewAttribute id="FSH_KVGR10"/>
+        <viewAttribute id="FSH_KVGR9"/>
+        <viewAttribute id="FSH_KVGR8"/>
+        <viewAttribute id="FSH_KVGR7"/>
+        <viewAttribute id="FSH_KVGR6"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="KLABC"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="PRAT1"/>
+        <viewAttribute id="PRAT2"/>
+        <viewAttribute id="PRAT3"/>
+        <viewAttribute id="PRAT5"/>
+        <viewAttribute id="PRAT4"/>
+        <viewAttribute id="PRAT6"/>
+        <viewAttribute id="PRAT7"/>
+        <viewAttribute id="PRAT8"/>
+        <viewAttribute id="PRAT9"/>
+        <viewAttribute id="PRATA"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="KUNNR_KNVP"/>
+        <viewAttribute id="WAERS_KNVV"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="CASSD"/>
+        <viewAttribute id="FAKSD"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="SalesData">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG" source="VKORG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG" source="VTWEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART" source="SPART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RDOFF" source="RDOFF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKBUR" source="VKBUR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKGRP" source="VKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VWERK" source="VWERK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1" source="INCO1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2" source="INCO2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR1" source="KVGR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR2" source="KVGR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR3" source="KVGR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR4" source="KVGR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KVGR5" source="KVGR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BZIRK" source="BZIRK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR10" source="FSH_KVGR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR9" source="FSH_KVGR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR8" source="FSH_KVGR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR7" source="FSH_KVGR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_KVGR6" source="FSH_KVGR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDGRP" source="KDGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KLABC" source="KLABC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTGRD" source="KTGRD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT1" source="PRAT1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT2" source="PRAT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT3" source="PRAT3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT5" source="PRAT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT4" source="PRAT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT6" source="PRAT6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT7" source="PRAT7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT8" source="PRAT8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRAT9" source="PRAT9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRATA" source="PRATA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS_KNVV" source="WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CASSD" source="CASSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSD" source="FAKSD"/>
+      </input>
+      <input node="Aggregation_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNVP" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      </input>
+    <joinAttribute name="KUNNR"/>
+    <joinAttribute name="MANDT"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join">
+    <descriptions defaultDescription="VDIM_CUSTOMER_SALES_AREA"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="Join" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KUNNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="Join" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="VKORG" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG"/>
+        <keyMapping columnObjectName="Join" columnName="VKORG"/>
+      </attribute>
+      <attribute id="VTWEG" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG"/>
+        <keyMapping columnObjectName="Join" columnName="VTWEG"/>
+      </attribute>
+      <attribute id="SPART" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="Join" columnName="SPART"/>
+      </attribute>
+      <attribute id="PRFRE" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Relevant for price determination ID"/>
+        <keyMapping columnObjectName="Join" columnName="PRFRE"/>
+      </attribute>
+      <attribute id="RDOFF" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Switch off rounding?"/>
+        <keyMapping columnObjectName="Join" columnName="RDOFF"/>
+      </attribute>
+      <attribute id="VKBUR" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Office"/>
+        <keyMapping columnObjectName="Join" columnName="VKBUR"/>
+      </attribute>
+      <attribute id="VKGRP" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Group"/>
+        <keyMapping columnObjectName="Join" columnName="VKGRP"/>
+      </attribute>
+      <attribute id="VWERK" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivering Plant (Own or External)"/>
+        <keyMapping columnObjectName="Join" columnName="VWERK"/>
+      </attribute>
+      <attribute id="KKBER" order="11" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Credit control area"/>
+        <keyMapping columnObjectName="Join" columnName="KKBER"/>
+      </attribute>
+      <attribute id="INCO1" order="12" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Incoterms (Part 1)"/>
+        <keyMapping columnObjectName="Join" columnName="INCO1"/>
+      </attribute>
+      <attribute id="INCO2" order="13" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Incoterms (Part 2)"/>
+        <keyMapping columnObjectName="Join" columnName="INCO2"/>
+      </attribute>
+      <attribute id="KVGR1" order="14" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer group 1"/>
+        <keyMapping columnObjectName="Join" columnName="KVGR1"/>
+      </attribute>
+      <attribute id="KVGR2" order="15" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer group 2"/>
+        <keyMapping columnObjectName="Join" columnName="KVGR2"/>
+      </attribute>
+      <attribute id="KVGR3" order="16" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer group 3"/>
+        <keyMapping columnObjectName="Join" columnName="KVGR3"/>
+      </attribute>
+      <attribute id="KVGR4" order="17" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer group 4"/>
+        <keyMapping columnObjectName="Join" columnName="KVGR4"/>
+      </attribute>
+      <attribute id="KVGR5" order="18" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer group 5"/>
+        <keyMapping columnObjectName="Join" columnName="KVGR5"/>
+      </attribute>
+      <attribute id="BOKRE" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Customer Is Rebate-Relevant"/>
+        <keyMapping columnObjectName="Join" columnName="BOKRE"/>
+      </attribute>
+      <attribute id="BZIRK" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales District"/>
+        <keyMapping columnObjectName="Join" columnName="BZIRK"/>
+      </attribute>
+      <attribute id="FSH_KVGR10" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group 10"/>
+        <keyMapping columnObjectName="Join" columnName="FSH_KVGR10"/>
+      </attribute>
+      <attribute id="FSH_KVGR9" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group 9"/>
+        <keyMapping columnObjectName="Join" columnName="FSH_KVGR9"/>
+      </attribute>
+      <attribute id="FSH_KVGR8" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group 8"/>
+        <keyMapping columnObjectName="Join" columnName="FSH_KVGR8"/>
+      </attribute>
+      <attribute id="FSH_KVGR7" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group 7"/>
+        <keyMapping columnObjectName="Join" columnName="FSH_KVGR7"/>
+      </attribute>
+      <attribute id="FSH_KVGR6" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group 6"/>
+        <keyMapping columnObjectName="Join" columnName="FSH_KVGR6"/>
+      </attribute>
+      <attribute id="KDGRP" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group"/>
+        <keyMapping columnObjectName="Join" columnName="KDGRP"/>
+      </attribute>
+      <attribute id="KLABC" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer classification (ABC analysis)"/>
+        <keyMapping columnObjectName="Join" columnName="KLABC"/>
+      </attribute>
+      <attribute id="KTGRD" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Assignment Group for this customer"/>
+        <keyMapping columnObjectName="Join" columnName="KTGRD"/>
+      </attribute>
+      <attribute id="PRAT1" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 1"/>
+        <keyMapping columnObjectName="Join" columnName="PRAT1"/>
+      </attribute>
+      <attribute id="PRAT2" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 2"/>
+        <keyMapping columnObjectName="Join" columnName="PRAT2"/>
+      </attribute>
+      <attribute id="PRAT3" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 3"/>
+        <keyMapping columnObjectName="Join" columnName="PRAT3"/>
+      </attribute>
+      <attribute id="PRAT5" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 5"/>
+        <keyMapping columnObjectName="Join" columnName="PRAT5"/>
+      </attribute>
+      <attribute id="PRAT4" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 4"/>
+        <keyMapping columnObjectName="Join" columnName="PRAT4"/>
+      </attribute>
+      <attribute id="PRAT6" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 6"/>
+        <keyMapping columnObjectName="Join" columnName="PRAT6"/>
+      </attribute>
+      <attribute id="PRAT7" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 7"/>
+        <keyMapping columnObjectName="Join" columnName="PRAT7"/>
+      </attribute>
+      <attribute id="PRAT8" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 8"/>
+        <keyMapping columnObjectName="Join" columnName="PRAT8"/>
+      </attribute>
+      <attribute id="PRAT9" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 9"/>
+        <keyMapping columnObjectName="Join" columnName="PRAT9"/>
+      </attribute>
+      <attribute id="PRATA" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID for product attribute 10"/>
+        <keyMapping columnObjectName="Join" columnName="PRATA"/>
+      </attribute>
+      <attribute id="ZTERM" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Terms of Payment Key"/>
+        <keyMapping columnObjectName="Join" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="PARNR" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of contact person"/>
+        <keyMapping columnObjectName="Join" columnName="PARNR"/>
+      </attribute>
+      <attribute id="KUNNR_KNVP" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="Join" columnName="KUNNR_KNVP"/>
+      </attribute>
+      <attribute id="WAERS_KNVV" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency"/>
+        <keyMapping columnObjectName="Join" columnName="WAERS_KNVV"/>
+      </attribute>
+      <attribute id="AUFSD" order="43" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer order block (sales area)"/>
+        <keyMapping columnObjectName="Join" columnName="AUFSD"/>
+      </attribute>
+      <attribute id="CASSD" order="44" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Block for Customer (Sales Area)"/>
+        <keyMapping columnObjectName="Join" columnName="CASSD"/>
+      </attribute>
+      <attribute id="FAKSD" order="45" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing block for customer (sales and distribution)"/>
+        <keyMapping columnObjectName="Join" columnName="FAKSD"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="SalesData" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+    <shape modelObjectName="SalesData" modelObjectNameSpace="Join" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Aggregation_1" modelObjectNameSpace="Join" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

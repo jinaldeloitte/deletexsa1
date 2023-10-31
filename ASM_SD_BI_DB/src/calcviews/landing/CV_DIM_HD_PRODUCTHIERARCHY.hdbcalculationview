@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" schemaVersion="3.0" id="CV_DIM_HD_PRODUCTHIERARCHY" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Y_CV_PRODUCT_HIERARCHY_3"/>
+  <metadata changedAt="2021-12-06 18:55:05.686"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="52"/>
+  <dataSources>
+    <DataSource id="CV_MD_T179">
+      <resourceUri>CV_MD_T179</resourceUri>
+    </DataSource>
+    <DataSource id="Level2$$$$CV_MD_T179$$">
+      <resourceUri>CV_MD_T179</resourceUri>
+    </DataSource>
+    <DataSource id="Level3$$$$CV_MD_T179$$">
+      <resourceUri>CV_MD_T179</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_T179">
+      <resourceUri>syn_tbl_T179</resourceUri>
+    </DataSource>
+    <DataSource id="Projection_1$$$$syn_tbl_T179$$">
+      <resourceUri>syn_tbl_T179</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_T179T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_T179T</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Level0" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="STUFE"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="PARENT_CD" length="18" expressionLanguage="COLUMN_ENGINE">
+          <formula>''</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="CV_MD_T179"/>
+    <filter>&quot;STUFE&quot;='0'</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Level2" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="STUFE"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="PARENT_CD" length="18" expressionLanguage="COLUMN_ENGINE">
+          <formula>leftstr(&quot;PRODH&quot;,5)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="Level2$$$$CV_MD_T179$$"/>
+    <filter>&quot;STUFE&quot;='2'</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Level3" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="STUFE"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="PARENT_CD" length="18" expressionLanguage="COLUMN_ENGINE">
+          <formula>leftstr(&quot;PRODH&quot;,10)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="Level3$$$$CV_MD_T179$$"/>
+    <filter>&quot;STUFE&quot;='3'</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Level1" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="STUFE"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_T179"/>
+    <filter>&quot;STUFE&quot;='1'</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="PARENT_CD"/>
+        <viewAttribute id="STUFE"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_1$$$$syn_tbl_T179$$">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_CD" source="PRODH"/></input>
+    <filter>in(&quot;STUFE&quot;,'0')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="STUFE"/>
+        <viewAttribute id="PARENT_CD"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Level1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRODH" source="PRODH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STUFE" source="STUFE"/>
+      </input>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_CD" source="PARENT_CD"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="STUFE"/>
+        <viewAttribute id="PARENT_CD"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input emptyUnionBehavior="NO_ROW" node="Level0">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRODH" source="PRODH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STUFE" source="STUFE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_CD" source="PARENT_CD"/>
+      </input>
+      <input emptyUnionBehavior="NO_ROW" node="Level2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRODH" source="PRODH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STUFE" source="STUFE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_CD" source="PARENT_CD"/>
+      </input>
+      <input emptyUnionBehavior="NO_ROW" node="Level3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRODH" source="PRODH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STUFE" source="STUFE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_CD" source="PARENT_CD"/>
+      </input>
+      <input emptyUnionBehavior="NO_ROW" node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRODH" source="PRODH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STUFE" source="STUFE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_CD" source="PARENT_CD"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="SPRAS"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_T179T"/>
+    <filter>&quot;SPRAS&quot;='E'</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="referential">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="STUFE"/>
+        <viewAttribute id="PARENT_CD"/>
+        <viewAttribute id="VTEXT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Union_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRODH" source="PRODH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STUFE" source="STUFE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_CD" source="PARENT_CD"/>
+      </input>
+      <input node="Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRODH" source="PRODH"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="PRODH"/>
+  </calculationView>
+</calculationViews>
+  <inlineHierarchy xsi:type="Dimension:ParentChildHierarchy" id="PROD_HRCHY" aggregateAllNodes="true" cycleHandling="BREAKUP" rootNodeVisibility="ADD_ROOT_NODE_IF_DEFINED">
+    <descriptions defaultDescription="PRODUCT HIERARCHY"/>
+    <unassignedMemberProperties/>
+    <attributeParentPair attribute="PRODH" parentAttribute="PARENT_CD"/>
+  </inlineHierarchy>
+  <logicalModel id="Join_2">
+    <descriptions defaultDescription="Y_CV_PRODUCT_HIERARCHY_3"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="Join_2" columnName="MANDT"/>
+      </attribute>
+      <attribute id="PRODH" order="2" attributeHierarchyActive="false" descriptionColumnName="VTEXT" displayAttribute="false">
+        <descriptions defaultDescription="Product Hierarchy"/>
+        <keyMapping columnObjectName="Join_2" columnName="PRODH"/>
+      </attribute>
+      <attribute id="STUFE" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STUFE"/>
+        <keyMapping columnObjectName="Join_2" columnName="STUFE"/>
+      </attribute>
+      <attribute id="PARENT_CD" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARENT_CD"/>
+        <keyMapping columnObjectName="Join_2" columnName="PARENT_CD"/>
+      </attribute>
+      <attribute id="VTEXT" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_2" columnName="VTEXT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="175" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Level0" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="413"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Level2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="330" y="413"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Level3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="484" y="413"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Level1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="509"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="509"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="413"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Level1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="252" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="98" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="175" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    
+    <shape modelObjectName="Union_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

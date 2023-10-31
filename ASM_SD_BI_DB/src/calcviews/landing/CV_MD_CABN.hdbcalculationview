@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_CABN" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_M_CHARACTERSTICS"/>
+  <metadata changedAt="2021-12-06 18:05:48.727" createdAt="2020-05-11 06:03:48.327"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_CABN">
+      <resourceUri>syn_tbl_CABN</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_CABN">
+    <descriptions defaultDescription="VDIM_M_CHARACTERSTICS"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="MANDT"/>
+      </attribute>
+      <attribute id="ATINN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Internal characteristic"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATINN"/>
+      </attribute>
+      <attribute id="ADZHL" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Internal Counter for Archiving Objects by ECM"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ADZHL"/>
+      </attribute>
+      <attribute id="ATNAM" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Characteristic Name"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATNAM"/>
+      </attribute>
+      <attribute id="ATIDN" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Object identification"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATIDN"/>
+      </attribute>
+      <attribute id="ATFOR" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Data type of characteristic"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATFOR"/>
+      </attribute>
+      <attribute id="ANZST" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of Characters"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ANZST"/>
+      </attribute>
+      <attribute id="ANZDZ" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of Decimal Places"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ANZDZ"/>
+      </attribute>
+      <attribute id="ATVOR" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Value with Plus or Minus Sign"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATVOR"/>
+      </attribute>
+      <attribute id="ATSCH" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Value with template"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATSCH"/>
+      </attribute>
+      <attribute id="ATKLE" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Case Sensitive"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATKLE"/>
+      </attribute>
+      <attribute id="ATKON" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Conversion Routine"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATKON"/>
+      </attribute>
+      <attribute id="ATEND" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Aggregating characteristic"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATEND"/>
+      </attribute>
+      <attribute id="ATAEN" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Balance characteristic"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATAEN"/>
+      </attribute>
+      <attribute id="ATKLA" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Characteristics Group"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATKLA"/>
+      </attribute>
+      <attribute id="ATERF" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Entry Required"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATERF"/>
+      </attribute>
+      <attribute id="ATEIN" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Single Value"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATEIN"/>
+      </attribute>
+      <attribute id="ATAME" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Multilingual characteristic"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATAME"/>
+      </attribute>
+      <attribute id="ATWME" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Values in more than one language"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATWME"/>
+      </attribute>
+      <attribute id="MSEHI" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unit of Measurement"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="MSEHI"/>
+      </attribute>
+      <attribute id="ATDIM" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Exponent display"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATDIM"/>
+      </attribute>
+      <attribute id="ATGLO" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Whether You Can Make an Entry for Ref. Chars"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATGLO"/>
+      </attribute>
+      <attribute id="ATGLA" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: restrictable characteristic"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATGLA"/>
+      </attribute>
+      <attribute id="ATINT" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Interval Values Allowed"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATINT"/>
+      </attribute>
+      <attribute id="ATUNS" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Entry Required in Configuration"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATUNS"/>
+      </attribute>
+      <attribute id="ATSON" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Additional Values"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATSON"/>
+      </attribute>
+      <attribute id="ATTAB" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Table Name"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATTAB"/>
+      </attribute>
+      <attribute id="ATFEL" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Field Name"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATFEL"/>
+      </attribute>
+      <attribute id="ATTEI" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Field Name for Unit"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATTEI"/>
+      </attribute>
+      <attribute id="ATPRT" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Check table"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATPRT"/>
+      </attribute>
+      <attribute id="ATPRR" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Check Report Program"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATPRR"/>
+      </attribute>
+      <attribute id="ATPRF" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Function Module for Checking Values"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATPRF"/>
+      </attribute>
+      <attribute id="ATWRD" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Display Allowed Values Defined in Characteristic"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATWRD"/>
+      </attribute>
+      <attribute id="ATFOD" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unformatted Entry Control"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATFOD"/>
+      </attribute>
+      <attribute id="ATHIE" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Explode value hierarchy"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATHIE"/>
+      </attribute>
+      <attribute id="ATDEX" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Exponent Display Format"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATDEX"/>
+      </attribute>
+      <attribute id="ATFGA" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: formatted editing"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATFGA"/>
+      </attribute>
+      <attribute id="ATVSC" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Display Template When Assigning Values"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATVSC"/>
+      </attribute>
+      <attribute id="ANAME" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ANAME"/>
+      </attribute>
+      <attribute id="ADATU" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date on which the record was created"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ADATU"/>
+      </attribute>
+      <attribute id="VNAME" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of person who changed object"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="VNAME"/>
+      </attribute>
+      <attribute id="VDATU" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of Last Change"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="VDATU"/>
+      </attribute>
+      <attribute id="ATXAC" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator for Multiple Table Assignments"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATXAC"/>
+      </attribute>
+      <attribute id="ATYAC" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Align Characteristic Values to the Right"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATYAC"/>
+      </attribute>
+      <attribute id="ATMST" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Status of a characteristic"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATMST"/>
+      </attribute>
+      <attribute id="ATWSO" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Display of Allowed Values"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATWSO"/>
+      </attribute>
+      <attribute id="ATBSO" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Display of values assigned to a characteristic"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATBSO"/>
+      </attribute>
+      <attribute id="DATUV" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Valid-From Date"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="DATUV"/>
+      </attribute>
+      <attribute id="TECHV" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Technical status from"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="TECHV"/>
+      </attribute>
+      <attribute id="AENNR" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Change Number"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="AENNR"/>
+      </attribute>
+      <attribute id="LKENZ" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Deletion Indicator"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="LKENZ"/>
+      </attribute>
+      <attribute id="ATWRI" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Keep Order in Value Assignment"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATWRI"/>
+      </attribute>
+      <attribute id="DOKAR" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Type"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="DOKAR"/>
+      </attribute>
+      <attribute id="DOKNR" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document number"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="DOKNR"/>
+      </attribute>
+      <attribute id="DOKVR" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document version"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="DOKVR"/>
+      </attribute>
+      <attribute id="DOKTL" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document part"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="DOKTL"/>
+      </attribute>
+      <attribute id="KNOBJ" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of Object with Assigned Dependencies"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="KNOBJ"/>
+      </attribute>
+      <attribute id="ATINP" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="No Entry Can be Made for Characteristic"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATINP"/>
+      </attribute>
+      <attribute id="ATVIE" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Characteristic Not to be Displayed"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATVIE"/>
+      </attribute>
+      <attribute id="WERKS" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="WERKS"/>
+      </attribute>
+      <attribute id="KATALOGART" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Catalog"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="KATALOGART"/>
+      </attribute>
+      <attribute id="AUSWAHLMGE" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Selected Set"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="AUSWAHLMGE"/>
+      </attribute>
+      <attribute id="ATHKA" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: display node in a value hierarchy"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATHKA"/>
+      </attribute>
+      <attribute id="ATHKO" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: nodes are selectable"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATHKO"/>
+      </attribute>
+      <attribute id="CLINT" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Internal Class Number"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="CLINT"/>
+      </attribute>
+      <attribute id="ATTOL" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator for Allowed Tolerances"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATTOL"/>
+      </attribute>
+      <attribute id="ATZUS" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Values Can Be Assigned to Ref. Characteristics"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATZUS"/>
+      </attribute>
+      <attribute id="ATVPL" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Relevant to Planning"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATVPL"/>
+      </attribute>
+      <attribute id="ATAUTH" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Authorization Group for Characteristics Maintenance"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="ATAUTH"/>
+      </attribute>
+      <attribute id="COUNTRYGRP" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Characteristic is Country-Dependent"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="COUNTRYGRP"/>
+      </attribute>
+      <attribute id="DATUB" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Valid-to date"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="DATUB"/>
+      </attribute>
+      <attribute id="LASTCHANGEDDATETIME" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+        <keyMapping columnObjectName="syn_tbl_CABN" columnName="LASTCHANGEDDATETIME"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

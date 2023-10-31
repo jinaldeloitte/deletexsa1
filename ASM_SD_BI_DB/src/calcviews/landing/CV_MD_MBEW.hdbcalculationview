@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_MBEW" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DEFAULT" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_MD_MBEW"/>
+  <metadata changedAt="2022-01-11 19:03:44.295"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_MBEW">
+      <resourceUri>syn_tbl_MBEW</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_MBEW">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="MANDT"/>
+      </attribute>
+      <attribute id="MATNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="MATNR"/>
+      </attribute>
+      <attribute id="BWKEY" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWKEY"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWKEY"/>
+      </attribute>
+      <attribute id="BWTAR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWTAR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWTAR"/>
+      </attribute>
+      <attribute id="LVORM" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LVORM"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="LVORM"/>
+      </attribute>
+      <attribute id="LBKUM" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LBKUM"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="LBKUM"/>
+      </attribute>
+      <attribute id="SALK3" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALK3"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="SALK3"/>
+      </attribute>
+      <attribute id="VPRSV" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPRSV"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VPRSV"/>
+      </attribute>
+      <attribute id="VERPR" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERPR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VERPR"/>
+      </attribute>
+      <attribute id="STPRS" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STPRS"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="STPRS"/>
+      </attribute>
+      <attribute id="PEINH" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PEINH"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PEINH"/>
+      </attribute>
+      <attribute id="BKLAS" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BKLAS"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BKLAS"/>
+      </attribute>
+      <attribute id="SALKV" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALKV"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="SALKV"/>
+      </attribute>
+      <attribute id="VMKUM" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VMKUM"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VMKUM"/>
+      </attribute>
+      <attribute id="VMSAL" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VMSAL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VMSAL"/>
+      </attribute>
+      <attribute id="VMVPR" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VMVPR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VMVPR"/>
+      </attribute>
+      <attribute id="VMVER" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VMVER"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VMVER"/>
+      </attribute>
+      <attribute id="VMSTP" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VMSTP"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VMSTP"/>
+      </attribute>
+      <attribute id="VMPEI" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VMPEI"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VMPEI"/>
+      </attribute>
+      <attribute id="VMBKL" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VMBKL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VMBKL"/>
+      </attribute>
+      <attribute id="VMSAV" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VMSAV"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VMSAV"/>
+      </attribute>
+      <attribute id="VJKUM" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VJKUM"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VJKUM"/>
+      </attribute>
+      <attribute id="VJSAL" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VJSAL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VJSAL"/>
+      </attribute>
+      <attribute id="VJVPR" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VJVPR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VJVPR"/>
+      </attribute>
+      <attribute id="VJVER" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VJVER"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VJVER"/>
+      </attribute>
+      <attribute id="VJSTP" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VJSTP"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VJSTP"/>
+      </attribute>
+      <attribute id="VJPEI" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VJPEI"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VJPEI"/>
+      </attribute>
+      <attribute id="VJBKL" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VJBKL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VJBKL"/>
+      </attribute>
+      <attribute id="VJSAV" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VJSAV"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VJSAV"/>
+      </attribute>
+      <attribute id="LFGJA" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFGJA"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="LFGJA"/>
+      </attribute>
+      <attribute id="LFMON" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFMON"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="LFMON"/>
+      </attribute>
+      <attribute id="BWTTY" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWTTY"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWTTY"/>
+      </attribute>
+      <attribute id="STPRV" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STPRV"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="STPRV"/>
+      </attribute>
+      <attribute id="LAEPR" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAEPR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="LAEPR"/>
+      </attribute>
+      <attribute id="ZKPRS" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZKPRS"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ZKPRS"/>
+      </attribute>
+      <attribute id="ZKDAT" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZKDAT"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ZKDAT"/>
+      </attribute>
+      <attribute id="TIMESTAMP" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TIMESTAMP"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="TIMESTAMP"/>
+      </attribute>
+      <attribute id="BWPRS" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWPRS"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWPRS"/>
+      </attribute>
+      <attribute id="BWPRH" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWPRH"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWPRH"/>
+      </attribute>
+      <attribute id="VJBWS" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VJBWS"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VJBWS"/>
+      </attribute>
+      <attribute id="VJBWH" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VJBWH"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VJBWH"/>
+      </attribute>
+      <attribute id="VVJSL" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VVJSL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VVJSL"/>
+      </attribute>
+      <attribute id="VVJLB" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VVJLB"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VVJLB"/>
+      </attribute>
+      <attribute id="VVMLB" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VVMLB"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VVMLB"/>
+      </attribute>
+      <attribute id="VVSAL" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VVSAL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VVSAL"/>
+      </attribute>
+      <attribute id="ZPLPR" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZPLPR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ZPLPR"/>
+      </attribute>
+      <attribute id="ZPLP1" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZPLP1"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ZPLP1"/>
+      </attribute>
+      <attribute id="ZPLP2" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZPLP2"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ZPLP2"/>
+      </attribute>
+      <attribute id="ZPLP3" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZPLP3"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ZPLP3"/>
+      </attribute>
+      <attribute id="ZPLD1" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZPLD1"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ZPLD1"/>
+      </attribute>
+      <attribute id="ZPLD2" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZPLD2"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ZPLD2"/>
+      </attribute>
+      <attribute id="ZPLD3" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZPLD3"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ZPLD3"/>
+      </attribute>
+      <attribute id="PPERZ" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPERZ"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PPERZ"/>
+      </attribute>
+      <attribute id="PPERL" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPERL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PPERL"/>
+      </attribute>
+      <attribute id="PPERV" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPERV"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PPERV"/>
+      </attribute>
+      <attribute id="KALKZ" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALKZ"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="KALKZ"/>
+      </attribute>
+      <attribute id="KALKL" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALKL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="KALKL"/>
+      </attribute>
+      <attribute id="KALKV" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALKV"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="KALKV"/>
+      </attribute>
+      <attribute id="KALSC" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALSC"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="KALSC"/>
+      </attribute>
+      <attribute id="XLIFO" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XLIFO"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="XLIFO"/>
+      </attribute>
+      <attribute id="MYPOL" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MYPOL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="MYPOL"/>
+      </attribute>
+      <attribute id="BWPH1" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWPH1"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWPH1"/>
+      </attribute>
+      <attribute id="BWPS1" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWPS1"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWPS1"/>
+      </attribute>
+      <attribute id="ABWKZ" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABWKZ"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ABWKZ"/>
+      </attribute>
+      <attribute id="PSTAT" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTAT"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PSTAT"/>
+      </attribute>
+      <attribute id="KALN1" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALN1"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="KALN1"/>
+      </attribute>
+      <attribute id="KALNR" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALNR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="KALNR"/>
+      </attribute>
+      <attribute id="BWVA1" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWVA1"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWVA1"/>
+      </attribute>
+      <attribute id="BWVA2" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWVA2"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWVA2"/>
+      </attribute>
+      <attribute id="BWVA3" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWVA3"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWVA3"/>
+      </attribute>
+      <attribute id="VERS1" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERS1"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VERS1"/>
+      </attribute>
+      <attribute id="VERS2" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERS2"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VERS2"/>
+      </attribute>
+      <attribute id="VERS3" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERS3"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VERS3"/>
+      </attribute>
+      <attribute id="HRKFT" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HRKFT"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="HRKFT"/>
+      </attribute>
+      <attribute id="KOSGR" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOSGR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="KOSGR"/>
+      </attribute>
+      <attribute id="PPRDZ" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPRDZ"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PPRDZ"/>
+      </attribute>
+      <attribute id="PPRDL" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPRDL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PPRDL"/>
+      </attribute>
+      <attribute id="PPRDV" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPRDV"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PPRDV"/>
+      </attribute>
+      <attribute id="PDATZ" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PDATZ"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PDATZ"/>
+      </attribute>
+      <attribute id="PDATL" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PDATL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PDATL"/>
+      </attribute>
+      <attribute id="PDATV" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PDATV"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="PDATV"/>
+      </attribute>
+      <attribute id="EKALR" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EKALR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="EKALR"/>
+      </attribute>
+      <attribute id="VPLPR" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPLPR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VPLPR"/>
+      </attribute>
+      <attribute id="MLMAA" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MLMAA"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="MLMAA"/>
+      </attribute>
+      <attribute id="MLAST" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MLAST"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="MLAST"/>
+      </attribute>
+      <attribute id="LPLPR" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LPLPR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="LPLPR"/>
+      </attribute>
+      <attribute id="VKSAL" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKSAL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VKSAL"/>
+      </attribute>
+      <attribute id="HKMAT" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HKMAT"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="HKMAT"/>
+      </attribute>
+      <attribute id="SPERW" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERW"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="SPERW"/>
+      </attribute>
+      <attribute id="KZIWL" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZIWL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="KZIWL"/>
+      </attribute>
+      <attribute id="WLINL" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WLINL"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="WLINL"/>
+      </attribute>
+      <attribute id="ABCIW" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABCIW"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="ABCIW"/>
+      </attribute>
+      <attribute id="BWSPA" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWSPA"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWSPA"/>
+      </attribute>
+      <attribute id="LPLPX" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LPLPX"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="LPLPX"/>
+      </attribute>
+      <attribute id="VPLPX" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPLPX"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VPLPX"/>
+      </attribute>
+      <attribute id="FPLPX" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FPLPX"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="FPLPX"/>
+      </attribute>
+      <attribute id="LBWST" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LBWST"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="LBWST"/>
+      </attribute>
+      <attribute id="VBWST" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBWST"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="VBWST"/>
+      </attribute>
+      <attribute id="FBWST" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FBWST"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="FBWST"/>
+      </attribute>
+      <attribute id="EKLAS" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EKLAS"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="EKLAS"/>
+      </attribute>
+      <attribute id="QKLAS" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QKLAS"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="QKLAS"/>
+      </attribute>
+      <attribute id="MTUSE" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MTUSE"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="MTUSE"/>
+      </attribute>
+      <attribute id="MTORG" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MTORG"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="MTORG"/>
+      </attribute>
+      <attribute id="OWNPR" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OWNPR"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="OWNPR"/>
+      </attribute>
+      <attribute id="XBEWM" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBEWM"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="XBEWM"/>
+      </attribute>
+      <attribute id="BWPEI" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWPEI"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="BWPEI"/>
+      </attribute>
+      <attribute id="MBRUE" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MBRUE"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="MBRUE"/>
+      </attribute>
+      <attribute id="OKLAS" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OKLAS"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="OKLAS"/>
+      </attribute>
+      <attribute id="DUMMY_VAL_INCL_EEW_PS" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_VAL_INCL_EEW_PS"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="DUMMY_VAL_INCL_EEW_PS"/>
+      </attribute>
+      <attribute id="OIPPINV" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OIPPINV"/>
+        <keyMapping columnObjectName="syn_tbl_MBEW" columnName="OIPPINV"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="30" y="150"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

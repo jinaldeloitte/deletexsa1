@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_DIM_MD_SALESORGANIZATIONS" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_MD_SALESORGANIZATIONS"/>
+  <metadata changedAt="2021-12-06 18:55:14.669"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="29"/>
+  <dataSources>
+    <DataSource id="CV_MD_TVKO">
+      <resourceUri>CV_MD_TVKO</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVKOT">
+      <resourceUri>CV_MD_TVKOT</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="ADRNR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVKO"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="SPRAS"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTEXT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVKOT"/>
+    <filter>(&quot;SPRAS&quot; ='$$language$$')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="MANDT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG" source="VKORG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      </input>
+      <input node="Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG" source="VKORG"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="VKORG"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_1">
+    <descriptions defaultDescription="VDIM_MD_SALESORGANIZATIONS"/>
+    <attributes>
+      <attribute id="VKORG" order="1" attributeHierarchyActive="false" descriptionColumnName="VTEXT" displayAttribute="false">
+        <descriptions defaultDescription="Sales Organization"/>
+        <keyMapping columnObjectName="Join_1" columnName="VKORG"/>
+      </attribute>
+      <attribute id="VTEXT" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name"/>
+        <keyMapping columnObjectName="Join_1" columnName="VTEXT"/>
+      </attribute>
+      <attribute id="BUKRS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company code of the sales organization"/>
+        <keyMapping columnObjectName="Join_1" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="ADRNR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address"/>
+        <keyMapping columnObjectName="Join_1" columnName="ADRNR"/>
+      </attribute>
+      <attribute id="MANDT" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_1" columnName="MANDT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

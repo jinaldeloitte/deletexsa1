@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_KNVV" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DEFAULT" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_MD_KNVV"/>
+  <metadata changedAt="2021-12-06 18:06:48.166" createdAt="2020-04-28 18:22:16.995"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="35"/>
+  <dataSources>
+    <DataSource id="syn_tbl_KNVV">
+      <resourceUri>syn_tbl_KNVV</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_KNVV">
+    <descriptions defaultDescription="CV_MD_KNVV"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KUNNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="VKORG" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="VKORG"/>
+      </attribute>
+      <attribute id="VTWEG" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="VTWEG"/>
+      </attribute>
+      <attribute id="SPART" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="SPART"/>
+      </attribute>
+      <attribute id="ERNAM" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="ERDAT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="BEGRU" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEGRU"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="BEGRU"/>
+      </attribute>
+      <attribute id="LOEVM" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOEVM"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="LOEVM"/>
+      </attribute>
+      <attribute id="VERSG" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERSG"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="VERSG"/>
+      </attribute>
+      <attribute id="AUFSD" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFSD"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="AUFSD"/>
+      </attribute>
+      <attribute id="KALKS" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALKS"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KALKS"/>
+      </attribute>
+      <attribute id="KDGRP" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDGRP"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KDGRP"/>
+      </attribute>
+      <attribute id="BZIRK" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BZIRK"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="BZIRK"/>
+      </attribute>
+      <attribute id="KONDA" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONDA"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KONDA"/>
+      </attribute>
+      <attribute id="PLTYP" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLTYP"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PLTYP"/>
+      </attribute>
+      <attribute id="AWAHR" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWAHR"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="AWAHR"/>
+      </attribute>
+      <attribute id="INCO1" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="INCO1"/>
+      </attribute>
+      <attribute id="INCO2" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="INCO2"/>
+      </attribute>
+      <attribute id="LIFSD" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFSD"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="LIFSD"/>
+      </attribute>
+      <attribute id="AUTLF" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUTLF"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="AUTLF"/>
+      </attribute>
+      <attribute id="ANTLF" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANTLF"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="ANTLF"/>
+      </attribute>
+      <attribute id="KZTLF" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZTLF"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KZTLF"/>
+      </attribute>
+      <attribute id="KZAZU" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZAZU"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KZAZU"/>
+      </attribute>
+      <attribute id="CHSPL" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHSPL"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="CHSPL"/>
+      </attribute>
+      <attribute id="LPRIO" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LPRIO"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="LPRIO"/>
+      </attribute>
+      <attribute id="EIKTO" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EIKTO"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="EIKTO"/>
+      </attribute>
+      <attribute id="VSBED" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSBED"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="VSBED"/>
+      </attribute>
+      <attribute id="FAKSD" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAKSD"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FAKSD"/>
+      </attribute>
+      <attribute id="MRNKZ" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MRNKZ"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="MRNKZ"/>
+      </attribute>
+      <attribute id="PERFK" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERFK"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PERFK"/>
+      </attribute>
+      <attribute id="PERRL" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERRL"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PERRL"/>
+      </attribute>
+      <attribute id="KVAKZ" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVAKZ"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KVAKZ"/>
+      </attribute>
+      <attribute id="KVAWT" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVAWT"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KVAWT"/>
+      </attribute>
+      <attribute id="WAERS" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERS"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="WAERS"/>
+      </attribute>
+      <attribute id="KLABC" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KLABC"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KLABC"/>
+      </attribute>
+      <attribute id="KTGRD" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTGRD"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KTGRD"/>
+      </attribute>
+      <attribute id="ZTERM" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="VWERK" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VWERK"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="VWERK"/>
+      </attribute>
+      <attribute id="VKGRP" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKGRP"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="VKGRP"/>
+      </attribute>
+      <attribute id="VKBUR" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKBUR"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="VKBUR"/>
+      </attribute>
+      <attribute id="VSORT" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSORT"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="VSORT"/>
+      </attribute>
+      <attribute id="KVGR1" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVGR1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KVGR1"/>
+      </attribute>
+      <attribute id="KVGR2" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVGR2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KVGR2"/>
+      </attribute>
+      <attribute id="KVGR3" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVGR3"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KVGR3"/>
+      </attribute>
+      <attribute id="KVGR4" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVGR4"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KVGR4"/>
+      </attribute>
+      <attribute id="KVGR5" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVGR5"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KVGR5"/>
+      </attribute>
+      <attribute id="BOKRE" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BOKRE"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="BOKRE"/>
+      </attribute>
+      <attribute id="BOIDT" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BOIDT"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="BOIDT"/>
+      </attribute>
+      <attribute id="KURST" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KURST"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KURST"/>
+      </attribute>
+      <attribute id="PRFRE" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRFRE"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRFRE"/>
+      </attribute>
+      <attribute id="PRAT1" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRAT1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRAT1"/>
+      </attribute>
+      <attribute id="PRAT2" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRAT2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRAT2"/>
+      </attribute>
+      <attribute id="PRAT3" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRAT3"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRAT3"/>
+      </attribute>
+      <attribute id="PRAT4" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRAT4"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRAT4"/>
+      </attribute>
+      <attribute id="PRAT5" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRAT5"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRAT5"/>
+      </attribute>
+      <attribute id="PRAT6" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRAT6"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRAT6"/>
+      </attribute>
+      <attribute id="PRAT7" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRAT7"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRAT7"/>
+      </attribute>
+      <attribute id="PRAT8" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRAT8"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRAT8"/>
+      </attribute>
+      <attribute id="PRAT9" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRAT9"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRAT9"/>
+      </attribute>
+      <attribute id="PRATA" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRATA"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PRATA"/>
+      </attribute>
+      <attribute id="KABSS" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KABSS"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KABSS"/>
+      </attribute>
+      <attribute id="KKBER" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KKBER"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KKBER"/>
+      </attribute>
+      <attribute id="CASSD" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CASSD"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="CASSD"/>
+      </attribute>
+      <attribute id="RDOFF" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RDOFF"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="RDOFF"/>
+      </attribute>
+      <attribute id="AGREL" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGREL"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="AGREL"/>
+      </attribute>
+      <attribute id="MEGRU" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEGRU"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="MEGRU"/>
+      </attribute>
+      <attribute id="UEBTO" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UEBTO"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="UEBTO"/>
+      </attribute>
+      <attribute id="UNTTO" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UNTTO"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="UNTTO"/>
+      </attribute>
+      <attribute id="UEBTK" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UEBTK"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="UEBTK"/>
+      </attribute>
+      <attribute id="PVKSM" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PVKSM"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PVKSM"/>
+      </attribute>
+      <attribute id="PODKZ" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PODKZ"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PODKZ"/>
+      </attribute>
+      <attribute id="PODTG" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PODTG"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="PODTG"/>
+      </attribute>
+      <attribute id="BLIND" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLIND"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="BLIND"/>
+      </attribute>
+      <attribute id="CARRIER_NOTIF" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CARRIER_NOTIF"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="CARRIER_NOTIF"/>
+      </attribute>
+      <attribute id="CVP_XBLCK_V" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CVP_XBLCK_V"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="CVP_XBLCK_V"/>
+      </attribute>
+      <attribute id="INCOV" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCOV"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="INCOV"/>
+      </attribute>
+      <attribute id="INCO2_L" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2_L"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="INCO2_L"/>
+      </attribute>
+      <attribute id="INCO3_L" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO3_L"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="INCO3_L"/>
+      </attribute>
+      <attribute id="KNVV_EEW_CONTACT" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNVV_EEW_CONTACT"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="KNVV_EEW_CONTACT"/>
+      </attribute>
+      <attribute id="_BEV1_EMLGPFAND" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BEV1_EMLGPFAND"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="/BEV1/EMLGPFAND"/>
+      </attribute>
+      <attribute id="_BEV1_EMLGFORTS" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BEV1_EMLGFORTS"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="/BEV1/EMLGFORTS"/>
+      </attribute>
+      <attribute id="J_1NBOESL" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1NBOESL"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="J_1NBOESL"/>
+      </attribute>
+      <attribute id="FSH_KVGR6" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_KVGR6"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_KVGR6"/>
+      </attribute>
+      <attribute id="FSH_KVGR7" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_KVGR7"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_KVGR7"/>
+      </attribute>
+      <attribute id="FSH_KVGR8" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_KVGR8"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_KVGR8"/>
+      </attribute>
+      <attribute id="FSH_KVGR9" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_KVGR9"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_KVGR9"/>
+      </attribute>
+      <attribute id="FSH_KVGR10" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_KVGR10"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_KVGR10"/>
+      </attribute>
+      <attribute id="FSH_GRREG" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_GRREG"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_GRREG"/>
+      </attribute>
+      <attribute id="FSH_RESGY" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_RESGY"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_RESGY"/>
+      </attribute>
+      <attribute id="FSH_SC_CID" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SC_CID"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_SC_CID"/>
+      </attribute>
+      <attribute id="FSH_VAS_DETC" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_VAS_DETC"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_VAS_DETC"/>
+      </attribute>
+      <attribute id="FSH_VAS_CG" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_VAS_CG"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_VAS_CG"/>
+      </attribute>
+      <attribute id="FSH_GRSGY" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_GRSGY"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_GRSGY"/>
+      </attribute>
+      <attribute id="FSH_SS" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SS"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_SS"/>
+      </attribute>
+      <attribute id="FSH_MSOCDC" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_MSOCDC"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_MSOCDC"/>
+      </attribute>
+      <attribute id="FSH_MSOPID" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_MSOPID"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_MSOPID"/>
+      </attribute>
+      <attribute id="FSH_FRATE" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_FRATE"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_FRATE"/>
+      </attribute>
+      <attribute id="FSH_FRATE_AGG_LEVEL" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_FRATE_AGG_LEVEL"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="FSH_FRATE_AGG_LEVEL"/>
+      </attribute>
+      <attribute id="RFM_PSST_RULE" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFM_PSST_RULE"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="RFM_PSST_RULE"/>
+      </attribute>
+      <attribute id="RFM_PSST_EXCLUDE" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFM_PSST_EXCLUDE"/>
+        <keyMapping columnObjectName="syn_tbl_KNVV" columnName="RFM_PSST_EXCLUDE"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/></shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

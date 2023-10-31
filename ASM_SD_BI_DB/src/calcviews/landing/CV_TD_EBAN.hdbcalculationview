@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_EBAN" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_PURCHASEREQUISITION"/>
+  <metadata changedAt="2021-12-06 18:11:44.635" createdAt="2020-06-17 14:44:31.61"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_EBAN">
+      <resourceUri>syn_tbl_EBAN</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_EBAN">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MANDT"/>
+      </attribute>
+      <attribute id="BANFN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Requisition Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BANFN"/>
+      </attribute>
+      <attribute id="BNFPO" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item number of purchase requisition"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BNFPO"/>
+      </attribute>
+      <attribute id="BSART" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Requisition Document Type"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BSART"/>
+      </attribute>
+      <attribute id="BSTYP" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Category"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BSTYP"/>
+      </attribute>
+      <attribute id="BSAKZ" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Control indicator for purchasing document type"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BSAKZ"/>
+      </attribute>
+      <attribute id="LOEKZ" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Deletion indicator in purchasing document"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="LOEKZ"/>
+      </attribute>
+      <attribute id="STATU" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Processing status of purchase requisition"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="STATU"/>
+      </attribute>
+      <attribute id="ESTKZ" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Creation indicator (purchase requisition/schedule lines)"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ESTKZ"/>
+      </attribute>
+      <attribute id="FRGKZ" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Release Indicator"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FRGKZ"/>
+      </attribute>
+      <attribute id="FRGZU" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Release State"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FRGZU"/>
+      </attribute>
+      <attribute id="FRGST" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Release strategy in the purchase requisition"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FRGST"/>
+      </attribute>
+      <attribute id="EKGRP" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Group"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EKGRP"/>
+      </attribute>
+      <attribute id="ERNAM" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="ERDAT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of Last Change"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="AFNAM" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of requisitioner/requester"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="AFNAM"/>
+      </attribute>
+      <attribute id="TXZ01" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Short Text"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="TXZ01"/>
+      </attribute>
+      <attribute id="MATNR" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MATNR"/>
+      </attribute>
+      <attribute id="EMATN" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material number corresponding to manufacturer part number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EMATN"/>
+      </attribute>
+      <attribute id="WERKS" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="WERKS"/>
+      </attribute>
+      <attribute id="LGORT" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Storage location"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="LGORT"/>
+      </attribute>
+      <attribute id="BEDNR" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Requirement Tracking Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BEDNR"/>
+      </attribute>
+      <attribute id="MATKL" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Group"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MATKL"/>
+      </attribute>
+      <attribute id="RESWK" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Supplying (issuing) plant in case of stock transport order"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="RESWK"/>
+      </attribute>
+      <attribute id="MENGE" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase requisition quantity"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MENGE"/>
+      </attribute>
+      <attribute id="MEINS" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase requisition unit of measure"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MEINS"/>
+      </attribute>
+      <attribute id="BUMNG" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Shortage (stock undercoverage) quantity"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BUMNG"/>
+      </attribute>
+      <attribute id="BADAT" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Requisition (request) date"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BADAT"/>
+      </attribute>
+      <attribute id="LPEIN" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Category of delivery date"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="LPEIN"/>
+      </attribute>
+      <attribute id="LFDAT" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item delivery date"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="LFDAT"/>
+      </attribute>
+      <attribute id="FRGDT" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Requisition Release Date"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FRGDT"/>
+      </attribute>
+      <attribute id="WEBAZ" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Goods receipt processing time in days"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="WEBAZ"/>
+      </attribute>
+      <attribute id="PREIS" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Price in Purchase Requisition"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="PREIS"/>
+      </attribute>
+      <attribute id="PEINH" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Price unit"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="PEINH"/>
+      </attribute>
+      <attribute id="PSTYP" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item category in purchasing document"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="PSTYP"/>
+      </attribute>
+      <attribute id="KNTTP" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Assignment Category"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KNTTP"/>
+      </attribute>
+      <attribute id="KZVBR" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Consumption posting"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KZVBR"/>
+      </attribute>
+      <attribute id="KFLAG" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Acct.asst.modifiable"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KFLAG"/>
+      </attribute>
+      <attribute id="VRTKZ" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Distribution Indicator for Multiple Account Assignment"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="VRTKZ"/>
+      </attribute>
+      <attribute id="TWRKZ" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partial invoice indicator"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="TWRKZ"/>
+      </attribute>
+      <attribute id="WEPOS" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Goods Receipt Indicator"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="WEPOS"/>
+      </attribute>
+      <attribute id="WEUNB" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Goods Receipt, Non-Valuated"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="WEUNB"/>
+      </attribute>
+      <attribute id="REPOS" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Invoice receipt indicator"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="REPOS"/>
+      </attribute>
+      <attribute id="LIFNR" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Desired Vendor"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="FLIEF" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fixed vendor"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FLIEF"/>
+      </attribute>
+      <attribute id="EKORG" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing organization"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EKORG"/>
+      </attribute>
+      <attribute id="VRTYP" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Category"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="VRTYP"/>
+      </attribute>
+      <attribute id="KONNR" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of principal purchase agreement"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KONNR"/>
+      </attribute>
+      <attribute id="KTPNR" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item number of principal purchase agreement"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KTPNR"/>
+      </attribute>
+      <attribute id="INFNR" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of purchasing info record"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="INFNR"/>
+      </attribute>
+      <attribute id="ZUGBA" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Assigned Source of Supply"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ZUGBA"/>
+      </attribute>
+      <attribute id="QUNUM" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of quota arrangement"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="QUNUM"/>
+      </attribute>
+      <attribute id="QUPOS" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quota arrangement item"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="QUPOS"/>
+      </attribute>
+      <attribute id="DISPO" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MRP Controller"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="DISPO"/>
+      </attribute>
+      <attribute id="SERNR" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BOM explosion number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SERNR"/>
+      </attribute>
+      <attribute id="BVDAT" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of last resubmission"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BVDAT"/>
+      </attribute>
+      <attribute id="BATOL" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Resubmission interval of purchase requisition"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BATOL"/>
+      </attribute>
+      <attribute id="BVDRK" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of resubmissions"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BVDRK"/>
+      </attribute>
+      <attribute id="EBELN" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase order number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EBELN"/>
+      </attribute>
+      <attribute id="EBELP" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase order item number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EBELP"/>
+      </attribute>
+      <attribute id="BEDAT" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Order Date"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BEDAT"/>
+      </attribute>
+      <attribute id="BSMNG" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quantity ordered against this purchase requisition"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BSMNG"/>
+      </attribute>
+      <attribute id="LBLNI" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Entry Sheet Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="LBLNI"/>
+      </attribute>
+      <attribute id="BWTAR" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Valuation Type"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BWTAR"/>
+      </attribute>
+      <attribute id="XOBLR" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item affects commitments"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="XOBLR"/>
+      </attribute>
+      <attribute id="EBAKZ" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase requisition closed"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EBAKZ"/>
+      </attribute>
+      <attribute id="RSNUM" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of reservation/dependent requirements"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="RSNUM"/>
+      </attribute>
+      <attribute id="SOBKZ" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Special Stock Indicator"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SOBKZ"/>
+      </attribute>
+      <attribute id="ARSNR" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Settlement reservation number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ARSNR"/>
+      </attribute>
+      <attribute id="ARSPS" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item number of the settlement reservation"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ARSPS"/>
+      </attribute>
+      <attribute id="FIXKZ" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase requisition is fixed"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FIXKZ"/>
+      </attribute>
+      <attribute id="BMEIN" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Order Unit of Measure"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BMEIN"/>
+      </attribute>
+      <attribute id="REVLV" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Revision level"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="REVLV"/>
+      </attribute>
+      <attribute id="VORAB" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Advance procurement: project stock"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="VORAB"/>
+      </attribute>
+      <attribute id="PACKNO" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Package number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="PACKNO"/>
+      </attribute>
+      <attribute id="KANBA" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Kanban Indicator"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KANBA"/>
+      </attribute>
+      <attribute id="BPUEB" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Use Requisition Price in Purchase Order"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BPUEB"/>
+      </attribute>
+      <attribute id="CUOBJ" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Configuration (internal object number)"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="CUOBJ"/>
+      </attribute>
+      <attribute id="FRGGR" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Release group"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FRGGR"/>
+      </attribute>
+      <attribute id="FRGRL" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Release Not Yet Completely Effected"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FRGRL"/>
+      </attribute>
+      <attribute id="AKTNR" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Promotion"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="AKTNR"/>
+      </attribute>
+      <attribute id="CHARG" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Batch Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="CHARG"/>
+      </attribute>
+      <attribute id="UMSOK" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Special stock indicator for physical stock transfer"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="UMSOK"/>
+      </attribute>
+      <attribute id="VERID" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Production Version"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="VERID"/>
+      </attribute>
+      <attribute id="FIPOS" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Commitment Item"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FIPOS"/>
+      </attribute>
+      <attribute id="FISTL" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Funds Center"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FISTL"/>
+      </attribute>
+      <attribute id="GEBER" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fund"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="GEBER"/>
+      </attribute>
+      <attribute id="KZKFG" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Origin of Configuration"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KZKFG"/>
+      </attribute>
+      <attribute id="SATNR" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Cross-Plant Configurable Material"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SATNR"/>
+      </attribute>
+      <attribute id="MNG02" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Committed Quantity"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MNG02"/>
+      </attribute>
+      <attribute id="DAT01" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Committed date"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="DAT01"/>
+      </attribute>
+      <attribute id="ATTYP" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Category"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ATTYP"/>
+      </attribute>
+      <attribute id="ADRNR" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Manual address number in purchasing document item"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ADRNR"/>
+      </attribute>
+      <attribute id="ADRN2" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of delivery address"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ADRN2"/>
+      </attribute>
+      <attribute id="KUNNR" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="EMLIF" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Supplier to be Supplied/Who is to Receive Delivery"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EMLIF"/>
+      </attribute>
+      <attribute id="LBLKZ" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Subcontracting Supplier"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="LBLKZ"/>
+      </attribute>
+      <attribute id="KZBWS" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Valuation of Special Stock"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KZBWS"/>
+      </attribute>
+      <attribute id="WAERS" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency Key"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="WAERS"/>
+      </attribute>
+      <attribute id="IDNLF" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number Used by Supplier"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="IDNLF"/>
+      </attribute>
+      <attribute id="GSFRG" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Overall release of purchase requisitions"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="GSFRG"/>
+      </attribute>
+      <attribute id="MPROF" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Mfr part profile"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MPROF"/>
+      </attribute>
+      <attribute id="KZFME" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Units of measure usage"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KZFME"/>
+      </attribute>
+      <attribute id="SPRAS" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Language Key"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="TECHS" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Parameter Variant/Standard Variant"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="TECHS"/>
+      </attribute>
+      <attribute id="MFRPN" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Manufacturer Part Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MFRPN"/>
+      </attribute>
+      <attribute id="MFRNR" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Manufacturer number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MFRNR"/>
+      </attribute>
+      <attribute id="EMNFR" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="External manufacturer code name or number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EMNFR"/>
+      </attribute>
+      <attribute id="FORDN" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Framework Order"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FORDN"/>
+      </attribute>
+      <attribute id="FORDP" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item of framework order"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FORDP"/>
+      </attribute>
+      <attribute id="PLIFZ" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Planned Delivery Time in Days"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="PLIFZ"/>
+      </attribute>
+      <attribute id="BERID" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MRP Area"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BERID"/>
+      </attribute>
+      <attribute id="UZEIT" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Date Time-Spot"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="UZEIT"/>
+      </attribute>
+      <attribute id="FKBER" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Functional Area"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FKBER"/>
+      </attribute>
+      <attribute id="GRANT_NBR" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Grant"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="GRANT_NBR"/>
+      </attribute>
+      <attribute id="MEMORY" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Requisition not yet Complete"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MEMORY"/>
+      </attribute>
+      <attribute id="BANPR" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Requisition Processing State"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BANPR"/>
+      </attribute>
+      <attribute id="RLWRT" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Total value at time of release"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="RLWRT"/>
+      </attribute>
+      <attribute id="BLCKD" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Requisition Blocked"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BLCKD"/>
+      </attribute>
+      <attribute id="REVNO" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Version number in Purchasing"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="REVNO"/>
+      </attribute>
+      <attribute id="BLCKT" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reason for Item Block"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BLCKT"/>
+      </attribute>
+      <attribute id="BESWK" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Procuring Plant"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BESWK"/>
+      </attribute>
+      <attribute id="EPROFILE" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="External Procurement Profile"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EPROFILE"/>
+      </attribute>
+      <attribute id="EPREFDOC" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="External Procurement Reference Document"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EPREFDOC"/>
+      </attribute>
+      <attribute id="EPREFITM" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="External Procurement Reference Item"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EPREFITM"/>
+      </attribute>
+      <attribute id="GMMNG" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO Quantity of Purchase Requisition in POs on Hold"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="GMMNG"/>
+      </attribute>
+      <attribute id="WRTKZ" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Value-Based Commitment Reduction for Service Purchase Reqs"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="WRTKZ"/>
+      </attribute>
+      <attribute id="RESLO" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Issuing Storage Location for Stock Transport Order"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="RESLO"/>
+      </attribute>
+      <attribute id="KBLNR" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Number for Earmarked Funds"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KBLNR"/>
+      </attribute>
+      <attribute id="KBLPOS" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Earmarked Funds: Document Item"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="KBLPOS"/>
+      </attribute>
+      <attribute id="PRIO_URG" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Requirement Urgency"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="PRIO_URG"/>
+      </attribute>
+      <attribute id="PRIO_REQ" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Requirement Priority"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="PRIO_REQ"/>
+      </attribute>
+      <attribute id="MEMORYTYPE" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Category of Incompleteness"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MEMORYTYPE"/>
+      </attribute>
+      <attribute id="ANZSN" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of serial numbers"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ANZSN"/>
+      </attribute>
+      <attribute id="MHDRZ" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Minimum Remaining Shelf Life"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="MHDRZ"/>
+      </attribute>
+      <attribute id="IPRKZ" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Period Indicator for Shelf Life Expiration Date"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="IPRKZ"/>
+      </attribute>
+      <attribute id="NODISP" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Ind: Reserv. not applicable to MRP;Purc. req. not created"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="NODISP"/>
+      </attribute>
+      <attribute id="SRM_CONTRACT_ID" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Central Contract"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SRM_CONTRACT_ID"/>
+      </attribute>
+      <attribute id="SRM_CONTRACT_ITM" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Central Contract Item Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SRM_CONTRACT_ITM"/>
+      </attribute>
+      <attribute id="BUDGET_PD" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Budget Period"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BUDGET_PD"/>
+      </attribute>
+      <attribute id="ELDAT" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Receipt/Requirements date"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ELDAT"/>
+      </attribute>
+      <attribute id="DUMMY_EBAN_INCL_EEW_PS" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Data element for purchase requisition extensibility"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="DUMMY_EBAN_INCL_EEW_PS"/>
+      </attribute>
+      <attribute id="STORENETWORKID" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="128 character"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="STORENETWORKID"/>
+      </attribute>
+      <attribute id="STORESUPPLIERID" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Character field, length 64"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="STORESUPPLIERID"/>
+      </attribute>
+      <attribute id="CREATIONDATE" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Creation Date"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="CREATIONDATE"/>
+      </attribute>
+      <attribute id="CREATIONTIME" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Creation Time"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="CREATIONTIME"/>
+      </attribute>
+      <attribute id="PRODUCTTYPE" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Product Type Group"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="PRODUCTTYPE"/>
+      </attribute>
+      <attribute id="SERVICEPERFORMER" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Service Performer"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SERVICEPERFORMER"/>
+      </attribute>
+      <attribute id="ISEOPBLOCKED" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Business Purpose Completed"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ISEOPBLOCKED"/>
+      </attribute>
+      <attribute id="EXT_REV_TMSTMP" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Timestamp for Revision of External Calls"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXT_REV_TMSTMP"/>
+      </attribute>
+      <attribute id="FMFGUS_KEY" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="United States Federal Government Fields"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FMFGUS_KEY"/>
+      </attribute>
+      <attribute id="STARTDATE" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Start Date for Period of Performance"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="STARTDATE"/>
+      </attribute>
+      <attribute id="ENDDATE" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="End Date for Period of Performance"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ENDDATE"/>
+      </attribute>
+      <attribute id="EXTMATERIALFORPURG" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material of External System"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTMATERIALFORPURG"/>
+      </attribute>
+      <attribute id="EXTFIXEDSUPPLIERFORPURG" order="155" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fixed Supplier of External System"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTFIXEDSUPPLIERFORPURG"/>
+      </attribute>
+      <attribute id="EXTDESIREDSUPPLIERFORPURG" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Desired Supplier of External System"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTDESIREDSUPPLIERFORPURG"/>
+      </attribute>
+      <attribute id="EXTCONTRACTFORPURG" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Contract of External System"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTCONTRACTFORPURG"/>
+      </attribute>
+      <attribute id="EXTCONTRACTITEMFORPURG" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Contract Item of External System"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTCONTRACTITEMFORPURG"/>
+      </attribute>
+      <attribute id="EXTINFORECORDFORPURG" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Info Record of External System"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTINFORECORDFORPURG"/>
+      </attribute>
+      <attribute id="EXTPLANTFORPURG" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant of External System"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTPLANTFORPURG"/>
+      </attribute>
+      <attribute id="EXTCOMPANYCODEFORPURG" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code of External System"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTCOMPANYCODEFORPURG"/>
+      </attribute>
+      <attribute id="EXTPURGORGFORPURG" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Organization"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTPURGORGFORPURG"/>
+      </attribute>
+      <attribute id="EXTSOURCESYSTEM" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Communication System ID"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTSOURCESYSTEM"/>
+      </attribute>
+      <attribute id="EXT_BE_SOURCE_SYS" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Connected System"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXT_BE_SOURCE_SYS"/>
+      </attribute>
+      <attribute id="EXTAPPROVALSTATUS" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="External Approval Status in the preceeding document"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXTAPPROVALSTATUS"/>
+      </attribute>
+      <attribute id="PURCHASEREQNITEMUNIQUEID" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Key to identify purchase requisition item"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="PURCHASEREQNITEMUNIQUEID"/>
+      </attribute>
+      <attribute id="LASTCHANGEDATETIME" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="LASTCHANGEDATETIME"/>
+      </attribute>
+      <attribute id="ISONBEHALFCART" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Shop on behalf indicator"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ISONBEHALFCART"/>
+      </attribute>
+      <attribute id="EXPECTED_VALUE" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Expected Value of Overall Limit"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="EXPECTED_VALUE"/>
+      </attribute>
+      <attribute id="LIMIT_AMOUNT" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Overall Limit"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="LIMIT_AMOUNT"/>
+      </attribute>
+      <attribute id="ADVCODE" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Advice Code"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ADVCODE"/>
+      </attribute>
+      <attribute id="STACODE" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Status Code"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="STACODE"/>
+      </attribute>
+      <attribute id="BANFN_CS" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Cross-System PReq Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BANFN_CS"/>
+      </attribute>
+      <attribute id="BNFPO_CS" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Cross-System PReq Item"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BNFPO_CS"/>
+      </attribute>
+      <attribute id="ITEM_CS" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Cross-System Item Category"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ITEM_CS"/>
+      </attribute>
+      <attribute id="BSMNG_SND" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO Quantity Sender"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="BSMNG_SND"/>
+      </attribute>
+      <attribute id="NO_MARD_DATA" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="No Storage Location Data Exists for Material"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="NO_MARD_DATA"/>
+      </attribute>
+      <attribute id="ADMOI" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Model ID Code"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ADMOI"/>
+      </attribute>
+      <attribute id="ADPRI" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Order Priority"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ADPRI"/>
+      </attribute>
+      <attribute id="LPRIO" order="180" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Priority"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="LPRIO"/>
+      </attribute>
+      <attribute id="ADACN" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Aircraft registration number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ADACN"/>
+      </attribute>
+      <attribute id="ADDNS" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Do Not Substitute"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="ADDNS"/>
+      </attribute>
+      <attribute id="SERRU" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Type of subcontracting"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SERRU"/>
+      </attribute>
+      <attribute id="DISUB_SOBKZ" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Special stock indicator Subcontracting"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="DISUB_SOBKZ"/>
+      </attribute>
+      <attribute id="DISUB_PSPNR" order="185" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Work Breakdown Structure Element (WBS Element)"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="DISUB_PSPNR"/>
+      </attribute>
+      <attribute id="DISUB_KUNNR" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="DISUB_KUNNR"/>
+      </attribute>
+      <attribute id="DISUB_VBELN" order="187" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales and Distribution Document Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="DISUB_VBELN"/>
+      </attribute>
+      <attribute id="DISUB_POSNR" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item number of the SD document"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="DISUB_POSNR"/>
+      </attribute>
+      <attribute id="DISUB_OWNER" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Owner of stock"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="DISUB_OWNER"/>
+      </attribute>
+      <attribute id="FSH_VAS_REL" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VAS Relevant"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FSH_VAS_REL"/>
+      </attribute>
+      <attribute id="FSH_VAS_PRNT_ID" order="191" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item Number of Purchasing Document"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FSH_VAS_PRNT_ID"/>
+      </attribute>
+      <attribute id="FSH_TRANSACTION" order="192" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Transaction Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FSH_TRANSACTION"/>
+      </attribute>
+      <attribute id="FSH_ITEM_GROUP" order="193" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item Group"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FSH_ITEM_GROUP"/>
+      </attribute>
+      <attribute id="FSH_ITEM" order="194" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item Number"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="FSH_ITEM"/>
+      </attribute>
+      <attribute id="IUID_RELEVANT" order="195" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IUID-Relevant"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="IUID_RELEVANT"/>
+      </attribute>
+      <attribute id="SC_SR_ITEM_KEY" order="196" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Catalog Item Key"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SC_SR_ITEM_KEY"/>
+      </attribute>
+      <attribute id="SC_CATALOGID" order="197" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Technical Key of a Web Service (for Example - a Catalog)"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SC_CATALOGID"/>
+      </attribute>
+      <attribute id="SC_CATALOGITEM" order="198" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Catalog Item Id"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SC_CATALOGITEM"/>
+      </attribute>
+      <attribute id="SC_REQUESTOR" order="199" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Requestor"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SC_REQUESTOR"/>
+      </attribute>
+      <attribute id="SC_AUTHOR" order="200" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Author of Requisition"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SC_AUTHOR"/>
+      </attribute>
+      <attribute id="SGT_SCAT" order="201" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Stock Segment"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SGT_SCAT"/>
+      </attribute>
+      <attribute id="SGT_RCAT" order="202" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Requirement Segment"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="SGT_RCAT"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC1" order="203" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Characteristic Value 1"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="WRF_CHARSTC1"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC2" order="204" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Characteristic Value 2"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="WRF_CHARSTC2"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC3" order="205" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Characteristic Value 3"/>
+        <keyMapping columnObjectName="syn_tbl_EBAN" columnName="WRF_CHARSTC3"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

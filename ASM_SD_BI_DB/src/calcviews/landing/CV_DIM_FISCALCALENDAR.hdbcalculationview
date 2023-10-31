@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_DIM_FISCALCALENDAR" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" dimensionType="TIME" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_FISCALCALENDAR"/>
+  <metadata changedAt="2021-12-06 18:55:03.598" createdAt="2020-05-14 15:59:16.373"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="17"/>
+  <dataSources>
+    <DataSource id="M_FISCAL_CALENDAR">
+      <resourceUri>M_FISCAL_CALENDAR</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="M_FISCAL_CALENDAR">
+    <descriptions defaultDescription="VDIM_FISCALCALENDAR"/>
+    <attributes>
+      <attribute id="CALENDAR_VARIANT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CALENDAR_VARIANT"/>
+        <keyMapping columnObjectName="M_FISCAL_CALENDAR" columnName="CALENDAR_VARIANT"/>
+      </attribute>
+      <attribute id="DATE" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE"/>
+        <keyMapping columnObjectName="M_FISCAL_CALENDAR" columnName="DATE"/>
+      </attribute>
+      <attribute id="DATE_SQL" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE_SQL"/>
+        <keyMapping columnObjectName="M_FISCAL_CALENDAR" columnName="DATE_SQL"/>
+      </attribute>
+      <attribute id="FISCAL_YEAR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISCAL_YEAR"/>
+        <keyMapping columnObjectName="M_FISCAL_CALENDAR" columnName="FISCAL_YEAR"/>
+      </attribute>
+      <attribute id="FISCAL_PERIOD" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISCAL_PERIOD"/>
+        <keyMapping columnObjectName="M_FISCAL_CALENDAR" columnName="FISCAL_PERIOD"/>
+      </attribute>
+      <attribute id="CURRENT_YEAR_ADJUSTMENT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENT_YEAR_ADJUSTMENT"/>
+        <keyMapping columnObjectName="M_FISCAL_CALENDAR" columnName="CURRENT_YEAR_ADJUSTMENT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

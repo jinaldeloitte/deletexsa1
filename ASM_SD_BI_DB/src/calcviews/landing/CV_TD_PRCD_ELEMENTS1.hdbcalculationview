@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_PRCD_ELEMENTS1" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_PRICINGELEMENTS"/>
+  <metadata changedAt="2021-12-06 18:12:59.52" createdAt="2020-06-17 18:57:49.495"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_PRCD_ELEMENTS">
+      <resourceUri>syn_tbl_PRCD_ELEMENTS</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_PRCD_ELEMENTS">
+    <descriptions/>
+    <attributes>
+      <attribute id="CLIENT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="CLIENT"/>
+      </attribute>
+      <attribute id="KNUMV" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of the Document Condition"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KNUMV"/>
+      </attribute>
+      <attribute id="KPOSN" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition item number"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KPOSN"/>
+      </attribute>
+      <attribute id="STUNR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Step Number"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="STUNR"/>
+      </attribute>
+      <attribute id="ZAEHK" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Counter"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="ZAEHK"/>
+      </attribute>
+      <attribute id="KAPPL" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Application"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KAPPL"/>
+      </attribute>
+      <attribute id="KSCHL" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition type"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KSCHL"/>
+      </attribute>
+      <attribute id="KDATU" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Timestamp for Pricing"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KDATU"/>
+      </attribute>
+      <attribute id="KRECH" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Calculation Type for Condition"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KRECH"/>
+      </attribute>
+      <attribute id="KAWRT" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Basis Value"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KAWRT"/>
+      </attribute>
+      <attribute id="KBETR" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Rate (Amount or Percentage)"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KBETR"/>
+      </attribute>
+      <attribute id="WAERS" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency Key"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="WAERS"/>
+      </attribute>
+      <attribute id="KKURS" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition exchange rate for conversion to local currency"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KKURS"/>
+      </attribute>
+      <attribute id="KPEIN" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Pricing Unit"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KPEIN"/>
+      </attribute>
+      <attribute id="KMEIN" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Unit in the Document"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KMEIN"/>
+      </attribute>
+      <attribute id="KUMZA" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Numerator for Converting to Base UoM"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KUMZA"/>
+      </attribute>
+      <attribute id="KUMNE" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Denominator for Converting to Base UoM"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KUMNE"/>
+      </attribute>
+      <attribute id="KNTYP" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Category (Examples: Tax, Freight, Price, Cost)"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KNTYP"/>
+      </attribute>
+      <attribute id="KSTAT" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition is used for statistics"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KSTAT"/>
+      </attribute>
+      <attribute id="KNPRS" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Scale Type"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KNPRS"/>
+      </attribute>
+      <attribute id="KRUEK" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition is Relevant for Accrual  (e.g. Freight)"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KRUEK"/>
+      </attribute>
+      <attribute id="KRELI" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition for Invoice List"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KRELI"/>
+      </attribute>
+      <attribute id="KHERK" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Origin of the Condition"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KHERK"/>
+      </attribute>
+      <attribute id="KGRPE" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Group Condition"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KGRPE"/>
+      </attribute>
+      <attribute id="KOLNR" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Access sequence - Access number"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KOLNR"/>
+      </attribute>
+      <attribute id="KNUMH" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition record number"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KNUMH"/>
+      </attribute>
+      <attribute id="KOPOS" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sequential Number of the Condition"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KOPOS"/>
+      </attribute>
+      <attribute id="KVSL1" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Key"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KVSL1"/>
+      </attribute>
+      <attribute id="SAKN1" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="G/L Account Number"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="SAKN1"/>
+      </attribute>
+      <attribute id="MWSK1" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax on sales/purchases code"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="MWSK1"/>
+      </attribute>
+      <attribute id="KVSL2" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Key - Accruals / Provisions"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KVSL2"/>
+      </attribute>
+      <attribute id="SAKN2" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of Accruals Account"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="SAKN2"/>
+      </attribute>
+      <attribute id="MWSK2" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Withholding Tax Code"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="MWSK2"/>
+      </attribute>
+      <attribute id="LIFNR" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="KDIFF" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Rounding-Off Difference of the Condition"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KDIFF"/>
+      </attribute>
+      <attribute id="KWERT" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Value"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KWERT"/>
+      </attribute>
+      <attribute id="WAERK" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SD document currency"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="WAERK"/>
+      </attribute>
+      <attribute id="KSTEU" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Control"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KSTEU"/>
+      </attribute>
+      <attribute id="KINAK" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition is Inactive"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KINAK"/>
+      </attribute>
+      <attribute id="KOAID" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Class"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KOAID"/>
+      </attribute>
+      <attribute id="ZAEKO" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Counter (Header)"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="ZAEKO"/>
+      </attribute>
+      <attribute id="KFAKTOR" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Factor for Condition Base Value"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KFAKTOR"/>
+      </attribute>
+      <attribute id="KDUPL" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Structure Condition"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KDUPL"/>
+      </attribute>
+      <attribute id="KFAKTOR1" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Factor for Condition Basis (Period)"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KFAKTOR1"/>
+      </attribute>
+      <attribute id="KZBZG" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Scale Basis Indicator"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KZBZG"/>
+      </attribute>
+      <attribute id="KSTBS" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Scale Basis Value"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KSTBS"/>
+      </attribute>
+      <attribute id="KONMS" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Scale Unit of Measure"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KONMS"/>
+      </attribute>
+      <attribute id="KONWS" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Scale Currency"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KONWS"/>
+      </attribute>
+      <attribute id="KWAEH" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Currency (for Cumulation Fields)"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KWAEH"/>
+      </attribute>
+      <attribute id="KWERT_K" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Value"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KWERT_K"/>
+      </attribute>
+      <attribute id="KFKIV" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition for Intercompany Billing"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KFKIV"/>
+      </attribute>
+      <attribute id="KMPRS" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Changed Manually"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KMPRS"/>
+      </attribute>
+      <attribute id="PRSQU" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Price Source"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="PRSQU"/>
+      </attribute>
+      <attribute id="TXJLV" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax jurisdiction code level"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="TXJLV"/>
+      </attribute>
+      <attribute id="KBFLAG" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Bit encrypted flags in Pricing"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KBFLAG"/>
+      </attribute>
+      <attribute id="KOUPD" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Update"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KOUPD"/>
+      </attribute>
+      <attribute id="KMXAW" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator for Maximum Condition Basis Value"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KMXAW"/>
+      </attribute>
+      <attribute id="KMXWR" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator for Maximum Condition Amount"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KMXWR"/>
+      </attribute>
+      <attribute id="KAWRT_K" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Basis Value"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KAWRT_K"/>
+      </attribute>
+      <attribute id="KUNNR" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer number (rebate recipient)"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="KVARC" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition for Configuration"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KVARC"/>
+      </attribute>
+      <attribute id="VARCOND" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Variant condition"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="VARCOND"/>
+      </attribute>
+      <attribute id="KTREL" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Relevance for Account Assignment"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KTREL"/>
+      </attribute>
+      <attribute id="MDFLG" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Matrix Maintenance"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="MDFLG"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Data Filter Value for Data Aging"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="CPF_GUID" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Identifier of CPF Formula in Document"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="CPF_GUID"/>
+      </attribute>
+      <attribute id="KAQTY" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Adjusted Quantity"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="KAQTY"/>
+      </attribute>
+      <attribute id="VAL_ZERO" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Process conditions with value equal to zero"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="VAL_ZERO"/>
+      </attribute>
+      <attribute id="IS_ACCT_DETN_RELEVANT" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Statistical and Relevant for Account Determination"/>
+        <keyMapping columnObjectName="syn_tbl_PRCD_ELEMENTS" columnName="IS_ACCT_DETN_RELEVANT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

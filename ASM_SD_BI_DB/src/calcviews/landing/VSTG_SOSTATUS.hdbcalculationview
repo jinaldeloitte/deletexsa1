@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="VSTG_SOSTATUS" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Sales Order Status"/>
+  <metadata changedAt="2021-12-06 18:58:13.581" createdAt="2020-06-09 18:31:30.608"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="55"/>
+  <dataSources>
+    <DataSource id="VSTG_SALESORDER">
+      <resourceUri>VSTG_SALESORDER</resourceUri>
+    </DataSource>
+    <DataSource id="VSTG_DELIVERYLINEITEMS">
+      <resourceUri>VSTG_DELIVERYLINEITEMS</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="SOSTATUS"/>
+        <viewAttribute id="MANDT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="VSTG_SALESORDER">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOSTATUS" source="GBSTK"/></input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute aggregationType="min" id="GBSTK_DLV"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute aggregationType="min" id="FKSTK_DLV"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="VSTG_DELIVERYLINEITEMS">
+        <mapping xsi:type="Calculation:AttributeMapping" target="GBSTK_DLV" source="GBSTK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKSTK_DLV" source="FKSTK"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="GBSTK"/>
+        <viewAttribute id="GBSTK_DLV"/>
+        <viewAttribute id="FKSTK_DLV"/>
+        <viewAttribute id="MANDT"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_SOSTATUS" length="7" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(in(&quot;GBSTK&quot;,'A','B'),'Open',if((&quot;GBSTK&quot;='C' AND  in(&quot;VCAL_GBSTK_DLV&quot;,'C','') AND in(&quot;VCAL_FKSTK_DLV&quot;,'C','')),'Closed','Open')) 
+</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_GBSTK_DLV" length="1" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;GBSTK_DLV&quot;),'',&quot;GBSTK_DLV&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_FKSTK_DLV" length="1" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;FKSTK_DLV&quot;),'',&quot;FKSTK_DLV&quot;)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GBSTK" source="SOSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      </input>
+      <input node="Aggregation_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VGBEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="VGPOS"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_2">
+    <descriptions defaultDescription="Sales Order Status"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_2" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document"/>
+        <keyMapping columnObjectName="Join_2" columnName="VBELN"/>
+      </attribute>
+      <attribute id="POSNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Join_2" columnName="POSNR"/>
+      </attribute>
+      <attribute id="SOSTATUS" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Order Status"/>
+        <keyMapping columnObjectName="Join_2" columnName="VCAL_SOSTATUS"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    
+      <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Aggregation_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

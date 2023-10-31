@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_MARA1" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DEFAULT" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_MD_MARA1"/>
+  <metadata changedAt="2021-01-25 18:16:28.834"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="31"/>
+  <dataSources>
+    <DataSource id="syn_tbl_MARA">
+      <resourceUri>syn_tbl_MARA</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_MARA">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MANDT"/>
+      </attribute>
+      <attribute id="MATNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MATNR"/>
+      </attribute>
+      <attribute id="ERSDA" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERSDA"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ERSDA"/>
+      </attribute>
+      <attribute id="ERNAM" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="LAEDA" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAEDA"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="LAEDA"/>
+      </attribute>
+      <attribute id="AENAM" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AENAM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="AENAM"/>
+      </attribute>
+      <attribute id="VPSTA" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPSTA"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="VPSTA"/>
+      </attribute>
+      <attribute id="PSTAT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTAT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PSTAT"/>
+      </attribute>
+      <attribute id="LVORM" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LVORM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="LVORM"/>
+      </attribute>
+      <attribute id="MTART" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MTART"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MTART"/>
+      </attribute>
+      <attribute id="MBRSH" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MBRSH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MBRSH"/>
+      </attribute>
+      <attribute id="MATKL" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATKL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MATKL"/>
+      </attribute>
+      <attribute id="BISMT" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BISMT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BISMT"/>
+      </attribute>
+      <attribute id="MEINS" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MEINS"/>
+      </attribute>
+      <attribute id="BSTME" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTME"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BSTME"/>
+      </attribute>
+      <attribute id="ZEINR" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEINR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ZEINR"/>
+      </attribute>
+      <attribute id="ZEIAR" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEIAR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ZEIAR"/>
+      </attribute>
+      <attribute id="ZEIVR" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEIVR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ZEIVR"/>
+      </attribute>
+      <attribute id="ZEIFO" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEIFO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ZEIFO"/>
+      </attribute>
+      <attribute id="AESZN" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AESZN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="AESZN"/>
+      </attribute>
+      <attribute id="BLATT" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLATT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BLATT"/>
+      </attribute>
+      <attribute id="BLANZ" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLANZ"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BLANZ"/>
+      </attribute>
+      <attribute id="FERTH" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FERTH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FERTH"/>
+      </attribute>
+      <attribute id="FORMT" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FORMT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FORMT"/>
+      </attribute>
+      <attribute id="GROES" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GROES"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="GROES"/>
+      </attribute>
+      <attribute id="WRKST" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRKST"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="WRKST"/>
+      </attribute>
+      <attribute id="NORMT" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NORMT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="NORMT"/>
+      </attribute>
+      <attribute id="LABOR" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LABOR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="LABOR"/>
+      </attribute>
+      <attribute id="EKWSL" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EKWSL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="EKWSL"/>
+      </attribute>
+      <attribute id="BRGEW" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BRGEW"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BRGEW"/>
+      </attribute>
+      <attribute id="NTGEW" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NTGEW"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="NTGEW"/>
+      </attribute>
+      <attribute id="GEWEI" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEWEI"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="GEWEI"/>
+      </attribute>
+      <attribute id="VOLUM" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VOLUM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="VOLUM"/>
+      </attribute>
+      <attribute id="VOLEH" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VOLEH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="VOLEH"/>
+      </attribute>
+      <attribute id="BEHVO" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEHVO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BEHVO"/>
+      </attribute>
+      <attribute id="RAUBE" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RAUBE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="RAUBE"/>
+      </attribute>
+      <attribute id="TEMPB" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TEMPB"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="TEMPB"/>
+      </attribute>
+      <attribute id="DISST" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISST"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="DISST"/>
+      </attribute>
+      <attribute id="TRAGR" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRAGR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="TRAGR"/>
+      </attribute>
+      <attribute id="STOFF" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STOFF"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="STOFF"/>
+      </attribute>
+      <attribute id="SPART" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SPART"/>
+      </attribute>
+      <attribute id="KUNNR" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="EANNR" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EANNR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="EANNR"/>
+      </attribute>
+      <attribute id="WESCH" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WESCH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="WESCH"/>
+      </attribute>
+      <attribute id="BWVOR" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWVOR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BWVOR"/>
+      </attribute>
+      <attribute id="BWSCL" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWSCL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BWSCL"/>
+      </attribute>
+      <attribute id="SAISO" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAISO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SAISO"/>
+      </attribute>
+      <attribute id="ETIAR" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETIAR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ETIAR"/>
+      </attribute>
+      <attribute id="ETIFO" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETIFO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ETIFO"/>
+      </attribute>
+      <attribute id="ENTAR" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ENTAR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ENTAR"/>
+      </attribute>
+      <attribute id="EAN11" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EAN11"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="EAN11"/>
+      </attribute>
+      <attribute id="NUMTP" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NUMTP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="NUMTP"/>
+      </attribute>
+      <attribute id="LAENG" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAENG"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="LAENG"/>
+      </attribute>
+      <attribute id="BREIT" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BREIT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BREIT"/>
+      </attribute>
+      <attribute id="HOEHE" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HOEHE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="HOEHE"/>
+      </attribute>
+      <attribute id="MEABM" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEABM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MEABM"/>
+      </attribute>
+      <attribute id="PRDHA" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRDHA"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PRDHA"/>
+      </attribute>
+      <attribute id="AEKLK" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AEKLK"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="AEKLK"/>
+      </attribute>
+      <attribute id="CADKZ" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CADKZ"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="CADKZ"/>
+      </attribute>
+      <attribute id="QMPUR" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QMPUR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="QMPUR"/>
+      </attribute>
+      <attribute id="ERGEW" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERGEW"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ERGEW"/>
+      </attribute>
+      <attribute id="ERGEI" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERGEI"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ERGEI"/>
+      </attribute>
+      <attribute id="ERVOL" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERVOL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ERVOL"/>
+      </attribute>
+      <attribute id="ERVOE" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERVOE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ERVOE"/>
+      </attribute>
+      <attribute id="GEWTO" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEWTO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="GEWTO"/>
+      </attribute>
+      <attribute id="VOLTO" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VOLTO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="VOLTO"/>
+      </attribute>
+      <attribute id="VABME" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VABME"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="VABME"/>
+      </attribute>
+      <attribute id="KZREV" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZREV"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="KZREV"/>
+      </attribute>
+      <attribute id="KZKFG" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZKFG"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="KZKFG"/>
+      </attribute>
+      <attribute id="XCHPF" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCHPF"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="XCHPF"/>
+      </attribute>
+      <attribute id="VHART" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VHART"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="VHART"/>
+      </attribute>
+      <attribute id="FUELG" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FUELG"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FUELG"/>
+      </attribute>
+      <attribute id="STFAK" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STFAK"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="STFAK"/>
+      </attribute>
+      <attribute id="MAGRV" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAGRV"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MAGRV"/>
+      </attribute>
+      <attribute id="BEGRU" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEGRU"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BEGRU"/>
+      </attribute>
+      <attribute id="DATAB" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATAB"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="DATAB"/>
+      </attribute>
+      <attribute id="LIQDT" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIQDT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="LIQDT"/>
+      </attribute>
+      <attribute id="SAISJ" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAISJ"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SAISJ"/>
+      </attribute>
+      <attribute id="PLGTP" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLGTP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PLGTP"/>
+      </attribute>
+      <attribute id="MLGUT" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MLGUT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MLGUT"/>
+      </attribute>
+      <attribute id="EXTWG" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXTWG"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="EXTWG"/>
+      </attribute>
+      <attribute id="SATNR" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SATNR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SATNR"/>
+      </attribute>
+      <attribute id="ATTYP" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATTYP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ATTYP"/>
+      </attribute>
+      <attribute id="KZKUP" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZKUP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="KZKUP"/>
+      </attribute>
+      <attribute id="KZNFM" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZNFM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="KZNFM"/>
+      </attribute>
+      <attribute id="PMATA" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PMATA"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PMATA"/>
+      </attribute>
+      <attribute id="MSTAE" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSTAE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MSTAE"/>
+      </attribute>
+      <attribute id="MSTAV" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSTAV"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MSTAV"/>
+      </attribute>
+      <attribute id="MSTDE" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSTDE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MSTDE"/>
+      </attribute>
+      <attribute id="MSTDV" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSTDV"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MSTDV"/>
+      </attribute>
+      <attribute id="TAKLV" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAKLV"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="TAKLV"/>
+      </attribute>
+      <attribute id="RBNRM" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RBNRM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="RBNRM"/>
+      </attribute>
+      <attribute id="MHDRZ" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MHDRZ"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MHDRZ"/>
+      </attribute>
+      <attribute id="MHDHB" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MHDHB"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MHDHB"/>
+      </attribute>
+      <attribute id="MHDLP" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MHDLP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MHDLP"/>
+      </attribute>
+      <attribute id="INHME" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INHME"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="INHME"/>
+      </attribute>
+      <attribute id="INHAL" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INHAL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="INHAL"/>
+      </attribute>
+      <attribute id="VPREH" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPREH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="VPREH"/>
+      </attribute>
+      <attribute id="ETIAG" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETIAG"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ETIAG"/>
+      </attribute>
+      <attribute id="INHBR" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INHBR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="INHBR"/>
+      </attribute>
+      <attribute id="CMETH" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMETH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="CMETH"/>
+      </attribute>
+      <attribute id="CUOBF" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUOBF"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="CUOBF"/>
+      </attribute>
+      <attribute id="KZUMW" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZUMW"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="KZUMW"/>
+      </attribute>
+      <attribute id="KOSCH" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOSCH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="KOSCH"/>
+      </attribute>
+      <attribute id="SPROF" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPROF"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SPROF"/>
+      </attribute>
+      <attribute id="NRFHG" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NRFHG"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="NRFHG"/>
+      </attribute>
+      <attribute id="MFRPN" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MFRPN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MFRPN"/>
+      </attribute>
+      <attribute id="MFRNR" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MFRNR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MFRNR"/>
+      </attribute>
+      <attribute id="BMATN" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BMATN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BMATN"/>
+      </attribute>
+      <attribute id="MPROF" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MPROF"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MPROF"/>
+      </attribute>
+      <attribute id="KZWSM" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZWSM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="KZWSM"/>
+      </attribute>
+      <attribute id="SAITY" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAITY"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SAITY"/>
+      </attribute>
+      <attribute id="PROFL" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROFL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PROFL"/>
+      </attribute>
+      <attribute id="IHIVI" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IHIVI"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="IHIVI"/>
+      </attribute>
+      <attribute id="ILOOS" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ILOOS"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ILOOS"/>
+      </attribute>
+      <attribute id="SERLV" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SERLV"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SERLV"/>
+      </attribute>
+      <attribute id="KZGVH" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZGVH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="KZGVH"/>
+      </attribute>
+      <attribute id="XGCHP" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XGCHP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="XGCHP"/>
+      </attribute>
+      <attribute id="KZEFF" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZEFF"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="KZEFF"/>
+      </attribute>
+      <attribute id="COMPL" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COMPL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="COMPL"/>
+      </attribute>
+      <attribute id="IPRKZ" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IPRKZ"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="IPRKZ"/>
+      </attribute>
+      <attribute id="RDMHD" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RDMHD"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="RDMHD"/>
+      </attribute>
+      <attribute id="PRZUS" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRZUS"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PRZUS"/>
+      </attribute>
+      <attribute id="MTPOS_MARA" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MTPOS_MARA"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MTPOS_MARA"/>
+      </attribute>
+      <attribute id="BFLME" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BFLME"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BFLME"/>
+      </attribute>
+      <attribute id="MATFI" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATFI"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MATFI"/>
+      </attribute>
+      <attribute id="CMREL" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMREL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="CMREL"/>
+      </attribute>
+      <attribute id="BBTYP" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BBTYP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BBTYP"/>
+      </attribute>
+      <attribute id="SLED_BBD" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SLED_BBD"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SLED_BBD"/>
+      </attribute>
+      <attribute id="GTIN_VARIANT" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GTIN_VARIANT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="GTIN_VARIANT"/>
+      </attribute>
+      <attribute id="GENNR" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GENNR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="GENNR"/>
+      </attribute>
+      <attribute id="RMATP" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RMATP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="RMATP"/>
+      </attribute>
+      <attribute id="GDS_RELEVANT" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GDS_RELEVANT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="GDS_RELEVANT"/>
+      </attribute>
+      <attribute id="WEORA" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEORA"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="WEORA"/>
+      </attribute>
+      <attribute id="HUTYP_DFLT" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HUTYP_DFLT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="HUTYP_DFLT"/>
+      </attribute>
+      <attribute id="PILFERABLE" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PILFERABLE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PILFERABLE"/>
+      </attribute>
+      <attribute id="WHSTC" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WHSTC"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="WHSTC"/>
+      </attribute>
+      <attribute id="WHMATGR" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WHMATGR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="WHMATGR"/>
+      </attribute>
+      <attribute id="HNDLCODE" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HNDLCODE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="HNDLCODE"/>
+      </attribute>
+      <attribute id="HAZMAT" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HAZMAT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="HAZMAT"/>
+      </attribute>
+      <attribute id="HUTYP" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HUTYP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="HUTYP"/>
+      </attribute>
+      <attribute id="TARE_VAR" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TARE_VAR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="TARE_VAR"/>
+      </attribute>
+      <attribute id="MAXC" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAXC"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MAXC"/>
+      </attribute>
+      <attribute id="MAXC_TOL" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAXC_TOL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MAXC_TOL"/>
+      </attribute>
+      <attribute id="MAXL" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAXL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MAXL"/>
+      </attribute>
+      <attribute id="MAXB" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAXB"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MAXB"/>
+      </attribute>
+      <attribute id="MAXH" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAXH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MAXH"/>
+      </attribute>
+      <attribute id="MAXDIM_UOM" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAXDIM_UOM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MAXDIM_UOM"/>
+      </attribute>
+      <attribute id="HERKL" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HERKL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="HERKL"/>
+      </attribute>
+      <attribute id="MFRGR" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MFRGR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MFRGR"/>
+      </attribute>
+      <attribute id="QQTIME" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QQTIME"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="QQTIME"/>
+      </attribute>
+      <attribute id="QQTIMEUOM" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QQTIMEUOM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="QQTIMEUOM"/>
+      </attribute>
+      <attribute id="QGRP" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QGRP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="QGRP"/>
+      </attribute>
+      <attribute id="SERIAL" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SERIAL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SERIAL"/>
+      </attribute>
+      <attribute id="PS_SMARTFORM" order="155" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PS_SMARTFORM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PS_SMARTFORM"/>
+      </attribute>
+      <attribute id="LOGUNIT" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGUNIT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="LOGUNIT"/>
+      </attribute>
+      <attribute id="CWQREL" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CWQREL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="CWQREL"/>
+      </attribute>
+      <attribute id="CWQPROC" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CWQPROC"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="CWQPROC"/>
+      </attribute>
+      <attribute id="CWQTOLGR" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CWQTOLGR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="CWQTOLGR"/>
+      </attribute>
+      <attribute id="ADPROF" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADPROF"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ADPROF"/>
+      </attribute>
+      <attribute id="IPMIPPRODUCT" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IPMIPPRODUCT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="IPMIPPRODUCT"/>
+      </attribute>
+      <attribute id="ALLOW_PMAT_IGNO" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALLOW_PMAT_IGNO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ALLOW_PMAT_IGNO"/>
+      </attribute>
+      <attribute id="MEDIUM" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEDIUM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MEDIUM"/>
+      </attribute>
+      <attribute id="COMMODITY" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COMMODITY"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="COMMODITY"/>
+      </attribute>
+      <attribute id="ANIMAL_ORIGIN" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANIMAL_ORIGIN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ANIMAL_ORIGIN"/>
+      </attribute>
+      <attribute id="TEXTILE_COMP_IND" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TEXTILE_COMP_IND"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="TEXTILE_COMP_IND"/>
+      </attribute>
+      <attribute id="SGT_CSGR" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_CSGR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SGT_CSGR"/>
+      </attribute>
+      <attribute id="SGT_COVSA" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_COVSA"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SGT_COVSA"/>
+      </attribute>
+      <attribute id="SGT_STAT" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_STAT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SGT_STAT"/>
+      </attribute>
+      <attribute id="SGT_SCOPE" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_SCOPE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SGT_SCOPE"/>
+      </attribute>
+      <attribute id="SGT_REL" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_REL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SGT_REL"/>
+      </attribute>
+      <attribute id="ANP" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ANP"/>
+      </attribute>
+      <attribute id="PSM_CODE" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSM_CODE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PSM_CODE"/>
+      </attribute>
+      <attribute id="FSH_MG_AT1" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_MG_AT1"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FSH_MG_AT1"/>
+      </attribute>
+      <attribute id="FSH_MG_AT2" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_MG_AT2"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FSH_MG_AT2"/>
+      </attribute>
+      <attribute id="FSH_MG_AT3" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_MG_AT3"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FSH_MG_AT3"/>
+      </attribute>
+      <attribute id="FSH_SEALV" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEALV"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FSH_SEALV"/>
+      </attribute>
+      <attribute id="FSH_SEAIM" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEAIM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FSH_SEAIM"/>
+      </attribute>
+      <attribute id="FSH_SC_MID" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SC_MID"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FSH_SC_MID"/>
+      </attribute>
+      <attribute id="DUMMY_PRD_INCL_EEW_PS" order="180" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_PRD_INCL_EEW_PS"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="DUMMY_PRD_INCL_EEW_PS"/>
+      </attribute>
+      <attribute id="SCM_MATID_GUID16" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCM_MATID_GUID16"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SCM_MATID_GUID16"/>
+      </attribute>
+      <attribute id="SCM_MATID_GUID22" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCM_MATID_GUID22"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SCM_MATID_GUID22"/>
+      </attribute>
+      <attribute id="SCM_MATURITY_DUR" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCM_MATURITY_DUR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SCM_MATURITY_DUR"/>
+      </attribute>
+      <attribute id="SCM_SHLF_LFE_REQ_MIN" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCM_SHLF_LFE_REQ_MIN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SCM_SHLF_LFE_REQ_MIN"/>
+      </attribute>
+      <attribute id="SCM_SHLF_LFE_REQ_MAX" order="185" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCM_SHLF_LFE_REQ_MAX"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SCM_SHLF_LFE_REQ_MAX"/>
+      </attribute>
+      <attribute id="SCM_PUOM" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCM_PUOM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SCM_PUOM"/>
+      </attribute>
+      <attribute id="_CWM_XCWMAT" order="187" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_XCWMAT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/CWM/XCWMAT"/>
+      </attribute>
+      <attribute id="_CWM_VALUM" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_VALUM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/CWM/VALUM"/>
+      </attribute>
+      <attribute id="_CWM_TOLGR" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_TOLGR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/CWM/TOLGR"/>
+      </attribute>
+      <attribute id="_CWM_TARA" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_TARA"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/CWM/TARA"/>
+      </attribute>
+      <attribute id="_CWM_TARUM" order="191" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_TARUM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/CWM/TARUM"/>
+      </attribute>
+      <attribute id="_BEV1_LULEINH" order="192" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BEV1_LULEINH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/BEV1/LULEINH"/>
+      </attribute>
+      <attribute id="_BEV1_LULDEGRP" order="193" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BEV1_LULDEGRP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/BEV1/LULDEGRP"/>
+      </attribute>
+      <attribute id="_BEV1_NESTRUCCAT" order="194" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BEV1_NESTRUCCAT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/BEV1/NESTRUCCAT"/>
+      </attribute>
+      <attribute id="_DSD_SL_TOLTYP" order="195" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DSD_SL_TOLTYP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/DSD/SL_TOLTYP"/>
+      </attribute>
+      <attribute id="_DSD_SV_CNT_GRP" order="196" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DSD_SV_CNT_GRP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/DSD/SV_CNT_GRP"/>
+      </attribute>
+      <attribute id="_DSD_VC_GROUP" order="197" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DSD_VC_GROUP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/DSD/VC_GROUP"/>
+      </attribute>
+      <attribute id="_SAPMP_KADU" order="198" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_KADU"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/KADU"/>
+      </attribute>
+      <attribute id="_SAPMP_ABMEIN" order="199" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_ABMEIN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/ABMEIN"/>
+      </attribute>
+      <attribute id="_SAPMP_KADP" order="200" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_KADP"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/KADP"/>
+      </attribute>
+      <attribute id="_SAPMP_BRAD" order="201" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_BRAD"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/BRAD"/>
+      </attribute>
+      <attribute id="_SAPMP_SPBI" order="202" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_SPBI"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/SPBI"/>
+      </attribute>
+      <attribute id="_SAPMP_TRAD" order="203" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_TRAD"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/TRAD"/>
+      </attribute>
+      <attribute id="_SAPMP_KEDU" order="204" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_KEDU"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/KEDU"/>
+      </attribute>
+      <attribute id="_SAPMP_SPTR" order="205" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_SPTR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/SPTR"/>
+      </attribute>
+      <attribute id="_SAPMP_FBDK" order="206" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_FBDK"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/FBDK"/>
+      </attribute>
+      <attribute id="_SAPMP_FBHK" order="207" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_FBHK"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/FBHK"/>
+      </attribute>
+      <attribute id="_SAPMP_RILI" order="208" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_RILI"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/RILI"/>
+      </attribute>
+      <attribute id="_SAPMP_FBAK" order="209" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_FBAK"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/FBAK"/>
+      </attribute>
+      <attribute id="_SAPMP_AHO" order="210" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_AHO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/AHO"/>
+      </attribute>
+      <attribute id="_SAPMP_MIFRR" order="211" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_SAPMP_MIFRR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/SAPMP/MIFRR"/>
+      </attribute>
+      <attribute id="_VSO_R_TILT_IND" order="212" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_TILT_IND"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_TILT_IND"/>
+      </attribute>
+      <attribute id="_VSO_R_STACK_IND" order="213" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_STACK_IND"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_STACK_IND"/>
+      </attribute>
+      <attribute id="_VSO_R_BOT_IND" order="214" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_BOT_IND"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_BOT_IND"/>
+      </attribute>
+      <attribute id="_VSO_R_TOP_IND" order="215" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_TOP_IND"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_TOP_IND"/>
+      </attribute>
+      <attribute id="_VSO_R_STACK_NO" order="216" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_STACK_NO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_STACK_NO"/>
+      </attribute>
+      <attribute id="_VSO_R_PAL_IND" order="217" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_PAL_IND"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_PAL_IND"/>
+      </attribute>
+      <attribute id="_VSO_R_PAL_OVR_D" order="218" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_PAL_OVR_D"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_PAL_OVR_D"/>
+      </attribute>
+      <attribute id="_VSO_R_PAL_OVR_W" order="219" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_PAL_OVR_W"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_PAL_OVR_W"/>
+      </attribute>
+      <attribute id="_VSO_R_PAL_B_HT" order="220" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_PAL_B_HT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_PAL_B_HT"/>
+      </attribute>
+      <attribute id="_VSO_R_PAL_MIN_H" order="221" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_PAL_MIN_H"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_PAL_MIN_H"/>
+      </attribute>
+      <attribute id="_VSO_R_TOL_B_HT" order="222" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_TOL_B_HT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_TOL_B_HT"/>
+      </attribute>
+      <attribute id="_VSO_R_NO_P_GVH" order="223" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_NO_P_GVH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_NO_P_GVH"/>
+      </attribute>
+      <attribute id="_VSO_R_QUAN_UNIT" order="224" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_QUAN_UNIT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_QUAN_UNIT"/>
+      </attribute>
+      <attribute id="_VSO_R_KZGVH_IND" order="225" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_VSO_R_KZGVH_IND"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="/VSO/R_KZGVH_IND"/>
+      </attribute>
+      <attribute id="PACKCODE" order="226" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PACKCODE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PACKCODE"/>
+      </attribute>
+      <attribute id="DG_PACK_STATUS" order="227" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DG_PACK_STATUS"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="DG_PACK_STATUS"/>
+      </attribute>
+      <attribute id="MCOND" order="228" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCOND"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MCOND"/>
+      </attribute>
+      <attribute id="RETDELC" order="229" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RETDELC"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="RETDELC"/>
+      </attribute>
+      <attribute id="LOGLEV_RETO" order="230" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGLEV_RETO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="LOGLEV_RETO"/>
+      </attribute>
+      <attribute id="NSNID" order="231" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NSNID"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="NSNID"/>
+      </attribute>
+      <attribute id="OVLPN" order="232" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OVLPN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="OVLPN"/>
+      </attribute>
+      <attribute id="ADSPC_SPC" order="233" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADSPC_SPC"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="ADSPC_SPC"/>
+      </attribute>
+      <attribute id="VARID" order="234" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VARID"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="VARID"/>
+      </attribute>
+      <attribute id="MSBOOKPARTNO" order="235" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSBOOKPARTNO"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MSBOOKPARTNO"/>
+      </attribute>
+      <attribute id="DPCBT" order="236" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DPCBT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="DPCBT"/>
+      </attribute>
+      <attribute id="XGRDT" order="237" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XGRDT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="XGRDT"/>
+      </attribute>
+      <attribute id="IMATN" order="238" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IMATN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="IMATN"/>
+      </attribute>
+      <attribute id="PICNUM" order="239" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PICNUM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PICNUM"/>
+      </attribute>
+      <attribute id="BSTAT" order="240" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTAT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BSTAT"/>
+      </attribute>
+      <attribute id="COLOR_ATINN" order="241" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COLOR_ATINN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="COLOR_ATINN"/>
+      </attribute>
+      <attribute id="SIZE1_ATINN" order="242" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SIZE1_ATINN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SIZE1_ATINN"/>
+      </attribute>
+      <attribute id="SIZE2_ATINN" order="243" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SIZE2_ATINN"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SIZE2_ATINN"/>
+      </attribute>
+      <attribute id="COLOR" order="244" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COLOR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="COLOR"/>
+      </attribute>
+      <attribute id="SIZE1" order="245" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SIZE1"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SIZE1"/>
+      </attribute>
+      <attribute id="SIZE2" order="246" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SIZE2"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="SIZE2"/>
+      </attribute>
+      <attribute id="FREE_CHAR" order="247" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FREE_CHAR"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FREE_CHAR"/>
+      </attribute>
+      <attribute id="CARE_CODE" order="248" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CARE_CODE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="CARE_CODE"/>
+      </attribute>
+      <attribute id="BRAND_ID" order="249" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BRAND_ID"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BRAND_ID"/>
+      </attribute>
+      <attribute id="FIBER_CODE1" order="250" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIBER_CODE1"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FIBER_CODE1"/>
+      </attribute>
+      <attribute id="FIBER_PART1" order="251" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIBER_PART1"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FIBER_PART1"/>
+      </attribute>
+      <attribute id="FIBER_CODE2" order="252" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIBER_CODE2"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FIBER_CODE2"/>
+      </attribute>
+      <attribute id="FIBER_PART2" order="253" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIBER_PART2"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FIBER_PART2"/>
+      </attribute>
+      <attribute id="FIBER_CODE3" order="254" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIBER_CODE3"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FIBER_CODE3"/>
+      </attribute>
+      <attribute id="FIBER_PART3" order="255" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIBER_PART3"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FIBER_PART3"/>
+      </attribute>
+      <attribute id="FIBER_CODE4" order="256" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIBER_CODE4"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FIBER_CODE4"/>
+      </attribute>
+      <attribute id="FIBER_PART4" order="257" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIBER_PART4"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FIBER_PART4"/>
+      </attribute>
+      <attribute id="FIBER_CODE5" order="258" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIBER_CODE5"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FIBER_CODE5"/>
+      </attribute>
+      <attribute id="FIBER_PART5" order="259" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIBER_PART5"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FIBER_PART5"/>
+      </attribute>
+      <attribute id="FASHGRD" order="260" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FASHGRD"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="FASHGRD"/>
+      </attribute>
+      <attribute id="LAST_CHANGED_TIME" order="261" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAST_CHANGED_TIME"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="LAST_CHANGED_TIME"/>
+      </attribute>
+      <attribute id="MATNR_EXTERNAL" order="262" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR_EXTERNAL"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MATNR_EXTERNAL"/>
+      </attribute>
+      <attribute id="RMATP_PB" order="263" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RMATP_PB"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="RMATP_PB"/>
+      </attribute>
+      <attribute id="PROD_SHAPE" order="264" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROD_SHAPE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="PROD_SHAPE"/>
+      </attribute>
+      <attribute id="MO_PROFILE_ID" order="265" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MO_PROFILE_ID"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="MO_PROFILE_ID"/>
+      </attribute>
+      <attribute id="OVERHANG_TRESH" order="266" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OVERHANG_TRESH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="OVERHANG_TRESH"/>
+      </attribute>
+      <attribute id="BRIDGE_TRESH" order="267" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BRIDGE_TRESH"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BRIDGE_TRESH"/>
+      </attribute>
+      <attribute id="BRIDGE_MAX_SLOPE" order="268" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BRIDGE_MAX_SLOPE"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="BRIDGE_MAX_SLOPE"/>
+      </attribute>
+      <attribute id="HEIGHT_NONFLAT" order="269" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HEIGHT_NONFLAT"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="HEIGHT_NONFLAT"/>
+      </attribute>
+      <attribute id="HEIGHT_NONFLAT_UOM" order="270" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HEIGHT_NONFLAT_UOM"/>
+        <keyMapping columnObjectName="syn_tbl_MARA" columnName="HEIGHT_NONFLAT_UOM"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

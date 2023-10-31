@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_KNVK" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_CUSTOMERPARTNERFUNC"/>
+  <metadata changedAt="2021-12-06 18:06:46.468"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="42"/>
+  <dataSources>
+    <DataSource id="syn_tbl_KNVK">
+      <resourceUri>syn_tbl_KNVK</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_KNVK">
+    <descriptions defaultDescription="VDIM_CUSTOMERPARTNERFUNC"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KUNNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="LIFNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="PARNR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of contact person"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PARNR"/>
+      </attribute>
+      <attribute id="NAMEV" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAMEV"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="NAMEV"/>
+      </attribute>
+      <attribute id="NAME1" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="NAME1"/>
+      </attribute>
+      <attribute id="ORT01" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ORT01"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="ORT01"/>
+      </attribute>
+      <attribute id="ADRND" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRND"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="ADRND"/>
+      </attribute>
+      <attribute id="ADRNP" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRNP"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="ADRNP"/>
+      </attribute>
+      <attribute id="ABTPA" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABTPA"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="ABTPA"/>
+      </attribute>
+      <attribute id="ABTNR" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABTNR"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="ABTNR"/>
+      </attribute>
+      <attribute id="UEPAR" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UEPAR"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="UEPAR"/>
+      </attribute>
+      <attribute id="TELF1" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELF1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="TELF1"/>
+      </attribute>
+      <attribute id="ANRED" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANRED"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="ANRED"/>
+      </attribute>
+      <attribute id="PAFKT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAFKT"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PAFKT"/>
+      </attribute>
+      <attribute id="PARVO" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVO"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PARVO"/>
+      </attribute>
+      <attribute id="PAVIP" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAVIP"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PAVIP"/>
+      </attribute>
+      <attribute id="PARGE" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARGE"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PARGE"/>
+      </attribute>
+      <attribute id="PARLA" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARLA"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PARLA"/>
+      </attribute>
+      <attribute id="GBDAT" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GBDAT"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="GBDAT"/>
+      </attribute>
+      <attribute id="VRTNR" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRTNR"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="VRTNR"/>
+      </attribute>
+      <attribute id="BRYTH" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BRYTH"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="BRYTH"/>
+      </attribute>
+      <attribute id="AKVER" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AKVER"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="AKVER"/>
+      </attribute>
+      <attribute id="NMAIL" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NMAIL"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="NMAIL"/>
+      </attribute>
+      <attribute id="PARAU" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARAU"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PARAU"/>
+      </attribute>
+      <attribute id="PARH1" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARH1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PARH1"/>
+      </attribute>
+      <attribute id="PARH2" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARH2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PARH2"/>
+      </attribute>
+      <attribute id="PARH3" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARH3"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PARH3"/>
+      </attribute>
+      <attribute id="PARH4" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARH4"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PARH4"/>
+      </attribute>
+      <attribute id="PARH5" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARH5"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PARH5"/>
+      </attribute>
+      <attribute id="MOAB1" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOAB1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="MOAB1"/>
+      </attribute>
+      <attribute id="MOBI1" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOBI1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="MOBI1"/>
+      </attribute>
+      <attribute id="MOAB2" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOAB2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="MOAB2"/>
+      </attribute>
+      <attribute id="MOBI2" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOBI2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="MOBI2"/>
+      </attribute>
+      <attribute id="DIAB1" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DIAB1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="DIAB1"/>
+      </attribute>
+      <attribute id="DIBI1" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DIBI1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="DIBI1"/>
+      </attribute>
+      <attribute id="DIAB2" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DIAB2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="DIAB2"/>
+      </attribute>
+      <attribute id="DIBI2" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DIBI2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="DIBI2"/>
+      </attribute>
+      <attribute id="MIAB1" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MIAB1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="MIAB1"/>
+      </attribute>
+      <attribute id="MIBI1" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MIBI1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="MIBI1"/>
+      </attribute>
+      <attribute id="MIAB2" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MIAB2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="MIAB2"/>
+      </attribute>
+      <attribute id="MIBI2" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MIBI2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="MIBI2"/>
+      </attribute>
+      <attribute id="DOAB1" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DOAB1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="DOAB1"/>
+      </attribute>
+      <attribute id="DOBI1" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DOBI1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="DOBI1"/>
+      </attribute>
+      <attribute id="DOAB2" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DOAB2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="DOAB2"/>
+      </attribute>
+      <attribute id="DOBI2" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DOBI2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="DOBI2"/>
+      </attribute>
+      <attribute id="FRAB1" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRAB1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="FRAB1"/>
+      </attribute>
+      <attribute id="FRBI1" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRBI1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="FRBI1"/>
+      </attribute>
+      <attribute id="FRAB2" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRAB2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="FRAB2"/>
+      </attribute>
+      <attribute id="FRBI2" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRBI2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="FRBI2"/>
+      </attribute>
+      <attribute id="SAAB1" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAAB1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="SAAB1"/>
+      </attribute>
+      <attribute id="SABI1" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SABI1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="SABI1"/>
+      </attribute>
+      <attribute id="SAAB2" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAAB2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="SAAB2"/>
+      </attribute>
+      <attribute id="SABI2" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SABI2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="SABI2"/>
+      </attribute>
+      <attribute id="SOAB1" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOAB1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="SOAB1"/>
+      </attribute>
+      <attribute id="SOBI1" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOBI1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="SOBI1"/>
+      </attribute>
+      <attribute id="SOAB2" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOAB2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="SOAB2"/>
+      </attribute>
+      <attribute id="SOBI2" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOBI2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="SOBI2"/>
+      </attribute>
+      <attribute id="PAKN1" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAKN1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PAKN1"/>
+      </attribute>
+      <attribute id="PAKN2" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAKN2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PAKN2"/>
+      </attribute>
+      <attribute id="PAKN3" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAKN3"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PAKN3"/>
+      </attribute>
+      <attribute id="PAKN4" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAKN4"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PAKN4"/>
+      </attribute>
+      <attribute id="PAKN5" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAKN5"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PAKN5"/>
+      </attribute>
+      <attribute id="SORTL" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SORTL"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="SORTL"/>
+      </attribute>
+      <attribute id="FAMST" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAMST"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="FAMST"/>
+      </attribute>
+      <attribute id="SPNAM" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPNAM"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="SPNAM"/>
+      </attribute>
+      <attribute id="TITEL_AP" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TITEL_AP"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="TITEL_AP"/>
+      </attribute>
+      <attribute id="ERDAT" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERNAM" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="DUEFL" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUEFL"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="DUEFL"/>
+      </attribute>
+      <attribute id="LIFNR_1" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR_1"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="LOEVM" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOEVM"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="LOEVM"/>
+      </attribute>
+      <attribute id="KZHERK" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZHERK"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="KZHERK"/>
+      </attribute>
+      <attribute id="ADRNP_2" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRNP_2"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="ADRNP_2"/>
+      </attribute>
+      <attribute id="PRSNR" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRSNR"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="PRSNR"/>
+      </attribute>
+      <attribute id="CVP_XBLCK_K" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CVP_XBLCK_K"/>
+        <keyMapping columnObjectName="syn_tbl_KNVK" columnName="CVP_XBLCK_K"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

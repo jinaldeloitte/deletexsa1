@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" executionSemantic="UNDEFINED" dataCategory="CUBE" id="HANA_CONTENT.REPORTING_MODELS.CROSS_FUNCTIONAL.SD::CV_RPT_R2073_OTC_SMART_DATA_MODEL" xscCompatibilityMode="true" applyPrivilegeType="NONE" enforceSqlExecution="false">
+<origin></origin>
+  <descriptions defaultDescription="Contract Related Sales-Delivery-Invoice Transactional Smart Data Model "></descriptions>
+  <metadata changedAt="2021-12-06 19:30:32.944"></metadata>
+  <localVariables>
+    <variable id="GPO_Customers">
+      <descriptions defaultDescription="GPO Customers"></descriptions>
+      <variableProperties datatype="VARCHAR" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK1T</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>KATR1</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Sold_to_Party">
+      <descriptions defaultDescription="Sold to Party"></descriptions>
+      <variableProperties datatype="NVARCHAR" length="10" scale="null" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_MD_KNA1</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>KUNNR</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Contract_Number">
+      <descriptions defaultDescription="Contract Number"></descriptions>
+      <variableProperties datatype="NVARCHAR" length="10" scale="null" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_TD_VBAK</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>VBELN</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Payer_Number">
+      <descriptions defaultDescription="Payer Number"></descriptions>
+      <variableProperties datatype="NVARCHAR" length="10" scale="null" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_MD_KNA1</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>KUNNR</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Sales_Order_Created_Date">
+      <descriptions defaultDescription="Sales Order Created Date"></descriptions>
+      <variableProperties datatype="VARCHAR" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_DIM_FISCALCALENDAR</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>DATE_SQL</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="Interval"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Contract_Created_Date">
+      <descriptions defaultDescription="Contract Created Date"></descriptions>
+      <variableProperties datatype="VARCHAR" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_DIM_FISCALCALENDAR</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>DATE_SQL</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="Interval"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Billing_Date">
+      <descriptions defaultDescription="Billing Date"></descriptions>
+      <variableProperties datatype="VARCHAR" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_DIM_FISCALCALENDAR</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>DATE_SQL</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="Interval"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Delivery_Date">
+      <descriptions defaultDescription="Delivery Date"></descriptions>
+      <variableProperties datatype="VARCHAR" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_DIM_FISCALCALENDAR</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>DATE_SQL</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="Interval"></selection>
+      </variableProperties>
+    </variable>
+    <variable id="Invoice_List_Number">
+      <descriptions defaultDescription="Invoice List Number"></descriptions>
+      <variableProperties datatype="VARCHAR" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <attribute name="VBELN_VBRL_INVOICE_LIST"></attribute>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"></selection>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings></variableMappings>
+  <informationModelLayout relativeWidthScenario="19"></informationModelLayout>
+  <dataSources>
+    <DataSource id="CV_FCT_R2073_CONTRACT_RELATED_SALES_INVOICE_DATA">
+      <resourceUri>CV_FCT_R2073_CONTRACT_RELATED_SALES_INVOICE_DATA</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <descriptions></descriptions>
+    <viewAttributes>
+        <viewAttribute id="VBELN"></viewAttribute>
+        <viewAttribute id="VBEGDAT"></viewAttribute>
+        <viewAttribute id="VENDDAT"></viewAttribute>
+        <viewAttribute id="POSNR_CONTRACT"></viewAttribute>
+        <viewAttribute id="MATNR_CONTRACT"></viewAttribute>
+        <viewAttribute id="MATKL_CONTRACT"></viewAttribute>
+        <viewAttribute id="ZMENG_CONTRACT"></viewAttribute>
+        <viewAttribute id="ARKTX_CONTRACT"></viewAttribute>
+        <viewAttribute id="ZIEME_CONTRACT"></viewAttribute>
+        <viewAttribute id="BRGEW_CONTRACT"></viewAttribute>
+        <viewAttribute id="NTGEW_CONTRACT"></viewAttribute>
+        <viewAttribute id="GEWEI_CONTRACT"></viewAttribute>
+        <viewAttribute id="VOLUM_CONTRACT"></viewAttribute>
+        <viewAttribute id="VOLEH_CONTRACT"></viewAttribute>
+        <viewAttribute id="WERKS_CONTRACT"></viewAttribute>
+        <viewAttribute id="LGORT_CONTRACT"></viewAttribute>
+        <viewAttribute id="VSTEL_CONTRACT"></viewAttribute>
+        <viewAttribute id="AUART"></viewAttribute>
+        <viewAttribute id="AUART_CONTRACT"></viewAttribute>
+        <viewAttribute id="KUNNR_CONTRACT"></viewAttribute>
+        <viewAttribute id="AUDAT_CONTRACT"></viewAttribute>
+        <viewAttribute id="BSTNK_CONTRACT"></viewAttribute>
+        <viewAttribute id="ERDAT_CONTRACT"></viewAttribute>
+        <viewAttribute id="ERNAM_CONTRACT"></viewAttribute>
+        <viewAttribute id="VKORG_CONTRACT"></viewAttribute>
+        <viewAttribute id="VTWEG_CONTRACT"></viewAttribute>
+        <viewAttribute id="SPART_CONTRACT"></viewAttribute>
+        <viewAttribute id="WAERK_CONTRACT"></viewAttribute>
+        <viewAttribute id="BUKRS_VF_CONTRACT"></viewAttribute>
+        <viewAttribute id="VBELN_CONTRACT"></viewAttribute>
+        <viewAttribute id="BSTNK"></viewAttribute>
+        <viewAttribute id="ERDAT"></viewAttribute>
+        <viewAttribute id="ERNAM"></viewAttribute>
+        <viewAttribute id="LIFSK"></viewAttribute>
+        <viewAttribute id="FAKSK"></viewAttribute>
+        <viewAttribute id="WAERK"></viewAttribute>
+        <viewAttribute id="POSNR"></viewAttribute>
+        <viewAttribute id="MATNR"></viewAttribute>
+        <viewAttribute id="ARKTX"></viewAttribute>
+        <viewAttribute id="KWMENG"></viewAttribute>
+        <viewAttribute id="MATKL"></viewAttribute>
+        <viewAttribute id="ZIEME"></viewAttribute>
+        <viewAttribute id="NETWR"></viewAttribute>
+        <viewAttribute id="BRGEW"></viewAttribute>
+        <viewAttribute id="NTGEW"></viewAttribute>
+        <viewAttribute id="GEWEI"></viewAttribute>
+        <viewAttribute id="VOLUM"></viewAttribute>
+        <viewAttribute id="VOLEH"></viewAttribute>
+        <viewAttribute id="WERKS"></viewAttribute>
+        <viewAttribute id="LGORT"></viewAttribute>
+        <viewAttribute id="VSTEL"></viewAttribute>
+        <viewAttribute id="ABGRU"></viewAttribute>
+        <viewAttribute id="MANDT"></viewAttribute>
+        <viewAttribute id="VBELN_LIPS"></viewAttribute>
+        <viewAttribute id="POSNR_LIPS"></viewAttribute>
+        <viewAttribute id="VGPOS"></viewAttribute>
+        <viewAttribute id="PRODH"></viewAttribute>
+        <viewAttribute id="VRKME"></viewAttribute>
+        <viewAttribute id="LFIMG"></viewAttribute>
+        <viewAttribute id="LFART"></viewAttribute>
+        <viewAttribute id="LFDAT"></viewAttribute>
+        <viewAttribute id="ROUTA"></viewAttribute>
+        <viewAttribute id="WADAT"></viewAttribute>
+        <viewAttribute id="WADAT_IST"></viewAttribute>
+        <viewAttribute id="KUNNR"></viewAttribute>
+        <viewAttribute id="KUNAG"></viewAttribute>
+        <viewAttribute id="FKART"></viewAttribute>
+        <viewAttribute id="KUNRG"></viewAttribute>
+        <viewAttribute id="ZUONR"></viewAttribute>
+        <viewAttribute id="KDGRP"></viewAttribute>
+        <viewAttribute id="VKORG"></viewAttribute>
+        <viewAttribute id="VTWEG"></viewAttribute>
+        <viewAttribute id="VSBED"></viewAttribute>
+        <viewAttribute id="KTGRD"></viewAttribute>
+        <viewAttribute id="REGIO"></viewAttribute>
+        <viewAttribute id="BUKRS"></viewAttribute>
+        <viewAttribute id="KUNWE"></viewAttribute>
+        <viewAttribute id="FKART_RL"></viewAttribute>
+        <viewAttribute id="PRCTR"></viewAttribute>
+        <viewAttribute id="FKIMG"></viewAttribute>
+        <viewAttribute id="MEINS"></viewAttribute>
+        <viewAttribute id="PRSDT"></viewAttribute>
+        <viewAttribute id="MWSBP"></viewAttribute>
+        <viewAttribute id="AUBEL"></viewAttribute>
+        <viewAttribute id="AUPOS"></viewAttribute>
+        <viewAttribute id="PMATN"></viewAttribute>
+        <viewAttribute id="ALAND"></viewAttribute>
+        <viewAttribute id="SPARA"></viewAttribute>
+        <viewAttribute id="ERZET"></viewAttribute>
+        <viewAttribute id="VGBEL"></viewAttribute>
+        <viewAttribute id="VBELN_VBRK"></viewAttribute>
+        <viewAttribute id="VBELN_VF"></viewAttribute>
+        <viewAttribute id="NETWR_INVOICE"></viewAttribute>
+        <viewAttribute id="MWSBP_INVOICE"></viewAttribute>
+        <viewAttribute id="NTGEW_DELIVERY"></viewAttribute>
+        <viewAttribute id="BRGEW_DELIVERY"></viewAttribute>
+        <viewAttribute id="VOLUM_DELIVERY"></viewAttribute>
+        <viewAttribute id="FKDAT_BILLING"></viewAttribute>
+        <viewAttribute id="NTGEW_BILLING"></viewAttribute>
+        <viewAttribute id="VBELN_VBRL"></viewAttribute>
+        <viewAttribute id="VBELN_INVOICE_BILL"></viewAttribute>
+        <viewAttribute id="FKART_INVOICE_BILL"></viewAttribute>
+        <viewAttribute id="KUNRG_INVOICE_BILL"></viewAttribute>
+        <viewAttribute id="GJAHR_INVOICE_BILL"></viewAttribute>
+        <viewAttribute id="FKDAT_INVOICE_BILL"></viewAttribute>
+        <viewAttribute id="VGBEL_DELIVERY"></viewAttribute>
+        <viewAttribute id="CONTACT_PERSON"></viewAttribute>
+        <viewAttribute id="BILL_TO_PARTY"></viewAttribute>
+        <viewAttribute id="PAYER"></viewAttribute>
+        <viewAttribute id="SHIP_TO_PARTY"></viewAttribute>
+        <viewAttribute id="FORWARDING_AGENT"></viewAttribute>
+        <viewAttribute id="SALES_EMPLOYEE"></viewAttribute>
+        <viewAttribute id="EMPLOYEE_RESPONSE"></viewAttribute>
+        <viewAttribute id="VENDOR"></viewAttribute>
+        <viewAttribute id="TRANSPORTATION_CONTACT_PERSON"></viewAttribute>
+        <viewAttribute id="TRANSPORTATION_BILL_TO_PARTY"></viewAttribute>
+        <viewAttribute id="TRANSPORTATION_PAYER"></viewAttribute>
+        <viewAttribute id="TRANSPORTATION_SHIP_TO_PARTY"></viewAttribute>
+        <viewAttribute id="TRANSPORTATION_FORWARDING_AGENT"></viewAttribute>
+        <viewAttribute id="TRANSPORTATION_SALES_EMPLOYEE"></viewAttribute>
+        <viewAttribute id="TRANSPORTATION_EMPLOYEE_RESPONSE"></viewAttribute>
+        <viewAttribute id="TRANSPORTATION_VENDOR"></viewAttribute>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"></viewAttribute>
+        <viewAttribute id="VRKME_VBRP"></viewAttribute>
+        <viewAttribute id="WAERK_VBRP"></viewAttribute>
+        <viewAttribute id="GEWEI_VBRP"></viewAttribute>
+        <viewAttribute id="GEWEI_LIPS"></viewAttribute>
+        <viewAttribute id="VOLEH_LIPS"></viewAttribute>
+        <viewAttribute id="VRKME_VBAP"></viewAttribute>
+        <viewAttribute id="POSNR_INVOICE_LIST"></viewAttribute>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"></viewAttribute>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"></viewAttribute>
+        <viewAttribute id="NETWR_CONTRACT"></viewAttribute>
+        <viewAttribute id="INCO1_ITM_CONTRACT"></viewAttribute>
+        <viewAttribute id="INCO2_ITM_CONTRACT"></viewAttribute>
+        <viewAttribute id="ZTERM_ITM_CONTRACT"></viewAttribute>
+        <viewAttribute id="FKDAT_ITM_CONTRACT"></viewAttribute>
+        <viewAttribute id="GJAHR_ITM_CONTRACT"></viewAttribute>
+        <viewAttribute id="INCO1_HDR_CONTRACT"></viewAttribute>
+        <viewAttribute id="INCO2_HDR_CONTRACT"></viewAttribute>
+        <viewAttribute id="ZTERM_HDR_CONTRACT"></viewAttribute>
+        <viewAttribute id="FKDAT_HDR_CONTRACT"></viewAttribute>
+        <viewAttribute id="GJAHR_HDR_CONTRACT"></viewAttribute>
+        <viewAttribute id="VBELN_CONTRACT_HDR"></viewAttribute>
+        <viewAttribute id="NETWR_VBRP"></viewAttribute>
+        <viewAttribute id="NETPR_CONTRACT"></viewAttribute>
+        <viewAttribute id="WAERK_VBRP_ITEM"></viewAttribute>
+        <viewAttribute id="NETWR_CONTRACT_HDR"></viewAttribute>
+        <viewAttribute id="WAERK_CONTRACT_HDR"></viewAttribute>
+        <viewAttribute id="NETWR_VBRK"></viewAttribute>
+        <viewAttribute id="MATNR_VBRP"></viewAttribute>
+        <viewAttribute id="MATNR_LIPS"></viewAttribute>
+        <viewAttribute id="POSNR_VBKD_ITEM"></viewAttribute>
+        <viewAttribute id="MWSBP_VBAP_ORDER"></viewAttribute>
+        <viewAttribute id="ERNAM_LIPS"></viewAttribute>
+        <viewAttribute id="ERDAT_LIPS"></viewAttribute>
+        <viewAttribute id="WERKS_LIPS"></viewAttribute>
+        <viewAttribute id="LGORT_LIPS"></viewAttribute>
+        <viewAttribute id="ARKTX_LIPS"></viewAttribute>
+        <viewAttribute id="VSTEL_LIKP"></viewAttribute>
+        <viewAttribute id="ERDAT_VBRP"></viewAttribute>
+        <viewAttribute id="ERNAM_VBRP"></viewAttribute>
+        <viewAttribute id="ARKTX_VBRP"></viewAttribute>
+        <viewAttribute id="INCO1_VBRK"></viewAttribute>
+        <viewAttribute id="KUNAG_VBRK"></viewAttribute>
+        <viewAttribute id="INCO2_VBRK"></viewAttribute>
+        <viewAttribute id="ZTERM_VBRK"></viewAttribute>
+        <viewAttribute id="GJAHR_VBRK"></viewAttribute>
+        <viewAttribute id="KUNAG_VBRL"></viewAttribute>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"></viewAttribute>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"></viewAttribute>
+        <viewAttribute id="VCAL_POSNR_VBPA"></viewAttribute>
+        <viewAttribute id="VCAL_PARVW_VBPA"></viewAttribute>
+        <viewAttribute id="WERKS_VBRP"></viewAttribute>
+        <viewAttribute id="ERDAT_VBAK_ORDER"></viewAttribute>
+        <viewAttribute id="ERNAM_VBAK_ORDER"></viewAttribute>
+        <viewAttribute id="POSNR_BILLING"></viewAttribute>
+        <viewAttribute id="TXJCD_VBRP"></viewAttribute>
+        <viewAttribute id="TEXT1_TTXJT"></viewAttribute>
+        <viewAttribute id="VBELN_LIKP"></viewAttribute>
+      </viewAttributes>
+    <calculatedViewAttributes></calculatedViewAttributes>
+      <input node="CV_FCT_R2073_CONTRACT_RELATED_SALES_INVOICE_DATA">
+        <mapping xsi:type="Calculation:AttributeMapping" source="VBELN_INVOICE_HDR" target="VBELN_INVOICE_BILL"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="FKART_INVOICE_HDR" target="FKART_INVOICE_BILL"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="KUNRG_INVOICE_HDR" target="KUNRG_INVOICE_BILL"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="GJAHR_INVOICE_HDR" target="GJAHR_INVOICE_BILL"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="FKDAT_INVOICE_HDR" target="FKDAT_INVOICE_BILL"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="TRN_CONTACT_PERSON" target="TRANSPORTATION_CONTACT_PERSON"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="TRN_BILL_TO_PARTY" target="TRANSPORTATION_BILL_TO_PARTY"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="TRN_PAYER" target="TRANSPORTATION_PAYER"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="TRN_SHIP_TO_PARTY" target="TRANSPORTATION_SHIP_TO_PARTY"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="TRN_FORWARDING_AGENT" target="TRANSPORTATION_FORWARDING_AGENT"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="TRN_SALES_EMPLOYEE" target="TRANSPORTATION_SALES_EMPLOYEE"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="TRN_EMPLOYEE_RESPONSE" target="TRANSPORTATION_EMPLOYEE_RESPONSE"></mapping>
+        <mapping xsi:type="Calculation:AttributeMapping" source="TRN_VENDOR" target="TRANSPORTATION_VENDOR"></mapping></input>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions defaultDescription="Contract Related Sales-Delivery-Invoice Transactional Smart Data Model "></descriptions>
+    <attributes>
+      <attribute id="POSNR_VBAP_CONTRACT" displayAttribute="false" order="1" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document Item_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="MATNR_VBAP_CONTRACT" displayAttribute="false" order="2" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material Number_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATNR_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="MATKL_VBAP_CONTRACT" displayAttribute="false" order="3" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material Group_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATKL_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="ARKTX_VBAP_CONTRACT" displayAttribute="false" order="5" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Short text for sales order Item_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ARKTX_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="ZIEME_VBAP_CONTRACT" displayAttribute="false" order="6" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Target Quantity UoM_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ZIEME_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="GEWEI_VBAP_CONTRACT" displayAttribute="false" order="9" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Weight Unit_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GEWEI_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="VOLEH_VBAP_CONTRACT" displayAttribute="false" order="11" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Volume Unit_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VOLEH_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="WERKS_VBAP_CONTRACT" displayAttribute="false" order="12" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Plant_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="LGORT_VBAP_CONTRACT" displayAttribute="false" order="13" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Storage Location_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LGORT_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="ERDAT_VBAP_CONTRACT" displayAttribute="false" order="14" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created on_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="VSTEL_VBAP_CONTRACT" displayAttribute="false" order="16" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Shipping Point/Receiving Point_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VSTEL_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="ERNAM_VBAP_CONTRACT" displayAttribute="false" order="17" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created by_Sales Doc Item_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERNAM_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="AUART_VBAK_CONTRACT" displayAttribute="false" order="19" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document Type_Sales Doc Header_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AUART_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="ERDAT_VBAK_CONTRACT" displayAttribute="false" order="20" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created on_Sales Doc Header_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT_VBAK_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="ERNAM_VBAK_CONTRACT" displayAttribute="false" order="21" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created By_Sales Doc Header_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERNAM_VBAK_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="AUDAT_VBAK_CONTRACT" displayAttribute="false" order="22" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Date_Sales Doc Header_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AUDAT_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="BSTNK_VBAK_CONTRACT" displayAttribute="false" order="23" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer Reference_Sales Doc Header_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BSTNK_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="VKORG_CONTRACT" displayAttribute="false" order="24" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Organization_Sales Doc Header_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VKORG_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="VTWEG_VBAK_CONTRACT" displayAttribute="false" order="25" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Distribution Channel_Sales Doc Header_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VTWEG_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="WAERK_VBAK_CONTRACT" displayAttribute="false" order="26" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Currency_Sales Doc Header_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERK_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VBAK_CONTRACT" displayAttribute="false" order="27" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document_Sales Doc Header_Contract"></descriptions>
+        <localVariable>Contract_Number</localVariable>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="BUKRS_VF_VBAK_CONTRACT" displayAttribute="false" order="28" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Company Code to be Billed_Sales Doc Header_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BUKRS_VF_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="SPART_VBAK_CONTRACT" displayAttribute="false" order="29" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Division_Sales Doc Header_Contract"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="SPART_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VBAP_ORDERS" displayAttribute="false" order="30" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN"></keyMapping>
+      </attribute>
+      <attribute id="WAERK_VBAP_ORDERS" displayAttribute="false" order="31" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Currency_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERK"></keyMapping>
+      </attribute>
+      <attribute id="POSNR_VBAP_ORDERS" displayAttribute="false" order="32" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document Item_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR"></keyMapping>
+      </attribute>
+      <attribute id="MATNR_VBAP_ORDERS" displayAttribute="false" order="33" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material Number_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATNR"></keyMapping>
+      </attribute>
+      <attribute id="ARKTX_VBAP_ORDERS" displayAttribute="false" order="34" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Short Text for Sales Order Item_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ARKTX"></keyMapping>
+      </attribute>
+      <attribute id="MATKL_VBAP_ORDERS" displayAttribute="false" order="36" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material Group_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATKL"></keyMapping>
+      </attribute>
+      <attribute id="GEWEI_VBAP_ORDERS" displayAttribute="false" order="39" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Weight Unit_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GEWEI"></keyMapping>
+      </attribute>
+      <attribute id="VOLEH_VBAP_ORDERS" displayAttribute="false" order="41" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Volume Unit_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VOLEH"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VRKME_VBAP_ORDERS" displayAttribute="false" order="42" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Unit_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VRKME_VBAP"></keyMapping>
+      </attribute>
+      <attribute id="WERKS_VBAP_ORDERS" displayAttribute="false" order="43" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Plant_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS"></keyMapping>
+      </attribute>
+      <attribute id="ZIEME_VBAP_ORDERS" displayAttribute="false" order="44" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Target Quantity UoM_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ZIEME"></keyMapping>
+      </attribute>
+      <attribute id="ERDAT_VBAP_ORDERS" displayAttribute="false" order="46" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created on_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT"></keyMapping>
+      </attribute>
+      <attribute id="LGORT_VBAP_ORDERS" displayAttribute="false" order="47" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Storage Location_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LGORT"></keyMapping>
+      </attribute>
+      <attribute id="ABGRU_VBAP_ORDERS" displayAttribute="false" order="49" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Reason for Rejection of Quotations and Sales Orders_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ABGRU"></keyMapping>
+      </attribute>
+      <attribute id="VSTEL_VBAP_ORDERS" displayAttribute="false" order="50" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Shipping Point/Receiving Point_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VSTEL"></keyMapping>
+      </attribute>
+      <attribute id="ERNAM_VBAP_ORDERS" displayAttribute="false" order="51" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created by_Sales Doc Item_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERNAM"></keyMapping>
+      </attribute>
+      <attribute id="AUART_VBAK_ORDERS" displayAttribute="false" order="52" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document Type_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AUART"></keyMapping>
+      </attribute>
+      <attribute id="BSTNK_VBAK_ORDERS" displayAttribute="false" order="53" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer Reference_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BSTNK"></keyMapping>
+      </attribute>
+      <attribute id="LIFSK_VBAK_ORDERS" displayAttribute="false" order="54" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Delivery Block_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LIFSK"></keyMapping>
+      </attribute>
+      <attribute id="FAKSK_VBAK_ORDERS" displayAttribute="false" order="55" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Block_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FAKSK"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="ERDAT_VBAK_ORDERS" displayAttribute="false" order="56" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created on_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT_VBAK_ORDER"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="ERNAM_VBAK_ORDERS" displayAttribute="false" order="57" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created By_Sales Doc Header_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERNAM_VBAK_ORDER"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_LIPS" displayAttribute="false" order="59" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Delivery Number_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_LIPS"></keyMapping>
+      </attribute>
+      <attribute id="POSNR_LIPS" displayAttribute="false" order="60" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Delivery Item_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_LIPS"></keyMapping>
+      </attribute>
+      <attribute id="VGPOS_LIPS" displayAttribute="false" order="61" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Reference Item Number_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VGPOS"></keyMapping>
+      </attribute>
+      <attribute id="PRODH_LIPS" displayAttribute="false" order="62" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Prod Hierarchy_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PRODH"></keyMapping>
+      </attribute>
+      <attribute id="VRKME_LIPS" displayAttribute="false" order="63" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Unit_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VRKME"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="GEWEI_LIPS" displayAttribute="false" order="65" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Weight Unit_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GEWEI_LIPS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VOLEH_LIPS" displayAttribute="false" order="66" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Volume Unit_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VOLEH_LIPS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="MATNR_LIPS" displayAttribute="false" order="69" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material Number_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATNR_LIPS"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VGBEL_LIPS" displayAttribute="false" order="70" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Delivery Number_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VGBEL_DELIVERY"></keyMapping>
+      </attribute>
+      <attribute id="ERNAM_LIPS" displayAttribute="false" order="72" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created By_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERNAM_LIPS"></keyMapping>
+      </attribute>
+      <attribute id="ERDAT_LIPS" displayAttribute="false" order="73" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created on_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT_LIPS"></keyMapping>
+      </attribute>
+      <attribute id="WERKS_LIPS" displayAttribute="false" order="74" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Plant_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS_LIPS"></keyMapping>
+      </attribute>
+      <attribute id="LGORT_LIPS" displayAttribute="false" order="75" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Storage Location_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LGORT_LIPS"></keyMapping>
+      </attribute>
+      <attribute id="ARKTX_LIPS" displayAttribute="false" order="76" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Short Text for Sales Order Item_Delivery Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ARKTX_LIPS"></keyMapping>
+      </attribute>
+      <attribute id="KUNNR_LIKP" displayAttribute="false" order="77" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Ship to Party_Delivery Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR"></keyMapping>
+      </attribute>
+      <attribute id="VSTEL_LIKP" displayAttribute="false" order="78" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Shipping Point/Receiving Point_Delivery Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VSTEL_LIKP"></keyMapping>
+      </attribute>
+      <attribute id="LFART_LIKP" displayAttribute="false" order="79" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Delivery Type_Delivery Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LFART"></keyMapping>
+      </attribute>
+      <attribute id="LFDAT_LIKP" displayAttribute="false" order="80" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Delivery Date_Delivery Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="LFDAT"></keyMapping>
+      </attribute>
+      <attribute id="ROUTA_LIKP" displayAttribute="false" order="81" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Route_Delivery Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ROUTA"></keyMapping>
+      </attribute>
+      <attribute id="WADAT_LIKP" displayAttribute="false" order="82" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Planned GI Date_Delivery Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WADAT"></keyMapping>
+      </attribute>
+      <attribute id="WADAT_IST_LIKP" displayAttribute="false" order="83" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Actual GI Date_Delivery Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WADAT_IST"></keyMapping>
+      </attribute>
+      <attribute id="KUNAG_LIKP" displayAttribute="false" order="84" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sold to Party_Delivery Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNAG"></keyMapping>
+      </attribute>
+      <attribute id="FKART_VBRK" displayAttribute="false" order="86" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Type_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKART"></keyMapping>
+      </attribute>
+      <attribute id="KUNRG_VBRK" displayAttribute="false" order="87" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Payer_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNRG"></keyMapping>
+      </attribute>
+      <attribute id="ZUONR_VBRK" displayAttribute="false" order="88" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Account Assignment_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ZUONR"></keyMapping>
+      </attribute>
+      <attribute id="KDGRP_VBRK" displayAttribute="false" order="89" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer Group_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KDGRP"></keyMapping>
+      </attribute>
+      <attribute id="VKORG_VBRK" displayAttribute="false" order="90" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Organization_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VKORG"></keyMapping>
+      </attribute>
+      <attribute id="VTWEG_VBRK" displayAttribute="false" order="91" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Distribution Channel_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VTWEG"></keyMapping>
+      </attribute>
+      <attribute id="VSBED_VBRK" displayAttribute="false" order="92" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Shipping Conditions_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VSBED"></keyMapping>
+      </attribute>
+      <attribute id="KTGRD_VBRK" displayAttribute="false" order="93" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Acct Assmt Grp Cust_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KTGRD"></keyMapping>
+      </attribute>
+      <attribute id="REGIO_VBRK" displayAttribute="false" order="94" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Region_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="REGIO"></keyMapping>
+      </attribute>
+      <attribute id="BUKRS_VBRK" displayAttribute="false" order="95" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Company Code_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BUKRS"></keyMapping>
+      </attribute>
+      <attribute id="KUNWE_VBRK" displayAttribute="false" order="96" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Ship to party_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNWE"></keyMapping>
+      </attribute>
+      <attribute id="FKART_RL_VBRK" displayAttribute="false" order="97" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Invoice List Type_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKART_RL"></keyMapping>
+      </attribute>
+      <attribute id="PRCTR_VBRP" displayAttribute="false" order="98" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Profit Center_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PRCTR"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VBRK" displayAttribute="false" order="99" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Doc_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_VBRK"></keyMapping>
+      </attribute>
+      <attribute id="FKDAT_VBRK" displayAttribute="false" order="100" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Date_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKDAT_BILLING"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="WAERK_VBRK" displayAttribute="false" order="103" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Currency_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERK_VBRP"></keyMapping>
+      </attribute>
+      <attribute id="INCO1_VBRK" displayAttribute="false" order="104" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Incoterms_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="INCO1_VBRK"></keyMapping>
+      </attribute>
+      <attribute id="KUNAG_VBRK" displayAttribute="false" order="105" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sold to Party_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNAG_VBRK"></keyMapping>
+      </attribute>
+      <attribute id="INCO2_VBRK" displayAttribute="false" order="106" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Incoterms 2_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="INCO2_VBRK"></keyMapping>
+      </attribute>
+      <attribute id="ZTERM_VBRK" displayAttribute="false" order="107" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Payment Terms_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ZTERM_VBRK"></keyMapping>
+      </attribute>
+      <attribute id="GJAHR_VBRK" displayAttribute="false" order="108" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Fiscal Year_Billing Doc Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GJAHR_VBRK"></keyMapping>
+      </attribute>
+      <attribute id="POSNR_VBRP" displayAttribute="false" order="109" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Item_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_BILLING"></keyMapping>
+      </attribute>
+      <attribute id="MEINS_VBRP" displayAttribute="false" order="111" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Base Unit of Measure_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MEINS"></keyMapping>
+      </attribute>
+      <attribute id="PRSDT_VBRP" displayAttribute="false" order="112" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Pricing Date_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PRSDT"></keyMapping>
+      </attribute>
+      <attribute id="AUBEL_VBRP" displayAttribute="false" order="114" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AUBEL"></keyMapping>
+      </attribute>
+      <attribute id="AUPOS_VBRP" displayAttribute="false" order="115" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document Item_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="AUPOS"></keyMapping>
+      </attribute>
+      <attribute id="PMATN_VBRP" displayAttribute="false" order="116" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Pricing Ref Matl_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="PMATN"></keyMapping>
+      </attribute>
+      <attribute id="ALAND_VBRP" displayAttribute="false" order="117" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Country_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ALAND"></keyMapping>
+      </attribute>
+      <attribute id="SPARA_VBRP" displayAttribute="false" order="118" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Division_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="SPARA"></keyMapping>
+      </attribute>
+      <attribute id="ERZET_VBRP" displayAttribute="false" order="119" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Entry Time_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERZET"></keyMapping>
+      </attribute>
+      <attribute id="VGBEL_VBRP" displayAttribute="false" order="120" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Reference Document No_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VGBEL"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="MATNR_VBRP" displayAttribute="false" order="122" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Material Number_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="MATNR_VBRP"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VRKME_VBRP" displayAttribute="false" order="123" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Unit_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VRKME_VBRP"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="GEWEI_VBRP" displayAttribute="false" order="124" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Weight Unit_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GEWEI_VBRP"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="WAERK_VBRP" displayAttribute="false" order="126" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Currency_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERK_VBRP_ITEM"></keyMapping>
+      </attribute>
+      <attribute id="WERKS_VBRP" displayAttribute="false" order="127" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Plant_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS_VBRP"></keyMapping>
+      </attribute>
+      <attribute id="ERDAT_VBRP" displayAttribute="false" order="128" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created on_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT_VBRP"></keyMapping>
+      </attribute>
+      <attribute id="ERNAM_VBRP" displayAttribute="false" order="129" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created By_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ERNAM_VBRP"></keyMapping>
+      </attribute>
+      <attribute id="ARKTX_VBRP" displayAttribute="false" order="130" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Short Text for Sales Order Item_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ARKTX_VBRP"></keyMapping>
+      </attribute>
+      <attribute id="KUNAG_VBRL_INVOICE_LIST" displayAttribute="false" order="131" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sold to Party_Invoice List"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNAG_VBRL"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VF_VBRL_INVOICE_LIST" displayAttribute="false" order="132" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Document_Invoice List"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_VF"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VBRL_INVOICE_LIST" displayAttribute="false" order="135" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Invoice List Number_Invoice List"></descriptions>
+        <localVariable>Invoice_List_Number</localVariable>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_VBRL"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="POSNR_VBRL_INVOICE_LIST" displayAttribute="false" order="136" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Invoice List Item_Invoice List"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_INVOICE_LIST"></keyMapping>
+      </attribute>
+      <attribute id="VBELN_VBRK_INVOICE_LIST" displayAttribute="false" order="137" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Doc_Invoice List Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_INVOICE_BILL"></keyMapping>
+      </attribute>
+      <attribute id="FKART_VBRK_INVOICE_LIST" displayAttribute="false" order="138" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Type_Invoice List Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKART_INVOICE_BILL"></keyMapping>
+      </attribute>
+      <attribute id="KUNRG_VBRK_INVOICE_LIST" displayAttribute="false" order="139" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Payer_Invoice List Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNRG_INVOICE_BILL"></keyMapping>
+      </attribute>
+      <attribute id="FKDAT_VBRK_INVOICE_LIST" displayAttribute="false" order="140" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Date_Invoice List Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKDAT_INVOICE_BILL"></keyMapping>
+      </attribute>
+      <attribute id="GJAHR_VBRK_INVOICE_LIST" displayAttribute="false" order="141" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Fiscal Year_Invoice List Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GJAHR_INVOICE_BILL"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_VBPA_ORDERS_BILL_TO_PARTY" displayAttribute="false" order="142" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Bill to Party_Partner_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="BILL_TO_PARTY"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_VBPA_ORDERS_PERSON_CONTACT" displayAttribute="false" order="143" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Contact Person_Partner_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="CONTACT_PERSON"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_VBPA_ORDERS_PAYER" displayAttribute="false" order="144" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Payer_Partner_Orders"></descriptions>
+        <localVariable>Payer_Number</localVariable>
+        <keyMapping columnObjectName="Projection_1" columnName="PAYER"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_VBPA_ORDERS_SHIP_TO_PARTY" displayAttribute="false" order="145" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Ship to Party_Partner_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="SHIP_TO_PARTY"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_VBPA_ORDERS_FORWARDING_AGENT" displayAttribute="false" order="146" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Forwarding Agent_Partner_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FORWARDING_AGENT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_VBPA_ORDERS_SALES_EMPLOYEE" displayAttribute="false" order="147" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Employee_Partner_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="SALES_EMPLOYEE"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_VBPA_ORDERS_EMPLOYEE_RESPONSE" displayAttribute="false" order="148" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Employee Response_Partner_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="EMPLOYEE_RESPONSE"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_VBPA_ORDERS_SOLD_TO_PARTY" displayAttribute="false" order="149" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sold To Party_Partner_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR_SOLD_TO_PARTY"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="KUNNR_VBPA_ORDERS_VENDOR" displayAttribute="false" order="150" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Vendor_Partner_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VENDOR"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LZONE_VBPA_ORDERS_CONTACT_PERSON" displayAttribute="false" order="151" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Transportation Zone_Partner_Orders Contact Person"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="TRANSPORTATION_CONTACT_PERSON"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LZONE_VBPA_ORDERS_BILL_TO_PARTY" displayAttribute="false" order="152" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Transportation Zone_Partner_Orders Bill to Party"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="TRANSPORTATION_BILL_TO_PARTY"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LZONE_VBPA_ORDERS_PAYER" displayAttribute="false" order="153" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Transportation Zone_Partner_Orders Payer"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="TRANSPORTATION_PAYER"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LZONE_VBPA_ORDERS_SHIP_TO_PARTY" displayAttribute="false" order="154" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Transportation Zone_Partner_Orders Ship to Party"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="TRANSPORTATION_SHIP_TO_PARTY"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LZONE_VBPA_ORDERS_FORWARDING_AGENT" displayAttribute="false" order="155" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Transportation Zone_Partner_Orders Forwarding Agent"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="TRANSPORTATION_FORWARDING_AGENT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LZONE_VBPA_ORDERS_SALES_EMPLOYEE" displayAttribute="false" order="156" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Transportation Zone_Partner_Orders Sales Employee"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="TRANSPORTATION_SALES_EMPLOYEE"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LZONE_VBPA_ORDERS_EMPLOYEE_RESPONSE" displayAttribute="false" order="157" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Transportation Zone_Partner_Orders Employee Response"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="TRANSPORTATION_EMPLOYEE_RESPONSE"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="LZONE_VBPA_ORDERS_VENDOR" displayAttribute="false" order="158" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Transportation Zone_Partner_Orders Vendor"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="TRANSPORTATION_VENDOR"></keyMapping>
+      </attribute>
+      <attribute id="POSNR_VBPA_ORDERS" displayAttribute="false" order="159" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document Item_Partner_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VCAL_POSNR_VBPA"></keyMapping>
+      </attribute>
+      <attribute id="PARVW_VBPA_ORDERS" displayAttribute="false" order="160" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Partner Function_Partner_Orders"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VCAL_PARVW_VBPA"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VBEGDAT_VEDA_CONTRACT_ITEM" displayAttribute="false" order="161" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Contract Start Date_Contract Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBEGDAT_CONTRACT_ITM"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VENDDAT_VEDA_CONTRACT_ITEM" displayAttribute="false" order="162" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Contract End Date_Contract Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VENDDAT_CONTRACT_ITM"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="WAERK_VEDA_CONTRACT_HDR" displayAttribute="false" order="164" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Document Currency_Contract Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERK_CONTRACT_HDR"></keyMapping>
+      </attribute>
+      <attribute id="VBEGDAT_VEDA_CONTRACT_HDR" displayAttribute="false" order="165" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Contract Start Date_Contract Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBEGDAT"></keyMapping>
+      </attribute>
+      <attribute id="VENDDAT_VEDA_CONTRACT_HDR" displayAttribute="false" order="166" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Contract End Date_Contract Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VENDDAT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="INCO2_VBKD_CONTRACT_ITEM" displayAttribute="false" order="167" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Incoterms 2_Business Data_Contract Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="INCO2_ITM_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="INCO1_VBKD_CONTRACT_ITEM" displayAttribute="false" order="168" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Incoterms_Business Data_Contract Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="INCO1_ITM_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="ZTERM_VBKD_CONTRACT_ITEM" displayAttribute="false" order="169" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Payment Terms_Business Data_Contract Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ZTERM_ITM_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="FKDAT_VBKD_CONTRACT_ITEM" displayAttribute="false" order="170" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Date_Business Data_Contract Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKDAT_ITM_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="GJAHR_VBKD_CONTRACT_ITEM" displayAttribute="false" order="171" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Fiscal Year_Business Data_Contract Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GJAHR_ITM_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="POSNR_VBKD_CONTRACT_ITEM" displayAttribute="false" order="172" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document Item_Business Data_Contract Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR_VBKD_ITEM"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="INCO1_VBKD_CONTRACT_HDR" displayAttribute="false" order="173" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Incoterms_Business Data_Contract Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="INCO1_HDR_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="INCO2_VBKD_CONTRACT_HDR" displayAttribute="false" order="174" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Incoterms 2_Business Data_Contract Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="INCO2_HDR_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="ZTERM_VBKD_CONTRACT_HDR" displayAttribute="false" order="175" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Payment Terms_Business Data_Contract Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="ZTERM_HDR_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="FKDAT_VBKD_CONTRACT_HDR" displayAttribute="false" order="176" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Billing Date_Business Data_Contract Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="FKDAT_HDR_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="GJAHR_VBKD_CONTRACT_HDR" displayAttribute="false" order="177" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Fiscal Year_Business Data_Contract Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="GJAHR_HDR_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VBELN_VBKD_CONTRACT_HDR" displayAttribute="false" order="178" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Sales Document_Business Data_Contract Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_CONTRACT_HDR"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="TXJCD_VBRP" displayAttribute="false" order="193" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Tax Jurisdiction_Billing Doc Item"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="TXJCD_VBRP"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="TEXT1_TTXJT" displayAttribute="false" order="194" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Description_Tax Jurisdiction Text"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="TEXT1_TTXJT"></keyMapping>
+      </attribute>
+      <attribute semanticType="empty" id="VBELN_LIKP" displayAttribute="false" order="195" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Delivery Number_Delivery Header"></descriptions>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_LIKP"></keyMapping>
+      </attribute>
+      <attribute id="KUNNR_CONTRACT$local">
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR_CONTRACT"></keyMapping>
+      </attribute>
+      <attribute id="ERDAT_CONTRACT$local">
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT_CONTRACT"></keyMapping>
+      </attribute>
+    </attributes>
+    <calculatedAttributes>
+      <calculatedAttribute hidden="false" semanticType="date" id="VCAL_ERDAT_VBAP_ORDERS" displayAttribute="false" order="58" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created Date_Sales Doc Item_Orders"></descriptions>
+        <localVariable>Sales_Order_Created_Date</localVariable>
+        <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+          <formula>DATE("ERDAT_VBAP_ORDERS")</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="date" id="VCAL_LFDAT_LIKP" displayAttribute="false" order="85" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created Date_Delivery Header"></descriptions>
+        <localVariable>Delivery_Date</localVariable>
+        <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+          <formula>DATE("LFDAT_LIKP")</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="date" id="VCAL_FKDAT_VBRK" displayAttribute="false" order="102" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Created Date_Billing Doc Header"></descriptions>
+        <localVariable>Billing_Date</localVariable>
+        <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+          <formula>DATE("FKDAT_VBRK")</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="date" id="VCAL_ERDAT_VEDA_CONTRACT_ITEM" displayAttribute="false" order="163" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Contract Created Date_Contract Item"></descriptions>
+        <localVariable>Contract_Created_Date</localVariable>
+        <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+          <formula>DATE("ERDAT_VBAP_CONTRACT")</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KUNNR_VBAK_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="179" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer No_Sales Doc Header_Contract Sold To Party"></descriptions>
+        <localVariable>Sold_to_Party</localVariable>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="10">
+          <formula>"KUNNR"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KATR1_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="180" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Attribute 1_Customer Master_Contract Sold to Party"></descriptions>
+        <localVariable>GPO_Customers</localVariable>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"KATR1"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KATR2_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="181" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Attribute 2_Customer Master_Contract Sold to Party"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"KATR2"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KATR3_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="182" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Attribute 3_Customer Master_Contract Sold to Party"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"KATR3"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KATR4_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="183" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Attribute 4_Customer Master_Contract Sold to Party"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"KATR4"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KATR5_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="184" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Attribute 5_Customer Master_Contract Sold to Party"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"KATR5"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KATR6_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="185" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Attribute 6_Customer Master_Contract Sold to Party"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"KATR6"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KATR7_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="186" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Attribute 7_Customer Master_Contract Sold to Party"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"KATR7"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KATR8_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="187" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Attribute 8_Customer Master_Contract Sold to Party"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"KATR8"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KATR9_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="188" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Attribute 9_Customer Master_Contract Sold to Party"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"KATR9"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="KATR10_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="189" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Attribute 10_Customer Master_Contract Sold to Party"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"KATR10"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="date" id="DATE_SQL_FISCALCALENDAR" displayAttribute="false" order="190" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Date_FiscalCalendar"></descriptions>
+        <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+          <formula>date("DATE_SQL")</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="date" id="DATE_FISCALCALENDAR" displayAttribute="false" order="191" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Date2_FiscalCalendar"></descriptions>
+        <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="8">
+          <formula>date("DATE")</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute hidden="false" semanticType="empty" id="AUFSD_KNA1_SOLD_TO_PARTY_CONTRACT" displayAttribute="false" order="192" attributeHierarchyActive="false">
+        <descriptions defaultDescription="Customer Central Order Block_Sold To Party_Contract"></descriptions>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="2">
+          <formula>"AUFSD"</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+    </calculatedAttributes>
+    <privateDataFoundation>
+      <tableProxies></tableProxies>
+      <joins></joins>
+      <layout>
+        <shapes></shapes>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure aggregationType="sum" semanticType="quantity" id="ZMENG_VBAP_CONTRACT" order="4" measureType="quantity">
+        <descriptions defaultDescription="Target Quantity in Sales Unit_Sales Doc Item_Contract"></descriptions>
+        <unitCurrencyAttribute attributeName="ZIEME_VBAP_CONTRACT"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="ZMENG_CONTRACT"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="BRGEW_VBAP_CONTRACT" order="7" measureType="quantity">
+        <descriptions defaultDescription="Gross Weight of the Item_Sales Doc Item_Contract"></descriptions>
+        <unitCurrencyAttribute attributeName="GEWEI_VBAP_CONTRACT"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="BRGEW_CONTRACT"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="NTGEW_VBAP_CONTRACT" order="8" measureType="quantity">
+        <descriptions defaultDescription="Net Weight_Sales Doc Item_Contract"></descriptions>
+        <unitCurrencyAttribute attributeName="GEWEI_VBAP_CONTRACT"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="NTGEW_CONTRACT"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="VOLUM_VBAP_CONTRACT" order="10" measureType="quantity">
+        <descriptions defaultDescription="Volume of the Item_Sales Doc Item_Contract"></descriptions>
+        <unitCurrencyAttribute attributeName="VOLEH_VBAP_CONTRACT"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="VOLUM_CONTRACT"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="amount" id="NETPR_VBAP_CONTRACT" order="15" measureType="amount">
+        <descriptions defaultDescription="Net Price_Sales Doc Item_Contract"></descriptions>
+        <unitCurrencyAttribute attributeName="WAERK_VBAK_CONTRACT"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="NETPR_CONTRACT"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="amount" id="NETWR_VBAK_CONTRACT" order="18" measureType="amount">
+        <descriptions defaultDescription="Net Value in Doc Currency_Sales Doc Header_Contract"></descriptions>
+        <unitCurrencyAttribute attributeName="WAERK_VEDA_CONTRACT_HDR"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="NETWR_CONTRACT_HDR"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="KWMENG_VBAP_ORDERS" order="35" measureType="quantity">
+        <descriptions defaultDescription="Cumulative Order Quantity in Sales Units_Sales Doc Item_Orders"></descriptions>
+        <unitCurrencyAttribute attributeName="VRKME_VBAP_ORDERS"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="KWMENG"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="BRGEW_VBAP_ORDERS" order="37" measureType="quantity">
+        <descriptions defaultDescription="Gross Weight of the Item_Sales Doc Item_Orders"></descriptions>
+        <unitCurrencyAttribute attributeName="GEWEI_VBAP_ORDERS"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="BRGEW"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="NTGEW_VBAP_ORDERS" order="38" measureType="quantity">
+        <descriptions defaultDescription="Net Weight of the Item_Sales Doc Item_Orders"></descriptions>
+        <unitCurrencyAttribute attributeName="GEWEI_VBAP_ORDERS"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="NTGEW"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="VOLUM_VBAP_ORDERS" order="40" measureType="quantity">
+        <descriptions defaultDescription="Volume of the Item_Sales Doc Item_Orders"></descriptions>
+        <unitCurrencyAttribute attributeName="VOLEH_VBAP_ORDERS"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="VOLUM"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="amount" id="NETWR_VBAP_ORDERS" order="45" measureType="amount">
+        <descriptions defaultDescription="Net Value in Document Currency_Sales Doc Item_Orders"></descriptions>
+        <unitCurrencyAttribute attributeName="WAERK_VBAP_ORDERS"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="NETWR"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" id="MWSBP_VBAP_ORDER" order="48" measureType="simple">
+        <descriptions defaultDescription="Tax Amount_Sales Doc Item_Orders"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="MWSBP_VBAP_ORDER"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="NTGEW_LIPS" order="64" measureType="quantity">
+        <descriptions defaultDescription="Net Weight_Delivery Item"></descriptions>
+        <unitCurrencyAttribute attributeName="GEWEI_LIPS"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="NTGEW_DELIVERY"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="VOLUM_LIPS" order="67" measureType="quantity">
+        <descriptions defaultDescription="Volume_Delivery Item"></descriptions>
+        <unitCurrencyAttribute attributeName="VOLEH_LIPS"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="VOLUM_DELIVERY"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="BRGEW_LIPS" order="68" measureType="quantity">
+        <descriptions defaultDescription="Gross Weight_Delivery Item"></descriptions>
+        <unitCurrencyAttribute attributeName="GEWEI_LIPS"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="BRGEW_DELIVERY"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="LFIMG_LIPS" order="71" measureType="quantity">
+        <descriptions defaultDescription="Delivery Quantity_Delivery Item"></descriptions>
+        <unitCurrencyAttribute attributeName="VRKME_LIPS"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="LFIMG"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="amount" id="NETWR_VBRK" order="101" measureType="amount">
+        <descriptions defaultDescription="Net Value_Billing Doc Header"></descriptions>
+        <unitCurrencyAttribute attributeName="WAERK_VBRK"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="NETWR_VBRK"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="quantity" id="FKIMG_VBRP" order="110" measureType="quantity">
+        <descriptions defaultDescription="Billed Quantity_Billing Doc Item"></descriptions>
+        <unitCurrencyAttribute attributeName="VRKME_VBRP"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="FKIMG"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="amount" id="MWSBP_VBRP" order="113" measureType="amount">
+        <descriptions defaultDescription="Tax Amount_Billing Doc Item"></descriptions>
+        <unitCurrencyAttribute attributeName="WAERK_VBRK"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="MWSBP"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="amount" id="NTGEW_VBRP" order="121" measureType="amount">
+        <descriptions defaultDescription="Net Weight_Billing Doc Item"></descriptions>
+        <unitCurrencyAttribute attributeName="GEWEI_VBRP"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="NTGEW_BILLING"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="amount" id="NETWR_VBRP" order="125" measureType="amount">
+        <descriptions defaultDescription="Net Value_Billing Doc Item"></descriptions>
+        <unitCurrencyAttribute attributeName="WAERK_VBRK"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="NETWR_VBRP"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="amount" id="NETWR_VBRL_INVOICE_LIST" order="133" measureType="amount">
+        <descriptions defaultDescription="Net Value in Document Currency_Invoice List"></descriptions>
+        <unitCurrencyAttribute attributeName="WAERK_VBRK"></unitCurrencyAttribute>
+        <measureMapping columnObjectName="Projection_1" columnName="NETWR_INVOICE"></measureMapping>
+      </measure>
+      <measure aggregationType="sum" semanticType="amount" id="MWSBP_VBRL_INVOICE_LIST" order="134" measureType="amount">
+        <descriptions defaultDescription="Tax Amount in Document Currency_Invoice List"></descriptions>
+        <measureMapping columnObjectName="Projection_1" columnName="MWSBP_INVOICE"></measureMapping>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures></calculatedMeasures>
+    <restrictedMeasures></restrictedMeasures>
+    <localDimensions></localDimensions>
+    <sharedDimensions>
+      <logicalJoin associatedObjectUri="HANA_CONTENT.STAGING_MODELS.CROSSFUNCTION::CV_DIM_MD_CUSTOMER_DATA">
+        <attributes>
+          <attributeRef>KUNNR_CONTRACT$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>KUNNR</attributeName>
+        </associatedAttributeNames>
+        <properties joinType="leftOuter" joinOperator="Equal"></properties>
+        <associatedAttributeFeatures></associatedAttributeFeatures>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="CV_DIM_FISCALCALENDAR">
+        <attributes>
+          <attributeRef>ERDAT_CONTRACT$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>DATE</attributeName>
+        </associatedAttributeNames>
+        <properties joinType="referential" joinOperator="Equal"></properties>
+        <associatedAttributeFeatures></associatedAttributeFeatures>
+      </logicalJoin>
+    </sharedDimensions>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectNameSpace="MeasureGroup" modelObjectName="Output">
+        <upperLeftCorner x="22" y="84"></upperLeftCorner>
+        <rectangleSize width="0" height="0"></rectangleSize>
+      </shape>
+      <shape expanded="true" modelObjectNameSpace="CalculationView" modelObjectName="Projection_1">
+        <upperLeftCorner x="22" y="221"></upperLeftCorner>
+        <rectangleSize width="-1" height="-1"></rectangleSize>
+      </shape>
+      <shape modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository" modelObjectName="Projection_1">
+        <upperLeftCorner x="834" y="27"></upperLeftCorner>
+      </shape>
+      <shape modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository" modelObjectName="HANA_CONTENT.STAGING_MODELS.CROSSFUNCTION::CV_DIM_MD_CUSTOMER_DATA">
+        <upperLeftCorner x="1531" y="348"></upperLeftCorner>
+      </shape>
+      <shape modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository" modelObjectName="CV_DIM_FISCALCALENDAR">
+        <upperLeftCorner x="16" y="1200"></upperLeftCorner>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

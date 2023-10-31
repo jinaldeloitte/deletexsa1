@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_T134T" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+  <descriptions defaultDescription="CV_MD_T134T"/>
+  <metadata changedAt="2021-12-06 18:08:42.922" createdAt="2020-04-28 17:03:43.668"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_T134T">
+      <resourceUri>syn_tbl_T134T</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_T134T">
+    <descriptions defaultDescription="CV_MD_T134T"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_T134T" columnName="MANDT"/>
+      </attribute>
+      <attribute id="SPRAS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPRAS"/>
+        <keyMapping columnObjectName="syn_tbl_T134T" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="MTART" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MTART"/>
+        <keyMapping columnObjectName="syn_tbl_T134T" columnName="MTART"/>
+      </attribute>
+      <attribute id="MTBEZ" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MTBEZ"/>
+        <keyMapping columnObjectName="syn_tbl_T134T" columnName="MTBEZ"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

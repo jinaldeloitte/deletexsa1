@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="VDIM_MD_CUSTOMER" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Customer"/>
+  <metadata changedAt="2021-12-06 18:57:18.536" createdAt="2020-06-05 11:56:43.235"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="37"/>
+  <dataSources>
+    <DataSource id="CV_MD_KNA1">
+      <resourceUri>CV_MD_KNA1</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_BUT000">
+      <resourceUri>CV_MD_BUT000</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Customer">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="STRAS"/>
+        <viewAttribute id="KONZS"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="SPRAS"/>
+        <viewAttribute id="SORTL"/>
+        <viewAttribute id="KNRZA"/>
+        <viewAttribute id="XCPDK"/>
+        <viewAttribute id="MCOD1"/>
+        <viewAttribute id="MCOD3"/>
+        <viewAttribute id="ANRED"/>
+        <viewAttribute id="BBBNR"/>
+        <viewAttribute id="BBSNR"/>
+        <viewAttribute id="BUBKZ"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="ORT02"/>
+        <viewAttribute id="LZONE"/>
+        <viewAttribute id="UMSAT"/>
+        <viewAttribute id="UMJAH"/>
+        <viewAttribute id="JMJAH"/>
+        <viewAttribute id="JMZAH"/>
+        <viewAttribute id="UMSA1"/>
+        <viewAttribute id="TXJCD"/>
+        <viewAttribute id="DUEFL"/>
+        <viewAttribute id="HZUOR"/>
+        <viewAttribute id="UPDAT"/>
+        <viewAttribute id="UPTIM"/>
+        <viewAttribute id="RGDATE"/>
+        <viewAttribute id="RIC"/>
+        <viewAttribute id="LEGALNAT"/>
+        <viewAttribute id="RNEDATE"/>
+        <viewAttribute id="AEDAT"/>
+        <viewAttribute id="USNAM"/>
+        <viewAttribute id="PSPNR"/>
+        <viewAttribute id="TELF1"/>
+        <viewAttribute id="PSTL2"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="FITYP"/>
+        <viewAttribute id="TELFX"/>
+        <viewAttribute id="PFACH"/>
+        <viewAttribute id="CASSD"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_KNA1"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="BusinessPartner">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="CLIENT"/>
+        <viewAttribute id="PARTNER"/>
+        <viewAttribute id="TYPE"/>
+        <viewAttribute id="BPKIND"/>
+        <viewAttribute id="BU_GROUP"/>
+        <viewAttribute id="BU_SORT1"/>
+        <viewAttribute id="BPEXT"/>
+        <viewAttribute id="BU_SORT2"/>
+        <viewAttribute id="CONTACT"/>
+        <viewAttribute id="NAME_ORG1"/>
+        <viewAttribute id="NAME_ORG2"/>
+        <viewAttribute id="NAME_ORG3"/>
+        <viewAttribute id="NAME_ORG4"/>
+        <viewAttribute id="LEGAL_ENTY"/>
+        <viewAttribute id="LEGAL_ORG"/>
+        <viewAttribute id="NAME_LAST"/>
+        <viewAttribute id="NAME_FIRST"/>
+        <viewAttribute id="NAME1_TEXT"/>
+        <viewAttribute id="LANGU_CORR"/>
+        <viewAttribute id="ADDRCOMM"/>
+        <viewAttribute id="XDELE"/>
+        <viewAttribute id="CRDAT"/>
+        <viewAttribute id="CRUSR"/>
+        <viewAttribute id="CHDAT"/>
+        <viewAttribute id="CHUSR"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_BUT000"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="STRAS"/>
+        <viewAttribute id="KONZS"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="SPRAS"/>
+        <viewAttribute id="TYPE"/>
+        <viewAttribute id="BPKIND"/>
+        <viewAttribute id="BU_GROUP"/>
+        <viewAttribute id="BU_SORT1"/>
+        <viewAttribute id="BPEXT"/>
+        <viewAttribute id="BU_SORT2"/>
+        <viewAttribute id="CONTACT"/>
+        <viewAttribute id="NAME_ORG1"/>
+        <viewAttribute id="NAME_ORG2"/>
+        <viewAttribute id="NAME_ORG3"/>
+        <viewAttribute id="NAME_ORG4"/>
+        <viewAttribute id="LEGAL_ENTY"/>
+        <viewAttribute id="LEGAL_ORG"/>
+        <viewAttribute id="NAME_LAST"/>
+        <viewAttribute id="NAME_FIRST"/>
+        <viewAttribute id="NAME1_TEXT"/>
+        <viewAttribute id="LANGU_CORR"/>
+        <viewAttribute id="ADDRCOMM"/>
+        <viewAttribute id="SORTL"/>
+        <viewAttribute id="KNRZA"/>
+        <viewAttribute id="XCPDK"/>
+        <viewAttribute id="MCOD1"/>
+        <viewAttribute id="MCOD3"/>
+        <viewAttribute id="ANRED"/>
+        <viewAttribute id="BBBNR"/>
+        <viewAttribute id="BBSNR"/>
+        <viewAttribute id="BUBKZ"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="ORT02"/>
+        <viewAttribute id="LZONE"/>
+        <viewAttribute id="UMSAT"/>
+        <viewAttribute id="UMJAH"/>
+        <viewAttribute id="JMJAH"/>
+        <viewAttribute id="JMZAH"/>
+        <viewAttribute id="UMSA1"/>
+        <viewAttribute id="TXJCD"/>
+        <viewAttribute id="DUEFL"/>
+        <viewAttribute id="HZUOR"/>
+        <viewAttribute id="UPDAT"/>
+        <viewAttribute id="UPTIM"/>
+        <viewAttribute id="RGDATE"/>
+        <viewAttribute id="RIC"/>
+        <viewAttribute id="LEGALNAT"/>
+        <viewAttribute id="RNEDATE"/>
+        <viewAttribute id="AEDAT"/>
+        <viewAttribute id="USNAM"/>
+        <viewAttribute id="PSPNR"/>
+        <viewAttribute id="PSTL2"/>
+        <viewAttribute id="TELF1"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="FITYP"/>
+        <viewAttribute id="TELFX"/>
+        <viewAttribute id="PFACH"/>
+        <viewAttribute id="CASSD"/>
+        <viewAttribute id="XDELE"/>
+        <viewAttribute id="CRDAT"/>
+        <viewAttribute id="CRUSR"/>
+        <viewAttribute id="CHDAT"/>
+        <viewAttribute id="CHUSR"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Customer">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/></input>
+      <input node="BusinessPartner">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="CLIENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="PARTNER"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="KUNNR"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_1">
+    <descriptions defaultDescription="Customer"/>
+    <attributes>
+      <attribute id="MANDT" key="true" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KUNNR" key="true" order="2" attributeHierarchyActive="false" descriptionColumnName="NAME1" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="LAND1" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Key"/>
+        <keyMapping columnObjectName="Join_1" columnName="LAND1"/>
+      </attribute>
+      <attribute id="NAME1" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 1"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME1"/>
+      </attribute>
+      <attribute id="NAME2" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 2"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME2"/>
+      </attribute>
+      <attribute id="ORT01" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="City"/>
+        <keyMapping columnObjectName="Join_1" columnName="ORT01"/>
+      </attribute>
+      <attribute id="PSTLZ" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Postal Code"/>
+        <keyMapping columnObjectName="Join_1" columnName="PSTLZ"/>
+      </attribute>
+      <attribute id="REGIO" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Region (State, Province, County)"/>
+        <keyMapping columnObjectName="Join_1" columnName="REGIO"/>
+      </attribute>
+      <attribute id="ADRNR" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address"/>
+        <keyMapping columnObjectName="Join_1" columnName="ADRNR"/>
+      </attribute>
+      <attribute id="STRAS" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Street and House Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="STRAS"/>
+      </attribute>
+      <attribute id="KONZS" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Group key"/>
+        <keyMapping columnObjectName="Join_1" columnName="KONZS"/>
+      </attribute>
+      <attribute id="LIFNR" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="Join_1" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="SPRAS" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Language Key"/>
+        <keyMapping columnObjectName="Join_1" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="TYPE" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Business Partner Category"/>
+        <keyMapping columnObjectName="Join_1" columnName="TYPE"/>
+      </attribute>
+      <attribute id="BPKIND" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Business Partner Type"/>
+        <keyMapping columnObjectName="Join_1" columnName="BPKIND"/>
+      </attribute>
+      <attribute id="BU_GROUP" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Business Partner Grouping"/>
+        <keyMapping columnObjectName="Join_1" columnName="BU_GROUP"/>
+      </attribute>
+      <attribute id="BU_SORT1" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Search term 1 for business partner"/>
+        <keyMapping columnObjectName="Join_1" columnName="BU_SORT1"/>
+      </attribute>
+      <attribute id="BPEXT" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Business Partner Number in External System"/>
+        <keyMapping columnObjectName="Join_1" columnName="BPEXT"/>
+      </attribute>
+      <attribute id="BU_SORT2" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Search term 2 for business partner"/>
+        <keyMapping columnObjectName="Join_1" columnName="BU_SORT2"/>
+      </attribute>
+      <attribute id="CONTACT" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Business Partner: Contact Permission"/>
+        <keyMapping columnObjectName="Join_1" columnName="CONTACT"/>
+      </attribute>
+      <attribute id="NAME_ORG1" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 1 of organization"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME_ORG1"/>
+      </attribute>
+      <attribute id="NAME_ORG2" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 2 of organization"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME_ORG2"/>
+      </attribute>
+      <attribute id="NAME_ORG3" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 3 of organization"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME_ORG3"/>
+      </attribute>
+      <attribute id="NAME_ORG4" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 4 of organization"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME_ORG4"/>
+      </attribute>
+      <attribute id="LEGAL_ENTY" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP: Legal form of organization"/>
+        <keyMapping columnObjectName="Join_1" columnName="LEGAL_ENTY"/>
+      </attribute>
+      <attribute id="LEGAL_ORG" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Legal Entity of Organization"/>
+        <keyMapping columnObjectName="Join_1" columnName="LEGAL_ORG"/>
+      </attribute>
+      <attribute id="NAME_LAST" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Last name of business partner (person)"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME_LAST"/>
+      </attribute>
+      <attribute id="NAME_FIRST" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="First name of business partner (person)"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME_FIRST"/>
+      </attribute>
+      <attribute id="NAME1_TEXT" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Full Name"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME1_TEXT"/>
+      </attribute>
+      <attribute id="LANGU_CORR" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Business Partner: Correspondence Language"/>
+        <keyMapping columnObjectName="Join_1" columnName="LANGU_CORR"/>
+      </attribute>
+      <attribute id="ADDRCOMM" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="ADDRCOMM"/>
+      </attribute>
+      <attribute id="SORTL" order="32" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sort field"/>
+        <keyMapping columnObjectName="Join_1" columnName="SORTL"/>
+      </attribute>
+      <attribute id="KNRZA" order="33" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account number of an alternative payer"/>
+        <keyMapping columnObjectName="Join_1" columnName="KNRZA"/>
+      </attribute>
+      <attribute id="XCPDK" order="34" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Is the account a one-time account?"/>
+        <keyMapping columnObjectName="Join_1" columnName="XCPDK"/>
+      </attribute>
+      <attribute id="MCOD1" order="35" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Search term for matchcode search"/>
+        <keyMapping columnObjectName="Join_1" columnName="MCOD1"/>
+      </attribute>
+      <attribute id="MCOD3" order="36" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Search term for matchcode search"/>
+        <keyMapping columnObjectName="Join_1" columnName="MCOD3"/>
+      </attribute>
+      <attribute id="ANRED" order="37" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Title"/>
+        <keyMapping columnObjectName="Join_1" columnName="ANRED"/>
+      </attribute>
+      <attribute id="BBBNR" order="38" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="International location number  (part 1)"/>
+        <keyMapping columnObjectName="Join_1" columnName="BBBNR"/>
+      </attribute>
+      <attribute id="BBSNR" order="39" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="International location number (Part 2)"/>
+        <keyMapping columnObjectName="Join_1" columnName="BBSNR"/>
+      </attribute>
+      <attribute id="BUBKZ" order="40" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Check digit for the international location number"/>
+        <keyMapping columnObjectName="Join_1" columnName="BUBKZ"/>
+      </attribute>
+      <attribute id="ERDAT" order="41" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date on which the Record Was Created"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERNAM" order="42" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="KTOKD" order="43" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Account Group"/>
+        <keyMapping columnObjectName="Join_1" columnName="KTOKD"/>
+      </attribute>
+      <attribute id="ORT02" order="44" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="District"/>
+        <keyMapping columnObjectName="Join_1" columnName="ORT02"/>
+      </attribute>
+      <attribute id="LZONE" order="45" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Transportation zone to or from which the goods are delivered"/>
+        <keyMapping columnObjectName="Join_1" columnName="LZONE"/>
+      </attribute>
+      <attribute id="UMSAT" order="46" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Annual sales"/>
+        <keyMapping columnObjectName="Join_1" columnName="UMSAT"/>
+      </attribute>
+      <attribute id="UMJAH" order="47" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Year For Which Sales are Given"/>
+        <keyMapping columnObjectName="Join_1" columnName="UMJAH"/>
+      </attribute>
+      <attribute id="JMJAH" order="48" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Year for which the number of employees is given"/>
+        <keyMapping columnObjectName="Join_1" columnName="JMJAH"/>
+      </attribute>
+      <attribute id="JMZAH" order="49" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Yearly number of employees"/>
+        <keyMapping columnObjectName="Join_1" columnName="JMZAH"/>
+      </attribute>
+      <attribute id="UMSA1" order="50" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Annual sales"/>
+        <keyMapping columnObjectName="Join_1" columnName="UMSA1"/>
+      </attribute>
+      <attribute id="TXJCD" order="51" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax Jurisdiction"/>
+        <keyMapping columnObjectName="Join_1" columnName="TXJCD"/>
+      </attribute>
+      <attribute id="DUEFL" order="52" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Status of Data Transfer into Subsequent Release"/>
+        <keyMapping columnObjectName="Join_1" columnName="DUEFL"/>
+      </attribute>
+      <attribute id="HZUOR" order="53" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Assignment to Hierarchy"/>
+        <keyMapping columnObjectName="Join_1" columnName="HZUOR"/>
+      </attribute>
+      <attribute id="UPDAT" order="54" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date on Which the Changes Were Confirmed"/>
+        <keyMapping columnObjectName="Join_1" columnName="UPDAT"/>
+      </attribute>
+      <attribute id="UPTIM" order="55" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Time of Last Change Confirmation"/>
+        <keyMapping columnObjectName="Join_1" columnName="UPTIM"/>
+      </attribute>
+      <attribute id="RGDATE" order="56" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RG Issuing Date"/>
+        <keyMapping columnObjectName="Join_1" columnName="RGDATE"/>
+      </attribute>
+      <attribute id="RIC" order="57" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RIC Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="RIC"/>
+      </attribute>
+      <attribute id="LEGALNAT" order="58" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Legal Nature"/>
+        <keyMapping columnObjectName="Join_1" columnName="LEGALNAT"/>
+      </attribute>
+      <attribute id="RNEDATE" order="59" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RNE Issuing Date"/>
+        <keyMapping columnObjectName="Join_1" columnName="RNEDATE"/>
+      </attribute>
+      <attribute id="AEDAT" order="60" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of Last Change"/>
+        <keyMapping columnObjectName="Join_1" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="USNAM" order="61" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Changed by the user"/>
+        <keyMapping columnObjectName="Join_1" columnName="USNAM"/>
+      </attribute>
+      <attribute id="PSPNR" order="62" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WBS Element"/>
+        <keyMapping columnObjectName="Join_1" columnName="PSPNR"/>
+      </attribute>
+      <attribute id="PSTL2" order="63" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="P.O. Box Postal Code"/>
+        <keyMapping columnObjectName="Join_1" columnName="PSTL2"/>
+      </attribute>
+      <attribute id="TELF1" order="64" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="First telephone number"/>
+        <keyMapping columnObjectName="Join_1" columnName="TELF1"/>
+      </attribute>
+      <attribute id="BRAN1" order="65" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Industry code 1"/>
+        <keyMapping columnObjectName="Join_1" columnName="BRAN1"/>
+      </attribute>
+      <attribute id="BRAN2" order="66" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Industry code 2"/>
+        <keyMapping columnObjectName="Join_1" columnName="BRAN2"/>
+      </attribute>
+      <attribute id="BRAN3" order="67" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Industry code 3"/>
+        <keyMapping columnObjectName="Join_1" columnName="BRAN3"/>
+      </attribute>
+      <attribute id="KATR1" order="68" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 1"/>
+        <keyMapping columnObjectName="Join_1" columnName="KATR1"/>
+      </attribute>
+      <attribute id="KATR2" order="69" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 2"/>
+        <keyMapping columnObjectName="Join_1" columnName="KATR2"/>
+      </attribute>
+      <attribute id="KATR3" order="70" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 3"/>
+        <keyMapping columnObjectName="Join_1" columnName="KATR3"/>
+      </attribute>
+      <attribute id="KATR4" order="71" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 4"/>
+        <keyMapping columnObjectName="Join_1" columnName="KATR4"/>
+      </attribute>
+      <attribute id="KATR5" order="72" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 5"/>
+        <keyMapping columnObjectName="Join_1" columnName="KATR5"/>
+      </attribute>
+      <attribute id="KATR6" order="73" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 6"/>
+        <keyMapping columnObjectName="Join_1" columnName="KATR6"/>
+      </attribute>
+      <attribute id="KATR7" order="74" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 7"/>
+        <keyMapping columnObjectName="Join_1" columnName="KATR7"/>
+      </attribute>
+      <attribute id="FITYP" order="75" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax type"/>
+        <keyMapping columnObjectName="Join_1" columnName="FITYP"/>
+      </attribute>
+      <attribute id="TELFX" order="76" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fax Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="TELFX"/>
+      </attribute>
+      <attribute id="PFACH" order="77" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO Box"/>
+        <keyMapping columnObjectName="Join_1" columnName="PFACH"/>
+      </attribute>
+      <attribute id="CASSD" order="78" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Central sales block for customer"/>
+        <keyMapping columnObjectName="Join_1" columnName="CASSD"/>
+      </attribute>
+      <attribute id="XDELE" order="79" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Central Archiving Flag"/>
+        <keyMapping columnObjectName="Join_1" columnName="XDELE"/>
+      </attribute>
+      <attribute id="CRDAT" order="80" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date on which the object was created"/>
+        <keyMapping columnObjectName="Join_1" columnName="CRDAT"/>
+      </attribute>
+      <attribute id="CRUSR" order="81" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="User who created the object"/>
+        <keyMapping columnObjectName="Join_1" columnName="CRUSR"/>
+      </attribute>
+      <attribute id="CHDAT" order="82" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date when object was last changed"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHDAT"/>
+      </attribute>
+      <attribute id="CHUSR" order="83" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Last user to change object"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHUSR"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes>
+      <calculatedAttribute id="KUNNRZT" hidden="false" order="84" semanticType="empty" attributeHierarchyActive="false" descriptionColumnName="NAME1" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="10">
+          <formula>ltrim(&quot;KUNNR&quot;,'0')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+    </calculatedAttributes>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Customer" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="BusinessPartner" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+      <shape modelObjectName="Customer" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="BusinessPartner" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

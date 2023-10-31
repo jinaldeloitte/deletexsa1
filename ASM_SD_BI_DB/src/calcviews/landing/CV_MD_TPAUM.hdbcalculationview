@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_TPAUM" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VS4_TPAUM"/>
+  <metadata changedAt="2021-12-06 18:09:29.429"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_TPAUM">
+      <resourceUri>syn_tbl_TPAUM</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_TPAUM">
+    <descriptions defaultDescription="VS4_TPAUM"/>
+    <attributes>
+      <attribute id="MANDT" key="true" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="syn_tbl_TPAUM" columnName="MANDT"/>
+      </attribute>
+      <attribute id="SPRAS" key="true" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Language Key"/>
+        <keyMapping columnObjectName="syn_tbl_TPAUM" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="PARVW" key="true" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner function (not converted)"/>
+        <keyMapping columnObjectName="syn_tbl_TPAUM" columnName="PARVW"/>
+      </attribute>
+      <attribute id="PABEZ" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Language-specific description of partner function"/>
+        <keyMapping columnObjectName="syn_tbl_TPAUM" columnName="PABEZ"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

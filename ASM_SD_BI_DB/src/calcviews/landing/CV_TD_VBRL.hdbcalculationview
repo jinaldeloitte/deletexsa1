@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_VBRL" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_SD_INVOICE_LIST"/>
+  <metadata changedAt="2021-12-06 18:14:06.262" createdAt="2020-06-17 21:15:37.595"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_VBRL">
+      <resourceUri>syn_tbl_VBRL</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="VBELN_VF"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="MWSBP"/>
+        <viewAttribute id="KWERT_RL"/>
+        <viewAttribute id="MWSBP_RL"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="UVPRS"/>
+        <viewAttribute id="LOGSYS"/>
+        <viewAttribute id="_DATAAGING"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="syn_tbl_VBRL"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions defaultDescription="VDIM_SD_INVOICE_LIST"/>
+    <attributes>
+      <attribute id="MANDT" order="1" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="2" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Invoice List"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN"/>
+      </attribute>
+      <attribute id="POSNR" order="3" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Invoice list item"/>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR"/>
+      </attribute>
+      <attribute id="VBELN_VF" order="4" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Document"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN_VF"/>
+      </attribute>
+      <attribute id="NETWR" order="5" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Net Value in Document Currency"/>
+        <keyMapping columnObjectName="Projection_1" columnName="NETWR"/>
+      </attribute>
+      <attribute id="MWSBP" order="6" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax amount in document currency"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MWSBP"/>
+      </attribute>
+      <attribute id="KWERT_RL" order="7" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Factoring (Delcredere) Discount"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KWERT_RL"/>
+      </attribute>
+      <attribute id="MWSBP_RL" order="8" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Factoring (Delcredere) Discount Tax"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MWSBP_RL"/>
+      </attribute>
+      <attribute id="KUNAG" order="9" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sold-To Party"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNAG"/>
+      </attribute>
+      <attribute id="UVPRS" order="10" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Incomplete with respect to pricing"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UVPRS"/>
+      </attribute>
+      <attribute id="LOGSYS" order="11" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Logical system"/>
+        <keyMapping columnObjectName="Projection_1" columnName="LOGSYS"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="12" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Data Filter Value for Data Aging"/>
+        <keyMapping columnObjectName="Projection_1" columnName="_DATAAGING"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="22" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

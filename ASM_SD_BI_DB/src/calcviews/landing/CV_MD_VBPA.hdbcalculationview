@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_VBPA" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_MD_VBPA"/>
+  <metadata changedAt="2021-12-06 18:10:41.933" createdAt="2020-04-28 18:09:50.958"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_VBPA">
+      <resourceUri>syn_tbl_VBPA</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_VBPA">
+    <descriptions defaultDescription="CV_MD_VBPA"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="VBELN"/>
+      </attribute>
+      <attribute id="POSNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="POSNR"/>
+      </attribute>
+      <attribute id="PARVW" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="PARVW"/>
+      </attribute>
+      <attribute id="KUNNR" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="LIFNR" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="PERNR" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="PERNR"/>
+      </attribute>
+      <attribute id="PARNR" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="PARNR"/>
+      </attribute>
+      <attribute id="ADRNR" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="ADRNR"/>
+      </attribute>
+      <attribute id="ABLAD" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABLAD"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="ABLAD"/>
+      </attribute>
+      <attribute id="LAND1" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAND1"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="LAND1"/>
+      </attribute>
+      <attribute id="ADRDA" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRDA"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="ADRDA"/>
+      </attribute>
+      <attribute id="XCPDK" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCPDK"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="XCPDK"/>
+      </attribute>
+      <attribute id="HITYP" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HITYP"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="HITYP"/>
+      </attribute>
+      <attribute id="PRFRE" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRFRE"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="PRFRE"/>
+      </attribute>
+      <attribute id="BOKRE" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BOKRE"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="BOKRE"/>
+      </attribute>
+      <attribute id="HISTUNR" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HISTUNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="HISTUNR"/>
+      </attribute>
+      <attribute id="KNREF" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNREF"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="KNREF"/>
+      </attribute>
+      <attribute id="LZONE" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LZONE"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="LZONE"/>
+      </attribute>
+      <attribute id="HZUOR" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HZUOR"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="HZUOR"/>
+      </attribute>
+      <attribute id="STCEG" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="STCEG"/>
+      </attribute>
+      <attribute id="PARVW_FF" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW_FF"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="PARVW_FF"/>
+      </attribute>
+      <attribute id="ADRNP" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRNP"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="ADRNP"/>
+      </attribute>
+      <attribute id="KALE" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALE"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="KALE"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="DUMMY_SDDOCPARTNER_INCL_EEW_pS" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_SDDOCPARTNER_INCL_EEW_pS"/>
+        <keyMapping columnObjectName="syn_tbl_VBPA" columnName="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

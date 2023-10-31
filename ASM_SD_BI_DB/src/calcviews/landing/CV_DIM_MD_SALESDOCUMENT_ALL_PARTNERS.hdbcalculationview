@@ -1,0 +1,2819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_DIM_MD_SALESDOCUMENT_ALL_PARTNERS" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_MD_SLSDOC_ALL_PARTNER"/>
+  <metadata changedAt="2021-12-06 18:54:28.737"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="72"/>
+  <dataSources>
+    <DataSource id="CV_TD_VBPA">
+      <resourceUri>CV_TD_VBPA</resourceUri>
+    </DataSource>
+    <DataSource id="Bill_to_Party$$$$CV_TD_VBPA$$">
+      <resourceUri>CV_TD_VBPA</resourceUri>
+    </DataSource>
+    <DataSource id="Payer$$$$CV_TD_VBPA$$">
+      <resourceUri>CV_TD_VBPA</resourceUri>
+    </DataSource>
+    <DataSource id="Ship_to_Party$$$$CV_TD_VBPA$$">
+      <resourceUri>CV_TD_VBPA</resourceUri>
+    </DataSource>
+    <DataSource id="Partner$$$$CV_TD_VBPA$$">
+      <resourceUri>CV_TD_VBPA</resourceUri>
+    </DataSource>
+    <DataSource id="Contact_Person$$$$CV_TD_VBPA$$">
+      <resourceUri>CV_TD_VBPA</resourceUri>
+    </DataSource>
+    <DataSource id="Forwarding_Agent$$$$CV_TD_VBPA$$">
+      <resourceUri>CV_TD_VBPA</resourceUri>
+    </DataSource>
+    <DataSource id="Sales_Employee$$$$CV_TD_VBPA$$">
+      <resourceUri>CV_TD_VBPA</resourceUri>
+    </DataSource>
+    <DataSource id="Employee_Response$$$$CV_TD_VBPA$$">
+      <resourceUri>CV_TD_VBPA</resourceUri>
+    </DataSource>
+    <DataSource id="Vendor$$$$CV_TD_VBPA$$">
+      <resourceUri>CV_TD_VBPA</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Sold_to_Party" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PERNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SOLD_TO_PARTY"/>
+        <viewAttribute id="LAND1_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SOLD_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SOLD_TO_PARTY"/>
+        <viewAttribute id="HITYP_SOLD_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KNREF_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SOLD_TO_PARTY"/>
+        <viewAttribute id="STCEG_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SOLD_TO_PARTY"/>
+        <viewAttribute id="KALE_SOLD_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SOLD_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_TD_VBPA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_SOLD_TO_PARTY" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_SOLD_TO_PARTY" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PERNR_SOLD_TO_PARTY" source="PERNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR_SOLD_TO_PARTY" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR_SOLD_TO_PARTY" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABLAD_SOLD_TO_PARTY" source="ABLAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1_SOLD_TO_PARTY" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRDA_SOLD_TO_PARTY" source="ADRDA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XCPDK_SOLD_TO_PARTY" source="XCPDK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HITYP_SOLD_TO_PARTY" source="HITYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE_SOLD_TO_PARTY" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE_SOLD_TO_PARTY" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HISTUNR_SOLD_TO_PARTY" source="HISTUNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNREF_SOLD_TO_PARTY" source="KNREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_SOLD_TO_PARTY" source="LZONE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HZUOR_SOLD_TO_PARTY" source="HZUOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG_SOLD_TO_PARTY" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_FF_SOLD_TO_PARTY" source="PARVW_FF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNP_SOLD_TO_PARTY" source="ADRNP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KALE_SOLD_TO_PARTY" source="KALE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_DATAAGING_SOLD_TO_PARTY" source="_DATAAGING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY" source="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+      </input>
+      <filter>&quot;PARVW&quot;='AG'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Bill_to_Party" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="LIFNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PERNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PARNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ABLAD_BILL_TO_PARTY"/>
+        <viewAttribute id="LAND1_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRDA_BILL_TO_PARTY"/>
+        <viewAttribute id="XCPDK_BILL_TO_PARTY"/>
+        <viewAttribute id="HITYP_BILL_TO_PARTY"/>
+        <viewAttribute id="PRFRE_BILL_TO_PARTY"/>
+        <viewAttribute id="BOKRE_BILL_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KNREF_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="HZUOR_BILL_TO_PARTY"/>
+        <viewAttribute id="STCEG_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNP_BILL_TO_PARTY"/>
+        <viewAttribute id="KALE_BILL_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_BILL_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Bill_to_Party$$$$CV_TD_VBPA$$">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_BILL_TO_PARTY" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_BILL_TO_PARTY" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PERNR_BILL_TO_PARTY" source="PERNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR_BILL_TO_PARTY" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR_BILL_TO_PARTY" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABLAD_BILL_TO_PARTY" source="ABLAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1_BILL_TO_PARTY" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRDA_BILL_TO_PARTY" source="ADRDA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XCPDK_BILL_TO_PARTY" source="XCPDK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HITYP_BILL_TO_PARTY" source="HITYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE_BILL_TO_PARTY" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE_BILL_TO_PARTY" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HISTUNR_BILL_TO_PARTY" source="HISTUNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNREF_BILL_TO_PARTY" source="KNREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_BILL_TO_PARTY" source="LZONE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HZUOR_BILL_TO_PARTY" source="HZUOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG_BILL_TO_PARTY" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_FF_BILL_TO_PARTY" source="PARVW_FF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNP_BILL_TO_PARTY" source="ADRNP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KALE_BILL_TO_PARTY" source="KALE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_DATAAGING_BILL_TO_PARTY" source="_DATAAGING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY" source="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+      </input>
+      <filter>&quot;PARVW&quot;='RE'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Payer" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="LIFNR_PAYER"/>
+        <viewAttribute id="PERNR_PAYER"/>
+        <viewAttribute id="PARNR_PAYER"/>
+        <viewAttribute id="ADRNR_PAYER"/>
+        <viewAttribute id="ABLAD_PAYER"/>
+        <viewAttribute id="LAND1_PAYER"/>
+        <viewAttribute id="ADRDA_PAYER"/>
+        <viewAttribute id="XCPDK_PAYER"/>
+        <viewAttribute id="HITYP_PAYER"/>
+        <viewAttribute id="PRFRE_PAYER"/>
+        <viewAttribute id="BOKRE_PAYER"/>
+        <viewAttribute id="HISTUNR_PAYER"/>
+        <viewAttribute id="KNREF_PAYER"/>
+        <viewAttribute id="LZONE_PAYER"/>
+        <viewAttribute id="HZUOR_PAYER"/>
+        <viewAttribute id="STCEG_PAYER"/>
+        <viewAttribute id="PARVW_FF_PAYER"/>
+        <viewAttribute id="ADRNP_PAYER"/>
+        <viewAttribute id="KALE_PAYER"/>
+        <viewAttribute id="_DATAAGING_PAYER"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Payer$$$$CV_TD_VBPA$$">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_PAYER" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_PAYER" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PERNR_PAYER" source="PERNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR_PAYER" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR_PAYER" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABLAD_PAYER" source="ABLAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1_PAYER" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRDA_PAYER" source="ADRDA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XCPDK_PAYER" source="XCPDK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HITYP_PAYER" source="HITYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE_PAYER" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE_PAYER" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HISTUNR_PAYER" source="HISTUNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNREF_PAYER" source="KNREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_PAYER" source="LZONE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HZUOR_PAYER" source="HZUOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG_PAYER" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_FF_PAYER" source="PARVW_FF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNP_PAYER" source="ADRNP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KALE_PAYER" source="KALE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_DATAAGING_PAYER" source="_DATAAGING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER" source="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+      </input>
+      <filter>&quot;PARVW&quot;='RG'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Ship_to_Party" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PERNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SHIP_TO_PARTY"/>
+        <viewAttribute id="LAND1_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SHIP_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SHIP_TO_PARTY"/>
+        <viewAttribute id="HITYP_SHIP_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="KNREF_SHIP_TO_PARTY"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SHIP_TO_PARTY"/>
+        <viewAttribute id="STCEG_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SHIP_TO_PARTY"/>
+        <viewAttribute id="KALE_SHIP_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SHIP_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SHIP_TO_PARTY"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Ship_to_Party$$$$CV_TD_VBPA$$">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_SHIP_TO_PARTY" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_SHIP_TO_PARTY" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PERNR_SHIP_TO_PARTY" source="PERNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR_SHIP_TO_PARTY" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR_SHIP_TO_PARTY" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABLAD_SHIP_TO_PARTY" source="ABLAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1_SHIP_TO_PARTY" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRDA_SHIP_TO_PARTY" source="ADRDA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XCPDK_SHIP_TO_PARTY" source="XCPDK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HITYP_SHIP_TO_PARTY" source="HITYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE_SHIP_TO_PARTY" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE_SHIP_TO_PARTY" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HISTUNR_SHIP_TO_PARTY" source="HISTUNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNREF_SHIP_TO_PARTY" source="KNREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_SHIP_TO_PARTY" source="LZONE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HZUOR_SHIP_TO_PARTY" source="HZUOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG_SHIP_TO_PARTY" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_FF_SHIP_TO_PARTY" source="PARVW_FF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNP_SHIP_TO_PARTY" source="ADRNP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KALE_SHIP_TO_PARTY" source="KALE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_DATAAGING_SHIP_TO_PARTY" source="_DATAAGING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SHIP_TO_PARTY" source="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+      </input>
+      <filter>&quot;PARVW&quot;='WE'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:AggregationView" id="Partner">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Partner$$$$CV_TD_VBPA$$"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter" optimizeJoinColumns="false">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PERNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SOLD_TO_PARTY"/>
+        <viewAttribute id="LAND1_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SOLD_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SOLD_TO_PARTY"/>
+        <viewAttribute id="HITYP_SOLD_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KNREF_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SOLD_TO_PARTY"/>
+        <viewAttribute id="STCEG_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SOLD_TO_PARTY"/>
+        <viewAttribute id="KALE_SOLD_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SOLD_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Partner">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW" source="PARVW"/>
+      </input>
+      <input node="Sold_to_Party">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_SOLD_TO_PARTY" source="PARVW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PERNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SOLD_TO_PARTY"/>
+        <viewAttribute id="LAND1_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SOLD_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SOLD_TO_PARTY"/>
+        <viewAttribute id="HITYP_SOLD_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KNREF_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SOLD_TO_PARTY"/>
+        <viewAttribute id="STCEG_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SOLD_TO_PARTY"/>
+        <viewAttribute id="KALE_SOLD_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SOLD_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="LIFNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PERNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PARNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ABLAD_BILL_TO_PARTY"/>
+        <viewAttribute id="LAND1_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRDA_BILL_TO_PARTY"/>
+        <viewAttribute id="XCPDK_BILL_TO_PARTY"/>
+        <viewAttribute id="HITYP_BILL_TO_PARTY"/>
+        <viewAttribute id="PRFRE_BILL_TO_PARTY"/>
+        <viewAttribute id="BOKRE_BILL_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KNREF_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="HZUOR_BILL_TO_PARTY"/>
+        <viewAttribute id="STCEG_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNP_BILL_TO_PARTY"/>
+        <viewAttribute id="KALE_BILL_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_BILL_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW" source="PARVW"/>
+      </input>
+      <input node="Bill_to_Party">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_BILL_TO_PARTY" source="PARVW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_3" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PERNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SOLD_TO_PARTY"/>
+        <viewAttribute id="LAND1_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SOLD_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SOLD_TO_PARTY"/>
+        <viewAttribute id="HITYP_SOLD_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KNREF_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SOLD_TO_PARTY"/>
+        <viewAttribute id="STCEG_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SOLD_TO_PARTY"/>
+        <viewAttribute id="KALE_SOLD_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SOLD_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="LIFNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PERNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PARNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ABLAD_BILL_TO_PARTY"/>
+        <viewAttribute id="LAND1_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRDA_BILL_TO_PARTY"/>
+        <viewAttribute id="XCPDK_BILL_TO_PARTY"/>
+        <viewAttribute id="HITYP_BILL_TO_PARTY"/>
+        <viewAttribute id="PRFRE_BILL_TO_PARTY"/>
+        <viewAttribute id="BOKRE_BILL_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KNREF_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="HZUOR_BILL_TO_PARTY"/>
+        <viewAttribute id="STCEG_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNP_BILL_TO_PARTY"/>
+        <viewAttribute id="KALE_BILL_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_BILL_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="LIFNR_PAYER"/>
+        <viewAttribute id="PERNR_PAYER"/>
+        <viewAttribute id="PARNR_PAYER"/>
+        <viewAttribute id="ADRNR_PAYER"/>
+        <viewAttribute id="ABLAD_PAYER"/>
+        <viewAttribute id="LAND1_PAYER"/>
+        <viewAttribute id="ADRDA_PAYER"/>
+        <viewAttribute id="XCPDK_PAYER"/>
+        <viewAttribute id="HITYP_PAYER"/>
+        <viewAttribute id="PRFRE_PAYER"/>
+        <viewAttribute id="BOKRE_PAYER"/>
+        <viewAttribute id="HISTUNR_PAYER"/>
+        <viewAttribute id="KNREF_PAYER"/>
+        <viewAttribute id="LZONE_PAYER"/>
+        <viewAttribute id="HZUOR_PAYER"/>
+        <viewAttribute id="STCEG_PAYER"/>
+        <viewAttribute id="PARVW_FF_PAYER"/>
+        <viewAttribute id="ADRNP_PAYER"/>
+        <viewAttribute id="KALE_PAYER"/>
+        <viewAttribute id="_DATAAGING_PAYER"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER"/>
+        <viewAttribute id="PARVW_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_PAYER"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW" source="PARVW"/>
+      </input>
+      <input node="Payer">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_PAYER" source="PARVW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_4" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PERNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SOLD_TO_PARTY"/>
+        <viewAttribute id="LAND1_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SOLD_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SOLD_TO_PARTY"/>
+        <viewAttribute id="HITYP_SOLD_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KNREF_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SOLD_TO_PARTY"/>
+        <viewAttribute id="STCEG_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SOLD_TO_PARTY"/>
+        <viewAttribute id="KALE_SOLD_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SOLD_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="LIFNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PERNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PARNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ABLAD_BILL_TO_PARTY"/>
+        <viewAttribute id="LAND1_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRDA_BILL_TO_PARTY"/>
+        <viewAttribute id="XCPDK_BILL_TO_PARTY"/>
+        <viewAttribute id="HITYP_BILL_TO_PARTY"/>
+        <viewAttribute id="PRFRE_BILL_TO_PARTY"/>
+        <viewAttribute id="BOKRE_BILL_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KNREF_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="HZUOR_BILL_TO_PARTY"/>
+        <viewAttribute id="STCEG_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNP_BILL_TO_PARTY"/>
+        <viewAttribute id="KALE_BILL_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_BILL_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="LIFNR_PAYER"/>
+        <viewAttribute id="PERNR_PAYER"/>
+        <viewAttribute id="PARNR_PAYER"/>
+        <viewAttribute id="ADRNR_PAYER"/>
+        <viewAttribute id="ABLAD_PAYER"/>
+        <viewAttribute id="LAND1_PAYER"/>
+        <viewAttribute id="ADRDA_PAYER"/>
+        <viewAttribute id="XCPDK_PAYER"/>
+        <viewAttribute id="HITYP_PAYER"/>
+        <viewAttribute id="PRFRE_PAYER"/>
+        <viewAttribute id="BOKRE_PAYER"/>
+        <viewAttribute id="HISTUNR_PAYER"/>
+        <viewAttribute id="KNREF_PAYER"/>
+        <viewAttribute id="LZONE_PAYER"/>
+        <viewAttribute id="HZUOR_PAYER"/>
+        <viewAttribute id="STCEG_PAYER"/>
+        <viewAttribute id="PARVW_FF_PAYER"/>
+        <viewAttribute id="ADRNP_PAYER"/>
+        <viewAttribute id="KALE_PAYER"/>
+        <viewAttribute id="_DATAAGING_PAYER"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PERNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SHIP_TO_PARTY"/>
+        <viewAttribute id="LAND1_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SHIP_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SHIP_TO_PARTY"/>
+        <viewAttribute id="HITYP_SHIP_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="KNREF_SHIP_TO_PARTY"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SHIP_TO_PARTY"/>
+        <viewAttribute id="STCEG_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SHIP_TO_PARTY"/>
+        <viewAttribute id="KALE_SHIP_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SHIP_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_PAYER"/>
+        <viewAttribute id="PARVW_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW" source="PARVW"/>
+      </input>
+      <input node="Ship_to_Party">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_SHIP_TO_PARTY" source="PARVW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Contact_Person" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="PERNR"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="ABLAD"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="ADRDA"/>
+        <viewAttribute id="XCPDK"/>
+        <viewAttribute id="HITYP"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="HISTUNR"/>
+        <viewAttribute id="KNREF"/>
+        <viewAttribute id="LZONE"/>
+        <viewAttribute id="HZUOR"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="PARVW_FF"/>
+        <viewAttribute id="ADRNP"/>
+        <viewAttribute id="KALE"/>
+        <viewAttribute id="_DATAAGING"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Contact_Person$$$$CV_TD_VBPA$$"/>
+      <filter>&quot;PARVW&quot;='AP'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_5" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PERNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SOLD_TO_PARTY"/>
+        <viewAttribute id="LAND1_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SOLD_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SOLD_TO_PARTY"/>
+        <viewAttribute id="HITYP_SOLD_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KNREF_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SOLD_TO_PARTY"/>
+        <viewAttribute id="STCEG_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SOLD_TO_PARTY"/>
+        <viewAttribute id="KALE_SOLD_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SOLD_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="LIFNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PERNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PARNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ABLAD_BILL_TO_PARTY"/>
+        <viewAttribute id="LAND1_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRDA_BILL_TO_PARTY"/>
+        <viewAttribute id="XCPDK_BILL_TO_PARTY"/>
+        <viewAttribute id="HITYP_BILL_TO_PARTY"/>
+        <viewAttribute id="PRFRE_BILL_TO_PARTY"/>
+        <viewAttribute id="BOKRE_BILL_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KNREF_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="HZUOR_BILL_TO_PARTY"/>
+        <viewAttribute id="STCEG_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNP_BILL_TO_PARTY"/>
+        <viewAttribute id="KALE_BILL_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_BILL_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="LIFNR_PAYER"/>
+        <viewAttribute id="PERNR_PAYER"/>
+        <viewAttribute id="PARNR_PAYER"/>
+        <viewAttribute id="ADRNR_PAYER"/>
+        <viewAttribute id="ABLAD_PAYER"/>
+        <viewAttribute id="LAND1_PAYER"/>
+        <viewAttribute id="ADRDA_PAYER"/>
+        <viewAttribute id="XCPDK_PAYER"/>
+        <viewAttribute id="HITYP_PAYER"/>
+        <viewAttribute id="PRFRE_PAYER"/>
+        <viewAttribute id="BOKRE_PAYER"/>
+        <viewAttribute id="HISTUNR_PAYER"/>
+        <viewAttribute id="KNREF_PAYER"/>
+        <viewAttribute id="LZONE_PAYER"/>
+        <viewAttribute id="HZUOR_PAYER"/>
+        <viewAttribute id="STCEG_PAYER"/>
+        <viewAttribute id="PARVW_FF_PAYER"/>
+        <viewAttribute id="ADRNP_PAYER"/>
+        <viewAttribute id="KALE_PAYER"/>
+        <viewAttribute id="_DATAAGING_PAYER"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PERNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SHIP_TO_PARTY"/>
+        <viewAttribute id="LAND1_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SHIP_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SHIP_TO_PARTY"/>
+        <viewAttribute id="HITYP_SHIP_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="KNREF_SHIP_TO_PARTY"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SHIP_TO_PARTY"/>
+        <viewAttribute id="STCEG_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SHIP_TO_PARTY"/>
+        <viewAttribute id="KALE_SHIP_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SHIP_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_PAYER"/>
+        <viewAttribute id="PARVW_SHIP_TO_PARTY"/>
+        <viewAttribute id="KUNNR_CONTACT_PERSON"/>
+        <viewAttribute id="LIFNR_CONTACT_PERSON"/>
+        <viewAttribute id="PERNR_CONTACT_PERSON"/>
+        <viewAttribute id="PARNR_CONTACT_PERSON"/>
+        <viewAttribute id="ADRNR_CONTACT_PERSON"/>
+        <viewAttribute id="ABLAD_CONTACT_PERSON"/>
+        <viewAttribute id="LAND1_CONTACT_PERSON"/>
+        <viewAttribute id="ADRDA_CONTACT_PERSON"/>
+        <viewAttribute id="XCPDK_CONTACT_PERSON"/>
+        <viewAttribute id="HITYP_CONTACT_PERSON"/>
+        <viewAttribute id="PRFRE_CONTACT_PERSON"/>
+        <viewAttribute id="BOKRE_CONTACT_PERSON"/>
+        <viewAttribute id="HISTUNR_CONTACT_PERSON"/>
+        <viewAttribute id="KNREF_CONTACT_PERSON"/>
+        <viewAttribute id="LZONE_CONTACT_PERSON"/>
+        <viewAttribute id="HZUOR_CONTACT_PERSON"/>
+        <viewAttribute id="STCEG_CONTACT_PERSON"/>
+        <viewAttribute id="PARVW_FF_CONTACT_PERSON"/>
+        <viewAttribute id="ADRNP_CONTACT_PERSON"/>
+        <viewAttribute id="KALE_CONTACT_PERSON"/>
+        <viewAttribute id="_DATAAGING_CONTACT_PERSON"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_CONTACT_PERSON"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW" source="PARVW"/>
+      </input>
+      <input node="Contact_Person">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_CONTACT_PERSON" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_CONTACT_PERSON" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PERNR_CONTACT_PERSON" source="PERNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR_CONTACT_PERSON" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR_CONTACT_PERSON" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABLAD_CONTACT_PERSON" source="ABLAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1_CONTACT_PERSON" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRDA_CONTACT_PERSON" source="ADRDA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XCPDK_CONTACT_PERSON" source="XCPDK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HITYP_CONTACT_PERSON" source="HITYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE_CONTACT_PERSON" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE_CONTACT_PERSON" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HISTUNR_CONTACT_PERSON" source="HISTUNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNREF_CONTACT_PERSON" source="KNREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_CONTACT_PERSON" source="LZONE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HZUOR_CONTACT_PERSON" source="HZUOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG_CONTACT_PERSON" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_FF_CONTACT_PERSON" source="PARVW_FF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNP_CONTACT_PERSON" source="ADRNP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KALE_CONTACT_PERSON" source="KALE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_DATAAGING_CONTACT_PERSON" source="_DATAAGING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUMMY_SDDOCPARTNER_INCL_EEW_PS_CONTACT_PERSON" source="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Forwarding_Agent" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="PERNR"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="ABLAD"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="ADRDA"/>
+        <viewAttribute id="XCPDK"/>
+        <viewAttribute id="HITYP"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="HISTUNR"/>
+        <viewAttribute id="KNREF"/>
+        <viewAttribute id="LZONE"/>
+        <viewAttribute id="HZUOR"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="PARVW_FF"/>
+        <viewAttribute id="ADRNP"/>
+        <viewAttribute id="KALE"/>
+        <viewAttribute id="_DATAAGING"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Forwarding_Agent$$$$CV_TD_VBPA$$"/>
+      <filter>&quot;PARVW&quot;='SP'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_6" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PERNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SOLD_TO_PARTY"/>
+        <viewAttribute id="LAND1_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SOLD_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SOLD_TO_PARTY"/>
+        <viewAttribute id="HITYP_SOLD_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KNREF_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SOLD_TO_PARTY"/>
+        <viewAttribute id="STCEG_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SOLD_TO_PARTY"/>
+        <viewAttribute id="KALE_SOLD_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SOLD_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="LIFNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PERNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PARNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ABLAD_BILL_TO_PARTY"/>
+        <viewAttribute id="LAND1_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRDA_BILL_TO_PARTY"/>
+        <viewAttribute id="XCPDK_BILL_TO_PARTY"/>
+        <viewAttribute id="HITYP_BILL_TO_PARTY"/>
+        <viewAttribute id="PRFRE_BILL_TO_PARTY"/>
+        <viewAttribute id="BOKRE_BILL_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KNREF_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="HZUOR_BILL_TO_PARTY"/>
+        <viewAttribute id="STCEG_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNP_BILL_TO_PARTY"/>
+        <viewAttribute id="KALE_BILL_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_BILL_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="LIFNR_PAYER"/>
+        <viewAttribute id="PERNR_PAYER"/>
+        <viewAttribute id="PARNR_PAYER"/>
+        <viewAttribute id="ADRNR_PAYER"/>
+        <viewAttribute id="ABLAD_PAYER"/>
+        <viewAttribute id="LAND1_PAYER"/>
+        <viewAttribute id="ADRDA_PAYER"/>
+        <viewAttribute id="XCPDK_PAYER"/>
+        <viewAttribute id="HITYP_PAYER"/>
+        <viewAttribute id="PRFRE_PAYER"/>
+        <viewAttribute id="BOKRE_PAYER"/>
+        <viewAttribute id="HISTUNR_PAYER"/>
+        <viewAttribute id="KNREF_PAYER"/>
+        <viewAttribute id="LZONE_PAYER"/>
+        <viewAttribute id="HZUOR_PAYER"/>
+        <viewAttribute id="STCEG_PAYER"/>
+        <viewAttribute id="PARVW_FF_PAYER"/>
+        <viewAttribute id="ADRNP_PAYER"/>
+        <viewAttribute id="KALE_PAYER"/>
+        <viewAttribute id="_DATAAGING_PAYER"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PERNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SHIP_TO_PARTY"/>
+        <viewAttribute id="LAND1_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SHIP_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SHIP_TO_PARTY"/>
+        <viewAttribute id="HITYP_SHIP_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="KNREF_SHIP_TO_PARTY"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SHIP_TO_PARTY"/>
+        <viewAttribute id="STCEG_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SHIP_TO_PARTY"/>
+        <viewAttribute id="KALE_SHIP_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SHIP_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_PAYER"/>
+        <viewAttribute id="PARVW_SHIP_TO_PARTY"/>
+        <viewAttribute id="KUNNR_CONTACT_PERSON"/>
+        <viewAttribute id="LIFNR_CONTACT_PERSON"/>
+        <viewAttribute id="PERNR_CONTACT_PERSON"/>
+        <viewAttribute id="PARNR_CONTACT_PERSON"/>
+        <viewAttribute id="ADRNR_CONTACT_PERSON"/>
+        <viewAttribute id="ABLAD_CONTACT_PERSON"/>
+        <viewAttribute id="LAND1_CONTACT_PERSON"/>
+        <viewAttribute id="ADRDA_CONTACT_PERSON"/>
+        <viewAttribute id="XCPDK_CONTACT_PERSON"/>
+        <viewAttribute id="HITYP_CONTACT_PERSON"/>
+        <viewAttribute id="PRFRE_CONTACT_PERSON"/>
+        <viewAttribute id="BOKRE_CONTACT_PERSON"/>
+        <viewAttribute id="HISTUNR_CONTACT_PERSON"/>
+        <viewAttribute id="KNREF_CONTACT_PERSON"/>
+        <viewAttribute id="LZONE_CONTACT_PERSON"/>
+        <viewAttribute id="HZUOR_CONTACT_PERSON"/>
+        <viewAttribute id="STCEG_CONTACT_PERSON"/>
+        <viewAttribute id="PARVW_FF_CONTACT_PERSON"/>
+        <viewAttribute id="ADRNP_CONTACT_PERSON"/>
+        <viewAttribute id="KALE_CONTACT_PERSON"/>
+        <viewAttribute id="_DATAAGING_CONTACT_PERSON"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_CONTACT_PERSON"/>
+        <viewAttribute id="KUNNR_FORWARDING_AGENT"/>
+        <viewAttribute id="LIFNR_FORWARDING_AGENT"/>
+        <viewAttribute id="PERNR_FORWARDING_AGENT"/>
+        <viewAttribute id="PARNR_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRNR_FORWARDING_AGENT"/>
+        <viewAttribute id="ABLAD_FORWARDING_AGENT"/>
+        <viewAttribute id="LAND1_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRDA_FORWARDING_AGENT"/>
+        <viewAttribute id="XCPDK_FORWARDING_AGENT"/>
+        <viewAttribute id="HITYP_FORWARDING_AGENT"/>
+        <viewAttribute id="PRFRE_FORWARDING_AGENT"/>
+        <viewAttribute id="BOKRE_FORWARDING_AGENT"/>
+        <viewAttribute id="HISTUNR_FORWARDING_AGENT"/>
+        <viewAttribute id="KNREF_FORWARDING_AGENT"/>
+        <viewAttribute id="LZONE_FORWARDING_AGENT"/>
+        <viewAttribute id="HZUOR_FORWARDING_AGENT"/>
+        <viewAttribute id="STCEG_FORWARDING_AGENT"/>
+        <viewAttribute id="PARVW_FF_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRNP_FORWARDING_AGENT"/>
+        <viewAttribute id="KALE_FORWARDING_AGENT"/>
+        <viewAttribute id="_DATAAGING_FORWARDING_AGENT"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_FORWARDING_AGENT"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_5">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW" source="PARVW"/>
+      </input>
+      <input node="Forwarding_Agent">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_FORWARDING_AGENT" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_FORWARDING_AGENT" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PERNR_FORWARDING_AGENT" source="PERNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR_FORWARDING_AGENT" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR_FORWARDING_AGENT" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABLAD_FORWARDING_AGENT" source="ABLAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1_FORWARDING_AGENT" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRDA_FORWARDING_AGENT" source="ADRDA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XCPDK_FORWARDING_AGENT" source="XCPDK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HITYP_FORWARDING_AGENT" source="HITYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE_FORWARDING_AGENT" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE_FORWARDING_AGENT" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HISTUNR_FORWARDING_AGENT" source="HISTUNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNREF_FORWARDING_AGENT" source="KNREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_FORWARDING_AGENT" source="LZONE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HZUOR_FORWARDING_AGENT" source="HZUOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG_FORWARDING_AGENT" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_FF_FORWARDING_AGENT" source="PARVW_FF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNP_FORWARDING_AGENT" source="ADRNP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KALE_FORWARDING_AGENT" source="KALE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_DATAAGING_FORWARDING_AGENT" source="_DATAAGING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUMMY_SDDOCPARTNER_INCL_EEW_PS_FORWARDING_AGENT" source="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Sales_Employee" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="PERNR"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="ABLAD"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="ADRDA"/>
+        <viewAttribute id="XCPDK"/>
+        <viewAttribute id="HITYP"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="HISTUNR"/>
+        <viewAttribute id="KNREF"/>
+        <viewAttribute id="LZONE"/>
+        <viewAttribute id="HZUOR"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="PARVW_FF"/>
+        <viewAttribute id="ADRNP"/>
+        <viewAttribute id="KALE"/>
+        <viewAttribute id="_DATAAGING"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Sales_Employee$$$$CV_TD_VBPA$$"/>
+      <filter>&quot;PARVW&quot;='VE'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_7" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PERNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SOLD_TO_PARTY"/>
+        <viewAttribute id="LAND1_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SOLD_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SOLD_TO_PARTY"/>
+        <viewAttribute id="HITYP_SOLD_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KNREF_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SOLD_TO_PARTY"/>
+        <viewAttribute id="STCEG_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SOLD_TO_PARTY"/>
+        <viewAttribute id="KALE_SOLD_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SOLD_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="LIFNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PERNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PARNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ABLAD_BILL_TO_PARTY"/>
+        <viewAttribute id="LAND1_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRDA_BILL_TO_PARTY"/>
+        <viewAttribute id="XCPDK_BILL_TO_PARTY"/>
+        <viewAttribute id="HITYP_BILL_TO_PARTY"/>
+        <viewAttribute id="PRFRE_BILL_TO_PARTY"/>
+        <viewAttribute id="BOKRE_BILL_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KNREF_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="HZUOR_BILL_TO_PARTY"/>
+        <viewAttribute id="STCEG_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNP_BILL_TO_PARTY"/>
+        <viewAttribute id="KALE_BILL_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_BILL_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="LIFNR_PAYER"/>
+        <viewAttribute id="PERNR_PAYER"/>
+        <viewAttribute id="PARNR_PAYER"/>
+        <viewAttribute id="ADRNR_PAYER"/>
+        <viewAttribute id="ABLAD_PAYER"/>
+        <viewAttribute id="LAND1_PAYER"/>
+        <viewAttribute id="ADRDA_PAYER"/>
+        <viewAttribute id="XCPDK_PAYER"/>
+        <viewAttribute id="HITYP_PAYER"/>
+        <viewAttribute id="PRFRE_PAYER"/>
+        <viewAttribute id="BOKRE_PAYER"/>
+        <viewAttribute id="HISTUNR_PAYER"/>
+        <viewAttribute id="KNREF_PAYER"/>
+        <viewAttribute id="LZONE_PAYER"/>
+        <viewAttribute id="HZUOR_PAYER"/>
+        <viewAttribute id="STCEG_PAYER"/>
+        <viewAttribute id="PARVW_FF_PAYER"/>
+        <viewAttribute id="ADRNP_PAYER"/>
+        <viewAttribute id="KALE_PAYER"/>
+        <viewAttribute id="_DATAAGING_PAYER"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PERNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SHIP_TO_PARTY"/>
+        <viewAttribute id="LAND1_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SHIP_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SHIP_TO_PARTY"/>
+        <viewAttribute id="HITYP_SHIP_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="KNREF_SHIP_TO_PARTY"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SHIP_TO_PARTY"/>
+        <viewAttribute id="STCEG_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SHIP_TO_PARTY"/>
+        <viewAttribute id="KALE_SHIP_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SHIP_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_PAYER"/>
+        <viewAttribute id="PARVW_SHIP_TO_PARTY"/>
+        <viewAttribute id="KUNNR_CONTACT_PERSON"/>
+        <viewAttribute id="LIFNR_CONTACT_PERSON"/>
+        <viewAttribute id="PERNR_CONTACT_PERSON"/>
+        <viewAttribute id="PARNR_CONTACT_PERSON"/>
+        <viewAttribute id="ADRNR_CONTACT_PERSON"/>
+        <viewAttribute id="ABLAD_CONTACT_PERSON"/>
+        <viewAttribute id="LAND1_CONTACT_PERSON"/>
+        <viewAttribute id="ADRDA_CONTACT_PERSON"/>
+        <viewAttribute id="XCPDK_CONTACT_PERSON"/>
+        <viewAttribute id="HITYP_CONTACT_PERSON"/>
+        <viewAttribute id="PRFRE_CONTACT_PERSON"/>
+        <viewAttribute id="BOKRE_CONTACT_PERSON"/>
+        <viewAttribute id="HISTUNR_CONTACT_PERSON"/>
+        <viewAttribute id="KNREF_CONTACT_PERSON"/>
+        <viewAttribute id="LZONE_CONTACT_PERSON"/>
+        <viewAttribute id="HZUOR_CONTACT_PERSON"/>
+        <viewAttribute id="STCEG_CONTACT_PERSON"/>
+        <viewAttribute id="PARVW_FF_CONTACT_PERSON"/>
+        <viewAttribute id="ADRNP_CONTACT_PERSON"/>
+        <viewAttribute id="KALE_CONTACT_PERSON"/>
+        <viewAttribute id="_DATAAGING_CONTACT_PERSON"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_CONTACT_PERSON"/>
+        <viewAttribute id="KUNNR_FORWARDING_AGENT"/>
+        <viewAttribute id="LIFNR_FORWARDING_AGENT"/>
+        <viewAttribute id="PERNR_FORWARDING_AGENT"/>
+        <viewAttribute id="PARNR_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRNR_FORWARDING_AGENT"/>
+        <viewAttribute id="ABLAD_FORWARDING_AGENT"/>
+        <viewAttribute id="LAND1_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRDA_FORWARDING_AGENT"/>
+        <viewAttribute id="XCPDK_FORWARDING_AGENT"/>
+        <viewAttribute id="HITYP_FORWARDING_AGENT"/>
+        <viewAttribute id="PRFRE_FORWARDING_AGENT"/>
+        <viewAttribute id="BOKRE_FORWARDING_AGENT"/>
+        <viewAttribute id="HISTUNR_FORWARDING_AGENT"/>
+        <viewAttribute id="KNREF_FORWARDING_AGENT"/>
+        <viewAttribute id="LZONE_FORWARDING_AGENT"/>
+        <viewAttribute id="HZUOR_FORWARDING_AGENT"/>
+        <viewAttribute id="STCEG_FORWARDING_AGENT"/>
+        <viewAttribute id="PARVW_FF_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRNP_FORWARDING_AGENT"/>
+        <viewAttribute id="KALE_FORWARDING_AGENT"/>
+        <viewAttribute id="_DATAAGING_FORWARDING_AGENT"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_FORWARDING_AGENT"/>
+        <viewAttribute id="KUNNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="LIFNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="PERNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="PARNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="ADRNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="ABLAD_SALES_EMPLOYEE"/>
+        <viewAttribute id="LAND1_SALES_EMPLOYEE"/>
+        <viewAttribute id="ADRDA_SALES_EMPLOYEE"/>
+        <viewAttribute id="XCPDK_SALES_EMPLOYEE"/>
+        <viewAttribute id="HITYP_SALES_EMPLOYEE"/>
+        <viewAttribute id="PRFRE_SALES_EMPLOYEE"/>
+        <viewAttribute id="BOKRE_SALES_EMPLOYEE"/>
+        <viewAttribute id="HISTUNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="KNREF_SALES_EMPLOYEE"/>
+        <viewAttribute id="LZONE_SALES_EMPLOYEE"/>
+        <viewAttribute id="HZUOR_SALES_EMPLOYEE"/>
+        <viewAttribute id="STCEG_SALES_EMPLOYEE"/>
+        <viewAttribute id="PARVW_FF_SALES_EMPLOYEE"/>
+        <viewAttribute id="ADRNP_SALES_EMPLOYEE"/>
+        <viewAttribute id="KALE_SALES_EMPLOYEE"/>
+        <viewAttribute id="_DATAAGING_SALES_EMPLOYEE"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SALES_EMPLOYEE"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_6">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW" source="PARVW"/>
+      </input>
+      <input node="Sales_Employee">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_SALES_EMPLOYEE" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_SALES_EMPLOYEE" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PERNR_SALES_EMPLOYEE" source="PERNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR_SALES_EMPLOYEE" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR_SALES_EMPLOYEE" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABLAD_SALES_EMPLOYEE" source="ABLAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1_SALES_EMPLOYEE" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRDA_SALES_EMPLOYEE" source="ADRDA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XCPDK_SALES_EMPLOYEE" source="XCPDK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HITYP_SALES_EMPLOYEE" source="HITYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE_SALES_EMPLOYEE" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE_SALES_EMPLOYEE" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HISTUNR_SALES_EMPLOYEE" source="HISTUNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNREF_SALES_EMPLOYEE" source="KNREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_SALES_EMPLOYEE" source="LZONE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HZUOR_SALES_EMPLOYEE" source="HZUOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG_SALES_EMPLOYEE" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_FF_SALES_EMPLOYEE" source="PARVW_FF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNP_SALES_EMPLOYEE" source="ADRNP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KALE_SALES_EMPLOYEE" source="KALE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_DATAAGING_SALES_EMPLOYEE" source="_DATAAGING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SALES_EMPLOYEE" source="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Employee_Response" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="PERNR"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="ABLAD"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="ADRDA"/>
+        <viewAttribute id="XCPDK"/>
+        <viewAttribute id="HITYP"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="HISTUNR"/>
+        <viewAttribute id="KNREF"/>
+        <viewAttribute id="LZONE"/>
+        <viewAttribute id="HZUOR"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="PARVW_FF"/>
+        <viewAttribute id="ADRNP"/>
+        <viewAttribute id="KALE"/>
+        <viewAttribute id="_DATAAGING"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Employee_Response$$$$CV_TD_VBPA$$"/>
+      <filter>&quot;PARVW&quot;='ZM'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_8" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PERNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SOLD_TO_PARTY"/>
+        <viewAttribute id="LAND1_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SOLD_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SOLD_TO_PARTY"/>
+        <viewAttribute id="HITYP_SOLD_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KNREF_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SOLD_TO_PARTY"/>
+        <viewAttribute id="STCEG_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SOLD_TO_PARTY"/>
+        <viewAttribute id="KALE_SOLD_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SOLD_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="LIFNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PERNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PARNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ABLAD_BILL_TO_PARTY"/>
+        <viewAttribute id="LAND1_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRDA_BILL_TO_PARTY"/>
+        <viewAttribute id="XCPDK_BILL_TO_PARTY"/>
+        <viewAttribute id="HITYP_BILL_TO_PARTY"/>
+        <viewAttribute id="PRFRE_BILL_TO_PARTY"/>
+        <viewAttribute id="BOKRE_BILL_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KNREF_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="HZUOR_BILL_TO_PARTY"/>
+        <viewAttribute id="STCEG_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNP_BILL_TO_PARTY"/>
+        <viewAttribute id="KALE_BILL_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_BILL_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="LIFNR_PAYER"/>
+        <viewAttribute id="PERNR_PAYER"/>
+        <viewAttribute id="PARNR_PAYER"/>
+        <viewAttribute id="ADRNR_PAYER"/>
+        <viewAttribute id="ABLAD_PAYER"/>
+        <viewAttribute id="LAND1_PAYER"/>
+        <viewAttribute id="ADRDA_PAYER"/>
+        <viewAttribute id="XCPDK_PAYER"/>
+        <viewAttribute id="HITYP_PAYER"/>
+        <viewAttribute id="PRFRE_PAYER"/>
+        <viewAttribute id="BOKRE_PAYER"/>
+        <viewAttribute id="HISTUNR_PAYER"/>
+        <viewAttribute id="KNREF_PAYER"/>
+        <viewAttribute id="LZONE_PAYER"/>
+        <viewAttribute id="HZUOR_PAYER"/>
+        <viewAttribute id="STCEG_PAYER"/>
+        <viewAttribute id="PARVW_FF_PAYER"/>
+        <viewAttribute id="ADRNP_PAYER"/>
+        <viewAttribute id="KALE_PAYER"/>
+        <viewAttribute id="_DATAAGING_PAYER"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PERNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SHIP_TO_PARTY"/>
+        <viewAttribute id="LAND1_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SHIP_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SHIP_TO_PARTY"/>
+        <viewAttribute id="HITYP_SHIP_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="KNREF_SHIP_TO_PARTY"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SHIP_TO_PARTY"/>
+        <viewAttribute id="STCEG_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SHIP_TO_PARTY"/>
+        <viewAttribute id="KALE_SHIP_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SHIP_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_PAYER"/>
+        <viewAttribute id="PARVW_SHIP_TO_PARTY"/>
+        <viewAttribute id="KUNNR_CONTACT_PERSON"/>
+        <viewAttribute id="LIFNR_CONTACT_PERSON"/>
+        <viewAttribute id="PERNR_CONTACT_PERSON"/>
+        <viewAttribute id="PARNR_CONTACT_PERSON"/>
+        <viewAttribute id="ADRNR_CONTACT_PERSON"/>
+        <viewAttribute id="ABLAD_CONTACT_PERSON"/>
+        <viewAttribute id="LAND1_CONTACT_PERSON"/>
+        <viewAttribute id="ADRDA_CONTACT_PERSON"/>
+        <viewAttribute id="XCPDK_CONTACT_PERSON"/>
+        <viewAttribute id="HITYP_CONTACT_PERSON"/>
+        <viewAttribute id="PRFRE_CONTACT_PERSON"/>
+        <viewAttribute id="BOKRE_CONTACT_PERSON"/>
+        <viewAttribute id="HISTUNR_CONTACT_PERSON"/>
+        <viewAttribute id="KNREF_CONTACT_PERSON"/>
+        <viewAttribute id="LZONE_CONTACT_PERSON"/>
+        <viewAttribute id="HZUOR_CONTACT_PERSON"/>
+        <viewAttribute id="STCEG_CONTACT_PERSON"/>
+        <viewAttribute id="PARVW_FF_CONTACT_PERSON"/>
+        <viewAttribute id="ADRNP_CONTACT_PERSON"/>
+        <viewAttribute id="KALE_CONTACT_PERSON"/>
+        <viewAttribute id="_DATAAGING_CONTACT_PERSON"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_CONTACT_PERSON"/>
+        <viewAttribute id="KUNNR_FORWARDING_AGENT"/>
+        <viewAttribute id="LIFNR_FORWARDING_AGENT"/>
+        <viewAttribute id="PERNR_FORWARDING_AGENT"/>
+        <viewAttribute id="PARNR_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRNR_FORWARDING_AGENT"/>
+        <viewAttribute id="ABLAD_FORWARDING_AGENT"/>
+        <viewAttribute id="LAND1_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRDA_FORWARDING_AGENT"/>
+        <viewAttribute id="XCPDK_FORWARDING_AGENT"/>
+        <viewAttribute id="HITYP_FORWARDING_AGENT"/>
+        <viewAttribute id="PRFRE_FORWARDING_AGENT"/>
+        <viewAttribute id="BOKRE_FORWARDING_AGENT"/>
+        <viewAttribute id="HISTUNR_FORWARDING_AGENT"/>
+        <viewAttribute id="KNREF_FORWARDING_AGENT"/>
+        <viewAttribute id="LZONE_FORWARDING_AGENT"/>
+        <viewAttribute id="HZUOR_FORWARDING_AGENT"/>
+        <viewAttribute id="STCEG_FORWARDING_AGENT"/>
+        <viewAttribute id="PARVW_FF_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRNP_FORWARDING_AGENT"/>
+        <viewAttribute id="KALE_FORWARDING_AGENT"/>
+        <viewAttribute id="_DATAAGING_FORWARDING_AGENT"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_FORWARDING_AGENT"/>
+        <viewAttribute id="KUNNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="LIFNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="PERNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="PARNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="ADRNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="ABLAD_SALES_EMPLOYEE"/>
+        <viewAttribute id="LAND1_SALES_EMPLOYEE"/>
+        <viewAttribute id="ADRDA_SALES_EMPLOYEE"/>
+        <viewAttribute id="XCPDK_SALES_EMPLOYEE"/>
+        <viewAttribute id="HITYP_SALES_EMPLOYEE"/>
+        <viewAttribute id="PRFRE_SALES_EMPLOYEE"/>
+        <viewAttribute id="BOKRE_SALES_EMPLOYEE"/>
+        <viewAttribute id="HISTUNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="KNREF_SALES_EMPLOYEE"/>
+        <viewAttribute id="LZONE_SALES_EMPLOYEE"/>
+        <viewAttribute id="HZUOR_SALES_EMPLOYEE"/>
+        <viewAttribute id="STCEG_SALES_EMPLOYEE"/>
+        <viewAttribute id="PARVW_FF_SALES_EMPLOYEE"/>
+        <viewAttribute id="ADRNP_SALES_EMPLOYEE"/>
+        <viewAttribute id="KALE_SALES_EMPLOYEE"/>
+        <viewAttribute id="_DATAAGING_SALES_EMPLOYEE"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SALES_EMPLOYEE"/>
+        <viewAttribute id="KUNNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="LIFNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="PERNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="PARNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="ADRNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="ABLAD_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="LAND1_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="ADRDA_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="XCPDK_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="HITYP_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="PRFRE_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="BOKRE_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="HISTUNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="KNREF_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="LZONE_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="HZUOR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="STCEG_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="PARVW_FF_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="ADRNP_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="KALE_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="_DATAAGING_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_7">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW" source="PARVW"/>
+      </input>
+      <input node="Employee_Response">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_EMPLOYEE_RESPONSE" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_EMPLOYEE_RESPONSE" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PERNR_EMPLOYEE_RESPONSE" source="PERNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR_EMPLOYEE_RESPONSE" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR_EMPLOYEE_RESPONSE" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABLAD_EMPLOYEE_RESPONSE" source="ABLAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1_EMPLOYEE_RESPONSE" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRDA_EMPLOYEE_RESPONSE" source="ADRDA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XCPDK_EMPLOYEE_RESPONSE" source="XCPDK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HITYP_EMPLOYEE_RESPONSE" source="HITYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE_EMPLOYEE_RESPONSE" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE_EMPLOYEE_RESPONSE" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HISTUNR_EMPLOYEE_RESPONSE" source="HISTUNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNREF_EMPLOYEE_RESPONSE" source="KNREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_EMPLOYEE_RESPONSE" source="LZONE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HZUOR_EMPLOYEE_RESPONSE" source="HZUOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG_EMPLOYEE_RESPONSE" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_FF_EMPLOYEE_RESPONSE" source="PARVW_FF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNP_EMPLOYEE_RESPONSE" source="ADRNP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KALE_EMPLOYEE_RESPONSE" source="KALE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_DATAAGING_EMPLOYEE_RESPONSE" source="_DATAAGING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUMMY_SDDOCPARTNER_INCL_EEW_PS_EMPLOYEE_RESPONSE" source="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Vendor" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="PERNR"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="ABLAD"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="ADRDA"/>
+        <viewAttribute id="XCPDK"/>
+        <viewAttribute id="HITYP"/>
+        <viewAttribute id="PRFRE"/>
+        <viewAttribute id="BOKRE"/>
+        <viewAttribute id="HISTUNR"/>
+        <viewAttribute id="KNREF"/>
+        <viewAttribute id="LZONE"/>
+        <viewAttribute id="HZUOR"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="PARVW_FF"/>
+        <viewAttribute id="ADRNP"/>
+        <viewAttribute id="KALE"/>
+        <viewAttribute id="_DATAAGING"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Vendor$$$$CV_TD_VBPA$$"/>
+      <filter>&quot;PARVW&quot;='LF'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_9" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PERNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SOLD_TO_PARTY"/>
+        <viewAttribute id="LAND1_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SOLD_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SOLD_TO_PARTY"/>
+        <viewAttribute id="HITYP_SOLD_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="KNREF_SOLD_TO_PARTY"/>
+        <viewAttribute id="LZONE_SOLD_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SOLD_TO_PARTY"/>
+        <viewAttribute id="STCEG_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SOLD_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SOLD_TO_PARTY"/>
+        <viewAttribute id="KALE_SOLD_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SOLD_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+        <viewAttribute id="KUNNR_BILL_TO_PARTY"/>
+        <viewAttribute id="LIFNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PERNR_BILL_TO_PARTY"/>
+        <viewAttribute id="PARNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNR_BILL_TO_PARTY"/>
+        <viewAttribute id="ABLAD_BILL_TO_PARTY"/>
+        <viewAttribute id="LAND1_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRDA_BILL_TO_PARTY"/>
+        <viewAttribute id="XCPDK_BILL_TO_PARTY"/>
+        <viewAttribute id="HITYP_BILL_TO_PARTY"/>
+        <viewAttribute id="PRFRE_BILL_TO_PARTY"/>
+        <viewAttribute id="BOKRE_BILL_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_BILL_TO_PARTY"/>
+        <viewAttribute id="KNREF_BILL_TO_PARTY"/>
+        <viewAttribute id="LZONE_BILL_TO_PARTY"/>
+        <viewAttribute id="HZUOR_BILL_TO_PARTY"/>
+        <viewAttribute id="STCEG_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_BILL_TO_PARTY"/>
+        <viewAttribute id="ADRNP_BILL_TO_PARTY"/>
+        <viewAttribute id="KALE_BILL_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_BILL_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="LIFNR_PAYER"/>
+        <viewAttribute id="PERNR_PAYER"/>
+        <viewAttribute id="PARNR_PAYER"/>
+        <viewAttribute id="ADRNR_PAYER"/>
+        <viewAttribute id="ABLAD_PAYER"/>
+        <viewAttribute id="LAND1_PAYER"/>
+        <viewAttribute id="ADRDA_PAYER"/>
+        <viewAttribute id="XCPDK_PAYER"/>
+        <viewAttribute id="HITYP_PAYER"/>
+        <viewAttribute id="PRFRE_PAYER"/>
+        <viewAttribute id="BOKRE_PAYER"/>
+        <viewAttribute id="HISTUNR_PAYER"/>
+        <viewAttribute id="KNREF_PAYER"/>
+        <viewAttribute id="LZONE_PAYER"/>
+        <viewAttribute id="HZUOR_PAYER"/>
+        <viewAttribute id="STCEG_PAYER"/>
+        <viewAttribute id="PARVW_FF_PAYER"/>
+        <viewAttribute id="ADRNP_PAYER"/>
+        <viewAttribute id="KALE_PAYER"/>
+        <viewAttribute id="_DATAAGING_PAYER"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER"/>
+        <viewAttribute id="KUNNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="LIFNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PERNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="ABLAD_SHIP_TO_PARTY"/>
+        <viewAttribute id="LAND1_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRDA_SHIP_TO_PARTY"/>
+        <viewAttribute id="XCPDK_SHIP_TO_PARTY"/>
+        <viewAttribute id="HITYP_SHIP_TO_PARTY"/>
+        <viewAttribute id="PRFRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="BOKRE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HISTUNR_SHIP_TO_PARTY"/>
+        <viewAttribute id="KNREF_SHIP_TO_PARTY"/>
+        <viewAttribute id="LZONE_SHIP_TO_PARTY"/>
+        <viewAttribute id="HZUOR_SHIP_TO_PARTY"/>
+        <viewAttribute id="STCEG_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_FF_SHIP_TO_PARTY"/>
+        <viewAttribute id="ADRNP_SHIP_TO_PARTY"/>
+        <viewAttribute id="KALE_SHIP_TO_PARTY"/>
+        <viewAttribute id="_DATAAGING_SHIP_TO_PARTY"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SHIP_TO_PARTY"/>
+        <viewAttribute id="PARVW_SOLD_TO_PARTY"/>
+        <viewAttribute id="PARVW_BILL_TO_PARTY"/>
+        <viewAttribute id="PARVW_PAYER"/>
+        <viewAttribute id="PARVW_SHIP_TO_PARTY"/>
+        <viewAttribute id="KUNNR_CONTACT_PERSON"/>
+        <viewAttribute id="LIFNR_CONTACT_PERSON"/>
+        <viewAttribute id="PERNR_CONTACT_PERSON"/>
+        <viewAttribute id="PARNR_CONTACT_PERSON"/>
+        <viewAttribute id="ADRNR_CONTACT_PERSON"/>
+        <viewAttribute id="ABLAD_CONTACT_PERSON"/>
+        <viewAttribute id="LAND1_CONTACT_PERSON"/>
+        <viewAttribute id="ADRDA_CONTACT_PERSON"/>
+        <viewAttribute id="XCPDK_CONTACT_PERSON"/>
+        <viewAttribute id="HITYP_CONTACT_PERSON"/>
+        <viewAttribute id="PRFRE_CONTACT_PERSON"/>
+        <viewAttribute id="BOKRE_CONTACT_PERSON"/>
+        <viewAttribute id="HISTUNR_CONTACT_PERSON"/>
+        <viewAttribute id="KNREF_CONTACT_PERSON"/>
+        <viewAttribute id="LZONE_CONTACT_PERSON"/>
+        <viewAttribute id="HZUOR_CONTACT_PERSON"/>
+        <viewAttribute id="STCEG_CONTACT_PERSON"/>
+        <viewAttribute id="PARVW_FF_CONTACT_PERSON"/>
+        <viewAttribute id="ADRNP_CONTACT_PERSON"/>
+        <viewAttribute id="KALE_CONTACT_PERSON"/>
+        <viewAttribute id="_DATAAGING_CONTACT_PERSON"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_CONTACT_PERSON"/>
+        <viewAttribute id="KUNNR_FORWARDING_AGENT"/>
+        <viewAttribute id="LIFNR_FORWARDING_AGENT"/>
+        <viewAttribute id="PERNR_FORWARDING_AGENT"/>
+        <viewAttribute id="PARNR_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRNR_FORWARDING_AGENT"/>
+        <viewAttribute id="ABLAD_FORWARDING_AGENT"/>
+        <viewAttribute id="LAND1_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRDA_FORWARDING_AGENT"/>
+        <viewAttribute id="XCPDK_FORWARDING_AGENT"/>
+        <viewAttribute id="HITYP_FORWARDING_AGENT"/>
+        <viewAttribute id="PRFRE_FORWARDING_AGENT"/>
+        <viewAttribute id="BOKRE_FORWARDING_AGENT"/>
+        <viewAttribute id="HISTUNR_FORWARDING_AGENT"/>
+        <viewAttribute id="KNREF_FORWARDING_AGENT"/>
+        <viewAttribute id="LZONE_FORWARDING_AGENT"/>
+        <viewAttribute id="HZUOR_FORWARDING_AGENT"/>
+        <viewAttribute id="STCEG_FORWARDING_AGENT"/>
+        <viewAttribute id="PARVW_FF_FORWARDING_AGENT"/>
+        <viewAttribute id="ADRNP_FORWARDING_AGENT"/>
+        <viewAttribute id="KALE_FORWARDING_AGENT"/>
+        <viewAttribute id="_DATAAGING_FORWARDING_AGENT"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_FORWARDING_AGENT"/>
+        <viewAttribute id="KUNNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="LIFNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="PERNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="PARNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="ADRNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="ABLAD_SALES_EMPLOYEE"/>
+        <viewAttribute id="LAND1_SALES_EMPLOYEE"/>
+        <viewAttribute id="ADRDA_SALES_EMPLOYEE"/>
+        <viewAttribute id="XCPDK_SALES_EMPLOYEE"/>
+        <viewAttribute id="HITYP_SALES_EMPLOYEE"/>
+        <viewAttribute id="PRFRE_SALES_EMPLOYEE"/>
+        <viewAttribute id="BOKRE_SALES_EMPLOYEE"/>
+        <viewAttribute id="HISTUNR_SALES_EMPLOYEE"/>
+        <viewAttribute id="KNREF_SALES_EMPLOYEE"/>
+        <viewAttribute id="LZONE_SALES_EMPLOYEE"/>
+        <viewAttribute id="HZUOR_SALES_EMPLOYEE"/>
+        <viewAttribute id="STCEG_SALES_EMPLOYEE"/>
+        <viewAttribute id="PARVW_FF_SALES_EMPLOYEE"/>
+        <viewAttribute id="ADRNP_SALES_EMPLOYEE"/>
+        <viewAttribute id="KALE_SALES_EMPLOYEE"/>
+        <viewAttribute id="_DATAAGING_SALES_EMPLOYEE"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SALES_EMPLOYEE"/>
+        <viewAttribute id="KUNNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="LIFNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="PERNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="PARNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="ADRNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="ABLAD_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="LAND1_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="ADRDA_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="XCPDK_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="HITYP_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="PRFRE_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="BOKRE_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="HISTUNR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="KNREF_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="LZONE_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="HZUOR_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="STCEG_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="PARVW_FF_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="ADRNP_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="KALE_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="_DATAAGING_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="KUNNR_VENDOR"/>
+        <viewAttribute id="LIFNR_VENDOR"/>
+        <viewAttribute id="PERNR_VENDOR"/>
+        <viewAttribute id="PARNR_VENDOR"/>
+        <viewAttribute id="ADRNR_VENDOR"/>
+        <viewAttribute id="ABLAD_VENDOR"/>
+        <viewAttribute id="LAND1_VENDOR"/>
+        <viewAttribute id="ADRDA_VENDOR"/>
+        <viewAttribute id="XCPDK_VENDOR"/>
+        <viewAttribute id="HITYP_VENDOR"/>
+        <viewAttribute id="PRFRE_VENDOR"/>
+        <viewAttribute id="BOKRE_VENDOR"/>
+        <viewAttribute id="HISTUNR_VENDOR"/>
+        <viewAttribute id="KNREF_VENDOR"/>
+        <viewAttribute id="LZONE_VENDOR"/>
+        <viewAttribute id="HZUOR_VENDOR"/>
+        <viewAttribute id="STCEG_VENDOR"/>
+        <viewAttribute id="PARVW_FF_VENDOR"/>
+        <viewAttribute id="ADRNP_VENDOR"/>
+        <viewAttribute id="KALE_VENDOR"/>
+        <viewAttribute id="_DATAAGING_VENDOR"/>
+        <viewAttribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_VENDOR"/>
+        <viewAttribute id="PARVW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_8">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW" source="PARVW"/>
+      </input>
+      <input node="Vendor">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_VENDOR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_VENDOR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PERNR_VENDOR" source="PERNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARNR_VENDOR" source="PARNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR_VENDOR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABLAD_VENDOR" source="ABLAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1_VENDOR" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRDA_VENDOR" source="ADRDA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XCPDK_VENDOR" source="XCPDK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HITYP_VENDOR" source="HITYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRFRE_VENDOR" source="PRFRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BOKRE_VENDOR" source="BOKRE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HISTUNR_VENDOR" source="HISTUNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNREF_VENDOR" source="KNREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LZONE_VENDOR" source="LZONE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HZUOR_VENDOR" source="HZUOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG_VENDOR" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARVW_FF_VENDOR" source="PARVW_FF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNP_VENDOR" source="ADRNP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KALE_VENDOR" source="KALE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_DATAAGING_VENDOR" source="_DATAAGING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUMMY_SDDOCPARTNER_INCL_EEW_PS_VENDOR" source="DUMMY_SDDOCPARTNER_INCL_EEW_PS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_9">
+    <descriptions defaultDescription="VDIM_MD_SLSDOC_ALL_PARTNER"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_9" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales and Distribution Document Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="VBELN"/>
+      </attribute>
+      <attribute id="POSNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item number of the SD document"/>
+        <keyMapping columnObjectName="Join_9" columnName="POSNR"/>
+      </attribute>
+      <attribute id="KUNNR_SOLD_TO_PARTY" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KUNNR_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="LIFNR_SOLD_TO_PARTY" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LIFNR_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="PERNR_SOLD_TO_PARTY" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PERNR_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="PARNR_SOLD_TO_PARTY" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PARNR_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="ADRNR_SOLD_TO_PARTY" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNR_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="ABLAD_SOLD_TO_PARTY" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ABLAD_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="LAND1_SOLD_TO_PARTY" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LAND1_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="ADRDA_SOLD_TO_PARTY" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRDA_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="XCPDK_SOLD_TO_PARTY" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="XCPDK_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="HITYP_SOLD_TO_PARTY" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HITYP_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="PRFRE_SOLD_TO_PARTY" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PRFRE_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="BOKRE_SOLD_TO_PARTY" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="BOKRE_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="HISTUNR_SOLD_TO_PARTY" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HISTUNR_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="KNREF_SOLD_TO_PARTY" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KNREF_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="LZONE_SOLD_TO_PARTY" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LZONE_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="HZUOR_SOLD_TO_PARTY" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HZUOR_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="STCEG_SOLD_TO_PARTY" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="STCEG_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="PARVW_FF_SOLD_TO_PARTY" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_FF_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="ADRNP_SOLD_TO_PARTY" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNP_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="KALE_SOLD_TO_PARTY" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KALE_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="_DATAAGING_SOLD_TO_PARTY" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="_DATAAGING_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="KUNNR_BILL_TO_PARTY" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KUNNR_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="LIFNR_BILL_TO_PARTY" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LIFNR_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="PERNR_BILL_TO_PARTY" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PERNR_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="PARNR_BILL_TO_PARTY" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PARNR_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="ADRNR_BILL_TO_PARTY" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNR_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="ABLAD_BILL_TO_PARTY" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ABLAD_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="LAND1_BILL_TO_PARTY" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LAND1_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="ADRDA_BILL_TO_PARTY" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRDA_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="XCPDK_BILL_TO_PARTY" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="XCPDK_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="HITYP_BILL_TO_PARTY" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HITYP_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="PRFRE_BILL_TO_PARTY" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PRFRE_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="BOKRE_BILL_TO_PARTY" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="BOKRE_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="HISTUNR_BILL_TO_PARTY" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HISTUNR_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="KNREF_BILL_TO_PARTY" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KNREF_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="LZONE_BILL_TO_PARTY" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LZONE_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="HZUOR_BILL_TO_PARTY" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HZUOR_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="STCEG_BILL_TO_PARTY" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="STCEG_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="PARVW_FF_BILL_TO_PARTY" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_FF_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="ADRNP_BILL_TO_PARTY" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNP_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="KALE_BILL_TO_PARTY" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KALE_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="_DATAAGING_BILL_TO_PARTY" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="_DATAAGING_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="DUMMY_SDDOCPARTNER_INCL_EEW_PS_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="KUNNR_PAYER" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KUNNR_PAYER"/>
+      </attribute>
+      <attribute id="LIFNR_PAYER" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LIFNR_PAYER"/>
+      </attribute>
+      <attribute id="PERNR_PAYER" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PERNR_PAYER"/>
+      </attribute>
+      <attribute id="PARNR_PAYER" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PARNR_PAYER"/>
+      </attribute>
+      <attribute id="ADRNR_PAYER" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNR_PAYER"/>
+      </attribute>
+      <attribute id="ABLAD_PAYER" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ABLAD_PAYER"/>
+      </attribute>
+      <attribute id="LAND1_PAYER" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LAND1_PAYER"/>
+      </attribute>
+      <attribute id="ADRDA_PAYER" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRDA_PAYER"/>
+      </attribute>
+      <attribute id="XCPDK_PAYER" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="XCPDK_PAYER"/>
+      </attribute>
+      <attribute id="HITYP_PAYER" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HITYP_PAYER"/>
+      </attribute>
+      <attribute id="PRFRE_PAYER" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PRFRE_PAYER"/>
+      </attribute>
+      <attribute id="BOKRE_PAYER" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="BOKRE_PAYER"/>
+      </attribute>
+      <attribute id="HISTUNR_PAYER" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HISTUNR_PAYER"/>
+      </attribute>
+      <attribute id="KNREF_PAYER" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KNREF_PAYER"/>
+      </attribute>
+      <attribute id="LZONE_PAYER" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LZONE_PAYER"/>
+      </attribute>
+      <attribute id="HZUOR_PAYER" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HZUOR_PAYER"/>
+      </attribute>
+      <attribute id="STCEG_PAYER" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="STCEG_PAYER"/>
+      </attribute>
+      <attribute id="PARVW_FF_PAYER" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_FF_PAYER"/>
+      </attribute>
+      <attribute id="ADRNP_PAYER" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNP_PAYER"/>
+      </attribute>
+      <attribute id="KALE_PAYER" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KALE_PAYER"/>
+      </attribute>
+      <attribute id="_DATAAGING_PAYER" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="_DATAAGING_PAYER"/>
+      </attribute>
+      <attribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="DUMMY_SDDOCPARTNER_INCL_EEW_PS_PAYER"/>
+      </attribute>
+      <attribute id="KUNNR_SHIP_TO_PARTY" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KUNNR_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="LIFNR_SHIP_TO_PARTY" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LIFNR_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="PERNR_SHIP_TO_PARTY" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PERNR_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="PARNR_SHIP_TO_PARTY" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PARNR_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="ADRNR_SHIP_TO_PARTY" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNR_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="ABLAD_SHIP_TO_PARTY" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ABLAD_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="LAND1_SHIP_TO_PARTY" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LAND1_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="ADRDA_SHIP_TO_PARTY" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRDA_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="XCPDK_SHIP_TO_PARTY" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="XCPDK_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="HITYP_SHIP_TO_PARTY" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HITYP_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="PRFRE_SHIP_TO_PARTY" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PRFRE_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="BOKRE_SHIP_TO_PARTY" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="BOKRE_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="HISTUNR_SHIP_TO_PARTY" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HISTUNR_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="KNREF_SHIP_TO_PARTY" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KNREF_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="LZONE_SHIP_TO_PARTY" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="LZONE_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="HZUOR_SHIP_TO_PARTY" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="HZUOR_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="STCEG_SHIP_TO_PARTY" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="STCEG_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="PARVW_FF_SHIP_TO_PARTY" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_FF_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="ADRNP_SHIP_TO_PARTY" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNP_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="KALE_SHIP_TO_PARTY" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="KALE_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="_DATAAGING_SHIP_TO_PARTY" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="_DATAAGING_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SHIP_TO_PARTY" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_9" columnName="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="PARVW_SOLD_TO_PARTY" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW_SOLD_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="PARVW_BILL_TO_PARTY" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW_BILL_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="PARVW_PAYER" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW_PAYER"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_PAYER"/>
+      </attribute>
+      <attribute id="PARVW_SHIP_TO_PARTY" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW_SHIP_TO_PARTY"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="KUNNR_CONTACT_PERSON" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="KUNNR_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="LIFNR_CONTACT_PERSON" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="Join_9" columnName="LIFNR_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="PERNR_CONTACT_PERSON" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Personnel Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="PERNR_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="PARNR_CONTACT_PERSON" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of contact person"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARNR_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="ADRNR_CONTACT_PERSON" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNR_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="ABLAD_CONTACT_PERSON" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unloading Point"/>
+        <keyMapping columnObjectName="Join_9" columnName="ABLAD_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="LAND1_CONTACT_PERSON" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Key"/>
+        <keyMapping columnObjectName="Join_9" columnName="LAND1_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="ADRDA_CONTACT_PERSON" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address indicator"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRDA_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="XCPDK_CONTACT_PERSON" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Is the account a one-time account?"/>
+        <keyMapping columnObjectName="Join_9" columnName="XCPDK_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="HITYP_CONTACT_PERSON" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer hierarchy type"/>
+        <keyMapping columnObjectName="Join_9" columnName="HITYP_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="PRFRE_CONTACT_PERSON" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Relevant for price determination ID"/>
+        <keyMapping columnObjectName="Join_9" columnName="PRFRE_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="BOKRE_CONTACT_PERSON" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Customer Is Rebate-Relevant"/>
+        <keyMapping columnObjectName="Join_9" columnName="BOKRE_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="HISTUNR_CONTACT_PERSON" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Level number within hierarchy"/>
+        <keyMapping columnObjectName="Join_9" columnName="HISTUNR_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="KNREF_CONTACT_PERSON" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer description of partner (plant, storage location)"/>
+        <keyMapping columnObjectName="Join_9" columnName="KNREF_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="LZONE_CONTACT_PERSON" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Transportation zone to or from which the goods are delivered"/>
+        <keyMapping columnObjectName="Join_9" columnName="LZONE_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="HZUOR_CONTACT_PERSON" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Assignment to Hierarchy"/>
+        <keyMapping columnObjectName="Join_9" columnName="HZUOR_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="STCEG_CONTACT_PERSON" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VAT Registration Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="STCEG_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="PARVW_FF_CONTACT_PERSON" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator &apos;further partners in this function&apos; (VBPA2)"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_FF_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="ADRNP_CONTACT_PERSON" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Person number"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNP_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="KALE_CONTACT_PERSON" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Maintain appointments in calendar"/>
+        <keyMapping columnObjectName="Join_9" columnName="KALE_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="_DATAAGING_CONTACT_PERSON" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Data Filter Value for Data Aging"/>
+        <keyMapping columnObjectName="Join_9" columnName="_DATAAGING_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_CONTACT_PERSON" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Dummy function in length 1"/>
+        <keyMapping columnObjectName="Join_9" columnName="DUMMY_SDDOCPARTNER_INCL_EEW_PS_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="KUNNR_FORWARDING_AGENT" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="KUNNR_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="LIFNR_FORWARDING_AGENT" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="Join_9" columnName="LIFNR_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="PERNR_FORWARDING_AGENT" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Personnel Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="PERNR_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="PARNR_FORWARDING_AGENT" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of contact person"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARNR_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="ADRNR_FORWARDING_AGENT" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNR_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="ABLAD_FORWARDING_AGENT" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unloading Point"/>
+        <keyMapping columnObjectName="Join_9" columnName="ABLAD_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="LAND1_FORWARDING_AGENT" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Key"/>
+        <keyMapping columnObjectName="Join_9" columnName="LAND1_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="ADRDA_FORWARDING_AGENT" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address indicator"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRDA_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="XCPDK_FORWARDING_AGENT" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Is the account a one-time account?"/>
+        <keyMapping columnObjectName="Join_9" columnName="XCPDK_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="HITYP_FORWARDING_AGENT" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer hierarchy type"/>
+        <keyMapping columnObjectName="Join_9" columnName="HITYP_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="PRFRE_FORWARDING_AGENT" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Relevant for price determination ID"/>
+        <keyMapping columnObjectName="Join_9" columnName="PRFRE_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="BOKRE_FORWARDING_AGENT" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Customer Is Rebate-Relevant"/>
+        <keyMapping columnObjectName="Join_9" columnName="BOKRE_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="HISTUNR_FORWARDING_AGENT" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Level number within hierarchy"/>
+        <keyMapping columnObjectName="Join_9" columnName="HISTUNR_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="KNREF_FORWARDING_AGENT" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer description of partner (plant, storage location)"/>
+        <keyMapping columnObjectName="Join_9" columnName="KNREF_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="LZONE_FORWARDING_AGENT" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Transportation zone to or from which the goods are delivered"/>
+        <keyMapping columnObjectName="Join_9" columnName="LZONE_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="HZUOR_FORWARDING_AGENT" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Assignment to Hierarchy"/>
+        <keyMapping columnObjectName="Join_9" columnName="HZUOR_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="STCEG_FORWARDING_AGENT" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VAT Registration Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="STCEG_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="PARVW_FF_FORWARDING_AGENT" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator &apos;further partners in this function&apos; (VBPA2)"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_FF_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="ADRNP_FORWARDING_AGENT" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Person number"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNP_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="KALE_FORWARDING_AGENT" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Maintain appointments in calendar"/>
+        <keyMapping columnObjectName="Join_9" columnName="KALE_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="_DATAAGING_FORWARDING_AGENT" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Data Filter Value for Data Aging"/>
+        <keyMapping columnObjectName="Join_9" columnName="_DATAAGING_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_FORWARDING_AGENT" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Dummy function in length 1"/>
+        <keyMapping columnObjectName="Join_9" columnName="DUMMY_SDDOCPARTNER_INCL_EEW_PS_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="KUNNR_SALES_EMPLOYEE" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="KUNNR_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="LIFNR_SALES_EMPLOYEE" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="Join_9" columnName="LIFNR_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="PERNR_SALES_EMPLOYEE" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Personnel Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="PERNR_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="PARNR_SALES_EMPLOYEE" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of contact person"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARNR_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="ADRNR_SALES_EMPLOYEE" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNR_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="ABLAD_SALES_EMPLOYEE" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unloading Point"/>
+        <keyMapping columnObjectName="Join_9" columnName="ABLAD_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="LAND1_SALES_EMPLOYEE" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Key"/>
+        <keyMapping columnObjectName="Join_9" columnName="LAND1_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="ADRDA_SALES_EMPLOYEE" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address indicator"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRDA_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="XCPDK_SALES_EMPLOYEE" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Is the account a one-time account?"/>
+        <keyMapping columnObjectName="Join_9" columnName="XCPDK_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="HITYP_SALES_EMPLOYEE" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer hierarchy type"/>
+        <keyMapping columnObjectName="Join_9" columnName="HITYP_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="PRFRE_SALES_EMPLOYEE" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Relevant for price determination ID"/>
+        <keyMapping columnObjectName="Join_9" columnName="PRFRE_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="BOKRE_SALES_EMPLOYEE" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Customer Is Rebate-Relevant"/>
+        <keyMapping columnObjectName="Join_9" columnName="BOKRE_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="HISTUNR_SALES_EMPLOYEE" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Level number within hierarchy"/>
+        <keyMapping columnObjectName="Join_9" columnName="HISTUNR_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="KNREF_SALES_EMPLOYEE" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer description of partner (plant, storage location)"/>
+        <keyMapping columnObjectName="Join_9" columnName="KNREF_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="LZONE_SALES_EMPLOYEE" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Transportation zone to or from which the goods are delivered"/>
+        <keyMapping columnObjectName="Join_9" columnName="LZONE_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="HZUOR_SALES_EMPLOYEE" order="155" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Assignment to Hierarchy"/>
+        <keyMapping columnObjectName="Join_9" columnName="HZUOR_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="STCEG_SALES_EMPLOYEE" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VAT Registration Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="STCEG_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="PARVW_FF_SALES_EMPLOYEE" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator &apos;further partners in this function&apos; (VBPA2)"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_FF_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="ADRNP_SALES_EMPLOYEE" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Person number"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNP_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="KALE_SALES_EMPLOYEE" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Maintain appointments in calendar"/>
+        <keyMapping columnObjectName="Join_9" columnName="KALE_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="_DATAAGING_SALES_EMPLOYEE" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Data Filter Value for Data Aging"/>
+        <keyMapping columnObjectName="Join_9" columnName="_DATAAGING_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SALES_EMPLOYEE" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Dummy function in length 1"/>
+        <keyMapping columnObjectName="Join_9" columnName="DUMMY_SDDOCPARTNER_INCL_EEW_PS_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="KUNNR_EMPLOYEE_RESPONSE" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="KUNNR_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="LIFNR_EMPLOYEE_RESPONSE" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="Join_9" columnName="LIFNR_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="PERNR_EMPLOYEE_RESPONSE" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Personnel Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="PERNR_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="PARNR_EMPLOYEE_RESPONSE" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of contact person"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARNR_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="ADRNR_EMPLOYEE_RESPONSE" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNR_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="ABLAD_EMPLOYEE_RESPONSE" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unloading Point"/>
+        <keyMapping columnObjectName="Join_9" columnName="ABLAD_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="LAND1_EMPLOYEE_RESPONSE" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Key"/>
+        <keyMapping columnObjectName="Join_9" columnName="LAND1_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="ADRDA_EMPLOYEE_RESPONSE" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address indicator"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRDA_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="XCPDK_EMPLOYEE_RESPONSE" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Is the account a one-time account?"/>
+        <keyMapping columnObjectName="Join_9" columnName="XCPDK_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="HITYP_EMPLOYEE_RESPONSE" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer hierarchy type"/>
+        <keyMapping columnObjectName="Join_9" columnName="HITYP_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="PRFRE_EMPLOYEE_RESPONSE" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Relevant for price determination ID"/>
+        <keyMapping columnObjectName="Join_9" columnName="PRFRE_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="BOKRE_EMPLOYEE_RESPONSE" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Customer Is Rebate-Relevant"/>
+        <keyMapping columnObjectName="Join_9" columnName="BOKRE_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="HISTUNR_EMPLOYEE_RESPONSE" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Level number within hierarchy"/>
+        <keyMapping columnObjectName="Join_9" columnName="HISTUNR_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="KNREF_EMPLOYEE_RESPONSE" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer description of partner (plant, storage location)"/>
+        <keyMapping columnObjectName="Join_9" columnName="KNREF_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="LZONE_EMPLOYEE_RESPONSE" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Transportation zone to or from which the goods are delivered"/>
+        <keyMapping columnObjectName="Join_9" columnName="LZONE_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="HZUOR_EMPLOYEE_RESPONSE" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Assignment to Hierarchy"/>
+        <keyMapping columnObjectName="Join_9" columnName="HZUOR_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="STCEG_EMPLOYEE_RESPONSE" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VAT Registration Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="STCEG_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="PARVW_FF_EMPLOYEE_RESPONSE" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator &apos;further partners in this function&apos; (VBPA2)"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_FF_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="ADRNP_EMPLOYEE_RESPONSE" order="180" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Person number"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNP_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="KALE_EMPLOYEE_RESPONSE" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Maintain appointments in calendar"/>
+        <keyMapping columnObjectName="Join_9" columnName="KALE_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="_DATAAGING_EMPLOYEE_RESPONSE" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Data Filter Value for Data Aging"/>
+        <keyMapping columnObjectName="Join_9" columnName="_DATAAGING_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_EMPLOYEE_RESPONSE" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Dummy function in length 1"/>
+        <keyMapping columnObjectName="Join_9" columnName="DUMMY_SDDOCPARTNER_INCL_EEW_PS_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="KUNNR_VENDOR" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="KUNNR_VENDOR"/>
+      </attribute>
+      <attribute id="LIFNR_VENDOR" order="185" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="Join_9" columnName="LIFNR_VENDOR"/>
+      </attribute>
+      <attribute id="PERNR_VENDOR" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Personnel Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="PERNR_VENDOR"/>
+      </attribute>
+      <attribute id="PARNR_VENDOR" order="187" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of contact person"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARNR_VENDOR"/>
+      </attribute>
+      <attribute id="ADRNR_VENDOR" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNR_VENDOR"/>
+      </attribute>
+      <attribute id="ABLAD_VENDOR" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unloading Point"/>
+        <keyMapping columnObjectName="Join_9" columnName="ABLAD_VENDOR"/>
+      </attribute>
+      <attribute id="LAND1_VENDOR" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Key"/>
+        <keyMapping columnObjectName="Join_9" columnName="LAND1_VENDOR"/>
+      </attribute>
+      <attribute id="ADRDA_VENDOR" order="191" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address indicator"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRDA_VENDOR"/>
+      </attribute>
+      <attribute id="XCPDK_VENDOR" order="192" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Is the account a one-time account?"/>
+        <keyMapping columnObjectName="Join_9" columnName="XCPDK_VENDOR"/>
+      </attribute>
+      <attribute id="HITYP_VENDOR" order="193" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer hierarchy type"/>
+        <keyMapping columnObjectName="Join_9" columnName="HITYP_VENDOR"/>
+      </attribute>
+      <attribute id="PRFRE_VENDOR" order="194" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Relevant for price determination ID"/>
+        <keyMapping columnObjectName="Join_9" columnName="PRFRE_VENDOR"/>
+      </attribute>
+      <attribute id="BOKRE_VENDOR" order="195" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Customer Is Rebate-Relevant"/>
+        <keyMapping columnObjectName="Join_9" columnName="BOKRE_VENDOR"/>
+      </attribute>
+      <attribute id="HISTUNR_VENDOR" order="196" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Level number within hierarchy"/>
+        <keyMapping columnObjectName="Join_9" columnName="HISTUNR_VENDOR"/>
+      </attribute>
+      <attribute id="KNREF_VENDOR" order="197" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer description of partner (plant, storage location)"/>
+        <keyMapping columnObjectName="Join_9" columnName="KNREF_VENDOR"/>
+      </attribute>
+      <attribute id="LZONE_VENDOR" order="198" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Transportation zone to or from which the goods are delivered"/>
+        <keyMapping columnObjectName="Join_9" columnName="LZONE_VENDOR"/>
+      </attribute>
+      <attribute id="HZUOR_VENDOR" order="199" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Assignment to Hierarchy"/>
+        <keyMapping columnObjectName="Join_9" columnName="HZUOR_VENDOR"/>
+      </attribute>
+      <attribute id="STCEG_VENDOR" order="200" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VAT Registration Number"/>
+        <keyMapping columnObjectName="Join_9" columnName="STCEG_VENDOR"/>
+      </attribute>
+      <attribute id="PARVW_FF_VENDOR" order="201" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator &apos;further partners in this function&apos; (VBPA2)"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW_FF_VENDOR"/>
+      </attribute>
+      <attribute id="ADRNP_VENDOR" order="202" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Person number"/>
+        <keyMapping columnObjectName="Join_9" columnName="ADRNP_VENDOR"/>
+      </attribute>
+      <attribute id="KALE_VENDOR" order="203" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Maintain appointments in calendar"/>
+        <keyMapping columnObjectName="Join_9" columnName="KALE_VENDOR"/>
+      </attribute>
+      <attribute id="_DATAAGING_VENDOR" order="204" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Data Filter Value for Data Aging"/>
+        <keyMapping columnObjectName="Join_9" columnName="_DATAAGING_VENDOR"/>
+      </attribute>
+      <attribute id="DUMMY_SDDOCPARTNER_INCL_EEW_PS_VENDOR" order="205" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Dummy function in length 1"/>
+        <keyMapping columnObjectName="Join_9" columnName="DUMMY_SDDOCPARTNER_INCL_EEW_PS_VENDOR"/>
+      </attribute>
+      <attribute id="PARVW" order="206" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW"/>
+        <keyMapping columnObjectName="Join_9" columnName="PARVW"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="545" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Sold_to_Party" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="1029"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Bill_to_Party" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="933"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Payer" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="329" y="837"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Ship_to_Party" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="404" y="741"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Partner" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="1029"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="933"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Partner" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Sold_to_Party" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="175" y="837"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Bill_to_Party" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="250" y="741"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Join_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Payer" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="324" y="645"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Join_3" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Ship_to_Party" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Contact_Person" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="478" y="645"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="397" y="549"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Join_4" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Contact_Person" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Forwarding_Agent" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="551" y="549"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_6" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="471" y="453"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Join_5" modelObjectNameSpace="Join_6" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Forwarding_Agent" modelObjectNameSpace="Join_6" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Sales_Employee" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="625" y="453"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_7" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="546" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Join_6" modelObjectNameSpace="Join_7" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Sales_Employee" modelObjectNameSpace="Join_7" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Employee_Response" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="700" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_8" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="622" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Join_7" modelObjectNameSpace="Join_8" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Employee_Response" modelObjectNameSpace="Join_8" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Vendor" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="468" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_9" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="545" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+      <shape modelObjectName="Join_8" modelObjectNameSpace="Join_9" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Vendor" modelObjectNameSpace="Join_9" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

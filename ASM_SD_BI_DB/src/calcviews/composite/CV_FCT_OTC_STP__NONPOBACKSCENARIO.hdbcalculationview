@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_FCT_OTC_STP__NONPOBACKSCENARIO" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VFCT_OTC_STP__NONPOBACKSCENARIO"/>
+  <metadata changedAt="2021-12-06 18:55:50.176"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="49"/>
+  <dataSources>
+    <DataSource id="CV_TD_ACDOCA">
+      <resourceUri>CV_TD_ACDOCA</resourceUri>
+    </DataSource>
+    <DataSource id="CV_FCT_SALESORDER">
+      <resourceUri>CV_FCT_SALESORDER</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_VBFA">
+      <resourceUri>CV_TD_VBFA</resourceUri>
+    </DataSource>
+    <DataSource id="CV_FCT_BILLINGDOCUMENT">
+      <resourceUri>CV_FCT_BILLINGDOCUMENT</resourceUri>
+    </DataSource>
+    <DataSource id="Debit_Memo_Acc_Doc$$$$CV_TD_ACDOCA$$">
+      <resourceUri>CV_TD_ACDOCA</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Vendor_Inv_Acc_Doc">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="RCLNT"/>
+        <viewAttribute id="BELNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWREF_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWITEM_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="KUNNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="WERKS_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VKORG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VTWEG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="SPART_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="PRCTR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="KUNWE_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="RLDNR"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="KDAUF"/>
+        <viewAttribute id="BTTYPE"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_ACDOCA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_VendorInvAccDoc_NPOS" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_VendorInvAccDoc_NPOS" source="AWREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWITEM_VendorInvAccDoc_NPOS" source="AWITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_VendorInvAccDoc_NPOS" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_VendorInvAccDoc_NPOS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_VendorInvAccDoc_NPOS" source="VKORG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG_VendorInvAccDoc_NPOS" source="VTWEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART_VendorInvAccDoc_NPOS" source="SPART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_COPA_VendorInvAccDoc_NPOS" source="MATNR_COPA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR_VendorInvAccDoc_NPOS" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_VendorInvAccDoc_NPOS" source="KUNWE"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Sales_Order">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBTYP"/>
+        <viewAttribute id="VBELN_SOH_NPOS"/>
+        <viewAttribute id="LIFSK_SOH_NPOS"/>
+        <viewAttribute id="AUGRU_SOH_NPOS"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="VBELN_SOI_NPOS"/>
+        <viewAttribute id="POSNR_SOI_NPOS"/>
+        <viewAttribute id="MATNR_SOI_NPOS"/>
+        <viewAttribute id="ARKTX_SOI_NPOS"/>
+        <viewAttribute id="PSTYV_SOI_NPOS"/>
+        <viewAttribute id="ZMENG_SOI_NPOS"/>
+        <viewAttribute id="ZIEME_SOI_NPOS"/>
+        <viewAttribute id="MEINS_SOI_NPOS"/>
+        <viewAttribute id="POSEX_SOI_NPOS"/>
+        <viewAttribute id="FAKSP_SOI_NPOS"/>
+        <viewAttribute id="NETWR_SOI_NPOS"/>
+        <viewAttribute id="WERKS_SOI_NPOS"/>
+        <viewAttribute id="VSTEL_SOI_NPOS"/>
+        <viewAttribute id="ERDAT_SOI_NPOS"/>
+        <viewAttribute id="NETPR_SOI_NPOS"/>
+        <viewAttribute id="KPEIN_SOI_NPOS"/>
+        <viewAttribute id="KMEIN_SOI_NPOS"/>
+        <viewAttribute id="MANDT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_FCT_SALESORDER">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOH_NPOS" source="VBELN_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFSK_SOH_NPOS" source="LIFSK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGRU_SOH_NPOS" source="AUGRU"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOI_NPOS" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SOI_NPOS" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_SOI_NPOS" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_SOI_NPOS" source="ARKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTYV_SOI_NPOS" source="PSTYV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZMENG_SOI_NPOS" source="ZMENG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZIEME_SOI_NPOS" source="ZIEME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_SOI_NPOS" source="MEINS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSEX_SOI_NPOS" source="POSEX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSP_SOI_NPOS" source="FAKSP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_SOI_NPOS" source="NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_SOI_NPOS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL_SOI_NPOS" source="VSTEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_SOI_NPOS" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETPR_SOI_NPOS" source="NETPR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KPEIN_SOI_NPOS" source="KPEIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMEIN_SOI_NPOS" source="KMEIN"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Sal_Doc_Flow">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBTYP_N"/>
+        <viewAttribute id="VBTYP_V"/>
+        <viewAttribute id="VBELV"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNV"/>
+        <viewAttribute id="POSNN"/>
+        <viewAttribute id="MANDT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_VBFA"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_4" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KUNWE_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="PRCTR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="SPART_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VTWEG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VKORG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="WERKS_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="KUNNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWITEM_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWREF_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="BELNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="RCLNT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNN"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Vendor_Inv_Acc_Doc">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_VendorInvAccDoc_NPOS" source="KUNWE_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR_VendorInvAccDoc_NPOS" source="PRCTR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_COPA_VendorInvAccDoc_NPOS" source="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART_VendorInvAccDoc_NPOS" source="SPART_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG_VendorInvAccDoc_NPOS" source="VTWEG_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_VendorInvAccDoc_NPOS" source="VKORG_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_VendorInvAccDoc_NPOS" source="WERKS_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_VendorInvAccDoc_NPOS" source="KUNNR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWITEM_VendorInvAccDoc_NPOS" source="AWITEM_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_VendorInvAccDoc_NPOS" source="AWREF_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_VendorInvAccDoc_NPOS" source="BELNR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RCLNT" source="RCLNT"/>
+      </input>
+      <input node="Sal_Doc_Flow">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNN" source="POSNN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RCLNT" source="MANDT"/>
+      </input>
+    <joinAttribute name="RCLNT"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBELN_SOH_NPOS"/>
+        <viewAttribute id="LIFSK_SOH_NPOS"/>
+        <viewAttribute id="AUGRU_SOH_NPOS"/>
+        <viewAttribute id="VBELN_SOI_NPOS"/>
+        <viewAttribute id="POSNR_SOI_NPOS"/>
+        <viewAttribute id="MATNR_SOI_NPOS"/>
+        <viewAttribute id="ARKTX_SOI_NPOS"/>
+        <viewAttribute id="PSTYV_SOI_NPOS"/>
+        <viewAttribute id="ZMENG_SOI_NPOS"/>
+        <viewAttribute id="ZIEME_SOI_NPOS"/>
+        <viewAttribute id="MEINS_SOI_NPOS"/>
+        <viewAttribute id="POSEX_SOI_NPOS"/>
+        <viewAttribute id="FAKSP_SOI_NPOS"/>
+        <viewAttribute id="NETWR_SOI_NPOS"/>
+        <viewAttribute id="WERKS_SOI_NPOS"/>
+        <viewAttribute id="VSTEL_SOI_NPOS"/>
+        <viewAttribute id="ERDAT_SOI_NPOS"/>
+        <viewAttribute id="NETPR_SOI_NPOS"/>
+        <viewAttribute id="KPEIN_SOI_NPOS"/>
+        <viewAttribute id="KMEIN_SOI_NPOS"/>
+        <viewAttribute id="KUNWE_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="PRCTR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="SPART_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VTWEG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VKORG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="WERKS_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="KUNNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWITEM_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWREF_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="BELNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="RCLNT"/>
+      <viewAttribute hidden="true" id="JOIN$VBELN$VBELN_SOH_NPOS"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_VendorInvAccDoc_NPOS" source="KUNWE_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR_VendorInvAccDoc_NPOS" source="PRCTR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_COPA_VendorInvAccDoc_NPOS" source="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART_VendorInvAccDoc_NPOS" source="SPART_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG_VendorInvAccDoc_NPOS" source="VTWEG_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_VendorInvAccDoc_NPOS" source="VKORG_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_VendorInvAccDoc_NPOS" source="WERKS_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_VendorInvAccDoc_NPOS" source="KUNNR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWITEM_VendorInvAccDoc_NPOS" source="AWITEM_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_VendorInvAccDoc_NPOS" source="AWREF_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_VendorInvAccDoc_NPOS" source="BELNR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RCLNT" source="RCLNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBELN$VBELN_SOH_NPOS" source="VBELN"/>
+      </input>
+      <input node="Sales_Order">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOH_NPOS" source="VBELN_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFSK_SOH_NPOS" source="LIFSK_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGRU_SOH_NPOS" source="AUGRU_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOI_NPOS" source="VBELN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SOI_NPOS" source="POSNR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_SOI_NPOS" source="MATNR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_SOI_NPOS" source="ARKTX_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTYV_SOI_NPOS" source="PSTYV_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZMENG_SOI_NPOS" source="ZMENG_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZIEME_SOI_NPOS" source="ZIEME_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_SOI_NPOS" source="MEINS_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSEX_SOI_NPOS" source="POSEX_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSP_SOI_NPOS" source="FAKSP_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_SOI_NPOS" source="NETWR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_SOI_NPOS" source="WERKS_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL_SOI_NPOS" source="VSTEL_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_SOI_NPOS" source="ERDAT_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETPR_SOI_NPOS" source="NETPR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KPEIN_SOI_NPOS" source="KPEIN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMEIN_SOI_NPOS" source="KMEIN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RCLNT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBELN$VBELN_SOH_NPOS" source="VBELN_SOH_NPOS"/>
+      </input>
+    <joinAttribute name="RCLNT"/>
+    <joinAttribute name="JOIN$VBELN$VBELN_SOH_NPOS"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Billing">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBELN_BillingItem_NPOS"/>
+        <viewAttribute id="POSNR_BillingItem_NPOS"/>
+        <viewAttribute id="FKIMG_BillingItem_NPOS"/>
+        <viewAttribute id="VRKME_BillingItem_NPOS"/>
+        <viewAttribute id="MEINS_BillingItem_NPOS"/>
+        <viewAttribute id="PRSDT_BillingItem_NPOS"/>
+        <viewAttribute id="AUBEL_BillingItem_NPOS"/>
+        <viewAttribute id="AUPOS_BillingItem_NPOS"/>
+        <viewAttribute id="ARKTX_BillingItem_NPOS"/>
+        <viewAttribute id="WERKS_BillingItem_NPOS"/>
+        <viewAttribute id="ALAND_BillingItem_NPOS"/>
+        <viewAttribute id="ERZET_BillingItem_NPOS"/>
+        <viewAttribute id="ERDAT_BillingItem_NPOS"/>
+        <viewAttribute id="NETWR_BillingItem_NPOS"/>
+        <viewAttribute id="VBELN_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_BillingHeader_NPOS"/>
+        <viewAttribute id="FKTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="VBTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="WAERK_BillingHeader_NPOS"/>
+        <viewAttribute id="VKORG_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_BillingHeader_NPOS"/>
+        <viewAttribute id="ZTERM_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNRG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNAG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNWE_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="FKSTO_BillingHeader_NPOS"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="VGPOS"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_FCT_BILLINGDOCUMENT">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingItem_NPOS" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_BillingItem_NPOS" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKIMG_BillingItem_NPOS" source="FKIMG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_BillingItem_NPOS" source="VRKME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_BillingItem_NPOS" source="MEINS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRSDT_BillingItem_NPOS" source="PRSDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUBEL_BillingItem_NPOS" source="AUBEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUPOS_BillingItem_NPOS" source="AUPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_BillingItem_NPOS" source="ARKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_BillingItem_NPOS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALAND_BillingItem_NPOS" source="ALAND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERZET_BillingItem_NPOS" source="ERZET_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_BillingItem_NPOS" source="ERDAT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_BillingItem_NPOS" source="NETWR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingHeader_NPOS" source="VBELN_VBRK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_BillingHeader_NPOS" source="FKART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKTYP_BillingHeader_NPOS" source="FKTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBTYP_BillingHeader_NPOS" source="VBTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERK_BillingHeader_NPOS" source="WAERK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_BillingHeader_NPOS" source="VKORG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_BillingHeader_NPOS" source="FKDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_BillingHeader_NPOS" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_RL_BillingHeader_NPOS" source="FKDAT_RL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNRG_BillingHeader_NPOS" source="KUNRG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG_BillingHeader_NPOS" source="KUNAG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_BillingHeader_NPOS" source="KUNWE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_RL_BillingHeader_NPOS" source="FKART_RL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKSTO_BillingHeader_NPOS" source="FKSTO"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KUNWE_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="PRCTR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="SPART_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VTWEG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VKORG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="WERKS_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="KUNNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWITEM_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWREF_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="BELNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VBELN_SOH_NPOS"/>
+        <viewAttribute id="LIFSK_SOH_NPOS"/>
+        <viewAttribute id="AUGRU_SOH_NPOS"/>
+        <viewAttribute id="VBELN_SOI_NPOS"/>
+        <viewAttribute id="POSNR_SOI_NPOS"/>
+        <viewAttribute id="MATNR_SOI_NPOS"/>
+        <viewAttribute id="ARKTX_SOI_NPOS"/>
+        <viewAttribute id="PSTYV_SOI_NPOS"/>
+        <viewAttribute id="ZMENG_SOI_NPOS"/>
+        <viewAttribute id="ZIEME_SOI_NPOS"/>
+        <viewAttribute id="MEINS_SOI_NPOS"/>
+        <viewAttribute id="POSEX_SOI_NPOS"/>
+        <viewAttribute id="FAKSP_SOI_NPOS"/>
+        <viewAttribute id="NETWR_SOI_NPOS"/>
+        <viewAttribute id="WERKS_SOI_NPOS"/>
+        <viewAttribute id="VSTEL_SOI_NPOS"/>
+        <viewAttribute id="ERDAT_SOI_NPOS"/>
+        <viewAttribute id="NETPR_SOI_NPOS"/>
+        <viewAttribute id="KPEIN_SOI_NPOS"/>
+        <viewAttribute id="KMEIN_SOI_NPOS"/>
+        <viewAttribute id="VBELN_BillingItem_NPOS"/>
+        <viewAttribute id="POSNR_BillingItem_NPOS"/>
+        <viewAttribute id="FKIMG_BillingItem_NPOS"/>
+        <viewAttribute id="VRKME_BillingItem_NPOS"/>
+        <viewAttribute id="MEINS_BillingItem_NPOS"/>
+        <viewAttribute id="PRSDT_BillingItem_NPOS"/>
+        <viewAttribute id="AUBEL_BillingItem_NPOS"/>
+        <viewAttribute id="AUPOS_BillingItem_NPOS"/>
+        <viewAttribute id="ARKTX_BillingItem_NPOS"/>
+        <viewAttribute id="WERKS_BillingItem_NPOS"/>
+        <viewAttribute id="ALAND_BillingItem_NPOS"/>
+        <viewAttribute id="ERZET_BillingItem_NPOS"/>
+        <viewAttribute id="ERDAT_BillingItem_NPOS"/>
+        <viewAttribute id="NETWR_BillingItem_NPOS"/>
+        <viewAttribute id="VBELN_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_BillingHeader_NPOS"/>
+        <viewAttribute id="FKTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="VBTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="WAERK_BillingHeader_NPOS"/>
+        <viewAttribute id="VKORG_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_BillingHeader_NPOS"/>
+        <viewAttribute id="ZTERM_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNRG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNAG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNWE_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="FKSTO_BillingHeader_NPOS"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="RCLNT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_VendorInvAccDoc_NPOS" source="KUNWE_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR_VendorInvAccDoc_NPOS" source="PRCTR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_COPA_VendorInvAccDoc_NPOS" source="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART_VendorInvAccDoc_NPOS" source="SPART_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG_VendorInvAccDoc_NPOS" source="VTWEG_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_VendorInvAccDoc_NPOS" source="VKORG_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_VendorInvAccDoc_NPOS" source="WERKS_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_VendorInvAccDoc_NPOS" source="KUNNR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWITEM_VendorInvAccDoc_NPOS" source="AWITEM_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_VendorInvAccDoc_NPOS" source="AWREF_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_VendorInvAccDoc_NPOS" source="BELNR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOH_NPOS" source="VBELN_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFSK_SOH_NPOS" source="LIFSK_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGRU_SOH_NPOS" source="AUGRU_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOI_NPOS" source="VBELN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SOI_NPOS" source="POSNR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_SOI_NPOS" source="MATNR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_SOI_NPOS" source="ARKTX_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTYV_SOI_NPOS" source="PSTYV_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZMENG_SOI_NPOS" source="ZMENG_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZIEME_SOI_NPOS" source="ZIEME_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_SOI_NPOS" source="MEINS_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSEX_SOI_NPOS" source="POSEX_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSP_SOI_NPOS" source="FAKSP_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_SOI_NPOS" source="NETWR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_SOI_NPOS" source="WERKS_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL_SOI_NPOS" source="VSTEL_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_SOI_NPOS" source="ERDAT_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETPR_SOI_NPOS" source="NETPR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KPEIN_SOI_NPOS" source="KPEIN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMEIN_SOI_NPOS" source="KMEIN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RCLNT" source="RCLNT"/>
+      </input>
+      <input node="Billing">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingItem_NPOS" source="VBELN_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_BillingItem_NPOS" source="POSNR_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKIMG_BillingItem_NPOS" source="FKIMG_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_BillingItem_NPOS" source="VRKME_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_BillingItem_NPOS" source="MEINS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRSDT_BillingItem_NPOS" source="PRSDT_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUBEL_BillingItem_NPOS" source="AUBEL_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUPOS_BillingItem_NPOS" source="AUPOS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_BillingItem_NPOS" source="ARKTX_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_BillingItem_NPOS" source="WERKS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALAND_BillingItem_NPOS" source="ALAND_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERZET_BillingItem_NPOS" source="ERZET_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_BillingItem_NPOS" source="ERDAT_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_BillingItem_NPOS" source="NETWR_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingHeader_NPOS" source="VBELN_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_BillingHeader_NPOS" source="FKART_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKTYP_BillingHeader_NPOS" source="FKTYP_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBTYP_BillingHeader_NPOS" source="VBTYP_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERK_BillingHeader_NPOS" source="WAERK_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_BillingHeader_NPOS" source="VKORG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_BillingHeader_NPOS" source="FKDAT_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_BillingHeader_NPOS" source="ZTERM_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_RL_BillingHeader_NPOS" source="FKDAT_RL_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNRG_BillingHeader_NPOS" source="KUNRG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG_BillingHeader_NPOS" source="KUNAG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_BillingHeader_NPOS" source="KUNWE_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_RL_BillingHeader_NPOS" source="FKART_RL_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKSTO_BillingHeader_NPOS" source="FKSTO_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOI_NPOS" source="VGBEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RCLNT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SOI_NPOS" source="VGPOS"/>
+      </input>
+    <joinAttribute name="VBELN_SOI_NPOS"/>
+    <joinAttribute name="RCLNT"/>
+    <joinAttribute name="POSNR_SOI_NPOS"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Debit_Memo_Acc_Doc">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="RCLNT"/>
+        <viewAttribute id="AWREF_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BLART_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BSCHL_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="LIFNR_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAOBJNR_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH1_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH2_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH3_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="WWCST_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="KMKDGR_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="RLDNR"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="RBUKRS"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Debit_Memo_Acc_Doc$$$$CV_TD_ACDOCA$$">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_DebMemAccDoc_NPOS" source="AWREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART_DebMemAccDoc_NPOS" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSCHL_DebMemAccDoc_NPOS" source="BSCHL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_DebMemAccDoc_NPOS" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAOBJNR_DebMemAccDoc_NPOS" source="PAOBJNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH1_PA_DebMemAccDoc_NPOS" source="PAPH1_PA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH2_PA_DebMemAccDoc_NPOS" source="PAPH2_PA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH3_PA_DebMemAccDoc_NPOS" source="PAPH3_PA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WWCST_PA_DebMemAccDoc_NPOS" source="WWCST_PA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMKDGR_PA_DebMemAccDoc_NPOS" source="KMKDGR_PA"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_3" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KUNWE_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="PRCTR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="SPART_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VTWEG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VKORG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="WERKS_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="KUNNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWITEM_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWREF_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="BELNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VBELN_SOH_NPOS"/>
+        <viewAttribute id="LIFSK_SOH_NPOS"/>
+        <viewAttribute id="AUGRU_SOH_NPOS"/>
+        <viewAttribute id="VBELN_SOI_NPOS"/>
+        <viewAttribute id="POSNR_SOI_NPOS"/>
+        <viewAttribute id="MATNR_SOI_NPOS"/>
+        <viewAttribute id="ARKTX_SOI_NPOS"/>
+        <viewAttribute id="PSTYV_SOI_NPOS"/>
+        <viewAttribute id="ZMENG_SOI_NPOS"/>
+        <viewAttribute id="ZIEME_SOI_NPOS"/>
+        <viewAttribute id="MEINS_SOI_NPOS"/>
+        <viewAttribute id="POSEX_SOI_NPOS"/>
+        <viewAttribute id="FAKSP_SOI_NPOS"/>
+        <viewAttribute id="NETWR_SOI_NPOS"/>
+        <viewAttribute id="WERKS_SOI_NPOS"/>
+        <viewAttribute id="VSTEL_SOI_NPOS"/>
+        <viewAttribute id="ERDAT_SOI_NPOS"/>
+        <viewAttribute id="NETPR_SOI_NPOS"/>
+        <viewAttribute id="KPEIN_SOI_NPOS"/>
+        <viewAttribute id="KMEIN_SOI_NPOS"/>
+        <viewAttribute id="VBELN_BillingItem_NPOS"/>
+        <viewAttribute id="POSNR_BillingItem_NPOS"/>
+        <viewAttribute id="FKIMG_BillingItem_NPOS"/>
+        <viewAttribute id="VRKME_BillingItem_NPOS"/>
+        <viewAttribute id="MEINS_BillingItem_NPOS"/>
+        <viewAttribute id="PRSDT_BillingItem_NPOS"/>
+        <viewAttribute id="AUBEL_BillingItem_NPOS"/>
+        <viewAttribute id="AUPOS_BillingItem_NPOS"/>
+        <viewAttribute id="ARKTX_BillingItem_NPOS"/>
+        <viewAttribute id="WERKS_BillingItem_NPOS"/>
+        <viewAttribute id="ALAND_BillingItem_NPOS"/>
+        <viewAttribute id="ERZET_BillingItem_NPOS"/>
+        <viewAttribute id="ERDAT_BillingItem_NPOS"/>
+        <viewAttribute id="NETWR_BillingItem_NPOS"/>
+        <viewAttribute id="VBELN_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_BillingHeader_NPOS"/>
+        <viewAttribute id="FKTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="VBTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="WAERK_BillingHeader_NPOS"/>
+        <viewAttribute id="VKORG_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_BillingHeader_NPOS"/>
+        <viewAttribute id="ZTERM_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNRG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNAG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNWE_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="FKSTO_BillingHeader_NPOS"/>
+        <viewAttribute id="AWREF_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BLART_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BSCHL_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="LIFNR_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAOBJNR_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH1_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH2_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH3_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="WWCST_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="KMKDGR_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="RCLNT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_VendorInvAccDoc_NPOS" source="KUNWE_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR_VendorInvAccDoc_NPOS" source="PRCTR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_COPA_VendorInvAccDoc_NPOS" source="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPART_VendorInvAccDoc_NPOS" source="SPART_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG_VendorInvAccDoc_NPOS" source="VTWEG_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_VendorInvAccDoc_NPOS" source="VKORG_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_VendorInvAccDoc_NPOS" source="WERKS_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_VendorInvAccDoc_NPOS" source="KUNNR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWITEM_VendorInvAccDoc_NPOS" source="AWITEM_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_VendorInvAccDoc_NPOS" source="AWREF_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_VendorInvAccDoc_NPOS" source="BELNR_VendorInvAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOH_NPOS" source="VBELN_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFSK_SOH_NPOS" source="LIFSK_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGRU_SOH_NPOS" source="AUGRU_SOH_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_SOI_NPOS" source="VBELN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_SOI_NPOS" source="POSNR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_SOI_NPOS" source="MATNR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_SOI_NPOS" source="ARKTX_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTYV_SOI_NPOS" source="PSTYV_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZMENG_SOI_NPOS" source="ZMENG_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZIEME_SOI_NPOS" source="ZIEME_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_SOI_NPOS" source="MEINS_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSEX_SOI_NPOS" source="POSEX_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSP_SOI_NPOS" source="FAKSP_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_SOI_NPOS" source="NETWR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_SOI_NPOS" source="WERKS_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL_SOI_NPOS" source="VSTEL_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_SOI_NPOS" source="ERDAT_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETPR_SOI_NPOS" source="NETPR_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KPEIN_SOI_NPOS" source="KPEIN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMEIN_SOI_NPOS" source="KMEIN_SOI_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingItem_NPOS" source="VBELN_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_BillingItem_NPOS" source="POSNR_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKIMG_BillingItem_NPOS" source="FKIMG_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_BillingItem_NPOS" source="VRKME_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_BillingItem_NPOS" source="MEINS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRSDT_BillingItem_NPOS" source="PRSDT_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUBEL_BillingItem_NPOS" source="AUBEL_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUPOS_BillingItem_NPOS" source="AUPOS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_BillingItem_NPOS" source="ARKTX_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_BillingItem_NPOS" source="WERKS_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALAND_BillingItem_NPOS" source="ALAND_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERZET_BillingItem_NPOS" source="ERZET_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_BillingItem_NPOS" source="ERDAT_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_BillingItem_NPOS" source="NETWR_BillingItem_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingHeader_NPOS" source="VBELN_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_BillingHeader_NPOS" source="FKART_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKTYP_BillingHeader_NPOS" source="FKTYP_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBTYP_BillingHeader_NPOS" source="VBTYP_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERK_BillingHeader_NPOS" source="WAERK_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_BillingHeader_NPOS" source="VKORG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_BillingHeader_NPOS" source="FKDAT_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_BillingHeader_NPOS" source="ZTERM_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_RL_BillingHeader_NPOS" source="FKDAT_RL_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNRG_BillingHeader_NPOS" source="KUNRG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG_BillingHeader_NPOS" source="KUNAG_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_BillingHeader_NPOS" source="KUNWE_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_RL_BillingHeader_NPOS" source="FKART_RL_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKSTO_BillingHeader_NPOS" source="FKSTO_BillingHeader_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RCLNT" source="RCLNT"/>
+      </input>
+      <input node="Debit_Memo_Acc_Doc">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWREF_DebMemAccDoc_NPOS" source="AWREF_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART_DebMemAccDoc_NPOS" source="BLART_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSCHL_DebMemAccDoc_NPOS" source="BSCHL_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_DebMemAccDoc_NPOS" source="LIFNR_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAOBJNR_DebMemAccDoc_NPOS" source="PAOBJNR_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH1_PA_DebMemAccDoc_NPOS" source="PAPH1_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH2_PA_DebMemAccDoc_NPOS" source="PAPH2_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAPH3_PA_DebMemAccDoc_NPOS" source="PAPH3_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WWCST_PA_DebMemAccDoc_NPOS" source="WWCST_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMKDGR_PA_DebMemAccDoc_NPOS" source="KMKDGR_PA_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_BillingHeader_NPOS" source="AWREF_DebMemAccDoc_NPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="RBUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RCLNT" source="RCLNT"/>
+      </input>
+    <joinAttribute name="VBELN_BillingHeader_NPOS"/>
+    <joinAttribute name="BUKRS"/>
+    <joinAttribute name="RCLNT"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KUNWE_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="PRCTR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="SPART_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VTWEG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VKORG_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="WERKS_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="KUNNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWITEM_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="AWREF_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="BELNR_VendorInvAccDoc_NPOS"/>
+        <viewAttribute id="VBELN_SOH_NPOS"/>
+        <viewAttribute id="LIFSK_SOH_NPOS"/>
+        <viewAttribute id="AUGRU_SOH_NPOS"/>
+        <viewAttribute id="VBELN_SOI_NPOS"/>
+        <viewAttribute id="POSNR_SOI_NPOS"/>
+        <viewAttribute id="MATNR_SOI_NPOS"/>
+        <viewAttribute id="ARKTX_SOI_NPOS"/>
+        <viewAttribute id="PSTYV_SOI_NPOS"/>
+        <viewAttribute id="ZIEME_SOI_NPOS"/>
+        <viewAttribute id="MEINS_SOI_NPOS"/>
+        <viewAttribute id="POSEX_SOI_NPOS"/>
+        <viewAttribute id="FAKSP_SOI_NPOS"/>
+        <viewAttribute id="WERKS_SOI_NPOS"/>
+        <viewAttribute id="VSTEL_SOI_NPOS"/>
+        <viewAttribute id="ERDAT_SOI_NPOS"/>
+        <viewAttribute id="KMEIN_SOI_NPOS"/>
+        <viewAttribute id="VBELN_BillingItem_NPOS"/>
+        <viewAttribute id="POSNR_BillingItem_NPOS"/>
+        <viewAttribute id="VRKME_BillingItem_NPOS"/>
+        <viewAttribute id="MEINS_BillingItem_NPOS"/>
+        <viewAttribute id="PRSDT_BillingItem_NPOS"/>
+        <viewAttribute id="AUBEL_BillingItem_NPOS"/>
+        <viewAttribute id="AUPOS_BillingItem_NPOS"/>
+        <viewAttribute id="ARKTX_BillingItem_NPOS"/>
+        <viewAttribute id="WERKS_BillingItem_NPOS"/>
+        <viewAttribute id="ALAND_BillingItem_NPOS"/>
+        <viewAttribute id="ERZET_BillingItem_NPOS"/>
+        <viewAttribute id="ERDAT_BillingItem_NPOS"/>
+        <viewAttribute id="VBELN_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_BillingHeader_NPOS"/>
+        <viewAttribute id="FKTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="VBTYP_BillingHeader_NPOS"/>
+        <viewAttribute id="WAERK_BillingHeader_NPOS"/>
+        <viewAttribute id="VKORG_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_BillingHeader_NPOS"/>
+        <viewAttribute id="ZTERM_BillingHeader_NPOS"/>
+        <viewAttribute id="FKDAT_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNRG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNAG_BillingHeader_NPOS"/>
+        <viewAttribute id="KUNWE_BillingHeader_NPOS"/>
+        <viewAttribute id="FKART_RL_BillingHeader_NPOS"/>
+        <viewAttribute id="FKSTO_BillingHeader_NPOS"/>
+        <viewAttribute id="AWREF_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BLART_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="BSCHL_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="LIFNR_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAOBJNR_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH1_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH2_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="PAPH3_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="WWCST_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="KMKDGR_PA_DebMemAccDoc_NPOS"/>
+        <viewAttribute id="ZMENG_SOI_NPOS"/>
+        <viewAttribute id="NETWR_SOI_NPOS"/>
+        <viewAttribute id="NETPR_SOI_NPOS"/>
+        <viewAttribute id="KPEIN_SOI_NPOS"/>
+        <viewAttribute id="FKIMG_BillingItem_NPOS"/>
+        <viewAttribute id="NETWR_BillingItem_NPOS"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="RCLNT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+      <input node="Join_3"/>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="Aggregation_1">
+    <descriptions defaultDescription="VFCT_OTC_STP__NONPOBACKSCENARIO"/>
+    <attributes>
+      <attribute id="KUNWE_VendorInvAccDoc_NPOS" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNWE_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="KUNWE_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="PRCTR_VendorInvAccDoc_NPOS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="PRCTR_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="MATNR_COPA_VendorInvAccDoc_NPOS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="MATNR_COPA_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="SPART_VendorInvAccDoc_NPOS" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="SPART_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="VTWEG_VendorInvAccDoc_NPOS" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="VTWEG_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="VKORG_VendorInvAccDoc_NPOS" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="VKORG_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="WERKS_VendorInvAccDoc_NPOS" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="WERKS_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="KUNNR_VendorInvAccDoc_NPOS" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="KUNNR_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="AWITEM_VendorInvAccDoc_NPOS" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWITEM_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="AWITEM_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="AWREF_VendorInvAccDoc_NPOS" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWREF_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="AWREF_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="BELNR_VendorInvAccDoc_NPOS" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR_VendorInvAccDoc_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="BELNR_VendorInvAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="VBELN_SOH_NPOS" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_SOH_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="VBELN_SOH_NPOS"/>
+      </attribute>
+      <attribute id="LIFSK_SOH_NPOS" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFSK_SOH_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="LIFSK_SOH_NPOS"/>
+      </attribute>
+      <attribute id="AUGRU_SOH_NPOS" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGRU_SOH_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="AUGRU_SOH_NPOS"/>
+      </attribute>
+      <attribute id="VBELN_SOI_NPOS" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="VBELN_SOI_NPOS"/>
+      </attribute>
+      <attribute id="POSNR_SOI_NPOS" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="POSNR_SOI_NPOS"/>
+      </attribute>
+      <attribute id="MATNR_SOI_NPOS" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="MATNR_SOI_NPOS"/>
+      </attribute>
+      <attribute id="ARKTX_SOI_NPOS" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARKTX_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="ARKTX_SOI_NPOS"/>
+      </attribute>
+      <attribute id="PSTYV_SOI_NPOS" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTYV_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="PSTYV_SOI_NPOS"/>
+      </attribute>
+      <attribute id="ZIEME_SOI_NPOS" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZIEME_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="ZIEME_SOI_NPOS"/>
+      </attribute>
+      <attribute id="MEINS_SOI_NPOS" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="MEINS_SOI_NPOS"/>
+      </attribute>
+      <attribute id="POSEX_SOI_NPOS" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSEX_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="POSEX_SOI_NPOS"/>
+      </attribute>
+      <attribute id="FAKSP_SOI_NPOS" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAKSP_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="FAKSP_SOI_NPOS"/>
+      </attribute>
+      <attribute id="WERKS_SOI_NPOS" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="WERKS_SOI_NPOS"/>
+      </attribute>
+      <attribute id="VSTEL_SOI_NPOS" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSTEL_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="VSTEL_SOI_NPOS"/>
+      </attribute>
+      <attribute id="ERDAT_SOI_NPOS" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="ERDAT_SOI_NPOS"/>
+      </attribute>
+      <attribute id="KMEIN_SOI_NPOS" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMEIN_SOI_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="KMEIN_SOI_NPOS"/>
+      </attribute>
+      <attribute id="VBELN_BillingItem_NPOS" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_BillingItem_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="VBELN_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="POSNR_BillingItem_NPOS" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR_BillingItem_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="POSNR_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="VRKME_BillingItem_NPOS" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME_BillingItem_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="VRKME_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="MEINS_BillingItem_NPOS" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS_BillingItem_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="MEINS_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="PRSDT_BillingItem_NPOS" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRSDT_BillingItem_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="PRSDT_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="AUBEL_BillingItem_NPOS" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUBEL_BillingItem_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="AUBEL_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="AUPOS_BillingItem_NPOS" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUPOS_BillingItem_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="AUPOS_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="ARKTX_BillingItem_NPOS" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARKTX_BillingItem_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="ARKTX_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="WERKS_BillingItem_NPOS" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS_BillingItem_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="WERKS_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="ALAND_BillingItem_NPOS" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALAND_BillingItem_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="ALAND_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="ERZET_BillingItem_NPOS" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERZET"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="ERZET_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="ERDAT_BillingItem_NPOS" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="ERDAT_BillingItem_NPOS"/>
+      </attribute>
+      <attribute id="VBELN_BillingHeader_NPOS" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="VBELN_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="FKART_BillingHeader_NPOS" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="FKART_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="FKTYP_BillingHeader_NPOS" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKTYP_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="FKTYP_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="VBTYP_BillingHeader_NPOS" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBTYP_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="VBTYP_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="WAERK_BillingHeader_NPOS" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="WAERK_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="VKORG_BillingHeader_NPOS" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="VKORG_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="FKDAT_BillingHeader_NPOS" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="FKDAT_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="ZTERM_BillingHeader_NPOS" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="ZTERM_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="FKDAT_RL_BillingHeader_NPOS" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_RL_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="FKDAT_RL_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="KUNRG_BillingHeader_NPOS" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNRG_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="KUNRG_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="KUNAG_BillingHeader_NPOS" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNAG_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="KUNAG_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="KUNWE_BillingHeader_NPOS" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNWE_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="KUNWE_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="FKART_RL_BillingHeader_NPOS" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART_RL_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="FKART_RL_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="FKSTO_BillingHeader_NPOS" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKSTO_BillingHeader_NPOS"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="FKSTO_BillingHeader_NPOS"/>
+      </attribute>
+      <attribute id="AWREF_DebMemAccDoc_NPOS" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reference document number"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="AWREF_DebMemAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="BLART_DebMemAccDoc_NPOS" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document type"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="BLART_DebMemAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="BSCHL_DebMemAccDoc_NPOS" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Posting Key"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="BSCHL_DebMemAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="LIFNR_DebMemAccDoc_NPOS" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account Number of Vendor or Creditor"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="LIFNR_DebMemAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="PAOBJNR_DebMemAccDoc_NPOS" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Profitability Segment Number (CO-PA)"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="PAOBJNR_DebMemAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="PAPH1_PA_DebMemAccDoc_NPOS" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Prod.hierarchy01-1"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="PAPH1_PA_DebMemAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="PAPH2_PA_DebMemAccDoc_NPOS" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Prod.hierarchy01-2"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="PAPH2_PA_DebMemAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="PAPH3_PA_DebMemAccDoc_NPOS" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Prod.hierarchy01-3"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="PAPH3_PA_DebMemAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="WWCST_PA_DebMemAccDoc_NPOS" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Ship-to"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="WWCST_PA_DebMemAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="KMKDGR_PA_DebMemAccDoc_NPOS" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Group"/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="KMKDGR_PA_DebMemAccDoc_NPOS"/>
+      </attribute>
+      <attribute id="BUKRS" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="RCLNT" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Aggregation_1" columnName="RCLNT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="ZMENG_SOI_NPOS" order="64" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZMENG_SOI_NPOS"/>
+        <measureMapping columnObjectName="Aggregation_1" columnName="ZMENG_SOI_NPOS"/>
+      </measure>
+      <measure id="NETWR_SOI_NPOS" order="65" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR_SOI_NPOS"/>
+        <measureMapping columnObjectName="Aggregation_1" columnName="NETWR_SOI_NPOS"/>
+      </measure>
+      <measure id="NETPR_SOI_NPOS" order="66" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETPR_SOI_NPOS"/>
+        <measureMapping columnObjectName="Aggregation_1" columnName="NETPR_SOI_NPOS"/>
+      </measure>
+      <measure id="KPEIN_SOI_NPOS" order="67" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KPEIN_SOI_NPOS"/>
+        <measureMapping columnObjectName="Aggregation_1" columnName="KPEIN_SOI_NPOS"/>
+      </measure>
+      <measure id="FKIMG_BillingItem_NPOS" order="68" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FKIMG_BillingItem_NPOS"/>
+        <measureMapping columnObjectName="Aggregation_1" columnName="FKIMG_BillingItem_NPOS"/>
+      </measure>
+      <measure id="NETWR_BillingItem_NPOS" order="69" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR"/>
+        <measureMapping columnObjectName="Aggregation_1" columnName="NETWR_BillingItem_NPOS"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="174" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Vendor_Inv_Acc_Doc" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="627"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Sales_Order" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="531"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Sal_Doc_Flow" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="627"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="531"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Vendor_Inv_Acc_Doc" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Sal_Doc_Flow" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="175" y="435"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Join_4" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Sales_Order" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Billing" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="329" y="435"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="251" y="339"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Billing" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Debit_Memo_Acc_Doc" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="97" y="339"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="174" y="243"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Join_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Debit_Memo_Acc_Doc" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="174" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="VDIM_MD_MATERIAL" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="MATERIAL"/>
+  <metadata changedAt="2021-12-15 23:32:35.193"/>
+  <localVariables>
+    <variable id="VINP_MATERIAL_001">
+      <descriptions defaultDescription="VINP_MATERIAL_001"/>
+      <variableProperties datatype="NVARCHAR" mandatory="false" length="40" scale="null">
+        <valueDomain type="AttributeValue">
+          <attribute name="MATNR"/>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="44"/>
+  <dataSources>
+    <DataSource id="CV_MD_MARA">
+      <resourceUri>CV_MD_MARA</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_MARA1">
+      <resourceUri>CV_MD_MARA1</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_T023T">
+      <resourceUri>CV_MD_T023T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_T134T">
+      <resourceUri>CV_MD_T134T</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MAKTX"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_MARA"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="PRDHA"/>
+        <viewAttribute id="BEGRU"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="PROFL"/>
+        <viewAttribute id="KZUMW"/>
+        <viewAttribute id="SATNR"/>
+        <viewAttribute id="MTPOS_MARA"/>
+        <viewAttribute id="XCHPF"/>
+        <viewAttribute id="TRAGR"/>
+        <viewAttribute id="MAGRV"/>
+        <viewAttribute id="EKWSL"/>
+        <viewAttribute id="ETIAR"/>
+        <viewAttribute id="ETIFO"/>
+        <viewAttribute id="RAUBE"/>
+        <viewAttribute id="QMPUR"/>
+        <viewAttribute id="ERSDA"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="MSTAE"/>
+        <viewAttribute id="MFRPN"/>
+        <viewAttribute id="MFRNR"/>
+        <viewAttribute id="NORMT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_MARA1"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="PRDHA"/>
+        <viewAttribute id="BEGRU"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="PROFL"/>
+        <viewAttribute id="KZUMW"/>
+        <viewAttribute id="SATNR"/>
+        <viewAttribute id="MTPOS_MARA"/>
+        <viewAttribute id="XCHPF"/>
+        <viewAttribute id="TRAGR"/>
+        <viewAttribute id="MAGRV"/>
+        <viewAttribute id="EKWSL"/>
+        <viewAttribute id="ETIAR"/>
+        <viewAttribute id="ETIFO"/>
+        <viewAttribute id="RAUBE"/>
+        <viewAttribute id="QMPUR"/>
+        <viewAttribute id="MAKTX"/>
+        <viewAttribute id="ERSDA"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="MSTAE"/>
+        <viewAttribute id="MFRPN"/>
+        <viewAttribute id="MFRNR"/>
+        <viewAttribute id="NORMT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/></input>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="MATNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="SPRAS"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="WGBEZ"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_T023T"/>
+      <filter>(&quot;SPRAS&quot; ='$$language$$')</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_2" cardinality="C1_1" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="PRDHA"/>
+        <viewAttribute id="BEGRU"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="PROFL"/>
+        <viewAttribute id="KZUMW"/>
+        <viewAttribute id="SATNR"/>
+        <viewAttribute id="MTPOS_MARA"/>
+        <viewAttribute id="XCHPF"/>
+        <viewAttribute id="TRAGR"/>
+        <viewAttribute id="MAGRV"/>
+        <viewAttribute id="EKWSL"/>
+        <viewAttribute id="ETIAR"/>
+        <viewAttribute id="ETIFO"/>
+        <viewAttribute id="RAUBE"/>
+        <viewAttribute id="QMPUR"/>
+        <viewAttribute id="MAKTX"/>
+        <viewAttribute id="ERSDA"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="MSTAE"/>
+        <viewAttribute id="MFRPN"/>
+        <viewAttribute id="MFRNR"/>
+        <viewAttribute id="SPRAS"/>
+        <viewAttribute id="WGBEZ"/>
+        <viewAttribute id="NORMT"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="VCAL_MATNR" length="40" expressionLanguage="COLUMN_ENGINE">
+          <formula>LTRIM(&quot;MATNR&quot;, '0') </formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATKL" source="MATKL"/></input>
+      <input node="Projection_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATKL" source="MATKL"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="MATKL"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_4" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="SPRAS"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="MTBEZ"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_T134T"/>
+      <filter>&quot;SPRAS&quot; ='$$language$$'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_3" cardinality="C1_1" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MATNRZT"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="PRDHA"/>
+        <viewAttribute id="BEGRU"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="PROFL"/>
+        <viewAttribute id="KZUMW"/>
+        <viewAttribute id="SATNR"/>
+        <viewAttribute id="MTPOS_MARA"/>
+        <viewAttribute id="XCHPF"/>
+        <viewAttribute id="TRAGR"/>
+        <viewAttribute id="MAGRV"/>
+        <viewAttribute id="EKWSL"/>
+        <viewAttribute id="ETIAR"/>
+        <viewAttribute id="ETIFO"/>
+        <viewAttribute id="RAUBE"/>
+        <viewAttribute id="QMPUR"/>
+        <viewAttribute id="MAKTX"/>
+        <viewAttribute id="ERSDA"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="MSTAE"/>
+        <viewAttribute id="MFRPN"/>
+        <viewAttribute id="MFRNR"/>
+        <viewAttribute id="SPRAS"/>
+        <viewAttribute id="WGBEZ"/>
+        <viewAttribute id="NORMT"/>
+        <viewAttribute id="MTBEZ"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNRZT" source="VCAL_MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MTART" source="MTART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPRAS" source="SPRAS"/></input>
+      <input node="Projection_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MTART" source="MTART"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="MTART"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_3">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_3" columnName="MANDT"/>
+      </attribute>
+      <attribute id="MATNR" order="2" attributeHierarchyActive="false" descriptionColumnName="MAKTX" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <localVariable>VINP_MATERIAL_001</localVariable>
+        <keyMapping columnObjectName="Join_3" columnName="MATNR"/>
+      </attribute>
+      <attribute id="MATNRZT" order="3" attributeHierarchyActive="false" descriptionColumnName="MAKTX" displayAttribute="false">
+        <descriptions defaultDescription="Material Number ZT"/>
+        <keyMapping columnObjectName="Join_3" columnName="MATNRZT"/>
+      </attribute>
+      <attribute id="MTART" order="4" attributeHierarchyActive="false" descriptionColumnName="MTBEZ" displayAttribute="false">
+        <descriptions defaultDescription="Material type"/>
+        <keyMapping columnObjectName="Join_3" columnName="MTART"/>
+      </attribute>
+      <attribute id="MATKL" order="5" attributeHierarchyActive="false" descriptionColumnName="WGBEZ" displayAttribute="false">
+        <descriptions defaultDescription="Material Group"/>
+        <keyMapping columnObjectName="Join_3" columnName="MATKL"/>
+      </attribute>
+      <attribute id="MEINS" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Base Unit of Measure"/>
+        <keyMapping columnObjectName="Join_3" columnName="MEINS"/>
+      </attribute>
+      <attribute id="PRDHA" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Product hierarchy"/>
+        <keyMapping columnObjectName="Join_3" columnName="PRDHA"/>
+      </attribute>
+      <attribute id="BEGRU" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Authorization Group"/>
+        <keyMapping columnObjectName="Join_3" columnName="BEGRU"/>
+      </attribute>
+      <attribute id="BRGEW" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Gross weight"/>
+        <keyMapping columnObjectName="Join_3" columnName="BRGEW"/>
+      </attribute>
+      <attribute id="NTGEW" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Net weight"/>
+        <keyMapping columnObjectName="Join_3" columnName="NTGEW"/>
+      </attribute>
+      <attribute id="GEWEI" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Weight Unit"/>
+        <keyMapping columnObjectName="Join_3" columnName="GEWEI"/>
+      </attribute>
+      <attribute id="PROFL" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Dangerous Goods Indicator Profile"/>
+        <keyMapping columnObjectName="Join_3" columnName="PROFL"/>
+      </attribute>
+      <attribute id="KZUMW" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Environmentally Relevant"/>
+        <keyMapping columnObjectName="Join_3" columnName="KZUMW"/>
+      </attribute>
+      <attribute id="SATNR" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Cross-Plant Configurable Material"/>
+        <keyMapping columnObjectName="Join_3" columnName="SATNR"/>
+      </attribute>
+      <attribute id="MTPOS_MARA" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="General item category group"/>
+        <keyMapping columnObjectName="Join_3" columnName="MTPOS_MARA"/>
+      </attribute>
+      <attribute id="XCHPF" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Batch management requirement indicator"/>
+        <keyMapping columnObjectName="Join_3" columnName="XCHPF"/>
+      </attribute>
+      <attribute id="TRAGR" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Transportation Group"/>
+        <keyMapping columnObjectName="Join_3" columnName="TRAGR"/>
+      </attribute>
+      <attribute id="MAGRV" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Group: Packaging Materials"/>
+        <keyMapping columnObjectName="Join_3" columnName="MAGRV"/>
+      </attribute>
+      <attribute id="EKWSL" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Value Key"/>
+        <keyMapping columnObjectName="Join_3" columnName="EKWSL"/>
+      </attribute>
+      <attribute id="ETIAR" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Label type"/>
+        <keyMapping columnObjectName="Join_3" columnName="ETIAR"/>
+      </attribute>
+      <attribute id="ETIFO" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Label form"/>
+        <keyMapping columnObjectName="Join_3" columnName="ETIFO"/>
+      </attribute>
+      <attribute id="RAUBE" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Storage conditions"/>
+        <keyMapping columnObjectName="Join_3" columnName="RAUBE"/>
+      </attribute>
+      <attribute id="QMPUR" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QM in Procurement is Active"/>
+        <keyMapping columnObjectName="Join_3" columnName="QMPUR"/>
+      </attribute>
+      <attribute id="MAKTX" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material description"/>
+        <keyMapping columnObjectName="Join_3" columnName="MAKTX"/>
+      </attribute>
+      <attribute id="ERSDA" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Created On"/>
+        <keyMapping columnObjectName="Join_3" columnName="ERSDA"/>
+      </attribute>
+      <attribute id="ERNAM" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="Join_3" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="MSTAE" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Cross-Plant Material Status"/>
+        <keyMapping columnObjectName="Join_3" columnName="MSTAE"/>
+      </attribute>
+      <attribute id="MFRPN" order="28" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Manufacturer Part Number"/>
+        <keyMapping columnObjectName="Join_3" columnName="MFRPN"/>
+      </attribute>
+      <attribute id="MFRNR" order="29" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Manufacturer number"/>
+        <keyMapping columnObjectName="Join_3" columnName="MFRNR"/>
+      </attribute>
+      <attribute id="SPRAS" order="30" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Language Key"/>
+        <keyMapping columnObjectName="Join_3" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="WGBEZ" order="31" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Group Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="WGBEZ"/>
+      </attribute>
+      <attribute id="NORMT" order="32" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Industry Standard Description (such as ANSI or ISO)"/>
+        <keyMapping columnObjectName="Join_3" columnName="NORMT"/>
+      </attribute>
+      <attribute id="MTBEZ" order="33" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description of material type"/>
+        <keyMapping columnObjectName="Join_3" columnName="MTBEZ"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="453"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="453"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_3" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    
+      <shape modelObjectName="Join_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_4" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

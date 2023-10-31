@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="VSTG_BILLINGLINEITEMS" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VSTG_R2R_BILLING"/>
+  <metadata changedAt="2021-12-06 18:57:37.48" createdAt="2020-06-09 19:01:16.839"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="46"/>
+  <dataSources>
+    <DataSource id="CV_TD_VBRP">
+      <resourceUri>CV_TD_VBRP</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_VBRK">
+      <resourceUri>CV_TD_VBRK</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="AUBEL"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="FKIMG"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="AUPOS"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="VGTYP"/>
+        <viewAttribute id="WAVWR"/>
+        <viewAttribute id="KZWI2"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_TD_VBRP"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="FKART"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="FKDAT"/>
+        <viewAttribute id="RFBSK"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="FKTYP"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="VBTYP"/>
+        <viewAttribute id="GBSTK"/>
+        <viewAttribute id="FKSTO"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_TD_VBRK"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_1" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="FKART"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="FKDAT"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="AUBEL"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="FKIMG"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="AUPOS"/>
+        <viewAttribute id="RFBSK"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="FKTYP"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="VBTYP"/>
+        <viewAttribute id="VGTYP"/>
+        <viewAttribute id="GBSTK"/>
+        <viewAttribute id="FKSTO"/>
+        <viewAttribute id="WAVWR"/>
+        <viewAttribute id="KZWI2"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/></input>
+      <input node="Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_1">
+    <descriptions defaultDescription="VSTG_R2R_BILLING"/>
+    <attributes>
+      <attribute id="FKART" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Type"/>
+        <keyMapping columnObjectName="Join_1" columnName="FKART"/>
+      </attribute>
+      <attribute id="INCO1" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Incoterms (Part 1)"/>
+        <keyMapping columnObjectName="Join_1" columnName="INCO1"/>
+      </attribute>
+      <attribute id="INCO2" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Incoterms (Part 2)"/>
+        <keyMapping columnObjectName="Join_1" columnName="INCO2"/>
+      </attribute>
+      <attribute id="FKDAT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing date for billing index and printout"/>
+        <keyMapping columnObjectName="Join_1" columnName="FKDAT"/>
+      </attribute>
+      <attribute id="POSNR" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Item"/>
+        <keyMapping columnObjectName="Join_1" columnName="POSNR"/>
+      </attribute>
+      <attribute id="BRGEW" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Gross weight"/>
+        <keyMapping columnObjectName="Join_1" columnName="BRGEW"/>
+      </attribute>
+      <attribute id="GEWEI" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Weight Unit"/>
+        <keyMapping columnObjectName="Join_1" columnName="GEWEI"/>
+      </attribute>
+      <attribute id="VGBEL" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document number of the reference document"/>
+        <keyMapping columnObjectName="Join_1" columnName="VGBEL"/>
+      </attribute>
+      <attribute id="VGPOS" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item number of the reference item"/>
+        <keyMapping columnObjectName="Join_1" columnName="VGPOS"/>
+      </attribute>
+      <attribute id="AUBEL" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="AUBEL"/>
+      </attribute>
+      <attribute id="MATNR" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="MATNR"/>
+      </attribute>
+      <attribute id="MANDT" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="VBELN"/>
+      </attribute>
+      <attribute id="FKIMG" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Actual billed quantity"/>
+        <keyMapping columnObjectName="Join_1" columnName="FKIMG"/>
+      </attribute>
+      <attribute id="VRKME" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales unit"/>
+        <keyMapping columnObjectName="Join_1" columnName="VRKME"/>
+      </attribute>
+      <attribute id="NETWR" order="16" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Net value of the billing item in document currency"/>
+        <keyMapping columnObjectName="Join_1" columnName="NETWR"/>
+      </attribute>
+      <attribute id="NTGEW" order="17" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Net weight"/>
+        <keyMapping columnObjectName="Join_1" columnName="NTGEW"/>
+      </attribute>
+      <attribute id="AUPOS" order="18" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Join_1" columnName="AUPOS"/>
+      </attribute>
+      <attribute id="RFBSK" order="19" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Status for Transfer to Accounting"/>
+        <keyMapping columnObjectName="Join_1" columnName="RFBSK"/>
+      </attribute>
+      <attribute id="ZTERM" order="20" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Terms of payment key"/>
+        <keyMapping columnObjectName="Join_1" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="FKTYP" order="21" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Category"/>
+        <keyMapping columnObjectName="Join_1" columnName="FKTYP"/>
+      </attribute>
+      <attribute id="WAERK" order="22" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SD document currency"/>
+        <keyMapping columnObjectName="Join_1" columnName="WAERK"/>
+      </attribute>
+      <attribute id="ERDAT" order="23" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date on which the record was created"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="VBTYP" order="24" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SD Document Category (Long)"/>
+        <keyMapping columnObjectName="Join_1" columnName="VBTYP"/>
+      </attribute>
+      <attribute id="VGTYP" order="25" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Category of Preceding SD Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="VGTYP"/>
+      </attribute>
+      <attribute id="GBSTK" order="26" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Overall Processing Status of Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="GBSTK"/>
+      </attribute>
+      <attribute id="FKSTO" order="27" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing document is cancelled"/>
+        <keyMapping columnObjectName="Join_1" columnName="FKSTO"/>
+      </attribute>
+      <attribute id="WAVWR" order="28" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Cost in document currency"/>
+        <keyMapping columnObjectName="Join_1" columnName="WAVWR"/>
+      </attribute>
+      <attribute id="KZWI2" order="29" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Subtotal 2 from pricing procedure for condition"/>
+        <keyMapping columnObjectName="Join_1" columnName="KZWI2"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+      <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_AUSP" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DEFAULT" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_AUSP"/>
+  <metadata changedAt="2020-05-11 06:17:21.502" createdAt="2020-05-11 06:17:21.502"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_AUSP">
+      <resourceUri>syn_tbl_AUSP</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="OBJEK"/>
+        <viewAttribute id="ATINN"/>
+        <viewAttribute id="ATZHL"/>
+        <viewAttribute id="MAFID"/>
+        <viewAttribute id="KLART"/>
+        <viewAttribute id="ADZHL"/>
+        <viewAttribute id="ATWRT"/>
+        <viewAttribute id="ATFLV"/>
+        <viewAttribute id="ATAWE"/>
+        <viewAttribute id="ATFLB"/>
+        <viewAttribute id="ATAW1"/>
+        <viewAttribute id="ATCOD"/>
+        <viewAttribute id="ATTLV"/>
+        <viewAttribute id="ATTLB"/>
+        <viewAttribute id="ATPRZ"/>
+        <viewAttribute id="ATINC"/>
+        <viewAttribute id="ATAUT"/>
+        <viewAttribute id="AENNR"/>
+        <viewAttribute id="DATUV"/>
+        <viewAttribute id="LKENZ"/>
+        <viewAttribute id="ATIMB"/>
+        <viewAttribute id="ATZIS"/>
+        <viewAttribute id="ATSRT"/>
+        <viewAttribute id="ATVGLART"/>
+        <viewAttribute id="DATUB"/>
+        <viewAttribute id="DEC_VALUE_FROM"/>
+        <viewAttribute id="DEC_VALUE_TO"/>
+        <viewAttribute id="CURR_VALUE_FROM"/>
+        <viewAttribute id="CURR_VALUE_TO"/>
+        <viewAttribute id="CURRENCY"/>
+        <viewAttribute id="DATE_FROM"/>
+        <viewAttribute id="DATE_TO"/>
+        <viewAttribute id="TIME_FROM"/>
+        <viewAttribute id="TIME_TO"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="syn_tbl_AUSP"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="OBJEK" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBJEK"/>
+        <keyMapping columnObjectName="Projection_1" columnName="OBJEK"/>
+      </attribute>
+      <attribute id="ATINN" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATINN"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATINN"/>
+      </attribute>
+      <attribute id="ATZHL" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATZHL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATZHL"/>
+      </attribute>
+      <attribute id="MAFID" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAFID"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MAFID"/>
+      </attribute>
+      <attribute id="KLART" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KLART"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KLART"/>
+      </attribute>
+      <attribute id="ADZHL" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADZHL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ADZHL"/>
+      </attribute>
+      <attribute id="ATWRT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATWRT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATWRT"/>
+      </attribute>
+      <attribute id="ATFLV" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATFLV"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATFLV"/>
+      </attribute>
+      <attribute id="ATAWE" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATAWE"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATAWE"/>
+      </attribute>
+      <attribute id="ATFLB" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATFLB"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATFLB"/>
+      </attribute>
+      <attribute id="ATAW1" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATAW1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATAW1"/>
+      </attribute>
+      <attribute id="ATCOD" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATCOD"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATCOD"/>
+      </attribute>
+      <attribute id="ATTLV" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATTLV"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATTLV"/>
+      </attribute>
+      <attribute id="ATTLB" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATTLB"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATTLB"/>
+      </attribute>
+      <attribute id="ATPRZ" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATPRZ"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATPRZ"/>
+      </attribute>
+      <attribute id="ATINC" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATINC"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATINC"/>
+      </attribute>
+      <attribute id="ATAUT" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATAUT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATAUT"/>
+      </attribute>
+      <attribute id="AENNR" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AENNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AENNR"/>
+      </attribute>
+      <attribute id="DATUV" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATUV"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DATUV"/>
+      </attribute>
+      <attribute id="LKENZ" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LKENZ"/>
+        <keyMapping columnObjectName="Projection_1" columnName="LKENZ"/>
+      </attribute>
+      <attribute id="ATIMB" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATIMB"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATIMB"/>
+      </attribute>
+      <attribute id="ATZIS" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATZIS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATZIS"/>
+      </attribute>
+      <attribute id="ATSRT" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATSRT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATSRT"/>
+      </attribute>
+      <attribute id="ATVGLART" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATVGLART"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATVGLART"/>
+      </attribute>
+      <attribute id="DATUB" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATUB"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DATUB"/>
+      </attribute>
+      <attribute id="DEC_VALUE_FROM" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEC_VALUE_FROM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DEC_VALUE_FROM"/>
+      </attribute>
+      <attribute id="DEC_VALUE_TO" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEC_VALUE_TO"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DEC_VALUE_TO"/>
+      </attribute>
+      <attribute id="CURR_VALUE_FROM" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURR_VALUE_FROM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CURR_VALUE_FROM"/>
+      </attribute>
+      <attribute id="CURR_VALUE_TO" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURR_VALUE_TO"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CURR_VALUE_TO"/>
+      </attribute>
+      <attribute id="CURRENCY" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENCY"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CURRENCY"/>
+      </attribute>
+      <attribute id="DATE_FROM" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE_FROM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DATE_FROM"/>
+      </attribute>
+      <attribute id="DATE_TO" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE_TO"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DATE_TO"/>
+      </attribute>
+      <attribute id="TIME_FROM" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TIME_FROM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TIME_FROM"/>
+      </attribute>
+      <attribute id="TIME_TO" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TIME_TO"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TIME_TO"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="22" y="87"/></shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

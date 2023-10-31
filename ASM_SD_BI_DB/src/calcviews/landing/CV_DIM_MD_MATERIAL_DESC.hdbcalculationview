@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_DIM_MD_MATERIAL_DESC" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_MD_MATERIAL_DESC"/>
+  <metadata changedAt="2021-12-06 18:54:26.115" createdAt="2020-05-15 15:38:04.132"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="31"/>
+  <dataSources>
+    <DataSource id="CV_MD_MARA1">
+      <resourceUri>CV_MD_MARA1</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_MAKT">
+      <resourceUri>CV_MD_MAKT</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_T023T">
+      <resourceUri>CV_MD_T023T</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="referential">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MAKTX"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="BLATT"/>
+        <viewAttribute id="BRGEW"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_MARA1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATKL" source="MATKL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLATT" source="BLATT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRGEW" source="BRGEW"/>
+      </input>
+      <input node="CV_MD_MAKT">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAKTX" source="MAKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="MATNR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="WGBEZ"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_T023T"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="referential">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MAKTX"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="WGBEZ"/>
+        <viewAttribute id="BLATT"/>
+        <viewAttribute id="BRGEW"/>
+      <viewAttribute hidden="true" id="JOIN$MANDT$MANDT"/>
+      <viewAttribute hidden="true" id="JOIN$MATKL$MATKL"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAKTX" source="MAKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLATT" source="BLATT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRGEW" source="BRGEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MANDT$MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MATKL$MATKL" source="MATKL"/>
+      </input>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATKL" source="MATKL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WGBEZ" source="WGBEZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MANDT$MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MATKL$MATKL" source="MATKL"/>
+      </input>
+    <joinAttribute name="JOIN$MANDT$MANDT"/>
+    <joinAttribute name="JOIN$MATKL$MATKL"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_2">
+    <descriptions defaultDescription="VDIM_MD_MATERIAL_DESC"/>
+    <attributes>
+      <attribute id="MAKTX" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material description"/>
+        <keyMapping columnObjectName="Join_2" columnName="MAKTX"/>
+      </attribute>
+      <attribute id="MATNR" order="2" attributeHierarchyActive="false" descriptionColumnName="MAKTX" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Join_2" columnName="MATNR"/>
+      </attribute>
+      <attribute id="MANDT" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_2" columnName="MANDT"/>
+      </attribute>
+      <attribute id="MATKL" order="4" attributeHierarchyActive="false" descriptionColumnName="WGBEZ" displayAttribute="false">
+        <descriptions defaultDescription="Material Group"/>
+        <keyMapping columnObjectName="Join_2" columnName="MATKL"/>
+      </attribute>
+      <attribute id="WGBEZ" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Group Description"/>
+        <keyMapping columnObjectName="Join_2" columnName="WGBEZ"/>
+      </attribute>
+      <attribute id="BLATT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Page number of document (without Document Management system)"/>
+        <keyMapping columnObjectName="Join_2" columnName="BLATT"/>
+      </attribute>
+      <attribute id="BRGEW" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Gross weight"/>
+        <keyMapping columnObjectName="Join_2" columnName="BRGEW"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="CV_MD_MARA1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="CV_MD_MAKT" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+    <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

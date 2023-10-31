@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_KONM" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_F_CONDITION_1_DIMENSION_QTY"/>
+  <metadata changedAt="2021-12-06 18:12:25.252" createdAt="2020-06-26 17:10:41.144"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_KONM">
+      <resourceUri>syn_tbl_KONM</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KNUMH"/>
+        <viewAttribute id="KOPOS"/>
+        <viewAttribute id="KLFN1"/>
+        <viewAttribute id="KSTBM"/>
+        <viewAttribute id="KBETR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_KONM"/>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions defaultDescription="VDIM_F_CONDITION_1_DIMENSION_QTY"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KNUMH" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition record number"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KNUMH"/>
+      </attribute>
+      <attribute id="KOPOS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sequential number of the condition"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KOPOS"/>
+      </attribute>
+      <attribute id="KLFN1" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Current number of the line scale"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KLFN1"/>
+      </attribute>
+      <attribute id="KSTBM" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition scale quantity"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KSTBM"/>
+      </attribute>
+      <attribute id="KBETR" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Amount or Percentage"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KBETR"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="22" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

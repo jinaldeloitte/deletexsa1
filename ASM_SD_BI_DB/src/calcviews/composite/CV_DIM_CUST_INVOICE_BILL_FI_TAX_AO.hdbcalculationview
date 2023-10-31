@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_DIM_CUST_INVOICE_BILL_FI_TAX_AO" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_CUST_INVOICE_BILL_TAX"/>
+  <metadata changedAt="2021-12-06 18:55:00.552"/>
+  <localVariables>
+    <variable id="IP_SALES_ORG" parameter="true">
+      <descriptions defaultDescription="IP_SALES_ORG"/>
+      <variableProperties datatype="NVARCHAR" length="4" mandatory="true" scale="null" defaultValue="undefined">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_DIM_MD_SALESORGANIZATIONS</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>VKORG</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_BILLING_DATE_FROM" parameter="true">
+      <descriptions defaultDescription="IP_BILLING_DATE_FROM"/>
+      <variableProperties datatype="DATE" mandatory="false" defaultValue="undefined">
+        <valueDomain type="Date"/>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_BILLLING_DATE_TO" parameter="true">
+      <descriptions defaultDescription="IP_BILLLING_DATE_TO"/>
+      <variableProperties datatype="DATE" mandatory="false" defaultValue="undefined">
+        <valueDomain type="Date"/>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="41"/>
+  <dataSources>
+    <DataSource id="syn_tbl_VBRK">
+      <resourceUri>syn_tbl_VBRK</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_PRCD_ELEMENTS">
+      <resourceUri>syn_tbl_PRCD_ELEMENTS</resourceUri>
+    </DataSource>
+    <DataSource id="CopyOfProjection_1$$$$syn_tbl_VBRK$$">
+      <resourceUri>syn_tbl_VBRK</resourceUri>
+    </DataSource>
+    <DataSource id="CV_FCT_R2065_BSID">
+      <resourceUri>HANA_CONTENT.STAGING_MODELS.CROSSFUNCTION::CV_FCT_R2065_BSID</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_ACDOCA">
+      <resourceUri>syn_tbl_ACDOCA</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRK_KNUMV"/>
+        <viewAttribute id="VBRK_NETWR"/>
+        <viewAttribute id="VBRK_FKART"/>
+        <viewAttribute id="VBRK_FKSTO"/>
+        <viewAttribute id="VBRK_FKDAT"/>
+        <viewAttribute id="VBRK_VKORG"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="Exclude_Flag_ZF2" length="1" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;VBRK_FKART&quot;= 'ZF2' and &quot;VBRK_FKSTO&quot; = 'X','E','V')</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_VBRK_VKORG" length="4" expressionLanguage="COLUMN_ENGINE">
+          <formula>string(&quot;VBRK_VKORG&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DATE" id="VCAL_VBRK_FKDAT" expressionLanguage="COLUMN_ENGINE">
+          <formula>date(&quot;VBRK_FKDAT&quot;)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="syn_tbl_VBRK">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_KNUMV" source="KNUMV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_NETWR" source="NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKART" source="FKART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKSTO" source="FKSTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKDAT" source="FKDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VKORG" source="VKORG"/>
+      </input>
+    <filter>(&quot;VCAL_VBRK_VKORG&quot;= $$IP_SALES_ORG$$) AND 
+(&quot;VCAL_VBRK_FKDAT&quot;&gt;='$$IP_BILLING_DATE_FROM$$') AND
+ (&quot;VCAL_VBRK_FKDAT&quot;&lt;='$$IP_BILLLING_DATE_TO$$') AND
+(not in (&quot;VBRK_FKART&quot;,'ZF3','ZIV','ZS1','ZLRS','ZS1P')) AND 
+  (&quot;Exclude_Flag_ZF2&quot; ='V')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_2">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="PRCD_ELEMENTS_KNUMV"/>
+        <viewAttribute id="PRCD_ELEMENTS_KNTYP"/>
+        <viewAttribute id="PRCD_ELEMENTS_KWERT"/>
+        <viewAttribute id="PRCD_ELEMENTS_KBETR"/>
+        <viewAttribute id="PRCD_ELEMENTS_KSCHL"/>
+        <viewAttribute id="PRCD_ELEMENTS_KRECH"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+      <input node="syn_tbl_PRCD_ELEMENTS">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KNUMV" source="KNUMV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KNTYP" source="KNTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KWERT" source="KWERT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KBETR" source="KBETR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KSCHL" source="KSCHL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KRECH" source="KRECH"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="CopyOfProjection_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_ZLR"/>
+        <viewAttribute id="VBRK_FKART"/>
+        <viewAttribute id="VBRK_SFAKN"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CopyOfProjection_1$$$$syn_tbl_VBRK$$">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_ZLR" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKART" source="FKART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_SFAKN" source="SFAKN"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_4" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRK_KNUMV"/>
+        <viewAttribute id="VBRK_NETWR"/>
+        <viewAttribute id="VBRK_FKART"/>
+        <viewAttribute id="VBRK_FKART_1"/>
+        <viewAttribute id="VBRK_SFAKN"/>
+        <viewAttribute id="VBRK_FKSTO"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="Exclude_Flag_ZLR" length="1" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;VBRK_FKART&quot;= 'ZLR' and &quot;VBRK_FKART_1&quot; = 'ZLRS','E','V')</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_KNUMV" source="VBRK_KNUMV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_NETWR" source="VBRK_NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKART" source="VBRK_FKART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKSTO" source="VBRK_FKSTO"/>
+      </input>
+      <input node="CopyOfProjection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKART_1" source="VBRK_FKART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_SFAKN" source="VBRK_SFAKN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_ZLR"/>
+      </input>
+    <joinAttribute name="VBRK_VBELN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_NETWR"/>
+        <viewAttribute id="VBRK_KNUMV"/>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="Exclude_Flag_ZLR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_4"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_N" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="PRCD_ELEMENTS_KNTYP"/>
+        <viewAttribute id="PRCD_ELEMENTS_KWERT"/>
+        <viewAttribute id="PRCD_ELEMENTS_KBETR"/>
+        <viewAttribute id="PRCD_ELEMENTS_KSCHL"/>
+        <viewAttribute id="PRCD_ELEMENTS_KRECH"/>
+        <viewAttribute id="VBRK_NETWR"/>
+        <viewAttribute id="VBRK_KNUMV"/>
+        <viewAttribute id="VBRK_VBELN"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_NETWR" source="VBRK_NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_KNUMV" source="VBRK_KNUMV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+      </input>
+      <input node="Aggregation_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KNTYP" source="PRCD_ELEMENTS_KNTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KWERT" source="PRCD_ELEMENTS_KWERT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KBETR" source="PRCD_ELEMENTS_KBETR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KSCHL" source="PRCD_ELEMENTS_KSCHL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCD_ELEMENTS_KRECH" source="PRCD_ELEMENTS_KRECH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_KNUMV" source="PRCD_ELEMENTS_KNUMV"/>
+      </input>
+    <joinAttribute name="VBRK_KNUMV"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRK_KNUMV"/>
+        <viewAttribute id="PRCD_ELEMENTS_KNTYP"/>
+        <viewAttribute aggregationType="sum" id="PRCD_ELEMENTS_KWERT"/>
+        <viewAttribute aggregationType="sum" id="PRCD_ELEMENTS_KBETR"/>
+        <viewAttribute id="PRCD_ELEMENTS_KSCHL"/>
+        <viewAttribute id="PRCD_ELEMENTS_KRECH"/>
+        <viewAttribute id="VBRK_NETWR"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DECIMAL" id="Unit_Price" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'PR00',&quot;PRCD_ELEMENTS_KBETR&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Total_Tax_Amount" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KNTYP&quot;= 'D',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Gross_Amount" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KNTYP&quot;= 'D',&quot;PRCD_ELEMENTS_KWERT&quot;+&quot;VBRK_NETWR&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="GST_HST" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'XR1',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="PST" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'XR2',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="QST" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'XR3',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="District_Tax" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'XR4',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Energy_Fee_Total" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZENG',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Total_Fuel_Charge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZFUL',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="State_Tax" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'XR1',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Country_Tax" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'XR2',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="City_Tax" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'XR3',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Environmental_Surcharge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZENV',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Distance_Surcharge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZDIS',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Metro_Surcharge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZAX4',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Service_Charge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZSRV',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Record_Retention_per_Stop" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZPRF',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Minimum_Pickup_Charge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZMV1',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Recycling_Recovery_Surcharge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF((in (&quot;PRCD_ELEMENTS_KSCHL&quot;,'ZRCL','ZPRE')),&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Recycling_Process_Charge_or_fee" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZPRF',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Additional_Stop_Charge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZSSC',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="On_Demand_Pickup_Charge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZAX3',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="California_AB_1807_Fee" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZCAF',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Illinois_Med_Waste_Fee" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZILM',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Additional_Container_Charge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZCON',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Additional_Weight_Charge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZSWO',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Liquidated_Damages" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZLIQ',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="No_Waste_Charge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZWSM',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Overweight_Charge" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZSWO',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Late_Fee" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZLFI',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="Promotional_Discount" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;PRCD_ELEMENTS_KSCHL&quot;= 'ZPRM',&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="10_20_30_Discount_on_the_invoice" length="15" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF((in (&quot;PRCD_ELEMENTS_KSCHL&quot;,'ZP10','ZP20','ZP30')),&quot;PRCD_ELEMENTS_KWERT&quot;,0)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+    <restrictedViewAttributes/>
+      <input node="Join_1"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="BSID_BELNR"/>
+        <viewAttribute id="BSID_GJAHR"/>
+        <viewAttribute id="BSID_VBELN"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_FCT_R2065_BSID">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSID_BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSID_GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSID_VBELN" source="VBELN"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_3">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="XREVERSED"/>
+        <viewAttribute id="HSL"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+      <input node="syn_tbl_ACDOCA"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="inner">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="BSID_BELNR"/>
+        <viewAttribute id="BSID_GJAHR"/>
+        <viewAttribute id="BSID_VBELN"/>
+        <viewAttribute id="BSID_HSL"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSID_BELNR" source="BSID_BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSID_GJAHR" source="BSID_GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSID_VBELN" source="BSID_VBELN"/>
+      </input>
+      <input node="Aggregation_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSID_HSL" source="HSL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSID_BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSID_GJAHR" source="GJAHR"/>
+      </input>
+    <joinAttribute name="BSID_BELNR"/>
+    <joinAttribute name="BSID_GJAHR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_3" cardinality="C1_N" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="Total_Tax_Amount"/>
+        <viewAttribute id="Gross_Amount"/>
+        <viewAttribute id="GST_HST"/>
+        <viewAttribute id="PST"/>
+        <viewAttribute id="QST"/>
+        <viewAttribute id="District_Tax"/>
+        <viewAttribute id="Energy_Fee_Total"/>
+        <viewAttribute id="Total_Fuel_Charge"/>
+        <viewAttribute id="Unit_Price"/>
+        <viewAttribute id="BSID_HSL"/>
+        <viewAttribute id="State_Tax"/>
+        <viewAttribute id="Country_Tax"/>
+        <viewAttribute id="City_Tax"/>
+        <viewAttribute id="Environmental_Surcharge"/>
+        <viewAttribute id="Distance_Surcharge"/>
+        <viewAttribute id="Metro_Surcharge"/>
+        <viewAttribute id="Service_Charge"/>
+        <viewAttribute id="Record_Retention_per_Stop"/>
+        <viewAttribute id="Minimum_Pickup_Charge"/>
+        <viewAttribute id="Recycling_Recovery_Surcharge"/>
+        <viewAttribute id="Recycling_Process_Charge_or_fee"/>
+        <viewAttribute id="Additional_Stop_Charge"/>
+        <viewAttribute id="On_Demand_Pickup_Charge"/>
+        <viewAttribute id="California_AB_1807_Fee"/>
+        <viewAttribute id="Illinois_Med_Waste_Fee"/>
+        <viewAttribute id="Additional_Container_Charge"/>
+        <viewAttribute id="Additional_Weight_Charge"/>
+        <viewAttribute id="Liquidated_Damages"/>
+        <viewAttribute id="No_Waste_Charge"/>
+        <viewAttribute id="Overweight_Charge"/>
+        <viewAttribute id="Late_Fee"/>
+        <viewAttribute id="Promotional_Discount"/>
+        <viewAttribute id="10_20_30_Discount_on_the_invoice"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Aggregation_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Total_Tax_Amount" source="Total_Tax_Amount"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Gross_Amount" source="Gross_Amount"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GST_HST" source="GST_HST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PST" source="PST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="QST" source="QST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="District_Tax" source="District_Tax"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Energy_Fee_Total" source="Energy_Fee_Total"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Total_Fuel_Charge" source="Total_Fuel_Charge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Unit_Price" source="Unit_Price"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="State_Tax" source="State_Tax"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Country_Tax" source="Country_Tax"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="City_Tax" source="City_Tax"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Environmental_Surcharge" source="Environmental_Surcharge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Distance_Surcharge" source="Distance_Surcharge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Metro_Surcharge" source="Metro_Surcharge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Service_Charge" source="Service_Charge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Record_Retention_per_Stop" source="Record_Retention_per_Stop"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Minimum_Pickup_Charge" source="Minimum_Pickup_Charge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Recycling_Recovery_Surcharge" source="Recycling_Recovery_Surcharge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Recycling_Process_Charge_or_fee" source="Recycling_Process_Charge_or_fee"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Additional_Stop_Charge" source="Additional_Stop_Charge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="On_Demand_Pickup_Charge" source="On_Demand_Pickup_Charge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="California_AB_1807_Fee" source="California_AB_1807_Fee"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Illinois_Med_Waste_Fee" source="Illinois_Med_Waste_Fee"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Additional_Container_Charge" source="Additional_Container_Charge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Additional_Weight_Charge" source="Additional_Weight_Charge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Liquidated_Damages" source="Liquidated_Damages"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="No_Waste_Charge" source="No_Waste_Charge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Overweight_Charge" source="Overweight_Charge"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Late_Fee" source="Late_Fee"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Promotional_Discount" source="Promotional_Discount"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="10_20_30_Discount_on_the_invoice" source="10_20_30_Discount_on_the_invoice"/>
+      </input>
+      <input node="Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSID_HSL" source="BSID_HSL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="BSID_VBELN"/>
+      </input>
+    <joinAttribute name="VBRK_VBELN"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_3">
+    <descriptions defaultDescription="VDIM_CUST_INVOICE_BILL_TAX"/>
+    <attributes>
+      <attribute id="VBRK_VBELN" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBRK_VBELN"/>
+        <keyMapping columnObjectName="Join_3" columnName="VBRK_VBELN"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="Total_Tax_Amount" order="2" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Total_Tax_Amount"/>
+        <measureMapping columnObjectName="Join_3" columnName="Total_Tax_Amount"/>
+      </measure>
+      <measure id="Gross_Amount" order="3" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Gross_Amount"/>
+        <measureMapping columnObjectName="Join_3" columnName="Gross_Amount"/>
+      </measure>
+      <measure id="GST_HST" order="4" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="GST_HST"/>
+        <measureMapping columnObjectName="Join_3" columnName="GST_HST"/>
+      </measure>
+      <measure id="PST" order="5" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PST"/>
+        <measureMapping columnObjectName="Join_3" columnName="PST"/>
+      </measure>
+      <measure id="QST" order="6" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="QST"/>
+        <measureMapping columnObjectName="Join_3" columnName="QST"/>
+      </measure>
+      <measure id="District_Tax" order="7" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="District_Tax"/>
+        <measureMapping columnObjectName="Join_3" columnName="District_Tax"/>
+      </measure>
+      <measure id="Energy_Fee_Total" order="8" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Energy_Fee_Total"/>
+        <measureMapping columnObjectName="Join_3" columnName="Energy_Fee_Total"/>
+      </measure>
+      <measure id="Total_Fuel_Charge" order="9" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Total_Fuel_Charge"/>
+        <measureMapping columnObjectName="Join_3" columnName="Total_Fuel_Charge"/>
+      </measure>
+      <measure id="Unit_Price" order="10" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Unit_Price"/>
+        <measureMapping columnObjectName="Join_3" columnName="Unit_Price"/>
+      </measure>
+      <measure id="BSID_HSL" order="11" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Amount in Company Code Currency"/>
+        <measureMapping columnObjectName="Join_3" columnName="BSID_HSL"/>
+      </measure>
+      <measure id="State_Tax" order="12" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="State Tax"/>
+        <measureMapping columnObjectName="Join_3" columnName="State_Tax"/>
+      </measure>
+      <measure id="Country_Tax" order="13" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Country Tax"/>
+        <measureMapping columnObjectName="Join_3" columnName="Country_Tax"/>
+      </measure>
+      <measure id="City_Tax" order="14" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="City Tax"/>
+        <measureMapping columnObjectName="Join_3" columnName="City_Tax"/>
+      </measure>
+      <measure id="Environmental_Surcharge" order="15" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Environmental_Surcharge"/>
+        <measureMapping columnObjectName="Join_3" columnName="Environmental_Surcharge"/>
+      </measure>
+      <measure id="Distance_Surcharge" order="16" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Distance_Surcharge"/>
+        <measureMapping columnObjectName="Join_3" columnName="Distance_Surcharge"/>
+      </measure>
+      <measure id="Metro_Surcharge" order="17" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Metro_Surcharge"/>
+        <measureMapping columnObjectName="Join_3" columnName="Metro_Surcharge"/>
+      </measure>
+      <measure id="Service_Charge" order="18" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Service_Charge"/>
+        <measureMapping columnObjectName="Join_3" columnName="Service_Charge"/>
+      </measure>
+      <measure id="Record_Retention_per_Stop" order="19" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Record_Retention_per_Stop"/>
+        <measureMapping columnObjectName="Join_3" columnName="Record_Retention_per_Stop"/>
+      </measure>
+      <measure id="Minimum_Pickup_Charge" order="20" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Record_Retention_per_Stop"/>
+        <measureMapping columnObjectName="Join_3" columnName="Minimum_Pickup_Charge"/>
+      </measure>
+      <measure id="Recycling_Recovery_Surcharge" order="21" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="10_20_30_Discount_on_the_invoice"/>
+        <measureMapping columnObjectName="Join_3" columnName="Recycling_Recovery_Surcharge"/>
+      </measure>
+      <measure id="Recycling_Process_Charge_or_fee" order="22" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Record_Retention_per_Stop"/>
+        <measureMapping columnObjectName="Join_3" columnName="Recycling_Process_Charge_or_fee"/>
+      </measure>
+      <measure id="Additional_Stop_Charge" order="23" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Additional_Stop_Charge"/>
+        <measureMapping columnObjectName="Join_3" columnName="Additional_Stop_Charge"/>
+      </measure>
+      <measure id="On_Demand_Pickup_Charge" order="24" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="On_Demand_Pickup_Charge"/>
+        <measureMapping columnObjectName="Join_3" columnName="On_Demand_Pickup_Charge"/>
+      </measure>
+      <measure id="California_AB_1807_Fee" order="25" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="California_AB_1807_Fee"/>
+        <measureMapping columnObjectName="Join_3" columnName="California_AB_1807_Fee"/>
+      </measure>
+      <measure id="Illinois_Med_Waste_Fee" order="26" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Illinois_Med_Waste_Fee"/>
+        <measureMapping columnObjectName="Join_3" columnName="Illinois_Med_Waste_Fee"/>
+      </measure>
+      <measure id="Additional_Container_Charge" order="27" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Additional_Container_Charge"/>
+        <measureMapping columnObjectName="Join_3" columnName="Additional_Container_Charge"/>
+      </measure>
+      <measure id="Additional_Weight_Charge" order="28" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Additional_Container_Charge"/>
+        <measureMapping columnObjectName="Join_3" columnName="Additional_Weight_Charge"/>
+      </measure>
+      <measure id="Liquidated_Damages" order="29" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Liquidated_Damages"/>
+        <measureMapping columnObjectName="Join_3" columnName="Liquidated_Damages"/>
+      </measure>
+      <measure id="No_Waste_Charge" order="30" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="No_Waste_Charge"/>
+        <measureMapping columnObjectName="Join_3" columnName="No_Waste_Charge"/>
+      </measure>
+      <measure id="Overweight_Charge" order="31" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Overweight_Charge"/>
+        <measureMapping columnObjectName="Join_3" columnName="Overweight_Charge"/>
+      </measure>
+      <measure id="Late_Fee" order="32" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Late_Fee"/>
+        <measureMapping columnObjectName="Join_3" columnName="Late_Fee"/>
+      </measure>
+      <measure id="Promotional_Discount" order="33" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Promotional_Discount"/>
+        <measureMapping columnObjectName="Join_3" columnName="Promotional_Discount"/>
+      </measure>
+      <measure id="10_20_30_Discount_on_the_invoice" order="34" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="10_20_30_Discount_on_the_invoice"/>
+        <measureMapping columnObjectName="Join_3" columnName="10_20_30_Discount_on_the_invoice"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="176" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="627"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="453"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="CopyOfProjection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="627"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="531"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="CopyOfProjection_1" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="453"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Aggregation_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="407" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Projection_3" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Aggregation_3" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    
+    <shape modelObjectName="Aggregation_1" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Join_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

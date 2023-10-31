@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_SKAT" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_MD_SKAT"/>
+  <metadata changedAt="2021-12-06 18:07:57.332" createdAt="2020-04-28 17:12:29.596"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_SKAT">
+      <resourceUri>syn_tbl_SKAT</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_SKAT">
+    <descriptions defaultDescription="CV_MD_SKAT"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_SKAT" columnName="MANDT"/>
+      </attribute>
+      <attribute id="SPRAS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPRAS"/>
+        <keyMapping columnObjectName="syn_tbl_SKAT" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="KTOPL" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOPL"/>
+        <keyMapping columnObjectName="syn_tbl_SKAT" columnName="KTOPL"/>
+      </attribute>
+      <attribute id="SAKNR" order="4" attributeHierarchyActive="false" descriptionColumnName="TXT20" displayAttribute="false">
+        <descriptions defaultDescription="SAKNR"/>
+        <keyMapping columnObjectName="syn_tbl_SKAT" columnName="SAKNR"/>
+      </attribute>
+      <attribute id="TXT20" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXT20"/>
+        <keyMapping columnObjectName="syn_tbl_SKAT" columnName="TXT20"/>
+      </attribute>
+      <attribute id="TXT50" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXT50"/>
+        <keyMapping columnObjectName="syn_tbl_SKAT" columnName="TXT50"/>
+      </attribute>
+      <attribute id="MCOD1" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCOD1"/>
+        <keyMapping columnObjectName="syn_tbl_SKAT" columnName="MCOD1"/>
+      </attribute>
+      <attribute id="LAST_CHANGED_TS" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAST_CHANGED_TS"/>
+        <keyMapping columnObjectName="syn_tbl_SKAT" columnName="LAST_CHANGED_TS"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="HANA_CONTENT.STAGING_MODELS.SUPPLY_CHAIN::CV_DIM_CHARACTERISTICS" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="BATCH CHARACTERISTICS"/>
+  <metadata changedAt="2021-12-06 18:59:59.028"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="35"/>
+  <dataSources>
+    <DataSource id="syn_tbl_INOB">
+      <resourceUri>syn_tbl_INOB</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_AUSP">
+      <resourceUri>syn_tbl_AUSP</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_CABN">
+      <resourceUri>syn_tbl_CABN</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="INOB" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="CUOBJ"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="OBJEK"/>
+        <viewAttribute id="KLART"/>
+        <viewAttribute id="OBTAB"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_INOB"/>
+    <filter>(&quot;KLART&quot; ='023') AND (&quot;OBTAB&quot; ='MCH1')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="AUSP">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="OBJEK"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="ATINN"/>
+        <viewAttribute id="ATWRT"/>
+        <viewAttribute id="KLART"/>
+        <viewAttribute id="TIME_FROM"/>
+        <viewAttribute id="DATE_FROM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_AUSP"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="CABN" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="ATINN"/>
+        <viewAttribute id="ATNAM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_CABN"/>
+    <filter>(in (&quot;ATNAM&quot;,
+'CONTAINER_ID',
+'TRUCK_ID',
+'DELIVERY_NO',
+'DELITEM_NO',
+'CUST_ID',
+'BILL_TYPE',
+'SHP_TO',
+'SERV_ID',
+'SERV_DES',
+'PROCESS_CODE',
+'PROCESS_CODE_DESC',
+'SAP_CONT_MATNR',
+'CONT_DESC',
+'EST_WGT',
+'ACT_WGT',
+'ACT_WASTE_WGT',
+'REC_DTE',
+'CART_NO',
+'HU_NO',
+'DRIVER_ID',
+'ROUTE_ID',
+'STOP_ID',
+'SEQUENCE',
+'DISPOSAL_METHOD',
+'SALES_ORDER',
+'SALES_ORDER_ITEM',
+'GROUP_CODE',
+'FILL_LEVEL',
+'REASON_CODE',
+'EXCEPTION_STATUS',
+'SCAN_MODE',
+'DEPARTMENT',
+'DSG_TICKERTAPE',
+'SCAN_TIME',
+'SCAN_DATE',
+'FACILITY_TYPE',
+'DSG_QUANTITY'
+))</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_3" joinType="inner">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="ATWRT"/>
+        <viewAttribute id="ATINN"/>
+        <viewAttribute id="OBJEK"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="ATNAM"/>
+        <viewAttribute id="KLART"/>
+        <viewAttribute id="TIME_FROM"/>
+        <viewAttribute id="DATE_FROM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="AUSP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ATWRT" source="ATWRT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ATINN" source="ATINN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OBJEK" source="OBJEK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KLART" source="KLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TIME_FROM" source="TIME_FROM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DATE_FROM" source="DATE_FROM"/>
+      </input>
+      <input node="CABN">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ATNAM" source="ATNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ATINN" source="ATINN"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="ATINN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="CUOBJ"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="OBJEK"/>
+        <viewAttribute id="OBTAB"/>
+        <viewAttribute id="ATWRT"/>
+        <viewAttribute id="ATINN"/>
+        <viewAttribute id="ATNAM"/>
+        <viewAttribute id="KLART"/>
+        <viewAttribute id="TIME_FROM"/>
+        <viewAttribute id="DATE_FROM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="INOB">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CUOBJ" source="CUOBJ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OBJEK" source="OBJEK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OBTAB" source="OBTAB"/>
+      </input>
+      <input node="Join_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ATWRT" source="ATWRT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ATINN" source="ATINN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ATNAM" source="ATNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KLART" source="KLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TIME_FROM" source="TIME_FROM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DATE_FROM" source="DATE_FROM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CUOBJ" source="OBJEK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      </input>
+    <joinAttribute name="CUOBJ"/>
+    <joinAttribute name="MANDT"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_2">
+    <descriptions defaultDescription="BATCH CHARACTERISTICS"/>
+    <attributes>
+      <attribute id="ATWRT" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Characteristic Value"/>
+        <keyMapping columnObjectName="Join_2" columnName="ATWRT"/>
+      </attribute>
+      <attribute id="ATINN" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Internal characteristic"/>
+        <keyMapping columnObjectName="Join_2" columnName="ATINN"/>
+      </attribute>
+      <attribute id="ATNAM" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Characteristic Name"/>
+        <keyMapping columnObjectName="Join_2" columnName="ATNAM"/>
+      </attribute>
+      <attribute id="CUOBJ" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Configuration (internal object number)"/>
+        <keyMapping columnObjectName="Join_2" columnName="CUOBJ"/>
+      </attribute>
+      <attribute id="MANDT" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_2" columnName="MANDT"/>
+      </attribute>
+      <attribute id="OBJEK" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBJEK"/>
+        <keyMapping columnObjectName="Join_2" columnName="OBJEK"/>
+      </attribute>
+      <attribute id="OBTAB" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBTAB"/>
+        <keyMapping columnObjectName="Join_2" columnName="OBTAB"/>
+      </attribute>
+      <attribute id="KLART" order="44" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KLART"/>
+        <keyMapping columnObjectName="Join_2" columnName="KLART"/>
+      </attribute>
+      <attribute id="TIME_FROM" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Lower Boundary for Time-Interval"/>
+        <keyMapping columnObjectName="Join_2" columnName="TIME_FROM"/>
+      </attribute>
+      <attribute id="DATE_FROM" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Lower Boundary for Date-Interval"/>
+        <keyMapping columnObjectName="Join_2" columnName="DATE_FROM"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes>
+      <calculatedAttribute id="CONTAINER_ID" hidden="false" order="1" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Container_ID"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='CONTAINER_ID',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="TRUCK_ID" hidden="false" order="2" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRUCK_ID"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='TRUCK_ID',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="DELIVERY_NO" hidden="false" order="3" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DELIVERY_NO"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='DELIVERY_NO',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="DELITEM_NO" hidden="false" order="4" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Line Item "/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='DELITEM_NO',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="CUST_ID" hidden="false" order="5" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='CUST_ID',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="BILL_TYPE" hidden="false" order="6" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Type"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='BILL_TYPE',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="SHP_TO" hidden="false" order="7" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Ship To"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='SHP_TO',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="SERV_ID" hidden="false" order="8" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Service Number"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='SERV_ID',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="SERV_DES" hidden="false" order="9" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Service Description"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='SERV_DES',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="PROCESS_CODE" hidden="false" order="10" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Process Code"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='PROCESS_CODE',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="PROCESS_CODE_DESC" hidden="false" order="11" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Process Code Description"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='PROCESS_CODE_DESC',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="SAP_CONT_MATNR" hidden="false" order="12" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAP Container Material Number"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='SAP_CONT_MATNR',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="CONT_DESC" hidden="false" order="13" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Container Description"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='CONT_DESC',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="REC_DTE" hidden="false" order="16" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Receiving Date"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='REC_DTE',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="CART_NO" hidden="false" order="17" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Cart Number"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='CART_NO',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="HU_NO" hidden="false" order="18" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Handling Unit Number"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='HU_NO',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="DRIVER_ID" hidden="false" order="19" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Driver ID"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='DRIVER_ID',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="ROUTE_ID" hidden="false" order="20" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Route ID"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='ROUTE_ID',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="STOP_ID" hidden="false" order="21" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STOP_ID"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='STOP_ID',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="SEQUENCE" hidden="false" order="22" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SEQUENCE"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='SEQUENCE',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="DISPOSAL_METHOD" hidden="false" order="23" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISPOSAL_METHOD"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='DISPOSAL_METHOD',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="SALES_ORDER" hidden="false" order="24" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALES_ORDER"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='SALES_ORDER',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="SALES_ORDER_ITEM" hidden="false" order="25" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Order Item number"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='SALES_ORDER_ITEM',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="GROUP_CODE" hidden="false" order="26" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Grouping Code"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='GROUP_CODE',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="FILL_LEVEL" hidden="false" order="27" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Console Level Fill"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='FILL_LEVEL',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="REASON_CODE" hidden="false" order="28" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reason Code"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='REASON_CODE',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="Exception_Status" hidden="false" order="29" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Exception Handling Status"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='EXCEPTION_STATUS',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="Scan_Mode" hidden="false" order="30" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Scan Mode"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='SCAN_MODE',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="DEPARTMENT" hidden="false" order="31" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Department"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='DEPARTMENT',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="DSG_TickerTape" hidden="false" order="32" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Ticker Tape Process"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='DSG_TICKERTAPE',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="Scan_Time" hidden="false" order="33" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Scan Time"/>
+        <keyCalculation datatype="TIME" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(&quot;ATNAM&quot;='SCAN_TIME',time(string(&quot;TIME_FROM&quot;)),time(string('')))</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="FACILITY_TYPE" hidden="false" order="43" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Facility Type"/>
+        <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="70">
+          <formula>if(&quot;ATNAM&quot;='FACILITY_TYPE',&quot;ATWRT&quot;, '')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="Scan_Date" hidden="false" order="48" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Scan Date"/>
+        <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(&quot;ATNAM&quot;='SCAN_DATE',date(string(&quot;DATE_FROM&quot;)),date(string('')))</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+    </calculatedAttributes>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures>
+      <measure id="EST_WGT" hidden="false" order="14" aggregationType="sum" measureType="simple" datatype="DOUBLE" expressionLanguage="COLUMN_ENGINE">
+        <descriptions defaultDescription="Estimated Weight"/>
+        <formula>if(&quot;ATNAM&quot;='EST_WGT',if(strlen(if(match(&quot;ATWRT&quot;,'*-') or isnull(&quot;ATWRT&quot;) or ltrim(&quot;ATWRT&quot;)='','X',ltrim(&quot;ATWRT&quot;,' +-.0123456789')))=0,double(&quot;ATWRT&quot;),0),0 )</formula>
+      </measure>
+      <measure id="ACT_WGT" hidden="false" order="15" aggregationType="sum" measureType="simple" datatype="DOUBLE" expressionLanguage="COLUMN_ENGINE">
+        <descriptions defaultDescription="Actual Weight"/>
+        <formula>if(&quot;ATNAM&quot;='ACT_WGT',if(strlen(if(match(&quot;ATWRT&quot;,'*-') or isnull(&quot;ATWRT&quot;) or ltrim(&quot;ATWRT&quot;)='','X',ltrim(&quot;ATWRT&quot;,' +-.0123456789')))=0,double(&quot;ATWRT&quot;),0),0 )</formula>
+      </measure>
+      <measure id="Descartes_Quantity" hidden="false" order="34" aggregationType="sum" measureType="simple" datatype="DOUBLE" expressionLanguage="COLUMN_ENGINE">
+        <descriptions defaultDescription="Descartes Quantity"/>
+        <formula>if(&quot;ATNAM&quot;='DSG_QUANTITY',if(strlen(if(match(&quot;ATWRT&quot;,'*-') or isnull(&quot;ATWRT&quot;) or ltrim(&quot;ATWRT&quot;)='','X',ltrim(&quot;ATWRT&quot;,' +-.0123456789')))=0,double(&quot;ATWRT&quot;),0),0 )</formula>
+      </measure>
+      <measure id="Dummy" hidden="false" order="42" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="34" scale="2">
+        <descriptions defaultDescription="Dummy"/>
+        <formula>1</formula>
+      </measure>
+      <measure id="ACT_WASTE_WGT" hidden="false" order="45" aggregationType="sum" measureType="simple" datatype="DOUBLE" expressionLanguage="COLUMN_ENGINE">
+        <descriptions defaultDescription="Actual Waste Weight"/>
+        <formula>if(&quot;ATNAM&quot;='ACT_WASTE_WGT',if(strlen(if(match(&quot;ATWRT&quot;,'*-') or isnull(&quot;ATWRT&quot;) or ltrim(&quot;ATWRT&quot;)='','X',ltrim(&quot;ATWRT&quot;,' +-.0123456789')))=0,double(&quot;ATWRT&quot;),0),0 )</formula>
+      </measure>
+    </calculatedMeasures>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="INOB" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="AUSP" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="CABN" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="AUSP" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="CABN" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    
+    <shape modelObjectName="INOB" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Join_3" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

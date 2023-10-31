@@ -1,0 +1,8 @@
+Entity M_FISCAL_CALENDAR{
+	 key CALENDAR_VARIANT : String(2) not null;
+	 key DATE : String(8) not null;
+	 DATE_SQL : LocalDate;
+	 FISCAL_YEAR : String(4);
+	 FISCAL_PERIOD : String(3);
+	 CURRENT_YEAR_ADJUSTMENT : String(2);
+};

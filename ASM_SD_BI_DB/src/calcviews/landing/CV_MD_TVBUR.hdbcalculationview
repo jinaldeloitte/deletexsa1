@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_TVBUR" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Sales Office"/>
+  <metadata changedAt="2021-12-06 18:09:47.101"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_TVBUR">
+      <resourceUri>syn_tbl_TVBUR</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_TVBUR">
+    <descriptions defaultDescription="Sales Office"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="syn_tbl_TVBUR" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VKBUR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales office"/>
+        <keyMapping columnObjectName="syn_tbl_TVBUR" columnName="VKBUR"/>
+      </attribute>
+      <attribute id="ADRNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Address"/>
+        <keyMapping columnObjectName="syn_tbl_TVBUR" columnName="ADRNR"/>
+      </attribute>
+      <attribute id="ERNAM" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="User Creating Record"/>
+        <keyMapping columnObjectName="syn_tbl_TVBUR" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="TXNAM_ADR" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Text name for form text module short address"/>
+        <keyMapping columnObjectName="syn_tbl_TVBUR" columnName="TXNAM_ADR"/>
+      </attribute>
+      <attribute id="TXNAM_KOP" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Text name for form text module letter header"/>
+        <keyMapping columnObjectName="syn_tbl_TVBUR" columnName="TXNAM_KOP"/>
+      </attribute>
+      <attribute id="TXNAM_FUS" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Text name for formula text module footer lines"/>
+        <keyMapping columnObjectName="syn_tbl_TVBUR" columnName="TXNAM_FUS"/>
+      </attribute>
+      <attribute id="TXNAM_GRU" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Text name for form text module: Greeting"/>
+        <keyMapping columnObjectName="syn_tbl_TVBUR" columnName="TXNAM_GRU"/>
+      </attribute>
+      <attribute id="TXNAM_SDB" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Text names for layout-set module SDS sender"/>
+        <keyMapping columnObjectName="syn_tbl_TVBUR" columnName="TXNAM_SDB"/>
+      </attribute>
+      <attribute id="HIDE" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HIDE"/>
+        <keyMapping columnObjectName="syn_tbl_TVBUR" columnName="HIDE"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

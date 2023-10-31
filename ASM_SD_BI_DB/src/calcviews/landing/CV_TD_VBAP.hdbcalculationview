@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_VBAP" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="true" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_VBAP"/>
+  <metadata changedAt="2021-02-02 01:29:20.272"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_VBAP">
+      <resourceUri>syn_tbl_VBAP</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_VBAP">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VBELN"/>
+      </attribute>
+      <attribute id="POSNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="POSNR"/>
+      </attribute>
+      <attribute id="MATNR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MATNR"/>
+      </attribute>
+      <attribute id="MATWA" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATWA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MATWA"/>
+      </attribute>
+      <attribute id="PMATN" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PMATN"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PMATN"/>
+      </attribute>
+      <attribute id="CHARG" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHARG"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CHARG"/>
+      </attribute>
+      <attribute id="MATKL" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATKL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MATKL"/>
+      </attribute>
+      <attribute id="ARKTX" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARKTX"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ARKTX"/>
+      </attribute>
+      <attribute id="PSTYV" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTYV"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PSTYV"/>
+      </attribute>
+      <attribute id="POSAR" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSAR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="POSAR"/>
+      </attribute>
+      <attribute id="LFREL" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFREL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="LFREL"/>
+      </attribute>
+      <attribute id="FKREL" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKREL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FKREL"/>
+      </attribute>
+      <attribute id="UEPOS" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UEPOS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UEPOS"/>
+      </attribute>
+      <attribute id="GRPOS" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRPOS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="GRPOS"/>
+      </attribute>
+      <attribute id="ABGRU" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABGRU"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ABGRU"/>
+      </attribute>
+      <attribute id="PRODH" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRODH"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PRODH"/>
+      </attribute>
+      <attribute id="ZIEME" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZIEME"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ZIEME"/>
+      </attribute>
+      <attribute id="MEINS" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MEINS"/>
+      </attribute>
+      <attribute id="ABDAT" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ABDAT"/>
+      </attribute>
+      <attribute id="POSEX" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSEX"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="POSEX"/>
+      </attribute>
+      <attribute id="KDMAT" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDMAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KDMAT"/>
+      </attribute>
+      <attribute id="VKGRU" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKGRU"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VKGRU"/>
+      </attribute>
+      <attribute id="VKAUS" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKAUS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VKAUS"/>
+      </attribute>
+      <attribute id="GRKOR" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRKOR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="GRKOR"/>
+      </attribute>
+      <attribute id="FMENG" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FMENG"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FMENG"/>
+      </attribute>
+      <attribute id="UEBTK" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UEBTK"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UEBTK"/>
+      </attribute>
+      <attribute id="FAKSP" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAKSP"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FAKSP"/>
+      </attribute>
+      <attribute id="ATPKZ" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATPKZ"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ATPKZ"/>
+      </attribute>
+      <attribute id="RKFKF" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RKFKF"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="RKFKF"/>
+      </attribute>
+      <attribute id="SPART" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SPART"/>
+      </attribute>
+      <attribute id="GSBER" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GSBER"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="GSBER"/>
+      </attribute>
+      <attribute id="WAERK" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WAERK"/>
+      </attribute>
+      <attribute id="KZTLF" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZTLF"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KZTLF"/>
+      </attribute>
+      <attribute id="CHSPL" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHSPL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CHSPL"/>
+      </attribute>
+      <attribute id="VRKME" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VRKME"/>
+      </attribute>
+      <attribute id="GEWEI" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEWEI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="GEWEI"/>
+      </attribute>
+      <attribute id="VOLEH" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VOLEH"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VOLEH"/>
+      </attribute>
+      <attribute id="VBELV" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELV"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VBELV"/>
+      </attribute>
+      <attribute id="POSNV" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNV"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="POSNV"/>
+      </attribute>
+      <attribute id="VGBEL" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGBEL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VGBEL"/>
+      </attribute>
+      <attribute id="VGPOS" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGPOS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VGPOS"/>
+      </attribute>
+      <attribute id="VOREF" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VOREF"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VOREF"/>
+      </attribute>
+      <attribute id="UPFLU" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPFLU"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UPFLU"/>
+      </attribute>
+      <attribute id="ERLRE" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERLRE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ERLRE"/>
+      </attribute>
+      <attribute id="LPRIO" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LPRIO"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="LPRIO"/>
+      </attribute>
+      <attribute id="WERKS" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WERKS"/>
+      </attribute>
+      <attribute id="LGORT" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGORT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="LGORT"/>
+      </attribute>
+      <attribute id="VSTEL" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSTEL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VSTEL"/>
+      </attribute>
+      <attribute id="ROUTE" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROUTE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ROUTE"/>
+      </attribute>
+      <attribute id="STKEY" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STKEY"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="STKEY"/>
+      </attribute>
+      <attribute id="STDAT" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="STDAT"/>
+      </attribute>
+      <attribute id="STLNR" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STLNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="STLNR"/>
+      </attribute>
+      <attribute id="AWAHR" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWAHR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="AWAHR"/>
+      </attribute>
+      <attribute id="ERDAT" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERNAM" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="ERZET" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERZET"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ERZET"/>
+      </attribute>
+      <attribute id="TAXM1" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM1"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAXM1"/>
+      </attribute>
+      <attribute id="TAXM2" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM2"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAXM2"/>
+      </attribute>
+      <attribute id="TAXM3" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM3"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAXM3"/>
+      </attribute>
+      <attribute id="TAXM4" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM4"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAXM4"/>
+      </attribute>
+      <attribute id="TAXM5" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM5"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAXM5"/>
+      </attribute>
+      <attribute id="TAXM6" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM6"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAXM6"/>
+      </attribute>
+      <attribute id="TAXM7" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM7"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAXM7"/>
+      </attribute>
+      <attribute id="TAXM8" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM8"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAXM8"/>
+      </attribute>
+      <attribute id="TAXM9" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM9"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAXM9"/>
+      </attribute>
+      <attribute id="VGREF" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGREF"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VGREF"/>
+      </attribute>
+      <attribute id="KMEIN" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMEIN"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KMEIN"/>
+      </attribute>
+      <attribute id="SHKZG" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHKZG"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SHKZG"/>
+      </attribute>
+      <attribute id="SKTOF" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SKTOF"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SKTOF"/>
+      </attribute>
+      <attribute id="MTVFP" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MTVFP"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MTVFP"/>
+      </attribute>
+      <attribute id="SUMBD" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SUMBD"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SUMBD"/>
+      </attribute>
+      <attribute id="KONDM" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONDM"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KONDM"/>
+      </attribute>
+      <attribute id="KTGRM" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTGRM"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KTGRM"/>
+      </attribute>
+      <attribute id="BONUS" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BONUS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="BONUS"/>
+      </attribute>
+      <attribute id="PROVG" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROVG"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PROVG"/>
+      </attribute>
+      <attribute id="EANNR" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EANNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="EANNR"/>
+      </attribute>
+      <attribute id="PRSOK" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRSOK"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PRSOK"/>
+      </attribute>
+      <attribute id="BWTAR" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWTAR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="BWTAR"/>
+      </attribute>
+      <attribute id="BWTEX" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWTEX"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="BWTEX"/>
+      </attribute>
+      <attribute id="XCHPF" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCHPF"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="XCHPF"/>
+      </attribute>
+      <attribute id="XCHAR" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCHAR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="XCHAR"/>
+      </attribute>
+      <attribute id="STAFO" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STAFO"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="STAFO"/>
+      </attribute>
+      <attribute id="AEDAT" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AEDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="EAN11" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EAN11"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="EAN11"/>
+      </attribute>
+      <attribute id="FIXMG" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIXMG"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FIXMG"/>
+      </attribute>
+      <attribute id="PRCTR" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PRCTR"/>
+      </attribute>
+      <attribute id="MVGR1" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MVGR1"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MVGR1"/>
+      </attribute>
+      <attribute id="MVGR2" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MVGR2"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MVGR2"/>
+      </attribute>
+      <attribute id="MVGR3" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MVGR3"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MVGR3"/>
+      </attribute>
+      <attribute id="MVGR4" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MVGR4"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MVGR4"/>
+      </attribute>
+      <attribute id="MVGR5" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MVGR5"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MVGR5"/>
+      </attribute>
+      <attribute id="SUGRD" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SUGRD"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SUGRD"/>
+      </attribute>
+      <attribute id="SOBKZ" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOBKZ"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SOBKZ"/>
+      </attribute>
+      <attribute id="VPZUO" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPZUO"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VPZUO"/>
+      </attribute>
+      <attribute id="PAOBJNR" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAOBJNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PAOBJNR"/>
+      </attribute>
+      <attribute id="PS_PSP_PNR" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PS_PSP_PNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PS_PSP_PNR"/>
+      </attribute>
+      <attribute id="AUFNR" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="AUFNR"/>
+      </attribute>
+      <attribute id="VPMAT" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPMAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VPMAT"/>
+      </attribute>
+      <attribute id="VPWRK" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPWRK"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VPWRK"/>
+      </attribute>
+      <attribute id="PRBME" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRBME"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PRBME"/>
+      </attribute>
+      <attribute id="KNTTP" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNTTP"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KNTTP"/>
+      </attribute>
+      <attribute id="KZVBR" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZVBR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KZVBR"/>
+      </attribute>
+      <attribute id="SERNR" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SERNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SERNR"/>
+      </attribute>
+      <attribute id="OBJNR" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBJNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="OBJNR"/>
+      </attribute>
+      <attribute id="ABGRS" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABGRS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ABGRS"/>
+      </attribute>
+      <attribute id="BEDAE" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEDAE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="BEDAE"/>
+      </attribute>
+      <attribute id="CMTFG" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMTFG"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CMTFG"/>
+      </attribute>
+      <attribute id="CMPNT" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMPNT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CMPNT"/>
+      </attribute>
+      <attribute id="CUOBJ" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUOBJ"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CUOBJ"/>
+      </attribute>
+      <attribute id="CUOBJ_CH" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUOBJ_CH"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CUOBJ_CH"/>
+      </attribute>
+      <attribute id="CEPOK" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CEPOK"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CEPOK"/>
+      </attribute>
+      <attribute id="KOUPD" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOUPD"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KOUPD"/>
+      </attribute>
+      <attribute id="SERAIL" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SERAIL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SERAIL"/>
+      </attribute>
+      <attribute id="NACHL" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NACHL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="NACHL"/>
+      </attribute>
+      <attribute id="MAGRV" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAGRV"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MAGRV"/>
+      </attribute>
+      <attribute id="MPROK" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MPROK"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MPROK"/>
+      </attribute>
+      <attribute id="VGTYP" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGTYP"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VGTYP"/>
+      </attribute>
+      <attribute id="PROSA" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROSA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PROSA"/>
+      </attribute>
+      <attribute id="UEPVW" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UEPVW"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UEPVW"/>
+      </attribute>
+      <attribute id="KALNR" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KALNR"/>
+      </attribute>
+      <attribute id="KLVAR" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KLVAR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KLVAR"/>
+      </attribute>
+      <attribute id="SPOSN" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPOSN"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SPOSN"/>
+      </attribute>
+      <attribute id="KOWRR" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOWRR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KOWRR"/>
+      </attribute>
+      <attribute id="STADAT" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STADAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="STADAT"/>
+      </attribute>
+      <attribute id="EXART" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXART"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="EXART"/>
+      </attribute>
+      <attribute id="PREFE" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREFE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PREFE"/>
+      </attribute>
+      <attribute id="KNUMH" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMH"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KNUMH"/>
+      </attribute>
+      <attribute id="CLINT" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLINT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CLINT"/>
+      </attribute>
+      <attribute id="CHMVS" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHMVS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CHMVS"/>
+      </attribute>
+      <attribute id="STLTY" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STLTY"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="STLTY"/>
+      </attribute>
+      <attribute id="STLKN" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STLKN"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="STLKN"/>
+      </attribute>
+      <attribute id="STPOZ" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STPOZ"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="STPOZ"/>
+      </attribute>
+      <attribute id="STMAN" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STMAN"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="STMAN"/>
+      </attribute>
+      <attribute id="ZSCHL_K" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZSCHL_K"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ZSCHL_K"/>
+      </attribute>
+      <attribute id="KALSM_K" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALSM_K"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KALSM_K"/>
+      </attribute>
+      <attribute id="KALVAR" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALVAR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KALVAR"/>
+      </attribute>
+      <attribute id="KOSCH" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOSCH"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KOSCH"/>
+      </attribute>
+      <attribute id="UPMAT" order="180" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPMAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UPMAT"/>
+      </attribute>
+      <attribute id="UKONM" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UKONM"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UKONM"/>
+      </attribute>
+      <attribute id="MFRGR" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MFRGR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MFRGR"/>
+      </attribute>
+      <attribute id="PLAVO" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLAVO"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PLAVO"/>
+      </attribute>
+      <attribute id="KANNR" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KANNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KANNR"/>
+      </attribute>
+      <attribute id="ABFOR" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABFOR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ABFOR"/>
+      </attribute>
+      <attribute id="J_1BCFOP" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BCFOP"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_1BCFOP"/>
+      </attribute>
+      <attribute id="J_1BTAXLW1" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTAXLW1"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_1BTAXLW1"/>
+      </attribute>
+      <attribute id="J_1BTAXLW2" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTAXLW2"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_1BTAXLW2"/>
+      </attribute>
+      <attribute id="J_1BTXSDC" order="191" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTXSDC"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_1BTXSDC"/>
+      </attribute>
+      <attribute id="WKTNR" order="192" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WKTNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WKTNR"/>
+      </attribute>
+      <attribute id="WKTPS" order="193" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WKTPS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WKTPS"/>
+      </attribute>
+      <attribute id="SKOPF" order="194" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SKOPF"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SKOPF"/>
+      </attribute>
+      <attribute id="KZBWS" order="195" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZBWS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KZBWS"/>
+      </attribute>
+      <attribute id="WGRU1" order="196" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WGRU1"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WGRU1"/>
+      </attribute>
+      <attribute id="WGRU2" order="197" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WGRU2"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WGRU2"/>
+      </attribute>
+      <attribute id="KNUMA_PI" order="198" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMA_PI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KNUMA_PI"/>
+      </attribute>
+      <attribute id="KNUMA_AG" order="199" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMA_AG"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KNUMA_AG"/>
+      </attribute>
+      <attribute id="KZFME" order="200" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZFME"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KZFME"/>
+      </attribute>
+      <attribute id="LSTANR" order="201" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LSTANR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="LSTANR"/>
+      </attribute>
+      <attribute id="TECHS" order="202" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TECHS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TECHS"/>
+      </attribute>
+      <attribute id="BERID" order="204" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BERID"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="BERID"/>
+      </attribute>
+      <attribute id="PCTRF" order="205" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PCTRF"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PCTRF"/>
+      </attribute>
+      <attribute id="LOGSYS_EXT" order="206" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGSYS_EXT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="LOGSYS_EXT"/>
+      </attribute>
+      <attribute id="J_1BTAXLW3" order="207" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTAXLW3"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_1BTAXLW3"/>
+      </attribute>
+      <attribute id="J_1BTAXLW4" order="208" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTAXLW4"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_1BTAXLW4"/>
+      </attribute>
+      <attribute id="J_1BTAXLW5" order="209" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTAXLW5"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_1BTAXLW5"/>
+      </attribute>
+      <attribute id="STOCKLOC" order="210" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STOCKLOC"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="STOCKLOC"/>
+      </attribute>
+      <attribute id="SLOCTYPE" order="211" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SLOCTYPE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SLOCTYPE"/>
+      </attribute>
+      <attribute id="MSR_RET_REASON" order="212" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSR_RET_REASON"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MSR_RET_REASON"/>
+      </attribute>
+      <attribute id="MSR_REFUND_CODE" order="213" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSR_REFUND_CODE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MSR_REFUND_CODE"/>
+      </attribute>
+      <attribute id="MSR_APPROV_BLOCK" order="214" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSR_APPROV_BLOCK"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MSR_APPROV_BLOCK"/>
+      </attribute>
+      <attribute id="NRAB_KNUMH" order="215" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NRAB_KNUMH"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="NRAB_KNUMH"/>
+      </attribute>
+      <attribute id="TRMRISK_RELEVANT" order="216" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRMRISK_RELEVANT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TRMRISK_RELEVANT"/>
+      </attribute>
+      <attribute id="SGT_RCAT" order="217" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_RCAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SGT_RCAT"/>
+      </attribute>
+      <attribute id="VBKD_POSNR" order="218" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBKD_POSNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VBKD_POSNR"/>
+      </attribute>
+      <attribute id="VEDA_POSNR" order="219" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VEDA_POSNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VEDA_POSNR"/>
+      </attribute>
+      <attribute id="HANDOVERLOC" order="220" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HANDOVERLOC"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="HANDOVERLOC"/>
+      </attribute>
+      <attribute id="HANDOVERDATE" order="221" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HANDOVERDATE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="HANDOVERDATE"/>
+      </attribute>
+      <attribute id="HANDOVERTIME" order="222" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HANDOVERTIME"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="HANDOVERTIME"/>
+      </attribute>
+      <attribute id="TC_AUT_DET" order="223" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TC_AUT_DET"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TC_AUT_DET"/>
+      </attribute>
+      <attribute id="MANUAL_TC_REASON" order="224" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANUAL_TC_REASON"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MANUAL_TC_REASON"/>
+      </attribute>
+      <attribute id="FISCAL_INCENTIVE" order="225" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISCAL_INCENTIVE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FISCAL_INCENTIVE"/>
+      </attribute>
+      <attribute id="TAX_SUBJECT_ST" order="226" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAX_SUBJECT_ST"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAX_SUBJECT_ST"/>
+      </attribute>
+      <attribute id="FISCAL_INCENTIVE_ID" order="227" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISCAL_INCENTIVE_ID"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FISCAL_INCENTIVE_ID"/>
+      </attribute>
+      <attribute id="SPCSTO" order="228" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPCSTO"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SPCSTO"/>
+      </attribute>
+      <attribute id="REVACC_REFID" order="229" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REVACC_REFID"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="REVACC_REFID"/>
+      </attribute>
+      <attribute id="REVACC_REFTYPE" order="230" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REVACC_REFTYPE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="REVACC_REFTYPE"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="231" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="ABSTA" order="232" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ABSTA"/>
+      </attribute>
+      <attribute id="BESTA" order="233" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BESTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="BESTA"/>
+      </attribute>
+      <attribute id="CMPPI" order="234" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMPPI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CMPPI"/>
+      </attribute>
+      <attribute id="CMPPJ" order="235" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMPPJ"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CMPPJ"/>
+      </attribute>
+      <attribute id="COSTA" order="236" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="COSTA"/>
+      </attribute>
+      <attribute id="DCSTA" order="237" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DCSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="DCSTA"/>
+      </attribute>
+      <attribute id="FKSAA" order="238" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKSAA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FKSAA"/>
+      </attribute>
+      <attribute id="FSSTA" order="239" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSSTA"/>
+      </attribute>
+      <attribute id="GBSTA" order="240" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GBSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="GBSTA"/>
+      </attribute>
+      <attribute id="LFGSA" order="241" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFGSA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="LFGSA"/>
+      </attribute>
+      <attribute id="LFSTA" order="242" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="LFSTA"/>
+      </attribute>
+      <attribute id="LSSTA" order="243" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LSSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="LSSTA"/>
+      </attribute>
+      <attribute id="MANEK" order="244" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANEK"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MANEK"/>
+      </attribute>
+      <attribute id="RFGSA" order="245" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFGSA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="RFGSA"/>
+      </attribute>
+      <attribute id="RFSTA" order="246" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="RFSTA"/>
+      </attribute>
+      <attribute id="UVALL" order="247" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVALL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UVALL"/>
+      </attribute>
+      <attribute id="UVFAK" order="248" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVFAK"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UVFAK"/>
+      </attribute>
+      <attribute id="UVPRS" order="249" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVPRS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UVPRS"/>
+      </attribute>
+      <attribute id="UVVLK" order="250" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVVLK"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UVVLK"/>
+      </attribute>
+      <attribute id="UVP01" order="251" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVP01"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UVP01"/>
+      </attribute>
+      <attribute id="UVP02" order="252" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVP02"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UVP02"/>
+      </attribute>
+      <attribute id="UVP03" order="253" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVP03"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UVP03"/>
+      </attribute>
+      <attribute id="UVP04" order="254" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVP04"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UVP04"/>
+      </attribute>
+      <attribute id="UVP05" order="255" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVP05"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="UVP05"/>
+      </attribute>
+      <attribute id="HANDLE" order="257" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HANDLE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="HANDLE"/>
+      </attribute>
+      <attribute id="PBS_STATE" order="258" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PBS_STATE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PBS_STATE"/>
+      </attribute>
+      <attribute id="DUMMY_SLSDOCITEM_INCL_EEW_PS" order="259" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_SLSDOCITEM_INCL_EEW_PS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="DUMMY_SLSDOCITEM_INCL_EEW_PS"/>
+      </attribute>
+      <attribute id="MILL_SE_GPOSN" order="260" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MILL_SE_GPOSN"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MILL_SE_GPOSN"/>
+      </attribute>
+      <attribute id="MILL_BATCH_SEL_F" order="261" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MILL_BATCH_SEL_F"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MILL_BATCH_SEL_F"/>
+      </attribute>
+      <attribute id="ZAPCGKI" order="263" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAPCGKI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ZAPCGKI"/>
+      </attribute>
+      <attribute id="APCGK_EXTENDI" order="264" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APCGK_EXTENDI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="APCGK_EXTENDI"/>
+      </attribute>
+      <attribute id="ZABDATI" order="265" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZABDATI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ZABDATI"/>
+      </attribute>
+      <attribute id="AUFPL_OLC" order="266" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFPL_OLC"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="AUFPL_OLC"/>
+      </attribute>
+      <attribute id="APLZL_OLC" order="267" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APLZL_OLC"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="APLZL_OLC"/>
+      </attribute>
+      <attribute id="AD01PROFNR" order="268" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AD01PROFNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="AD01PROFNR"/>
+      </attribute>
+      <attribute id="ADMOI" order="269" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADMOI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ADMOI"/>
+      </attribute>
+      <attribute id="ADICC" order="270" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADICC"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ADICC"/>
+      </attribute>
+      <attribute id="ADPRI" order="271" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADPRI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ADPRI"/>
+      </attribute>
+      <attribute id="ADDNS" order="272" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDNS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ADDNS"/>
+      </attribute>
+      <attribute id="ADACN" order="273" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADACN"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ADACN"/>
+      </attribute>
+      <attribute id="LABSG" order="274" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LABSG"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="LABSG"/>
+      </attribute>
+      <attribute id="FABSG" order="275" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FABSG"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FABSG"/>
+      </attribute>
+      <attribute id="PR_L_L" order="276" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PR_L_L"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PR_L_L"/>
+      </attribute>
+      <attribute id="PR_F_F" order="277" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PR_F_F"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PR_F_F"/>
+      </attribute>
+      <attribute id="PR_F_L" order="278" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PR_F_L"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PR_F_L"/>
+      </attribute>
+      <attribute id="FERC_IND" order="279" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FERC_IND"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FERC_IND"/>
+      </attribute>
+      <attribute id="FSH_SEASON_YEAR" order="280" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON_YEAR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_SEASON_YEAR"/>
+      </attribute>
+      <attribute id="FSH_SEASON" order="281" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_SEASON"/>
+      </attribute>
+      <attribute id="FSH_COLLECTION" order="282" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_COLLECTION"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_COLLECTION"/>
+      </attribute>
+      <attribute id="FSH_THEME" order="283" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_THEME"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_THEME"/>
+      </attribute>
+      <attribute id="FSH_CRSD" order="284" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_CRSD"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_CRSD"/>
+      </attribute>
+      <attribute id="FSH_SEAREF" order="285" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEAREF"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_SEAREF"/>
+      </attribute>
+      <attribute id="FSH_CANDATE" order="286" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_CANDATE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_CANDATE"/>
+      </attribute>
+      <attribute id="FSH_PSM_PFM_SPLIT" order="287" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_PSM_PFM_SPLIT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_PSM_PFM_SPLIT"/>
+      </attribute>
+      <attribute id="FSH_VAS_REL" order="288" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_VAS_REL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_VAS_REL"/>
+      </attribute>
+      <attribute id="FSH_VAS_PRNT_ID" order="289" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_VAS_PRNT_ID"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_VAS_PRNT_ID"/>
+      </attribute>
+      <attribute id="FSH_TRANSACTION" order="290" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_TRANSACTION"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_TRANSACTION"/>
+      </attribute>
+      <attribute id="FSH_ITEM_GROUP" order="291" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_ITEM_GROUP"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_ITEM_GROUP"/>
+      </attribute>
+      <attribute id="FSH_ITEM" order="292" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_ITEM"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_ITEM"/>
+      </attribute>
+      <attribute id="FSH_VASREF" order="293" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_VASREF"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_VASREF"/>
+      </attribute>
+      <attribute id="FSH_GRID_COND_REC" order="294" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_GRID_COND_REC"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_GRID_COND_REC"/>
+      </attribute>
+      <attribute id="FSH_PQR_UEPOS" order="295" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_PQR_UEPOS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FSH_PQR_UEPOS"/>
+      </attribute>
+      <attribute id="KOSTL" order="296" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOSTL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="KOSTL"/>
+      </attribute>
+      <attribute id="FONDS" order="297" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FONDS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FONDS"/>
+      </attribute>
+      <attribute id="FISTL" order="298" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISTL"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FISTL"/>
+      </attribute>
+      <attribute id="FKBER" order="299" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKBER"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FKBER"/>
+      </attribute>
+      <attribute id="GRANT_NBR" order="300" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRANT_NBR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="GRANT_NBR"/>
+      </attribute>
+      <attribute id="BUDGET_PD" order="301" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDGET_PD"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="BUDGET_PD"/>
+      </attribute>
+      <attribute id="IUID_RELEVANT" order="302" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IUID_RELEVANT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="IUID_RELEVANT"/>
+      </attribute>
+      <attribute id="EQUNR" order="303" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EQUNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="EQUNR"/>
+      </attribute>
+      <attribute id="EQART" order="304" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EQART"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="EQART"/>
+      </attribute>
+      <attribute id="J_3GLVART" order="305" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GLVART"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_3GLVART"/>
+      </attribute>
+      <attribute id="J_3GDATVO" order="306" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GDATVO"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_3GDATVO"/>
+      </attribute>
+      <attribute id="J_3GDATBI" order="307" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GDATBI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_3GDATBI"/>
+      </attribute>
+      <attribute id="J_3GBELNRI" order="308" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GBELNRI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_3GBELNRI"/>
+      </attribute>
+      <attribute id="J_3GPOSNRI" order="309" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GPOSNRI"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="J_3GPOSNRI"/>
+      </attribute>
+      <attribute id="PRS_OBJNR" order="310" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRS_OBJNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PRS_OBJNR"/>
+      </attribute>
+      <attribute id="PRS_SD_SPSNR" order="311" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRS_SD_SPSNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PRS_SD_SPSNR"/>
+      </attribute>
+      <attribute id="PRS_WORK_PERIOD" order="312" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRS_WORK_PERIOD"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PRS_WORK_PERIOD"/>
+      </attribute>
+      <attribute id="TAS" order="313" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TAS"/>
+      </attribute>
+      <attribute id="BETC" order="314" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BETC"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="BETC"/>
+      </attribute>
+      <attribute id="MOD_ALLOW" order="315" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOD_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="MOD_ALLOW"/>
+      </attribute>
+      <attribute id="CANCEL_ALLOW" order="316" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CANCEL_ALLOW"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CANCEL_ALLOW"/>
+      </attribute>
+      <attribute id="PAY_METHOD" order="317" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAY_METHOD"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PAY_METHOD"/>
+      </attribute>
+      <attribute id="BPN" order="318" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BPN"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="BPN"/>
+      </attribute>
+      <attribute id="REP_FREQ" order="319" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REP_FREQ"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="REP_FREQ"/>
+      </attribute>
+      <attribute id="FMFGUS_KEY" order="320" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FMFGUS_KEY"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="FMFGUS_KEY"/>
+      </attribute>
+      <attribute id="PARGB" order="321" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARGB"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PARGB"/>
+      </attribute>
+      <attribute id="AUFPL_OAA" order="322" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFPL_OAA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="AUFPL_OAA"/>
+      </attribute>
+      <attribute id="APLZL_OAA" order="323" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APLZL_OAA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="APLZL_OAA"/>
+      </attribute>
+      <attribute id="VLCENDCU" order="324" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VLCENDCU"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="VLCENDCU"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC1" order="325" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC1"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WRF_CHARSTC1"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC2" order="326" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC2"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WRF_CHARSTC2"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC3" order="327" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC3"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WRF_CHARSTC3"/>
+      </attribute>
+      <attribute id="ARSNUM" order="328" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARSNUM"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ARSNUM"/>
+      </attribute>
+      <attribute id="ARSPOS" order="329" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARSPOS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ARSPOS"/>
+      </attribute>
+      <attribute id="WTYSC_CLMITEM" order="330" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WTYSC_CLMITEM"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WTYSC_CLMITEM"/>
+      </attribute>
+      <attribute id="WBSTA" order="331" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WBSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="WBSTA"/>
+      </attribute>
+      <attribute id="EMCST" order="332" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMCST"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="EMCST"/>
+      </attribute>
+      <attribute id="SLCST" order="333" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SLCST"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SLCST"/>
+      </attribute>
+      <attribute id="TOTAL_LCCST" order="334" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TOTAL_LCCST"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="TOTAL_LCCST"/>
+      </attribute>
+      <attribute id="PO_UNIT" order="336" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO_UNIT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PO_UNIT"/>
+      </attribute>
+      <attribute id="RFM_PSST_RULE" order="337" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFM_PSST_RULE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="RFM_PSST_RULE"/>
+      </attribute>
+      <attribute id="RFM_PSST_GROUP" order="338" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFM_PSST_GROUP"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="RFM_PSST_GROUP"/>
+      </attribute>
+      <attribute id="EXT_REF_ITEM_ID" order="339" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXT_REF_ITEM_ID"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="EXT_REF_ITEM_ID"/>
+      </attribute>
+      <attribute id="PCSTA" order="340" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PCSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="PCSTA"/>
+      </attribute>
+      <attribute id="IFRS15_RELEVANCE" order="341" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IFRS15_RELEVANCE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="IFRS15_RELEVANCE"/>
+      </attribute>
+      <attribute id="REVFP" order="343" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REVFP"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="REVFP"/>
+      </attribute>
+      <attribute id="CAPPED_NET_AMOUNT_ALERT_THLD" order="345" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CAPPED_NET_AMOUNT_ALERT_THLD"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="CAPPED_NET_AMOUNT_ALERT_THLD"/>
+      </attribute>
+      <attribute id="SESSION_CREATION_DATE" order="346" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SESSION_CREATION_DATE"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SESSION_CREATION_DATE"/>
+      </attribute>
+      <attribute id="SESSION_CREATION_TIME" order="347" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SESSION_CREATION_TIME"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="SESSION_CREATION_TIME"/>
+      </attribute>
+      <attribute id="ORIGINAL_PLANT" order="348" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ORIGINAL_PLANT"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ORIGINAL_PLANT"/>
+      </attribute>
+      <attribute id="ATP_ABC_SUBSTITUTION_STATUS" order="349" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATP_ABC_SUBSTITUTION_STATUS"/>
+        <keyMapping columnObjectName="syn_tbl_VBAP" columnName="ATP_ABC_SUBSTITUTION_STATUS"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="ZWERT" order="18" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZWERT"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="ZWERT"/>
+      </measure>
+      <measure id="ZMENG" order="19" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZMENG"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="ZMENG"/>
+      </measure>
+      <measure id="UMZIZ" order="21" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="UMZIZ"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="UMZIZ"/>
+      </measure>
+      <measure id="UMZIN" order="22" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="UMZIN"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="UMZIN"/>
+      </measure>
+      <measure id="SMENG" order="24" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SMENG"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="SMENG"/>
+      </measure>
+      <measure id="ABLFZ" order="25" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ABLFZ"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="ABLFZ"/>
+      </measure>
+      <measure id="ABSFZ" order="27" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ABSFZ"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="ABSFZ"/>
+      </measure>
+      <measure id="KBVER" order="30" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KBVER"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KBVER"/>
+      </measure>
+      <measure id="KEVER" order="31" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KEVER"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KEVER"/>
+      </measure>
+      <measure id="UEBTO" order="37" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="UEBTO"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="UEBTO"/>
+      </measure>
+      <measure id="UNTTO" order="38" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="UNTTO"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="UNTTO"/>
+      </measure>
+      <measure id="NETWR" order="44" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="NETWR"/>
+      </measure>
+      <measure id="ANTLF" order="46" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ANTLF"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="ANTLF"/>
+      </measure>
+      <measure id="KWMENG" order="49" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KWMENG"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KWMENG"/>
+      </measure>
+      <measure id="LSMENG" order="50" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="LSMENG"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="LSMENG"/>
+      </measure>
+      <measure id="KBMENG" order="51" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KBMENG"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KBMENG"/>
+      </measure>
+      <measure id="KLMENG" order="52" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KLMENG"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KLMENG"/>
+      </measure>
+      <measure id="UMVKZ" order="54" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="UMVKZ"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="UMVKZ"/>
+      </measure>
+      <measure id="UMVKN" order="55" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="UMVKN"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="UMVKN"/>
+      </measure>
+      <measure id="BRGEW" order="56" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BRGEW"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="BRGEW"/>
+      </measure>
+      <measure id="NTGEW" order="57" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NTGEW"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="NTGEW"/>
+      </measure>
+      <measure id="VOLUM" order="59" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VOLUM"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="VOLUM"/>
+      </measure>
+      <measure id="STPOS" order="76" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="STPOS"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="STPOS"/>
+      </measure>
+      <measure id="VBEAF" order="90" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VBEAF"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="VBEAF"/>
+      </measure>
+      <measure id="VBEAV" order="91" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VBEAV"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="VBEAV"/>
+      </measure>
+      <measure id="NETPR" order="93" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETPR"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="NETPR"/>
+      </measure>
+      <measure id="KPEIN" order="94" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KPEIN"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KPEIN"/>
+      </measure>
+      <measure id="LFMNG" order="110" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="LFMNG"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="LFMNG"/>
+      </measure>
+      <measure id="WAVWR" order="112" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WAVWR"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="WAVWR"/>
+      </measure>
+      <measure id="KZWI1" order="113" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KZWI1"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KZWI1"/>
+      </measure>
+      <measure id="KZWI2" order="114" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KZWI2"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KZWI2"/>
+      </measure>
+      <measure id="KZWI3" order="115" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KZWI3"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KZWI3"/>
+      </measure>
+      <measure id="KZWI4" order="116" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KZWI4"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KZWI4"/>
+      </measure>
+      <measure id="KZWI5" order="117" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KZWI5"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KZWI5"/>
+      </measure>
+      <measure id="KZWI6" order="118" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KZWI6"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KZWI6"/>
+      </measure>
+      <measure id="STCUR" order="119" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="STCUR"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="STCUR"/>
+      </measure>
+      <measure id="KMPMG" order="129" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KMPMG"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="KMPMG"/>
+      </measure>
+      <measure id="UMREF" order="139" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="UMREF"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="UMREF"/>
+      </measure>
+      <measure id="CMPRE" order="146" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CMPRE"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="CMPRE"/>
+      </measure>
+      <measure id="CMKUA" order="149" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CMKUA"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="CMKUA"/>
+      </measure>
+      <measure id="ANZSN" order="155" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ANZSN"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="ANZSN"/>
+      </measure>
+      <measure id="CMPRE_FLT" order="185" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CMPRE_FLT"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="CMPRE_FLT"/>
+      </measure>
+      <measure id="ABGES" order="187" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ABGES"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="ABGES"/>
+      </measure>
+      <measure id="MWSBP" order="203" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWSBP"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="MWSBP"/>
+      </measure>
+      <measure id="REQQTY_BU" order="256" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="REQQTY_BU"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="REQQTY_BU"/>
+      </measure>
+      <measure id="CPD_UPDAT" order="262" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CPD_UPDAT"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="CPD_UPDAT"/>
+      </measure>
+      <measure id="PO_QUAN" order="335" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PO_QUAN"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="PO_QUAN"/>
+      </measure>
+      <measure id="IFRS15_TOTAL_SSP" order="342" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="IFRS15_TOTAL_SSP"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="IFRS15_TOTAL_SSP"/>
+      </measure>
+      <measure id="CAPPED_NET_AMOUNT" order="344" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CAPPED_NET_AMOUNT"/>
+        <measureMapping columnObjectName="syn_tbl_VBAP" columnName="CAPPED_NET_AMOUNT"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

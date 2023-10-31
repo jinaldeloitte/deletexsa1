@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_FCT_S4_PURCHASE_REQUISITION_DATA" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VFCT_S4_PURCHASING_REQUISITION"/>
+  <metadata changedAt="2021-12-06 18:56:23.717"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="33"/>
+  <dataSources>
+    <DataSource id="CV_TD_EBAN">
+      <resourceUri>CV_TD_EBAN</resourceUri>
+    </DataSource>
+    <DataSource id="CV_FCT_S4_PURCHASE_ORDER">
+      <resourceUri>CV_FCT_S4_PURCHASE_ORDER</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="EBAN">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="BANFN"/>
+        <viewAttribute id="BNFPO"/>
+        <viewAttribute id="BSART"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BSTYP"/>
+        <viewAttribute id="LOEKZ"/>
+        <viewAttribute id="STATU"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BADAT"/>
+        <viewAttribute id="LFDAT"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="BEDAT"/>
+        <viewAttribute id="BSMNG"/>
+        <viewAttribute id="ELDAT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_EBAN"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="PURCHASE_ORDER">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="EKKO_EBELN"/>
+        <viewAttribute id="EKPO_EBELP"/>
+        <viewAttribute id="EKPO_EBELN"/>
+        <viewAttribute id="UNIQUEID"/>
+        <viewAttribute id="EKPO_LOEKZ"/>
+        <viewAttribute id="AEDAT"/>
+        <viewAttribute id="EKPO_MATNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="EKPO_WERKS"/>
+        <viewAttribute id="INFNR"/>
+        <viewAttribute id="KTMNG"/>
+        <viewAttribute id="EKPO_MENGE"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="BPRME"/>
+        <viewAttribute id="EKPO_NETPR"/>
+        <viewAttribute id="PEINH"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRTWR"/>
+        <viewAttribute id="ABSKZ"/>
+        <viewAttribute id="ELIKZ"/>
+        <viewAttribute id="PSTYP"/>
+        <viewAttribute id="LMEIN"/>
+        <viewAttribute id="PLIFZ"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="EMLIF"/>
+        <viewAttribute id="ANGNR"/>
+        <viewAttribute id="BUKRS_Header"/>
+        <viewAttribute id="BSTYP_Header"/>
+        <viewAttribute id="BSART_Header"/>
+        <viewAttribute id="LOEKZ_Header"/>
+        <viewAttribute id="STATU_Header"/>
+        <viewAttribute id="AEDAT_Header"/>
+        <viewAttribute id="EKKO_LIFNR"/>
+        <viewAttribute id="EKKO_EKORG"/>
+        <viewAttribute id="EKKO_EKGRP"/>
+        <viewAttribute id="BEDAT_Header"/>
+        <viewAttribute id="KDATB"/>
+        <viewAttribute id="KDATE"/>
+        <viewAttribute id="LLIEF"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KONNR"/>
+        <viewAttribute id="AUTLF"/>
+        <viewAttribute id="RESWK"/>
+        <viewAttribute id="LBLIF"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="UPINC"/>
+        <viewAttribute id="CONT"/>
+        <viewAttribute id="EKPO_MANDT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_FCT_S4_PURCHASE_ORDER">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSTYP_Header" source="BSTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSART_Header" source="BSART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATU_Header" source="STATU"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEDAT_Header" source="BEDAT"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="BANFN"/>
+        <viewAttribute id="BNFPO"/>
+        <viewAttribute id="BSART"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BSTYP"/>
+        <viewAttribute id="LOEKZ"/>
+        <viewAttribute id="STATU"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BADAT"/>
+        <viewAttribute id="LFDAT"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="BEDAT"/>
+        <viewAttribute id="BSMNG"/>
+        <viewAttribute id="ELDAT"/>
+        <viewAttribute id="EKKO_EBELN"/>
+        <viewAttribute id="EKPO_EBELP"/>
+        <viewAttribute id="EKPO_EBELN"/>
+        <viewAttribute id="UNIQUEID"/>
+        <viewAttribute id="EKPO_LOEKZ"/>
+        <viewAttribute id="AEDAT"/>
+        <viewAttribute id="EKPO_MATNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="EKPO_WERKS"/>
+        <viewAttribute id="INFNR"/>
+        <viewAttribute id="KTMNG"/>
+        <viewAttribute id="EKPO_MENGE"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="BPRME"/>
+        <viewAttribute id="EKPO_NETPR"/>
+        <viewAttribute id="PEINH"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRTWR"/>
+        <viewAttribute id="ABSKZ"/>
+        <viewAttribute id="ELIKZ"/>
+        <viewAttribute id="PSTYP"/>
+        <viewAttribute id="LMEIN"/>
+        <viewAttribute id="PLIFZ"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="EMLIF"/>
+        <viewAttribute id="ANGNR"/>
+        <viewAttribute id="BUKRS_Header"/>
+        <viewAttribute id="LOEKZ_Header"/>
+        <viewAttribute id="AEDAT_Header"/>
+        <viewAttribute id="EKKO_LIFNR"/>
+        <viewAttribute id="EKKO_EKORG"/>
+        <viewAttribute id="EKKO_EKGRP"/>
+        <viewAttribute id="KDATB"/>
+        <viewAttribute id="KDATE"/>
+        <viewAttribute id="LLIEF"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KONNR"/>
+        <viewAttribute id="AUTLF"/>
+        <viewAttribute id="RESWK"/>
+        <viewAttribute id="LBLIF"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="UPINC"/>
+        <viewAttribute id="CONT"/>
+        <viewAttribute id="BSTYP_Header"/>
+        <viewAttribute id="BSART_Header"/>
+        <viewAttribute id="STATU_Header"/>
+        <viewAttribute id="BEDAT_Header"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="EBAN">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BANFN" source="BANFN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BNFPO" source="BNFPO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSART" source="BSART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSTYP" source="BSTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOEKZ" source="LOEKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATU" source="STATU"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BADAT" source="BADAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFDAT" source="LFDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEDAT" source="BEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSMNG" source="BSMNG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELDAT" source="ELDAT"/>
+      </input>
+      <input node="PURCHASE_ORDER">
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKKO_EBELN" source="EKKO_EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKPO_EBELP" source="EKPO_EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKPO_EBELN" source="EKPO_EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UNIQUEID" source="UNIQUEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKPO_LOEKZ" source="EKPO_LOEKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AEDAT" source="AEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKPO_MATNR" source="EKPO_MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKPO_WERKS" source="EKPO_WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INFNR" source="INFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTMNG" source="KTMNG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKPO_MENGE" source="EKPO_MENGE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BPRME" source="BPRME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKPO_NETPR" source="EKPO_NETPR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PEINH" source="PEINH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR" source="NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRTWR" source="BRTWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABSKZ" source="ABSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIKZ" source="ELIKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTYP" source="PSTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LMEIN" source="LMEIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PLIFZ" source="PLIFZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NTGEW" source="NTGEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GEWEI" source="GEWEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRGEW" source="BRGEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VOLUM" source="VOLUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VOLEH" source="VOLEH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMLIF" source="EMLIF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ANGNR" source="ANGNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS_Header" source="BUKRS_Header"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOEKZ_Header" source="LOEKZ_Header"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AEDAT_Header" source="AEDAT_Header"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKKO_LIFNR" source="EKKO_LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKKO_EKORG" source="EKKO_EKORG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKKO_EKGRP" source="EKKO_EKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDATB" source="KDATB"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDATE" source="KDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LLIEF" source="LLIEF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONNR" source="KONNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUTLF" source="AUTLF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RESWK" source="RESWK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LBLIF" source="LBLIF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1" source="INCO1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UPINC" source="UPINC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CONT" source="CONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSTYP_Header" source="BSTYP_Header"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSART_Header" source="BSART_Header"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATU_Header" source="STATU_Header"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEDAT_Header" source="BEDAT_Header"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EKPO_EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EKPO_EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="EKPO_MANDT"/>
+      </input>
+    <joinAttribute name="EBELP"/>
+    <joinAttribute name="EBELN"/>
+    <joinAttribute name="MANDT"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_1">
+    <descriptions defaultDescription="VFCT_S4_PURCHASING_REQUISITION"/>
+    <attributes>
+      <attribute id="BANFN" order="1" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Requisition Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="BANFN"/>
+      </attribute>
+      <attribute id="BNFPO" order="2" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item number of purchase requisition"/>
+        <keyMapping columnObjectName="Join_1" columnName="BNFPO"/>
+      </attribute>
+      <attribute id="BSART" order="3" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Requisition Document Type"/>
+        <keyMapping columnObjectName="Join_1" columnName="BSART"/>
+      </attribute>
+      <attribute id="MANDT" order="4" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="BSTYP" order="5" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Category"/>
+        <keyMapping columnObjectName="Join_1" columnName="BSTYP"/>
+      </attribute>
+      <attribute id="LOEKZ" order="6" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Deletion indicator in purchasing document"/>
+        <keyMapping columnObjectName="Join_1" columnName="LOEKZ"/>
+      </attribute>
+      <attribute id="STATU" order="7" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Processing status of purchase requisition"/>
+        <keyMapping columnObjectName="Join_1" columnName="STATU"/>
+      </attribute>
+      <attribute id="ERNAM" order="8" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="ERDAT" order="9" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of Last Change"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="MATNR" order="10" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="MATNR"/>
+      </attribute>
+      <attribute id="WERKS" order="11" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="Join_1" columnName="WERKS"/>
+      </attribute>
+      <attribute id="BADAT" order="12" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Requisition (request) date"/>
+        <keyMapping columnObjectName="Join_1" columnName="BADAT"/>
+      </attribute>
+      <attribute id="LFDAT" order="13" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item delivery date"/>
+        <keyMapping columnObjectName="Join_1" columnName="LFDAT"/>
+      </attribute>
+      <attribute id="EBELN" order="14" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase order number"/>
+        <keyMapping columnObjectName="Join_1" columnName="EBELN"/>
+      </attribute>
+      <attribute id="EBELP" order="15" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase order item number"/>
+        <keyMapping columnObjectName="Join_1" columnName="EBELP"/>
+      </attribute>
+      <attribute id="BEDAT" order="16" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Order Date"/>
+        <keyMapping columnObjectName="Join_1" columnName="BEDAT"/>
+      </attribute>
+      <attribute id="BSMNG" order="17" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quantity ordered against this purchase requisition"/>
+        <keyMapping columnObjectName="Join_1" columnName="BSMNG"/>
+      </attribute>
+      <attribute id="ELDAT" order="18" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Receipt/Requirements date"/>
+        <keyMapping columnObjectName="Join_1" columnName="ELDAT"/>
+      </attribute>
+      <attribute id="EKKO_EBELN" order="19" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="EKKO_EBELN"/>
+      </attribute>
+      <attribute id="EKPO_EBELP" order="20" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item Number of Purchasing Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="EKPO_EBELP"/>
+      </attribute>
+      <attribute id="EKPO_EBELN" order="21" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="EKPO_EBELN"/>
+      </attribute>
+      <attribute id="UNIQUEID" order="22" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Concatenation of EBELN and EBELP"/>
+        <keyMapping columnObjectName="Join_1" columnName="UNIQUEID"/>
+      </attribute>
+      <attribute id="EKPO_LOEKZ" order="23" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Deletion indicator in purchasing document"/>
+        <keyMapping columnObjectName="Join_1" columnName="EKPO_LOEKZ"/>
+      </attribute>
+      <attribute id="AEDAT" order="24" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Item Change Date"/>
+        <keyMapping columnObjectName="Join_1" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="EKPO_MATNR" order="25" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="EKPO_MATNR"/>
+      </attribute>
+      <attribute id="BUKRS" order="26" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code"/>
+        <keyMapping columnObjectName="Join_1" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="EKPO_WERKS" order="27" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="Join_1" columnName="EKPO_WERKS"/>
+      </attribute>
+      <attribute id="INFNR" order="28" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of purchasing info record"/>
+        <keyMapping columnObjectName="Join_1" columnName="INFNR"/>
+      </attribute>
+      <attribute id="KTMNG" order="29" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Target Quantity"/>
+        <keyMapping columnObjectName="Join_1" columnName="KTMNG"/>
+      </attribute>
+      <attribute id="MEINS" order="31" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchase Order Unit of Measure"/>
+        <keyMapping columnObjectName="Join_1" columnName="MEINS"/>
+      </attribute>
+      <attribute id="BPRME" order="32" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Order Price Unit (Purchasing)"/>
+        <keyMapping columnObjectName="Join_1" columnName="BPRME"/>
+      </attribute>
+      <attribute id="PEINH" order="34" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Price unit"/>
+        <keyMapping columnObjectName="Join_1" columnName="PEINH"/>
+      </attribute>
+      <attribute id="NETWR" order="35" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Net Order Value in PO Currency"/>
+        <keyMapping columnObjectName="Join_1" columnName="NETWR"/>
+      </attribute>
+      <attribute id="BRTWR" order="36" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Gross order value in PO currency"/>
+        <keyMapping columnObjectName="Join_1" columnName="BRTWR"/>
+      </attribute>
+      <attribute id="ABSKZ" order="37" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Rejection Indicator"/>
+        <keyMapping columnObjectName="Join_1" columnName="ABSKZ"/>
+      </attribute>
+      <attribute id="ELIKZ" order="38" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="&quot;Delivery Completed&quot; Indicator"/>
+        <keyMapping columnObjectName="Join_1" columnName="ELIKZ"/>
+      </attribute>
+      <attribute id="PSTYP" order="39" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item category in purchasing document"/>
+        <keyMapping columnObjectName="Join_1" columnName="PSTYP"/>
+      </attribute>
+      <attribute id="LMEIN" order="40" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Base Unit of Measure"/>
+        <keyMapping columnObjectName="Join_1" columnName="LMEIN"/>
+      </attribute>
+      <attribute id="PLIFZ" order="41" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Planned Delivery Time in Days"/>
+        <keyMapping columnObjectName="Join_1" columnName="PLIFZ"/>
+      </attribute>
+      <attribute id="NTGEW" order="42" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Net Weight"/>
+        <keyMapping columnObjectName="Join_1" columnName="NTGEW"/>
+      </attribute>
+      <attribute id="GEWEI" order="43" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unit of Weight"/>
+        <keyMapping columnObjectName="Join_1" columnName="GEWEI"/>
+      </attribute>
+      <attribute id="BRGEW" order="44" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Gross weight"/>
+        <keyMapping columnObjectName="Join_1" columnName="BRGEW"/>
+      </attribute>
+      <attribute id="VOLUM" order="45" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Volume"/>
+        <keyMapping columnObjectName="Join_1" columnName="VOLUM"/>
+      </attribute>
+      <attribute id="VOLEH" order="46" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Volume unit"/>
+        <keyMapping columnObjectName="Join_1" columnName="VOLEH"/>
+      </attribute>
+      <attribute id="EMLIF" order="47" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Supplier to be Supplied/Who is to Receive Delivery"/>
+        <keyMapping columnObjectName="Join_1" columnName="EMLIF"/>
+      </attribute>
+      <attribute id="ANGNR" order="48" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quotation number"/>
+        <keyMapping columnObjectName="Join_1" columnName="ANGNR"/>
+      </attribute>
+      <attribute id="BUKRS_Header" order="49" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code"/>
+        <keyMapping columnObjectName="Join_1" columnName="BUKRS_Header"/>
+      </attribute>
+      <attribute id="LOEKZ_Header" order="50" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Deletion indicator in purchasing document"/>
+        <keyMapping columnObjectName="Join_1" columnName="LOEKZ_Header"/>
+      </attribute>
+      <attribute id="AEDAT_Header" order="51" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date on which the record was created"/>
+        <keyMapping columnObjectName="Join_1" columnName="AEDAT_Header"/>
+      </attribute>
+      <attribute id="EKKO_LIFNR" order="52" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Vendor&apos;s account number"/>
+        <keyMapping columnObjectName="Join_1" columnName="EKKO_LIFNR"/>
+      </attribute>
+      <attribute id="EKKO_EKORG" order="53" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing organization"/>
+        <keyMapping columnObjectName="Join_1" columnName="EKKO_EKORG"/>
+      </attribute>
+      <attribute id="EKKO_EKGRP" order="54" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Group"/>
+        <keyMapping columnObjectName="Join_1" columnName="EKKO_EKGRP"/>
+      </attribute>
+      <attribute id="KDATB" order="55" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Start of Validity Period"/>
+        <keyMapping columnObjectName="Join_1" columnName="KDATB"/>
+      </attribute>
+      <attribute id="KDATE" order="56" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="End of Validity Period"/>
+        <keyMapping columnObjectName="Join_1" columnName="KDATE"/>
+      </attribute>
+      <attribute id="LLIEF" order="57" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Goods Supplier"/>
+        <keyMapping columnObjectName="Join_1" columnName="LLIEF"/>
+      </attribute>
+      <attribute id="KUNNR" order="58" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="KONNR" order="59" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of principal purchase agreement"/>
+        <keyMapping columnObjectName="Join_1" columnName="KONNR"/>
+      </attribute>
+      <attribute id="AUTLF" order="60" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Complete Delivery Stipulated for Each Purchase Order"/>
+        <keyMapping columnObjectName="Join_1" columnName="AUTLF"/>
+      </attribute>
+      <attribute id="RESWK" order="61" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Supplying (issuing) plant in case of stock transport order"/>
+        <keyMapping columnObjectName="Join_1" columnName="RESWK"/>
+      </attribute>
+      <attribute id="LBLIF" order="62" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Field not used"/>
+        <keyMapping columnObjectName="Join_1" columnName="LBLIF"/>
+      </attribute>
+      <attribute id="INCO1" order="63" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Incoterms (Part 1)"/>
+        <keyMapping columnObjectName="Join_1" columnName="INCO1"/>
+      </attribute>
+      <attribute id="UPINC" order="64" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item Number Interval for Subitems"/>
+        <keyMapping columnObjectName="Join_1" columnName="UPINC"/>
+      </attribute>
+      <attribute id="CONT" order="65" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Contract"/>
+        <keyMapping columnObjectName="Join_1" columnName="CONT"/>
+      </attribute>
+      <attribute id="BSTYP_Header" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Category"/>
+        <keyMapping columnObjectName="Join_1" columnName="BSTYP_Header"/>
+      </attribute>
+      <attribute id="BSART_Header" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Type"/>
+        <keyMapping columnObjectName="Join_1" columnName="BSART_Header"/>
+      </attribute>
+      <attribute id="STATU_Header" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Status of Purchasing Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="STATU_Header"/>
+      </attribute>
+      <attribute id="BEDAT_Header" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Document Date"/>
+        <keyMapping columnObjectName="Join_1" columnName="BEDAT_Header"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="EKPO_MENGE" order="30" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Purchase Order Quantity"/>
+        <measureMapping columnObjectName="Join_1" columnName="EKPO_MENGE"/>
+      </measure>
+      <measure id="EKPO_NETPR" order="33" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Net Price in Purchasing Document (in Document Currency)"/>
+        <measureMapping columnObjectName="Join_1" columnName="EKPO_NETPR"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="EBAN" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="PURCHASE_ORDER" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+    <shape modelObjectName="EBAN" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="PURCHASE_ORDER" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

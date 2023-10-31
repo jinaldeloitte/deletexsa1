@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_MARA" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="true" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_MD_MARA_TXT"/>
+  <metadata changedAt="2022-01-11 16:33:50.137"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_V_MARA_MAKT">
+      <resourceUri>syn_tbl_V_MARA_MAKT</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_V_MARA_MAKT">
+    <descriptions/>
+    <attributes>
+      <attribute id="MATNR" order="1" attributeHierarchyActive="false" descriptionColumnName="MAKTX" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="syn_tbl_V_MARA_MAKT" columnName="MATNR"/>
+      </attribute>
+      <attribute id="MAKTX" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAKTX"/>
+        <keyMapping columnObjectName="syn_tbl_V_MARA_MAKT" columnName="MAKTX"/>
+      </attribute>
+      <attribute id="MEINS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="syn_tbl_V_MARA_MAKT" columnName="MEINS"/>
+      </attribute>
+      <attribute id="MATKL" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATKL"/>
+        <keyMapping columnObjectName="syn_tbl_V_MARA_MAKT" columnName="MATKL"/>
+      </attribute>
+      <attribute id="MTART" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MTART"/>
+        <keyMapping columnObjectName="syn_tbl_V_MARA_MAKT" columnName="MTART"/>
+      </attribute>
+      <attribute id="MANDT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_V_MARA_MAKT" columnName="MANDT"/>
+      </attribute>
+      <attribute id="ERNAM" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="syn_tbl_V_MARA_MAKT" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="SPRAS" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPRAS"/>
+        <keyMapping columnObjectName="syn_tbl_V_MARA_MAKT" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="LAEDA" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAEDA"/>
+        <keyMapping columnObjectName="syn_tbl_V_MARA_MAKT" columnName="LAEDA"/>
+      </attribute>
+      <attribute id="BEGRU" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEGRU"/>
+        <keyMapping columnObjectName="syn_tbl_V_MARA_MAKT" columnName="BEGRU"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

@@ -1,0 +1,2250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="HANA_CONTENT.STAGING_MODELS.CROSSFUNCTION::CV_DIM_MD_CUSTOMER_DATA" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Customer Data"/>
+  <metadata changedAt="2021-12-06 18:55:06.931"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="70"/>
+  <dataSources>
+    <DataSource id="CV_MD_KNA1">
+      <resourceUri>CV_MD_KNA1</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_KNB1">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_KNB1</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVK0T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK0T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVK9T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK9T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVK1T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK1T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_T005U">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_T005U</resourceUri>
+    </DataSource>
+    <DataSource id="HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK1T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK1T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVK6T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK6T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVK2T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK2T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVK3T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK3T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVK4T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK4T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVK5T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK5T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVK7T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK7T</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TVK8T">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK8T</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Customer_Basic">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="TXJCD"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_KNA1"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Customer_Company_Code">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_KNB1"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="TXJCD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Customer_Basic">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TXJCD" source="TXJCD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      </input>
+      <input node="Customer_Company_Code">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KUNNR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="VTEXT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVK0T"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      </input>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KATR10"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="VTEXT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVK9T"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_3" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      </input>
+      <input node="Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KATR9"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="KATR1"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVK1T"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_4" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_9"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_9" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      </input>
+      <input node="Projection_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KATR1"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_4">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BLAND"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="BEZEI"/>
+        <viewAttribute id="SPRAS"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_T005U"/>
+    <filter>(&quot;SPRAS&quot; ='$$language$$')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_5" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_9"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="LAND1_1"/>
+        <viewAttribute id="BEZEI"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_9" source="VTEXT_9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      </input>
+      <input node="Projection_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1_1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEZEI" source="BEZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="BLAND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="REGIO"/>
+    <joinAttribute name="LAND1"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_5">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="VTEXT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_TVK1T"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_6" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_9"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="BEZEI"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_5">
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_9" source="VTEXT_9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEZEI" source="BEZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      </input>
+      <input node="Projection_5">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+      </input>
+    <joinAttribute name="KATR1"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_6">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="VTEXT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVK6T"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_7" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_9"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="BEZEI"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_6">
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_9" source="VTEXT_9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEZEI" source="BEZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      </input>
+      <input node="Projection_6">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR6" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+      </input>
+    <joinAttribute name="KATR6"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_7">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="VTEXT2"/>
+        <viewAttribute id="MANDT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVK2T">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT2" source="VTEXT"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_8" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_9"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="BEZEI"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="VTEXT2"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_7">
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_9" source="VTEXT_9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEZEI" source="BEZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR6" source="VTEXT_KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      </input>
+      <input node="Projection_7">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT2" source="VTEXT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KATR2"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_8">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT3"/>
+        <viewAttribute id="KATR3"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVK3T">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT3" source="VTEXT"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_9" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="BEZEI"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="VTEXT_9"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="VTEXT2"/>
+        <viewAttribute id="VTEXT3"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_8">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR6" source="VTEXT_KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEZEI" source="BEZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_9" source="VTEXT_9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT2" source="VTEXT2"/>
+      </input>
+      <input node="Projection_8">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT3" source="VTEXT3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KATR3"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_9">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT4"/>
+        <viewAttribute id="KATR4"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVK4T">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT4" source="VTEXT"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_10" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_9"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="BEZEI"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="VTEXT4"/>
+        <viewAttribute id="VTEXT2"/>
+        <viewAttribute id="VTEXT3"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_9">
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_9" source="VTEXT_9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEZEI" source="BEZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR6" source="VTEXT_KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT2" source="VTEXT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT3" source="VTEXT3"/>
+      </input>
+      <input node="Projection_9">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT4" source="VTEXT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KATR4"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_10">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT5"/>
+        <viewAttribute id="KATR5"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVK5T">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT5" source="VTEXT"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_11" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="BEZEI"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="VTEXT_9"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="VTEXT5"/>
+        <viewAttribute id="VTEXT4"/>
+        <viewAttribute id="VTEXT2"/>
+        <viewAttribute id="VTEXT3"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_10">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR6" source="VTEXT_KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEZEI" source="BEZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_9" source="VTEXT_9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT4" source="VTEXT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT2" source="VTEXT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT3" source="VTEXT3"/>
+      </input>
+      <input node="Projection_10">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT5" source="VTEXT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      </input>
+    <joinAttribute name="KATR5"/>
+    <joinAttribute name="MANDT"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_11">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT7"/>
+        <viewAttribute id="KATR7"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVK7T">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT7" source="VTEXT"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_12" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="VTEXT_9"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="BEZEI"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="VTEXT7"/>
+        <viewAttribute id="VTEXT5"/>
+        <viewAttribute id="VTEXT4"/>
+        <viewAttribute id="VTEXT2"/>
+        <viewAttribute id="VTEXT3"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_11">
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_9" source="VTEXT_9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEZEI" source="BEZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR6" source="VTEXT_KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT5" source="VTEXT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT4" source="VTEXT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT2" source="VTEXT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT3" source="VTEXT3"/>
+      </input>
+      <input node="Projection_11">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT7" source="VTEXT7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KATR7"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_12">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VTEXT8"/>
+        <viewAttribute id="KATR8"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_TVK8T">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT8" source="VTEXT"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_13" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="AUFSD"/>
+        <viewAttribute id="VTEXT_KATR6"/>
+        <viewAttribute id="KUNNR_KNB1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="VTEXT"/>
+        <viewAttribute id="BEZEI"/>
+        <viewAttribute id="VTEXT_1"/>
+        <viewAttribute id="AKONT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="STCDT"/>
+        <viewAttribute id="STCD5"/>
+        <viewAttribute id="STCD4"/>
+        <viewAttribute id="STCD3"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="STCD2"/>
+        <viewAttribute id="STCD1"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="BRAN5"/>
+        <viewAttribute id="BRAN4"/>
+        <viewAttribute id="BRAN3"/>
+        <viewAttribute id="BRAN2"/>
+        <viewAttribute id="BRAN1"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="LAND1"/>
+        <viewAttribute id="VTEXT_9"/>
+        <viewAttribute id="VTEXT_10"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="ADRNR"/>
+        <viewAttribute id="KATR1"/>
+        <viewAttribute id="KATR10"/>
+        <viewAttribute id="KATR2"/>
+        <viewAttribute id="KATR3"/>
+        <viewAttribute id="KATR4"/>
+        <viewAttribute id="KATR5"/>
+        <viewAttribute id="KATR6"/>
+        <viewAttribute id="KATR7"/>
+        <viewAttribute id="KATR8"/>
+        <viewAttribute id="KATR9"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="ORT01"/>
+        <viewAttribute id="PSTLZ"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="VTEXT8"/>
+        <viewAttribute id="VTEXT7"/>
+        <viewAttribute id="VTEXT5"/>
+        <viewAttribute id="VTEXT4"/>
+        <viewAttribute id="VTEXT2"/>
+        <viewAttribute id="VTEXT3"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_12">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFSD" source="AUFSD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_KATR6" source="VTEXT_KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_KNB1" source="KUNNR_KNB1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEZEI" source="BEZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_1" source="VTEXT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKONT" source="AKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCDT" source="STCDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD5" source="STCD5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD4" source="STCD4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD3" source="STCD3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD2" source="STCD2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCD1" source="STCD1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG4" source="KDKG4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG3" source="KDKG3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG2" source="KDKG2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG1" source="KDKG1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDKG5" source="KDKG5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN5" source="BRAN5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN4" source="BRAN4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN3" source="BRAN3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN2" source="BRAN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRAN1" source="BRAN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOKD" source="KTOKD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_9" source="VTEXT_9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT_10" source="VTEXT_10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADRNR" source="ADRNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR1" source="KATR1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR10" source="KATR10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR2" source="KATR2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR3" source="KATR3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR4" source="KATR4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR5" source="KATR5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR6" source="KATR6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR7" source="KATR7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR9" source="KATR9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORT01" source="ORT01"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PSTLZ" source="PSTLZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGIO" source="REGIO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT7" source="VTEXT7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT5" source="VTEXT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT4" source="VTEXT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT2" source="VTEXT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT3" source="VTEXT3"/>
+      </input>
+      <input node="Projection_12">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT8" source="VTEXT8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KATR8" source="KATR8"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="KATR8"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_13">
+    <descriptions defaultDescription="Customer Data"/>
+    <attributes>
+      <attribute id="ERNAM" order="1" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="Join_13" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="ERDAT" order="2" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date on which the Record Was Created"/>
+        <keyMapping columnObjectName="Join_13" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="AUFSD" order="3" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Central order block for customer"/>
+        <keyMapping columnObjectName="Join_13" columnName="AUFSD"/>
+      </attribute>
+      <attribute id="VTEXT_KATR6" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT_KATR6"/>
+      </attribute>
+      <attribute id="KUNNR_KNB1" order="5" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_13" columnName="KUNNR_KNB1"/>
+      </attribute>
+      <attribute id="NAME2" order="6" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 2"/>
+        <keyMapping columnObjectName="Join_13" columnName="NAME2"/>
+      </attribute>
+      <attribute id="VTEXT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT"/>
+      </attribute>
+      <attribute id="BEZEI" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="BEZEI"/>
+      </attribute>
+      <attribute id="VTEXT_1" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT_1"/>
+      </attribute>
+      <attribute id="AKONT" order="10" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reconciliation Account in General Ledger"/>
+        <keyMapping columnObjectName="Join_13" columnName="AKONT"/>
+      </attribute>
+      <attribute id="ZTERM" order="11" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Terms of payment key"/>
+        <keyMapping columnObjectName="Join_13" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="VBUND" order="12" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company ID of trading partner"/>
+        <keyMapping columnObjectName="Join_13" columnName="VBUND"/>
+      </attribute>
+      <attribute id="STCDT" order="13" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax Number Type"/>
+        <keyMapping columnObjectName="Join_13" columnName="STCDT"/>
+      </attribute>
+      <attribute id="STCD5" order="14" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax Number 5"/>
+        <keyMapping columnObjectName="Join_13" columnName="STCD5"/>
+      </attribute>
+      <attribute id="STCD4" order="15" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax Number 4"/>
+        <keyMapping columnObjectName="Join_13" columnName="STCD4"/>
+      </attribute>
+      <attribute id="STCD3" order="16" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax Number 3"/>
+        <keyMapping columnObjectName="Join_13" columnName="STCD3"/>
+      </attribute>
+      <attribute id="STCEG" order="17" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="STCEG"/>
+      </attribute>
+      <attribute id="STCD2" order="18" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="STCD2"/>
+      </attribute>
+      <attribute id="STCD1" order="19" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="STCD1"/>
+      </attribute>
+      <attribute id="KDKG4" order="20" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="KDKG4"/>
+      </attribute>
+      <attribute id="KDKG3" order="21" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="KDKG3"/>
+      </attribute>
+      <attribute id="KDKG2" order="22" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="KDKG2"/>
+      </attribute>
+      <attribute id="KDKG1" order="23" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="KDKG1"/>
+      </attribute>
+      <attribute id="KDKG5" order="24" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="KDKG5"/>
+      </attribute>
+      <attribute id="BRAN5" order="25" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="BRAN5"/>
+      </attribute>
+      <attribute id="BRAN4" order="26" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="BRAN4"/>
+      </attribute>
+      <attribute id="BRAN3" order="27" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="BRAN3"/>
+      </attribute>
+      <attribute id="BRAN2" order="28" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="BRAN2"/>
+      </attribute>
+      <attribute id="BRAN1" order="29" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Join_13" columnName="BRAN1"/>
+      </attribute>
+      <attribute id="KTOKD" order="30" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Account Group"/>
+        <keyMapping columnObjectName="Join_13" columnName="KTOKD"/>
+      </attribute>
+      <attribute id="LAND1" order="31" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Country Key"/>
+        <keyMapping columnObjectName="Join_13" columnName="LAND1"/>
+      </attribute>
+      <attribute id="VTEXT_9" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT_9"/>
+      </attribute>
+      <attribute id="VTEXT_10" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT_10"/>
+      </attribute>
+      <attribute id="MANDT" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_13" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KUNNR" order="35" attributeHierarchyActive="false" descriptionColumnName="NAME1" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_13" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="BUKRS" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code"/>
+        <keyMapping columnObjectName="Join_13" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="ADRNR" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRNR"/>
+        <keyMapping columnObjectName="Join_13" columnName="ADRNR"/>
+      </attribute>
+      <attribute id="KATR1" order="38" attributeHierarchyActive="false" descriptionColumnName="VTEXT" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 1"/>
+        <keyMapping columnObjectName="Join_13" columnName="KATR1"/>
+      </attribute>
+      <attribute id="KATR10" order="39" attributeHierarchyActive="false" descriptionColumnName="VTEXT_10" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 10"/>
+        <keyMapping columnObjectName="Join_13" columnName="KATR10"/>
+      </attribute>
+      <attribute id="KATR2" order="40" attributeHierarchyActive="false" descriptionColumnName="VTEXT2" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 2"/>
+        <keyMapping columnObjectName="Join_13" columnName="KATR2"/>
+      </attribute>
+      <attribute id="KATR3" order="41" attributeHierarchyActive="false" descriptionColumnName="VTEXT3" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 3"/>
+        <keyMapping columnObjectName="Join_13" columnName="KATR3"/>
+      </attribute>
+      <attribute id="KATR4" order="42" attributeHierarchyActive="false" descriptionColumnName="VTEXT4" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 4"/>
+        <keyMapping columnObjectName="Join_13" columnName="KATR4"/>
+      </attribute>
+      <attribute id="KATR5" order="43" attributeHierarchyActive="false" descriptionColumnName="VTEXT5" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 5"/>
+        <keyMapping columnObjectName="Join_13" columnName="KATR5"/>
+      </attribute>
+      <attribute id="KATR6" order="44" attributeHierarchyActive="false" descriptionColumnName="VTEXT_KATR6" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 6"/>
+        <keyMapping columnObjectName="Join_13" columnName="KATR6"/>
+      </attribute>
+      <attribute id="KATR7" order="45" attributeHierarchyActive="false" descriptionColumnName="VTEXT7" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 7"/>
+        <keyMapping columnObjectName="Join_13" columnName="KATR7"/>
+      </attribute>
+      <attribute id="KATR8" order="46" attributeHierarchyActive="false" descriptionColumnName="VTEXT8" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 8"/>
+        <keyMapping columnObjectName="Join_13" columnName="KATR8"/>
+      </attribute>
+      <attribute id="KATR9" order="47" attributeHierarchyActive="false" descriptionColumnName="VTEXT_9" displayAttribute="false">
+        <descriptions defaultDescription="Attribute 9"/>
+        <keyMapping columnObjectName="Join_13" columnName="KATR9"/>
+      </attribute>
+      <attribute id="NAME1" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1"/>
+        <keyMapping columnObjectName="Join_13" columnName="NAME1"/>
+      </attribute>
+      <attribute id="ORT01" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="City"/>
+        <keyMapping columnObjectName="Join_13" columnName="ORT01"/>
+      </attribute>
+      <attribute id="PSTLZ" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Postal Code"/>
+        <keyMapping columnObjectName="Join_13" columnName="PSTLZ"/>
+      </attribute>
+      <attribute id="REGIO" order="51" attributeHierarchyActive="false" descriptionColumnName="BEZEI" displayAttribute="false">
+        <descriptions defaultDescription="Region (State, Province, County)"/>
+        <keyMapping columnObjectName="Join_13" columnName="REGIO"/>
+      </attribute>
+      <attribute id="WERKS" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="Join_13" columnName="WERKS"/>
+      </attribute>
+      <attribute id="VTEXT8" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT8"/>
+      </attribute>
+      <attribute id="VTEXT7" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT7"/>
+      </attribute>
+      <attribute id="VTEXT5" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT5"/>
+      </attribute>
+      <attribute id="VTEXT4" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT4"/>
+      </attribute>
+      <attribute id="VTEXT2" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT2"/>
+      </attribute>
+      <attribute id="VTEXT3" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Join_13" columnName="VTEXT3"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="833" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Customer_Basic" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="1413"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Customer_Company_Code" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="1413"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="1317"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Customer_Basic" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Customer_Company_Code" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="1317"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="175" y="1221"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="329" y="1221"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="250" y="1125"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="404" y="1125"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="324" y="1029"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_3" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_3" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="478" y="1029"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="397" y="933"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_4" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_4" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="551" y="933"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_6" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="469" y="837"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_5" modelObjectNameSpace="Join_6" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_5" modelObjectNameSpace="Join_6" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_6" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="623" y="837"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_7" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="540" y="741"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_6" modelObjectNameSpace="Join_7" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_6" modelObjectNameSpace="Join_7" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_7" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="694" y="741"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_8" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="612" y="645"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_7" modelObjectNameSpace="Join_8" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_7" modelObjectNameSpace="Join_8" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_8" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="766" y="645"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_9" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="685" y="549"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_8" modelObjectNameSpace="Join_9" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_8" modelObjectNameSpace="Join_9" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_9" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="839" y="549"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_10" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="759" y="453"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_9" modelObjectNameSpace="Join_10" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_9" modelObjectNameSpace="Join_10" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_10" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="913" y="453"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_11" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="834" y="357"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_10" modelObjectNameSpace="Join_11" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_10" modelObjectNameSpace="Join_11" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_11" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="988" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_12" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="910" y="261"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_11" modelObjectNameSpace="Join_12" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_11" modelObjectNameSpace="Join_12" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_12" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="756" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_13" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="833" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    
+    <shape modelObjectName="Join_12" modelObjectNameSpace="Join_13" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_12" modelObjectNameSpace="Join_13" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

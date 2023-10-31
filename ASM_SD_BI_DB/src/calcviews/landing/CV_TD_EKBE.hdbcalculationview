@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_EKBE" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_EKBE"/>
+  <metadata changedAt="2021-12-06 18:11:47.552" createdAt="2019-11-27 13:28:37.157"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_EKBE">
+      <resourceUri>syn_tbl_EKBE</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_EKBE">
+    <descriptions defaultDescription="CV_TD_EKBE"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="MANDT"/>
+      </attribute>
+      <attribute id="EBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELN"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="EBELN"/>
+      </attribute>
+      <attribute id="EBELP" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELP"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="EBELP"/>
+      </attribute>
+      <attribute id="ZEKKN" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEKKN"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="ZEKKN"/>
+      </attribute>
+      <attribute id="VGABE" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGABE"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="VGABE"/>
+      </attribute>
+      <attribute id="GJAHR" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="BELNR" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="BELNR"/>
+      </attribute>
+      <attribute id="BUZEI" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZEI"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="BUZEI"/>
+      </attribute>
+      <attribute id="BEWTP" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEWTP"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="BEWTP"/>
+      </attribute>
+      <attribute id="BWART" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWART"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="BWART"/>
+      </attribute>
+      <attribute id="BUDAT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="BUDAT"/>
+      </attribute>
+      <attribute id="WAERS" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERS"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="WAERS"/>
+      </attribute>
+      <attribute id="SHKZG" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHKZG"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="SHKZG"/>
+      </attribute>
+      <attribute id="BWTAR" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWTAR"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="BWTAR"/>
+      </attribute>
+      <attribute id="ELIKZ" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ELIKZ"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="ELIKZ"/>
+      </attribute>
+      <attribute id="XBLNR" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBLNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="XBLNR"/>
+      </attribute>
+      <attribute id="LFGJA" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFGJA"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="LFGJA"/>
+      </attribute>
+      <attribute id="LFBNR" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFBNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="LFBNR"/>
+      </attribute>
+      <attribute id="LFPOS" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFPOS"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="LFPOS"/>
+      </attribute>
+      <attribute id="GRUND" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRUND"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="GRUND"/>
+      </attribute>
+      <attribute id="CPUDT" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPUDT"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="CPUDT"/>
+      </attribute>
+      <attribute id="CPUTM" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPUTM"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="CPUTM"/>
+      </attribute>
+      <attribute id="EVERE" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EVERE"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="EVERE"/>
+      </attribute>
+      <attribute id="MATNR" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="MATNR"/>
+      </attribute>
+      <attribute id="WERKS" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="WERKS"/>
+      </attribute>
+      <attribute id="XWSBR" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XWSBR"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="XWSBR"/>
+      </attribute>
+      <attribute id="ETENS" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETENS"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="ETENS"/>
+      </attribute>
+      <attribute id="KNUMV" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMV"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="KNUMV"/>
+      </attribute>
+      <attribute id="MWSKZ" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSKZ"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="MWSKZ"/>
+      </attribute>
+      <attribute id="LSMEH" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LSMEH"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="LSMEH"/>
+      </attribute>
+      <attribute id="EMATN" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMATN"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="EMATN"/>
+      </attribute>
+      <attribute id="HSWAE" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HSWAE"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="HSWAE"/>
+      </attribute>
+      <attribute id="CHARG" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHARG"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="CHARG"/>
+      </attribute>
+      <attribute id="BLDAT" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLDAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="BLDAT"/>
+      </attribute>
+      <attribute id="XWOFF" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XWOFF"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="XWOFF"/>
+      </attribute>
+      <attribute id="XUNPL" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XUNPL"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="XUNPL"/>
+      </attribute>
+      <attribute id="ERNAM" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="SRVPOS" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SRVPOS"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="SRVPOS"/>
+      </attribute>
+      <attribute id="PACKNO" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PACKNO"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="PACKNO"/>
+      </attribute>
+      <attribute id="INTROW" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTROW"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="INTROW"/>
+      </attribute>
+      <attribute id="BEKKN" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEKKN"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="BEKKN"/>
+      </attribute>
+      <attribute id="LEMIN" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEMIN"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="LEMIN"/>
+      </attribute>
+      <attribute id="SAPRL" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAPRL"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="SAPRL"/>
+      </attribute>
+      <attribute id="WEORA" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEORA"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="WEORA"/>
+      </attribute>
+      <attribute id="XMACC" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XMACC"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="XMACC"/>
+      </attribute>
+      <attribute id="INV_ITEM_ORIGIN" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INV_ITEM_ORIGIN"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="INV_ITEM_ORIGIN"/>
+      </attribute>
+      <attribute id="VBELN_ST" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_ST"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="VBELN_ST"/>
+      </attribute>
+      <attribute id="VBELP_ST" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELP_ST"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="VBELP_ST"/>
+      </attribute>
+      <attribute id="SGT_SCAT" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_SCAT"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="SGT_SCAT"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="ET_UPD" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ET_UPD"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="ET_UPD"/>
+      </attribute>
+      <attribute id="_CWM_TY2TQ" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_TY2TQ"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="/CWM/TY2TQ"/>
+      </attribute>
+      <attribute id="J_SC_DIE_COMP_F" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_SC_DIE_COMP_F"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="J_SC_DIE_COMP_F"/>
+      </attribute>
+      <attribute id="FSH_SEASON_YEAR" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON_YEAR"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="FSH_SEASON_YEAR"/>
+      </attribute>
+      <attribute id="FSH_SEASON" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="FSH_SEASON"/>
+      </attribute>
+      <attribute id="FSH_COLLECTION" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_COLLECTION"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="FSH_COLLECTION"/>
+      </attribute>
+      <attribute id="FSH_THEME" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_THEME"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="FSH_THEME"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC1" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC1"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="WRF_CHARSTC1"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC2" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC2"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="WRF_CHARSTC2"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC3" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC3"/>
+        <keyMapping columnObjectName="syn_tbl_EKBE" columnName="WRF_CHARSTC3"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="MENGE" order="12" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MENGE"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="MENGE"/>
+      </measure>
+      <measure id="BPMNG" order="13" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BPMNG"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="BPMNG"/>
+      </measure>
+      <measure id="DMBTR" order="14" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBTR"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="DMBTR"/>
+      </measure>
+      <measure id="WRBTR" order="15" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WRBTR"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="WRBTR"/>
+      </measure>
+      <measure id="AREWR" order="17" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="AREWR"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="AREWR"/>
+      </measure>
+      <measure id="WESBS" order="18" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WESBS"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="WESBS"/>
+      </measure>
+      <measure id="BPWES" order="19" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BPWES"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="BPWES"/>
+      </measure>
+      <measure id="REEWR" order="30" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="REEWR"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="REEWR"/>
+      </measure>
+      <measure id="REFWR" order="32" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="REFWR"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="REFWR"/>
+      </measure>
+      <measure id="LSMNG" order="39" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="LSMNG"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="LSMNG"/>
+      </measure>
+      <measure id="AREWW" order="42" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="AREWW"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="AREWW"/>
+      </measure>
+      <measure id="BAMNG" order="44" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BAMNG"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="BAMNG"/>
+      </measure>
+      <measure id="AREWB" order="55" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="AREWB"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="AREWB"/>
+      </measure>
+      <measure id="REWRB" order="56" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="REWRB"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="REWRB"/>
+      </measure>
+      <measure id="MENGE_POP" order="58" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MENGE_POP"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="MENGE_POP"/>
+      </measure>
+      <measure id="BPMNG_POP" order="59" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BPMNG_POP"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="BPMNG_POP"/>
+      </measure>
+      <measure id="DMBTR_POP" order="60" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMBTR_POP"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="DMBTR_POP"/>
+      </measure>
+      <measure id="WRBTR_POP" order="61" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WRBTR_POP"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="WRBTR_POP"/>
+      </measure>
+      <measure id="WESBB" order="62" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WESBB"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="WESBB"/>
+      </measure>
+      <measure id="BPWEB" order="63" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BPWEB"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="BPWEB"/>
+      </measure>
+      <measure id="AREWR_POP" order="65" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="AREWR_POP"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="AREWR_POP"/>
+      </measure>
+      <measure id="KUDIF" order="66" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KUDIF"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="KUDIF"/>
+      </measure>
+      <measure id="RETAMT_FC" order="67" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RETAMT_FC"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="RETAMT_FC"/>
+      </measure>
+      <measure id="RETAMT_LC" order="68" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RETAMT_LC"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="RETAMT_LC"/>
+      </measure>
+      <measure id="RETAMTP_FC" order="69" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RETAMTP_FC"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="RETAMTP_FC"/>
+      </measure>
+      <measure id="RETAMTP_LC" order="70" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RETAMTP_LC"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="RETAMTP_LC"/>
+      </measure>
+      <measure id="WKURS" order="72" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WKURS"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="WKURS"/>
+      </measure>
+      <measure id="_CWM_BAMNG" order="79" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_BAMNG"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="BAMNG"/>
+      </measure>
+      <measure id="_CWM_WESBS" order="80" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_WESBS"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="WESBS"/>
+      </measure>
+      <measure id="_CWM_WESBB" order="82" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_WESBB"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="WESBB"/>
+      </measure>
+      <measure id="QTY_DIFF" order="88" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="QTY_DIFF"/>
+        <measureMapping columnObjectName="syn_tbl_EKBE" columnName="QTY_DIFF"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

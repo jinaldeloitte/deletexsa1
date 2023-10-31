@@ -1,0 +1,1656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="HANA_CONTENT.REPORTING_MODELS.SUPPLY_CHAIN.SD::CV_RPT_R0273_STO_BILLING_REPORT" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_RPT_R0273_STO_BILLING_REPORT"/>
+  <metadata changedAt="2022-01-12 11:35:53.152"/>
+  <localVariables>
+    <variable id="IP_COMPCODE" parameter="true">
+      <descriptions defaultDescription="IP_COMPCODE"/>
+      <variableProperties datatype="NVARCHAR" defaultValue="ALL" length="4" mandatory="false" scale="null">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_MD_T001_TXT</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>BUKRS</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_MATERIAL" parameter="true">
+      <descriptions defaultDescription="IP_MATERIAL"/>
+      <variableProperties datatype="NVARCHAR" defaultValue="ALL" length="40" mandatory="false" scale="null">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_MD_MARA</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>MATNR</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="43"/>
+  <dataSources>
+    <DataSource id="CV_TD_LIKP">
+      <resourceUri>CV_TD_LIKP</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_VBFA">
+      <resourceUri>CV_TD_VBFA</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_VBRK">
+      <resourceUri>CV_TD_VBRK</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_ACDOCA">
+      <resourceUri>CV_TD_ACDOCA</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_VBAP">
+      <resourceUri>CV_TD_VBAP</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_EKKN">
+      <resourceUri>CV_TD_EKKN</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_EKPO">
+      <resourceUri>CV_TD_EKPO</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_MATDOC">
+      <resourceUri>CV_TD_MATDOC</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_EKBE">
+      <resourceUri>CV_TD_EKBE</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_EKKO">
+      <resourceUri>CV_TD_EKKO</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_PRCD_ELEMENTS">
+      <resourceUri>CV_MD_PRCD_ELEMENTS</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_MBEW">
+      <resourceUri>CV_MD_MBEW</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_MAKT">
+      <resourceUri>CV_MD_MAKT</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_LIKP">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="FAKSK"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_LIKP"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_VBFA">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELV"/>
+        <viewAttribute id="VBELN_VBFA"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_VBFA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_VBFA" source="VBELN"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_VBRK">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN_VBRK"/>
+        <viewAttribute id="KNUMV"/>
+        <viewAttribute id="ACCOUNTING_DOC"/>
+        <viewAttribute id="BILLING_DOC_DATE"/>
+        <viewAttribute id="BILLING_DOC_TYPE"/>
+        <viewAttribute id="ACCOUNTING_TRANSFER_STATUS"/>
+        <viewAttribute id="CREATION_DATE"/>
+        <viewAttribute id="LAST_CHANGE_DATE"/>
+        <viewAttribute id="BILLING_COMPANY_CODE"/>
+        <viewAttribute id="BUYER_ENTITY_CODE"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_VBRK">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_VBRK" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_DOC" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_DATE" source="FKDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_TYPE" source="FKART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_TRANSFER_STATUS" source="RFBSK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATION_DATE" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAST_CHANGE_DATE" source="AEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_COMPANY_CODE" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUYER_ENTITY_CODE" source="BUCHK"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_ACDOCA">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="RCLNT"/>
+        <viewAttribute id="RBUKRS"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="AWREF"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="TSL"/>
+        <viewAttribute id="BELNR_ACDOCA"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_ACDOCA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_ACDOCA" source="BELNR"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_VBAP">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="SALES_PROFITCTR"/>
+        <viewAttribute id="LSA_ADJ_AMOUNT"/>
+        <viewAttribute id="NET_VALUE_AMOUNT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_VBAP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_PROFITCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSA_ADJ_AMOUNT" source="KZWI2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_VALUE_AMOUNT" source="KZWI5"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_EKKN">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="SO_DOC_ITEM"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_EKKN">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SO_DOC_ITEM" source="VBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="VBELN"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_EKPO" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="ORDERQTY"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_EKPO">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="MENGE"/>
+      </input>
+    <filter>(in (&quot;PO_MATRIAL&quot;,$$IP_MATERIAL$$) or in ($$IP_MATERIAL$$, 'ALL'))</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_MATDOC">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATERIAL_DOCUMENT"/>
+        <viewAttribute id="MATERIAL_COMPANY_CODE"/>
+        <viewAttribute id="PROFIT_CTR"/>
+        <viewAttribute id="GOODS_MOVEMENT_TYPE"/>
+        <viewAttribute id="PLANT"/>
+        <viewAttribute id="POSTING_DATE"/>
+        <viewAttribute id="FISCALYR"/>
+        <viewAttribute id="FISCALYR_PD"/>
+        <viewAttribute id="SAKTO"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_MATDOC">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATERIAL_DOCUMENT" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATERIAL_COMPANY_CODE" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROFIT_CTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GOODS_MOVEMENT_TYPE" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PLANT" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSTING_DATE" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FISCALYR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FISCALYR_PD" source="GJPER"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_EKBE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR_EKBE"/>
+        <viewAttribute id="STO_DOCUMENT"/>
+        <viewAttribute id="STO_ITM"/>
+        <viewAttribute id="EBELNT"/>
+        <viewAttribute id="EBELPT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_EKBE">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_EKBE" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STO_DOCUMENT" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STO_ITM" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELP"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_EKKO">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="PURCHASING_DOCTYPE"/>
+        <viewAttribute id="PO_COMPCODE"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_EKKO">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PURCHASING_DOCTYPE" source="BSART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_COMPCODE" source="BUKRS"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_LIKP" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="P_EKBE">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR_EKBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="STO_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="STO_ITM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+      </input>
+      <input node="P_LIKP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAKSK" source="FAKSK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="VBELN"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="BELNR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_MATDOC" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="MANDT_1"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_LIKP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="FAKSK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+      </input>
+      <input node="P_MATDOC">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_1" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MATERIAL_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="MATERIAL_COMPANY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PROFIT_CTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="GOODS_MOVEMENT_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="PLANT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="POSTING_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="FISCALYR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_EKPO" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+      <viewAttribute hidden="true" id="JOIN$MANDT$MANDT"/>
+      <viewAttribute hidden="true" id="JOIN$EBELN$EBELN"/>
+      <viewAttribute hidden="true" id="JOIN$EBELP$EBELP"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="P_EKPO">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="PO_MATRIAL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="ORDERQTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MANDT$MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$EBELN$EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$EBELP$EBELP" source="EBELP"/>
+      </input>
+      <input node="J_EKBE_MATDOC">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="HEADER_BILLING_BLOACK_REASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MANDT$MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$EBELN$EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$EBELP$EBELP" source="EBELP"/>
+      </input>
+    <joinAttribute name="JOIN$MANDT$MANDT"/>
+    <joinAttribute name="JOIN$EBELN$EBELN"/>
+    <joinAttribute name="JOIN$EBELP$EBELP"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_EKKN" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="SO_DOC_ITEM"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="MATERIAL_COMPANY_CODE"/>
+        <viewAttribute id="PROFIT_CTR"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_EKPO">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="HEADER_BILLING_BLOACK_REASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATERIAL_COMPANY_CODE" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROFIT_CTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="PO_MATRIAL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="ORDERQTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+      </input>
+      <input node="P_EKKN">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SO_DOC_ITEM" source="SO_DOC_ITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="SALES_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="EBELN"/>
+    <joinAttribute name="EBELP"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_VBAP" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="SO_DOC_ITEM"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="SALES_PROFITCTR"/>
+        <viewAttribute id="LSA_ADJ_AMOUNT"/>
+        <viewAttribute id="NET_VALUE_AMOUNT"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_EKKN">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SO_DOC_ITEM" source="SO_DOC_ITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="SALES_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="HEADER_BILLING_BLOACK_REASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="MATERIAL_COMPANY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PROFIT_CTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="PO_MATRIAL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="ORDERQTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+      </input>
+      <input node="P_VBAP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_PROFITCTR" source="SALES_PROFITCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSA_ADJ_AMOUNT" source="LSA_ADJ_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_VALUE_AMOUNT" source="NET_VALUE_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="VBELN"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="SALES_DOCUMENT"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_ACDOCA" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="SO_DOC_ITEM"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="SALES_PROFITCTR"/>
+        <viewAttribute id="LSA_ADJ_AMOUNT"/>
+        <viewAttribute id="NET_VALUE_AMOUNT"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="BELNR_1"/>
+        <viewAttribute id="TSL"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+        <viewAttribute id="BELNR_ACDOCA"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_VBAP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SO_DOC_ITEM" source="SO_DOC_ITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="SALES_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="HEADER_BILLING_BLOACK_REASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="PO_MATRIAL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="ORDERQTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_PROFITCTR" source="SALES_PROFITCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSA_ADJ_AMOUNT" source="LSA_ADJ_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_VALUE_AMOUNT" source="NET_VALUE_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+      </input>
+      <input node="P_ACDOCA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_1" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TSL" source="TSL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_ACDOCA" source="BELNR_ACDOCA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="RCLNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="RBUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="MATNR"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="BUKRS"/>
+    <joinAttribute name="GJAHR"/>
+    <joinAttribute name="PO_MATRIAL"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_VBFA" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="NET_VALUE_AMOUNT"/>
+        <viewAttribute id="LSA_ADJ_AMOUNT"/>
+        <viewAttribute id="SALES_PROFITCTR"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+        <viewAttribute id="SO_DOC_ITEM"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="TSL"/>
+        <viewAttribute id="BELNR_1"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="VBELN_1"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+        <viewAttribute id="BELNR_ACDOCA"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_ACDOCA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_VALUE_AMOUNT" source="NET_VALUE_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSA_ADJ_AMOUNT" source="LSA_ADJ_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_PROFITCTR" source="SALES_PROFITCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="ORDERQTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="PO_MATRIAL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="HEADER_BILLING_BLOACK_REASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="SALES_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SO_DOC_ITEM" source="SO_DOC_ITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TSL" source="TSL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_1" source="BELNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_ACDOCA" source="BELNR_ACDOCA"/>
+      </input>
+      <input node="P_VBFA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_1" source="VBELN_VBFA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="VBELV"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="BELNR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_VBRK" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="BELNR_1"/>
+        <viewAttribute id="TSL"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="SO_DOC_ITEM"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="SALES_PROFITCTR"/>
+        <viewAttribute id="LSA_ADJ_AMOUNT"/>
+        <viewAttribute id="NET_VALUE_AMOUNT"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="VBELN_2"/>
+        <viewAttribute id="KNUMV"/>
+        <viewAttribute id="ACCOUNTING_DOC"/>
+        <viewAttribute id="BILLING_DOC_DATE"/>
+        <viewAttribute id="BILLING_DOC_TYPE"/>
+        <viewAttribute id="ACCOUNTING_TRANSFER_STATUS"/>
+        <viewAttribute id="CREATION_DATE"/>
+        <viewAttribute id="LAST_CHANGE_DATE"/>
+        <viewAttribute id="BILLING_COMPANY_CODE"/>
+        <viewAttribute id="BUYER_ENTITY_CODE"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+        <viewAttribute id="BELNR_ACDOCA"/>
+      <viewAttribute hidden="true" id="JOIN$VBELN_1$VBELN_VBRK"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_VBFA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_1" source="BELNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TSL" source="TSL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SO_DOC_ITEM" source="SO_DOC_ITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="SALES_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="HEADER_BILLING_BLOACK_REASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="PO_MATRIAL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="ORDERQTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_PROFITCTR" source="SALES_PROFITCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSA_ADJ_AMOUNT" source="LSA_ADJ_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_VALUE_AMOUNT" source="NET_VALUE_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_ACDOCA" source="BELNR_ACDOCA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBELN_1$VBELN_VBRK" source="VBELN_1"/>
+      </input>
+      <input node="P_VBRK">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_2" source="VBELN_VBRK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNUMV" source="KNUMV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_DOC" source="ACCOUNTING_DOC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_DATE" source="BILLING_DOC_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_TYPE" source="BILLING_DOC_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_TRANSFER_STATUS" source="ACCOUNTING_TRANSFER_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATION_DATE" source="CREATION_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAST_CHANGE_DATE" source="LAST_CHANGE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_COMPANY_CODE" source="BILLING_COMPANY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUYER_ENTITY_CODE" source="BUYER_ENTITY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBELN_1$VBELN_VBRK" source="VBELN_VBRK"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="JOIN$VBELN_1$VBELN_VBRK"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_EKKO" joinType="inner">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="NET_VALUE_AMOUNT"/>
+        <viewAttribute id="LSA_ADJ_AMOUNT"/>
+        <viewAttribute id="SALES_PROFITCTR"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+        <viewAttribute id="SO_DOC_ITEM"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="TSL"/>
+        <viewAttribute id="BELNR_1"/>
+        <viewAttribute id="BUYER_ENTITY_CODE"/>
+        <viewAttribute id="BILLING_COMPANY_CODE"/>
+        <viewAttribute id="CREATION_DATE"/>
+        <viewAttribute id="LAST_CHANGE_DATE"/>
+        <viewAttribute id="ACCOUNTING_TRANSFER_STATUS"/>
+        <viewAttribute id="BILLING_DOC_TYPE"/>
+        <viewAttribute id="BILLING_DOC_DATE"/>
+        <viewAttribute id="ACCOUNTING_DOC"/>
+        <viewAttribute id="KNUMV"/>
+        <viewAttribute id="VBELN_2"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PO_COMPCODE"/>
+        <viewAttribute id="PURCHASING_DOCTYPE"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+        <viewAttribute id="BELNR_ACDOCA"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_VBRK">
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_VALUE_AMOUNT" source="NET_VALUE_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSA_ADJ_AMOUNT" source="LSA_ADJ_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_PROFITCTR" source="SALES_PROFITCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="ORDERQTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="PO_MATRIAL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="HEADER_BILLING_BLOACK_REASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="SALES_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SO_DOC_ITEM" source="SO_DOC_ITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TSL" source="TSL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_1" source="BELNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUYER_ENTITY_CODE" source="BUYER_ENTITY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_COMPANY_CODE" source="BILLING_COMPANY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATION_DATE" source="CREATION_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAST_CHANGE_DATE" source="LAST_CHANGE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_TRANSFER_STATUS" source="ACCOUNTING_TRANSFER_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_TYPE" source="BILLING_DOC_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_DATE" source="BILLING_DOC_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_DOC" source="ACCOUNTING_DOC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNUMV" source="KNUMV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_2" source="VBELN_2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_ACDOCA" source="BELNR_ACDOCA"/>
+      </input>
+      <input node="P_EKKO">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_COMPCODE" source="PO_COMPCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PURCHASING_DOCTYPE" source="PURCHASING_DOCTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="EBELN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_PRCD_ELEMENTS">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="CLIENT"/>
+        <viewAttribute id="KNUMV"/>
+        <viewAttribute id="KPOSN"/>
+        <viewAttribute id="KWERT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_PRCD_ELEMENTS"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_PRCDELEMENTS" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="NET_VALUE_AMOUNT"/>
+        <viewAttribute id="LSA_ADJ_AMOUNT"/>
+        <viewAttribute id="SALES_PROFITCTR"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+        <viewAttribute id="SO_DOC_ITEM"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="TSL"/>
+        <viewAttribute id="BELNR_1"/>
+        <viewAttribute id="BUYER_ENTITY_CODE"/>
+        <viewAttribute id="BILLING_COMPANY_CODE"/>
+        <viewAttribute id="CREATION_DATE"/>
+        <viewAttribute id="LAST_CHANGE_DATE"/>
+        <viewAttribute id="ACCOUNTING_TRANSFER_STATUS"/>
+        <viewAttribute id="BILLING_DOC_TYPE"/>
+        <viewAttribute id="BILLING_DOC_DATE"/>
+        <viewAttribute id="ACCOUNTING_DOC"/>
+        <viewAttribute id="KNUMV"/>
+        <viewAttribute id="VBELN_2"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PO_COMPCODE"/>
+        <viewAttribute id="PURCHASING_DOCTYPE"/>
+        <viewAttribute id="KWERT"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+        <viewAttribute id="BELNR_ACDOCA"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_EKKO">
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_VALUE_AMOUNT" source="NET_VALUE_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSA_ADJ_AMOUNT" source="LSA_ADJ_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_PROFITCTR" source="SALES_PROFITCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="ORDERQTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="PO_MATRIAL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="HEADER_BILLING_BLOACK_REASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="SALES_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SO_DOC_ITEM" source="SO_DOC_ITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TSL" source="TSL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_1" source="BELNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUYER_ENTITY_CODE" source="BUYER_ENTITY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_COMPANY_CODE" source="BILLING_COMPANY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATION_DATE" source="CREATION_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAST_CHANGE_DATE" source="LAST_CHANGE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_TRANSFER_STATUS" source="ACCOUNTING_TRANSFER_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_TYPE" source="BILLING_DOC_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_DATE" source="BILLING_DOC_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_DOC" source="ACCOUNTING_DOC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNUMV" source="KNUMV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_2" source="VBELN_2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_COMPCODE" source="PO_COMPCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PURCHASING_DOCTYPE" source="PURCHASING_DOCTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_ACDOCA" source="BELNR_ACDOCA"/>
+      </input>
+      <input node="P_PRCD_ELEMENTS">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KWERT" source="KWERT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="CLIENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="KPOSN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNUMV" source="KNUMV"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="EBELPT"/>
+    <joinAttribute name="KNUMV"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_MBEW">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="BWKEY"/>
+        <viewAttribute id="BKLAS"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_MBEW"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_MBEW" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="PURCHASING_DOCTYPE"/>
+        <viewAttribute id="PO_COMPCODE"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="VBELN_2"/>
+        <viewAttribute id="KNUMV"/>
+        <viewAttribute id="ACCOUNTING_DOC"/>
+        <viewAttribute id="BILLING_DOC_DATE"/>
+        <viewAttribute id="BILLING_DOC_TYPE"/>
+        <viewAttribute id="ACCOUNTING_TRANSFER_STATUS"/>
+        <viewAttribute id="LAST_CHANGE_DATE"/>
+        <viewAttribute id="CREATION_DATE"/>
+        <viewAttribute id="BILLING_COMPANY_CODE"/>
+        <viewAttribute id="BUYER_ENTITY_CODE"/>
+        <viewAttribute id="BELNR_1"/>
+        <viewAttribute id="TSL"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="SO_DOC_ITEM"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="SALES_PROFITCTR"/>
+        <viewAttribute id="LSA_ADJ_AMOUNT"/>
+        <viewAttribute id="NET_VALUE_AMOUNT"/>
+        <viewAttribute id="LIST_PRICE"/>
+        <viewAttribute id="TRADE_DISCOUNT"/>
+        <viewAttribute id="IC_DISCOUNT"/>
+        <viewAttribute id="INTERNAL_PRICE"/>
+        <viewAttribute id="BKLAS"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+        <viewAttribute id="BELNR_ACDOCA"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_PRCDELEMENTS">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PURCHASING_DOCTYPE" source="PURCHASING_DOCTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_COMPCODE" source="PO_COMPCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_2" source="VBELN_2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNUMV" source="KNUMV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_DOC" source="ACCOUNTING_DOC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_DATE" source="BILLING_DOC_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_TYPE" source="BILLING_DOC_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_TRANSFER_STATUS" source="ACCOUNTING_TRANSFER_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAST_CHANGE_DATE" source="LAST_CHANGE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATION_DATE" source="CREATION_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_COMPANY_CODE" source="BILLING_COMPANY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUYER_ENTITY_CODE" source="BUYER_ENTITY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_1" source="BELNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TSL" source="TSL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SO_DOC_ITEM" source="SO_DOC_ITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="SALES_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="HEADER_BILLING_BLOACK_REASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="PO_MATRIAL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="ORDERQTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_PROFITCTR" source="SALES_PROFITCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSA_ADJ_AMOUNT" source="LSA_ADJ_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_VALUE_AMOUNT" source="NET_VALUE_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIST_PRICE" source="KWERT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRADE_DISCOUNT" source="KWERT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IC_DISCOUNT" source="KWERT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INTERNAL_PRICE" source="KWERT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_ACDOCA" source="BELNR_ACDOCA"/>
+      </input>
+      <input node="P_MBEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BKLAS" source="BKLAS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="BWKEY"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="PO_MATRIAL"/>
+    <joinAttribute name="WERKS_1"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_MAKT">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MAKTX"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_MAKT"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="J_EKBE_MAKT" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="INTERNAL_PRICE"/>
+        <viewAttribute id="IC_DISCOUNT"/>
+        <viewAttribute id="TRADE_DISCOUNT"/>
+        <viewAttribute id="LIST_PRICE"/>
+        <viewAttribute id="NET_VALUE_AMOUNT"/>
+        <viewAttribute id="LSA_ADJ_AMOUNT"/>
+        <viewAttribute id="SALES_PROFITCTR"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+        <viewAttribute id="SO_DOC_ITEM"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="TSL"/>
+        <viewAttribute id="BELNR_1"/>
+        <viewAttribute id="BUYER_ENTITY_CODE"/>
+        <viewAttribute id="BILLING_COMPANY_CODE"/>
+        <viewAttribute id="CREATION_DATE"/>
+        <viewAttribute id="LAST_CHANGE_DATE"/>
+        <viewAttribute id="ACCOUNTING_TRANSFER_STATUS"/>
+        <viewAttribute id="BILLING_DOC_TYPE"/>
+        <viewAttribute id="BILLING_DOC_DATE"/>
+        <viewAttribute id="ACCOUNTING_DOC"/>
+        <viewAttribute id="KNUMV"/>
+        <viewAttribute id="VBELN_2"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="PO_COMPCODE"/>
+        <viewAttribute id="PURCHASING_DOCTYPE"/>
+        <viewAttribute id="MATERIAL_VALUATION_CLASS"/>
+        <viewAttribute id="MAKTX"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="EBELPT"/>
+        <viewAttribute id="EBELNT"/>
+        <viewAttribute id="BELNR_ACDOCA"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_MBEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="INTERNAL_PRICE" source="INTERNAL_PRICE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IC_DISCOUNT" source="IC_DISCOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRADE_DISCOUNT" source="TRADE_DISCOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIST_PRICE" source="LIST_PRICE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_VALUE_AMOUNT" source="NET_VALUE_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSA_ADJ_AMOUNT" source="LSA_ADJ_AMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_PROFITCTR" source="SALES_PROFITCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDERQTY" source="ORDERQTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="PO_MATRIAL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_BILLING_BLOACK_REASON" source="HEADER_BILLING_BLOACK_REASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="SALES_DOCUMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SO_DOC_ITEM" source="SO_DOC_ITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TSL" source="TSL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_1" source="BELNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUYER_ENTITY_CODE" source="BUYER_ENTITY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_COMPANY_CODE" source="BILLING_COMPANY_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATION_DATE" source="CREATION_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAST_CHANGE_DATE" source="LAST_CHANGE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_TRANSFER_STATUS" source="ACCOUNTING_TRANSFER_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_TYPE" source="BILLING_DOC_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLING_DOC_DATE" source="BILLING_DOC_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_DOC" source="ACCOUNTING_DOC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNUMV" source="KNUMV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_2" source="VBELN_2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_COMPCODE" source="PO_COMPCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PURCHASING_DOCTYPE" source="PURCHASING_DOCTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATERIAL_VALUATION_CLASS" source="BKLAS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELPT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELNT" source="EBELNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_ACDOCA" source="BELNR_ACDOCA"/>
+      </input>
+      <input node="P_MAKT">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAKTX" source="MAKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PO_MATRIAL" source="MATNR"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="PO_MATRIAL"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_FILTER" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATERIAL_COMPANY_CODE"/>
+        <viewAttribute id="SALES_PROFITCTR"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="PURCHASING_DOCTYPE"/>
+        <viewAttribute id="MATERIAL_VALUATION_CLASS"/>
+        <viewAttribute id="MATERIAL_NAME"/>
+        <viewAttribute id="GL_ACCOUNT"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="PO_MATRIAL"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="FISCALYR"/>
+        <viewAttribute id="POSTING_DATE"/>
+        <viewAttribute id="PLANT"/>
+        <viewAttribute id="GOODS_MOVEMENT_TYPE"/>
+        <viewAttribute id="PROFIT_CTR"/>
+        <viewAttribute id="MATERIAL_DOCUMENT"/>
+        <viewAttribute id="HEADER_BILLING_BLOACK_REASON"/>
+        <viewAttribute id="BLART_BILLING"/>
+        <viewAttribute id="DELIVERY"/>
+        <viewAttribute id="BUYER_ENTITY_CODE"/>
+        <viewAttribute id="BILLING_COMPANY_CODE"/>
+        <viewAttribute id="CREATION_DATE"/>
+        <viewAttribute id="LAST_CHANGE_DATE"/>
+        <viewAttribute id="ACCOUNTING_TRANSFER_STATUS"/>
+        <viewAttribute id="BILLING_DOC_TYPE"/>
+        <viewAttribute id="BILLING_DOC_DATE"/>
+        <viewAttribute id="PO_COMPCODE"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="SALES_DOCUMENT"/>
+        <viewAttribute id="SALES_DOC_ITEM"/>
+        <viewAttribute id="ACCOUNTING_DOCUMENT"/>
+        <viewAttribute id="BELNR1"/>
+        <viewAttribute id="ORDERQTY"/>
+        <viewAttribute id="TSL"/>
+        <viewAttribute id="LSA_ADJ_AMOUNT"/>
+        <viewAttribute id="NET_VALUE_AMOUNT"/>
+        <viewAttribute id="LIST_PRICE"/>
+        <viewAttribute id="TRADE_DISCOUNT"/>
+        <viewAttribute id="IC_DISCOUNT"/>
+        <viewAttribute id="INTERNAL_PRICE"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="J_EKBE_MAKT">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATERIAL_COMPANY_CODE" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATERIAL_NAME" source="MAKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GL_ACCOUNT" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FISCALYR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSTING_DATE" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PLANT" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GOODS_MOVEMENT_TYPE" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROFIT_CTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATERIAL_DOCUMENT" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART_BILLING" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DELIVERY" source="BELNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOCUMENT" source="EBELPT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_DOC_ITEM" source="EBELNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTING_DOCUMENT" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR1" source="BELNR_ACDOCA"/></input>
+    <filter>(in (&quot;MATERIAL_COMPANY_CODE&quot;,$$IP_COMPCODE$$) or in ($$IP_COMPCODE$$, 'ALL'))</filter>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="P_FILTER">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="MANDT"/>
+      </attribute>
+      <attribute id="MATERIAL_COMPANY_CODE" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="MATERIAL_COMPANY_CODE"/>
+      </attribute>
+      <attribute id="SALES_PROFITCTR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Profit Center"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="SALES_PROFITCTR"/>
+      </attribute>
+      <attribute id="NETAMOUNT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Net Amount"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="NETAMOUNT"/>
+      </attribute>
+      <attribute id="PURCHASING_DOCTYPE" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO order"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="PURCHASING_DOCTYPE"/>
+      </attribute>
+      <attribute id="MATERIAL_VALUATION_CLASS" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Valuation Class"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="MATERIAL_VALUATION_CLASS"/>
+      </attribute>
+      <attribute id="MATERIAL_NAME" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="MATERIAL_NAME"/>
+      </attribute>
+      <attribute id="GL_ACCOUNT" order="8" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GL Account"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="GL_ACCOUNT"/>
+      </attribute>
+      <attribute id="WERKS_1" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="WERKS_1"/>
+      </attribute>
+      <attribute id="PO_MATRIAL" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="PO_MATRIAL"/>
+      </attribute>
+      <attribute id="EBELP" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO Line Item"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="EBELP"/>
+      </attribute>
+      <attribute id="EBELN" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Doc Number"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="EBELN"/>
+      </attribute>
+      <attribute id="FISCALYR" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fiscal Year"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="FISCALYR"/>
+      </attribute>
+      <attribute id="POSTING_DATE" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Posting Date"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="POSTING_DATE"/>
+      </attribute>
+      <attribute id="PLANT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="PLANT"/>
+      </attribute>
+      <attribute id="GOODS_MOVEMENT_TYPE" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Movement Type"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="GOODS_MOVEMENT_TYPE"/>
+      </attribute>
+      <attribute id="PROFIT_CTR" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Profit Center"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="PROFIT_CTR"/>
+      </attribute>
+      <attribute id="MATERIAL_DOCUMENT" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Document"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="MATERIAL_DOCUMENT"/>
+      </attribute>
+      <attribute id="HEADER_BILLING_BLOACK_REASON" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Block Reason"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="HEADER_BILLING_BLOACK_REASON"/>
+      </attribute>
+      <attribute id="BLART_BILLING" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Type"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="BLART_BILLING"/>
+      </attribute>
+      <attribute id="DELIVERY" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Number"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="DELIVERY"/>
+      </attribute>
+      <attribute id="BUYER_ENTITY_CODE" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUYER_ENTITY_CODE"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="BUYER_ENTITY_CODE"/>
+      </attribute>
+      <attribute id="BILLING_COMPANY_CODE" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BILLING_COMPANY_CODE"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="BILLING_COMPANY_CODE"/>
+      </attribute>
+      <attribute id="CREATION_DATE" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Created on"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="CREATION_DATE"/>
+      </attribute>
+      <attribute id="LAST_CHANGE_DATE" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Changed On"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="LAST_CHANGE_DATE"/>
+      </attribute>
+      <attribute id="ACCOUNTING_TRANSFER_STATUS" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACCOUNTING_TRANSFER_STATUS"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="ACCOUNTING_TRANSFER_STATUS"/>
+      </attribute>
+      <attribute id="BILLING_DOC_TYPE" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BILLING_DOC_TYPE"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="BILLING_DOC_TYPE"/>
+      </attribute>
+      <attribute id="BILLING_DOC_DATE" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BILLING_DOC_DATE"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="BILLING_DOC_DATE"/>
+      </attribute>
+      <attribute id="PO_COMPCODE" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO Company Code"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="PO_COMPCODE"/>
+      </attribute>
+      <attribute id="BLART" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Doc Type"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="BLART"/>
+      </attribute>
+      <attribute id="SALES_DOCUMENT" order="31" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Doc"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="SALES_DOCUMENT"/>
+      </attribute>
+      <attribute id="SALES_DOC_ITEM" order="32" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Doc Item"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="SALES_DOC_ITEM"/>
+      </attribute>
+      <attribute id="ACCOUNTING_DOCUMENT" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Accounting Doc"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="ACCOUNTING_DOCUMENT"/>
+      </attribute>
+      <attribute id="BELNR1" order="34" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Number"/>
+        <keyMapping columnObjectName="P_FILTER" columnName="BELNR1"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="ORDERQTY" order="35" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Order Qty"/>
+        <measureMapping columnObjectName="P_FILTER" columnName="ORDERQTY"/>
+      </measure>
+      <measure id="TSL" order="36" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Supply Limit"/>
+        <measureMapping columnObjectName="P_FILTER" columnName="TSL"/>
+      </measure>
+      <measure id="LSA_ADJ_AMOUNT" order="37" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Adjusted Amount"/>
+        <measureMapping columnObjectName="P_FILTER" columnName="LSA_ADJ_AMOUNT"/>
+      </measure>
+      <measure id="NET_VALUE_AMOUNT" order="38" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Net Value"/>
+        <measureMapping columnObjectName="P_FILTER" columnName="NET_VALUE_AMOUNT"/>
+      </measure>
+      <measure id="LIST_PRICE" order="39" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Listed Price"/>
+        <measureMapping columnObjectName="P_FILTER" columnName="LIST_PRICE"/>
+      </measure>
+      <measure id="TRADE_DISCOUNT" order="40" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Trade Discount"/>
+        <measureMapping columnObjectName="P_FILTER" columnName="TRADE_DISCOUNT"/>
+      </measure>
+      <measure id="IC_DISCOUNT" order="41" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="IC Discount"/>
+        <measureMapping columnObjectName="P_FILTER" columnName="IC_DISCOUNT"/>
+      </measure>
+      <measure id="INTERNAL_PRICE" order="42" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Internal Price"/>
+        <measureMapping columnObjectName="P_FILTER" columnName="INTERNAL_PRICE"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="609" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_LIKP" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="177" y="1395"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_VBFA" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="470" y="819"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_VBRK" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="542" y="723"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_ACDOCA" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="398" y="915"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_VBAP" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="325" y="1011"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_EKKN" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="251" y="1107"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_EKPO" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="1203"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_MATDOC" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="254" y="1299"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_EKBE" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="23" y="1395"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_EKKO" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="615" y="627"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_LIKP" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="100" y="1299"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="P_EKBE" modelObjectNameSpace="J_EKBE_LIKP" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_LIKP" modelObjectNameSpace="J_EKBE_LIKP" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_MATDOC" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="1203"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="J_EKBE_LIKP" modelObjectNameSpace="J_EKBE_MATDOC" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_MATDOC" modelObjectNameSpace="J_EKBE_MATDOC" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_EKPO" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="97" y="1107"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="P_EKPO" modelObjectNameSpace="J_EKBE_EKPO" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="J_EKBE_MATDOC" modelObjectNameSpace="J_EKBE_EKPO" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_EKKN" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="171" y="1011"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="J_EKBE_EKPO" modelObjectNameSpace="J_EKBE_EKKN" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_EKKN" modelObjectNameSpace="J_EKBE_EKKN" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_VBAP" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="244" y="915"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="J_EKBE_EKKN" modelObjectNameSpace="J_EKBE_VBAP" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_VBAP" modelObjectNameSpace="J_EKBE_VBAP" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_ACDOCA" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="316" y="819"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="J_EKBE_VBAP" modelObjectNameSpace="J_EKBE_ACDOCA" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_ACDOCA" modelObjectNameSpace="J_EKBE_ACDOCA" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_VBFA" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="388" y="723"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="J_EKBE_ACDOCA" modelObjectNameSpace="J_EKBE_VBFA" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_VBFA" modelObjectNameSpace="J_EKBE_VBFA" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_VBRK" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="461" y="627"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="J_EKBE_VBFA" modelObjectNameSpace="J_EKBE_VBRK" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_VBRK" modelObjectNameSpace="J_EKBE_VBRK" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_EKKO" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="535" y="531"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="J_EKBE_VBRK" modelObjectNameSpace="J_EKBE_EKKO" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_EKKO" modelObjectNameSpace="J_EKBE_EKKO" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="P_PRCD_ELEMENTS" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="689" y="531"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_PRCDELEMENTS" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="610" y="435"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="J_EKBE_EKKO" modelObjectNameSpace="J_EKBE_PRCDELEMENTS" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_PRCD_ELEMENTS" modelObjectNameSpace="J_EKBE_PRCDELEMENTS" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="P_MBEW" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="764" y="435"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_MBEW" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="686" y="339"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="J_EKBE_PRCDELEMENTS" modelObjectNameSpace="J_EKBE_MBEW" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_MBEW" modelObjectNameSpace="J_EKBE_MBEW" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="P_MAKT" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="532" y="339"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="J_EKBE_MAKT" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="609" y="243"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="J_EKBE_MBEW" modelObjectNameSpace="J_EKBE_MAKT" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="P_MAKT" modelObjectNameSpace="J_EKBE_MAKT" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="P_FILTER" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="609" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

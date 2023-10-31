@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="VSTG_DELIVERYLINEITEMS" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VSTG_R2R_"/>
+  <metadata changedAt="2021-12-06 18:57:51.474" createdAt="2020-06-09 19:02:24.975"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="37"/>
+  <dataSources>
+    <DataSource id="CV_TD_LIPS">
+      <resourceUri>CV_TD_LIPS</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_LIKP">
+      <resourceUri>CV_TD_LIKP</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="LFIMG"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="WBSTA"/>
+        <viewAttribute id="CHARG"/>
+        <viewAttribute id="PODREL"/>
+        <viewAttribute id="UECHA"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_TD_LIPS"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VSART"/>
+        <viewAttribute id="WADAT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="LFART"/>
+        <viewAttribute id="GBSTK"/>
+        <viewAttribute id="PDSTK"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VSBED"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="WADAT_IST"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="PODAT"/>
+        <viewAttribute id="VBTYP"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="FKSTK"/>
+        <viewAttribute id="WBSTK"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_TD_LIKP"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_1" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="VSART"/>
+        <viewAttribute id="WADAT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="LFART"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="LFIMG"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="GBSTK"/>
+        <viewAttribute id="PDSTK"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="VSBED"/>
+        <viewAttribute id="WBSTA"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="CHARG"/>
+        <viewAttribute id="WADAT_IST"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="PODREL"/>
+        <viewAttribute id="PODAT"/>
+        <viewAttribute id="VBTYP"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="UECHA"/>
+        <viewAttribute id="FKSTK"/>
+        <viewAttribute id="WBSTK"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/></input>
+      <input node="Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_1">
+    <descriptions defaultDescription="VSTG_R2R_"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery"/>
+        <keyMapping columnObjectName="Join_1" columnName="VBELN"/>
+      </attribute>
+      <attribute id="POSNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Item"/>
+        <keyMapping columnObjectName="Join_1" columnName="POSNR"/>
+      </attribute>
+      <attribute id="WERKS" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="Join_1" columnName="WERKS"/>
+      </attribute>
+      <attribute id="VSART" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Shipping Type"/>
+        <keyMapping columnObjectName="Join_1" columnName="VSART"/>
+      </attribute>
+      <attribute id="WADAT" order="6" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Planned Goods Movement Date"/>
+        <keyMapping columnObjectName="Join_1" columnName="WADAT"/>
+      </attribute>
+      <attribute id="VSTEL" order="7" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Shipping Point/Receiving Point"/>
+        <keyMapping columnObjectName="Join_1" columnName="VSTEL"/>
+      </attribute>
+      <attribute id="LFART" order="8" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Type"/>
+        <keyMapping columnObjectName="Join_1" columnName="LFART"/>
+      </attribute>
+      <attribute id="MATNR" order="9" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="MATNR"/>
+      </attribute>
+      <attribute id="VGBEL" order="10" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document number of the reference document"/>
+        <keyMapping columnObjectName="Join_1" columnName="VGBEL"/>
+      </attribute>
+      <attribute id="LFIMG" order="11" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Actual quantity delivered (in sales units)"/>
+        <keyMapping columnObjectName="Join_1" columnName="LFIMG"/>
+      </attribute>
+      <attribute id="VGPOS" order="12" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item number of the reference item"/>
+        <keyMapping columnObjectName="Join_1" columnName="VGPOS"/>
+      </attribute>
+      <attribute id="GBSTK" order="13" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Overall Processing Status of Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="GBSTK"/>
+      </attribute>
+      <attribute id="PDSTK" order="14" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POD status on header level"/>
+        <keyMapping columnObjectName="Join_1" columnName="PDSTK"/>
+      </attribute>
+      <attribute id="NETWR" order="15" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Net Value of the Sales Order in Document Currency"/>
+        <keyMapping columnObjectName="Join_1" columnName="NETWR"/>
+      </attribute>
+      <attribute id="GEWEI" order="16" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Weight Unit"/>
+        <keyMapping columnObjectName="Join_1" columnName="GEWEI"/>
+      </attribute>
+      <attribute id="BRGEW" order="17" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Gross weight"/>
+        <keyMapping columnObjectName="Join_1" columnName="BRGEW"/>
+      </attribute>
+      <attribute id="VSBED" order="18" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Shipping Conditions"/>
+        <keyMapping columnObjectName="Join_1" columnName="VSBED"/>
+      </attribute>
+      <attribute id="WBSTA" order="19" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Goods movement status"/>
+        <keyMapping columnObjectName="Join_1" columnName="WBSTA"/>
+      </attribute>
+      <attribute id="ERDAT" order="20" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date on which the record was created"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="CHARG" order="21" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Batch Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHARG"/>
+      </attribute>
+      <attribute id="WADAT_IST" order="22" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Actual Goods Movement Date"/>
+        <keyMapping columnObjectName="Join_1" columnName="WADAT_IST"/>
+      </attribute>
+      <attribute id="ERNAM" order="23" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="PODREL" order="24" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POD Control (Proof of Delivery)"/>
+        <keyMapping columnObjectName="Join_1" columnName="PODREL"/>
+      </attribute>
+      <attribute id="PODAT" order="25" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date (Proof of Delivery)"/>
+        <keyMapping columnObjectName="Join_1" columnName="PODAT"/>
+      </attribute>
+      <attribute id="VBTYP" order="26" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SD Document Category (Long)"/>
+        <keyMapping columnObjectName="Join_1" columnName="VBTYP"/>
+      </attribute>
+      <attribute id="INCO1" order="27" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Incoterms (Part 1)"/>
+        <keyMapping columnObjectName="Join_1" columnName="INCO1"/>
+      </attribute>
+      <attribute id="UECHA" order="28" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Higher-Level Item of Batch Split Item"/>
+        <keyMapping columnObjectName="Join_1" columnName="UECHA"/>
+      </attribute>
+      <attribute id="FKSTK" order="29" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing status"/>
+        <keyMapping columnObjectName="Join_1" columnName="FKSTK"/>
+      </attribute>
+      <attribute id="WBSTK" order="30" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Overall Goods Movement Status"/>
+        <keyMapping columnObjectName="Join_1" columnName="WBSTK"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+      <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

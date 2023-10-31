@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_ANLA" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_ASSETMASTERRECORDSEGMENT"/>
+  <metadata changedAt="2021-12-06 18:05:35.474" createdAt="2020-05-12 19:16:32.879"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_ANLA">
+      <resourceUri>syn_tbl_ANLA</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_ANLA">
+    <descriptions defaultDescription="VDIM_ASSETMASTERRECORDSEGMENT"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="MANDT"/>
+      </attribute>
+      <attribute id="BUKRS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="ANLN1" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Main Asset Number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ANLN1"/>
+      </attribute>
+      <attribute id="ANLN2" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Subnumber"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ANLN2"/>
+      </attribute>
+      <attribute id="ANLKL" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Class"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ANLKL"/>
+      </attribute>
+      <attribute id="GEGST" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Technical Asset Number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="GEGST"/>
+      </attribute>
+      <attribute id="ANLAR" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset types"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ANLAR"/>
+      </attribute>
+      <attribute id="ERNAM" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of Person who Created the Object"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="ERDAT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date on which the record was created"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="AENAM" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of person who changed object"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="AENAM"/>
+      </attribute>
+      <attribute id="AEDAT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Changed On"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="XLOEV" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Account Marked for Deletion?"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XLOEV"/>
+      </attribute>
+      <attribute id="XSPEB" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Asset Locked to Acquisition Postings"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XSPEB"/>
+      </attribute>
+      <attribute id="FELEI" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Screen Layout for Asset Accounting"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="FELEI"/>
+      </attribute>
+      <attribute id="KTOGR" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account determination"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="KTOGR"/>
+      </attribute>
+      <attribute id="XOPVW" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset under construct. with line item settlement"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XOPVW"/>
+      </attribute>
+      <attribute id="ANLTP" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Category"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ANLTP"/>
+      </attribute>
+      <attribute id="ZUJHR" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fiscal Year in Which First Acquisition Was Posted"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ZUJHR"/>
+      </attribute>
+      <attribute id="ZUPER" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Period in Which First Acquisition Was Posted"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ZUPER"/>
+      </attribute>
+      <attribute id="ZUGDT" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Value Date of the First Posting"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ZUGDT"/>
+      </attribute>
+      <attribute id="AKTIV" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Capitalization Date"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="AKTIV"/>
+      </attribute>
+      <attribute id="ABGDT" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Value Date for the Last Retirement"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ABGDT"/>
+      </attribute>
+      <attribute id="DEAKT" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Deactivation Date"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="DEAKT"/>
+      </attribute>
+      <attribute id="GPLAB" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Planned Retirement Date"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="GPLAB"/>
+      </attribute>
+      <attribute id="BSTDT" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Purchase Order Date"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="BSTDT"/>
+      </attribute>
+      <attribute id="ORD41" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Evaluation group 1"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ORD41"/>
+      </attribute>
+      <attribute id="ORD42" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Evaluation Group 2"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ORD42"/>
+      </attribute>
+      <attribute id="ORD43" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Evaluation Group 3"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ORD43"/>
+      </attribute>
+      <attribute id="ORD44" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Evaluation group 4"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ORD44"/>
+      </attribute>
+      <attribute id="ANLUE" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Super Number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ANLUE"/>
+      </attribute>
+      <attribute id="ZUAWA" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Key for sorting according to assignment numbers"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ZUAWA"/>
+      </attribute>
+      <attribute id="ANEQK" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Historical management"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ANEQK"/>
+      </attribute>
+      <attribute id="ANEQS" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Completeness indicator for the asset"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ANEQS"/>
+      </attribute>
+      <attribute id="LIFNR" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Account number of vendor (other key word)"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="LAND1" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset&apos;s Country of Origin"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LAND1"/>
+      </attribute>
+      <attribute id="LIEFE" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of asset supplier"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LIEFE"/>
+      </attribute>
+      <attribute id="HERST" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Manufacturer of Asset"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="HERST"/>
+      </attribute>
+      <attribute id="EIGKZ" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Property Indicator"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="EIGKZ"/>
+      </attribute>
+      <attribute id="AIBN1" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Original Asset That Was Transferred"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="AIBN1"/>
+      </attribute>
+      <attribute id="AIBN2" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Original Asset That Was Transferred"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="AIBN2"/>
+      </attribute>
+      <attribute id="AIBDT" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Original Acquisition Date of AuC/ Transferred Asset"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="AIBDT"/>
+      </attribute>
+      <attribute id="URJHR" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fiscal Year of Original Acquisition"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="URJHR"/>
+      </attribute>
+      <attribute id="URWRT" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Original Acquisition Value"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="URWRT"/>
+      </attribute>
+      <attribute id="ANTEI" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="In-house production percentage"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ANTEI"/>
+      </attribute>
+      <attribute id="PROJN" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Old: Project number : No longer used --&gt; PS_POSNR"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="PROJN"/>
+      </attribute>
+      <attribute id="EAUFN" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Investment Order"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="EAUFN"/>
+      </attribute>
+      <attribute id="MEINS" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Base Unit of Measure"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="MEINS"/>
+      </attribute>
+      <attribute id="MENGE" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quantity"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="MENGE"/>
+      </attribute>
+      <attribute id="TYPBZ" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Type Name"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="TYPBZ"/>
+      </attribute>
+      <attribute id="IZWEK" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reason for Investment"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="IZWEK"/>
+      </attribute>
+      <attribute id="INKEN" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Inventory Indicator"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="INKEN"/>
+      </attribute>
+      <attribute id="IVDAT" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Last Inventory Date"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="IVDAT"/>
+      </attribute>
+      <attribute id="INVZU" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Supplementary Inventory Specifications"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="INVZU"/>
+      </attribute>
+      <attribute id="VMGLI" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Property classification key"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="VMGLI"/>
+      </attribute>
+      <attribute id="XVRMW" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Manual net worth tax value"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XVRMW"/>
+      </attribute>
+      <attribute id="WRTMA" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Manual net worth tax value"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="WRTMA"/>
+      </attribute>
+      <attribute id="EHWRT" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Assessed Value"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="EHWRT"/>
+      </attribute>
+      <attribute id="AUFLA" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of conveyance"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="AUFLA"/>
+      </attribute>
+      <attribute id="EHWZU" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of last notice of assessment"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="EHWZU"/>
+      </attribute>
+      <attribute id="EHWNR" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Tax Number of the Notice of Assessment"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="EHWNR"/>
+      </attribute>
+      <attribute id="GRUVO" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Land Register of"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="GRUVO"/>
+      </attribute>
+      <attribute id="GREIN" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Land Register Entry on"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="GREIN"/>
+      </attribute>
+      <attribute id="GRBND" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Land Register Volume"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="GRBND"/>
+      </attribute>
+      <attribute id="GRBLT" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Land Register Page"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="GRBLT"/>
+      </attribute>
+      <attribute id="GRLFD" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Land Register Entry: Sequence Number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="GRLFD"/>
+      </attribute>
+      <attribute id="FLURK" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Land Register Map Number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="FLURK"/>
+      </attribute>
+      <attribute id="FLURN" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plot Number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="FLURN"/>
+      </attribute>
+      <attribute id="FIAMT" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Local Tax Office"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="FIAMT"/>
+      </attribute>
+      <attribute id="STADT" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Municipality"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="STADT"/>
+      </attribute>
+      <attribute id="GRUND" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reason for Manual Valuation of Net Assets"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="GRUND"/>
+      </attribute>
+      <attribute id="FEINS" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Area Unit"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="FEINS"/>
+      </attribute>
+      <attribute id="GRUFL" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Surface Area"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="GRUFL"/>
+      </attribute>
+      <attribute id="INVNR" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Inventory Number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="INVNR"/>
+      </attribute>
+      <attribute id="VBUND" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company ID of trading partner"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="VBUND"/>
+      </attribute>
+      <attribute id="SPRAS" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Language Key"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="TXT50" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Description"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="TXT50"/>
+      </attribute>
+      <attribute id="TXA50" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Additional Asset Description"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="TXA50"/>
+      </attribute>
+      <attribute id="XLTXID" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Long Text Active"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XLTXID"/>
+      </attribute>
+      <attribute id="XVERID" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Long text indicator:Property values"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XVERID"/>
+      </attribute>
+      <attribute id="XTCHID" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Technical View Long Text"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XTCHID"/>
+      </attribute>
+      <attribute id="XKALID" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Long Text Active"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XKALID"/>
+      </attribute>
+      <attribute id="XHERID" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Long text for manufacturer/origin"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XHERID"/>
+      </attribute>
+      <attribute id="XLEAID" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Leasing Data Long Text"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XLEAID"/>
+      </attribute>
+      <attribute id="LEAFI" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Leasing company"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LEAFI"/>
+      </attribute>
+      <attribute id="LVDAT" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Leasing agreement date"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LVDAT"/>
+      </attribute>
+      <attribute id="LKDAT" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Leasing agreement notice date"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LKDAT"/>
+      </attribute>
+      <attribute id="LEABG" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Lease start date"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LEABG"/>
+      </attribute>
+      <attribute id="LEJAR" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Length of Lease in Years"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LEJAR"/>
+      </attribute>
+      <attribute id="LEPER" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Length of lease in periods"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LEPER"/>
+      </attribute>
+      <attribute id="LRYTH" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Lease payment cycle"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LRYTH"/>
+      </attribute>
+      <attribute id="LEGEB" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Periodic lease payment paid to leasing company/lessor"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LEGEB"/>
+      </attribute>
+      <attribute id="LBASW" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Leasing base value as new"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LBASW"/>
+      </attribute>
+      <attribute id="LKAUF" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Leased asset purchase price"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LKAUF"/>
+      </attribute>
+      <attribute id="LMZIN" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Leasing monthly interest rate (Capital Lease)"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LMZIN"/>
+      </attribute>
+      <attribute id="LZINS" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Leasing Interest Rate (Capital Lease)"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LZINS"/>
+      </attribute>
+      <attribute id="LTZBW" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Posting date of the last lease payment"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LTZBW"/>
+      </attribute>
+      <attribute id="LKUZA" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Total of posted leasing payments"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LKUZA"/>
+      </attribute>
+      <attribute id="LKUZI" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Total leasing interest posted"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LKUZI"/>
+      </attribute>
+      <attribute id="LLAVB" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Total of long-term leasing liability"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LLAVB"/>
+      </attribute>
+      <attribute id="LEANZ" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Number of Lease Payments"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LEANZ"/>
+      </attribute>
+      <attribute id="LVTNR" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Leasing agreement number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LVTNR"/>
+      </attribute>
+      <attribute id="LETXT" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Leasing data text"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LETXT"/>
+      </attribute>
+      <attribute id="XAKTIV" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Capitalize Fixed Asset"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XAKTIV"/>
+      </attribute>
+      <attribute id="ANUPD" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Type of change to table"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ANUPD"/>
+      </attribute>
+      <attribute id="LBLNR" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="No. of Last Document with Which Posting to Asset Was Made"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LBLNR"/>
+      </attribute>
+      <attribute id="XV0DT" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Change date: View 0"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV0DT"/>
+      </attribute>
+      <attribute id="XV0NM" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of person in charge, who changed View0"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV0NM"/>
+      </attribute>
+      <attribute id="XV1DT" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Change date: View 1"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV1DT"/>
+      </attribute>
+      <attribute id="XV1NM" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of person in charge, who changed view 1"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV1NM"/>
+      </attribute>
+      <attribute id="XV2DT" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Change date: View 2"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV2DT"/>
+      </attribute>
+      <attribute id="XV2NM" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of the person in charge, who changed view 2"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV2NM"/>
+      </attribute>
+      <attribute id="XV3DT" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Change date: View 3"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV3DT"/>
+      </attribute>
+      <attribute id="XV3NM" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of the person in charge, who changed view 3"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV3NM"/>
+      </attribute>
+      <attribute id="XV4DT" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Change date: View 4"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV4DT"/>
+      </attribute>
+      <attribute id="XV4NM" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of the person in charge, who changed view 4"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV4NM"/>
+      </attribute>
+      <attribute id="XV5DT" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Change date:View 5"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV5DT"/>
+      </attribute>
+      <attribute id="XV5NM" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of the person in charge who changed view 5"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV5NM"/>
+      </attribute>
+      <attribute id="XV6DT" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Change date:View 6"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV6DT"/>
+      </attribute>
+      <attribute id="XV6NM" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name of the person in charge who changed view 6"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XV6NM"/>
+      </attribute>
+      <attribute id="AIMMO" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Real Estate"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="AIMMO"/>
+      </attribute>
+      <attribute id="OBJNR" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Object number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="OBJNR"/>
+      </attribute>
+      <attribute id="LEART" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Leasing type"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LEART"/>
+      </attribute>
+      <attribute id="LVORS" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Advance payments"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LVORS"/>
+      </attribute>
+      <attribute id="GDLGRP" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Evaluation Group 5"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="GDLGRP"/>
+      </attribute>
+      <attribute id="POSNR" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WBS element investment project"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="POSNR"/>
+      </attribute>
+      <attribute id="XERWRT" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Ignore memo value"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XERWRT"/>
+      </attribute>
+      <attribute id="XAFABCH" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset acquired used"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XAFABCH"/>
+      </attribute>
+      <attribute id="XANLGR" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Asset is a group asset"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XANLGR"/>
+      </attribute>
+      <attribute id="MCOA1" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Search Term for Matchcode Search"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="MCOA1"/>
+      </attribute>
+      <attribute id="XINVM" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset under Construction for Investment Measures"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="XINVM"/>
+      </attribute>
+      <attribute id="SERNR" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Serial number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="SERNR"/>
+      </attribute>
+      <attribute id="UMWKZ" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reason for Environmental Investment"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="UMWKZ"/>
+      </attribute>
+      <attribute id="LRVDAT" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of Last Revaluation"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LRVDAT"/>
+      </attribute>
+      <attribute id="ACT_CHANGE_PM" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Change Asset Master Record from Equipment Master"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ACT_CHANGE_PM"/>
+      </attribute>
+      <attribute id="HAS_TDDP" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset Has Time-Dependent Valuation Parameters in ANLBZA"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="HAS_TDDP"/>
+      </attribute>
+      <attribute id="LAST_REORG_DATE" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of Last Reorganization"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LAST_REORG_DATE"/>
+      </attribute>
+      <attribute id="LDT_DATE" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Legacy Data Transfer Date"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LDT_DATE"/>
+      </attribute>
+      <attribute id="LDT_SEQNO" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Legacy Data Transfer - sequence number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="LDT_SEQNO"/>
+      </attribute>
+      <attribute id="DUMMY_FAA_ASSET_INCL_EEW_PS" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Data Element for Extension Include: Asset Worklist"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="DUMMY_FAA_ASSET_INCL_EEW_PS"/>
+      </attribute>
+      <attribute id="INTERNAL_CODE" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Internal code"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="INTERNAL_CODE"/>
+      </attribute>
+      <attribute id="APPROVAL_NUMBER" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Approval document number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="APPROVAL_NUMBER"/>
+      </attribute>
+      <attribute id="APPROVAL_VERSION" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Approval version"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="APPROVAL_VERSION"/>
+      </attribute>
+      <attribute id="BOGUS_ANLN1" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="bogus asset number"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="BOGUS_ANLN1"/>
+      </attribute>
+      <attribute id="ASSET_VERSION" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Asset version"/>
+        <keyMapping columnObjectName="syn_tbl_ANLA" columnName="ASSET_VERSION"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

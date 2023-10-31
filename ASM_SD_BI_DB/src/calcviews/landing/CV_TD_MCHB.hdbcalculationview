@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="HANA_CONTENT.BASE_MODELS.TRANSACTION_VIEWS::CV_TD_MCHB" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_MCHB"/>
+  <metadata changedAt="2021-12-06 18:12:49.129" createdAt="2020-05-05 13:20:18.03"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_MCHB">
+      <resourceUri>syn_tbl_MCHB</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_MCHB">
+    <descriptions defaultDescription="CV_TD_MCHB"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="MANDT"/>
+      </attribute>
+      <attribute id="MATNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="MATNR"/>
+      </attribute>
+      <attribute id="WERKS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="WERKS"/>
+      </attribute>
+      <attribute id="LGORT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGORT"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="LGORT"/>
+      </attribute>
+      <attribute id="CHARG" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHARG"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="CHARG"/>
+      </attribute>
+      <attribute id="LVORM" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LVORM"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="LVORM"/>
+      </attribute>
+      <attribute id="ERSDA" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERSDA"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="ERSDA"/>
+      </attribute>
+      <attribute id="ERNAM" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="LAEDA" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAEDA"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="LAEDA"/>
+      </attribute>
+      <attribute id="AENAM" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AENAM"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="AENAM"/>
+      </attribute>
+      <attribute id="LFGJA" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFGJA"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="LFGJA"/>
+      </attribute>
+      <attribute id="LFMON" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFMON"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="LFMON"/>
+      </attribute>
+      <attribute id="SPERC" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERC"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="SPERC"/>
+      </attribute>
+      <attribute id="KZICL" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZICL"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="KZICL"/>
+      </attribute>
+      <attribute id="KZICQ" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZICQ"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="KZICQ"/>
+      </attribute>
+      <attribute id="KZICE" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZICE"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="KZICE"/>
+      </attribute>
+      <attribute id="KZICS" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZICS"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="KZICS"/>
+      </attribute>
+      <attribute id="KZVCL" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZVCL"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="KZVCL"/>
+      </attribute>
+      <attribute id="KZVCQ" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZVCQ"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="KZVCQ"/>
+      </attribute>
+      <attribute id="KZVCE" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZVCE"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="KZVCE"/>
+      </attribute>
+      <attribute id="KZVCS" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZVCS"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="KZVCS"/>
+      </attribute>
+      <attribute id="HERKL" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HERKL"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="HERKL"/>
+      </attribute>
+      <attribute id="CHDLL" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHDLL"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="CHDLL"/>
+      </attribute>
+      <attribute id="CHJIN" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHJIN"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="CHJIN"/>
+      </attribute>
+      <attribute id="CHRUE" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHRUE"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="CHRUE"/>
+      </attribute>
+      <attribute id="SGT_SCAT" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_SCAT"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="SGT_SCAT"/>
+      </attribute>
+      <attribute id="FSH_SEASON_YEAR" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON_YEAR"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="FSH_SEASON_YEAR"/>
+      </attribute>
+      <attribute id="FSH_SEASON" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="FSH_SEASON"/>
+      </attribute>
+      <attribute id="FSH_COLLECTION" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_COLLECTION"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="FSH_COLLECTION"/>
+      </attribute>
+      <attribute id="FSH_THEME" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_THEME"/>
+        <keyMapping columnObjectName="syn_tbl_MCHB" columnName="FSH_THEME"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="CLABS" order="14" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CLABS"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CLABS"/>
+      </measure>
+      <measure id="CUMLM" order="15" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CUMLM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CUMLM"/>
+      </measure>
+      <measure id="CINSM" order="16" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CINSM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CINSM"/>
+      </measure>
+      <measure id="CEINM" order="17" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CEINM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CEINM"/>
+      </measure>
+      <measure id="CSPEM" order="18" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CSPEM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CSPEM"/>
+      </measure>
+      <measure id="CRETM" order="19" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CRETM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CRETM"/>
+      </measure>
+      <measure id="CVMLA" order="20" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CVMLA"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMLA"/>
+      </measure>
+      <measure id="CVMUM" order="21" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CVMUM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMUM"/>
+      </measure>
+      <measure id="CVMIN" order="22" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CVMIN"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMIN"/>
+      </measure>
+      <measure id="CVMEI" order="23" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CVMEI"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMEI"/>
+      </measure>
+      <measure id="CVMSP" order="24" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CVMSP"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMSP"/>
+      </measure>
+      <measure id="CVMRE" order="25" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CVMRE"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMRE"/>
+      </measure>
+      <measure id="FSH_SALLOC_QTY" order="43" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FSH_SALLOC_QTY"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="FSH_SALLOC_QTY"/>
+      </measure>
+      <measure id="_CWM_CLABS" order="44" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CLABS"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CLABS"/>
+      </measure>
+      <measure id="_CWM_CINSM" order="45" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CINSM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CINSM"/>
+      </measure>
+      <measure id="_CWM_CEINM" order="46" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CEINM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CEINM"/>
+      </measure>
+      <measure id="_CWM_CSPEM" order="47" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CSPEM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CSPEM"/>
+      </measure>
+      <measure id="_CWM_CRETM" order="48" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CRETM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CRETM"/>
+      </measure>
+      <measure id="_CWM_CUMLM" order="49" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CUMLM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CUMLM"/>
+      </measure>
+      <measure id="_CWM_CVMLA" order="50" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CVMLA"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMLA"/>
+      </measure>
+      <measure id="_CWM_CVMIN" order="51" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CVMIN"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMIN"/>
+      </measure>
+      <measure id="_CWM_CVMEI" order="52" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CVMEI"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMEI"/>
+      </measure>
+      <measure id="_CWM_CVMSP" order="53" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CVMSP"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMSP"/>
+      </measure>
+      <measure id="_CWM_CVMRE" order="54" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CVMRE"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMRE"/>
+      </measure>
+      <measure id="_CWM_CVMUM" order="55" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="_CWM_CVMUM"/>
+        <measureMapping columnObjectName="syn_tbl_MCHB" columnName="CVMUM"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

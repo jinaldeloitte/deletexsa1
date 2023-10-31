@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_ADRC" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+  <descriptions defaultDescription="CV_MD_ADRC"/>
+  <metadata changedAt="2020-05-11 16:31:59.521" createdAt="2020-05-11 16:31:13.196"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_ADRC">
+      <resourceUri>syn_tbl_ADRC</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_ARDC">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="CLIENT"/>
+        <viewAttribute id="ADDRNUMBER"/>
+        <viewAttribute id="DATE_FROM"/>
+        <viewAttribute id="NATION"/>
+        <viewAttribute id="DATE_TO"/>
+        <viewAttribute id="TITLE"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="NAME3"/>
+        <viewAttribute id="NAME4"/>
+        <viewAttribute id="NAME_TEXT"/>
+        <viewAttribute id="NAME_CO"/>
+        <viewAttribute id="CITY1"/>
+        <viewAttribute id="CITY2"/>
+        <viewAttribute id="CITY_CODE"/>
+        <viewAttribute id="CITYP_CODE"/>
+        <viewAttribute id="HOME_CITY"/>
+        <viewAttribute id="CITYH_CODE"/>
+        <viewAttribute id="CHCKSTATUS"/>
+        <viewAttribute id="REGIOGROUP"/>
+        <viewAttribute id="POST_CODE1"/>
+        <viewAttribute id="POST_CODE2"/>
+        <viewAttribute id="POST_CODE3"/>
+        <viewAttribute id="PCODE1_EXT"/>
+        <viewAttribute id="PCODE2_EXT"/>
+        <viewAttribute id="PCODE3_EXT"/>
+        <viewAttribute id="PO_BOX"/>
+        <viewAttribute id="DONT_USE_P"/>
+        <viewAttribute id="PO_BOX_NUM"/>
+        <viewAttribute id="PO_BOX_LOC"/>
+        <viewAttribute id="CITY_CODE2"/>
+        <viewAttribute id="PO_BOX_REG"/>
+        <viewAttribute id="PO_BOX_CTY"/>
+        <viewAttribute id="POSTALAREA"/>
+        <viewAttribute id="TRANSPZONE"/>
+        <viewAttribute id="STREET"/>
+        <viewAttribute id="DONT_USE_S"/>
+        <viewAttribute id="STREETCODE"/>
+        <viewAttribute id="STREETABBR"/>
+        <viewAttribute id="HOUSE_NUM1"/>
+        <viewAttribute id="HOUSE_NUM2"/>
+        <viewAttribute id="HOUSE_NUM3"/>
+        <viewAttribute id="STR_SUPPL1"/>
+        <viewAttribute id="STR_SUPPL2"/>
+        <viewAttribute id="STR_SUPPL3"/>
+        <viewAttribute id="LOCATION"/>
+        <viewAttribute id="BUILDING"/>
+        <viewAttribute id="FLOOR"/>
+        <viewAttribute id="ROOMNUMBER"/>
+        <viewAttribute id="COUNTRY"/>
+        <viewAttribute id="LANGU"/>
+        <viewAttribute id="REGION"/>
+        <viewAttribute id="ADDR_GROUP"/>
+        <viewAttribute id="FLAGGROUPS"/>
+        <viewAttribute id="PERS_ADDR"/>
+        <viewAttribute id="SORT1"/>
+        <viewAttribute id="SORT2"/>
+        <viewAttribute id="SORT_PHN"/>
+        <viewAttribute id="DEFLT_COMM"/>
+        <viewAttribute id="TEL_NUMBER"/>
+        <viewAttribute id="TEL_EXTENS"/>
+        <viewAttribute id="FAX_NUMBER"/>
+        <viewAttribute id="FAX_EXTENS"/>
+        <viewAttribute id="FLAGCOMM2"/>
+        <viewAttribute id="FLAGCOMM3"/>
+        <viewAttribute id="FLAGCOMM4"/>
+        <viewAttribute id="FLAGCOMM5"/>
+        <viewAttribute id="FLAGCOMM6"/>
+        <viewAttribute id="FLAGCOMM7"/>
+        <viewAttribute id="FLAGCOMM8"/>
+        <viewAttribute id="FLAGCOMM9"/>
+        <viewAttribute id="FLAGCOMM10"/>
+        <viewAttribute id="FLAGCOMM11"/>
+        <viewAttribute id="FLAGCOMM12"/>
+        <viewAttribute id="FLAGCOMM13"/>
+        <viewAttribute id="ADDRORIGIN"/>
+        <viewAttribute id="MC_NAME1"/>
+        <viewAttribute id="MC_CITY1"/>
+        <viewAttribute id="MC_STREET"/>
+        <viewAttribute id="EXTENSION1"/>
+        <viewAttribute id="EXTENSION2"/>
+        <viewAttribute id="TIME_ZONE"/>
+        <viewAttribute id="TAXJURCODE"/>
+        <viewAttribute id="ADDRESS_ID"/>
+        <viewAttribute id="LANGU_CREA"/>
+        <viewAttribute id="ADRC_UUID"/>
+        <viewAttribute id="UUID_BELATED"/>
+        <viewAttribute id="ID_CATEGORY"/>
+        <viewAttribute id="ADRC_ERR_STATUS"/>
+        <viewAttribute id="PO_BOX_LOBBY"/>
+        <viewAttribute id="DELI_SERV_TYPE"/>
+        <viewAttribute id="DELI_SERV_NUMBER"/>
+        <viewAttribute id="COUNTY_CODE"/>
+        <viewAttribute id="COUNTY"/>
+        <viewAttribute id="TOWNSHIP_CODE"/>
+        <viewAttribute id="TOWNSHIP"/>
+        <viewAttribute id="MC_COUNTY"/>
+        <viewAttribute id="MC_TOWNSHIP"/>
+        <viewAttribute id="XPCPT"/>
+        <viewAttribute id="_DATAAGING"/>
+        <viewAttribute id="DUNS"/>
+        <viewAttribute id="DUNSP4"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_ADRC"/>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="P_ARDC">
+    <descriptions/>
+    <attributes>
+      <attribute id="CLIENT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLIENT"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="CLIENT"/>
+      </attribute>
+      <attribute id="ADDRNUMBER" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRNUMBER"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="ADDRNUMBER"/>
+      </attribute>
+      <attribute id="DATE_FROM" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE_FROM"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="DATE_FROM"/>
+      </attribute>
+      <attribute id="NATION" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NATION"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="NATION"/>
+      </attribute>
+      <attribute id="DATE_TO" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE_TO"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="DATE_TO"/>
+      </attribute>
+      <attribute id="TITLE" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TITLE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="TITLE"/>
+      </attribute>
+      <attribute id="NAME1" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="NAME1"/>
+      </attribute>
+      <attribute id="NAME2" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME2"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="NAME2"/>
+      </attribute>
+      <attribute id="NAME3" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME3"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="NAME3"/>
+      </attribute>
+      <attribute id="NAME4" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME4"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="NAME4"/>
+      </attribute>
+      <attribute id="NAME_TEXT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME_TEXT"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="NAME_TEXT"/>
+      </attribute>
+      <attribute id="NAME_CO" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME_CO"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="NAME_CO"/>
+      </attribute>
+      <attribute id="CITY1" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY1"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="CITY1"/>
+      </attribute>
+      <attribute id="CITY2" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY2"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="CITY2"/>
+      </attribute>
+      <attribute id="CITY_CODE" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY_CODE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="CITY_CODE"/>
+      </attribute>
+      <attribute id="CITYP_CODE" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITYP_CODE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="CITYP_CODE"/>
+      </attribute>
+      <attribute id="HOME_CITY" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HOME_CITY"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="HOME_CITY"/>
+      </attribute>
+      <attribute id="CITYH_CODE" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITYH_CODE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="CITYH_CODE"/>
+      </attribute>
+      <attribute id="CHCKSTATUS" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHCKSTATUS"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="CHCKSTATUS"/>
+      </attribute>
+      <attribute id="REGIOGROUP" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REGIOGROUP"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="REGIOGROUP"/>
+      </attribute>
+      <attribute id="POST_CODE1" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POST_CODE1"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="POST_CODE1"/>
+      </attribute>
+      <attribute id="POST_CODE2" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POST_CODE2"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="POST_CODE2"/>
+      </attribute>
+      <attribute id="POST_CODE3" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POST_CODE3"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="POST_CODE3"/>
+      </attribute>
+      <attribute id="PCODE1_EXT" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PCODE1_EXT"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="PCODE1_EXT"/>
+      </attribute>
+      <attribute id="PCODE2_EXT" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PCODE2_EXT"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="PCODE2_EXT"/>
+      </attribute>
+      <attribute id="PCODE3_EXT" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PCODE3_EXT"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="PCODE3_EXT"/>
+      </attribute>
+      <attribute id="PO_BOX" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO_BOX"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="PO_BOX"/>
+      </attribute>
+      <attribute id="DONT_USE_P" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DONT_USE_P"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="DONT_USE_P"/>
+      </attribute>
+      <attribute id="PO_BOX_NUM" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO_BOX_NUM"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="PO_BOX_NUM"/>
+      </attribute>
+      <attribute id="PO_BOX_LOC" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO_BOX_LOC"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="PO_BOX_LOC"/>
+      </attribute>
+      <attribute id="CITY_CODE2" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY_CODE2"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="CITY_CODE2"/>
+      </attribute>
+      <attribute id="PO_BOX_REG" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO_BOX_REG"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="PO_BOX_REG"/>
+      </attribute>
+      <attribute id="PO_BOX_CTY" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO_BOX_CTY"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="PO_BOX_CTY"/>
+      </attribute>
+      <attribute id="POSTALAREA" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSTALAREA"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="POSTALAREA"/>
+      </attribute>
+      <attribute id="TRANSPZONE" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRANSPZONE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="TRANSPZONE"/>
+      </attribute>
+      <attribute id="STREET" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STREET"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="STREET"/>
+      </attribute>
+      <attribute id="DONT_USE_S" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DONT_USE_S"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="DONT_USE_S"/>
+      </attribute>
+      <attribute id="STREETCODE" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STREETCODE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="STREETCODE"/>
+      </attribute>
+      <attribute id="STREETABBR" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STREETABBR"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="STREETABBR"/>
+      </attribute>
+      <attribute id="HOUSE_NUM1" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HOUSE_NUM1"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="HOUSE_NUM1"/>
+      </attribute>
+      <attribute id="HOUSE_NUM2" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HOUSE_NUM2"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="HOUSE_NUM2"/>
+      </attribute>
+      <attribute id="HOUSE_NUM3" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HOUSE_NUM3"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="HOUSE_NUM3"/>
+      </attribute>
+      <attribute id="STR_SUPPL1" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STR_SUPPL1"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="STR_SUPPL1"/>
+      </attribute>
+      <attribute id="STR_SUPPL2" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STR_SUPPL2"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="STR_SUPPL2"/>
+      </attribute>
+      <attribute id="STR_SUPPL3" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STR_SUPPL3"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="STR_SUPPL3"/>
+      </attribute>
+      <attribute id="LOCATION" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOCATION"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="LOCATION"/>
+      </attribute>
+      <attribute id="BUILDING" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUILDING"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="BUILDING"/>
+      </attribute>
+      <attribute id="FLOOR" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLOOR"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLOOR"/>
+      </attribute>
+      <attribute id="ROOMNUMBER" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROOMNUMBER"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="ROOMNUMBER"/>
+      </attribute>
+      <attribute id="COUNTRY" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTRY"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="COUNTRY"/>
+      </attribute>
+      <attribute id="LANGU" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LANGU"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="LANGU"/>
+      </attribute>
+      <attribute id="REGION" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REGION"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="REGION"/>
+      </attribute>
+      <attribute id="ADDR_GROUP" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDR_GROUP"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="ADDR_GROUP"/>
+      </attribute>
+      <attribute id="FLAGGROUPS" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGGROUPS"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGGROUPS"/>
+      </attribute>
+      <attribute id="PERS_ADDR" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERS_ADDR"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="PERS_ADDR"/>
+      </attribute>
+      <attribute id="SORT1" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SORT1"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="SORT1"/>
+      </attribute>
+      <attribute id="SORT2" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SORT2"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="SORT2"/>
+      </attribute>
+      <attribute id="SORT_PHN" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SORT_PHN"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="SORT_PHN"/>
+      </attribute>
+      <attribute id="DEFLT_COMM" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEFLT_COMM"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="DEFLT_COMM"/>
+      </attribute>
+      <attribute id="TEL_NUMBER" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TEL_NUMBER"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="TEL_NUMBER"/>
+      </attribute>
+      <attribute id="TEL_EXTENS" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TEL_EXTENS"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="TEL_EXTENS"/>
+      </attribute>
+      <attribute id="FAX_NUMBER" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAX_NUMBER"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FAX_NUMBER"/>
+      </attribute>
+      <attribute id="FAX_EXTENS" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAX_EXTENS"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FAX_EXTENS"/>
+      </attribute>
+      <attribute id="FLAGCOMM2" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM2"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM2"/>
+      </attribute>
+      <attribute id="FLAGCOMM3" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM3"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM3"/>
+      </attribute>
+      <attribute id="FLAGCOMM4" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM4"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM4"/>
+      </attribute>
+      <attribute id="FLAGCOMM5" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM5"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM5"/>
+      </attribute>
+      <attribute id="FLAGCOMM6" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM6"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM6"/>
+      </attribute>
+      <attribute id="FLAGCOMM7" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM7"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM7"/>
+      </attribute>
+      <attribute id="FLAGCOMM8" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM8"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM8"/>
+      </attribute>
+      <attribute id="FLAGCOMM9" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM9"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM9"/>
+      </attribute>
+      <attribute id="FLAGCOMM10" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM10"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM10"/>
+      </attribute>
+      <attribute id="FLAGCOMM11" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM11"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM11"/>
+      </attribute>
+      <attribute id="FLAGCOMM12" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM12"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM12"/>
+      </attribute>
+      <attribute id="FLAGCOMM13" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLAGCOMM13"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="FLAGCOMM13"/>
+      </attribute>
+      <attribute id="ADDRORIGIN" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRORIGIN"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="ADDRORIGIN"/>
+      </attribute>
+      <attribute id="MC_NAME1" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MC_NAME1"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="MC_NAME1"/>
+      </attribute>
+      <attribute id="MC_CITY1" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MC_CITY1"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="MC_CITY1"/>
+      </attribute>
+      <attribute id="MC_STREET" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MC_STREET"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="MC_STREET"/>
+      </attribute>
+      <attribute id="EXTENSION1" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXTENSION1"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="EXTENSION1"/>
+      </attribute>
+      <attribute id="EXTENSION2" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXTENSION2"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="EXTENSION2"/>
+      </attribute>
+      <attribute id="TIME_ZONE" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TIME_ZONE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="TIME_ZONE"/>
+      </attribute>
+      <attribute id="TAXJURCODE" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXJURCODE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="TAXJURCODE"/>
+      </attribute>
+      <attribute id="ADDRESS_ID" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS_ID"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="ADDRESS_ID"/>
+      </attribute>
+      <attribute id="LANGU_CREA" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LANGU_CREA"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="LANGU_CREA"/>
+      </attribute>
+      <attribute id="ADRC_UUID" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRC_UUID"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="ADRC_UUID"/>
+      </attribute>
+      <attribute id="UUID_BELATED" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UUID_BELATED"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="UUID_BELATED"/>
+      </attribute>
+      <attribute id="ID_CATEGORY" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID_CATEGORY"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="ID_CATEGORY"/>
+      </attribute>
+      <attribute id="ADRC_ERR_STATUS" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRC_ERR_STATUS"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="ADRC_ERR_STATUS"/>
+      </attribute>
+      <attribute id="PO_BOX_LOBBY" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO_BOX_LOBBY"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="PO_BOX_LOBBY"/>
+      </attribute>
+      <attribute id="DELI_SERV_TYPE" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DELI_SERV_TYPE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="DELI_SERV_TYPE"/>
+      </attribute>
+      <attribute id="DELI_SERV_NUMBER" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DELI_SERV_NUMBER"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="DELI_SERV_NUMBER"/>
+      </attribute>
+      <attribute id="COUNTY_CODE" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTY_CODE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="COUNTY_CODE"/>
+      </attribute>
+      <attribute id="COUNTY" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTY"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="COUNTY"/>
+      </attribute>
+      <attribute id="TOWNSHIP_CODE" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TOWNSHIP_CODE"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="TOWNSHIP_CODE"/>
+      </attribute>
+      <attribute id="TOWNSHIP" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TOWNSHIP"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="TOWNSHIP"/>
+      </attribute>
+      <attribute id="MC_COUNTY" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MC_COUNTY"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="MC_COUNTY"/>
+      </attribute>
+      <attribute id="MC_TOWNSHIP" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MC_TOWNSHIP"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="MC_TOWNSHIP"/>
+      </attribute>
+      <attribute id="XPCPT" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XPCPT"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="XPCPT"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="DUNS" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUNS"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="DUNS"/>
+      </attribute>
+      <attribute id="DUNSP4" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUNSP4"/>
+        <keyMapping columnObjectName="P_ARDC" columnName="DUNSP4"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_ARDC" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="50" y="270"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

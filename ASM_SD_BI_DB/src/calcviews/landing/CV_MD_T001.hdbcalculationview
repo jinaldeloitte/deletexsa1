@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_T001" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="true" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_MD_T001"/>
+  <metadata changedAt="2020-05-07 17:04:41.027" createdAt="2020-05-07 16:59:28.647"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_T001">
+      <resourceUri>syn_tbl_T001</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_T001">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="MANDT"/>
+      </attribute>
+      <attribute id="BUKRS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="BUTXT" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUTXT"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="BUTXT"/>
+      </attribute>
+      <attribute id="ORT01" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ORT01"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="ORT01"/>
+      </attribute>
+      <attribute id="LAND1" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAND1"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="LAND1"/>
+      </attribute>
+      <attribute id="WAERS" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERS"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="WAERS"/>
+      </attribute>
+      <attribute id="SPRAS" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPRAS"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="KTOPL" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOPL"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="KTOPL"/>
+      </attribute>
+      <attribute id="WAABW" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAABW"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="WAABW"/>
+      </attribute>
+      <attribute id="PERIV" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERIV"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="PERIV"/>
+      </attribute>
+      <attribute id="KOKFI" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOKFI"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="KOKFI"/>
+      </attribute>
+      <attribute id="RCOMP" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RCOMP"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="RCOMP"/>
+      </attribute>
+      <attribute id="ADRNR" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADRNR"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="ADRNR"/>
+      </attribute>
+      <attribute id="STCEG" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="STCEG"/>
+      </attribute>
+      <attribute id="FIKRS" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIKRS"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="FIKRS"/>
+      </attribute>
+      <attribute id="XFMCO" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XFMCO"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XFMCO"/>
+      </attribute>
+      <attribute id="XFMCB" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XFMCB"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XFMCB"/>
+      </attribute>
+      <attribute id="XFMCA" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XFMCA"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XFMCA"/>
+      </attribute>
+      <attribute id="TXJCD" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXJCD"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="TXJCD"/>
+      </attribute>
+      <attribute id="FMHRDATE" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FMHRDATE"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="FMHRDATE"/>
+      </attribute>
+      <attribute id="XTEMPLT" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XTEMPLT"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XTEMPLT"/>
+      </attribute>
+      <attribute id="BUVAR" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUVAR"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="BUVAR"/>
+      </attribute>
+      <attribute id="FDBUK" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FDBUK"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="FDBUK"/>
+      </attribute>
+      <attribute id="XFDIS" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XFDIS"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XFDIS"/>
+      </attribute>
+      <attribute id="XVALV" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XVALV"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XVALV"/>
+      </attribute>
+      <attribute id="XSKFN" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSKFN"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XSKFN"/>
+      </attribute>
+      <attribute id="KKBER" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KKBER"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="KKBER"/>
+      </attribute>
+      <attribute id="XMWSN" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XMWSN"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XMWSN"/>
+      </attribute>
+      <attribute id="MREGL" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MREGL"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="MREGL"/>
+      </attribute>
+      <attribute id="XGSBE" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XGSBE"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XGSBE"/>
+      </attribute>
+      <attribute id="XGJRV" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XGJRV"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XGJRV"/>
+      </attribute>
+      <attribute id="XKDFT" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XKDFT"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XKDFT"/>
+      </attribute>
+      <attribute id="XPROD" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XPROD"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XPROD"/>
+      </attribute>
+      <attribute id="XEINK" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XEINK"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XEINK"/>
+      </attribute>
+      <attribute id="XJVAA" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XJVAA"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XJVAA"/>
+      </attribute>
+      <attribute id="XVVWA" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XVVWA"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XVVWA"/>
+      </attribute>
+      <attribute id="XSLTA" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSLTA"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XSLTA"/>
+      </attribute>
+      <attribute id="XFDMM" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XFDMM"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XFDMM"/>
+      </attribute>
+      <attribute id="XFDSD" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XFDSD"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XFDSD"/>
+      </attribute>
+      <attribute id="XEXTB" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XEXTB"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XEXTB"/>
+      </attribute>
+      <attribute id="EBUKR" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBUKR"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="EBUKR"/>
+      </attribute>
+      <attribute id="KTOP2" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOP2"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="KTOP2"/>
+      </attribute>
+      <attribute id="UMKRS" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMKRS"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="UMKRS"/>
+      </attribute>
+      <attribute id="BUKRS_GLOB" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS_GLOB"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="BUKRS_GLOB"/>
+      </attribute>
+      <attribute id="FSTVA" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSTVA"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="FSTVA"/>
+      </attribute>
+      <attribute id="OPVAR" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OPVAR"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="OPVAR"/>
+      </attribute>
+      <attribute id="XCOVR" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCOVR"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XCOVR"/>
+      </attribute>
+      <attribute id="TXKRS" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXKRS"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="TXKRS"/>
+      </attribute>
+      <attribute id="WFVAR" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WFVAR"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="WFVAR"/>
+      </attribute>
+      <attribute id="XBBBF" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBBBF"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XBBBF"/>
+      </attribute>
+      <attribute id="XBBBE" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBBBE"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XBBBE"/>
+      </attribute>
+      <attribute id="XBBBA" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBBBA"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XBBBA"/>
+      </attribute>
+      <attribute id="XBBKO" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBBKO"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XBBKO"/>
+      </attribute>
+      <attribute id="XSTDT" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSTDT"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XSTDT"/>
+      </attribute>
+      <attribute id="MWSKV" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSKV"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="MWSKV"/>
+      </attribute>
+      <attribute id="MWSKA" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSKA"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="MWSKA"/>
+      </attribute>
+      <attribute id="IMPDA" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IMPDA"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="IMPDA"/>
+      </attribute>
+      <attribute id="XNEGP" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XNEGP"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XNEGP"/>
+      </attribute>
+      <attribute id="XKKBI" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XKKBI"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XKKBI"/>
+      </attribute>
+      <attribute id="WT_NEWWT" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WT_NEWWT"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="WT_NEWWT"/>
+      </attribute>
+      <attribute id="PP_PDATE" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PP_PDATE"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="PP_PDATE"/>
+      </attribute>
+      <attribute id="INFMT" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INFMT"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="INFMT"/>
+      </attribute>
+      <attribute id="FSTVARE" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSTVARE"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="FSTVARE"/>
+      </attribute>
+      <attribute id="KOPIM" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOPIM"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="KOPIM"/>
+      </attribute>
+      <attribute id="DKWEG" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DKWEG"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="DKWEG"/>
+      </attribute>
+      <attribute id="OFFSACCT" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OFFSACCT"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="OFFSACCT"/>
+      </attribute>
+      <attribute id="BAPOVAR" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BAPOVAR"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="BAPOVAR"/>
+      </attribute>
+      <attribute id="XCOS" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCOS"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XCOS"/>
+      </attribute>
+      <attribute id="XCESSION" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCESSION"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XCESSION"/>
+      </attribute>
+      <attribute id="XSPLT" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSPLT"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XSPLT"/>
+      </attribute>
+      <attribute id="SURCCM" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SURCCM"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="SURCCM"/>
+      </attribute>
+      <attribute id="DTPROV" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTPROV"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="DTPROV"/>
+      </attribute>
+      <attribute id="DTAMTC" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTAMTC"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="DTAMTC"/>
+      </attribute>
+      <attribute id="DTTAXC" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTTAXC"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="DTTAXC"/>
+      </attribute>
+      <attribute id="DTTDSP" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTTDSP"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="DTTDSP"/>
+      </attribute>
+      <attribute id="DTAXR" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTAXR"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="DTAXR"/>
+      </attribute>
+      <attribute id="XVATDATE" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XVATDATE"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XVATDATE"/>
+      </attribute>
+      <attribute id="PST_PER_VAR" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PST_PER_VAR"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="PST_PER_VAR"/>
+      </attribute>
+      <attribute id="XBBSC" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBBSC"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="XBBSC"/>
+      </attribute>
+      <attribute id="F_OBSOLETE" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="F_OBSOLETE"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="F_OBSOLETE"/>
+      </attribute>
+      <attribute id="FM_DERIVE_ACC" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FM_DERIVE_ACC"/>
+        <keyMapping columnObjectName="syn_tbl_T001" columnName="FM_DERIVE_ACC"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

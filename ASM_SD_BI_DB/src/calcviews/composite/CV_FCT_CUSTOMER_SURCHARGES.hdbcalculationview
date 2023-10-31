@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_FCT_CUSTOMER_SURCHARGES" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="true" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VFCT_CUSTOMER_MATERIAL_PRICES"/>
+  <metadata changedAt="2021-12-06 18:55:28.013"/>
+  <localVariables>
+    <variable id="IP_SURCHARGES" parameter="true">
+      <descriptions defaultDescription="IP_SURCHARGES"/>
+      <variableProperties datatype="NVARCHAR" length="5" mandatory="false">
+        <valueDomain type="empty"/>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_SALES_ORG" parameter="true">
+      <descriptions defaultDescription="IP_SALES_ORG"/>
+      <variableProperties datatype="NVARCHAR" length="4" mandatory="false" defaultValue="undefined">
+        <valueDomain type="empty"/>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_SOLD_TO" parameter="true">
+      <descriptions defaultDescription="IP_SOLD_TO"/>
+      <variableProperties datatype="NVARCHAR" length="10" mandatory="false" scale="null" defaultValue="undefined">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_MD_KNVP</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>KUNNR</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_SHIP_TO" parameter="true">
+      <descriptions defaultDescription="IP_SHIP_TO"/>
+      <variableProperties datatype="NVARCHAR" length="10" mandatory="false" scale="null" defaultValue="undefined">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_MD_KNVP</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>KUNNR</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_MATERIAL" parameter="true">
+      <descriptions defaultDescription="IP_MATERIAL"/>
+      <variableProperties datatype="NVARCHAR" length="40" mandatory="false" scale="null" defaultValue="undefined">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_DIM_MD_MATERIAL_DESC</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>MATNR</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_CONTRACT" parameter="true">
+      <descriptions defaultDescription="IP_CONTRACT"/>
+      <variableProperties datatype="NVARCHAR" length="10" mandatory="false" scale="null" defaultValue="undefined">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_FCT_SALESORDER</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>VBELN</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="36"/>
+  <dataSources>
+    <DataSource id="CV_TD_KONP">
+      <resourceUri>CV_TD_KONP</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_KONM">
+      <resourceUri>CV_TD_KONM</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KNUMH"/>
+        <viewAttribute id="KBETR"/>
+        <viewAttribute id="KMEIN"/>
+        <viewAttribute id="KPEIN"/>
+        <viewAttribute id="KSTBM"/>
+        <viewAttribute id="KONWA"/>
+        <viewAttribute id="KOPOS"/>
+        <viewAttribute id="KSCHL"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_KONP"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_4">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KONM_KNUMH"/>
+        <viewAttribute id="KONM_KOPOS"/>
+        <viewAttribute id="KONM_KLFN1"/>
+        <viewAttribute id="KONM_KSTBM"/>
+        <viewAttribute id="KONM_KBETR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_KONM">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONM_KNUMH" source="KNUMH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONM_KOPOS" source="KOPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONM_KLFN1" source="KLFN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONM_KSTBM" source="KSTBM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONM_KBETR" source="KBETR"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KONM_KSTBM"/>
+        <viewAttribute id="KONM_KBETR"/>
+        <viewAttribute id="KONM_KOPOS"/>
+        <viewAttribute id="KONM_KLFN1"/>
+        <viewAttribute id="KNUMH"/>
+        <viewAttribute id="KBETR"/>
+        <viewAttribute id="KMEIN"/>
+        <viewAttribute id="KPEIN"/>
+        <viewAttribute id="KSTBM"/>
+        <viewAttribute id="KONWA"/>
+        <viewAttribute id="KOPOS"/>
+        <viewAttribute id="KSCHL"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNUMH" source="KNUMH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KBETR" source="KBETR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KMEIN" source="KMEIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KPEIN" source="KPEIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KSTBM" source="KSTBM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONWA" source="KONWA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KOPOS" source="KOPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KSCHL" source="KSCHL"/>
+      </input>
+      <input node="Projection_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONM_KSTBM" source="KONM_KSTBM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONM_KBETR" source="KONM_KBETR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONM_KOPOS" source="KONM_KOPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KONM_KLFN1" source="KONM_KLFN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KOPOS" source="KONM_KOPOS"/>
+      </input>
+    <joinAttribute name="KOPOS"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_2">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="KONM_KSTBM"/>
+        <viewAttribute id="KONM_KBETR"/>
+        <viewAttribute id="KONM_KOPOS"/>
+        <viewAttribute id="KONM_KLFN1"/>
+        <viewAttribute id="KNUMH"/>
+        <viewAttribute id="KBETR"/>
+        <viewAttribute id="KMEIN"/>
+        <viewAttribute id="KPEIN"/>
+        <viewAttribute id="KSTBM"/>
+        <viewAttribute id="KONWA"/>
+        <viewAttribute id="KOPOS"/>
+        <viewAttribute id="KSCHL"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DECIMAL" id="Amount_KBETR_CAL" length="11" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;KMEIN&quot;='%',&quot;KBETR&quot;/10,&quot;KBETR&quot;)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+    <restrictedViewAttributes/>
+      <input node="Join_2"/>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="Aggregation_2">
+    <descriptions defaultDescription="VFCT_CUSTOMER_MATERIAL_PRICES"/>
+    <attributes>
+      <attribute id="KONM_KSTBM" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition scale quantity"/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KONM_KSTBM"/>
+      </attribute>
+      <attribute id="KONM_KBETR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Amount or Percentage"/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KONM_KBETR"/>
+      </attribute>
+      <attribute id="KONM_KOPOS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sequential number of the condition"/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KONM_KOPOS"/>
+      </attribute>
+      <attribute id="KONM_KLFN1" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Current number of the line scale"/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KONM_KLFN1"/>
+      </attribute>
+      <attribute id="Amount_KBETR_CAL" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Amount_KBETR_CAL"/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="Amount_KBETR_CAL"/>
+      </attribute>
+      <attribute id="KNUMH" order="6" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KNUMH"/>
+      </attribute>
+      <attribute id="KBETR" order="7" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition amount or percentage where no scale exists"/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KBETR"/>
+      </attribute>
+      <attribute id="KMEIN" order="8" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Unit"/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KMEIN"/>
+      </attribute>
+      <attribute id="KPEIN" order="9" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition Pricing Unit"/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KPEIN"/>
+      </attribute>
+      <attribute id="KSTBM" order="10" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition scale quantity"/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KSTBM"/>
+      </attribute>
+      <attribute id="KONWA" order="11" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Condition unit (currency or percentage)"/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KONWA"/>
+      </attribute>
+      <attribute id="KOPOS" order="12" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KOPOS"/>
+      </attribute>
+      <attribute id="KSCHL" order="13" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Aggregation_2" columnName="KSCHL"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="435"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="339"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="243"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_4" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Aggregation_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

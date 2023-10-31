@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_KONP" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_KONP"/>
+  <metadata changedAt="2021-12-06 18:12:26.096" createdAt="2019-11-27 13:29:31.787"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_KONP">
+      <resourceUri>syn_tbl_KONP</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews/>
+  <logicalModel id="syn_tbl_KONP">
+    <descriptions defaultDescription="CV_TD_KONP"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KNUMH" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMH"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KNUMH"/>
+      </attribute>
+      <attribute id="KOPOS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOPOS"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KOPOS"/>
+      </attribute>
+      <attribute id="KAPPL" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KAPPL"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KAPPL"/>
+      </attribute>
+      <attribute id="KSCHL" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KSCHL"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KSCHL"/>
+      </attribute>
+      <attribute id="KNUMT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMT"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KNUMT"/>
+      </attribute>
+      <attribute id="STFKZ" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STFKZ"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="STFKZ"/>
+      </attribute>
+      <attribute id="KZBZG" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZBZG"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KZBZG"/>
+      </attribute>
+      <attribute id="KONMS" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONMS"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KONMS"/>
+      </attribute>
+      <attribute id="KONWS" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONWS"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KONWS"/>
+      </attribute>
+      <attribute id="KRECH" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KRECH"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KRECH"/>
+      </attribute>
+      <attribute id="KONWA" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONWA"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KONWA"/>
+      </attribute>
+      <attribute id="KMEIN" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMEIN"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KMEIN"/>
+      </attribute>
+      <attribute id="PRSCH" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRSCH"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="PRSCH"/>
+      </attribute>
+      <attribute id="MEINS" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="MEINS"/>
+      </attribute>
+      <attribute id="KWAEH" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KWAEH"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KWAEH"/>
+      </attribute>
+      <attribute id="KZNEP" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZNEP"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KZNEP"/>
+      </attribute>
+      <attribute id="KUNNR" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="LIFNR" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="MWSK1" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSK1"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="MWSK1"/>
+      </attribute>
+      <attribute id="LOEVM_KO" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOEVM_KO"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="LOEVM_KO"/>
+      </attribute>
+      <attribute id="ZAEHK_IND" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAEHK_IND"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="ZAEHK_IND"/>
+      </attribute>
+      <attribute id="BOMAT" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BOMAT"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="BOMAT"/>
+      </attribute>
+      <attribute id="KSPAE" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KSPAE"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KSPAE"/>
+      </attribute>
+      <attribute id="BOSTA" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BOSTA"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="BOSTA"/>
+      </attribute>
+      <attribute id="KNUMA_PI" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMA_PI"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KNUMA_PI"/>
+      </attribute>
+      <attribute id="KNUMA_AG" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMA_AG"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KNUMA_AG"/>
+      </attribute>
+      <attribute id="KNUMA_SQ" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMA_SQ"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KNUMA_SQ"/>
+      </attribute>
+      <attribute id="VALTG" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALTG"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="VALTG"/>
+      </attribute>
+      <attribute id="VALDT" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALDT"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="VALDT"/>
+      </attribute>
+      <attribute id="ZTERM" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="ANZAUF" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANZAUF"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="ANZAUF"/>
+      </attribute>
+      <attribute id="KLF_STG" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KLF_STG"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KLF_STG"/>
+      </attribute>
+      <attribute id="KLF_KAL" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KLF_KAL"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KLF_KAL"/>
+      </attribute>
+      <attribute id="VKKAL" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKKAL"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="VKKAL"/>
+      </attribute>
+      <attribute id="AKTNR" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AKTNR"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="AKTNR"/>
+      </attribute>
+      <attribute id="KNUMA_BO" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMA_BO"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KNUMA_BO"/>
+      </attribute>
+      <attribute id="MWSK2" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSK2"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="MWSK2"/>
+      </attribute>
+      <attribute id="VERTT" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERTT"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="VERTT"/>
+      </attribute>
+      <attribute id="VERTN" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERTN"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="VERTN"/>
+      </attribute>
+      <attribute id="VBEWA" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBEWA"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="VBEWA"/>
+      </attribute>
+      <attribute id="MDFLG" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MDFLG"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="MDFLG"/>
+      </attribute>
+      <attribute id="KFRST" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KFRST"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="KFRST"/>
+      </attribute>
+      <attribute id="UASTA" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UASTA"/>
+        <keyMapping columnObjectName="syn_tbl_KONP" columnName="UASTA"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="KSTBM" order="9" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KSTBM"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="KSTBM"/>
+      </measure>
+      <measure id="KSTBW" order="11" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KSTBW"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="KSTBW"/>
+      </measure>
+      <measure id="KBETR" order="14" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KBETR"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="KBETR"/>
+      </measure>
+      <measure id="KPEIN" order="16" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KPEIN"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="KPEIN"/>
+      </measure>
+      <measure id="KUMZA" order="19" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KUMZA"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="KUMZA"/>
+      </measure>
+      <measure id="KUMNE" order="20" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KUMNE"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="KUMNE"/>
+      </measure>
+      <measure id="MXWRT" order="22" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MXWRT"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="MXWRT"/>
+      </measure>
+      <measure id="GKWRT" order="23" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="GKWRT"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="GKWRT"/>
+      </measure>
+      <measure id="PKWRT" order="24" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PKWRT"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="PKWRT"/>
+      </measure>
+      <measure id="FKWRT" order="25" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FKWRT"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="FKWRT"/>
+      </measure>
+      <measure id="RSWRT" order="26" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RSWRT"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="RSWRT"/>
+      </measure>
+      <measure id="UKBAS" order="28" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="UKBAS"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="UKBAS"/>
+      </measure>
+      <measure id="KBRUE" order="36" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KBRUE"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="KBRUE"/>
+      </measure>
+      <measure id="MIKBAS" order="46" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MIKBAS"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="MIKBAS"/>
+      </measure>
+      <measure id="MXKBAS" order="47" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MXKBAS"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="MXKBAS"/>
+      </measure>
+      <measure id="KOMXWRT" order="48" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KOMXWRT"/>
+        <measureMapping columnObjectName="syn_tbl_KONP" columnName="KOMXWRT"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/></shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

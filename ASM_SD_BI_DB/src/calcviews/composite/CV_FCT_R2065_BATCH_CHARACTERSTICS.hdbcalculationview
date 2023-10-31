@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_FCT_R2065_BATCH_CHARACTERSTICS" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Staging Batch Characterstics"/>
+  <metadata changedAt="2021-12-06 18:56:03.057"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="36"/>
+  <dataSources>
+    <DataSource id="CV_TD_MCHB">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.TRANSACTION_VIEWS::CV_TD_MCHB</resourceUri>
+    </DataSource>
+    <DataSource id="TF_CHARACTERISTICS_AGG" type="TABLE_FUNCTION">
+      <resourceUri>HANA_CONTENT.STAGING_MODELS.SUPPLY_CHAIN::TF_CHARACTERISTICS_AGG</resourceUri>
+    </DataSource>
+    <DataSource id="CV_TD_MATDOC">
+      <resourceUri>CV_TD_MATDOC</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="MCHB">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="CHARG"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="MANDT"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="OBJECT_KEY" length="30" expressionLanguage="COLUMN_ENGINE">
+          <formula>&quot;MATNR&quot;+'                      '+&quot;CHARG&quot;</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="CV_TD_MCHB"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="INOB_AUSP_CABN">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="CUOBJ"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="OBJEK"/>
+        <viewAttribute id="KLART"/>
+        <viewAttribute id="OBTAB"/>
+        <viewAttribute id="SALESORDER"/>
+        <viewAttribute id="ACTWGT"/>
+        <viewAttribute id="CONTAINERID"/>
+        <viewAttribute id="TRUCKID"/>
+        <viewAttribute id="DELIVERYNO"/>
+        <viewAttribute id="DELITEMNO"/>
+        <viewAttribute id="CUSTID"/>
+        <viewAttribute id="BILLTYPE"/>
+        <viewAttribute id="SHPTO"/>
+        <viewAttribute id="SERVID"/>
+        <viewAttribute id="SERVDES"/>
+        <viewAttribute id="PROCESSCODE"/>
+        <viewAttribute id="PROCESSCODEDESC"/>
+        <viewAttribute id="SAPCONTMATNR"/>
+        <viewAttribute id="CONTDESC"/>
+        <viewAttribute id="ESTWGT"/>
+        <viewAttribute id="RECDTE"/>
+        <viewAttribute id="CARTNO"/>
+        <viewAttribute id="HUNO"/>
+        <viewAttribute id="DRIVERID"/>
+        <viewAttribute id="ROUTEID"/>
+        <viewAttribute id="STOPID"/>
+        <viewAttribute id="DISPOSALMETHOD"/>
+        <viewAttribute id="SALESORDERITEM"/>
+        <viewAttribute id="GROUPCODE"/>
+        <viewAttribute id="FILLLEVEL"/>
+        <viewAttribute id="REASONCODE"/>
+        <viewAttribute id="EXCEPTIONSTATUS"/>
+        <viewAttribute id="SCANMODE"/>
+        <viewAttribute id="DESCARTESQUANTITY"/>
+        <viewAttribute id="FACILITYTYPE"/>
+        <viewAttribute id="DSGTICKERTAPE"/>
+        <viewAttribute id="SEQUENCE"/>
+        <viewAttribute id="DEPARTMENT"/>
+        <viewAttribute id="SCANTIME"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="TF_CHARACTERISTICS_AGG"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="CUOBJ"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="CHARG"/>
+        <viewAttribute id="OBJECT_KEY"/>
+        <viewAttribute id="SALESORDER"/>
+        <viewAttribute id="ACTWGT"/>
+        <viewAttribute id="CONTAINERID"/>
+        <viewAttribute id="TRUCKID"/>
+        <viewAttribute id="DELIVERYNO"/>
+        <viewAttribute id="DELITEMNO"/>
+        <viewAttribute id="CUSTID"/>
+        <viewAttribute id="BILLTYPE"/>
+        <viewAttribute id="SHPTO"/>
+        <viewAttribute id="SERVID"/>
+        <viewAttribute id="SERVDES"/>
+        <viewAttribute id="PROCESSCODE"/>
+        <viewAttribute id="PROCESSCODEDESC"/>
+        <viewAttribute id="SAPCONTMATNR"/>
+        <viewAttribute id="CONTDESC"/>
+        <viewAttribute id="ESTWGT"/>
+        <viewAttribute id="RECDTE"/>
+        <viewAttribute id="CARTNO"/>
+        <viewAttribute id="HUNO"/>
+        <viewAttribute id="DRIVERID"/>
+        <viewAttribute id="ROUTEID"/>
+        <viewAttribute id="STOPID"/>
+        <viewAttribute id="DISPOSALMETHOD"/>
+        <viewAttribute id="SALESORDERITEM"/>
+        <viewAttribute id="GROUPCODE"/>
+        <viewAttribute id="FILLLEVEL"/>
+        <viewAttribute id="REASONCODE"/>
+        <viewAttribute id="EXCEPTIONSTATUS"/>
+        <viewAttribute id="SCANMODE"/>
+        <viewAttribute id="DESCARTESQUANTITY"/>
+        <viewAttribute id="FACILITYTYPE"/>
+        <viewAttribute id="DSGTICKERTAPE"/>
+        <viewAttribute id="SEQUENCE"/>
+        <viewAttribute id="DEPARTMENT"/>
+        <viewAttribute id="SCANTIME"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="MCHB">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OBJECT_KEY" source="OBJECT_KEY"/>
+      </input>
+      <input node="INOB_AUSP_CABN">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CUOBJ" source="CUOBJ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALESORDER" source="SALESORDER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACTWGT" source="ACTWGT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CONTAINERID" source="CONTAINERID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRUCKID" source="TRUCKID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DELIVERYNO" source="DELIVERYNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DELITEMNO" source="DELITEMNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CUSTID" source="CUSTID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLTYPE" source="BILLTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SHPTO" source="SHPTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SERVID" source="SERVID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SERVDES" source="SERVDES"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSCODE" source="PROCESSCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSCODEDESC" source="PROCESSCODEDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAPCONTMATNR" source="SAPCONTMATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CONTDESC" source="CONTDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ESTWGT" source="ESTWGT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RECDTE" source="RECDTE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CARTNO" source="CARTNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HUNO" source="HUNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DRIVERID" source="DRIVERID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ROUTEID" source="ROUTEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STOPID" source="STOPID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISPOSALMETHOD" source="DISPOSALMETHOD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALESORDERITEM" source="SALESORDERITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GROUPCODE" source="GROUPCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FILLLEVEL" source="FILLLEVEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REASONCODE" source="REASONCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EXCEPTIONSTATUS" source="EXCEPTIONSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCANMODE" source="SCANMODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DESCARTESQUANTITY" source="DESCARTESQUANTITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DSGTICKERTAPE" source="DSGTICKERTAPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SEQUENCE" source="SEQUENCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEPARTMENT" source="DEPARTMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCANTIME" source="SCANTIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OBJECT_KEY" source="OBJEK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      </input>
+    <joinAttribute name="OBJECT_KEY"/>
+    <joinAttribute name="MANDT"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="MATDOC">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="CHARG"/>
+        <viewAttribute id="CPUDT"/>
+        <viewAttribute id="CPUTM"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="WERKS"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_TD_MATDOC"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_4" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="CHARG"/>
+        <viewAttribute id="CUOBJ"/>
+        <viewAttribute id="OBJECT_KEY"/>
+        <viewAttribute id="CPUDT"/>
+        <viewAttribute id="CPUTM"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="SALESORDER"/>
+        <viewAttribute id="ACTWGT"/>
+        <viewAttribute id="CONTAINERID"/>
+        <viewAttribute id="TRUCKID"/>
+        <viewAttribute id="DELIVERYNO"/>
+        <viewAttribute id="DELITEMNO"/>
+        <viewAttribute id="CUSTID"/>
+        <viewAttribute id="BILLTYPE"/>
+        <viewAttribute id="SHPTO"/>
+        <viewAttribute id="SERVID"/>
+        <viewAttribute id="SERVDES"/>
+        <viewAttribute id="PROCESSCODE"/>
+        <viewAttribute id="PROCESSCODEDESC"/>
+        <viewAttribute id="SAPCONTMATNR"/>
+        <viewAttribute id="CONTDESC"/>
+        <viewAttribute id="ESTWGT"/>
+        <viewAttribute id="RECDTE"/>
+        <viewAttribute id="CARTNO"/>
+        <viewAttribute id="HUNO"/>
+        <viewAttribute id="DRIVERID"/>
+        <viewAttribute id="ROUTEID"/>
+        <viewAttribute id="STOPID"/>
+        <viewAttribute id="DISPOSALMETHOD"/>
+        <viewAttribute id="SALESORDERITEM"/>
+        <viewAttribute id="GROUPCODE"/>
+        <viewAttribute id="FILLLEVEL"/>
+        <viewAttribute id="REASONCODE"/>
+        <viewAttribute id="EXCEPTIONSTATUS"/>
+        <viewAttribute id="SCANMODE"/>
+        <viewAttribute id="DESCARTESQUANTITY"/>
+        <viewAttribute id="FACILITYTYPE"/>
+        <viewAttribute id="DSGTICKERTAPE"/>
+        <viewAttribute id="SEQUENCE"/>
+        <viewAttribute id="DEPARTMENT"/>
+        <viewAttribute id="SCANTIME"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CUOBJ" source="CUOBJ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OBJECT_KEY" source="OBJECT_KEY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALESORDER" source="SALESORDER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACTWGT" source="ACTWGT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CONTAINERID" source="CONTAINERID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRUCKID" source="TRUCKID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DELIVERYNO" source="DELIVERYNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DELITEMNO" source="DELITEMNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CUSTID" source="CUSTID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILLTYPE" source="BILLTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SHPTO" source="SHPTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SERVID" source="SERVID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SERVDES" source="SERVDES"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSCODE" source="PROCESSCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSCODEDESC" source="PROCESSCODEDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAPCONTMATNR" source="SAPCONTMATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CONTDESC" source="CONTDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ESTWGT" source="ESTWGT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RECDTE" source="RECDTE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CARTNO" source="CARTNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HUNO" source="HUNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DRIVERID" source="DRIVERID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ROUTEID" source="ROUTEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STOPID" source="STOPID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISPOSALMETHOD" source="DISPOSALMETHOD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALESORDERITEM" source="SALESORDERITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GROUPCODE" source="GROUPCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FILLLEVEL" source="FILLLEVEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REASONCODE" source="REASONCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EXCEPTIONSTATUS" source="EXCEPTIONSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCANMODE" source="SCANMODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DESCARTESQUANTITY" source="DESCARTESQUANTITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DSGTICKERTAPE" source="DSGTICKERTAPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SEQUENCE" source="SEQUENCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEPARTMENT" source="DEPARTMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCANTIME" source="SCANTIME"/>
+      </input>
+      <input node="MATDOC">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPUDT" source="CPUDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPUTM" source="CPUTM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SHKZG" source="SHKZG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="LGORT"/>
+    <joinAttribute name="MATNR"/>
+    <joinAttribute name="CHARG"/>
+    <joinAttribute name="WERKS"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_4">
+    <descriptions defaultDescription="Staging Batch Characterstics"/>
+    <attributes>
+      <attribute id="MANDT" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client(MCHB.MANDT)"/>
+        <keyMapping columnObjectName="Join_4" columnName="MANDT"/>
+      </attribute>
+      <attribute id="LGORT" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Storage location(MCHB.LGORT)"/>
+        <keyMapping columnObjectName="Join_4" columnName="LGORT"/>
+      </attribute>
+      <attribute id="MATNR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number(MCHB.MATNR)"/>
+        <keyMapping columnObjectName="Join_4" columnName="MATNR"/>
+      </attribute>
+      <attribute id="WERKS" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant(MCHB.WERKS)"/>
+        <keyMapping columnObjectName="Join_4" columnName="WERKS"/>
+      </attribute>
+      <attribute id="CHARG" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Batch Number(MCHB.CHARG)"/>
+        <keyMapping columnObjectName="Join_4" columnName="CHARG"/>
+      </attribute>
+      <attribute id="CUOBJ" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Configuration (internal object number)(INOB.CUOBJ)"/>
+        <keyMapping columnObjectName="Join_4" columnName="CUOBJ"/>
+      </attribute>
+      <attribute id="OBJECT_KEY" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBJECT_KEY(MCHB.OBJECT_KEY)"/>
+        <keyMapping columnObjectName="Join_4" columnName="OBJECT_KEY"/>
+      </attribute>
+      <attribute id="CPUDT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Day On Which Accounting Document Was Entered(MATDOC.SHKZG)"/>
+        <keyMapping columnObjectName="Join_4" columnName="CPUDT"/>
+      </attribute>
+      <attribute id="CPUTM" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Time of Entry(MATDOC.SHKZG)"/>
+        <keyMapping columnObjectName="Join_4" columnName="CPUTM"/>
+      </attribute>
+      <attribute id="SHKZG" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Debit/Credit Indicator(MATDOC.SHKZG)"/>
+        <keyMapping columnObjectName="Join_4" columnName="SHKZG"/>
+      </attribute>
+      <attribute id="SALESORDER" order="12" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALESORDER"/>
+        <keyMapping columnObjectName="Join_4" columnName="SALESORDER"/>
+      </attribute>
+      <attribute id="CONTAINERID" order="14" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONTAINERID"/>
+        <keyMapping columnObjectName="Join_4" columnName="CONTAINERID"/>
+      </attribute>
+      <attribute id="TRUCKID" order="15" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRUCKID"/>
+        <keyMapping columnObjectName="Join_4" columnName="TRUCKID"/>
+      </attribute>
+      <attribute id="DELIVERYNO" order="16" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DELIVERYNO"/>
+        <keyMapping columnObjectName="Join_4" columnName="DELIVERYNO"/>
+      </attribute>
+      <attribute id="DELITEMNO" order="17" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DELITEMNO"/>
+        <keyMapping columnObjectName="Join_4" columnName="DELITEMNO"/>
+      </attribute>
+      <attribute id="CUSTID" order="18" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUSTID"/>
+        <keyMapping columnObjectName="Join_4" columnName="CUSTID"/>
+      </attribute>
+      <attribute id="BILLTYPE" order="19" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BILLTYPE"/>
+        <keyMapping columnObjectName="Join_4" columnName="BILLTYPE"/>
+      </attribute>
+      <attribute id="SHPTO" order="20" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHPTO"/>
+        <keyMapping columnObjectName="Join_4" columnName="SHPTO"/>
+      </attribute>
+      <attribute id="SERVID" order="21" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SERVID"/>
+        <keyMapping columnObjectName="Join_4" columnName="SERVID"/>
+      </attribute>
+      <attribute id="SERVDES" order="22" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SERVDES"/>
+        <keyMapping columnObjectName="Join_4" columnName="SERVDES"/>
+      </attribute>
+      <attribute id="PROCESSCODE" order="23" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSCODE"/>
+        <keyMapping columnObjectName="Join_4" columnName="PROCESSCODE"/>
+      </attribute>
+      <attribute id="PROCESSCODEDESC" order="24" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSCODEDESC"/>
+        <keyMapping columnObjectName="Join_4" columnName="PROCESSCODEDESC"/>
+      </attribute>
+      <attribute id="SAPCONTMATNR" order="25" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAPCONTMATNR"/>
+        <keyMapping columnObjectName="Join_4" columnName="SAPCONTMATNR"/>
+      </attribute>
+      <attribute id="CONTDESC" order="26" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONTDESC"/>
+        <keyMapping columnObjectName="Join_4" columnName="CONTDESC"/>
+      </attribute>
+      <attribute id="RECDTE" order="28" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RECDTE"/>
+        <keyMapping columnObjectName="Join_4" columnName="RECDTE"/>
+      </attribute>
+      <attribute id="CARTNO" order="29" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CARTNO"/>
+        <keyMapping columnObjectName="Join_4" columnName="CARTNO"/>
+      </attribute>
+      <attribute id="HUNO" order="30" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HUNO"/>
+        <keyMapping columnObjectName="Join_4" columnName="HUNO"/>
+      </attribute>
+      <attribute id="DRIVERID" order="31" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DRIVERID"/>
+        <keyMapping columnObjectName="Join_4" columnName="DRIVERID"/>
+      </attribute>
+      <attribute id="ROUTEID" order="32" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROUTEID"/>
+        <keyMapping columnObjectName="Join_4" columnName="ROUTEID"/>
+      </attribute>
+      <attribute id="STOPID" order="33" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STOPID"/>
+        <keyMapping columnObjectName="Join_4" columnName="STOPID"/>
+      </attribute>
+      <attribute id="DISPOSALMETHOD" order="34" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISPOSALMETHOD"/>
+        <keyMapping columnObjectName="Join_4" columnName="DISPOSALMETHOD"/>
+      </attribute>
+      <attribute id="SALESORDERITEM" order="35" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALESORDERITEM"/>
+        <keyMapping columnObjectName="Join_4" columnName="SALESORDERITEM"/>
+      </attribute>
+      <attribute id="GROUPCODE" order="36" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GROUPCODE"/>
+        <keyMapping columnObjectName="Join_4" columnName="GROUPCODE"/>
+      </attribute>
+      <attribute id="FILLLEVEL" order="37" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FILLLEVEL"/>
+        <keyMapping columnObjectName="Join_4" columnName="FILLLEVEL"/>
+      </attribute>
+      <attribute id="REASONCODE" order="38" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REASONCODE"/>
+        <keyMapping columnObjectName="Join_4" columnName="REASONCODE"/>
+      </attribute>
+      <attribute id="EXCEPTIONSTATUS" order="39" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXCEPTIONSTATUS"/>
+        <keyMapping columnObjectName="Join_4" columnName="EXCEPTIONSTATUS"/>
+      </attribute>
+      <attribute id="SCANMODE" order="40" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCANMODE"/>
+        <keyMapping columnObjectName="Join_4" columnName="SCANMODE"/>
+      </attribute>
+      <attribute id="FACILITYTYPE" order="41" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FACILITYTYPE"/>
+        <keyMapping columnObjectName="Join_4" columnName="FACILITYTYPE"/>
+      </attribute>
+      <attribute id="DSGTICKERTAPE" order="42" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DSGTICKERTAPE"/>
+        <keyMapping columnObjectName="Join_4" columnName="DSGTICKERTAPE"/>
+      </attribute>
+      <attribute id="SEQUENCE" order="43" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SEQUENCE"/>
+        <keyMapping columnObjectName="Join_4" columnName="SEQUENCE"/>
+      </attribute>
+      <attribute id="DEPARTMENT" order="44" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEPARTMENT"/>
+        <keyMapping columnObjectName="Join_4" columnName="DEPARTMENT"/>
+      </attribute>
+      <attribute id="SCANTIME" order="45" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Scan Time(AUSP-ATWRT)"/>
+        <keyMapping columnObjectName="Join_4" columnName="SCANTIME"/>
+      </attribute>
+      <attribute id="DESCARTESQUANTITY" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DESCARTESQUANTITY"/>
+        <keyMapping columnObjectName="Join_4" columnName="DESCARTESQUANTITY"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="ACTWGT" order="13" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ACTWGT"/>
+        <measureMapping columnObjectName="Join_4" columnName="ACTWGT"/>
+      </measure>
+      <measure id="ESTWGT" order="27" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ESTWGT"/>
+        <measureMapping columnObjectName="Join_4" columnName="ESTWGT"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures>
+      <measure id="Dummy" hidden="false" order="1" aggregationType="sum" measureType="simple" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <descriptions defaultDescription="Dummy"/>
+        <formula>1</formula>
+      </measure>
+    </calculatedMeasures>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="176" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="MCHB" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="INOB_AUSP_CABN" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="357"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="MCHB" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="INOB_AUSP_CABN" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="MATDOC" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    
+    <shape modelObjectName="Join_1" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="MATDOC" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,2431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_FCT_R2073_CONTRACT_RELATED_SALES_INVOICE_DATA" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VFCT_CONTRACT_RELATED_SALES_INVOICE_DATA"/>
+  <metadata changedAt="2021-12-06 18:56:15.575"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="48"/>
+  <dataSources>
+    <DataSource id="CV_FCT_R2073_CONTRACT_RELATED_SALES_ALL_PARTNERS_DATA">
+      <resourceUri>CV_FCT_R2073_CONTRACT_RELATED_SALES_ALL_PARTNERS_DATA</resourceUri>
+    </DataSource>
+    <DataSource id="CV_FCT_R2073_DELIVERYDOCUMENT">
+      <resourceUri>CV_FCT_R2073_DELIVERYDOCUMENT</resourceUri>
+    </DataSource>
+    <DataSource id="CV_FCT_BILLINGDOCUMENT">
+      <resourceUri>CV_FCT_BILLINGDOCUMENT</resourceUri>
+    </DataSource>
+    <DataSource id="CV_FCT_R2073_INVOICELIST">
+      <resourceUri>CV_FCT_R2073_INVOICELIST</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_TTXJT">
+      <resourceUri>CV_MD_TTXJT</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="CONTRACT_SALES_PARTNERS">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute id="BRGEW_CONTRACT"/>
+        <viewAttribute id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="CONTACT_PERSON"/>
+        <viewAttribute id="BILL_TO_PARTY"/>
+        <viewAttribute id="PAYER"/>
+        <viewAttribute id="SHIP_TO_PARTY"/>
+        <viewAttribute id="FORWARDING_AGENT"/>
+        <viewAttribute id="SALES_EMPLOYEE"/>
+        <viewAttribute id="EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="VENDOR"/>
+        <viewAttribute id="TRANSPORTATION_CONTACT_PERSON"/>
+        <viewAttribute id="TRANSPORTATION_BILL_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_PAYER"/>
+        <viewAttribute id="TRANSPORTATION_SHIP_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_FORWARDING_AGENT"/>
+        <viewAttribute id="TRANSPORTATION_SALES_EMPLOYEE"/>
+        <viewAttribute id="TRANSPORTATION_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="TRANSPORTATION_VENDOR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="NETWR_CONTRACT"/>
+        <viewAttribute id="INCO1_ITM_CONTRACT"/>
+        <viewAttribute id="INCO2_ITM_CONTRACT"/>
+        <viewAttribute id="ZTERM_ITM_CONTRACT"/>
+        <viewAttribute id="FKDAT_ITM_CONTRACT"/>
+        <viewAttribute id="GJAHR_ITM_CONTRACT"/>
+        <viewAttribute id="INCO1_HDR_CONTRACT"/>
+        <viewAttribute id="INCO2_HDR_CONTRACT"/>
+        <viewAttribute id="ZTERM_HDR_CONTRACT"/>
+        <viewAttribute id="FKDAT_HDR_CONTRACT"/>
+        <viewAttribute id="GJAHR_HDR_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute id="NETPR_CONTRACT"/>
+        <viewAttribute id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="POSNR_VBKD_ITEM"/>
+        <viewAttribute id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="POSNR_VBPA_ITEM"/>
+        <viewAttribute id="PARVW_VBPA_ITEM"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="VCAL_POSNR_VBPA"/>
+        <viewAttribute id="VCAL_PARVW_VBPA"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_FCT_R2073_CONTRACT_RELATED_SALES_ALL_PARTNERS_DATA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CONTACT_PERSON" source="VCAL_CONTACT_PERSON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BILL_TO_PARTY" source="VCAL_BILL_TO_PARTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYER" source="VCAL_PAYER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SHIP_TO_PARTY" source="VCAL_SHIP_TO_PARTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FORWARDING_AGENT" source="VCAL_FORWARDING_AGENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_EMPLOYEE" source="VCAL_SALES_EMPLOYEE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMPLOYEE_RESPONSE" source="VCAL_EMPLOYEE_RESPONSE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VENDOR" source="VCAL_VENDOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRANSPORTATION_CONTACT_PERSON" source="VCAL_TRN_CONTACT_PERSON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRANSPORTATION_BILL_TO_PARTY" source="VCAL_TRN_BILL_TO_PARTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRANSPORTATION_PAYER" source="VCAL_TRN_PAYER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRANSPORTATION_SHIP_TO_PARTY" source="VCAL_TRN_SHIP_TO_PARTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRANSPORTATION_FORWARDING_AGENT" source="VCAL_TRN_FORWARDING_AGENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRANSPORTATION_SALES_EMPLOYEE" source="VCAL_TRN_SALES_EMPLOYEE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRANSPORTATION_EMPLOYEE_RESPONSE" source="VCAL_TRN_EMPLOYEE_RESPONSE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRANSPORTATION_VENDOR" source="VCAL_TRN_VENDOR"/></input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="DELIVERY">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN_LIPS"/>
+        <viewAttribute id="POSNR_LIPS"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="LFIMG"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="LFART"/>
+        <viewAttribute id="LFDAT"/>
+        <viewAttribute id="ROUTA"/>
+        <viewAttribute id="WADAT"/>
+        <viewAttribute id="WADAT_IST"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VBELN_LIKP"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_FCT_R2073_DELIVERYDOCUMENT">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_LIPS" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_LIPS" source="POSNR"/></input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_6" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN_LIPS"/>
+        <viewAttribute id="POSNR_LIPS"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="LFIMG"/>
+        <viewAttribute id="LFART"/>
+        <viewAttribute id="LFDAT"/>
+        <viewAttribute id="ROUTA"/>
+        <viewAttribute id="WADAT"/>
+        <viewAttribute id="WADAT_IST"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="NTGEW_DELIVERY"/>
+        <viewAttribute id="BRGEW_DELIVERY"/>
+        <viewAttribute id="VOLUM_DELIVERY"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute id="BRGEW_CONTRACT"/>
+        <viewAttribute id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VGBEL_DELIVERY"/>
+        <viewAttribute id="CONTACT_PERSON"/>
+        <viewAttribute id="BILL_TO_PARTY"/>
+        <viewAttribute id="PAYER"/>
+        <viewAttribute id="SHIP_TO_PARTY"/>
+        <viewAttribute id="FORWARDING_AGENT"/>
+        <viewAttribute id="SALES_EMPLOYEE"/>
+        <viewAttribute id="EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="VENDOR"/>
+        <viewAttribute id="TRANSPORTATION_CONTACT_PERSON"/>
+        <viewAttribute id="TRANSPORTATION_BILL_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_PAYER"/>
+        <viewAttribute id="TRANSPORTATION_SHIP_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_FORWARDING_AGENT"/>
+        <viewAttribute id="TRANSPORTATION_SALES_EMPLOYEE"/>
+        <viewAttribute id="TRANSPORTATION_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="TRANSPORTATION_VENDOR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="GEWEI_LIPS"/>
+        <viewAttribute id="VOLEH_LIPS"/>
+        <viewAttribute id="VRKME_VBAP"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="NETWR_CONTRACT"/>
+        <viewAttribute id="INCO1_ITM_CONTRACT"/>
+        <viewAttribute id="INCO2_ITM_CONTRACT"/>
+        <viewAttribute id="ZTERM_ITM_CONTRACT"/>
+        <viewAttribute id="FKDAT_ITM_CONTRACT"/>
+        <viewAttribute id="GJAHR_ITM_CONTRACT"/>
+        <viewAttribute id="INCO1_HDR_CONTRACT"/>
+        <viewAttribute id="INCO2_HDR_CONTRACT"/>
+        <viewAttribute id="ZTERM_HDR_CONTRACT"/>
+        <viewAttribute id="FKDAT_HDR_CONTRACT"/>
+        <viewAttribute id="GJAHR_HDR_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute id="NETPR_CONTRACT"/>
+        <viewAttribute id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="MATNR_LIPS"/>
+        <viewAttribute id="POSNR_VBKD_ITEM"/>
+        <viewAttribute id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="POSNR_VBPA_ITEM"/>
+        <viewAttribute id="PARVW_VBPA_ITEM"/>
+        <viewAttribute id="ERNAM_1"/>
+        <viewAttribute id="ERDAT_1"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="LGORT_1"/>
+        <viewAttribute id="ARKTX_1"/>
+        <viewAttribute id="VSTEL_1"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="VCAL_POSNR_VBPA"/>
+        <viewAttribute id="VCAL_PARVW_VBPA"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+        <viewAttribute id="VBELN_LIKP"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CONTRACT_SALES_PARTNERS">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX" source="ARKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRGEW" source="BRGEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NTGEW" source="NTGEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GEWEI" source="GEWEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VOLUM" source="VOLUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VOLEH" source="VOLEH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL" source="VSTEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_VBAP" source="VRKME"/></input>
+      <input node="DELIVERY">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VGPOS" source="VGPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME" source="VRKME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NTGEW_DELIVERY" source="NTGEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BRGEW_DELIVERY" source="BRGEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VOLUM_DELIVERY" source="VOLUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VGBEL_DELIVERY" source="VGBEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GEWEI_LIPS" source="GEWEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VOLEH_LIPS" source="VOLEH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_LIPS" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM_1" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_1" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT_1" source="LGORT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_1" source="ARKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL_1" source="VSTEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VGBEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="VGPOS"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="VBELN"/>
+      <joinAttribute name="POSNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="BRGEW_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute aggregationType="sum" id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute aggregationType="sum" id="NETWR"/>
+        <viewAttribute aggregationType="sum" id="BRGEW"/>
+        <viewAttribute aggregationType="sum" id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute aggregationType="sum" id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN_LIPS"/>
+        <viewAttribute id="POSNR_LIPS"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="VRKME_DELIVERY"/>
+        <viewAttribute aggregationType="sum" id="LFIMG"/>
+        <viewAttribute id="LFART"/>
+        <viewAttribute id="LFDAT"/>
+        <viewAttribute id="ROUTA"/>
+        <viewAttribute id="WADAT"/>
+        <viewAttribute id="WADAT_IST"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute aggregationType="sum" id="NTGEW_DELIVERY"/>
+        <viewAttribute aggregationType="sum" id="BRGEW_DELIVERY"/>
+        <viewAttribute aggregationType="sum" id="VOLUM_DELIVERY"/>
+        <viewAttribute id="VGBEL_DELIVERY"/>
+        <viewAttribute id="CONTACT_PERSON"/>
+        <viewAttribute id="BILL_TO_PARTY"/>
+        <viewAttribute id="PAYER"/>
+        <viewAttribute id="SHIP_TO_PARTY"/>
+        <viewAttribute id="FORWARDING_AGENT"/>
+        <viewAttribute id="SALES_EMPLOYEE"/>
+        <viewAttribute id="EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="VENDOR"/>
+        <viewAttribute id="TRANSPORTATION_CONTACT_PERSON"/>
+        <viewAttribute id="TRANSPORTATION_BILL_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_PAYER"/>
+        <viewAttribute id="TRANSPORTATION_SHIP_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_FORWARDING_AGENT"/>
+        <viewAttribute id="TRANSPORTATION_SALES_EMPLOYEE"/>
+        <viewAttribute id="TRANSPORTATION_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="TRANSPORTATION_VENDOR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="GEWEI_LIPS"/>
+        <viewAttribute id="VOLEH_LIPS"/>
+        <viewAttribute id="VRKME_VBAP"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute aggregationType="max" id="NETWR_CONTRACT"/>
+        <viewAttribute id="INCO1_ITM_CONTRACT"/>
+        <viewAttribute id="INCO2_ITM_CONTRACT"/>
+        <viewAttribute id="ZTERM_ITM_CONTRACT"/>
+        <viewAttribute id="FKDAT_ITM_CONTRACT"/>
+        <viewAttribute id="GJAHR_ITM_CONTRACT"/>
+        <viewAttribute id="INCO1_HDR_CONTRACT"/>
+        <viewAttribute id="INCO2_HDR_CONTRACT"/>
+        <viewAttribute id="ZTERM_HDR_CONTRACT"/>
+        <viewAttribute id="FKDAT_HDR_CONTRACT"/>
+        <viewAttribute id="GJAHR_HDR_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute aggregationType="max" id="NETPR_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="MATNR_LIPS"/>
+        <viewAttribute id="POSNR_VBKD_ITEM"/>
+        <viewAttribute aggregationType="sum" id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="POSNR_VBPA_ITEM"/>
+        <viewAttribute id="PARVW_VBPA_ITEM"/>
+        <viewAttribute id="ERNAM_LIPS"/>
+        <viewAttribute id="ERDAT_LIPS"/>
+        <viewAttribute id="WERKS_LIPS"/>
+        <viewAttribute id="LGORT_LIPS"/>
+        <viewAttribute id="ARKTX_LIPS"/>
+        <viewAttribute id="VSTEL_LIKP"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="VCAL_POSNR_VBPA"/>
+        <viewAttribute id="VCAL_PARVW_VBPA"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+        <viewAttribute id="VBELN_LIKP"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_6">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_DELIVERY" source="VRKME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM_LIPS" source="ERNAM_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_LIPS" source="ERDAT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_LIPS" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT_LIPS" source="LGORT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_LIPS" source="ARKTX_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL_LIKP" source="VSTEL_1"/></input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="BILLING">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="FKART"/>
+        <viewAttribute id="KUNRG"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="ZUONR"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="FKDAT"/>
+        <viewAttribute id="VSBED"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="KUNWE"/>
+        <viewAttribute id="FKART_RL"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="FKIMG"/>
+        <viewAttribute id="VRKME_VBRP"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI_VBRP"/>
+        <viewAttribute id="PRSDT"/>
+        <viewAttribute id="MWSBP"/>
+        <viewAttribute id="AUBEL"/>
+        <viewAttribute id="AUPOS"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="PMATN"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="ALAND"/>
+        <viewAttribute id="SPARA"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERZET"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="WAERK_VBRP"/>
+        <viewAttribute id="NETWR_VBRP"/>
+        <viewAttribute id="WAERK_VBRP_ITEM"/>
+        <viewAttribute id="NETWR_VBRK"/>
+        <viewAttribute id="TXJCD_VBRP"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_FCT_BILLINGDOCUMENT">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_VBRP" source="VRKME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GEWEI_VBRP" source="GEWEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERK_VBRP" source="WAERK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_VBRP" source="NETWR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERK_VBRP_ITEM" source="WAERK_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_VBRK" source="NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TXJCD_VBRP" source="TXJCD"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_7" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="FKART"/>
+        <viewAttribute id="KUNRG"/>
+        <viewAttribute id="ZUONR"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="VSBED"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNWE"/>
+        <viewAttribute id="FKART_RL"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="FKIMG"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="PRSDT"/>
+        <viewAttribute id="MWSBP"/>
+        <viewAttribute id="AUBEL"/>
+        <viewAttribute id="AUPOS"/>
+        <viewAttribute id="PMATN"/>
+        <viewAttribute id="ALAND"/>
+        <viewAttribute id="SPARA"/>
+        <viewAttribute id="ERZET"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VBELN_VBRK"/>
+        <viewAttribute id="FKDAT_BILLING"/>
+        <viewAttribute id="NTGEW_BILLING"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute id="BRGEW_CONTRACT"/>
+        <viewAttribute id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN_LIPS"/>
+        <viewAttribute id="POSNR_LIPS"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="LFIMG"/>
+        <viewAttribute id="LFART"/>
+        <viewAttribute id="LFDAT"/>
+        <viewAttribute id="ROUTA"/>
+        <viewAttribute id="WADAT"/>
+        <viewAttribute id="WADAT_IST"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="NTGEW_DELIVERY"/>
+        <viewAttribute id="BRGEW_DELIVERY"/>
+        <viewAttribute id="VOLUM_DELIVERY"/>
+        <viewAttribute id="VGBEL_DELIVERY"/>
+        <viewAttribute id="CONTACT_PERSON"/>
+        <viewAttribute id="BILL_TO_PARTY"/>
+        <viewAttribute id="PAYER"/>
+        <viewAttribute id="SHIP_TO_PARTY"/>
+        <viewAttribute id="FORWARDING_AGENT"/>
+        <viewAttribute id="SALES_EMPLOYEE"/>
+        <viewAttribute id="EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="VENDOR"/>
+        <viewAttribute id="TRANSPORTATION_CONTACT_PERSON"/>
+        <viewAttribute id="TRANSPORTATION_BILL_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_PAYER"/>
+        <viewAttribute id="TRANSPORTATION_SHIP_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_FORWARDING_AGENT"/>
+        <viewAttribute id="TRANSPORTATION_SALES_EMPLOYEE"/>
+        <viewAttribute id="TRANSPORTATION_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="TRANSPORTATION_VENDOR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="VRKME_VBRP"/>
+        <viewAttribute id="WAERK_VBRP"/>
+        <viewAttribute id="GEWEI_VBRP"/>
+        <viewAttribute id="GEWEI_LIPS"/>
+        <viewAttribute id="VOLEH_LIPS"/>
+        <viewAttribute id="VRKME_VBAP"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="POSNR_BILLING"/>
+        <viewAttribute id="NETWR_CONTRACT"/>
+        <viewAttribute id="INCO1_ITM_CONTRACT"/>
+        <viewAttribute id="INCO2_ITM_CONTRACT"/>
+        <viewAttribute id="ZTERM_ITM_CONTRACT"/>
+        <viewAttribute id="FKDAT_ITM_CONTRACT"/>
+        <viewAttribute id="GJAHR_ITM_CONTRACT"/>
+        <viewAttribute id="INCO1_HDR_CONTRACT"/>
+        <viewAttribute id="INCO2_HDR_CONTRACT"/>
+        <viewAttribute id="ZTERM_HDR_CONTRACT"/>
+        <viewAttribute id="FKDAT_HDR_CONTRACT"/>
+        <viewAttribute id="GJAHR_HDR_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute id="NETWR_VBRP"/>
+        <viewAttribute id="NETPR_CONTRACT"/>
+        <viewAttribute id="WAERK_VBRP_ITEM"/>
+        <viewAttribute id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="NETWR_VBRK"/>
+        <viewAttribute id="MATNR_LIPS"/>
+        <viewAttribute id="MATNR_VBRP"/>
+        <viewAttribute id="POSNR_VBKD_ITEM"/>
+        <viewAttribute id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="POSNR_VBPA_ITEM"/>
+        <viewAttribute id="PARVW_VBPA_ITEM"/>
+        <viewAttribute id="ERNAM_LIPS"/>
+        <viewAttribute id="ERDAT_LIPS"/>
+        <viewAttribute id="WERKS_LIPS"/>
+        <viewAttribute id="LGORT_LIPS"/>
+        <viewAttribute id="ARKTX_LIPS"/>
+        <viewAttribute id="VSTEL_LIKP"/>
+        <viewAttribute id="ERDAT_1"/>
+        <viewAttribute id="ERNAM_1"/>
+        <viewAttribute id="ARKTX_1"/>
+        <viewAttribute id="KUNAG_1"/>
+        <viewAttribute id="INCO1"/>
+        <viewAttribute id="INCO2"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="VCAL_POSNR_VBPA"/>
+        <viewAttribute id="VCAL_PARVW_VBPA"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+        <viewAttribute id="TXJCD_VBRP"/>
+        <viewAttribute id="VBELN_LIKP"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Aggregation_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX" source="ARKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NTGEW" source="NTGEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_LIPS" source="VBELN_LIPS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_LIPS" source="POSNR_LIPS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VGPOS" source="VGPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME" source="VRKME_DELIVERY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG" source="KUNAG"/></input>
+      <input node="BILLING">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VGBEL" source="VGBEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_VBRK" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_BILLING" source="FKDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NTGEW_BILLING" source="NTGEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_BILLING" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_VBRP" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_1" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM_1" source="ERNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_1" source="ARKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG_1" source="KUNAG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_LIPS" source="VGBEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_LIPS" source="VGPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      </input>
+      <joinAttribute name="VBELN_LIPS"/>
+      <joinAttribute name="POSNR_LIPS"/>
+      <joinAttribute name="MANDT"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="INVOICELIST">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN_VF"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="MWSBP"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="VBELN_INVOICE_HDR"/>
+        <viewAttribute id="FKART_INVOICE_HDR"/>
+        <viewAttribute id="KUNRG_INVOICE_HDR"/>
+        <viewAttribute id="GJAHR_INVOICE_HDR"/>
+        <viewAttribute id="FKDAT_INVOICE_HDR"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_FCT_R2073_INVOICELIST">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_INVOICE_HDR" source="VBELN_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKART_INVOICE_HDR" source="FKART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNRG_INVOICE_HDR" source="KUNRG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_INVOICE_HDR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_INVOICE_HDR" source="FKDAT"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_2">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="BRGEW_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute aggregationType="max" id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute aggregationType="max" id="NETWR"/>
+        <viewAttribute aggregationType="max" id="BRGEW"/>
+        <viewAttribute aggregationType="max" id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute aggregationType="max" id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN_LIPS"/>
+        <viewAttribute id="POSNR_LIPS"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="VRKME_BILLING"/>
+        <viewAttribute aggregationType="sum" id="LFIMG"/>
+        <viewAttribute id="LFART"/>
+        <viewAttribute id="LFDAT"/>
+        <viewAttribute id="ROUTA"/>
+        <viewAttribute id="WADAT"/>
+        <viewAttribute id="WADAT_IST"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="FKART"/>
+        <viewAttribute id="KUNRG"/>
+        <viewAttribute id="ZUONR"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="VSBED"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNWE"/>
+        <viewAttribute id="FKART_RL"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute aggregationType="sum" id="FKIMG"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="PRSDT"/>
+        <viewAttribute aggregationType="sum" id="MWSBP"/>
+        <viewAttribute id="AUBEL"/>
+        <viewAttribute id="AUPOS"/>
+        <viewAttribute id="PMATN"/>
+        <viewAttribute id="ALAND"/>
+        <viewAttribute id="SPARA"/>
+        <viewAttribute id="ERZET"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VBELN_VBRK"/>
+        <viewAttribute aggregationType="sum" id="NTGEW_DELIVERY"/>
+        <viewAttribute aggregationType="sum" id="BRGEW_DELIVERY"/>
+        <viewAttribute aggregationType="sum" id="VOLUM_DELIVERY"/>
+        <viewAttribute id="FKDAT_BILLING"/>
+        <viewAttribute aggregationType="sum" id="NTGEW_BILLING"/>
+        <viewAttribute id="VGBEL_DELIVERY"/>
+        <viewAttribute id="CONTACT_PERSON"/>
+        <viewAttribute id="BILL_TO_PARTY"/>
+        <viewAttribute id="PAYER"/>
+        <viewAttribute id="SHIP_TO_PARTY"/>
+        <viewAttribute id="FORWARDING_AGENT"/>
+        <viewAttribute id="SALES_EMPLOYEE"/>
+        <viewAttribute id="EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="VENDOR"/>
+        <viewAttribute id="TRANSPORTATION_CONTACT_PERSON"/>
+        <viewAttribute id="TRANSPORTATION_BILL_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_PAYER"/>
+        <viewAttribute id="TRANSPORTATION_SHIP_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_FORWARDING_AGENT"/>
+        <viewAttribute id="TRANSPORTATION_SALES_EMPLOYEE"/>
+        <viewAttribute id="TRANSPORTATION_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="TRANSPORTATION_VENDOR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="VRKME_VBRP"/>
+        <viewAttribute id="WAERK_VBRP"/>
+        <viewAttribute id="GEWEI_VBRP"/>
+        <viewAttribute id="GEWEI_LIPS"/>
+        <viewAttribute id="VOLEH_LIPS"/>
+        <viewAttribute id="VRKME_VBAP"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="POSNR_BILLING"/>
+        <viewAttribute aggregationType="max" id="NETWR_CONTRACT"/>
+        <viewAttribute id="INCO1_ITM_CONTRACT"/>
+        <viewAttribute id="INCO2_ITM_CONTRACT"/>
+        <viewAttribute id="ZTERM_ITM_CONTRACT"/>
+        <viewAttribute id="FKDAT_ITM_CONTRACT"/>
+        <viewAttribute id="GJAHR_ITM_CONTRACT"/>
+        <viewAttribute id="INCO1_HDR_CONTRACT"/>
+        <viewAttribute id="INCO2_HDR_CONTRACT"/>
+        <viewAttribute id="ZTERM_HDR_CONTRACT"/>
+        <viewAttribute id="FKDAT_HDR_CONTRACT"/>
+        <viewAttribute id="GJAHR_HDR_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute aggregationType="sum" id="NETWR_VBRP"/>
+        <viewAttribute aggregationType="max" id="NETPR_CONTRACT"/>
+        <viewAttribute id="WAERK_VBRP_ITEM"/>
+        <viewAttribute aggregationType="max" id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="NETWR_VBRK"/>
+        <viewAttribute id="MATNR_LIPS"/>
+        <viewAttribute id="MATNR_VBRP"/>
+        <viewAttribute id="POSNR_VBKD_ITEM"/>
+        <viewAttribute aggregationType="max" id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="POSNR_VBPA_ITEM"/>
+        <viewAttribute id="PARVW_VBPA_ITEM"/>
+        <viewAttribute id="ERNAM_LIPS"/>
+        <viewAttribute id="ERDAT_LIPS"/>
+        <viewAttribute id="WERKS_LIPS"/>
+        <viewAttribute id="LGORT_LIPS"/>
+        <viewAttribute id="ARKTX_LIPS"/>
+        <viewAttribute id="VSTEL_LIKP"/>
+        <viewAttribute id="ERDAT_VBRP"/>
+        <viewAttribute id="ERNAM_VBRP"/>
+        <viewAttribute id="ARKTX_VBRP"/>
+        <viewAttribute id="INCO1_VBRK"/>
+        <viewAttribute id="KUNAG_VBRK"/>
+        <viewAttribute id="INCO2_VBRK"/>
+        <viewAttribute id="ZTERM_VBRK"/>
+        <viewAttribute id="GJAHR_VBRK"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="VCAL_POSNR_VBPA"/>
+        <viewAttribute id="VCAL_PARVW_VBPA"/>
+        <viewAttribute id="WERKS_VBRP"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+        <viewAttribute id="TXJCD_VBRP"/>
+        <viewAttribute id="VBELN_LIKP"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_7">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME_BILLING" source="VRKME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT_VBRP" source="ERDAT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM_VBRP" source="ERNAM_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX_VBRP" source="ARKTX_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO1_VBRK" source="INCO1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG_VBRK" source="KUNAG_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INCO2_VBRK" source="INCO2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM_VBRK" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_VBRK" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_VBRP" source="WERKS_1"/></input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_8" dynamic="false" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN_VF"/>
+        <viewAttribute id="NETWR_INVOICE"/>
+        <viewAttribute id="MWSBP_INVOICE"/>
+        <viewAttribute id="VBELN_VBRL"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute id="BRGEW_CONTRACT"/>
+        <viewAttribute id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN_LIPS"/>
+        <viewAttribute id="POSNR_LIPS"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="LFIMG"/>
+        <viewAttribute id="LFART"/>
+        <viewAttribute id="LFDAT"/>
+        <viewAttribute id="ROUTA"/>
+        <viewAttribute id="WADAT"/>
+        <viewAttribute id="WADAT_IST"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="FKART"/>
+        <viewAttribute id="KUNRG"/>
+        <viewAttribute id="ZUONR"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="VSBED"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNWE"/>
+        <viewAttribute id="FKART_RL"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="FKIMG"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="PRSDT"/>
+        <viewAttribute id="MWSBP"/>
+        <viewAttribute id="AUBEL"/>
+        <viewAttribute id="AUPOS"/>
+        <viewAttribute id="PMATN"/>
+        <viewAttribute id="ALAND"/>
+        <viewAttribute id="SPARA"/>
+        <viewAttribute id="ERZET"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VBELN_VBRK"/>
+        <viewAttribute id="NTGEW_DELIVERY"/>
+        <viewAttribute id="BRGEW_DELIVERY"/>
+        <viewAttribute id="VOLUM_DELIVERY"/>
+        <viewAttribute id="FKDAT_BILLING"/>
+        <viewAttribute id="NTGEW_BILLING"/>
+        <viewAttribute id="VGBEL_DELIVERY"/>
+        <viewAttribute id="CONTACT_PERSON"/>
+        <viewAttribute id="BILL_TO_PARTY"/>
+        <viewAttribute id="PAYER"/>
+        <viewAttribute id="SHIP_TO_PARTY"/>
+        <viewAttribute id="FORWARDING_AGENT"/>
+        <viewAttribute id="SALES_EMPLOYEE"/>
+        <viewAttribute id="EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="VENDOR"/>
+        <viewAttribute id="TRANSPORTATION_CONTACT_PERSON"/>
+        <viewAttribute id="TRANSPORTATION_BILL_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_PAYER"/>
+        <viewAttribute id="TRANSPORTATION_SHIP_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_FORWARDING_AGENT"/>
+        <viewAttribute id="TRANSPORTATION_SALES_EMPLOYEE"/>
+        <viewAttribute id="TRANSPORTATION_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="TRANSPORTATION_VENDOR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="VRKME_VBRP"/>
+        <viewAttribute id="WAERK_VBRP"/>
+        <viewAttribute id="GEWEI_VBRP"/>
+        <viewAttribute id="GEWEI_LIPS"/>
+        <viewAttribute id="VOLEH_LIPS"/>
+        <viewAttribute id="VRKME_VBAP"/>
+        <viewAttribute id="POSNR_INVOICE_LIST"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="POSNR_BILLING"/>
+        <viewAttribute id="VBELN_INVOICE_HDR"/>
+        <viewAttribute id="FKART_INVOICE_HDR"/>
+        <viewAttribute id="KUNRG_INVOICE_HDR"/>
+        <viewAttribute id="GJAHR_INVOICE_HDR"/>
+        <viewAttribute id="FKDAT_INVOICE_HDR"/>
+        <viewAttribute id="NETWR_CONTRACT"/>
+        <viewAttribute id="INCO1_ITM_CONTRACT"/>
+        <viewAttribute id="INCO2_ITM_CONTRACT"/>
+        <viewAttribute id="ZTERM_ITM_CONTRACT"/>
+        <viewAttribute id="FKDAT_ITM_CONTRACT"/>
+        <viewAttribute id="GJAHR_ITM_CONTRACT"/>
+        <viewAttribute id="INCO1_HDR_CONTRACT"/>
+        <viewAttribute id="INCO2_HDR_CONTRACT"/>
+        <viewAttribute id="ZTERM_HDR_CONTRACT"/>
+        <viewAttribute id="FKDAT_HDR_CONTRACT"/>
+        <viewAttribute id="GJAHR_HDR_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute id="NETWR_VBRP"/>
+        <viewAttribute id="NETPR_CONTRACT"/>
+        <viewAttribute id="WAERK_VBRP_ITEM"/>
+        <viewAttribute id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="NETWR_VBRK"/>
+        <viewAttribute id="MATNR_LIPS"/>
+        <viewAttribute id="MATNR_VBRP"/>
+        <viewAttribute id="POSNR_VBKD_ITEM"/>
+        <viewAttribute id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="POSNR_VBPA_ITEM"/>
+        <viewAttribute id="PARVW_VBPA_ITEM"/>
+        <viewAttribute id="ERNAM_LIPS"/>
+        <viewAttribute id="ERDAT_LIPS"/>
+        <viewAttribute id="WERKS_LIPS"/>
+        <viewAttribute id="LGORT_LIPS"/>
+        <viewAttribute id="ARKTX_LIPS"/>
+        <viewAttribute id="VSTEL_LIKP"/>
+        <viewAttribute id="ERDAT_VBRP"/>
+        <viewAttribute id="ERNAM_VBRP"/>
+        <viewAttribute id="ARKTX_VBRP"/>
+        <viewAttribute id="INCO1_VBRK"/>
+        <viewAttribute id="KUNAG_VBRK"/>
+        <viewAttribute id="INCO2_VBRK"/>
+        <viewAttribute id="ZTERM_VBRK"/>
+        <viewAttribute id="GJAHR_VBRK"/>
+        <viewAttribute id="KUNAG_1"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="VCAL_POSNR_VBPA"/>
+        <viewAttribute id="VCAL_PARVW_VBPA"/>
+        <viewAttribute id="WERKS_VBRP"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+        <viewAttribute id="TXJCD_VBRP"/>
+        <viewAttribute id="VBELN_LIKP"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Aggregation_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR" source="NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VRKME" source="VRKME_BILLING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG" source="KUNAG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MWSBP" source="MWSBP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_VBRK" source="VBELN_VBRK"/></input>
+      <input node="INVOICELIST">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_VF" source="VBELN_VF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETWR_INVOICE" source="NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MWSBP_INVOICE" source="MWSBP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_VBRL" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSNR_INVOICE_LIST" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG_1" source="KUNAG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_VBRK" source="VBELN_VF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      </input>
+      <joinAttribute name="VBELN_VBRK"/>
+      <joinAttribute name="MANDT"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="SPRAS"/>
+        <viewAttribute id="TXJCD"/>
+        <viewAttribute id="KALSM"/>
+        <viewAttribute id="TEXT1"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_TTXJT"/>
+      <filter>(&quot;SPRAS&quot; ='E')</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute id="BRGEW_CONTRACT"/>
+        <viewAttribute id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN_LIPS"/>
+        <viewAttribute id="POSNR_LIPS"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="LFIMG"/>
+        <viewAttribute id="LFART"/>
+        <viewAttribute id="LFDAT"/>
+        <viewAttribute id="ROUTA"/>
+        <viewAttribute id="WADAT"/>
+        <viewAttribute id="WADAT_IST"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="FKART"/>
+        <viewAttribute id="KUNRG"/>
+        <viewAttribute id="ZUONR"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="VSBED"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNWE"/>
+        <viewAttribute id="FKART_RL"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="FKIMG"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="PRSDT"/>
+        <viewAttribute id="MWSBP"/>
+        <viewAttribute id="AUBEL"/>
+        <viewAttribute id="AUPOS"/>
+        <viewAttribute id="PMATN"/>
+        <viewAttribute id="ALAND"/>
+        <viewAttribute id="SPARA"/>
+        <viewAttribute id="ERZET"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VBELN_VBRK"/>
+        <viewAttribute id="VBELN_VF"/>
+        <viewAttribute id="NETWR_INVOICE"/>
+        <viewAttribute id="MWSBP_INVOICE"/>
+        <viewAttribute id="NTGEW_DELIVERY"/>
+        <viewAttribute id="BRGEW_DELIVERY"/>
+        <viewAttribute id="VOLUM_DELIVERY"/>
+        <viewAttribute id="FKDAT_BILLING"/>
+        <viewAttribute id="NTGEW_BILLING"/>
+        <viewAttribute id="VBELN_VBRL"/>
+        <viewAttribute id="VGBEL_DELIVERY"/>
+        <viewAttribute id="CONTACT_PERSON"/>
+        <viewAttribute id="BILL_TO_PARTY"/>
+        <viewAttribute id="PAYER"/>
+        <viewAttribute id="SHIP_TO_PARTY"/>
+        <viewAttribute id="FORWARDING_AGENT"/>
+        <viewAttribute id="SALES_EMPLOYEE"/>
+        <viewAttribute id="EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="VENDOR"/>
+        <viewAttribute id="TRANSPORTATION_CONTACT_PERSON"/>
+        <viewAttribute id="TRANSPORTATION_BILL_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_PAYER"/>
+        <viewAttribute id="TRANSPORTATION_SHIP_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_FORWARDING_AGENT"/>
+        <viewAttribute id="TRANSPORTATION_SALES_EMPLOYEE"/>
+        <viewAttribute id="TRANSPORTATION_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="TRANSPORTATION_VENDOR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="VRKME_VBRP"/>
+        <viewAttribute id="WAERK_VBRP"/>
+        <viewAttribute id="GEWEI_VBRP"/>
+        <viewAttribute id="GEWEI_LIPS"/>
+        <viewAttribute id="VOLEH_LIPS"/>
+        <viewAttribute id="VRKME_VBAP"/>
+        <viewAttribute id="POSNR_INVOICE_LIST"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="POSNR_BILLING"/>
+        <viewAttribute id="VBELN_INVOICE_HDR"/>
+        <viewAttribute id="FKART_INVOICE_HDR"/>
+        <viewAttribute id="KUNRG_INVOICE_HDR"/>
+        <viewAttribute id="GJAHR_INVOICE_HDR"/>
+        <viewAttribute id="FKDAT_INVOICE_HDR"/>
+        <viewAttribute id="NETWR_CONTRACT"/>
+        <viewAttribute id="INCO1_ITM_CONTRACT"/>
+        <viewAttribute id="INCO2_ITM_CONTRACT"/>
+        <viewAttribute id="ZTERM_ITM_CONTRACT"/>
+        <viewAttribute id="FKDAT_ITM_CONTRACT"/>
+        <viewAttribute id="GJAHR_ITM_CONTRACT"/>
+        <viewAttribute id="INCO1_HDR_CONTRACT"/>
+        <viewAttribute id="INCO2_HDR_CONTRACT"/>
+        <viewAttribute id="ZTERM_HDR_CONTRACT"/>
+        <viewAttribute id="FKDAT_HDR_CONTRACT"/>
+        <viewAttribute id="GJAHR_HDR_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute id="NETWR_VBRP"/>
+        <viewAttribute id="NETPR_CONTRACT"/>
+        <viewAttribute id="WAERK_VBRP_ITEM"/>
+        <viewAttribute id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="NETWR_VBRK"/>
+        <viewAttribute id="MATNR_LIPS"/>
+        <viewAttribute id="MATNR_VBRP"/>
+        <viewAttribute id="POSNR_VBKD_ITEM"/>
+        <viewAttribute id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="POSNR_VBPA_ITEM"/>
+        <viewAttribute id="PARVW_VBPA_ITEM"/>
+        <viewAttribute id="ERNAM_LIPS"/>
+        <viewAttribute id="ERDAT_LIPS"/>
+        <viewAttribute id="WERKS_LIPS"/>
+        <viewAttribute id="LGORT_LIPS"/>
+        <viewAttribute id="ARKTX_LIPS"/>
+        <viewAttribute id="VSTEL_LIKP"/>
+        <viewAttribute id="ERDAT_VBRP"/>
+        <viewAttribute id="ERNAM_VBRP"/>
+        <viewAttribute id="ARKTX_VBRP"/>
+        <viewAttribute id="INCO1_VBRK"/>
+        <viewAttribute id="KUNAG_VBRK"/>
+        <viewAttribute id="INCO2_VBRK"/>
+        <viewAttribute id="ZTERM_VBRK"/>
+        <viewAttribute id="GJAHR_VBRK"/>
+        <viewAttribute id="KUNAG_VBRL"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="VCAL_POSNR_VBPA"/>
+        <viewAttribute id="VCAL_PARVW_VBPA"/>
+        <viewAttribute id="WERKS_VBRP"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+        <viewAttribute id="TXJCD_VBRP"/>
+        <viewAttribute id="TEXT1_TTXJT"/>
+        <viewAttribute id="VBELN_LIKP"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_8">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNAG_VBRL" source="KUNAG_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TXJCD_VBRP" source="TXJCD_VBRP"/></input>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="TEXT1_TTXJT" source="TEXT1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TXJCD_VBRP" source="TXJCD"/>
+      </input>
+      <joinAttribute name="TXJCD_VBRP"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_3">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="VBEGDAT"/>
+        <viewAttribute id="VENDDAT"/>
+        <viewAttribute id="POSNR_CONTRACT"/>
+        <viewAttribute id="MATNR_CONTRACT"/>
+        <viewAttribute id="MATKL_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="ZMENG_CONTRACT"/>
+        <viewAttribute id="ARKTX_CONTRACT"/>
+        <viewAttribute id="ZIEME_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="BRGEW_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="NTGEW_CONTRACT"/>
+        <viewAttribute id="GEWEI_CONTRACT"/>
+        <viewAttribute aggregationType="max" id="VOLUM_CONTRACT"/>
+        <viewAttribute id="VOLEH_CONTRACT"/>
+        <viewAttribute id="WERKS_CONTRACT"/>
+        <viewAttribute id="LGORT_CONTRACT"/>
+        <viewAttribute id="VSTEL_CONTRACT"/>
+        <viewAttribute id="AUART"/>
+        <viewAttribute id="AUART_CONTRACT"/>
+        <viewAttribute id="KUNNR_CONTRACT"/>
+        <viewAttribute id="AUDAT_CONTRACT"/>
+        <viewAttribute id="BSTNK_CONTRACT"/>
+        <viewAttribute id="ERDAT_CONTRACT"/>
+        <viewAttribute id="ERNAM_CONTRACT"/>
+        <viewAttribute id="VKORG_CONTRACT"/>
+        <viewAttribute id="VTWEG_CONTRACT"/>
+        <viewAttribute id="SPART_CONTRACT"/>
+        <viewAttribute id="WAERK_CONTRACT"/>
+        <viewAttribute id="BUKRS_VF_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT"/>
+        <viewAttribute id="BSTNK"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="LIFSK"/>
+        <viewAttribute id="FAKSK"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute aggregationType="max" id="KWMENG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="ZIEME"/>
+        <viewAttribute aggregationType="max" id="NETWR"/>
+        <viewAttribute aggregationType="max" id="BRGEW"/>
+        <viewAttribute aggregationType="max" id="NTGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute aggregationType="max" id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN_LIPS"/>
+        <viewAttribute id="POSNR_LIPS"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute aggregationType="sum" id="LFIMG"/>
+        <viewAttribute id="LFART"/>
+        <viewAttribute id="LFDAT"/>
+        <viewAttribute id="ROUTA"/>
+        <viewAttribute id="WADAT"/>
+        <viewAttribute id="WADAT_IST"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNAG"/>
+        <viewAttribute id="FKART"/>
+        <viewAttribute id="KUNRG"/>
+        <viewAttribute id="ZUONR"/>
+        <viewAttribute id="KDGRP"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="VSBED"/>
+        <viewAttribute id="KTGRD"/>
+        <viewAttribute id="REGIO"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNWE"/>
+        <viewAttribute id="FKART_RL"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute aggregationType="sum" id="FKIMG"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="PRSDT"/>
+        <viewAttribute aggregationType="sum" id="MWSBP"/>
+        <viewAttribute id="AUBEL"/>
+        <viewAttribute id="AUPOS"/>
+        <viewAttribute id="PMATN"/>
+        <viewAttribute id="ALAND"/>
+        <viewAttribute id="SPARA"/>
+        <viewAttribute id="ERZET"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VBELN_VBRK"/>
+        <viewAttribute id="VBELN_VF"/>
+        <viewAttribute aggregationType="sum" id="NETWR_INVOICE"/>
+        <viewAttribute aggregationType="sum" id="MWSBP_INVOICE"/>
+        <viewAttribute aggregationType="sum" id="NTGEW_DELIVERY"/>
+        <viewAttribute aggregationType="sum" id="BRGEW_DELIVERY"/>
+        <viewAttribute aggregationType="sum" id="VOLUM_DELIVERY"/>
+        <viewAttribute id="FKDAT_BILLING"/>
+        <viewAttribute aggregationType="sum" id="NTGEW_BILLING"/>
+        <viewAttribute id="VBELN_VBRL"/>
+        <viewAttribute id="VGBEL_DELIVERY"/>
+        <viewAttribute id="CONTACT_PERSON"/>
+        <viewAttribute id="BILL_TO_PARTY"/>
+        <viewAttribute id="PAYER"/>
+        <viewAttribute id="SHIP_TO_PARTY"/>
+        <viewAttribute id="FORWARDING_AGENT"/>
+        <viewAttribute id="SALES_EMPLOYEE"/>
+        <viewAttribute id="EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="VENDOR"/>
+        <viewAttribute id="TRANSPORTATION_CONTACT_PERSON"/>
+        <viewAttribute id="TRANSPORTATION_BILL_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_PAYER"/>
+        <viewAttribute id="TRANSPORTATION_SHIP_TO_PARTY"/>
+        <viewAttribute id="TRANSPORTATION_FORWARDING_AGENT"/>
+        <viewAttribute id="TRANSPORTATION_SALES_EMPLOYEE"/>
+        <viewAttribute id="TRANSPORTATION_EMPLOYEE_RESPONSE"/>
+        <viewAttribute id="TRANSPORTATION_VENDOR"/>
+        <viewAttribute id="KUNNR_SOLD_TO_PARTY"/>
+        <viewAttribute id="VRKME_VBRP"/>
+        <viewAttribute id="WAERK_VBRP"/>
+        <viewAttribute id="GEWEI_VBRP"/>
+        <viewAttribute id="GEWEI_LIPS"/>
+        <viewAttribute id="VOLEH_LIPS"/>
+        <viewAttribute id="VRKME_VBAP"/>
+        <viewAttribute id="POSNR_INVOICE_LIST"/>
+        <viewAttribute id="VBEGDAT_CONTRACT_ITM"/>
+        <viewAttribute id="VENDDAT_CONTRACT_ITM"/>
+        <viewAttribute id="POSNR_BILLING"/>
+        <viewAttribute id="VBELN_INVOICE_HDR"/>
+        <viewAttribute id="FKART_INVOICE_HDR"/>
+        <viewAttribute id="KUNRG_INVOICE_HDR"/>
+        <viewAttribute id="GJAHR_INVOICE_HDR"/>
+        <viewAttribute id="FKDAT_INVOICE_HDR"/>
+        <viewAttribute aggregationType="max" id="NETWR_CONTRACT"/>
+        <viewAttribute id="INCO1_ITM_CONTRACT"/>
+        <viewAttribute id="INCO2_ITM_CONTRACT"/>
+        <viewAttribute id="ZTERM_ITM_CONTRACT"/>
+        <viewAttribute id="FKDAT_ITM_CONTRACT"/>
+        <viewAttribute id="GJAHR_ITM_CONTRACT"/>
+        <viewAttribute id="INCO1_HDR_CONTRACT"/>
+        <viewAttribute id="INCO2_HDR_CONTRACT"/>
+        <viewAttribute id="ZTERM_HDR_CONTRACT"/>
+        <viewAttribute id="FKDAT_HDR_CONTRACT"/>
+        <viewAttribute id="GJAHR_HDR_CONTRACT"/>
+        <viewAttribute id="VBELN_CONTRACT_HDR"/>
+        <viewAttribute aggregationType="sum" id="NETWR_VBRP"/>
+        <viewAttribute aggregationType="max" id="NETPR_CONTRACT"/>
+        <viewAttribute id="WAERK_VBRP_ITEM"/>
+        <viewAttribute aggregationType="max" id="NETWR_CONTRACT_HDR"/>
+        <viewAttribute id="WAERK_CONTRACT_HDR"/>
+        <viewAttribute id="NETWR_VBRK"/>
+        <viewAttribute id="MATNR_LIPS"/>
+        <viewAttribute id="MATNR_VBRP"/>
+        <viewAttribute id="POSNR_VBKD_ITEM"/>
+        <viewAttribute aggregationType="max" id="MWSBP_VBAP_ORDER"/>
+        <viewAttribute id="POSNR_VBPA_ITEM"/>
+        <viewAttribute id="PARVW_VBPA_ITEM"/>
+        <viewAttribute id="ERNAM_LIPS"/>
+        <viewAttribute id="ERDAT_LIPS"/>
+        <viewAttribute id="WERKS_LIPS"/>
+        <viewAttribute id="LGORT_LIPS"/>
+        <viewAttribute id="ARKTX_LIPS"/>
+        <viewAttribute id="VSTEL_LIKP"/>
+        <viewAttribute id="ERDAT_VBRP"/>
+        <viewAttribute id="ERNAM_VBRP"/>
+        <viewAttribute id="ARKTX_VBRP"/>
+        <viewAttribute id="INCO1_VBRK"/>
+        <viewAttribute id="KUNAG_VBRK"/>
+        <viewAttribute id="INCO2_VBRK"/>
+        <viewAttribute id="ZTERM_VBRK"/>
+        <viewAttribute id="GJAHR_VBRK"/>
+        <viewAttribute id="KUNAG_VBRL"/>
+        <viewAttribute id="ERDAT_VBAK_CONTRACT"/>
+        <viewAttribute id="ERNAM_VBAK_CONTRACT"/>
+        <viewAttribute id="VCAL_POSNR_VBPA"/>
+        <viewAttribute id="VCAL_PARVW_VBPA"/>
+        <viewAttribute id="WERKS_VBRP"/>
+        <viewAttribute id="ERDAT_VBAK_ORDER"/>
+        <viewAttribute id="ERNAM_VBAK_ORDER"/>
+        <viewAttribute id="TXJCD_VBRP"/>
+        <viewAttribute id="TEXT1_TTXJT"/>
+        <viewAttribute id="VBELN_LIKP"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_1"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Aggregation_3">
+    <descriptions defaultDescription="VFCT_CONTRACT_RELATED_SALES_INVOICE_DATA"/>
+    <attributes>
+      <attribute id="VBELN" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBELN"/>
+      </attribute>
+      <attribute id="VBEGDAT" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBEGDAT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBEGDAT"/>
+      </attribute>
+      <attribute id="VENDDAT" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VENDDAT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VENDDAT"/>
+      </attribute>
+      <attribute id="POSNR_CONTRACT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="POSNR_CONTRACT"/>
+      </attribute>
+      <attribute id="MATNR_CONTRACT" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="MATNR_CONTRACT"/>
+      </attribute>
+      <attribute id="MATKL_CONTRACT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATKL_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="MATKL_CONTRACT"/>
+      </attribute>
+      <attribute id="ARKTX_CONTRACT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARKTX_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ARKTX_CONTRACT"/>
+      </attribute>
+      <attribute id="ZIEME_CONTRACT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZIEME_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ZIEME_CONTRACT"/>
+      </attribute>
+      <attribute id="GEWEI_CONTRACT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEWEI_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="GEWEI_CONTRACT"/>
+      </attribute>
+      <attribute id="VOLEH_CONTRACT" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VOLEH_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VOLEH_CONTRACT"/>
+      </attribute>
+      <attribute id="WERKS_CONTRACT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WERKS_CONTRACT"/>
+      </attribute>
+      <attribute id="LGORT_CONTRACT" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGORT_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="LGORT_CONTRACT"/>
+      </attribute>
+      <attribute id="VSTEL_CONTRACT" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSTEL_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VSTEL_CONTRACT"/>
+      </attribute>
+      <attribute id="AUART" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUART"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="AUART"/>
+      </attribute>
+      <attribute id="AUART_CONTRACT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUART"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="AUART_CONTRACT"/>
+      </attribute>
+      <attribute id="KUNNR_CONTRACT" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KUNNR_CONTRACT"/>
+      </attribute>
+      <attribute id="AUDAT_CONTRACT" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUDAT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="AUDAT_CONTRACT"/>
+      </attribute>
+      <attribute id="BSTNK_CONTRACT" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTNK"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="BSTNK_CONTRACT"/>
+      </attribute>
+      <attribute id="ERDAT_CONTRACT" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERDAT_CONTRACT"/>
+      </attribute>
+      <attribute id="ERNAM_CONTRACT" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERNAM_CONTRACT"/>
+      </attribute>
+      <attribute id="VKORG_CONTRACT" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VKORG_CONTRACT"/>
+      </attribute>
+      <attribute id="VTWEG_CONTRACT" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VTWEG_CONTRACT"/>
+      </attribute>
+      <attribute id="SPART_CONTRACT" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="SPART_CONTRACT"/>
+      </attribute>
+      <attribute id="WAERK_CONTRACT" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WAERK_CONTRACT"/>
+      </attribute>
+      <attribute id="BUKRS_VF_CONTRACT" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS_VF"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="BUKRS_VF_CONTRACT"/>
+      </attribute>
+      <attribute id="VBELN_CONTRACT" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBELN_CONTRACT"/>
+      </attribute>
+      <attribute id="BSTNK" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTNK"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="BSTNK"/>
+      </attribute>
+      <attribute id="ERDAT" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERNAM" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="LIFSK" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFSK"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="LIFSK"/>
+      </attribute>
+      <attribute id="FAKSK" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAKSK"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="FAKSK"/>
+      </attribute>
+      <attribute id="WAERK" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WAERK"/>
+      </attribute>
+      <attribute id="POSNR" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="POSNR"/>
+      </attribute>
+      <attribute id="MATNR" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="MATNR"/>
+      </attribute>
+      <attribute id="ARKTX" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Short Text for Sales Order Item"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ARKTX"/>
+      </attribute>
+      <attribute id="MATKL" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Group"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="MATKL"/>
+      </attribute>
+      <attribute id="ZIEME" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Target Quantity UoM"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ZIEME"/>
+      </attribute>
+      <attribute id="GEWEI" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Weight Unit"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="GEWEI"/>
+      </attribute>
+      <attribute id="VOLEH" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Volume unit"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VOLEH"/>
+      </attribute>
+      <attribute id="WERKS" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant (Own or External)"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WERKS"/>
+      </attribute>
+      <attribute id="LGORT" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Storage location"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="LGORT"/>
+      </attribute>
+      <attribute id="VSTEL" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Shipping Point/Receiving Point"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VSTEL"/>
+      </attribute>
+      <attribute id="ABGRU" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reason for Rejection of Quotations and Sales Orders"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ABGRU"/>
+      </attribute>
+      <attribute id="MANDT" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN_LIPS" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_LIPS"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBELN_LIPS"/>
+      </attribute>
+      <attribute id="POSNR_LIPS" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR_LIPS"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="POSNR_LIPS"/>
+      </attribute>
+      <attribute id="VGPOS" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGPOS"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VGPOS"/>
+      </attribute>
+      <attribute id="PRODH" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRODH"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="PRODH"/>
+      </attribute>
+      <attribute id="VRKME" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VRKME"/>
+      </attribute>
+      <attribute id="LFART" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFART"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="LFART"/>
+      </attribute>
+      <attribute id="LFDAT" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFDAT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="LFDAT"/>
+      </attribute>
+      <attribute id="ROUTA" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROUTA"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ROUTA"/>
+      </attribute>
+      <attribute id="WADAT" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WADAT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WADAT"/>
+      </attribute>
+      <attribute id="WADAT_IST" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WADAT_IST"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WADAT_IST"/>
+      </attribute>
+      <attribute id="KUNNR" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="KUNAG" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNAG"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KUNAG"/>
+      </attribute>
+      <attribute id="FKART" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="FKART"/>
+      </attribute>
+      <attribute id="KUNRG" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNRG"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KUNRG"/>
+      </attribute>
+      <attribute id="ZUONR" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUONR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ZUONR"/>
+      </attribute>
+      <attribute id="KDGRP" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDGRP"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KDGRP"/>
+      </attribute>
+      <attribute id="VKORG" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VKORG"/>
+      </attribute>
+      <attribute id="VTWEG" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VTWEG"/>
+      </attribute>
+      <attribute id="VSBED" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSBED"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VSBED"/>
+      </attribute>
+      <attribute id="KTGRD" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTGRD"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KTGRD"/>
+      </attribute>
+      <attribute id="REGIO" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REGIO"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="REGIO"/>
+      </attribute>
+      <attribute id="BUKRS" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="KUNWE" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNWE"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KUNWE"/>
+      </attribute>
+      <attribute id="FKART_RL" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART_RL"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="FKART_RL"/>
+      </attribute>
+      <attribute id="PRCTR" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="PRCTR"/>
+      </attribute>
+      <attribute id="MEINS" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="MEINS"/>
+      </attribute>
+      <attribute id="PRSDT" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRSDT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="PRSDT"/>
+      </attribute>
+      <attribute id="AUBEL" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUBEL"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="AUBEL"/>
+      </attribute>
+      <attribute id="AUPOS" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUPOS"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="AUPOS"/>
+      </attribute>
+      <attribute id="PMATN" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PMATN"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="PMATN"/>
+      </attribute>
+      <attribute id="ALAND" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALAND"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ALAND"/>
+      </attribute>
+      <attribute id="SPARA" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPARA"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="SPARA"/>
+      </attribute>
+      <attribute id="ERZET" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERZET"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERZET"/>
+      </attribute>
+      <attribute id="VGBEL" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGBEL"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VGBEL"/>
+      </attribute>
+      <attribute id="VBELN_VBRK" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBELN_VBRK"/>
+      </attribute>
+      <attribute id="VBELN_VF" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Document"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBELN_VF"/>
+      </attribute>
+      <attribute id="FKDAT_BILLING" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="FKDAT_BILLING"/>
+      </attribute>
+      <attribute id="VBELN_VBRL" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Invoice List"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBELN_VBRL"/>
+      </attribute>
+      <attribute id="VGBEL_DELIVERY" order="85" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGBEL_DELIVERY"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VGBEL_DELIVERY"/>
+      </attribute>
+      <attribute id="CONTACT_PERSON" order="86" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONTACT_PERSON"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="BILL_TO_PARTY" order="87" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BILL_TO_PARTY"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="PAYER" order="88" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAYER"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="PAYER"/>
+      </attribute>
+      <attribute id="SHIP_TO_PARTY" order="89" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHIP_TO_PARTY"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="FORWARDING_AGENT" order="90" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FORWARDING_AGENT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="SALES_EMPLOYEE" order="91" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALES_EMPLOYEE"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="EMPLOYEE_RESPONSE" order="92" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMPLOYEE_RESPONSE"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="VENDOR" order="93" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VENDOR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VENDOR"/>
+      </attribute>
+      <attribute id="TRN_CONTACT_PERSON" order="94" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRN_CONTACT_PERSON"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="TRANSPORTATION_CONTACT_PERSON"/>
+      </attribute>
+      <attribute id="TRN_BILL_TO_PARTY" order="95" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRN_BILL_TO_PARTY"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="TRANSPORTATION_BILL_TO_PARTY"/>
+      </attribute>
+      <attribute id="TRN_PAYER" order="96" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRN_PAYER"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="TRANSPORTATION_PAYER"/>
+      </attribute>
+      <attribute id="TRN_SHIP_TO_PARTY" order="97" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRN_SHIP_TO_PARTY"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="TRANSPORTATION_SHIP_TO_PARTY"/>
+      </attribute>
+      <attribute id="TRN_FORWARDING_AGENT" order="98" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRN_FORWARDING_AGENT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="TRANSPORTATION_FORWARDING_AGENT"/>
+      </attribute>
+      <attribute id="TRN_SALES_EMPLOYEE" order="99" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRN_SALES_EMPLOYEE"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="TRANSPORTATION_SALES_EMPLOYEE"/>
+      </attribute>
+      <attribute id="TRN_EMPLOYEE_RESPONSE" order="100" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRN_EMPLOYEE_RESPONSE"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="TRANSPORTATION_EMPLOYEE_RESPONSE"/>
+      </attribute>
+      <attribute id="TRN_VENDOR" order="101" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRN_VENDOR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="TRANSPORTATION_VENDOR"/>
+      </attribute>
+      <attribute id="KUNNR_SOLD_TO_PARTY" order="118" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR_SOLD_TO_PARTY"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KUNNR_SOLD_TO_PARTY"/>
+      </attribute>
+      <attribute id="VRKME_VBRP" order="119" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME_VBRP"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VRKME_VBRP"/>
+      </attribute>
+      <attribute id="WAERK_VBRP" order="120" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK_VBRP"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WAERK_VBRP"/>
+      </attribute>
+      <attribute id="GEWEI_VBRP" order="121" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Weight Unit"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="GEWEI_VBRP"/>
+      </attribute>
+      <attribute id="GEWEI_LIPS" order="122" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Weight Unit"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="GEWEI_LIPS"/>
+      </attribute>
+      <attribute id="VOLEH_LIPS" order="123" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Volume unit"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VOLEH_LIPS"/>
+      </attribute>
+      <attribute id="VRKME_VBAP" order="124" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VRKME_VBAP"/>
+      </attribute>
+      <attribute id="POSNR_INVOICE_LIST" order="125" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="POSNR_INVOICE_LIST"/>
+      </attribute>
+      <attribute id="VBEGDAT_CONTRACT_ITM" order="126" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBEGDAT_CONTRACT_ITM"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBEGDAT_CONTRACT_ITM"/>
+      </attribute>
+      <attribute id="VENDDAT_CONTRACT_ITM" order="127" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VENDDAT_CONTRACT_ITM"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VENDDAT_CONTRACT_ITM"/>
+      </attribute>
+      <attribute id="POSNR_BILLING" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="POSNR_BILLING"/>
+      </attribute>
+      <attribute id="VBELN_INVOICE_HDR" order="129" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Invoice List"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBELN_INVOICE_HDR"/>
+      </attribute>
+      <attribute id="FKART_INVOICE_HDR" order="130" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART_INVOICE_HDR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="FKART_INVOICE_HDR"/>
+      </attribute>
+      <attribute id="KUNRG_INVOICE_HDR" order="131" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNRG_INVOICE_HDR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KUNRG_INVOICE_HDR"/>
+      </attribute>
+      <attribute id="GJAHR_INVOICE_HDR" order="132" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR_INVOICE_HDR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="GJAHR_INVOICE_HDR"/>
+      </attribute>
+      <attribute id="FKDAT_INVOICE_HDR" order="133" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_INVOICE_HDR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="FKDAT_INVOICE_HDR"/>
+      </attribute>
+      <attribute id="INCO1_ITM_CONTRACT" order="135" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="INCO1_ITM_CONTRACT"/>
+      </attribute>
+      <attribute id="INCO2_ITM_CONTRACT" order="136" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="INCO2_ITM_CONTRACT"/>
+      </attribute>
+      <attribute id="ZTERM_ITM_CONTRACT" order="137" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ZTERM_ITM_CONTRACT"/>
+      </attribute>
+      <attribute id="FKDAT_ITM_CONTRACT" order="138" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="FKDAT_ITM_CONTRACT"/>
+      </attribute>
+      <attribute id="GJAHR_ITM_CONTRACT" order="139" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="GJAHR_ITM_CONTRACT"/>
+      </attribute>
+      <attribute id="INCO1_HDR_CONTRACT" order="140" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO1_HDR_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="INCO1_HDR_CONTRACT"/>
+      </attribute>
+      <attribute id="INCO2_HDR_CONTRACT" order="141" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2_HDR_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="INCO2_HDR_CONTRACT"/>
+      </attribute>
+      <attribute id="ZTERM_HDR_CONTRACT" order="142" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM_HDR_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ZTERM_HDR_CONTRACT"/>
+      </attribute>
+      <attribute id="FKDAT_HDR_CONTRACT" order="143" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKDAT_HDR_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="FKDAT_HDR_CONTRACT"/>
+      </attribute>
+      <attribute id="GJAHR_HDR_CONTRACT" order="144" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR_HDR_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="GJAHR_HDR_CONTRACT"/>
+      </attribute>
+      <attribute id="VBELN_CONTRACT_HDR" order="145" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBELN_CONTRACT_HDR"/>
+      </attribute>
+      <attribute id="WAERK_VBRP_ITEM" order="148" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SD document currency"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WAERK_VBRP_ITEM"/>
+      </attribute>
+      <attribute id="WAERK_CONTRACT_HDR" order="150" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK_CONTRACT_HDR"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WAERK_CONTRACT_HDR"/>
+      </attribute>
+      <attribute id="MATNR_LIPS" order="152" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number_Delivery_Item"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="MATNR_LIPS"/>
+      </attribute>
+      <attribute id="MATNR_VBRP" order="153" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number_Billing_Item"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="MATNR_VBRP"/>
+      </attribute>
+      <attribute id="POSNR_VBKD_ITEM" order="154" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="POSNR_VBKD_ITEM"/>
+      </attribute>
+      <attribute id="POSNR_VBPA_ITEM" order="156" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="POSNR_VBPA_ITEM"/>
+      </attribute>
+      <attribute id="PARVW_VBPA_ITEM" order="157" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW_VBPA_ITEM"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="PARVW_VBPA_ITEM"/>
+      </attribute>
+      <attribute id="ERNAM_LIPS" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERNAM_LIPS"/>
+      </attribute>
+      <attribute id="ERDAT_LIPS" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERDAT_LIPS"/>
+      </attribute>
+      <attribute id="WERKS_LIPS" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant (Own or External)"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WERKS_LIPS"/>
+      </attribute>
+      <attribute id="LGORT_LIPS" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Storage location"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="LGORT_LIPS"/>
+      </attribute>
+      <attribute id="ARKTX_LIPS" order="162" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Short Text for Sales Order Item"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ARKTX_LIPS"/>
+      </attribute>
+      <attribute id="VSTEL_LIKP" order="163" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Shipping Point/Receiving Point"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VSTEL_LIKP"/>
+      </attribute>
+      <attribute id="ERDAT_VBRP" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERDAT_VBRP"/>
+      </attribute>
+      <attribute id="ERNAM_VBRP" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERNAM_VBRP"/>
+      </attribute>
+      <attribute id="ARKTX_VBRP" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Short Text for Sales Order Item"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ARKTX_VBRP"/>
+      </attribute>
+      <attribute id="INCO1_VBRK" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO1_VBRK"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="INCO1_VBRK"/>
+      </attribute>
+      <attribute id="KUNAG_VBRK" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNAG"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KUNAG_VBRK"/>
+      </attribute>
+      <attribute id="INCO2_VBRK" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCO2_VBRK"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="INCO2_VBRK"/>
+      </attribute>
+      <attribute id="ZTERM_VBRK" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM_VBRK"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ZTERM_VBRK"/>
+      </attribute>
+      <attribute id="GJAHR_VBRK" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR_VBRK"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="GJAHR_VBRK"/>
+      </attribute>
+      <attribute id="KUNAG_VBRL" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNAG"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="KUNAG_VBRL"/>
+      </attribute>
+      <attribute id="ERDAT_VBAK_CONTRACT" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT_VBAK_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERDAT_VBAK_CONTRACT"/>
+      </attribute>
+      <attribute id="ERNAM_VBAK_CONTRACT" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM_VBAK_CONTRACT"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERNAM_VBAK_CONTRACT"/>
+      </attribute>
+      <attribute id="VCAL_POSNR_VBPA" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_POSNR_VBPA"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VCAL_POSNR_VBPA"/>
+      </attribute>
+      <attribute id="VCAL_PARVW_VBPA" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_PARVW_VBPA"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VCAL_PARVW_VBPA"/>
+      </attribute>
+      <attribute id="WERKS_VBRP" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant (Own or External)"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="WERKS_VBRP"/>
+      </attribute>
+      <attribute id="ERDAT_VBAK_ORDER" order="178" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT_VBAK_ORDER"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERDAT_VBAK_ORDER"/>
+      </attribute>
+      <attribute id="ERNAM_VBAK_ORDER" order="179" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM_VBAK_ORDER"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="ERNAM_VBAK_ORDER"/>
+      </attribute>
+      <attribute id="TXJCD_VBRP" order="180" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXJCD_VBRP"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="TXJCD_VBRP"/>
+      </attribute>
+      <attribute id="TEXT1_TTXJT" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Description"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="TEXT1_TTXJT"/>
+      </attribute>
+      <attribute id="VBELN_LIKP" order="182" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Aggregation_3" columnName="VBELN_LIKP"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="NETWR_INVOICE" order="81" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Net Value in Document Currency"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NETWR_INVOICE"/>
+      </measure>
+      <measure id="MWSBP_INVOICE" order="82" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Tax amount in document currency"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="MWSBP_INVOICE"/>
+      </measure>
+      <measure id="ZMENG_CONTRACT" order="102" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ZMENG_CONTRACT"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="ZMENG_CONTRACT"/>
+      </measure>
+      <measure id="BRGEW_CONTRACT" order="103" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BRGEW_CONTRACT"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="BRGEW_CONTRACT"/>
+      </measure>
+      <measure id="NTGEW_CONTRACT" order="104" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NTGEW_CONTRACT"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NTGEW_CONTRACT"/>
+      </measure>
+      <measure id="VOLUM_CONTRACT" order="105" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VOLUM_CONTRACT"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="VOLUM_CONTRACT"/>
+      </measure>
+      <measure id="KWMENG" order="106" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Cumulative order quantity in sales units"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="KWMENG"/>
+      </measure>
+      <measure id="NETWR" order="107" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Net Value of the Order Item in Document Currency"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NETWR"/>
+      </measure>
+      <measure id="BRGEW" order="108" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Gross Weight of the Item"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="BRGEW"/>
+      </measure>
+      <measure id="NTGEW" order="109" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Net Weight of the Item"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NTGEW"/>
+      </measure>
+      <measure id="VOLUM" order="110" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Volume of the item"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="VOLUM"/>
+      </measure>
+      <measure id="LFIMG" order="111" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="LFIMG"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="LFIMG"/>
+      </measure>
+      <measure id="FKIMG" order="112" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FKIMG"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="FKIMG"/>
+      </measure>
+      <measure id="MWSBP" order="113" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWSBP"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="MWSBP"/>
+      </measure>
+      <measure id="NTGEW_DELIVERY" order="114" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NTGEW"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NTGEW_DELIVERY"/>
+      </measure>
+      <measure id="BRGEW_DELIVERY" order="115" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BRGEW"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="BRGEW_DELIVERY"/>
+      </measure>
+      <measure id="VOLUM_DELIVERY" order="116" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VOLUM"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="VOLUM_DELIVERY"/>
+      </measure>
+      <measure id="NTGEW_BILLING" order="117" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NTGEW"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NTGEW_BILLING"/>
+      </measure>
+      <measure id="NETWR_CONTRACT" order="134" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR_CONTRACT"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NETWR_CONTRACT"/>
+      </measure>
+      <measure id="NETWR_VBRP" order="146" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NETWR_VBRP"/>
+      </measure>
+      <measure id="NETPR_CONTRACT" order="147" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETPR_CONTRACT"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NETPR_CONTRACT"/>
+      </measure>
+      <measure id="NETWR_CONTRACT_HDR" order="149" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR_CONTRACT_HDR"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NETWR_CONTRACT_HDR"/>
+      </measure>
+      <measure id="NETWR_VBRK" order="151" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETWR_VBRK"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="NETWR_VBRK"/>
+      </measure>
+      <measure id="MWSBP_VBAP_ORDER" order="155" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MWSBP_VBAP_ORDER"/>
+        <measureMapping columnObjectName="Aggregation_3" columnName="MWSBP_VBAP_ORDER"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="328" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="CONTRACT_SALES_PARTNERS" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="783"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="DELIVERY" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="783"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_6" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="687"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="CONTRACT_SALES_PARTNERS" modelObjectNameSpace="Join_6" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="DELIVERY" modelObjectNameSpace="Join_6" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="609"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="BILLING" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="609"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_7" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="175" y="513"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Aggregation_1" modelObjectNameSpace="Join_7" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="BILLING" modelObjectNameSpace="Join_7" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="INVOICELIST" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="329" y="435"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="175" y="435"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_8" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="251" y="339"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Aggregation_2" modelObjectNameSpace="Join_8" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="INVOICELIST" modelObjectNameSpace="Join_8" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="405" y="339"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="328" y="243"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_8" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="328" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

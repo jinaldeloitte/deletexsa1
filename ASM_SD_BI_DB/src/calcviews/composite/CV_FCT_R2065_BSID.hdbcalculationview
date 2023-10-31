@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="HANA_CONTENT.STAGING_MODELS.CROSSFUNCTION::CV_FCT_R2065_BSID" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VFCT_BSID"/>
+  <metadata changedAt="2021-12-06 18:56:03.961" createdAt="2020-06-17 19:52:36.713"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="47"/>
+  <dataSources>
+    <DataSource id="syn_tbl_BKPF">
+      <resourceUri>syn_tbl_BKPF</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_BSEG">
+      <resourceUri>syn_tbl_BSEG</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="BKEF">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="XBLNR"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="XSTOV"/>
+        <viewAttribute id="CPUDT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_BKPF"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="BSEG" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="AUGBL"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="WRBTR"/>
+        <viewAttribute id="H_BSTAT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_BLART"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="H_BUDAT"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="ZFBDT"/>
+        <viewAttribute id="ZBD1T"/>
+        <viewAttribute id="ZBD2T"/>
+        <viewAttribute id="ZBD3T"/>
+        <viewAttribute id="VBEL2"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="REBZJ"/>
+        <viewAttribute id="SAKNR"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="DMBE2"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="AUGDT"/>
+        <viewAttribute id="AUGGJ"/>
+        <viewAttribute id="BSCHL"/>
+        <viewAttribute id="BUZEI"/>
+        <viewAttribute id="BUZID"/>
+        <viewAttribute id="KIDNO"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="MABER"/>
+        <viewAttribute id="MADAT"/>
+        <viewAttribute id="MANSP"/>
+        <viewAttribute id="MANST"/>
+        <viewAttribute id="H_MONAT"/>
+        <viewAttribute id="MSCHL"/>
+        <viewAttribute id="MWSK1"/>
+        <viewAttribute id="MWSK2"/>
+        <viewAttribute id="MWSK3"/>
+        <viewAttribute id="MWSKZ"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="PYAMT"/>
+        <viewAttribute id="PYCUR"/>
+        <viewAttribute id="QSSKZ"/>
+        <viewAttribute id="RSTGR"/>
+        <viewAttribute id="SGTXT"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="VERTN"/>
+        <viewAttribute id="VERTT"/>
+        <viewAttribute id="ZINKZ"/>
+        <viewAttribute id="ZUONR"/>
+        <viewAttribute id="UMSKS"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="INTEGER" id="VCAL_REFE" expressionLanguage="COLUMN_ENGINE">
+          <formula> if(&quot;SHKZG&quot;='H' and &quot;REBZG&quot;='',0,if(&quot;ZBD3T&quot;=0,if(&quot;ZBD2T&quot;=0,&quot;ZBD1T&quot;,&quot;ZBD2T&quot;),&quot;ZBD3T&quot;)) 
+ 
+</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DATE" id="VCAL_NETDT" expressionLanguage="COLUMN_ENGINE">
+          <formula>adddays(date(if(&quot;ZFBDT&quot;='00000000',&quot;H_BLDAT&quot;,&quot;ZFBDT&quot;)),&quot;VCAL_REFE&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_KUNNRZT" length="10" expressionLanguage="COLUMN_ENGINE">
+          <formula>LTRIM(&quot;KUNNR&quot;,'0')</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="syn_tbl_BSEG"/>
+    <filter>(&quot;AUGBL&quot; ='') AND (&quot;KOART&quot; ='D') AND (not in (&quot;H_BSTAT&quot;,'D','M'))</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_1" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="AUGBL"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="WRBTR"/>
+        <viewAttribute id="H_BSTAT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_BLART"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="H_BUDAT"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="ZFBDT"/>
+        <viewAttribute id="ZBD1T"/>
+        <viewAttribute id="ZBD2T"/>
+        <viewAttribute id="ZBD3T"/>
+        <viewAttribute id="VBEL2"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="REBZJ"/>
+        <viewAttribute id="SAKNR"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="DMBE2"/>
+        <viewAttribute id="XBLNR"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="VCAL_NETDT"/>
+        <viewAttribute id="VCAL_KUNNRZT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="XSTOV"/>
+        <viewAttribute id="CPUDT"/>
+        <viewAttribute id="AUGDT"/>
+        <viewAttribute id="AUGGJ"/>
+        <viewAttribute id="BSCHL"/>
+        <viewAttribute id="BUZEI"/>
+        <viewAttribute id="BUZID"/>
+        <viewAttribute id="KIDNO"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="MABER"/>
+        <viewAttribute id="MADAT"/>
+        <viewAttribute id="MANSP"/>
+        <viewAttribute id="MANST"/>
+        <viewAttribute id="H_MONAT"/>
+        <viewAttribute id="MSCHL"/>
+        <viewAttribute id="MWSK1"/>
+        <viewAttribute id="MWSK2"/>
+        <viewAttribute id="MWSK3"/>
+        <viewAttribute id="MWSKZ"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="PYAMT"/>
+        <viewAttribute id="PYCUR"/>
+        <viewAttribute id="QSSKZ"/>
+        <viewAttribute id="RSTGR"/>
+        <viewAttribute id="SGTXT"/>
+        <viewAttribute id="STCEG"/>
+        <viewAttribute id="VBUND"/>
+        <viewAttribute id="VERTN"/>
+        <viewAttribute id="VERTT"/>
+        <viewAttribute id="ZINKZ"/>
+        <viewAttribute id="ZUONR"/>
+        <viewAttribute id="UMSKS"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="BSEG">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGBL" source="AUGBL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KOART" source="KOART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBTR" source="DMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRBTR" source="WRBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_BSTAT" source="H_BSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_BLART" source="H_BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_WAERS" source="H_WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_BUDAT" source="H_BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_BLDAT" source="H_BLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZFBDT" source="ZFBDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZBD1T" source="ZBD1T"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZBD2T" source="ZBD2T"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZBD3T" source="ZBD3T"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBEL2" source="VBEL2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SHKZG" source="SHKZG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZJ" source="REBZJ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKNR" source="SAKNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZT" source="REBZT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZG" source="REBZG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBE2" source="DMBE2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VCAL_NETDT" source="VCAL_NETDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VCAL_KUNNRZT" source="VCAL_KUNNRZT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGDT" source="AUGDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGGJ" source="AUGGJ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSCHL" source="BSCHL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUZID" source="BUZID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KIDNO" source="KIDNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MABER" source="MABER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MADAT" source="MADAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANSP" source="MANSP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANST" source="MANST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_MONAT" source="H_MONAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSCHL" source="MSCHL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MWSK1" source="MWSK1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MWSK2" source="MWSK2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MWSK3" source="MWSK3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MWSKZ" source="MWSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYAMT" source="PYAMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYCUR" source="PYCUR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="QSSKZ" source="QSSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RSTGR" source="RSTGR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SGTXT" source="SGTXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STCEG" source="STCEG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBUND" source="VBUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VERTN" source="VERTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VERTT" source="VERTT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZINKZ" source="ZINKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZUONR" source="ZUONR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKS" source="UMSKS"/>
+      </input>
+      <input node="BKEF">
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR" source="XBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS" source="WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XSTOV" source="XSTOV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPUDT" source="CPUDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+      </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="BUKRS"/>
+    <joinAttribute name="BELNR"/>
+    <joinAttribute name="GJAHR"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_1">
+    <descriptions defaultDescription="VFCT_BSID"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="Join_1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="BUKRS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping columnObjectName="Join_1" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="BELNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR"/>
+        <keyMapping columnObjectName="Join_1" columnName="BELNR"/>
+      </attribute>
+      <attribute id="GJAHR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR"/>
+        <keyMapping columnObjectName="Join_1" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="AUGBL" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGBL"/>
+        <keyMapping columnObjectName="Join_1" columnName="AUGBL"/>
+      </attribute>
+      <attribute id="KOART" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOART"/>
+        <keyMapping columnObjectName="Join_1" columnName="KOART"/>
+      </attribute>
+      <attribute id="DMBTR" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DMBTR"/>
+        <keyMapping columnObjectName="Join_1" columnName="DMBTR"/>
+      </attribute>
+      <attribute id="WRBTR" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRBTR"/>
+        <keyMapping columnObjectName="Join_1" columnName="WRBTR"/>
+      </attribute>
+      <attribute id="H_BSTAT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_BSTAT"/>
+        <keyMapping columnObjectName="Join_1" columnName="H_BSTAT"/>
+      </attribute>
+      <attribute id="KUNNR" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="H_BLART" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document type"/>
+        <keyMapping columnObjectName="Join_1" columnName="H_BLART"/>
+      </attribute>
+      <attribute id="H_WAERS" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency Key"/>
+        <keyMapping columnObjectName="Join_1" columnName="H_WAERS"/>
+      </attribute>
+      <attribute id="H_BUDAT" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Posting Date in the Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="H_BUDAT"/>
+      </attribute>
+      <attribute id="H_BLDAT" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Date in Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="H_BLDAT"/>
+      </attribute>
+      <attribute id="ZFBDT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Baseline Date for Due Date Calculation"/>
+        <keyMapping columnObjectName="Join_1" columnName="ZFBDT"/>
+      </attribute>
+      <attribute id="ZBD1T" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Cash discount days 1"/>
+        <keyMapping columnObjectName="Join_1" columnName="ZBD1T"/>
+      </attribute>
+      <attribute id="ZBD2T" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Cash discount days 2"/>
+        <keyMapping columnObjectName="Join_1" columnName="ZBD2T"/>
+      </attribute>
+      <attribute id="ZBD3T" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Net Payment Terms Period"/>
+        <keyMapping columnObjectName="Join_1" columnName="ZBD3T"/>
+      </attribute>
+      <attribute id="VBEL2" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="VBEL2"/>
+      </attribute>
+      <attribute id="SHKZG" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Debit/Credit Indicator"/>
+        <keyMapping columnObjectName="Join_1" columnName="SHKZG"/>
+      </attribute>
+      <attribute id="REBZJ" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fiscal Year of the Relevant Invoice (for Credit Memo)"/>
+        <keyMapping columnObjectName="Join_1" columnName="REBZJ"/>
+      </attribute>
+      <attribute id="SAKNR" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="G/L Account Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="SAKNR"/>
+      </attribute>
+      <attribute id="UMSKZ" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Special G/L Indicator"/>
+        <keyMapping columnObjectName="Join_1" columnName="UMSKZ"/>
+      </attribute>
+      <attribute id="ZTERM" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Terms of payment key"/>
+        <keyMapping columnObjectName="Join_1" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="REBZT" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Follow-On Document Type"/>
+        <keyMapping columnObjectName="Join_1" columnName="REBZT"/>
+      </attribute>
+      <attribute id="REBZG" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document No. of the Invoice to Which the Transaction Belongs"/>
+        <keyMapping columnObjectName="Join_1" columnName="REBZG"/>
+      </attribute>
+      <attribute id="DMBE2" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Amount in Second Local Currency or Group Currency"/>
+        <keyMapping columnObjectName="Join_1" columnName="DMBE2"/>
+      </attribute>
+      <attribute id="XBLNR" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reference Document Number"/>
+        <keyMapping columnObjectName="Join_1" columnName="XBLNR"/>
+      </attribute>
+      <attribute id="WAERS" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency Key"/>
+        <keyMapping columnObjectName="Join_1" columnName="WAERS"/>
+      </attribute>
+      <attribute id="VCAL_NETDT" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_NETDT"/>
+        <keyMapping columnObjectName="Join_1" columnName="VCAL_NETDT"/>
+      </attribute>
+      <attribute id="VCAL_KUNNRZT" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VCAL_KUNNRZT"/>
+        <keyMapping columnObjectName="Join_1" columnName="VCAL_KUNNRZT"/>
+      </attribute>
+      <attribute id="VBELN" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Document"/>
+        <keyMapping columnObjectName="Join_1" columnName="VBELN"/>
+      </attribute>
+      <attribute id="XSTOV" order="33" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: Document Is Flagged for Reversal"/>
+        <keyMapping columnObjectName="Join_1" columnName="XSTOV"/>
+      </attribute>
+      <attribute id="CPUDT" order="34" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Day On Which Accounting Document Was Entered"/>
+        <keyMapping columnObjectName="Join_1" columnName="CPUDT"/>
+      </attribute>
+      <attribute id="AUGDT" order="35" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGDT"/>
+        <keyMapping columnObjectName="Join_1" columnName="AUGDT"/>
+      </attribute>
+      <attribute id="AUGGJ" order="36" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGGJ"/>
+        <keyMapping columnObjectName="Join_1" columnName="AUGGJ"/>
+      </attribute>
+      <attribute id="BSCHL" order="37" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSCHL"/>
+        <keyMapping columnObjectName="Join_1" columnName="BSCHL"/>
+      </attribute>
+      <attribute id="BUZEI" order="38" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZEI"/>
+        <keyMapping columnObjectName="Join_1" columnName="BUZEI"/>
+      </attribute>
+      <attribute id="BUZID" order="39" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZID"/>
+        <keyMapping columnObjectName="Join_1" columnName="BUZID"/>
+      </attribute>
+      <attribute id="KIDNO" order="40" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KIDNO"/>
+        <keyMapping columnObjectName="Join_1" columnName="KIDNO"/>
+      </attribute>
+      <attribute id="KKBER" order="41" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KKBER"/>
+        <keyMapping columnObjectName="Join_1" columnName="KKBER"/>
+      </attribute>
+      <attribute id="MABER" order="42" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MABER"/>
+        <keyMapping columnObjectName="Join_1" columnName="MABER"/>
+      </attribute>
+      <attribute id="MADAT" order="43" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MADAT"/>
+        <keyMapping columnObjectName="Join_1" columnName="MADAT"/>
+      </attribute>
+      <attribute id="MANSP" order="44" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANSP"/>
+        <keyMapping columnObjectName="Join_1" columnName="MANSP"/>
+      </attribute>
+      <attribute id="MANST" order="45" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANST"/>
+        <keyMapping columnObjectName="Join_1" columnName="MANST"/>
+      </attribute>
+      <attribute id="H_MONAT" order="46" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="H_MONAT"/>
+        <keyMapping columnObjectName="Join_1" columnName="H_MONAT"/>
+      </attribute>
+      <attribute id="MSCHL" order="47" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSCHL"/>
+        <keyMapping columnObjectName="Join_1" columnName="MSCHL"/>
+      </attribute>
+      <attribute id="MWSK1" order="48" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSK1"/>
+        <keyMapping columnObjectName="Join_1" columnName="MWSK1"/>
+      </attribute>
+      <attribute id="MWSK2" order="49" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSK2"/>
+        <keyMapping columnObjectName="Join_1" columnName="MWSK2"/>
+      </attribute>
+      <attribute id="MWSK3" order="50" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSK3"/>
+        <keyMapping columnObjectName="Join_1" columnName="MWSK3"/>
+      </attribute>
+      <attribute id="MWSKZ" order="51" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSKZ"/>
+        <keyMapping columnObjectName="Join_1" columnName="MWSKZ"/>
+      </attribute>
+      <attribute id="PRCTR" order="52" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR"/>
+        <keyMapping columnObjectName="Join_1" columnName="PRCTR"/>
+      </attribute>
+      <attribute id="PYAMT" order="53" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYAMT"/>
+        <keyMapping columnObjectName="Join_1" columnName="PYAMT"/>
+      </attribute>
+      <attribute id="PYCUR" order="54" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYCUR"/>
+        <keyMapping columnObjectName="Join_1" columnName="PYCUR"/>
+      </attribute>
+      <attribute id="QSSKZ" order="55" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QSSKZ"/>
+        <keyMapping columnObjectName="Join_1" columnName="QSSKZ"/>
+      </attribute>
+      <attribute id="RSTGR" order="56" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RSTGR"/>
+        <keyMapping columnObjectName="Join_1" columnName="RSTGR"/>
+      </attribute>
+      <attribute id="SGTXT" order="57" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGTXT"/>
+        <keyMapping columnObjectName="Join_1" columnName="SGTXT"/>
+      </attribute>
+      <attribute id="STCEG" order="58" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG"/>
+        <keyMapping columnObjectName="Join_1" columnName="STCEG"/>
+      </attribute>
+      <attribute id="VBUND" order="59" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBUND"/>
+        <keyMapping columnObjectName="Join_1" columnName="VBUND"/>
+      </attribute>
+      <attribute id="VERTN" order="60" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERTN"/>
+        <keyMapping columnObjectName="Join_1" columnName="VERTN"/>
+      </attribute>
+      <attribute id="VERTT" order="61" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERTT"/>
+        <keyMapping columnObjectName="Join_1" columnName="VERTT"/>
+      </attribute>
+      <attribute id="ZINKZ" order="62" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZINKZ"/>
+        <keyMapping columnObjectName="Join_1" columnName="ZINKZ"/>
+      </attribute>
+      <attribute id="ZUONR" order="63" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUONR"/>
+        <keyMapping columnObjectName="Join_1" columnName="ZUONR"/>
+      </attribute>
+      <attribute id="UMSKS" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMSKS"/>
+        <keyMapping columnObjectName="Join_1" columnName="UMSKS"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="BKEF" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="BSEG" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    
+    <shape modelObjectName="BSEG" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="BKEF" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_VBFA" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="CV_TD_VBFA"/>
+  <metadata changedAt="2020-05-05 14:15:11.893" createdAt="2020-05-05 14:15:11.893"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_VBFA">
+      <resourceUri>syn_tbl_VBFA</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_VBFA">
+    <descriptions/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="MANDT"/>
+      </attribute>
+      <attribute id="RUUID" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RUUID"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="RUUID"/>
+      </attribute>
+      <attribute id="VBELV" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELV"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="VBELV"/>
+      </attribute>
+      <attribute id="POSNV" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNV"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="POSNV"/>
+      </attribute>
+      <attribute id="VBELN" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="VBELN"/>
+      </attribute>
+      <attribute id="POSNN" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNN"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="POSNN"/>
+      </attribute>
+      <attribute id="VBTYP_N" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBTYP_N"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="VBTYP_N"/>
+      </attribute>
+      <attribute id="MEINS" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="MEINS"/>
+      </attribute>
+      <attribute id="WAERS" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERS"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="WAERS"/>
+      </attribute>
+      <attribute id="VBTYP_V" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBTYP_V"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="VBTYP_V"/>
+      </attribute>
+      <attribute id="PLMIN" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLMIN"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="PLMIN"/>
+      </attribute>
+      <attribute id="TAQUI" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAQUI"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="TAQUI"/>
+      </attribute>
+      <attribute id="ERDAT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERZET" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERZET"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="ERZET"/>
+      </attribute>
+      <attribute id="MATNR" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="MATNR"/>
+      </attribute>
+      <attribute id="BWART" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWART"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="BWART"/>
+      </attribute>
+      <attribute id="BDART" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BDART"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="BDART"/>
+      </attribute>
+      <attribute id="PLART" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLART"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="PLART"/>
+      </attribute>
+      <attribute id="LGNUM" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGNUM"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="LGNUM"/>
+      </attribute>
+      <attribute id="AEDAT" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AEDAT"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="FKTYP" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKTYP"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="FKTYP"/>
+      </attribute>
+      <attribute id="GEWEI" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEWEI"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="GEWEI"/>
+      </attribute>
+      <attribute id="VOLEH" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VOLEH"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="VOLEH"/>
+      </attribute>
+      <attribute id="FPLNR" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FPLNR"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="FPLNR"/>
+      </attribute>
+      <attribute id="FPLTR" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FPLTR"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="FPLTR"/>
+      </attribute>
+      <attribute id="VRKME" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="VRKME"/>
+      </attribute>
+      <attribute id="SOBKZ" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOBKZ"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="SOBKZ"/>
+      </attribute>
+      <attribute id="SONUM" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SONUM"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="SONUM"/>
+      </attribute>
+      <attribute id="KZBEF" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZBEF"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="KZBEF"/>
+      </attribute>
+      <attribute id="LOGSYS" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGSYS"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="LOGSYS"/>
+      </attribute>
+      <attribute id="WBSTA" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WBSTA"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="WBSTA"/>
+      </attribute>
+      <attribute id="CMETH" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMETH"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="CMETH"/>
+      </attribute>
+      <attribute id="MJAHR" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MJAHR"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="MJAHR"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="STUFE" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STUFE"/>
+        <keyMapping columnObjectName="syn_tbl_VBFA" columnName="STUFE"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="RFMNG" order="8" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RFMNG"/>
+        <measureMapping columnObjectName="syn_tbl_VBFA" columnName="RFMNG"/>
+      </measure>
+      <measure id="RFWRT" order="10" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RFWRT"/>
+        <measureMapping columnObjectName="syn_tbl_VBFA" columnName="RFWRT"/>
+      </measure>
+      <measure id="BRGEW" order="24" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BRGEW"/>
+        <measureMapping columnObjectName="syn_tbl_VBFA" columnName="BRGEW"/>
+      </measure>
+      <measure id="VOLUM" order="26" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VOLUM"/>
+        <measureMapping columnObjectName="syn_tbl_VBFA" columnName="VOLUM"/>
+      </measure>
+      <measure id="RFMNG_FLO" order="30" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RFMNG_FLO"/>
+        <measureMapping columnObjectName="syn_tbl_VBFA" columnName="RFMNG_FLO"/>
+      </measure>
+      <measure id="RFMNG_FLT" order="31" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RFMNG_FLT"/>
+        <measureMapping columnObjectName="syn_tbl_VBFA" columnName="RFMNG_FLT"/>
+      </measure>
+      <measure id="ABGES" order="33" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ABGES"/>
+        <measureMapping columnObjectName="syn_tbl_VBFA" columnName="ABGES"/>
+      </measure>
+      <measure id="NTGEW" order="37" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NTGEW"/>
+        <measureMapping columnObjectName="syn_tbl_VBFA" columnName="NTGEW"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/></shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

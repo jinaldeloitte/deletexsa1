@@ -1,0 +1,1833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_ACDOCA" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="ACDOCA"/>
+  <metadata changedAt="2021-12-08 16:52:29.068"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_ACDOCA">
+      <resourceUri>syn_tbl_ACDOCA</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="syn_tbl_ACDOCA">
+    <descriptions/>
+    <attributes>
+      <attribute id="RCLNT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RCLNT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RCLNT"/>
+      </attribute>
+      <attribute id="RLDNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RLDNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RLDNR"/>
+      </attribute>
+      <attribute id="RBUKRS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RBUKRS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RBUKRS"/>
+      </attribute>
+      <attribute id="GJAHR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="BELNR" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BELNR"/>
+      </attribute>
+      <attribute id="DOCLN" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DOCLN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="DOCLN"/>
+      </attribute>
+      <attribute id="RYEAR" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RYEAR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RYEAR"/>
+      </attribute>
+      <attribute id="RRCTY" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RRCTY"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RRCTY"/>
+      </attribute>
+      <attribute id="RMVCT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RMVCT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RMVCT"/>
+      </attribute>
+      <attribute id="VORGN" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VORGN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VORGN"/>
+      </attribute>
+      <attribute id="VRGNG" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRGNG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VRGNG"/>
+      </attribute>
+      <attribute id="BTTYPE" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BTTYPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BTTYPE"/>
+      </attribute>
+      <attribute id="AWTYP" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWTYP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AWTYP"/>
+      </attribute>
+      <attribute id="AWSYS" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWSYS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AWSYS"/>
+      </attribute>
+      <attribute id="AWORG" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWORG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AWORG"/>
+      </attribute>
+      <attribute id="AWREF" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWREF"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AWREF"/>
+      </attribute>
+      <attribute id="AWITEM" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWITEM"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AWITEM"/>
+      </attribute>
+      <attribute id="AWITGRP" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWITGRP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AWITGRP"/>
+      </attribute>
+      <attribute id="SUBTA" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SUBTA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SUBTA"/>
+      </attribute>
+      <attribute id="XREVERSING" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XREVERSING"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XREVERSING"/>
+      </attribute>
+      <attribute id="XREVERSED" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XREVERSED"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XREVERSED"/>
+      </attribute>
+      <attribute id="XTRUEREV" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XTRUEREV"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XTRUEREV"/>
+      </attribute>
+      <attribute id="AWTYP_REV" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWTYP_REV"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AWTYP_REV"/>
+      </attribute>
+      <attribute id="AWORG_REV" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWORG_REV"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AWORG_REV"/>
+      </attribute>
+      <attribute id="AWREF_REV" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWREF_REV"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AWREF_REV"/>
+      </attribute>
+      <attribute id="SUBTA_REV" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SUBTA_REV"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SUBTA_REV"/>
+      </attribute>
+      <attribute id="XSETTLING" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSETTLING"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XSETTLING"/>
+      </attribute>
+      <attribute id="XSETTLED" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSETTLED"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XSETTLED"/>
+      </attribute>
+      <attribute id="PREC_AWTYP" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREC_AWTYP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PREC_AWTYP"/>
+      </attribute>
+      <attribute id="PREC_AWORG" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREC_AWORG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PREC_AWORG"/>
+      </attribute>
+      <attribute id="PREC_AWREF" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREC_AWREF"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PREC_AWREF"/>
+      </attribute>
+      <attribute id="PREC_AWITEM" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREC_AWITEM"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PREC_AWITEM"/>
+      </attribute>
+      <attribute id="PREC_SUBTA" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREC_SUBTA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PREC_SUBTA"/>
+      </attribute>
+      <attribute id="PREC_AWMULT" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREC_AWMULT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PREC_AWMULT"/>
+      </attribute>
+      <attribute id="XSECONDARY" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSECONDARY"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XSECONDARY"/>
+      </attribute>
+      <attribute id="RTCUR" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RTCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RTCUR"/>
+      </attribute>
+      <attribute id="RWCUR" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RWCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RWCUR"/>
+      </attribute>
+      <attribute id="RHCUR" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RHCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RHCUR"/>
+      </attribute>
+      <attribute id="RKCUR" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RKCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RKCUR"/>
+      </attribute>
+      <attribute id="ROCUR" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ROCUR"/>
+      </attribute>
+      <attribute id="RVCUR" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RVCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RVCUR"/>
+      </attribute>
+      <attribute id="RBCUR" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RBCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RBCUR"/>
+      </attribute>
+      <attribute id="RCCUR" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RCCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RCCUR"/>
+      </attribute>
+      <attribute id="RDCUR" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RDCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RDCUR"/>
+      </attribute>
+      <attribute id="RECUR" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RECUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RECUR"/>
+      </attribute>
+      <attribute id="RFCUR" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RFCUR"/>
+      </attribute>
+      <attribute id="RGCUR" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RGCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RGCUR"/>
+      </attribute>
+      <attribute id="RCO_OCUR" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RCO_OCUR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RCO_OCUR"/>
+      </attribute>
+      <attribute id="RUNIT" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RUNIT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RUNIT"/>
+      </attribute>
+      <attribute id="RVUNIT" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RVUNIT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RVUNIT"/>
+      </attribute>
+      <attribute id="RRUNIT" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RRUNIT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RRUNIT"/>
+      </attribute>
+      <attribute id="QUNIT1" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QUNIT1"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="QUNIT1"/>
+      </attribute>
+      <attribute id="QUNIT2" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QUNIT2"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="QUNIT2"/>
+      </attribute>
+      <attribute id="QUNIT3" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QUNIT3"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="QUNIT3"/>
+      </attribute>
+      <attribute id="RACCT" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RACCT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RACCT"/>
+      </attribute>
+      <attribute id="RCNTR" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RCNTR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RCNTR"/>
+      </attribute>
+      <attribute id="PRCTR" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PRCTR"/>
+      </attribute>
+      <attribute id="RFAREA" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFAREA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RFAREA"/>
+      </attribute>
+      <attribute id="RBUSA" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RBUSA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RBUSA"/>
+      </attribute>
+      <attribute id="KOKRS" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOKRS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KOKRS"/>
+      </attribute>
+      <attribute id="SEGMENT" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SEGMENT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SEGMENT"/>
+      </attribute>
+      <attribute id="SCNTR" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCNTR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SCNTR"/>
+      </attribute>
+      <attribute id="PPRCTR" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPRCTR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PPRCTR"/>
+      </attribute>
+      <attribute id="SFAREA" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SFAREA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SFAREA"/>
+      </attribute>
+      <attribute id="SBUSA" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SBUSA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SBUSA"/>
+      </attribute>
+      <attribute id="RASSC" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RASSC"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RASSC"/>
+      </attribute>
+      <attribute id="PSEGMENT" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSEGMENT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSEGMENT"/>
+      </attribute>
+      <attribute id="DRCRK" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DRCRK"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="DRCRK"/>
+      </attribute>
+      <attribute id="POPER" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POPER"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="POPER"/>
+      </attribute>
+      <attribute id="PERIV" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERIV"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PERIV"/>
+      </attribute>
+      <attribute id="FISCYEARPER" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISCYEARPER"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="FISCYEARPER"/>
+      </attribute>
+      <attribute id="BUDAT" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDAT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BUDAT"/>
+      </attribute>
+      <attribute id="BLDAT" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLDAT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BLDAT"/>
+      </attribute>
+      <attribute id="BLART" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLART"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BLART"/>
+      </attribute>
+      <attribute id="BUZEI" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZEI"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BUZEI"/>
+      </attribute>
+      <attribute id="ZUONR" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUONR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ZUONR"/>
+      </attribute>
+      <attribute id="BSCHL" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSCHL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BSCHL"/>
+      </attribute>
+      <attribute id="BSTAT" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTAT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BSTAT"/>
+      </attribute>
+      <attribute id="LINETYPE" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LINETYPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="LINETYPE"/>
+      </attribute>
+      <attribute id="KTOSL" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOSL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KTOSL"/>
+      </attribute>
+      <attribute id="SLALITTYPE" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SLALITTYPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SLALITTYPE"/>
+      </attribute>
+      <attribute id="XSPLITMOD" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSPLITMOD"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XSPLITMOD"/>
+      </attribute>
+      <attribute id="USNAM" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USNAM"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="USNAM"/>
+      </attribute>
+      <attribute id="EPRCTR" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EPRCTR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="EPRCTR"/>
+      </attribute>
+      <attribute id="RHOART" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RHOART"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RHOART"/>
+      </attribute>
+      <attribute id="GLACCOUNT_TYPE" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GLACCOUNT_TYPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="GLACCOUNT_TYPE"/>
+      </attribute>
+      <attribute id="KTOPL" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOPL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KTOPL"/>
+      </attribute>
+      <attribute id="LOKKT" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOKKT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="LOKKT"/>
+      </attribute>
+      <attribute id="KTOP2" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOP2"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KTOP2"/>
+      </attribute>
+      <attribute id="REBZG" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REBZG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="REBZG"/>
+      </attribute>
+      <attribute id="REBZJ" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REBZJ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="REBZJ"/>
+      </attribute>
+      <attribute id="REBZZ" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REBZZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="REBZZ"/>
+      </attribute>
+      <attribute id="REBZT" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REBZT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="REBZT"/>
+      </attribute>
+      <attribute id="RBEST" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RBEST"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RBEST"/>
+      </attribute>
+      <attribute id="EBELN" order="155" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="EBELN"/>
+      </attribute>
+      <attribute id="EBELP" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="EBELP"/>
+      </attribute>
+      <attribute id="ZEKKN" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEKKN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ZEKKN"/>
+      </attribute>
+      <attribute id="SGTXT" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGTXT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SGTXT"/>
+      </attribute>
+      <attribute id="KDAUF" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDAUF"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KDAUF"/>
+      </attribute>
+      <attribute id="KDPOS" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDPOS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KDPOS"/>
+      </attribute>
+      <attribute id="MATNR" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MATNR"/>
+      </attribute>
+      <attribute id="WERKS" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="WERKS"/>
+      </attribute>
+      <attribute id="LIFNR" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="KUNNR" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="FBUDA" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FBUDA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="FBUDA"/>
+      </attribute>
+      <attribute id="KOART" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOART"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KOART"/>
+      </attribute>
+      <attribute id="UMSKZ" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMSKZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="UMSKZ"/>
+      </attribute>
+      <attribute id="MWSKZ" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSKZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MWSKZ"/>
+      </attribute>
+      <attribute id="HBKID" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HBKID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="HBKID"/>
+      </attribute>
+      <attribute id="HKTID" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HKTID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="HKTID"/>
+      </attribute>
+      <attribute id="XOPVW" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XOPVW"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XOPVW"/>
+      </attribute>
+      <attribute id="AUGDT" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGDT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AUGDT"/>
+      </attribute>
+      <attribute id="AUGBL" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGBL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AUGBL"/>
+      </attribute>
+      <attribute id="AUGGJ" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGGJ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AUGGJ"/>
+      </attribute>
+      <attribute id="AFABE" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AFABE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AFABE"/>
+      </attribute>
+      <attribute id="ANLN1" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLN1"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ANLN1"/>
+      </attribute>
+      <attribute id="ANLN2" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLN2"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ANLN2"/>
+      </attribute>
+      <attribute id="BZDAT" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BZDAT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BZDAT"/>
+      </attribute>
+      <attribute id="ANBWA" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANBWA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ANBWA"/>
+      </attribute>
+      <attribute id="MOVCAT" order="180" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOVCAT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MOVCAT"/>
+      </attribute>
+      <attribute id="DEPR_PERIOD" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEPR_PERIOD"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="DEPR_PERIOD"/>
+      </attribute>
+      <attribute id="ANLGR" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLGR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ANLGR"/>
+      </attribute>
+      <attribute id="ANLGR2" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLGR2"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ANLGR2"/>
+      </attribute>
+      <attribute id="SETTLEMENT_RULE" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SETTLEMENT_RULE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SETTLEMENT_RULE"/>
+      </attribute>
+      <attribute id="UBZDT_PN" order="185" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UBZDT_PN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="UBZDT_PN"/>
+      </attribute>
+      <attribute id="XVABG_PN" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XVABG_PN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XVABG_PN"/>
+      </attribute>
+      <attribute id="XMANPROPVAL_PN" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XMANPROPVAL_PN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XMANPROPVAL_PN"/>
+      </attribute>
+      <attribute id="KALNR" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KALNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KALNR"/>
+      </attribute>
+      <attribute id="VPRSV" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPRSV"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VPRSV"/>
+      </attribute>
+      <attribute id="MLAST" order="191" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MLAST"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MLAST"/>
+      </attribute>
+      <attribute id="KZBWS" order="192" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZBWS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KZBWS"/>
+      </attribute>
+      <attribute id="XOBEW" order="193" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XOBEW"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XOBEW"/>
+      </attribute>
+      <attribute id="SOBKZ" order="194" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOBKZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SOBKZ"/>
+      </attribute>
+      <attribute id="MAT_KDAUF" order="196" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_KDAUF"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MAT_KDAUF"/>
+      </attribute>
+      <attribute id="MAT_KDPOS" order="197" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_KDPOS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MAT_KDPOS"/>
+      </attribute>
+      <attribute id="MAT_PSPNR" order="198" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_PSPNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MAT_PSPNR"/>
+      </attribute>
+      <attribute id="MAT_PS_POSID" order="199" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_PS_POSID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MAT_PS_POSID"/>
+      </attribute>
+      <attribute id="MAT_LIFNR" order="200" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_LIFNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MAT_LIFNR"/>
+      </attribute>
+      <attribute id="BWTAR" order="201" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWTAR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BWTAR"/>
+      </attribute>
+      <attribute id="BWKEY" order="202" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWKEY"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BWKEY"/>
+      </attribute>
+      <attribute id="MLPTYP" order="207" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MLPTYP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MLPTYP"/>
+      </attribute>
+      <attribute id="MLCATEG" order="208" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MLCATEG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MLCATEG"/>
+      </attribute>
+      <attribute id="QSBVALT" order="209" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QSBVALT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="QSBVALT"/>
+      </attribute>
+      <attribute id="QSPROCESS" order="210" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QSPROCESS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="QSPROCESS"/>
+      </attribute>
+      <attribute id="PERART" order="211" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERART"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PERART"/>
+      </attribute>
+      <attribute id="MLPOSNR" order="212" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MLPOSNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MLPOSNR"/>
+      </attribute>
+      <attribute id="RACCT_SENDER" order="213" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RACCT_SENDER"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RACCT_SENDER"/>
+      </attribute>
+      <attribute id="ACCAS_SENDER" order="214" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACCAS_SENDER"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ACCAS_SENDER"/>
+      </attribute>
+      <attribute id="ACCASTY_SENDER" order="215" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACCASTY_SENDER"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ACCASTY_SENDER"/>
+      </attribute>
+      <attribute id="OBJNR" order="216" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBJNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="OBJNR"/>
+      </attribute>
+      <attribute id="HRKFT" order="217" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HRKFT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="HRKFT"/>
+      </attribute>
+      <attribute id="HKGRP" order="218" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HKGRP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="HKGRP"/>
+      </attribute>
+      <attribute id="PAROB1" order="219" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAROB1"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PAROB1"/>
+      </attribute>
+      <attribute id="PAROBSRC" order="220" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAROBSRC"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PAROBSRC"/>
+      </attribute>
+      <attribute id="USPOB" order="221" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USPOB"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="USPOB"/>
+      </attribute>
+      <attribute id="CO_BELKZ" order="222" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_BELKZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_BELKZ"/>
+      </attribute>
+      <attribute id="CO_BEKNZ" order="223" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_BEKNZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_BEKNZ"/>
+      </attribute>
+      <attribute id="BELTP" order="224" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELTP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BELTP"/>
+      </attribute>
+      <attribute id="MUVFLG" order="225" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MUVFLG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MUVFLG"/>
+      </attribute>
+      <attribute id="GKONT" order="226" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GKONT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="GKONT"/>
+      </attribute>
+      <attribute id="GKOAR" order="227" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GKOAR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="GKOAR"/>
+      </attribute>
+      <attribute id="ERLKZ" order="228" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERLKZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ERLKZ"/>
+      </attribute>
+      <attribute id="PERNR" order="229" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PERNR"/>
+      </attribute>
+      <attribute id="PAOBJNR" order="230" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAOBJNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PAOBJNR"/>
+      </attribute>
+      <attribute id="XPAOBJNR_CO_REL" order="231" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XPAOBJNR_CO_REL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XPAOBJNR_CO_REL"/>
+      </attribute>
+      <attribute id="SCOPE" order="232" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCOPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SCOPE"/>
+      </attribute>
+      <attribute id="LOGSYSO" order="233" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGSYSO"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="LOGSYSO"/>
+      </attribute>
+      <attribute id="PBUKRS" order="234" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PBUKRS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PBUKRS"/>
+      </attribute>
+      <attribute id="PSCOPE" order="235" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSCOPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSCOPE"/>
+      </attribute>
+      <attribute id="LOGSYSP" order="236" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGSYSP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="LOGSYSP"/>
+      </attribute>
+      <attribute id="BWSTRAT" order="237" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWSTRAT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BWSTRAT"/>
+      </attribute>
+      <attribute id="OBJNR_HK" order="238" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBJNR_HK"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="OBJNR_HK"/>
+      </attribute>
+      <attribute id="AUFNR_ORG" order="239" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFNR_ORG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AUFNR_ORG"/>
+      </attribute>
+      <attribute id="UKOSTL" order="240" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UKOSTL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="UKOSTL"/>
+      </attribute>
+      <attribute id="ULSTAR" order="241" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ULSTAR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ULSTAR"/>
+      </attribute>
+      <attribute id="UPRZNR" order="242" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPRZNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="UPRZNR"/>
+      </attribute>
+      <attribute id="ACCAS" order="243" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACCAS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ACCAS"/>
+      </attribute>
+      <attribute id="ACCASTY" order="244" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACCASTY"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ACCASTY"/>
+      </attribute>
+      <attribute id="LSTAR" order="245" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LSTAR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="LSTAR"/>
+      </attribute>
+      <attribute id="AUFNR" order="246" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AUFNR"/>
+      </attribute>
+      <attribute id="AUTYP" order="247" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUTYP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AUTYP"/>
+      </attribute>
+      <attribute id="PS_PSP_PNR" order="248" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PS_PSP_PNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PS_PSP_PNR"/>
+      </attribute>
+      <attribute id="PS_POSID" order="249" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PS_POSID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PS_POSID"/>
+      </attribute>
+      <attribute id="PS_PSPID" order="250" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PS_PSPID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PS_PSPID"/>
+      </attribute>
+      <attribute id="NPLNR" order="251" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NPLNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="NPLNR"/>
+      </attribute>
+      <attribute id="NPLNR_VORGN" order="252" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NPLNR_VORGN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="NPLNR_VORGN"/>
+      </attribute>
+      <attribute id="PRZNR" order="253" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRZNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PRZNR"/>
+      </attribute>
+      <attribute id="KSTRG" order="254" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KSTRG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KSTRG"/>
+      </attribute>
+      <attribute id="BEMOT" order="255" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEMOT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BEMOT"/>
+      </attribute>
+      <attribute id="RSRCE" order="256" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RSRCE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RSRCE"/>
+      </attribute>
+      <attribute id="QMNUM" order="257" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QMNUM"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="QMNUM"/>
+      </attribute>
+      <attribute id="ERKRS" order="258" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERKRS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ERKRS"/>
+      </attribute>
+      <attribute id="PACCAS" order="259" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PACCAS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PACCAS"/>
+      </attribute>
+      <attribute id="PACCASTY" order="260" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PACCASTY"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PACCASTY"/>
+      </attribute>
+      <attribute id="PLSTAR" order="261" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLSTAR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PLSTAR"/>
+      </attribute>
+      <attribute id="PAUFNR" order="262" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAUFNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PAUFNR"/>
+      </attribute>
+      <attribute id="PAUTYP" order="263" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAUTYP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PAUTYP"/>
+      </attribute>
+      <attribute id="PPS_POSID" order="264" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPS_POSID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PPS_POSID"/>
+      </attribute>
+      <attribute id="PPS_PSPID" order="265" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPS_PSPID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PPS_PSPID"/>
+      </attribute>
+      <attribute id="PKDAUF" order="266" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PKDAUF"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PKDAUF"/>
+      </attribute>
+      <attribute id="PKDPOS" order="267" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PKDPOS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PKDPOS"/>
+      </attribute>
+      <attribute id="PPAOBJNR" order="268" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPAOBJNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PPAOBJNR"/>
+      </attribute>
+      <attribute id="PNPLNR" order="269" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PNPLNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PNPLNR"/>
+      </attribute>
+      <attribute id="PNPLNR_VORGN" order="270" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PNPLNR_VORGN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PNPLNR_VORGN"/>
+      </attribute>
+      <attribute id="PPRZNR" order="271" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPRZNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PPRZNR"/>
+      </attribute>
+      <attribute id="PKSTRG" order="272" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PKSTRG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PKSTRG"/>
+      </attribute>
+      <attribute id="CO_ACCASTY_N1" order="273" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_ACCASTY_N1"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_ACCASTY_N1"/>
+      </attribute>
+      <attribute id="CO_ACCASTY_N2" order="274" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_ACCASTY_N2"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_ACCASTY_N2"/>
+      </attribute>
+      <attribute id="CO_ACCASTY_N3" order="275" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_ACCASTY_N3"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_ACCASTY_N3"/>
+      </attribute>
+      <attribute id="CO_ZLENR" order="276" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_ZLENR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_ZLENR"/>
+      </attribute>
+      <attribute id="CO_BELNR" order="277" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_BELNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_BELNR"/>
+      </attribute>
+      <attribute id="CO_BUZEI" order="278" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_BUZEI"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_BUZEI"/>
+      </attribute>
+      <attribute id="CO_BUZEI1" order="279" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_BUZEI1"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_BUZEI1"/>
+      </attribute>
+      <attribute id="CO_BUZEI2" order="280" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_BUZEI2"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_BUZEI2"/>
+      </attribute>
+      <attribute id="CO_BUZEI5" order="281" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_BUZEI5"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_BUZEI5"/>
+      </attribute>
+      <attribute id="CO_BUZEI6" order="282" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_BUZEI6"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_BUZEI6"/>
+      </attribute>
+      <attribute id="CO_BUZEI7" order="283" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_BUZEI7"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_BUZEI7"/>
+      </attribute>
+      <attribute id="CO_REFBZ" order="284" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_REFBZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_REFBZ"/>
+      </attribute>
+      <attribute id="CO_REFBZ1" order="285" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_REFBZ1"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_REFBZ1"/>
+      </attribute>
+      <attribute id="CO_REFBZ2" order="286" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_REFBZ2"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_REFBZ2"/>
+      </attribute>
+      <attribute id="CO_REFBZ5" order="287" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_REFBZ5"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_REFBZ5"/>
+      </attribute>
+      <attribute id="CO_REFBZ6" order="288" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_REFBZ6"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_REFBZ6"/>
+      </attribute>
+      <attribute id="CO_REFBZ7" order="289" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_REFBZ7"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_REFBZ7"/>
+      </attribute>
+      <attribute id="WORK_ITEM_ID" order="290" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WORK_ITEM_ID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="WORK_ITEM_ID"/>
+      </attribute>
+      <attribute id="FKART" order="291" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKART"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="FKART"/>
+      </attribute>
+      <attribute id="VKORG" order="292" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VKORG"/>
+      </attribute>
+      <attribute id="VTWEG" order="293" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VTWEG"/>
+      </attribute>
+      <attribute id="SPART" order="294" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SPART"/>
+      </attribute>
+      <attribute id="MATNR_COPA" order="295" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR_COPA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MATNR_COPA"/>
+      </attribute>
+      <attribute id="MATKL" order="296" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATKL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MATKL"/>
+      </attribute>
+      <attribute id="KDGRP" order="297" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDGRP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KDGRP"/>
+      </attribute>
+      <attribute id="LAND1" order="298" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAND1"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="LAND1"/>
+      </attribute>
+      <attribute id="BRSCH" order="299" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BRSCH"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BRSCH"/>
+      </attribute>
+      <attribute id="BZIRK" order="300" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BZIRK"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BZIRK"/>
+      </attribute>
+      <attribute id="KUNRE" order="301" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNRE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KUNRE"/>
+      </attribute>
+      <attribute id="KUNWE" order="302" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNWE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KUNWE"/>
+      </attribute>
+      <attribute id="KONZS" order="303" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONZS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KONZS"/>
+      </attribute>
+      <attribute id="ACDOC_COPA_EEW_DUMMY_PA" order="304" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACDOC_COPA_EEW_DUMMY_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ACDOC_COPA_EEW_DUMMY_PA"/>
+      </attribute>
+      <attribute id="RE_BUKRS" order="305" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RE_BUKRS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RE_BUKRS"/>
+      </attribute>
+      <attribute id="RE_ACCOUNT" order="306" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RE_ACCOUNT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RE_ACCOUNT"/>
+      </attribute>
+      <attribute id="FIKRS" order="307" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIKRS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="FIKRS"/>
+      </attribute>
+      <attribute id="FISTL" order="308" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISTL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="FISTL"/>
+      </attribute>
+      <attribute id="MEASURE" order="309" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEASURE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MEASURE"/>
+      </attribute>
+      <attribute id="RFUND" order="310" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RFUND"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RFUND"/>
+      </attribute>
+      <attribute id="RGRANT_NBR" order="311" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RGRANT_NBR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RGRANT_NBR"/>
+      </attribute>
+      <attribute id="RBUDGET_PD" order="312" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RBUDGET_PD"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RBUDGET_PD"/>
+      </attribute>
+      <attribute id="SFUND" order="313" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SFUND"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SFUND"/>
+      </attribute>
+      <attribute id="SGRANT_NBR" order="314" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGRANT_NBR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SGRANT_NBR"/>
+      </attribute>
+      <attribute id="SBUDGET_PD" order="315" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SBUDGET_PD"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SBUDGET_PD"/>
+      </attribute>
+      <attribute id="VNAME" order="316" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VNAME"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VNAME"/>
+      </attribute>
+      <attribute id="EGRUP" order="317" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EGRUP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="EGRUP"/>
+      </attribute>
+      <attribute id="RECID" order="318" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RECID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RECID"/>
+      </attribute>
+      <attribute id="VPTNR" order="319" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPTNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VPTNR"/>
+      </attribute>
+      <attribute id="BTYPE" order="320" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BTYPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BTYPE"/>
+      </attribute>
+      <attribute id="ETYPE" order="321" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETYPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ETYPE"/>
+      </attribute>
+      <attribute id="PRODPER" order="322" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRODPER"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PRODPER"/>
+      </attribute>
+      <attribute id="SWENR" order="323" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SWENR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SWENR"/>
+      </attribute>
+      <attribute id="SGENR" order="324" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGENR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SGENR"/>
+      </attribute>
+      <attribute id="SGRNR" order="325" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGRNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SGRNR"/>
+      </attribute>
+      <attribute id="SMENR" order="326" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SMENR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SMENR"/>
+      </attribute>
+      <attribute id="RECNNR" order="327" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RECNNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RECNNR"/>
+      </attribute>
+      <attribute id="SNKSL" order="328" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SNKSL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SNKSL"/>
+      </attribute>
+      <attribute id="SEMPSL" order="329" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SEMPSL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SEMPSL"/>
+      </attribute>
+      <attribute id="DABRZ" order="330" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DABRZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="DABRZ"/>
+      </attribute>
+      <attribute id="PSWENR" order="331" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSWENR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSWENR"/>
+      </attribute>
+      <attribute id="PSGENR" order="332" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSGENR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSGENR"/>
+      </attribute>
+      <attribute id="PSGRNR" order="333" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSGRNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSGRNR"/>
+      </attribute>
+      <attribute id="PSMENR" order="334" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSMENR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSMENR"/>
+      </attribute>
+      <attribute id="PRECNNR" order="335" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRECNNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PRECNNR"/>
+      </attribute>
+      <attribute id="PSNKSL" order="336" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSNKSL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSNKSL"/>
+      </attribute>
+      <attribute id="PSEMPSL" order="337" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSEMPSL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSEMPSL"/>
+      </attribute>
+      <attribute id="PDABRZ" order="338" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PDABRZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PDABRZ"/>
+      </attribute>
+      <attribute id="ACDOC_EEW_DUMMY" order="339" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACDOC_EEW_DUMMY"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ACDOC_EEW_DUMMY"/>
+      </attribute>
+      <attribute id="DUMMY_INCL_EEW_COBL" order="340" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_INCL_EEW_COBL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="DUMMY_INCL_EEW_COBL"/>
+      </attribute>
+      <attribute id="FUP_ACTION" order="341" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FUP_ACTION"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="FUP_ACTION"/>
+      </attribute>
+      <attribute id="MIG_SOURCE" order="342" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MIG_SOURCE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MIG_SOURCE"/>
+      </attribute>
+      <attribute id="MIG_DOCLN" order="343" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MIG_DOCLN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MIG_DOCLN"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="344" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="PRODH_PA" order="345" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRODH_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PRODH_PA"/>
+      </attribute>
+      <attribute id="BONUS_PA" order="346" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BONUS_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BONUS_PA"/>
+      </attribute>
+      <attribute id="COLLE_PA" order="347" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COLLE_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="COLLE_PA"/>
+      </attribute>
+      <attribute id="SAISJ_PA" order="348" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAISJ_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SAISJ_PA"/>
+      </attribute>
+      <attribute id="SAISO_PA" order="349" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAISO_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SAISO_PA"/>
+      </attribute>
+      <attribute id="CRMELEM_PA" order="350" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CRMELEM_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CRMELEM_PA"/>
+      </attribute>
+      <attribute id="GEBIE_PA" order="351" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEBIE_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="GEBIE_PA"/>
+      </attribute>
+      <attribute id="KMATYP_PA" order="352" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMATYP_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMATYP_PA"/>
+      </attribute>
+      <attribute id="KMBRND_PA" order="353" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMBRND_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMBRND_PA"/>
+      </attribute>
+      <attribute id="KMCATG_PA" order="354" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMCATG_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMCATG_PA"/>
+      </attribute>
+      <attribute id="KMDEST_PA" order="355" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMDEST_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMDEST_PA"/>
+      </attribute>
+      <attribute id="KMFLTN_PA" order="356" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMFLTN_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMFLTN_PA"/>
+      </attribute>
+      <attribute id="KMHI01_PA" order="357" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMHI01_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMHI01_PA"/>
+      </attribute>
+      <attribute id="KMHI02_PA" order="358" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMHI02_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMHI02_PA"/>
+      </attribute>
+      <attribute id="KMHI03_PA" order="359" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMHI03_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMHI03_PA"/>
+      </attribute>
+      <attribute id="KMLAND_PA" order="360" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMLAND_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMLAND_PA"/>
+      </attribute>
+      <attribute id="KMLEGS_PA" order="361" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMLEGS_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMLEGS_PA"/>
+      </attribute>
+      <attribute id="KMMAKL_PA" order="362" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMMAKL_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMMAKL_PA"/>
+      </attribute>
+      <attribute id="KMOPDY_PA" order="363" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMOPDY_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMOPDY_PA"/>
+      </attribute>
+      <attribute id="KMORIG_PA" order="364" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMORIG_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMORIG_PA"/>
+      </attribute>
+      <attribute id="KMROUT_PA" order="365" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMROUT_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMROUT_PA"/>
+      </attribute>
+      <attribute id="KMSTGE_PA" order="366" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMSTGE_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMSTGE_PA"/>
+      </attribute>
+      <attribute id="KMVKBU_PA" order="367" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMVKBU_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMVKBU_PA"/>
+      </attribute>
+      <attribute id="KMVKGR_PA" order="368" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMVKGR_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMVKGR_PA"/>
+      </attribute>
+      <attribute id="KMVTNR_PA" order="369" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMVTNR_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMVTNR_PA"/>
+      </attribute>
+      <attribute id="KMWNHG_PA" order="370" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMWNHG_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMWNHG_PA"/>
+      </attribute>
+      <attribute id="KMKDGR_PA" order="371" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KMKDGR_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KMKDGR_PA"/>
+      </attribute>
+      <attribute id="VKGRP_PA" order="372" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKGRP_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VKGRP_PA"/>
+      </attribute>
+      <attribute id="BUKRS_SENDER" order="373" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS_SENDER"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BUKRS_SENDER"/>
+      </attribute>
+      <attribute id="PARTNER_PA" order="374" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PARTNER_PA"/>
+      </attribute>
+      <attribute id="DOCNR_LD" order="375" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DOCNR_LD"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="DOCNR_LD"/>
+      </attribute>
+      <attribute id="PREC_AWSYS" order="376" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREC_AWSYS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PREC_AWSYS"/>
+      </attribute>
+      <attribute id="RIUNIT" order="377" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RIUNIT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RIUNIT"/>
+      </attribute>
+      <attribute id="CO_MEINH" order="378" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CO_MEINH"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_MEINH"/>
+      </attribute>
+      <attribute id="ANLKL" order="381" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLKL"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ANLKL"/>
+      </attribute>
+      <attribute id="KTOGR" order="382" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOGR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="KTOGR"/>
+      </attribute>
+      <attribute id="PANL1" order="383" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PANL1"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PANL1"/>
+      </attribute>
+      <attribute id="PANL2" order="384" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PANL2"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PANL2"/>
+      </attribute>
+      <attribute id="UPRCTR" order="385" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPRCTR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="UPRCTR"/>
+      </attribute>
+      <attribute id="ARBID" order="386" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARBID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ARBID"/>
+      </attribute>
+      <attribute id="VORNR" order="387" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VORNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VORNR"/>
+      </attribute>
+      <attribute id="AUFPS" order="388" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFPS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="AUFPS"/>
+      </attribute>
+      <attribute id="UVORN" order="389" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVORN"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="UVORN"/>
+      </attribute>
+      <attribute id="EQUNR" order="390" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EQUNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="EQUNR"/>
+      </attribute>
+      <attribute id="TPLNR" order="391" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TPLNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="TPLNR"/>
+      </attribute>
+      <attribute id="ISTRU" order="392" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ISTRU"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ISTRU"/>
+      </attribute>
+      <attribute id="ILART" order="393" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ILART"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ILART"/>
+      </attribute>
+      <attribute id="PLKNZ" order="394" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLKNZ"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PLKNZ"/>
+      </attribute>
+      <attribute id="ARTPR" order="395" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARTPR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ARTPR"/>
+      </attribute>
+      <attribute id="PRIOK" order="396" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRIOK"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PRIOK"/>
+      </attribute>
+      <attribute id="MAUFNR" order="397" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAUFNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MAUFNR"/>
+      </attribute>
+      <attribute id="MATKL_MM" order="398" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATKL_MM"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MATKL_MM"/>
+      </attribute>
+      <attribute id="PLANNED_PARTS_WORK" order="399" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLANNED_PARTS_WORK"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PLANNED_PARTS_WORK"/>
+      </attribute>
+      <attribute id="VKBUR_PA" order="400" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKBUR_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VKBUR_PA"/>
+      </attribute>
+      <attribute id="SRC_AWTYP" order="401" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SRC_AWTYP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SRC_AWTYP"/>
+      </attribute>
+      <attribute id="SRC_AWSYS" order="402" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SRC_AWSYS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SRC_AWSYS"/>
+      </attribute>
+      <attribute id="SRC_AWORG" order="403" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SRC_AWORG"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SRC_AWORG"/>
+      </attribute>
+      <attribute id="SRC_AWREF" order="404" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SRC_AWREF"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SRC_AWREF"/>
+      </attribute>
+      <attribute id="SRC_AWITEM" order="405" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SRC_AWITEM"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SRC_AWITEM"/>
+      </attribute>
+      <attribute id="SRC_AWSUBIT" order="406" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SRC_AWSUBIT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="SRC_AWSUBIT"/>
+      </attribute>
+      <attribute id="XCOMMITMENT" order="407" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCOMMITMENT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="XCOMMITMENT"/>
+      </attribute>
+      <attribute id="OBS_REASON" order="408" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBS_REASON"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="OBS_REASON"/>
+      </attribute>
+      <attribute id="COCO_NUM" order="421" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COCO_NUM"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="COCO_NUM"/>
+      </attribute>
+      <attribute id="PS_PRJ_PNR" order="422" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PS_PRJ_PNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PS_PRJ_PNR"/>
+      </attribute>
+      <attribute id="PPS_PSP_PNR" order="423" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPS_PSP_PNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PPS_PSP_PNR"/>
+      </attribute>
+      <attribute id="PPS_PRJ_PNR" order="424" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPS_PRJ_PNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PPS_PRJ_PNR"/>
+      </attribute>
+      <attribute id="DUMMY_MRKT_SGMNT_EEW_PS" order="425" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_MRKT_SGMNT_EEW_PS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="DUMMY_MRKT_SGMNT_EEW_PS"/>
+      </attribute>
+      <attribute id="BILLM" order="426" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BILLM"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="BILLM"/>
+      </attribute>
+      <attribute id="POM" order="427" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POM"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="POM"/>
+      </attribute>
+      <attribute id="JVACTIVITY" order="429" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="JVACTIVITY"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="JVACTIVITY"/>
+      </attribute>
+      <attribute id="PVNAME" order="430" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PVNAME"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PVNAME"/>
+      </attribute>
+      <attribute id="PEGRUP" order="431" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PEGRUP"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PEGRUP"/>
+      </attribute>
+      <attribute id="S_RECIND" order="432" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="S_RECIND"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="S_RECIND"/>
+      </attribute>
+      <attribute id="CBRACCT" order="433" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CBRACCT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CBRACCT"/>
+      </attribute>
+      <attribute id="CBOBJNR" order="434" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CBOBJNR"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="CBOBJNR"/>
+      </attribute>
+      <attribute id="ACROBJTYPE" order="435" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACROBJTYPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ACROBJTYPE"/>
+      </attribute>
+      <attribute id="ACROBJ_ID" order="436" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACROBJ_ID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ACROBJ_ID"/>
+      </attribute>
+      <attribute id="ACRSOBJ_ID" order="437" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACRSOBJ_ID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ACRSOBJ_ID"/>
+      </attribute>
+      <attribute id="ACRITMTYPE" order="438" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACRITMTYPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="ACRITMTYPE"/>
+      </attribute>
+      <attribute id="VALOBJTYPE" order="439" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALOBJTYPE"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VALOBJTYPE"/>
+      </attribute>
+      <attribute id="VALOBJ_ID" order="440" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALOBJ_ID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VALOBJ_ID"/>
+      </attribute>
+      <attribute id="VALSOBJ_ID" order="441" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALSOBJ_ID"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="VALSOBJ_ID"/>
+      </attribute>
+      <attribute id="NETDT" order="442" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NETDT"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="NETDT"/>
+      </attribute>
+      <attribute id="RISK_CLASS" order="443" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RISK_CLASS"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="RISK_CLASS"/>
+      </attribute>
+      <attribute id="PAPH1_PA" order="444" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAPH1_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PAPH1_PA"/>
+      </attribute>
+      <attribute id="PAPH2_PA" order="445" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAPH2_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PAPH2_PA"/>
+      </attribute>
+      <attribute id="PAPH3_PA" order="446" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAPH3_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="PAPH3_PA"/>
+      </attribute>
+      <attribute id="WWCST_PA" order="447" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WWCST_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="WWCST_PA"/>
+      </attribute>
+      <attribute id="MTART_PA" order="448" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MTART_PA"/>
+        <keyMapping columnObjectName="syn_tbl_ACDOCA" columnName="MTART_PA"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="TSL" order="68" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="TSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="TSL"/>
+      </measure>
+      <measure id="WSL" order="69" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="WSL"/>
+      </measure>
+      <measure id="WSL2" order="70" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WSL2"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="WSL2"/>
+      </measure>
+      <measure id="WSL3" order="71" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WSL3"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="WSL3"/>
+      </measure>
+      <measure id="HSL" order="72" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="HSL"/>
+      </measure>
+      <measure id="KSL" order="73" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KSL"/>
+      </measure>
+      <measure id="OSL" order="74" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="OSL"/>
+      </measure>
+      <measure id="VSL" order="75" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VSL"/>
+      </measure>
+      <measure id="BSL" order="76" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="BSL"/>
+      </measure>
+      <measure id="CSL" order="77" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="CSL"/>
+      </measure>
+      <measure id="DSL" order="78" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="DSL"/>
+      </measure>
+      <measure id="ESL" order="79" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ESL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="ESL"/>
+      </measure>
+      <measure id="FSL" order="80" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="FSL"/>
+      </measure>
+      <measure id="GSL" order="81" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="GSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="GSL"/>
+      </measure>
+      <measure id="KFSL" order="82" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KFSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KFSL"/>
+      </measure>
+      <measure id="KFSL2" order="83" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KFSL2"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KFSL2"/>
+      </measure>
+      <measure id="KFSL3" order="84" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KFSL3"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KFSL3"/>
+      </measure>
+      <measure id="PSL" order="85" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSL"/>
+      </measure>
+      <measure id="PSL2" order="86" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PSL2"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSL2"/>
+      </measure>
+      <measure id="PSL3" order="87" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PSL3"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="PSL3"/>
+      </measure>
+      <measure id="PFSL" order="88" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PFSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="PFSL"/>
+      </measure>
+      <measure id="PFSL2" order="89" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PFSL2"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="PFSL2"/>
+      </measure>
+      <measure id="PFSL3" order="90" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PFSL3"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="PFSL3"/>
+      </measure>
+      <measure id="CO_OSL" order="91" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CO_OSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_OSL"/>
+      </measure>
+      <measure id="HSALK3" order="92" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HSALK3"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="HSALK3"/>
+      </measure>
+      <measure id="KSALK3" order="93" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KSALK3"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KSALK3"/>
+      </measure>
+      <measure id="OSALK3" order="94" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OSALK3"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="OSALK3"/>
+      </measure>
+      <measure id="VSALK3" order="95" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VSALK3"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VSALK3"/>
+      </measure>
+      <measure id="HSALKV" order="96" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HSALKV"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="HSALKV"/>
+      </measure>
+      <measure id="KSALKV" order="97" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KSALKV"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KSALKV"/>
+      </measure>
+      <measure id="OSALKV" order="98" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OSALKV"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="OSALKV"/>
+      </measure>
+      <measure id="VSALKV" order="99" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VSALKV"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VSALKV"/>
+      </measure>
+      <measure id="HPVPRS" order="100" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HPVPRS"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="HPVPRS"/>
+      </measure>
+      <measure id="KPVPRS" order="101" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KPVPRS"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KPVPRS"/>
+      </measure>
+      <measure id="OPVPRS" order="102" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OPVPRS"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="OPVPRS"/>
+      </measure>
+      <measure id="VPVPRS" order="103" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VPVPRS"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VPVPRS"/>
+      </measure>
+      <measure id="HSTPRS" order="104" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HSTPRS"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="HSTPRS"/>
+      </measure>
+      <measure id="KSTPRS" order="105" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KSTPRS"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KSTPRS"/>
+      </measure>
+      <measure id="OSTPRS" order="106" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OSTPRS"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="OSTPRS"/>
+      </measure>
+      <measure id="VSTPRS" order="107" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VSTPRS"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VSTPRS"/>
+      </measure>
+      <measure id="HSLALT" order="108" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HSLALT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="HSLALT"/>
+      </measure>
+      <measure id="KSLALT" order="109" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KSLALT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KSLALT"/>
+      </measure>
+      <measure id="OSLALT" order="110" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OSLALT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="OSLALT"/>
+      </measure>
+      <measure id="VSLALT" order="111" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VSLALT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VSLALT"/>
+      </measure>
+      <measure id="HSLEXT" order="112" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HSLEXT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="HSLEXT"/>
+      </measure>
+      <measure id="KSLEXT" order="113" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KSLEXT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KSLEXT"/>
+      </measure>
+      <measure id="OSLEXT" order="114" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OSLEXT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="OSLEXT"/>
+      </measure>
+      <measure id="VSLEXT" order="115" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VSLEXT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VSLEXT"/>
+      </measure>
+      <measure id="HVKWRT" order="116" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HVKWRT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="HVKWRT"/>
+      </measure>
+      <measure id="HVKSAL" order="117" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HVKSAL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="HVKSAL"/>
+      </measure>
+      <measure id="MSL" order="118" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="MSL"/>
+      </measure>
+      <measure id="MFSL" order="119" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MFSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="MFSL"/>
+      </measure>
+      <measure id="VMSL" order="120" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VMSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VMSL"/>
+      </measure>
+      <measure id="VMFSL" order="121" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VMFSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VMFSL"/>
+      </measure>
+      <measure id="RMSL" order="122" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="RMSL"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="RMSL"/>
+      </measure>
+      <measure id="QUANT1" order="123" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="QUANT1"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="QUANT1"/>
+      </measure>
+      <measure id="QUANT2" order="124" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="QUANT2"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="QUANT2"/>
+      </measure>
+      <measure id="QUANT3" order="125" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="QUANT3"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="QUANT3"/>
+      </measure>
+      <measure id="LBKUM" order="126" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="LBKUM"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="LBKUM"/>
+      </measure>
+      <measure id="TIMESTAMP" order="143" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="TIMESTAMP"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="TIMESTAMP"/>
+      </measure>
+      <measure id="PROZS_PN" order="187" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PROZS_PN"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="PROZS_PN"/>
+      </measure>
+      <measure id="VTSTAMP" order="195" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VTSTAMP"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VTSTAMP"/>
+      </measure>
+      <measure id="HPEINH" order="203" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="HPEINH"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="HPEINH"/>
+      </measure>
+      <measure id="KPEINH" order="204" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="KPEINH"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="KPEINH"/>
+      </measure>
+      <measure id="OPEINH" order="205" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OPEINH"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="OPEINH"/>
+      </measure>
+      <measure id="VPEINH" order="206" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VPEINH"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="VPEINH"/>
+      </measure>
+      <measure id="CO_MEGBTR" order="379" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CO_MEGBTR"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_MEGBTR"/>
+      </measure>
+      <measure id="CO_MEFBTR" order="380" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CO_MEFBTR"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="CO_MEFBTR"/>
+      </measure>
+      <measure id="BSLALT" order="409" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BSLALT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="BSLALT"/>
+      </measure>
+      <measure id="CSLALT" order="410" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CSLALT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="CSLALT"/>
+      </measure>
+      <measure id="DSLALT" order="411" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DSLALT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="DSLALT"/>
+      </measure>
+      <measure id="ESLALT" order="412" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ESLALT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="ESLALT"/>
+      </measure>
+      <measure id="FSLALT" order="413" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FSLALT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="FSLALT"/>
+      </measure>
+      <measure id="GSLALT" order="414" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="GSLALT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="GSLALT"/>
+      </measure>
+      <measure id="BSLEXT" order="415" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BSLEXT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="BSLEXT"/>
+      </measure>
+      <measure id="CSLEXT" order="416" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CSLEXT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="CSLEXT"/>
+      </measure>
+      <measure id="DSLEXT" order="417" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DSLEXT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="DSLEXT"/>
+      </measure>
+      <measure id="ESLEXT" order="418" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="ESLEXT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="ESLEXT"/>
+      </measure>
+      <measure id="FSLEXT" order="419" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FSLEXT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="FSLEXT"/>
+      </measure>
+      <measure id="GSLEXT" order="420" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="GSLEXT"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="GSLEXT"/>
+      </measure>
+      <measure id="CBRUNID" order="428" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="CBRUNID"/>
+        <measureMapping columnObjectName="syn_tbl_ACDOCA" columnName="CBRUNID"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="HANA_CONTENT.STAGING_MODELS.CROSSFUNCTION::CV_DIM_CUST_INVOICE_BILL_SD" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="VDIM_CUST_INVOICE_BILL_SD"/>
+  <metadata changedAt="2021-12-06 18:55:01.458"/>
+  <localVariables>
+    <variable id="IP_BILLING_DATE_FROM" parameter="true">
+      <descriptions defaultDescription="IP_BILLING_DATE_FROM"/>
+      <variableProperties datatype="DATE" mandatory="false" defaultValue="undefined">
+        <valueDomain type="Date"/>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_BILLING_DATE_TO" parameter="true">
+      <descriptions defaultDescription="IP_BILLING_DATE_TO"/>
+      <variableProperties datatype="DATE" mandatory="false" defaultValue="undefined">
+        <valueDomain type="Date"/>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="54"/>
+  <dataSources>
+    <DataSource id="syn_tbl_VBAK">
+      <resourceUri>syn_tbl_VBAK</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_VBAP">
+      <resourceUri>syn_tbl_VBAP</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_VBRK">
+      <resourceUri>syn_tbl_VBRK</resourceUri>
+    </DataSource>
+    <DataSource id="CopyOfProjection_4$$$$syn_tbl_VBRK$$">
+      <resourceUri>syn_tbl_VBRK</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_VBRP">
+      <resourceUri>syn_tbl_VBRP</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_VBFA">
+      <resourceUri>syn_tbl_VBFA</resourceUri>
+    </DataSource>
+    <DataSource id="CopyOfCopyOfProjection_3$$$$syn_tbl_VBFA$$">
+      <resourceUri>syn_tbl_VBFA</resourceUri>
+    </DataSource>
+    <DataSource id="Copy_2_Of_CopyOfProjection_3$$$$syn_tbl_VBFA$$">
+      <resourceUri>syn_tbl_VBFA</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_VBPA">
+      <resourceUri>syn_tbl_VBPA</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_VBKD">
+      <resourceUri>syn_tbl_VBKD</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_LFA1">
+      <resourceUri>HANA_CONTENT.BASE_MODELS.MASTERDATA_VIEWS::CV_MD_LFA1</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_EBAN">
+      <resourceUri>syn_tbl_EBAN</resourceUri>
+    </DataSource>
+    <DataSource id="syn_tbl_VBEP">
+      <resourceUri>syn_tbl_VBEP</resourceUri>
+    </DataSource>
+  </dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBAK_VBELN"/>
+        <viewAttribute id="VBAK_BSTNK"/>
+        <viewAttribute id="VBAK_REP_FREQ"/>
+        <viewAttribute id="VBAK_AUART"/>
+        <viewAttribute id="VBAK_VBTYP"/>
+        <viewAttribute id="VBAK_NETWR"/>
+        <viewAttribute id="VBAK_FKSAK"/>
+        <viewAttribute id="VBAK_LFGSK"/>
+        <viewAttribute id="VBAK_ERDAT"/>
+        <viewAttribute id="VBAK_WAERK"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_VBAK">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_BSTNK" source="BSTNK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_REP_FREQ" source="REP_FREQ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_AUART" source="AUART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBTYP" source="VBTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_NETWR" source="NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_FKSAK" source="FKSAK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_LFGSK" source="LFGSK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_ERDAT" source="ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_WAERK" source="WAERK"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBAP_VBELN"/>
+        <viewAttribute id="VBAP_POSNR"/>
+        <viewAttribute id="VBAP_ZMENG"/>
+        <viewAttribute id="VBAP_ZIEME"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_VBAP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZMENG" source="ZMENG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZIEME" source="ZIEME"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_4" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRK_FKART"/>
+        <viewAttribute id="VBRK_FKSTO"/>
+        <viewAttribute id="VBRK_VKORG"/>
+        <viewAttribute id="VBRK_FKDAT"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="Exclude_Flag_ZF2" length="1" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;VBRK_FKART&quot;= 'ZF2' and &quot;VBRK_FKSTO&quot; = 'X','E','V')</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DATE" id="VCAL_VBRK_FKDAT" expressionLanguage="COLUMN_ENGINE">
+          <formula>date(&quot;VBRK_FKDAT&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_VBRK_VKORG" length="4" expressionLanguage="COLUMN_ENGINE">
+          <formula>string(&quot;VBRK_VKORG&quot;)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="syn_tbl_VBRK">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKART" source="FKART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKSTO" source="FKSTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VKORG" source="VKORG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKDAT" source="FKDAT"/>
+      </input>
+    <filter>(&quot;VCAL_VBRK_FKDAT&quot;&gt;='$$IP_BILLING_DATE_FROM$$') AND
+ (&quot;VCAL_VBRK_FKDAT&quot;&lt;='$$IP_BILLING_DATE_TO$$') AND
+ (not in (&quot;VBRK_FKART&quot;,'ZF3','ZIV','ZS1','ZLRS','ZS1P')) AND 
+  (&quot;Exclude_Flag_ZF2&quot; ='V')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="CopyOfProjection_4">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_ZLR"/>
+        <viewAttribute id="VBRK_FKART"/>
+        <viewAttribute id="VBRK_SFAKN"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CopyOfProjection_4$$$$syn_tbl_VBRK$$">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_ZLR" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKART" source="FKART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_SFAKN" source="SFAKN"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_13" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRK_FKART"/>
+        <viewAttribute id="VBRK_FKART_1"/>
+        <viewAttribute id="VBRK_ZLR"/>
+        <viewAttribute id="VBRK_SFAKN"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="Exclude_Flag_ZLR" length="1" expressionLanguage="COLUMN_ENGINE">
+          <formula>IF(&quot;VBRK_FKART&quot;= 'ZLR' and &quot;VBRK_FKART_1&quot; = 'ZLRS','E','V')</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="Projection_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKART" source="VBRK_FKART"/>
+      </input>
+      <input node="CopyOfProjection_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_FKART_1" source="VBRK_FKART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_ZLR" source="VBRK_ZLR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_SFAKN" source="VBRK_SFAKN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_ZLR"/>
+      </input>
+    <joinAttribute name="VBRK_VBELN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_6" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="Exclude_Flag_ZLR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_13"/>
+    <filter>(&quot;Exclude_Flag_ZLR&quot; ='V') or isNull(&quot;Exclude_Flag_ZLR&quot;)</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRP_VBELN"/>
+        <viewAttribute id="VBRP_POSNR"/>
+        <viewAttribute id="VBRP_PSTYV"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_VBRP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_PSTYV" source="PSTYV"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="inner">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRP_POSNR"/>
+        <viewAttribute id="VBRP_PSTYV"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_6">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+      </input>
+      <input node="Projection_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBRP_POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_PSTYV" source="VBRP_PSTYV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRP_VBELN"/>
+      </input>
+    <joinAttribute name="VBRK_VBELN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" cardinality="C1_1" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBAK_VBELN"/>
+        <viewAttribute id="VBAP_POSNR"/>
+        <viewAttribute id="VBAK_BSTNK"/>
+        <viewAttribute id="VBAK_REP_FREQ"/>
+        <viewAttribute id="VBAK_AUART"/>
+        <viewAttribute id="VBAK_VBTYP"/>
+        <viewAttribute id="VBAK_NETWR"/>
+        <viewAttribute id="VBAK_FKSAK"/>
+        <viewAttribute id="VBAK_LFGSK"/>
+        <viewAttribute id="VBAP_ZMENG"/>
+        <viewAttribute id="VBAK_ERDAT"/>
+        <viewAttribute id="VBAK_WAERK"/>
+        <viewAttribute id="VBAP_ZIEME"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBELN" source="VBAK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_BSTNK" source="VBAK_BSTNK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_REP_FREQ" source="VBAK_REP_FREQ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_AUART" source="VBAK_AUART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBTYP" source="VBAK_VBTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_NETWR" source="VBAK_NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_FKSAK" source="VBAK_FKSAK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_LFGSK" source="VBAK_LFGSK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_ERDAT" source="VBAK_ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_WAERK" source="VBAK_WAERK"/>
+      </input>
+      <input node="Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_POSNR" source="VBAP_POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZMENG" source="VBAP_ZMENG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZIEME" source="VBAP_ZIEME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBELN" source="VBAP_VBELN"/>
+      </input>
+    <joinAttribute name="VBAK_VBELN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_10">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRP_POSNR"/>
+        <viewAttribute id="VBRP_PSTYV"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_1"/>
+    <filter>(in (&quot;VBRP_PSTYV&quot;,'ZMVN','ZMVS'))</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="CopyOfProjection_3">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBFA_VBELV"/>
+        <viewAttribute id="VBFA_POSNV"/>
+        <viewAttribute id="VBTYP_N"/>
+        <viewAttribute id="VBFA_VBELN"/>
+        <viewAttribute id="VBFA_POSNN"/>
+        <viewAttribute id="VBFA_VBTYP_V"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_VBFA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELV" source="VBELV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNV" source="POSNV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNN" source="POSNN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBTYP_V" source="VBTYP_V"/>
+      </input>
+    <filter>(&quot;VBTYP_N&quot; ='M') AND (&quot;VBFA_VBTYP_V&quot; ='G')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_9" joinType="inner">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRP_POSNR"/>
+        <viewAttribute id="VBFA_VBELV_CONT"/>
+        <viewAttribute id="VBFA_POSNV_CONT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_10">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBRP_POSNR"/>
+      </input>
+      <input node="CopyOfProjection_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELV_CONT" source="VBFA_VBELV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNV_CONT" source="VBFA_POSNV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBFA_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBFA_POSNN"/>
+      </input>
+    <joinAttribute name="VBRK_VBELN"/>
+    <joinAttribute name="VBRP_POSNR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="CopyOfCopyOfProjection_3">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBFA_VBELV"/>
+        <viewAttribute id="VBFA_POSNV"/>
+        <viewAttribute id="VBTYP_N"/>
+        <viewAttribute id="VBFA_VBELN"/>
+        <viewAttribute id="VBFA_POSNN"/>
+        <viewAttribute id="VBFA_VBTYP_V"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CopyOfCopyOfProjection_3$$$$syn_tbl_VBFA$$">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELV" source="VBELV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNV" source="POSNV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNN" source="POSNN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBTYP_V" source="VBTYP_V"/>
+      </input>
+    <filter>(&quot;VBTYP_N&quot; ='C') AND (&quot;VBFA_VBTYP_V&quot; ='G')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_10" joinType="inner">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRP_POSNR"/>
+        <viewAttribute id="VBFA_VBELV_CONT"/>
+        <viewAttribute id="VBFA_POSNV_CONT"/>
+        <viewAttribute id="VBFA_VBELN_SD"/>
+        <viewAttribute id="VBFA_POSNN_SD"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_9">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBRP_POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELV_CONT" source="VBFA_VBELV_CONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNV_CONT" source="VBFA_POSNV_CONT"/>
+      </input>
+      <input node="CopyOfCopyOfProjection_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELN_SD" source="VBFA_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNN_SD" source="VBFA_POSNN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELV_CONT" source="VBFA_VBELV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNV_CONT" source="VBFA_POSNV"/>
+      </input>
+    <joinAttribute name="VBFA_VBELV_CONT"/>
+    <joinAttribute name="VBFA_POSNV_CONT"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_11">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRP_POSNR"/>
+        <viewAttribute id="VBRP_PSTYV"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_1"/>
+    <filter>(not in (&quot;VBRP_PSTYV&quot;,'ZMVN','ZMVS'))</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Copy_2_Of_CopyOfProjection_3">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBFA_VBELV"/>
+        <viewAttribute id="VBFA_POSNV"/>
+        <viewAttribute id="VBTYP_N"/>
+        <viewAttribute id="VBFA_VBELN"/>
+        <viewAttribute id="VBFA_POSNN"/>
+        <viewAttribute id="VBFA_VBTYP_V"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Copy_2_Of_CopyOfProjection_3$$$$syn_tbl_VBFA$$">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELV" source="VBELV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNV" source="POSNV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNN" source="POSNN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBTYP_V" source="VBTYP_V"/>
+      </input>
+    <filter>(&quot;VBTYP_N&quot; ='M') AND (&quot;VBFA_VBTYP_V&quot; ='C')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_11" joinType="inner">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRP_POSNR"/>
+        <viewAttribute id="VBFA_VBELV_SD"/>
+        <viewAttribute id="VBFA_POSNV_SD"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_11">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBRP_POSNR"/>
+      </input>
+      <input node="Copy_2_Of_CopyOfProjection_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELV_SD" source="VBFA_VBELV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNV_SD" source="VBFA_POSNV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBFA_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBFA_POSNN"/>
+      </input>
+    <joinAttribute name="VBRK_VBELN"/>
+    <joinAttribute name="VBRP_POSNR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRP_POSNR"/>
+        <viewAttribute id="VBFA_VBELN_SD"/>
+        <viewAttribute id="VBFA_POSNN_SD"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input emptyUnionBehavior="NO_ROW" node="Join_10">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBRP_POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELN_SD" source="VBFA_VBELN_SD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNN_SD" source="VBFA_POSNN_SD"/>
+      </input>
+      <input emptyUnionBehavior="NO_ROW" node="Join_11">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBRP_POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_VBELN_SD" source="VBFA_VBELV_SD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBFA_POSNN_SD" source="VBFA_POSNV_SD"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRP_POSNR"/>
+        <viewAttribute id="VBFA_VBELN_SD"/>
+        <viewAttribute id="VBFA_POSNN_SD"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+      <input node="Union_1"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_3" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBAK_VBELN"/>
+        <viewAttribute id="VBAP_POSNR"/>
+        <viewAttribute id="VBAK_BSTNK"/>
+        <viewAttribute id="VBAK_REP_FREQ"/>
+        <viewAttribute id="VBAK_AUART"/>
+        <viewAttribute id="VBAK_VBTYP"/>
+        <viewAttribute id="VBAK_NETWR"/>
+        <viewAttribute id="VBAK_FKSAK"/>
+        <viewAttribute id="VBAK_LFGSK"/>
+        <viewAttribute id="VBAP_ZMENG"/>
+        <viewAttribute id="VBAK_ERDAT"/>
+        <viewAttribute id="VBAK_WAERK"/>
+        <viewAttribute id="VBAP_ZIEME"/>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBRP_POSNR"/>
+      <viewAttribute hidden="true" id="JOIN$VBFA_VBELN_SD$VBAK_VBELN"/>
+      <viewAttribute hidden="true" id="JOIN$VBFA_POSNN_SD$VBAP_POSNR"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Aggregation_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBRP_POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBFA_VBELN_SD$VBAK_VBELN" source="VBFA_VBELN_SD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBFA_POSNN_SD$VBAP_POSNR" source="VBFA_POSNN_SD"/>
+      </input>
+      <input node="Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBELN" source="VBAK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_POSNR" source="VBAP_POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_BSTNK" source="VBAK_BSTNK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_REP_FREQ" source="VBAK_REP_FREQ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_AUART" source="VBAK_AUART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBTYP" source="VBAK_VBTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_NETWR" source="VBAK_NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_FKSAK" source="VBAK_FKSAK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_LFGSK" source="VBAK_LFGSK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZMENG" source="VBAP_ZMENG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_ERDAT" source="VBAK_ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_WAERK" source="VBAK_WAERK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZIEME" source="VBAP_ZIEME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBFA_VBELN_SD$VBAK_VBELN" source="VBAK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBFA_POSNN_SD$VBAP_POSNR" source="VBAP_POSNR"/>
+      </input>
+    <joinAttribute name="JOIN$VBFA_VBELN_SD$VBAK_VBELN"/>
+    <joinAttribute name="JOIN$VBFA_POSNN_SD$VBAP_POSNR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_5">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="VBPA_KUNNR_B2P"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_VBPA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBPA_KUNNR_B2P" source="KUNNR"/>
+      </input>
+    <filter>(&quot;PARVW&quot; ='BP')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_3">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBKD_VBELN"/>
+        <viewAttribute id="VBKD_BSTKD_E"/>
+        <viewAttribute id="VBKD_IHREZ_E"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+      <input node="syn_tbl_VBKD">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBKD_VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBKD_BSTKD_E" source="BSTKD_E"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBKD_IHREZ_E" source="IHREZ_E"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_4" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBKD_BSTKD_E"/>
+        <viewAttribute id="VBKD_IHREZ_E"/>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBAK_VBELN"/>
+        <viewAttribute id="VBAP_POSNR"/>
+        <viewAttribute id="VBAK_BSTNK"/>
+        <viewAttribute id="VBAK_REP_FREQ"/>
+        <viewAttribute id="VBAK_AUART"/>
+        <viewAttribute id="VBAK_VBTYP"/>
+        <viewAttribute id="VBAK_NETWR"/>
+        <viewAttribute id="VBAK_FKSAK"/>
+        <viewAttribute id="VBAK_LFGSK"/>
+        <viewAttribute id="VBAP_ZMENG"/>
+        <viewAttribute id="VBAK_ERDAT"/>
+        <viewAttribute id="VBAK_WAERK"/>
+        <viewAttribute id="VBAP_ZIEME"/>
+        <viewAttribute id="VBRP_POSNR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBELN" source="VBAK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_POSNR" source="VBAP_POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_BSTNK" source="VBAK_BSTNK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_REP_FREQ" source="VBAK_REP_FREQ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_AUART" source="VBAK_AUART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBTYP" source="VBAK_VBTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_NETWR" source="VBAK_NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_FKSAK" source="VBAK_FKSAK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_LFGSK" source="VBAK_LFGSK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZMENG" source="VBAP_ZMENG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_ERDAT" source="VBAK_ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_WAERK" source="VBAK_WAERK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZIEME" source="VBAP_ZIEME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBRP_POSNR"/>
+      </input>
+      <input node="Aggregation_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBKD_BSTKD_E" source="VBKD_BSTKD_E"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBKD_IHREZ_E" source="VBKD_IHREZ_E"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBELN" source="VBKD_VBELN"/>
+      </input>
+    <joinAttribute name="VBAK_VBELN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_5" cardinality="C1_N" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBAK_VBELN"/>
+        <viewAttribute id="VBAP_POSNR"/>
+        <viewAttribute id="VBAK_BSTNK"/>
+        <viewAttribute id="VBAK_REP_FREQ"/>
+        <viewAttribute id="VBAK_AUART"/>
+        <viewAttribute id="VBAK_VBTYP"/>
+        <viewAttribute id="VBAK_NETWR"/>
+        <viewAttribute id="VBAK_FKSAK"/>
+        <viewAttribute id="VBAK_LFGSK"/>
+        <viewAttribute id="VBAP_ZMENG"/>
+        <viewAttribute id="VBKD_BSTKD_E"/>
+        <viewAttribute id="VBKD_IHREZ_E"/>
+        <viewAttribute id="VBPA_KUNNR_B2PKUNNR"/>
+        <viewAttribute id="VBAK_ERDAT"/>
+        <viewAttribute id="VBAK_WAERK"/>
+        <viewAttribute id="VBAP_ZIEME"/>
+        <viewAttribute id="VBRP_POSNR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBELN" source="VBAK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_POSNR" source="VBAP_POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_BSTNK" source="VBAK_BSTNK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_REP_FREQ" source="VBAK_REP_FREQ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_AUART" source="VBAK_AUART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBTYP" source="VBAK_VBTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_NETWR" source="VBAK_NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_FKSAK" source="VBAK_FKSAK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_LFGSK" source="VBAK_LFGSK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZMENG" source="VBAP_ZMENG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBKD_BSTKD_E" source="VBKD_BSTKD_E"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBKD_IHREZ_E" source="VBKD_IHREZ_E"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_ERDAT" source="VBAK_ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_WAERK" source="VBAK_WAERK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZIEME" source="VBAP_ZIEME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBRP_POSNR"/>
+      </input>
+      <input node="Projection_5">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBPA_KUNNR_B2PKUNNR" source="VBPA_KUNNR_B2P"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBELN" source="VBELN"/>
+      </input>
+    <joinAttribute name="VBAK_VBELN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_7">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="LFA1_LIFNR"/>
+        <viewAttribute id="LFA1_NAME1"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="CV_MD_LFA1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFA1_LIFNR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFA1_NAME1" source="NAME1"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_8">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="EBAN_BANFN"/>
+        <viewAttribute id="EBAN_FLIEF"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_EBAN">
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBAN_BANFN" source="BANFN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBAN_FLIEF" source="FLIEF"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_6" joinType="inner">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="EBAN_BANFN"/>
+        <viewAttribute id="LFA1_NAME1"/>
+      <viewAttribute hidden="true" id="JOIN$EBAN_FLIEF$LFA1_LIFNR"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_8">
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBAN_BANFN" source="EBAN_BANFN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$EBAN_FLIEF$LFA1_LIFNR" source="EBAN_FLIEF"/>
+      </input>
+      <input node="Projection_7">
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFA1_NAME1" source="LFA1_NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$EBAN_FLIEF$LFA1_LIFNR" source="LFA1_LIFNR"/>
+      </input>
+    <joinAttribute name="JOIN$EBAN_FLIEF$LFA1_LIFNR"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_9">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBEP_VBELN"/>
+        <viewAttribute id="VBEP_BANFN"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="syn_tbl_VBEP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBEP_VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBEP_BANFN" source="BANFN"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_7" joinType="inner">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBEP_VBELN"/>
+        <viewAttribute id="LFA1_NAME1"/>
+      <viewAttribute hidden="true" id="JOIN$VBEP_BANFN$EBAN_BANFN"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Projection_9">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBEP_VBELN" source="VBEP_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBEP_BANFN$EBAN_BANFN" source="VBEP_BANFN"/>
+      </input>
+      <input node="Join_6">
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFA1_NAME1" source="LFA1_NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBEP_BANFN$EBAN_BANFN" source="EBAN_BANFN"/>
+      </input>
+    <joinAttribute name="JOIN$VBEP_BANFN$EBAN_BANFN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_5">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="LFA1_NAME1"/>
+        <viewAttribute id="VBEP_VBELN"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+      <input node="Join_7"/>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_8" cardinality="C1_N" joinType="leftOuter">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBAK_VBELN"/>
+        <viewAttribute id="VBAP_POSNR"/>
+        <viewAttribute id="VBAK_BSTNK"/>
+        <viewAttribute id="VBAK_REP_FREQ"/>
+        <viewAttribute id="VBAK_AUART"/>
+        <viewAttribute id="VBAK_VBTYP"/>
+        <viewAttribute id="VBAK_NETWR"/>
+        <viewAttribute id="VBAK_FKSAK"/>
+        <viewAttribute id="VBAK_LFGSK"/>
+        <viewAttribute id="VBAP_ZMENG"/>
+        <viewAttribute id="VBKD_BSTKD_E"/>
+        <viewAttribute id="VBKD_IHREZ_E"/>
+        <viewAttribute id="VBPA_KUNNR_B2PKUNNR"/>
+        <viewAttribute id="VBAK_ERDAT"/>
+        <viewAttribute id="VBAK_WAERK"/>
+        <viewAttribute id="VBAP_ZIEME"/>
+        <viewAttribute id="LFA1_NAME1"/>
+        <viewAttribute id="VBRP_POSNR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_5">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRK_VBELN" source="VBRK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBELN" source="VBAK_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_POSNR" source="VBAP_POSNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_BSTNK" source="VBAK_BSTNK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_REP_FREQ" source="VBAK_REP_FREQ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_AUART" source="VBAK_AUART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBTYP" source="VBAK_VBTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_NETWR" source="VBAK_NETWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_FKSAK" source="VBAK_FKSAK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_LFGSK" source="VBAK_LFGSK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZMENG" source="VBAP_ZMENG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBKD_BSTKD_E" source="VBKD_BSTKD_E"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBKD_IHREZ_E" source="VBKD_IHREZ_E"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBPA_KUNNR_B2PKUNNR" source="VBPA_KUNNR_B2PKUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_ERDAT" source="VBAK_ERDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_WAERK" source="VBAK_WAERK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAP_ZIEME" source="VBAP_ZIEME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBRP_POSNR" source="VBRP_POSNR"/>
+      </input>
+      <input node="Aggregation_5">
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFA1_NAME1" source="LFA1_NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBAK_VBELN" source="VBEP_VBELN"/>
+      </input>
+    <joinAttribute name="VBAK_VBELN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_8">
+    <descriptions/>
+    <viewAttributes>
+        <viewAttribute id="VBRK_VBELN"/>
+        <viewAttribute id="VBAK_VBELN"/>
+        <viewAttribute id="VBAP_POSNR"/>
+        <viewAttribute id="VBAK_BSTNK"/>
+        <viewAttribute id="VBAK_REP_FREQ"/>
+        <viewAttribute id="VBAK_AUART"/>
+        <viewAttribute id="VBAK_VBTYP"/>
+        <viewAttribute id="VBAK_NETWR"/>
+        <viewAttribute id="VBAK_FKSAK"/>
+        <viewAttribute id="VBAK_LFGSK"/>
+        <viewAttribute id="VBAP_ZMENG"/>
+        <viewAttribute id="VBKD_BSTKD_E"/>
+        <viewAttribute id="VBKD_IHREZ_E"/>
+        <viewAttribute id="VBPA_KUNNR_B2PKUNNR"/>
+        <viewAttribute id="LFA1_NAME1"/>
+        <viewAttribute id="VBAK_ERDAT"/>
+        <viewAttribute id="VBAK_WAERK"/>
+        <viewAttribute id="VBAP_ZIEME"/>
+        <viewAttribute id="VBRP_POSNR"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+      <input node="Join_8"/>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="Aggregation_8">
+    <descriptions defaultDescription="VDIM_CUST_INVOICE_BILL_SD"/>
+    <attributes>
+      <attribute id="VBRK_VBELN" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBRK_VBELN"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBRK_VBELN"/>
+      </attribute>
+      <attribute id="VBAK_VBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBAK_VBELN"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAK_VBELN"/>
+      </attribute>
+      <attribute id="VBAP_POSNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Document Item"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAP_POSNR"/>
+      </attribute>
+      <attribute id="VBAK_BSTNK" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Reference"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAK_BSTNK"/>
+      </attribute>
+      <attribute id="VBAK_REP_FREQ" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Reporting Frequency"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAK_REP_FREQ"/>
+      </attribute>
+      <attribute id="VBAK_AUART" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBAK_AUART"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAK_AUART"/>
+      </attribute>
+      <attribute id="VBAK_VBTYP" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBAK_VBTYP"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAK_VBTYP"/>
+      </attribute>
+      <attribute id="VBAK_FKSAK" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing status (order-related billing document)"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAK_FKSAK"/>
+      </attribute>
+      <attribute id="VBAK_LFGSK" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Overall Delivery Status for all Items"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAK_LFGSK"/>
+      </attribute>
+      <attribute id="VBKD_BSTKD_E" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Ship-to Party&apos;s Purchase Order Number"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBKD_BSTKD_E"/>
+      </attribute>
+      <attribute id="VBKD_IHREZ_E" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Ship-To Party Character"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBKD_IHREZ_E"/>
+      </attribute>
+      <attribute id="VBPA_KUNNR_B2PKUNNR" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBPA_KUNNR_B2PKUNNR"/>
+      </attribute>
+      <attribute id="LFA1_NAME1" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Name 1"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="LFA1_NAME1"/>
+      </attribute>
+      <attribute id="VBAK_ERDAT" order="17" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBAK_ERDAT"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAK_ERDAT"/>
+      </attribute>
+      <attribute id="VBAK_WAERK" order="18" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBAK_WAERK"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAK_WAERK"/>
+      </attribute>
+      <attribute id="VBAP_ZIEME" order="19" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Target Quantity UoM"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBAP_ZIEME"/>
+      </attribute>
+      <attribute id="VBRP_POSNR" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBRP_POSNR"/>
+        <keyMapping columnObjectName="Aggregation_8" columnName="VBRP_POSNR"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="VBAK_NETWR" order="8" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VBAK_NETWR"/>
+        <measureMapping columnObjectName="Aggregation_8" columnName="VBAK_NETWR"/>
+      </measure>
+      <measure id="VBAP_ZMENG" order="11" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Target Quantity in Sales Units"/>
+        <measureMapping columnObjectName="Aggregation_8" columnName="VBAP_ZMENG"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures>
+      <measure id="DEBIT_CREDIT_AMOUNT" hidden="false" order="16" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="10" scale="2">
+        <descriptions defaultDescription="Debit Credit Amount"/>
+        <formula>IF(&quot;VBAK_VBTYP&quot; = 'K' OR &quot;VBAK_VBTYP&quot; = 'L',&quot;VBAK_NETWR&quot;,0)</formula>
+      </measure>
+    </calculatedMeasures>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="555" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="405" y="723"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="559" y="723"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="177" y="1379"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="CopyOfProjection_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="331" y="1379"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_13" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="254" y="1283"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Projection_4" modelObjectNameSpace="Join_13" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="CopyOfProjection_4" modelObjectNameSpace="Join_13" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_6" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="254" y="1205"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="408" y="1205"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="330" y="1109"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Projection_6" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_3" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="405" y="627"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_10" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="1031"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="CopyOfProjection_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="1031"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_9" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="935"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Projection_10" modelObjectNameSpace="Join_9" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="CopyOfProjection_3" modelObjectNameSpace="Join_9" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="CopyOfCopyOfProjection_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="935"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_10" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="839"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Join_9" modelObjectNameSpace="Join_10" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="CopyOfCopyOfProjection_3" modelObjectNameSpace="Join_10" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_11" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="330" y="935"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Copy_2_Of_CopyOfProjection_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="484" y="935"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_11" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="330" y="839"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Projection_11" modelObjectNameSpace="Join_11" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Copy_2_Of_CopyOfProjection_3" modelObjectNameSpace="Join_11" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="251" y="723"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="251" y="627"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="324" y="531"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Aggregation_1" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Join_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="324" y="435"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="478" y="531"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="478" y="435"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_3" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Aggregation_3" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Join_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="478" y="339"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_4" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_5" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_7" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="863" y="627"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_8" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="709" y="627"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_6" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="786" y="531"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Projection_8" modelObjectNameSpace="Join_6" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_7" modelObjectNameSpace="Join_6" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Projection_9" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="632" y="531"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_7" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="632" y="435"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    <shape modelObjectName="Projection_9" modelObjectNameSpace="Join_7" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Join_6" modelObjectNameSpace="Join_7" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Aggregation_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="632" y="339"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_8" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="555" y="243"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    <shape modelObjectName="Join_5" modelObjectNameSpace="Join_8" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Aggregation_5" modelObjectNameSpace="Join_8" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Aggregation_8" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="555" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

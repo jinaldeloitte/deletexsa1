@@ -1,0 +1,1304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_TD_VBRP" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+  <descriptions defaultDescription="CV_TD_VBRP"/>
+  <metadata changedAt="2021-12-06 18:14:07.083"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_VBRP">
+      <resourceUri>syn_tbl_VBRP</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="UEPOS"/>
+        <viewAttribute id="FKIMG"/>
+        <viewAttribute id="VRKME"/>
+        <viewAttribute id="UMVKZ"/>
+        <viewAttribute id="UMVKN"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="SMENG"/>
+        <viewAttribute id="FKLMG"/>
+        <viewAttribute id="LMENG"/>
+        <viewAttribute id="NTGEW"/>
+        <viewAttribute id="BRGEW"/>
+        <viewAttribute id="GEWEI"/>
+        <viewAttribute id="VOLUM"/>
+        <viewAttribute id="VOLEH"/>
+        <viewAttribute id="GSBER"/>
+        <viewAttribute id="PRSDT"/>
+        <viewAttribute id="FBUDA"/>
+        <viewAttribute id="KURSK"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="VBELV"/>
+        <viewAttribute id="POSNV"/>
+        <viewAttribute id="VGBEL"/>
+        <viewAttribute id="VGPOS"/>
+        <viewAttribute id="VGTYP"/>
+        <viewAttribute id="AUBEL"/>
+        <viewAttribute id="AUPOS"/>
+        <viewAttribute id="AUREF"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="ARKTX"/>
+        <viewAttribute id="PMATN"/>
+        <viewAttribute id="CHARG"/>
+        <viewAttribute id="MATKL"/>
+        <viewAttribute id="PSTYV"/>
+        <viewAttribute id="POSAR"/>
+        <viewAttribute id="PRODH"/>
+        <viewAttribute id="VSTEL"/>
+        <viewAttribute id="ATPKZ"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="POSPA"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="ALAND"/>
+        <viewAttribute id="WKREG"/>
+        <viewAttribute id="WKCOU"/>
+        <viewAttribute id="WKCTY"/>
+        <viewAttribute id="TAXM1"/>
+        <viewAttribute id="TAXM2"/>
+        <viewAttribute id="TAXM3"/>
+        <viewAttribute id="TAXM4"/>
+        <viewAttribute id="TAXM5"/>
+        <viewAttribute id="TAXM6"/>
+        <viewAttribute id="TAXM7"/>
+        <viewAttribute id="TAXM8"/>
+        <viewAttribute id="TAXM9"/>
+        <viewAttribute id="KOWRR"/>
+        <viewAttribute id="PRSFD"/>
+        <viewAttribute id="SKTOF"/>
+        <viewAttribute id="SKFBP"/>
+        <viewAttribute id="KONDM"/>
+        <viewAttribute id="KTGRM"/>
+        <viewAttribute id="KOSTL"/>
+        <viewAttribute id="BONUS"/>
+        <viewAttribute id="PROVG"/>
+        <viewAttribute id="EANNR"/>
+        <viewAttribute id="VKGRP"/>
+        <viewAttribute id="VKBUR"/>
+        <viewAttribute id="SPARA"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="ERNAM"/>
+        <viewAttribute id="ERDAT"/>
+        <viewAttribute id="ERZET"/>
+        <viewAttribute id="BWTAR"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="STAFO"/>
+        <viewAttribute id="WAVWR"/>
+        <viewAttribute id="KZWI1"/>
+        <viewAttribute id="KZWI2"/>
+        <viewAttribute id="KZWI3"/>
+        <viewAttribute id="KZWI4"/>
+        <viewAttribute id="KZWI5"/>
+        <viewAttribute id="KZWI6"/>
+        <viewAttribute id="STCUR"/>
+        <viewAttribute id="UVPRS"/>
+        <viewAttribute id="UVALL"/>
+        <viewAttribute id="EAN11"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="KVGR1"/>
+        <viewAttribute id="KVGR2"/>
+        <viewAttribute id="KVGR3"/>
+        <viewAttribute id="KVGR4"/>
+        <viewAttribute id="KVGR5"/>
+        <viewAttribute id="MVGR1"/>
+        <viewAttribute id="MVGR2"/>
+        <viewAttribute id="MVGR3"/>
+        <viewAttribute id="MVGR4"/>
+        <viewAttribute id="MVGR5"/>
+        <viewAttribute id="MATWA"/>
+        <viewAttribute id="BONBA"/>
+        <viewAttribute id="KOKRS"/>
+        <viewAttribute id="PAOBJNR"/>
+        <viewAttribute id="PS_PSP_PNR"/>
+        <viewAttribute id="AUFNR"/>
+        <viewAttribute id="TXJCD"/>
+        <viewAttribute id="CMPRE"/>
+        <viewAttribute id="CMPNT"/>
+        <viewAttribute id="CUOBJ"/>
+        <viewAttribute id="CUOBJ_CH"/>
+        <viewAttribute id="KOUPD"/>
+        <viewAttribute id="UECHA"/>
+        <viewAttribute id="XCHAR"/>
+        <viewAttribute id="ABRVW"/>
+        <viewAttribute id="SERNR"/>
+        <viewAttribute id="BZIRK_AUFT"/>
+        <viewAttribute id="KDGRP_AUFT"/>
+        <viewAttribute id="KONDA_AUFT"/>
+        <viewAttribute id="LLAND_AUFT"/>
+        <viewAttribute id="MPROK"/>
+        <viewAttribute id="PLTYP_AUFT"/>
+        <viewAttribute id="REGIO_AUFT"/>
+        <viewAttribute id="VKORG_AUFT"/>
+        <viewAttribute id="VTWEG_AUFT"/>
+        <viewAttribute id="ABRBG"/>
+        <viewAttribute id="PROSA"/>
+        <viewAttribute id="UEPVW"/>
+        <viewAttribute id="AUTYP"/>
+        <viewAttribute id="STADAT"/>
+        <viewAttribute id="FPLNR"/>
+        <viewAttribute id="FPLTR"/>
+        <viewAttribute id="AKTNR"/>
+        <viewAttribute id="KNUMA_PI"/>
+        <viewAttribute id="KNUMA_AG"/>
+        <viewAttribute id="MWSBP"/>
+        <viewAttribute id="AUGRU_AUFT"/>
+        <viewAttribute id="FAREG"/>
+        <viewAttribute id="UPMAT"/>
+        <viewAttribute id="UKONM"/>
+        <viewAttribute id="CMPRE_FLT"/>
+        <viewAttribute id="ABFOR"/>
+        <viewAttribute id="ABGES"/>
+        <viewAttribute id="J_1ARFZ"/>
+        <viewAttribute id="J_1AREGIO"/>
+        <viewAttribute id="J_1AGICD"/>
+        <viewAttribute id="J_1ADTYP"/>
+        <viewAttribute id="J_1ATXREL"/>
+        <viewAttribute id="J_1BCFOP"/>
+        <viewAttribute id="J_1BTAXLW1"/>
+        <viewAttribute id="J_1BTAXLW2"/>
+        <viewAttribute id="J_1BTXSDC"/>
+        <viewAttribute id="BRTWR"/>
+        <viewAttribute id="WKTNR"/>
+        <viewAttribute id="WKTPS"/>
+        <viewAttribute id="RPLNR"/>
+        <viewAttribute id="KURSK_DAT"/>
+        <viewAttribute id="WGRU1"/>
+        <viewAttribute id="WGRU2"/>
+        <viewAttribute id="KDKG1"/>
+        <viewAttribute id="KDKG2"/>
+        <viewAttribute id="KDKG3"/>
+        <viewAttribute id="KDKG4"/>
+        <viewAttribute id="KDKG5"/>
+        <viewAttribute id="VKAUS"/>
+        <viewAttribute id="J_1AINDXP"/>
+        <viewAttribute id="J_1AIDATEP"/>
+        <viewAttribute id="KZFME"/>
+        <viewAttribute id="MWSKZ"/>
+        <viewAttribute id="VERTT"/>
+        <viewAttribute id="VERTN"/>
+        <viewAttribute id="SGTXT"/>
+        <viewAttribute id="DELCO"/>
+        <viewAttribute id="BEMOT"/>
+        <viewAttribute id="RRREL"/>
+        <viewAttribute id="WMINR"/>
+        <viewAttribute id="VGBEL_EX"/>
+        <viewAttribute id="VGPOS_EX"/>
+        <viewAttribute id="LOGSYS"/>
+        <viewAttribute id="VGTYP_EX"/>
+        <viewAttribute id="J_1BTAXLW3"/>
+        <viewAttribute id="J_1BTAXLW4"/>
+        <viewAttribute id="J_1BTAXLW5"/>
+        <viewAttribute id="MSR_ID"/>
+        <viewAttribute id="MSR_REFUND_CODE"/>
+        <viewAttribute id="MSR_RET_REASON"/>
+        <viewAttribute id="NRAB_KNUMH"/>
+        <viewAttribute id="NRAB_VALUE"/>
+        <viewAttribute id="DISPUTE_CASE"/>
+        <viewAttribute id="FUND_USAGE_ITEM"/>
+        <viewAttribute id="FARR_RELTYPE"/>
+        <viewAttribute id="CLAIMS_TAXATION"/>
+        <viewAttribute id="KURRF_DAT_ORIG"/>
+        <viewAttribute id="SGT_RCAT"/>
+        <viewAttribute id="SGT_SCAT"/>
+        <viewAttribute id="PREFE"/>
+        <viewAttribute id="AKKUR"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="DRAFT"/>
+        <viewAttribute id="ACTIVEDOCUMENT"/>
+        <viewAttribute id="GRWRT"/>
+        <viewAttribute id="FKSAA"/>
+        <viewAttribute id="_DATAAGING"/>
+        <viewAttribute id="DUMMY_BILLGDOCITEM_INCL_EEW_PS"/>
+        <viewAttribute id="_CWM_MENGE"/>
+        <viewAttribute id="_CWM_MEINS"/>
+        <viewAttribute id="ZAPCGKI"/>
+        <viewAttribute id="APCGK_EXTENDI"/>
+        <viewAttribute id="ZABDATI"/>
+        <viewAttribute id="AUFPL"/>
+        <viewAttribute id="APLZL"/>
+        <viewAttribute id="DPCNR"/>
+        <viewAttribute id="DCPNR"/>
+        <viewAttribute id="DPNRB"/>
+        <viewAttribute id="BOSFAR"/>
+        <viewAttribute id="DP_BELNR"/>
+        <viewAttribute id="DP_BUKRS"/>
+        <viewAttribute id="DP_GJAHR"/>
+        <viewAttribute id="DP_BUZEI"/>
+        <viewAttribute id="PACKNO"/>
+        <viewAttribute id="PEROP_BEG"/>
+        <viewAttribute id="PEROP_END"/>
+        <viewAttribute id="FMFGUS_KEY"/>
+        <viewAttribute id="FSH_SEASON_YEAR"/>
+        <viewAttribute id="FSH_SEASON"/>
+        <viewAttribute id="FSH_COLLECTION"/>
+        <viewAttribute id="FSH_THEME"/>
+        <viewAttribute id="FONDS"/>
+        <viewAttribute id="FISTL"/>
+        <viewAttribute id="FKBER"/>
+        <viewAttribute id="GRANT_NBR"/>
+        <viewAttribute id="BUDGET_PD"/>
+        <viewAttribute id="J_3GBELNRI"/>
+        <viewAttribute id="J_3GPMAUFE"/>
+        <viewAttribute id="J_3GPMAUFV"/>
+        <viewAttribute id="J_3GETYPA"/>
+        <viewAttribute id="J_3GETYPE"/>
+        <viewAttribute id="J_3GORGUEB"/>
+        <viewAttribute id="PRS_WORK_PERIOD"/>
+        <viewAttribute id="PPRCTR"/>
+        <viewAttribute id="PARGB"/>
+        <viewAttribute id="AUFPL_OAA"/>
+        <viewAttribute id="APLZL_OAA"/>
+        <viewAttribute id="CAMPAIGN"/>
+        <viewAttribute id="COMPREAS"/>
+        <viewAttribute id="WRF_CHARSTC1"/>
+        <viewAttribute id="WRF_CHARSTC2"/>
+        <viewAttribute id="WRF_CHARSTC3"/>
+        <viewAttribute id="ABSTA"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="MWSK1"/>
+        <viewAttribute id="KUNAG_ANA"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="syn_tbl_VBRP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="_CWM_MENGE" source="/CWM/MENGE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_CWM_MEINS" source="MEINS"/></input>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions defaultDescription="CV_TD_VBRP"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="VBELN" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN"/>
+      </attribute>
+      <attribute id="POSNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNR"/>
+      </attribute>
+      <attribute id="UEPOS" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UEPOS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UEPOS"/>
+      </attribute>
+      <attribute id="FKIMG" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKIMG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FKIMG"/>
+      </attribute>
+      <attribute id="VRKME" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRKME"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VRKME"/>
+      </attribute>
+      <attribute id="UMVKZ" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMVKZ"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UMVKZ"/>
+      </attribute>
+      <attribute id="UMVKN" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMVKN"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UMVKN"/>
+      </attribute>
+      <attribute id="MEINS" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MEINS"/>
+      </attribute>
+      <attribute id="SMENG" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SMENG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SMENG"/>
+      </attribute>
+      <attribute id="FKLMG" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKLMG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FKLMG"/>
+      </attribute>
+      <attribute id="LMENG" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LMENG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="LMENG"/>
+      </attribute>
+      <attribute id="NTGEW" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NTGEW"/>
+        <keyMapping columnObjectName="Projection_1" columnName="NTGEW"/>
+      </attribute>
+      <attribute id="BRGEW" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BRGEW"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BRGEW"/>
+      </attribute>
+      <attribute id="GEWEI" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEWEI"/>
+        <keyMapping columnObjectName="Projection_1" columnName="GEWEI"/>
+      </attribute>
+      <attribute id="VOLUM" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VOLUM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VOLUM"/>
+      </attribute>
+      <attribute id="VOLEH" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VOLEH"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VOLEH"/>
+      </attribute>
+      <attribute id="GSBER" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GSBER"/>
+        <keyMapping columnObjectName="Projection_1" columnName="GSBER"/>
+      </attribute>
+      <attribute id="PRSDT" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRSDT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PRSDT"/>
+      </attribute>
+      <attribute id="FBUDA" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FBUDA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FBUDA"/>
+      </attribute>
+      <attribute id="KURSK" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KURSK"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KURSK"/>
+      </attribute>
+      <attribute id="NETWR" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NETWR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="NETWR"/>
+      </attribute>
+      <attribute id="VBELV" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELV"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELV"/>
+      </attribute>
+      <attribute id="POSNV" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSNV"/>
+        <keyMapping columnObjectName="Projection_1" columnName="POSNV"/>
+      </attribute>
+      <attribute id="VGBEL" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGBEL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VGBEL"/>
+      </attribute>
+      <attribute id="VGPOS" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGPOS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VGPOS"/>
+      </attribute>
+      <attribute id="VGTYP" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGTYP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VGTYP"/>
+      </attribute>
+      <attribute id="AUBEL" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUBEL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUBEL"/>
+      </attribute>
+      <attribute id="AUPOS" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUPOS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUPOS"/>
+      </attribute>
+      <attribute id="AUREF" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUREF"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUREF"/>
+      </attribute>
+      <attribute id="MATNR" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MATNR"/>
+      </attribute>
+      <attribute id="ARKTX" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ARKTX"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ARKTX"/>
+      </attribute>
+      <attribute id="PMATN" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PMATN"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PMATN"/>
+      </attribute>
+      <attribute id="CHARG" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHARG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CHARG"/>
+      </attribute>
+      <attribute id="MATKL" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATKL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MATKL"/>
+      </attribute>
+      <attribute id="PSTYV" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTYV"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PSTYV"/>
+      </attribute>
+      <attribute id="POSAR" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSAR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="POSAR"/>
+      </attribute>
+      <attribute id="PRODH" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRODH"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PRODH"/>
+      </attribute>
+      <attribute id="VSTEL" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSTEL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VSTEL"/>
+      </attribute>
+      <attribute id="ATPKZ" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ATPKZ"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ATPKZ"/>
+      </attribute>
+      <attribute id="SPART" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SPART"/>
+      </attribute>
+      <attribute id="POSPA" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSPA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="POSPA"/>
+      </attribute>
+      <attribute id="WERKS" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WERKS"/>
+      </attribute>
+      <attribute id="ALAND" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALAND"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ALAND"/>
+      </attribute>
+      <attribute id="WKREG" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WKREG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WKREG"/>
+      </attribute>
+      <attribute id="WKCOU" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WKCOU"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WKCOU"/>
+      </attribute>
+      <attribute id="WKCTY" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WKCTY"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WKCTY"/>
+      </attribute>
+      <attribute id="TAXM1" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TAXM1"/>
+      </attribute>
+      <attribute id="TAXM2" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM2"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TAXM2"/>
+      </attribute>
+      <attribute id="TAXM3" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM3"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TAXM3"/>
+      </attribute>
+      <attribute id="TAXM4" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM4"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TAXM4"/>
+      </attribute>
+      <attribute id="TAXM5" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM5"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TAXM5"/>
+      </attribute>
+      <attribute id="TAXM6" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM6"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TAXM6"/>
+      </attribute>
+      <attribute id="TAXM7" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM7"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TAXM7"/>
+      </attribute>
+      <attribute id="TAXM8" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM8"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TAXM8"/>
+      </attribute>
+      <attribute id="TAXM9" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXM9"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TAXM9"/>
+      </attribute>
+      <attribute id="KOWRR" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOWRR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KOWRR"/>
+      </attribute>
+      <attribute id="PRSFD" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRSFD"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PRSFD"/>
+      </attribute>
+      <attribute id="SKTOF" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SKTOF"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SKTOF"/>
+      </attribute>
+      <attribute id="SKFBP" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SKFBP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SKFBP"/>
+      </attribute>
+      <attribute id="KONDM" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONDM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KONDM"/>
+      </attribute>
+      <attribute id="KTGRM" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTGRM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KTGRM"/>
+      </attribute>
+      <attribute id="KOSTL" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOSTL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KOSTL"/>
+      </attribute>
+      <attribute id="BONUS" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BONUS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BONUS"/>
+      </attribute>
+      <attribute id="PROVG" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROVG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PROVG"/>
+      </attribute>
+      <attribute id="EANNR" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EANNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="EANNR"/>
+      </attribute>
+      <attribute id="VKGRP" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKGRP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VKGRP"/>
+      </attribute>
+      <attribute id="VKBUR" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKBUR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VKBUR"/>
+      </attribute>
+      <attribute id="SPARA" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPARA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SPARA"/>
+      </attribute>
+      <attribute id="SHKZG" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHKZG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SHKZG"/>
+      </attribute>
+      <attribute id="ERNAM" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="ERDAT" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERZET" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERZET"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ERZET"/>
+      </attribute>
+      <attribute id="BWTAR" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWTAR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BWTAR"/>
+      </attribute>
+      <attribute id="LGORT" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGORT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="LGORT"/>
+      </attribute>
+      <attribute id="STAFO" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STAFO"/>
+        <keyMapping columnObjectName="Projection_1" columnName="STAFO"/>
+      </attribute>
+      <attribute id="WAVWR" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAVWR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WAVWR"/>
+      </attribute>
+      <attribute id="KZWI1" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZWI1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KZWI1"/>
+      </attribute>
+      <attribute id="KZWI2" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZWI2"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KZWI2"/>
+      </attribute>
+      <attribute id="KZWI3" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZWI3"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KZWI3"/>
+      </attribute>
+      <attribute id="KZWI4" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZWI4"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KZWI4"/>
+      </attribute>
+      <attribute id="KZWI5" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZWI5"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KZWI5"/>
+      </attribute>
+      <attribute id="KZWI6" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZWI6"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KZWI6"/>
+      </attribute>
+      <attribute id="STCUR" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCUR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="STCUR"/>
+      </attribute>
+      <attribute id="UVPRS" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVPRS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UVPRS"/>
+      </attribute>
+      <attribute id="UVALL" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UVALL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UVALL"/>
+      </attribute>
+      <attribute id="EAN11" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EAN11"/>
+        <keyMapping columnObjectName="Projection_1" columnName="EAN11"/>
+      </attribute>
+      <attribute id="PRCTR" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PRCTR"/>
+      </attribute>
+      <attribute id="KVGR1" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVGR1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KVGR1"/>
+      </attribute>
+      <attribute id="KVGR2" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVGR2"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KVGR2"/>
+      </attribute>
+      <attribute id="KVGR3" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVGR3"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KVGR3"/>
+      </attribute>
+      <attribute id="KVGR4" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVGR4"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KVGR4"/>
+      </attribute>
+      <attribute id="KVGR5" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVGR5"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KVGR5"/>
+      </attribute>
+      <attribute id="MVGR1" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MVGR1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MVGR1"/>
+      </attribute>
+      <attribute id="MVGR2" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MVGR2"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MVGR2"/>
+      </attribute>
+      <attribute id="MVGR3" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MVGR3"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MVGR3"/>
+      </attribute>
+      <attribute id="MVGR4" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MVGR4"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MVGR4"/>
+      </attribute>
+      <attribute id="MVGR5" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MVGR5"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MVGR5"/>
+      </attribute>
+      <attribute id="MATWA" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATWA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MATWA"/>
+      </attribute>
+      <attribute id="BONBA" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BONBA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BONBA"/>
+      </attribute>
+      <attribute id="KOKRS" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOKRS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KOKRS"/>
+      </attribute>
+      <attribute id="PAOBJNR" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAOBJNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PAOBJNR"/>
+      </attribute>
+      <attribute id="PS_PSP_PNR" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PS_PSP_PNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PS_PSP_PNR"/>
+      </attribute>
+      <attribute id="AUFNR" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUFNR"/>
+      </attribute>
+      <attribute id="TXJCD" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXJCD"/>
+        <keyMapping columnObjectName="Projection_1" columnName="TXJCD"/>
+      </attribute>
+      <attribute id="CMPRE" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMPRE"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CMPRE"/>
+      </attribute>
+      <attribute id="CMPNT" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMPNT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CMPNT"/>
+      </attribute>
+      <attribute id="CUOBJ" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUOBJ"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CUOBJ"/>
+      </attribute>
+      <attribute id="CUOBJ_CH" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUOBJ_CH"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CUOBJ_CH"/>
+      </attribute>
+      <attribute id="KOUPD" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOUPD"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KOUPD"/>
+      </attribute>
+      <attribute id="UECHA" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UECHA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UECHA"/>
+      </attribute>
+      <attribute id="XCHAR" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCHAR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="XCHAR"/>
+      </attribute>
+      <attribute id="ABRVW" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABRVW"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ABRVW"/>
+      </attribute>
+      <attribute id="SERNR" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SERNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SERNR"/>
+      </attribute>
+      <attribute id="BZIRK_AUFT" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BZIRK_AUFT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BZIRK_AUFT"/>
+      </attribute>
+      <attribute id="KDGRP_AUFT" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDGRP_AUFT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KDGRP_AUFT"/>
+      </attribute>
+      <attribute id="KONDA_AUFT" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONDA_AUFT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KONDA_AUFT"/>
+      </attribute>
+      <attribute id="LLAND_AUFT" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LLAND_AUFT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="LLAND_AUFT"/>
+      </attribute>
+      <attribute id="MPROK" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MPROK"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MPROK"/>
+      </attribute>
+      <attribute id="PLTYP_AUFT" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLTYP_AUFT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PLTYP_AUFT"/>
+      </attribute>
+      <attribute id="REGIO_AUFT" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REGIO_AUFT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="REGIO_AUFT"/>
+      </attribute>
+      <attribute id="VKORG_AUFT" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG_AUFT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VKORG_AUFT"/>
+      </attribute>
+      <attribute id="VTWEG_AUFT" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG_AUFT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VTWEG_AUFT"/>
+      </attribute>
+      <attribute id="ABRBG" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABRBG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ABRBG"/>
+      </attribute>
+      <attribute id="PROSA" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROSA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PROSA"/>
+      </attribute>
+      <attribute id="UEPVW" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UEPVW"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UEPVW"/>
+      </attribute>
+      <attribute id="AUTYP" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUTYP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUTYP"/>
+      </attribute>
+      <attribute id="STADAT" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STADAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="STADAT"/>
+      </attribute>
+      <attribute id="FPLNR" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FPLNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FPLNR"/>
+      </attribute>
+      <attribute id="FPLTR" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FPLTR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FPLTR"/>
+      </attribute>
+      <attribute id="AKTNR" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AKTNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AKTNR"/>
+      </attribute>
+      <attribute id="KNUMA_PI" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMA_PI"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KNUMA_PI"/>
+      </attribute>
+      <attribute id="KNUMA_AG" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMA_AG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KNUMA_AG"/>
+      </attribute>
+      <attribute id="MWSBP" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSBP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MWSBP"/>
+      </attribute>
+      <attribute id="AUGRU_AUFT" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGRU_AUFT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUGRU_AUFT"/>
+      </attribute>
+      <attribute id="FAREG" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAREG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FAREG"/>
+      </attribute>
+      <attribute id="UPMAT" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPMAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UPMAT"/>
+      </attribute>
+      <attribute id="UKONM" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UKONM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UKONM"/>
+      </attribute>
+      <attribute id="CMPRE_FLT" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CMPRE_FLT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CMPRE_FLT"/>
+      </attribute>
+      <attribute id="ABFOR" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABFOR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ABFOR"/>
+      </attribute>
+      <attribute id="ABGES" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABGES"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ABGES"/>
+      </attribute>
+      <attribute id="J_1ARFZ" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1ARFZ"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1ARFZ"/>
+      </attribute>
+      <attribute id="J_1AREGIO" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1AREGIO"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1AREGIO"/>
+      </attribute>
+      <attribute id="J_1AGICD" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1AGICD"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1AGICD"/>
+      </attribute>
+      <attribute id="J_1ADTYP" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1ADTYP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1ADTYP"/>
+      </attribute>
+      <attribute id="J_1ATXREL" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1ATXREL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1ATXREL"/>
+      </attribute>
+      <attribute id="J_1BCFOP" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BCFOP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1BCFOP"/>
+      </attribute>
+      <attribute id="J_1BTAXLW1" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTAXLW1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1BTAXLW1"/>
+      </attribute>
+      <attribute id="J_1BTAXLW2" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTAXLW2"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1BTAXLW2"/>
+      </attribute>
+      <attribute id="J_1BTXSDC" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTXSDC"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1BTXSDC"/>
+      </attribute>
+      <attribute id="BRTWR" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BRTWR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BRTWR"/>
+      </attribute>
+      <attribute id="WKTNR" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WKTNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WKTNR"/>
+      </attribute>
+      <attribute id="WKTPS" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WKTPS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WKTPS"/>
+      </attribute>
+      <attribute id="RPLNR" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RPLNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="RPLNR"/>
+      </attribute>
+      <attribute id="KURSK_DAT" order="155" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KURSK_DAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KURSK_DAT"/>
+      </attribute>
+      <attribute id="WGRU1" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WGRU1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WGRU1"/>
+      </attribute>
+      <attribute id="WGRU2" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WGRU2"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WGRU2"/>
+      </attribute>
+      <attribute id="KDKG1" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDKG1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KDKG1"/>
+      </attribute>
+      <attribute id="KDKG2" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDKG2"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KDKG2"/>
+      </attribute>
+      <attribute id="KDKG3" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDKG3"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KDKG3"/>
+      </attribute>
+      <attribute id="KDKG4" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDKG4"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KDKG4"/>
+      </attribute>
+      <attribute id="KDKG5" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDKG5"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KDKG5"/>
+      </attribute>
+      <attribute id="VKAUS" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKAUS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VKAUS"/>
+      </attribute>
+      <attribute id="J_1AINDXP" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1AINDXP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1AINDXP"/>
+      </attribute>
+      <attribute id="J_1AIDATEP" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1AIDATEP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1AIDATEP"/>
+      </attribute>
+      <attribute id="KZFME" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZFME"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KZFME"/>
+      </attribute>
+      <attribute id="MWSKZ" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSKZ"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MWSKZ"/>
+      </attribute>
+      <attribute id="VERTT" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERTT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VERTT"/>
+      </attribute>
+      <attribute id="VERTN" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERTN"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VERTN"/>
+      </attribute>
+      <attribute id="SGTXT" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGTXT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SGTXT"/>
+      </attribute>
+      <attribute id="DELCO" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DELCO"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DELCO"/>
+      </attribute>
+      <attribute id="BEMOT" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEMOT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BEMOT"/>
+      </attribute>
+      <attribute id="RRREL" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RRREL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="RRREL"/>
+      </attribute>
+      <attribute id="WMINR" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WMINR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WMINR"/>
+      </attribute>
+      <attribute id="VGBEL_EX" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGBEL_EX"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VGBEL_EX"/>
+      </attribute>
+      <attribute id="VGPOS_EX" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGPOS_EX"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VGPOS_EX"/>
+      </attribute>
+      <attribute id="LOGSYS" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGSYS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="LOGSYS"/>
+      </attribute>
+      <attribute id="VGTYP_EX" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGTYP_EX"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VGTYP_EX"/>
+      </attribute>
+      <attribute id="J_1BTAXLW3" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTAXLW3"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1BTAXLW3"/>
+      </attribute>
+      <attribute id="J_1BTAXLW4" order="180" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTAXLW4"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1BTAXLW4"/>
+      </attribute>
+      <attribute id="J_1BTAXLW5" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1BTAXLW5"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_1BTAXLW5"/>
+      </attribute>
+      <attribute id="MSR_ID" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSR_ID"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MSR_ID"/>
+      </attribute>
+      <attribute id="MSR_REFUND_CODE" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSR_REFUND_CODE"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MSR_REFUND_CODE"/>
+      </attribute>
+      <attribute id="MSR_RET_REASON" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSR_RET_REASON"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MSR_RET_REASON"/>
+      </attribute>
+      <attribute id="NRAB_KNUMH" order="185" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NRAB_KNUMH"/>
+        <keyMapping columnObjectName="Projection_1" columnName="NRAB_KNUMH"/>
+      </attribute>
+      <attribute id="NRAB_VALUE" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NRAB_VALUE"/>
+        <keyMapping columnObjectName="Projection_1" columnName="NRAB_VALUE"/>
+      </attribute>
+      <attribute id="DISPUTE_CASE" order="187" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISPUTE_CASE"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DISPUTE_CASE"/>
+      </attribute>
+      <attribute id="FUND_USAGE_ITEM" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FUND_USAGE_ITEM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FUND_USAGE_ITEM"/>
+      </attribute>
+      <attribute id="FARR_RELTYPE" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FARR_RELTYPE"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FARR_RELTYPE"/>
+      </attribute>
+      <attribute id="CLAIMS_TAXATION" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLAIMS_TAXATION"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CLAIMS_TAXATION"/>
+      </attribute>
+      <attribute id="KURRF_DAT_ORIG" order="191" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KURRF_DAT_ORIG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KURRF_DAT_ORIG"/>
+      </attribute>
+      <attribute id="SGT_RCAT" order="192" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_RCAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SGT_RCAT"/>
+      </attribute>
+      <attribute id="SGT_SCAT" order="193" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_SCAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SGT_SCAT"/>
+      </attribute>
+      <attribute id="PREFE" order="194" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREFE"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PREFE"/>
+      </attribute>
+      <attribute id="AKKUR" order="195" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AKKUR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AKKUR"/>
+      </attribute>
+      <attribute id="WAERK" order="196" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERK"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERK"/>
+      </attribute>
+      <attribute id="DRAFT" order="197" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DRAFT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DRAFT"/>
+      </attribute>
+      <attribute id="ACTIVEDOCUMENT" order="198" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACTIVEDOCUMENT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ACTIVEDOCUMENT"/>
+      </attribute>
+      <attribute id="GRWRT" order="199" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRWRT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="GRWRT"/>
+      </attribute>
+      <attribute id="FKSAA" order="200" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKSAA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FKSAA"/>
+      </attribute>
+      <attribute id="_DATAAGING" order="201" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_DATAAGING"/>
+        <keyMapping columnObjectName="Projection_1" columnName="_DATAAGING"/>
+      </attribute>
+      <attribute id="DUMMY_BILLGDOCITEM_INCL_EEW_PS" order="202" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUMMY_BILLGDOCITEM_INCL_EEW_PS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DUMMY_BILLGDOCITEM_INCL_EEW_PS"/>
+      </attribute>
+      <attribute id="_CWM_MENGE" order="203" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_MENGE"/>
+        <keyMapping columnObjectName="Projection_1" columnName="_CWM_MENGE"/>
+      </attribute>
+      <attribute id="_CWM_MEINS" order="204" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_CWM_MEINS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="_CWM_MEINS"/>
+      </attribute>
+      <attribute id="ZAPCGKI" order="205" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAPCGKI"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZAPCGKI"/>
+      </attribute>
+      <attribute id="APCGK_EXTENDI" order="206" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APCGK_EXTENDI"/>
+        <keyMapping columnObjectName="Projection_1" columnName="APCGK_EXTENDI"/>
+      </attribute>
+      <attribute id="ZABDATI" order="207" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZABDATI"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZABDATI"/>
+      </attribute>
+      <attribute id="AUFPL" order="208" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFPL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUFPL"/>
+      </attribute>
+      <attribute id="APLZL" order="209" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APLZL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="APLZL"/>
+      </attribute>
+      <attribute id="DPCNR" order="210" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DPCNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DPCNR"/>
+      </attribute>
+      <attribute id="DCPNR" order="211" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DCPNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DCPNR"/>
+      </attribute>
+      <attribute id="DPNRB" order="212" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DPNRB"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DPNRB"/>
+      </attribute>
+      <attribute id="BOSFAR" order="213" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BOSFAR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BOSFAR"/>
+      </attribute>
+      <attribute id="DP_BELNR" order="214" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DP_BELNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DP_BELNR"/>
+      </attribute>
+      <attribute id="DP_BUKRS" order="215" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DP_BUKRS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DP_BUKRS"/>
+      </attribute>
+      <attribute id="DP_GJAHR" order="216" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DP_GJAHR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DP_GJAHR"/>
+      </attribute>
+      <attribute id="DP_BUZEI" order="217" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DP_BUZEI"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DP_BUZEI"/>
+      </attribute>
+      <attribute id="PACKNO" order="218" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PACKNO"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PACKNO"/>
+      </attribute>
+      <attribute id="PEROP_BEG" order="219" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PEROP_BEG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PEROP_BEG"/>
+      </attribute>
+      <attribute id="PEROP_END" order="220" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PEROP_END"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PEROP_END"/>
+      </attribute>
+      <attribute id="FMFGUS_KEY" order="221" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FMFGUS_KEY"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FMFGUS_KEY"/>
+      </attribute>
+      <attribute id="FSH_SEASON_YEAR" order="222" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON_YEAR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FSH_SEASON_YEAR"/>
+      </attribute>
+      <attribute id="FSH_SEASON" order="223" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FSH_SEASON"/>
+      </attribute>
+      <attribute id="FSH_COLLECTION" order="224" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_COLLECTION"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FSH_COLLECTION"/>
+      </attribute>
+      <attribute id="FSH_THEME" order="225" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_THEME"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FSH_THEME"/>
+      </attribute>
+      <attribute id="FONDS" order="226" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FONDS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FONDS"/>
+      </attribute>
+      <attribute id="FISTL" order="227" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISTL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FISTL"/>
+      </attribute>
+      <attribute id="FKBER" order="228" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKBER"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FKBER"/>
+      </attribute>
+      <attribute id="GRANT_NBR" order="229" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRANT_NBR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="GRANT_NBR"/>
+      </attribute>
+      <attribute id="BUDGET_PD" order="230" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDGET_PD"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BUDGET_PD"/>
+      </attribute>
+      <attribute id="J_3GBELNRI" order="231" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GBELNRI"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_3GBELNRI"/>
+      </attribute>
+      <attribute id="J_3GPMAUFE" order="232" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GPMAUFE"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_3GPMAUFE"/>
+      </attribute>
+      <attribute id="J_3GPMAUFV" order="233" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GPMAUFV"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_3GPMAUFV"/>
+      </attribute>
+      <attribute id="J_3GETYPA" order="234" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GETYPA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_3GETYPA"/>
+      </attribute>
+      <attribute id="J_3GETYPE" order="235" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GETYPE"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_3GETYPE"/>
+      </attribute>
+      <attribute id="J_3GORGUEB" order="236" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_3GORGUEB"/>
+        <keyMapping columnObjectName="Projection_1" columnName="J_3GORGUEB"/>
+      </attribute>
+      <attribute id="PRS_WORK_PERIOD" order="237" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRS_WORK_PERIOD"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PRS_WORK_PERIOD"/>
+      </attribute>
+      <attribute id="PPRCTR" order="238" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPRCTR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PPRCTR"/>
+      </attribute>
+      <attribute id="PARGB" order="239" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARGB"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PARGB"/>
+      </attribute>
+      <attribute id="AUFPL_OAA" order="240" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFPL_OAA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUFPL_OAA"/>
+      </attribute>
+      <attribute id="APLZL_OAA" order="241" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APLZL_OAA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="APLZL_OAA"/>
+      </attribute>
+      <attribute id="CAMPAIGN" order="242" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CAMPAIGN"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CAMPAIGN"/>
+      </attribute>
+      <attribute id="COMPREAS" order="243" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COMPREAS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="COMPREAS"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC1" order="244" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WRF_CHARSTC1"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC2" order="245" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC2"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WRF_CHARSTC2"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC3" order="246" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC3"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WRF_CHARSTC3"/>
+      </attribute>
+      <attribute id="ABSTA" order="247" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABSTA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ABSTA"/>
+      </attribute>
+      <attribute id="ABGRU" order="248" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABGRU"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ABGRU"/>
+      </attribute>
+      <attribute id="MWSK1" order="249" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSK1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MWSK1"/>
+      </attribute>
+      <attribute id="KUNAG_ANA" order="250" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNAG_ANA"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNAG_ANA"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="22" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

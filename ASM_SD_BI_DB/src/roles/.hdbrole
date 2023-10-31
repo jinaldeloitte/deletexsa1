@@ -1,0 +1,14 @@
+{
+"role": {
+"name": "ZROLE_ASM_SD_BI_REPORTS",
+"schema_privileges": [
+		{
+		  "privileges": [
+			"SELECT METADATA",
+			"SELECT",
+			"EXECUTE"
+		]
+	}
+]
+}
+}

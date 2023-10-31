@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_MD_KNVP" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" enforceSqlExecution="true" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Customer Master Partner Functions"/>
+  <metadata changedAt="2021-12-06 18:06:47.344"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="syn_tbl_KNVP">
+      <resourceUri>syn_tbl_KNVP</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="P_KNVP">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="VKORG"/>
+        <viewAttribute id="VTWEG"/>
+        <viewAttribute id="SPART"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="PARZA"/>
+        <viewAttribute id="KUNN2"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="PERNR"/>
+        <viewAttribute id="PARNR"/>
+        <viewAttribute id="KNREF"/>
+        <viewAttribute id="DEFPA"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="syn_tbl_KNVP"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="P_KNVP">
+    <descriptions defaultDescription="Customer Master Partner Functions"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANDT"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="MANDT"/>
+      </attribute>
+      <attribute id="KUNNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="VKORG" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKORG"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="VKORG"/>
+      </attribute>
+      <attribute id="VTWEG" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VTWEG"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="VTWEG"/>
+      </attribute>
+      <attribute id="SPART" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPART"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="SPART"/>
+      </attribute>
+      <attribute id="PARVW" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARVW"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="PARVW"/>
+      </attribute>
+      <attribute id="PARZA" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARZA"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="PARZA"/>
+      </attribute>
+      <attribute id="KUNN2" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNN2"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="KUNN2"/>
+      </attribute>
+      <attribute id="LIFNR" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="PERNR" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERNR"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="PERNR"/>
+      </attribute>
+      <attribute id="PARNR" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARNR"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="PARNR"/>
+      </attribute>
+      <attribute id="KNREF" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNREF"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="KNREF"/>
+      </attribute>
+      <attribute id="DEFPA" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEFPA"/>
+        <keyMapping columnObjectName="P_KNVP" columnName="DEFPA"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="22" y="87"/></shape>
+      <shape expanded="true" modelObjectName="P_KNVP" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

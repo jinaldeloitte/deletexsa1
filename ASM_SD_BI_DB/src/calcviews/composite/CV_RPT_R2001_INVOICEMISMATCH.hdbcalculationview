@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="CV_RPT_R2001_INVOICEMISMATCH" applyPrivilegeType="NONE" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+<origin/>
+  <descriptions defaultDescription="Invoice Mismatch Report"/>
+  <metadata changedAt="2021-12-06 19:45:33.139"/>
+  <localVariables>
+    <variable id="VVAR_UMSKZ">
+      <descriptions defaultDescription="Special GL Indicator"/>
+      <variableProperties datatype="NVARCHAR" mandatory="false" length="1" scale="NaN">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>VSTG_BSID</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>UMSKZ</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="VVAR_CREDIANALYST">
+      <descriptions defaultDescription="Credit Analyst"/>
+      <variableProperties datatype="VARCHAR" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <attribute name="CREDITANALYST"/>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="VVAR_OUTSIDEAGENT">
+      <descriptions defaultDescription="Outside Agent"/>
+      <variableProperties datatype="VARCHAR" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <attribute name="OUTSIDE_AGENT_NAME"/>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="VVAR_INSIDEAGENT">
+      <descriptions defaultDescription="Inside Agent"/>
+      <variableProperties datatype="VARCHAR" mandatory="false">
+        <valueDomain type="AttributeValue">
+          <attribute name="INSIDE_AGENT_NAME"/>
+        </valueDomain>
+        <selection multiLine="false" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_BUKRS" parameter="true">
+      <descriptions defaultDescription="Company Code"/>
+      <variableProperties datatype="NVARCHAR" defaultValue="ALL" length="4" mandatory="true" scale="NaN">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>CV_MD_T001</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>BUKRS</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+    <variable id="IP_GJHAR" parameter="true">
+      <descriptions defaultDescription="Fiscal Year"/>
+      <variableProperties datatype="NVARCHAR" defaultValue="ALL" length="4" mandatory="true" scale="NaN">
+        <valueDomain type="AttributeValue">
+          <externalLikeStructureName>VSTG_BSID</externalLikeStructureName>
+          <externalLikeStructureType>CALCULATION_VIEW</externalLikeStructureType>
+          <externalLikeElementName>GJAHR</externalLikeElementName>
+        </valueDomain>
+        <selection multiLine="true" type="SingleValue"/>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="57"/>
+  <dataSources>
+    <DataSource id="VSTG_BSID">
+      <resourceUri>VSTG_BSID</resourceUri>
+    </DataSource>
+    <DataSource id="P_PartialPayments$$$$VSTG_BSID$$">
+      <resourceUri>VSTG_BSID</resourceUri>
+    </DataSource>
+    <DataSource id="P_ResidualPayments$$$$VSTG_BSID$$">
+      <resourceUri>VSTG_BSID</resourceUri>
+    </DataSource>
+    <DataSource id="P_DownPayments$$$$VSTG_BSID$$">
+      <resourceUri>VSTG_BSID</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_BUT050">
+      <resourceUri>CV_MD_BUT050</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_T001">
+      <resourceUri>CV_MD_T001</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_BUT000">
+      <resourceUri>CV_MD_BUT000</resourceUri>
+    </DataSource>
+    <DataSource id="VDIM_MD_CUSTOMER">
+      <resourceUri>VDIM_MD_CUSTOMER</resourceUri>
+    </DataSource>
+    <DataSource id="CV_MD_KNVP">
+      <resourceUri>CV_MD_KNVP</resourceUri>
+    </DataSource>
+    <DataSource id="Projection_12$$$$CV_MD_KNVP$$">
+      <resourceUri>CV_MD_KNVP</resourceUri>
+    </DataSource>
+    <DataSource id="Projection_13$$$$CV_MD_KNVP$$">
+      <resourceUri>CV_MD_KNVP</resourceUri>
+    </DataSource>
+    <DataSource id="Projection_14$$$$CV_MD_BUT000$$">
+      <resourceUri>CV_MD_BUT000</resourceUri>
+    </DataSource>
+    <DataSource id="Projection_15$$$$CV_MD_BUT000$$">
+      <resourceUri>CV_MD_BUT000</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="P_CustomerInvoices">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="WRBTR"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="AUGBL"/>
+        <viewAttribute id="H_BSTAT"/>
+        <viewAttribute id="H_BLART"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="NETDT"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="KUNNRZT"/>
+        <viewAttribute id="SAKNR"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DECIMAL" id="VCAL_DMBTR" length="23" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>case(&quot;SHKZG&quot;,'H',(-1*&quot;DMBTR&quot;),&quot;DMBTR&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="VCAL_WRBTR" length="23" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>case(&quot;SHKZG&quot;,'H',(-1*&quot;WRBTR&quot;),&quot;WRBTR&quot;)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="VSTG_BSID"/>
+      <filter>(in (&quot;H_BLART&quot;,'DR','RV'))</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="P_PartialPayments">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="AUGBL"/>
+        <viewAttribute id="H_BSTAT"/>
+        <viewAttribute id="H_BLART"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="WRBTR"/>
+        <viewAttribute id="REBZJ"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="KUNNRZT"/>
+        <viewAttribute id="SAKNR"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DECIMAL" id="VCAL_DMBTR" length="23" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>case(&quot;SHKZG&quot;,'H',(-1*&quot;DMBTR&quot;),&quot;DMBTR&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="VCAL_WRBTR" length="23" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>case(&quot;SHKZG&quot;,'H',(-1*&quot;WRBTR&quot;),&quot;WRBTR&quot;)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="P_PartialPayments$$$$VSTG_BSID$$"/>
+      <filter>(&quot;REBZT&quot; ='Z')</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute aggregationType="sum" id="DMBTR_PARTIAL"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute aggregationType="sum" id="WRBTR_PARTIAL"/>
+        <viewAttribute id="REBZJ"/>
+        <viewAttribute aggregationType="sum" id="DMBTR_PARTIAL1"/>
+        <viewAttribute aggregationType="sum" id="WRBTR_PARTAIL1"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="P_PartialPayments">
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBTR_PARTIAL" source="DMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRBTR_PARTIAL" source="WRBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBTR_PARTIAL1" source="VCAL_DMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRBTR_PARTAIL1" source="VCAL_WRBTR"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_1" joinType="inner">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="H_BSTAT"/>
+        <viewAttribute id="H_BLART"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="NETDT"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="DMBTR_PARTIAL"/>
+        <viewAttribute id="WRBTR_PARTIAL"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="WRBTR"/>
+        <viewAttribute id="KUNNRZT"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DECIMAL" id="VCAL_PENDINGDMBTR" length="21" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>&quot;DMBTR&quot;+&quot;DMBTR_PARTIAL&quot;</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="VCAL_PENDINGWRBTR" length="21" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>&quot;WRBTR&quot;+&quot;WRBTR_PARTIAL&quot;</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="P_CustomerInvoices">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBTR" source="VCAL_DMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRBTR" source="VCAL_WRBTR"/></input>
+      <input node="Aggregation_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZG" source="REBZG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZT" source="REBZT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBTR_PARTIAL" source="DMBTR_PARTIAL1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRBTR_PARTIAL" source="WRBTR_PARTAIL1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="REBZG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="BELNR"/>
+      <joinAttribute name="BUKRS"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="P_ResidualPayments">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="WRBTR"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="AUGBL"/>
+        <viewAttribute id="H_BSTAT"/>
+        <viewAttribute id="H_BLART"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="NETDT"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="KUNNRZT"/>
+        <viewAttribute id="SAKNR"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DECIMAL" id="VCAL_DMBTR" length="23" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>case(&quot;SHKZG&quot;,'H',(-1*&quot;DMBTR&quot;),&quot;DMBTR&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="VCAL_WRBTR" length="23" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>case(&quot;SHKZG&quot;,'H',(-1*&quot;WRBTR&quot;),&quot;WRBTR&quot;)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="P_ResidualPayments$$$$VSTG_BSID$$"/>
+      <filter>(&quot;REBZT&quot; ='V') AND (in (&quot;H_BLART&quot;,'DZ','ZL'))</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="P_DownPayments">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="WRBTR"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="AUGBL"/>
+        <viewAttribute id="H_BSTAT"/>
+        <viewAttribute id="H_BLART"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="VBEL2"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="NETDT"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="KUNNRZT"/>
+        <viewAttribute id="SAKNR"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DECIMAL" id="VCAL_DMBTR" length="23" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>case(&quot;SHKZG&quot;,'H',(-1*&quot;DMBTR&quot;),&quot;DMBTR&quot;)</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="VCAL_WRBTR" length="23" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>case(&quot;SHKZG&quot;,'H',(-1*&quot;WRBTR&quot;),&quot;WRBTR&quot;)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="P_DownPayments$$$$VSTG_BSID$$"/>
+      <filter>(&quot;UMSKZ&quot; ='A')</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute datatype="NVARCHAR" id="KUNNR" length="10"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute datatype="NVARCHAR" id="REBZG" length="10"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute datatype="DECIMAL" id="CC_PENDINGAMT" length="21" scale="2"/>
+        <viewAttribute datatype="DECIMAL" id="CC_PENDINGWRBTR" length="21" scale="2"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute datatype="DATE" id="NETDT" length="10"/>
+        <viewAttribute datatype="NVARCHAR" id="WAERS" length="5"/>
+        <viewAttribute datatype="NVARCHAR" id="KUNNRZT" length="10"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input emptyUnionBehavior="NO_ROW" node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_WAERS" source="H_WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZG" source="REBZG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZT" source="REBZT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CC_PENDINGAMT" source="VCAL_PENDINGDMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CC_PENDINGWRBTR" source="VCAL_PENDINGWRBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_BLDAT" source="H_BLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETDT" source="NETDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS" source="WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNRZT" source="KUNNRZT"/>
+      </input>
+      <input emptyUnionBehavior="NO_ROW" node="P_ResidualPayments">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_WAERS" source="H_WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZG" source="REBZG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZT" source="REBZT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CC_PENDINGAMT" source="VCAL_DMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CC_PENDINGWRBTR" source="VCAL_WRBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_BLDAT" source="H_BLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETDT" source="NETDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS" source="WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNRZT" source="KUNNRZT"/>
+      </input>
+      <input emptyUnionBehavior="NO_ROW" node="P_DownPayments">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_WAERS" source="H_WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZG" source="VBEL2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZT" source="REBZT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CC_PENDINGAMT" source="VCAL_DMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CC_PENDINGWRBTR" source="VCAL_WRBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="H_BLDAT" source="H_BLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETDT" source="NETDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS" source="WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNRZT" source="KUNNRZT"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_5" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="NETDT"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="KUNNRZT"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DOUBLE" id="VCAL_ARREARS" expressionLanguage="COLUMN_ENGINE">
+          <formula>daysbetween(&quot;NETDT&quot;,now())</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="Union_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PENDINGAMTDMBTR" source="CC_PENDINGAMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PENDINGWRBTR" source="CC_PENDINGWRBTR"/></input>
+      <filter>(IN(&quot;BUKRS&quot;,$$IP_BUKRS$$) OR IN('ALL',$$IP_BUKRS$$)) AND (IN(&quot;GJAHR&quot;,$$IP_GJHAR$$) OR IN('ALL',$$IP_GJHAR$$))</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_6" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="CLIENT"/>
+        <viewAttribute id="PARTNER2"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="RELTYP"/>
+        <viewAttribute id="DATE_TO"/>
+        <viewAttribute id="DATE_FROM"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_BUT050"/>
+      <filter>(&quot;RELTYP&quot; ='UKMSB0') AND (date(&quot;DATE_FROM&quot;) &lt;=date(now())) AND (date(&quot;DATE_TO&quot;) &gt;=date(now()))</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_2" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="ARREARS"/>
+        <viewAttribute datatype="NVARCHAR" id="WAERS" length="5"/>
+        <viewAttribute id="KUNNRZT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Projection_5">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ARREARS" source="VCAL_ARREARS"/></input>
+      <input node="Projection_6">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="CLIENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="PARTNER2"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="KUNNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_8">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BUTXT"/>
+        <viewAttribute id="SPRAS"/>
+        <viewAttribute id="WAERS_COMP"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_T001">
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS_COMP" source="WAERS"/>
+      </input>
+      <filter>(&quot;SPRAS&quot; ='E')</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_4" cardinality="CN_1" joinType="leftOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="BUTXT"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="ARREARS"/>
+        <viewAttribute datatype="NVARCHAR" id="WAERS" length="5"/>
+        <viewAttribute id="WAERS_COMP"/>
+        <viewAttribute id="KUNNRZT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/></input>
+      <input node="Projection_8">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="BUKRS"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_7">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="CLIENT"/>
+        <viewAttribute id="PARTNER"/>
+        <viewAttribute id="NAME_FIRST"/>
+        <viewAttribute id="NAME_LAST"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_BUT000"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_9">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="KTOKD"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="VDIM_MD_CUSTOMER"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_5" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="BUTXT"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="ARREARS"/>
+        <viewAttribute id="CUSTOMER_NAME"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute datatype="NVARCHAR" id="WAERS" length="5"/>
+        <viewAttribute id="WAERS_COMP"/>
+        <viewAttribute id="KUNNRZT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/></input>
+      <input node="Projection_9">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CUSTOMER_NAME" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="KUNNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_11" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNN2"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="VKORG"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="CV_MD_KNVP"/>
+      <filter>(in (&quot;PARVW&quot;,'PY','RG')) and (&quot;KUNNR&quot;!=&quot;KUNN2&quot;)</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_7" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="BUTXT"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="ARREARS"/>
+        <viewAttribute id="CUSTOMER_NAME"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute datatype="NVARCHAR" id="WAERS" length="5"/>
+        <viewAttribute id="WAERS_COMP"/>
+        <viewAttribute id="KUNNRZT"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_SP" length="10" expressionLanguage="COLUMN_ENGINE">
+          <formula>coalesce(&quot;KUNNR_PAYER&quot;,&quot;KUNNR&quot;)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="Join_5">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/></input>
+      <input node="Projection_11">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_PAYER" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="VKORG"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="KUNNR"/>
+      <joinAttribute name="BUKRS"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_12">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNN2"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="VKORG"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Projection_12$$$$CV_MD_KNVP$$"/>
+      <filter>(&quot;PARVW&quot; ='Z9')</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_8" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="CUSTOMER_NAME"/>
+        <viewAttribute id="ARREARS"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="BUTXT"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="OUTSIDE_AGENT"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="SP"/>
+        <viewAttribute datatype="NVARCHAR" id="WAERS" length="5"/>
+        <viewAttribute id="WAERS_COMP"/>
+        <viewAttribute id="KUNNRZT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_7">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SP" source="VCAL_SP"/></input>
+      <input node="Projection_12">
+        <mapping xsi:type="Calculation:AttributeMapping" target="OUTSIDE_AGENT" source="KUNN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SP" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="VKORG"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="SP"/>
+      <joinAttribute name="BUKRS"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_13">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KUNN2"/>
+        <viewAttribute id="PARVW"/>
+        <viewAttribute id="VKORG"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Projection_13$$$$CV_MD_KNVP$$"/>
+      <filter>(&quot;PARVW&quot; ='ZC')</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_9" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="BUTXT"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="ARREARS"/>
+        <viewAttribute id="CUSTOMER_NAME"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="OUTSIDE_AGENT"/>
+        <viewAttribute id="KUNNR_PAYER"/>
+        <viewAttribute id="INSIDE_AGENT"/>
+        <viewAttribute datatype="NVARCHAR" id="WAERS" length="5"/>
+        <viewAttribute id="WAERS_COMP"/>
+        <viewAttribute id="KUNNRZT"/>
+        <viewAttribute hidden="true" id="JOIN$SP$KUNNR"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_8">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$SP$KUNNR" source="SP"/>
+      </input>
+      <input node="Projection_13">
+        <mapping xsi:type="Calculation:AttributeMapping" target="INSIDE_AGENT" source="KUNN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$SP$KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="VKORG"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="JOIN$SP$KUNNR"/>
+      <joinAttribute name="BUKRS"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_10" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="BUTXT"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="ARREARS"/>
+        <viewAttribute id="CUSTOMER_NAME"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="OUTSIDE_AGENT"/>
+        <viewAttribute id="INSIDE_AGENT"/>
+        <viewAttribute id="NAME_FIRST"/>
+        <viewAttribute id="NAME_LAST"/>
+        <viewAttribute datatype="NVARCHAR" id="WAERS" length="5"/>
+        <viewAttribute id="WAERS_COMP"/>
+        <viewAttribute id="KUNNRZT"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_OUTSIDE_AGENT" length="200" expressionLanguage="COLUMN_ENGINE">
+          <formula>&quot;NAME_FIRST&quot;+' '+&quot;NAME_LAST&quot;</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="Join_9">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OUTSIDE_AGENT" source="OUTSIDE_AGENT"/></input>
+      <input node="Projection_7">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="CLIENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OUTSIDE_AGENT" source="PARTNER"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="OUTSIDE_AGENT"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_14">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="CLIENT"/>
+        <viewAttribute id="PARTNER"/>
+        <viewAttribute id="NAME_FIRST"/>
+        <viewAttribute id="NAME_LAST"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Projection_14$$$$CV_MD_BUT000$$"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_11" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="INSIDE_AGENT"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="CUSTOMER_NAME"/>
+        <viewAttribute id="OUTSIDE_AGENT"/>
+        <viewAttribute id="ARREARS"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="BUTXT"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="OUTSIDE_AGENT_NAME"/>
+        <viewAttribute id="NAME_FIRST"/>
+        <viewAttribute id="NAME_LAST"/>
+        <viewAttribute datatype="NVARCHAR" id="WAERS" length="5"/>
+        <viewAttribute id="WAERS_COMP"/>
+        <viewAttribute id="KUNNRZT"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_INSIDE_AGENT" length="200" expressionLanguage="COLUMN_ENGINE">
+          <formula>&quot;NAME_FIRST&quot;+' '+&quot;NAME_LAST&quot;</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="Join_10">
+        <mapping xsi:type="Calculation:AttributeMapping" target="INSIDE_AGENT" source="INSIDE_AGENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OUTSIDE_AGENT_NAME" source="VCAL_OUTSIDE_AGENT"/></input>
+      <input node="Projection_14">
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME_FIRST" source="NAME_FIRST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME_LAST" source="NAME_LAST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="CLIENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INSIDE_AGENT" source="PARTNER"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="INSIDE_AGENT"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_15">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="CLIENT"/>
+        <viewAttribute id="PARTNER"/>
+        <viewAttribute id="NAME_FIRST"/>
+        <viewAttribute id="NAME_LAST"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Projection_15$$$$CV_MD_BUT000$$"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_3" cardinality="CN_1" joinType="leftOuter" optimizeJoinColumns="true">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="INSIDE_AGENT"/>
+        <viewAttribute id="OUTSIDE_AGENT"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="CUSTOMER_NAME"/>
+        <viewAttribute id="ARREARS"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="BUTXT"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="OUTSIDE_AGENT_NAME"/>
+        <viewAttribute id="INSIDE_AGENT_NAME"/>
+        <viewAttribute id="NAME_FIRST"/>
+        <viewAttribute id="NAME_LAST"/>
+        <viewAttribute datatype="NVARCHAR" id="WAERS" length="5"/>
+        <viewAttribute id="WAERS_COMP"/>
+        <viewAttribute id="KUNNRZT"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="VCAL_CREIDITANALYST" length="500" expressionLanguage="COLUMN_ENGINE">
+          <formula>&quot;NAME_FIRST&quot;+' '+&quot;NAME_LAST&quot;</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <restrictedViewAttributes/>
+      <input node="Join_11">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER1" source="PARTNER1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INSIDE_AGENT_NAME" source="VCAL_INSIDE_AGENT"/></input>
+      <input node="Projection_15">
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME_FIRST" source="NAME_FIRST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME_LAST" source="NAME_LAST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="CLIENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER1" source="PARTNER"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="PARTNER1"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BUTXT"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="H_WAERS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="CUSTOMER_NAME"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZT"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="H_BLDAT"/>
+        <viewAttribute id="PARTNER1"/>
+        <viewAttribute id="CREDITANALYST"/>
+        <viewAttribute id="OUTSIDE_AGENT"/>
+        <viewAttribute id="KTOKD"/>
+        <viewAttribute id="INSIDE_AGENT"/>
+        <viewAttribute id="OUTSIDE_AGENT_NAME"/>
+        <viewAttribute id="INSIDE_AGENT_NAME"/>
+        <viewAttribute id="WAERS_COMP"/>
+        <viewAttribute id="PENDINGAMTDMBTR"/>
+        <viewAttribute id="PENDINGWRBTR"/>
+        <viewAttribute id="ARREARS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <restrictedViewAttributes/>
+      <input node="Join_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNRZT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREDITANALYST" source="VCAL_CREIDITANALYST"/></input>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions defaultDescription="Invoice Mismatch Report"/>
+    <attributes>
+      <attribute id="MANDT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+      </attribute>
+      <attribute id="BUKRS" order="2" attributeHierarchyActive="false" descriptionColumnName="BUTXT" displayAttribute="false">
+        <descriptions defaultDescription="Company Code"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="BUTXT" order="3" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code Name"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BUTXT"/>
+      </attribute>
+      <attribute id="BELNR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Number"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BELNR"/>
+      </attribute>
+      <attribute id="GJAHR" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fiscal Year"/>
+        <keyMapping columnObjectName="Projection_1" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="H_WAERS" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency"/>
+        <keyMapping columnObjectName="Projection_1" columnName="H_WAERS"/>
+      </attribute>
+      <attribute id="KUNNR" order="7" attributeHierarchyActive="false" descriptionColumnName="CUSTOMER_NAME" displayAttribute="false">
+        <descriptions defaultDescription="Customer Number"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="CUSTOMER_NAME" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Name"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CUSTOMER_NAME"/>
+      </attribute>
+      <attribute id="REBZG" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Invoice reference Field"/>
+        <keyMapping columnObjectName="Projection_1" columnName="REBZG"/>
+      </attribute>
+      <attribute id="REBZT" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Follow-On Document Type"/>
+        <keyMapping columnObjectName="Projection_1" columnName="REBZT"/>
+      </attribute>
+      <attribute id="ZTERM" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Payment Terms"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="UMSKZ" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Special G/L Indicator"/>
+        <localVariable>VVAR_UMSKZ</localVariable>
+        <keyMapping columnObjectName="Projection_1" columnName="UMSKZ"/>
+      </attribute>
+      <attribute id="H_BLDAT" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Document Date"/>
+        <keyMapping columnObjectName="Projection_1" columnName="H_BLDAT"/>
+      </attribute>
+      <attribute id="PARTNER1" order="14" attributeHierarchyActive="false" descriptionColumnName="CREDITANALYST" displayAttribute="false">
+        <descriptions defaultDescription="Credit Analyst ID"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PARTNER1"/>
+      </attribute>
+      <attribute id="CREDITANALYST" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Credit Analyst"/>
+        <localVariable>VVAR_CREDIANALYST</localVariable>
+        <keyMapping columnObjectName="Projection_1" columnName="CREDITANALYST"/>
+      </attribute>
+      <attribute id="OUTSIDE_AGENT" order="16" semanticType="empty" attributeHierarchyActive="false" descriptionColumnName="OUTSIDE_AGENT_NAME" displayAttribute="false">
+        <descriptions defaultDescription="Outside Agent ID"/>
+        <keyMapping columnObjectName="Projection_1" columnName="OUTSIDE_AGENT"/>
+      </attribute>
+      <attribute id="KTOKD" hidden="true" order="17" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Customer Account Group"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KTOKD"/>
+      </attribute>
+      <attribute id="INSIDE_AGENT" order="18" semanticType="empty" attributeHierarchyActive="false" descriptionColumnName="INSIDE_AGENT_NAME" displayAttribute="false">
+        <descriptions defaultDescription="Inside Agent ID"/>
+        <keyMapping columnObjectName="Projection_1" columnName="INSIDE_AGENT"/>
+      </attribute>
+      <attribute id="OUTSIDE_AGENT_NAME" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Outside Agent"/>
+        <localVariable>VVAR_OUTSIDEAGENT</localVariable>
+        <keyMapping columnObjectName="Projection_1" columnName="OUTSIDE_AGENT_NAME"/>
+      </attribute>
+      <attribute id="INSIDE_AGENT_NAME" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Inside Agent"/>
+        <localVariable>VVAR_INSIDEAGENT</localVariable>
+        <keyMapping columnObjectName="Projection_1" columnName="INSIDE_AGENT_NAME"/>
+      </attribute>
+      <attribute id="WAERS_COMP" order="21" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Company Code Currency"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERS_COMP"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="PENDINGAMTDMBTR" order="22" semanticType="amount" aggregationType="sum" measureType="amount">
+        <descriptions defaultDescription="Amount in Local Currency"/>
+        <unitCurrencyAttribute attributeName="WAERS_COMP"/>
+        <measureMapping columnObjectName="Projection_1" columnName="PENDINGAMTDMBTR"/>
+      </measure>
+      <measure id="PENDINGWRBTR" order="23" semanticType="amount" aggregationType="sum" measureType="amount">
+        <descriptions defaultDescription="Amount in Company Code Currency"/>
+        <unitCurrencyAttribute attributeName="H_WAERS"/>
+        <measureMapping columnObjectName="Projection_1" columnName="PENDINGWRBTR"/>
+      </measure>
+      <measure id="ARREARS" order="24" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="Days in Arrears"/>
+        <measureMapping columnObjectName="Projection_1" columnName="ARREARS"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="776" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_CustomerInvoices" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="1415"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_PartialPayments" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="1493"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="1415"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="1319"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="P_CustomerInvoices" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Aggregation_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_ResidualPayments" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="1319"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="P_DownPayments" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="407" y="1319"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="1185"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="1107"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_6" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="407" y="1107"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="329" y="1011"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Projection_5" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_6" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_8" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="483" y="1011"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="404" y="915"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_2" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_8" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_7" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="856" y="531"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_9" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="558" y="915"/>
+        <rectangleSize height="60" width="163"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="483" y="819"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_4" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_9" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_11" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="637" y="819"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_7" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="555" y="723"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_5" modelObjectNameSpace="Join_7" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_11" modelObjectNameSpace="Join_7" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_12" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="709" y="723"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_8" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="628" y="627"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_7" modelObjectNameSpace="Join_8" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_12" modelObjectNameSpace="Join_8" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_13" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="782" y="627"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_9" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="702" y="531"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_8" modelObjectNameSpace="Join_9" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_13" modelObjectNameSpace="Join_9" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_10" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="777" y="435"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_9" modelObjectNameSpace="Join_10" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_7" modelObjectNameSpace="Join_10" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_14" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="931" y="435"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_11" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="853" y="339"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_10" modelObjectNameSpace="Join_11" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_14" modelObjectNameSpace="Join_11" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_15" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="699" y="339"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="776" y="243"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Join_11" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="20" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape modelObjectName="Projection_15" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+        <upperLeftCorner x="320" y="30"/>
+        <rectangleSize width="250"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="776" y="165"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>
